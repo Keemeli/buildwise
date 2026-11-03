@@ -147,3 +147,11 @@ vite.config.ts.timestamp-*
 
 # Turbo Repo
 .turbo
+
+# Python
+scraper/.venv/
+__pycache__/
+*.pyc
+
+# Scraper cache (raw HTML snapshots are regenerable; JSON payloads are committed)
+data/raw/html/
