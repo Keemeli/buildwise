@@ -73,7 +73,7 @@ Supervisors: Teemu Korpela ([@t2946282](https://github.com/t2946282)), Pekka Ala
 
 | Source | Method | Notes |
 |---|---|---|
-| Datatronic.fi | Category pages contain full product cards in HTML | ~30 products per request |
+| Datatronic.fi | Category listing pages (`js-product-list` container) | 24 products per page; GPU category has 480 products, 20 pages |
 | Jimms.fi | Product pages expose `meta[property="product:price:amount"]` | One request per product, throttled |
 | Proshop.fi | Category pages contain prices in HTML | ~50 products per request |
 | Verkkokauppa.com | Not used | JS-rendered tiles, scraper-hostile robots.txt |
@@ -108,8 +108,14 @@ buildwise/
 cd scraper
 python3 -m venv .venv && source .venv/bin/activate
 pip install -r requirements.txt
-python scrape.py --shop datatronic --category gpu
+python scrape.py --category gpu --pages 2
+python scrape.py --all --pages 2          # every category
+```
 
+Output lands in `data/raw/` (one JSON per category/page), with raw HTML cached in
+`data/raw/html/` and one line per run in `data/raw/scrape_runs.jsonl`.
+
+```bash
 # web app
 cd web
 npm install

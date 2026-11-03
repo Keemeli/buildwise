@@ -1,0 +1,156 @@
+{
+  "shop": "Datatronic",
+  "category": "case",
+  "page": 1,
+  "source_url": "https://datatronic.fi/kotelot",
+  "fetched_at": "2026-11-03T13:59:54+00:00",
+  "site_total_products": 620,
+  "items_on_page": 24,
+  "raw_html": "data/raw/html/datatronic_case_p1_2026-11-03_f3f79b6ac50a.html",
+  "items": [
+    {
+      "name": "Lian Li Lancool LAN217X tietokonekotelo Midi Tower musta, Puu",
+      "price_cents": 11090,
+      "url": "https://datatronic.fi/komponentit/kotelot/lian-li-lancool-lan217x-tietokonekotelo-midi-tower-musta-puu-lian-li-g99lan217x00",
+      "external_id": "168663"
+    },
+    {
+      "name": "SAMA Z60 Midi Tower musta",
+      "price_cents": 6290,
+      "url": "https://datatronic.fi/komponentit/kotelot/sama-z60-midi-tower-musta-sama-gears-z60-bkawa4x1-gl",
+      "external_id": "174181"
+    },
+    {
+      "name": "Fractal Design North Musta",
+      "price_cents": 15990,
+      "url": "https://datatronic.fi/komponentit/kotelot/fractal-design-north-musta-fractal-design-fd-c-nor1c-02",
+      "external_id": "84324"
+    },
+    {
+      "name": "Zalman I3 NEO V2 BLACK tietokonekotelo Midi Tower musta",
+      "price_cents": 4890,
+      "url": "https://datatronic.fi/komponentit/kotelot/zalman-i3-neo-v2-black-tietokonekotelo-midi-tower-musta-zalman-i3-neo-v2-black",
+      "external_id": "175110"
+    },
+    {
+      "name": "Fractal Design North Musta",
+      "price_cents": 14090,
+      "url": "https://datatronic.fi/komponentit/kotelot/fractal-design-north-musta-fractal-design-fd-c-nor1c-01",
+      "external_id": "84323"
+    },
+    {
+      "name": "SAMA S30 Midi Tower musta",
+      "price_cents": 4490,
+      "url": "https://datatronic.fi/komponentit/kotelot/sama-s30-midi-tower-musta-sama-gears-s30-bkmpa3x1-gl",
+      "external_id": "174179"
+    },
+    {
+      "name": "Fractal Design Epoch Midi Tower musta",
+      "price_cents": 9490,
+      "url": "https://datatronic.fi/komponentit/kotelot/fractal-design-epoch-midi-tower-musta-fractal-design-fd-c-epo1a-04",
+      "external_id": "171529"
+    },
+    {
+      "name": "Fractal Design North XL Musta",
+      "price_cents": 17390,
+      "url": "https://datatronic.fi/komponentit/kotelot/fractal-design-north-xl-musta-fractal-design-fd-c-nor1x-01",
+      "external_id": "154786"
+    },
+    {
+      "name": "Fractal Design North Valkoinen",
+      "price_cents": 14090,
+      "url": "https://datatronic.fi/komponentit/kotelot/fractal-design-north-valkoinen-fractal-design-fd-c-nor1c-03",
+      "external_id": "84325"
+    },
+    {
+      "name": "Fractal Design Pop Air RGB Musta",
+      "price_cents": 10890,
+      "url": "https://datatronic.fi/komponentit/kotelot/fractal-design-pop-air-rgb-musta-fractal-design-fd-c-por1a-06",
+      "external_id": "47328"
+    },
+    {
+      "name": "SAMA Gears V62 Midi Tower musta",
+      "price_cents": 8690,
+      "url": "https://datatronic.fi/komponentit/kotelot/sama-gears-v62-midi-tower-musta-sama-gears-v62-bkada7x1-gl",
+      "external_id": "176280"
+    },
+    {
+      "name": "SAMA V40 Midi Tower musta",
+      "price_cents": 6090,
+      "url": "https://datatronic.fi/komponentit/kotelot/sama-v40-midi-tower-musta-sama-gears-v40-bkada6x1-gl",
+      "external_id": "174169"
+    },
+    {
+      "name": "Zalman Z1 Iceberg White - mATX Mid Tower PC Case/Pre-installed fan 2 x 120mm in Mini Tower Valkoinen",
+      "price_cents": 3590,
+      "url": "https://datatronic.fi/komponentit/kotelot/zalman-z1-iceberg-white-matx-mid-tower-pc-case-pre-installed-fan-2-x-120mm-in-mini-tower-valkoinen-zalman-z1-iceberg-white",
+      "external_id": "114003"
+    },
+    {
+      "name": "DeepCool CH560 Midi Tower Musta",
+      "price_cents": 6590,
+      "url": "https://datatronic.fi/komponentit/kotelot/deepcool-ch560-midi-tower-musta-deepcool-r-ch560-bkape4-g-1",
+      "external_id": "129436"
+    },
+    {
+      "name": "Sama V52 Midi Tower Musta",
+      "price_cents": 6990,
+      "url": "https://datatronic.fi/komponentit/kotelot/sama-v52-midi-tower-musta-sama-v52-bkada7x1-gl",
+      "external_id": "179423"
+    },
+    {
+      "name": "Fractal Design North XL Musta",
+      "price_cents": 17390,
+      "url": "https://datatronic.fi/komponentit/kotelot/fractal-design-north-xl-musta-fractal-design-fd-c-nor1x-02",
+      "external_id": "154787"
+    },
+    {
+      "name": "SAMA V60 Midi Tower Valkoinen",
+      "price_cents": 7590,
+      "url": "https://datatronic.fi/komponentit/kotelot/sama-v60-midi-tower-valkoinen-sama-gears-v60-whada7x1-gl",
+      "external_id": "174175"
+    },
+    {
+      "name": "Corsair FRAME 4000D Midi Tower musta",
+      "price_cents": 8690,
+      "url": "https://datatronic.fi/komponentit/kotelot/corsair-frame-4000d-midi-tower-musta-corsair-cc-9011290-ww",
+      "external_id": "165263"
+    },
+    {
+      "name": "Lian Li Lancool 216-X Midi Tower Musta",
+      "price_cents": 9390,
+      "url": "https://datatronic.fi/komponentit/kotelot/lian-li-lancool-216-x-midi-tower-musta-lian-li-lancool216x",
+      "external_id": "118553"
+    },
+    {
+      "name": "Phanteks XT Pro Ultra Midi Tower musta",
+      "price_cents": 8290,
+      "url": "https://datatronic.fi/komponentit/kotelot/phanteks-xt-pro-ultra-midi-tower-musta-phanteks-ph-xt523p1-dbk01",
+      "external_id": "166631"
+    },
+    {
+      "name": "Montech XR Tower musta",
+      "price_cents": 7290,
+      "url": "https://datatronic.fi/komponentit/kotelot/montech-xr-tower-musta-montech-xr-b",
+      "external_id": "158775"
+    },
+    {
+      "name": "Fractal Design Define 7 Midi Tower Musta",
+      "price_cents": 20390,
+      "url": "https://datatronic.fi/komponentit/kotelot/fractal-design-define-7-midi-tower-musta-fractal-design-fd-c-def7a-01",
+      "external_id": "4301"
+    },
+    {
+      "name": "Fractal Design North XL Momentum Edition Midi Tower Musta",
+      "price_cents": 20990,
+      "url": "https://datatronic.fi/komponentit/kotelot/fractal-design-north-xl-momentum-edition-midi-tower-musta-fractal-design-fd-c-nor1x-07",
+      "external_id": "175075"
+    },
+    {
+      "name": "Fractal Design Pop Mini Air Musta",
+      "price_cents": 9690,
+      "url": "https://datatronic.fi/komponentit/kotelot/fractal-design-pop-mini-air-musta-fractal-design-fd-c-por1m-06",
+      "external_id": "47333"
+    }
+  ]
+}
