@@ -318,8 +318,13 @@ PARSERS = {
 # ---------------------------------------------------------------------------- pipeline
 
 def iter_raw_items(raw_dir: Path, only_category: Optional[str]) -> List[Dict[str, Any]]:
+    """Read every scraped payload in raw_dir, whatever shop produced it.
+
+    File name convention is <shop>_<category>_p<n>_<date>.json, so any future
+    scraper (Proshop, Jimms) is picked up without changing this function.
+    """
     items: List[Dict[str, Any]] = []
-    for path in sorted(raw_dir.glob("datatronic_*.json")):
+    for path in sorted(raw_dir.glob("*.json")):
         payload = json.loads(path.read_text(encoding="utf-8"))
         category = payload.get("category")
         if not category or (only_category and category != only_category):
