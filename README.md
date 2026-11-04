@@ -81,6 +81,8 @@ Supervisors: Teemu Korpela ([@t2946282](https://github.com/t2946282)), Pekka Ala
 
 **Scraping rules we hold ourselves to:** respect `robots.txt`, one request at a time with a delay, identify the crawler with a contact User-Agent, cache raw HTML and store daily price snapshots, always show the retailer and the timestamp of the price, never republish a retailer catalogue as our own.
 
+**Pipeline:** `scraper/scrape.py` (raw JSON + cached HTML) → `scraper/normalise.py` → `data/normalised/components.json` and `data/normalised/normalisation_report.md`. The report records coverage per spec field and lists every row that could not be parsed, so gaps are visible instead of hidden. A value that is *inferred* rather than read from the product name carries a source marker (`socket_source: inferred_from_sku`, `memory_type_source: inferred_from_chipset`) so the engine can weight it as lower confidence. Rows that are not hardware at all (assembly services, monitor accessories listed inside a component category) are excluded into `excluded_non_components.json`.
+
 **Performance model:** estimated FPS = GPU index × per-game resolution scaling × ray-tracing multiplier × frame-generation uplift (capability-gated) ÷ CPU-bound penalty, with VRAM limits. Coverage is explicitly tiered:
 
 - **Tier A (~30 games):** calibrated from published benchmarks → shown as "estimate"
@@ -94,6 +96,7 @@ buildwise/
 ├── scraper/          # Python data worker: fetch, parse, normalise
 ├── data/
 │   ├── raw/          # raw scraped payloads (JSON, cached HTML)
+│   ├── normalised/   # components.json + normalisation report
 │   └── schema.sql    # database schema
 ├── engine/           # compatibility rules, scoring, performance model
 ├── web/              # Next.js application
