@@ -448,7 +448,11 @@ def merge_product_specs(components: List[Dict[str, Any]],
             if value in (None, [], ""):
                 continue
             previous = component["specs"].get(field)
-            if previous is not None and sources.get(field, "").startswith("inferred"):
+            # The normaliser records inference in a sibling field, e.g.
+            # "socket_source": "inferred_from_sku" for a guessed CPU socket.
+            previous_source = str(component["specs"].get(f"{field}_source", ""))
+            if previous is not None and (previous_source.startswith("inferred")
+                                         or sources.get(field, "").startswith("inferred")):
                 stats["upgraded_from_inferred"] += 1
             if previous is None:
                 if field in component.get("missing_specs", []):

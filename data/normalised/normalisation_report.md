@@ -1,4 +1,4 @@
-# Normalisation report — 2026-11-04
+# Normalisation report — 2026-11-05
 
 Scanned 336 raw products from `data/raw/`, produced **332 unique components** (2 duplicate rows merged).
 
@@ -40,7 +40,7 @@ Missing values are reported, not filled. A `null` spec means the shop's product 
 
 - Components matched to a product page: **330**
 - Fields filled in from the data sheet: 2205 (114 gaps in the name-based specs closed)
-- Guessed values replaced by parsed ones: 0
+- Guessed values replaced by parsed ones: 87
 - CPU sockets now parsed instead of inferred: 43
 
 Each such field is recorded in the component's `spec_sources` as `parsed_product_page`. It comes from the shop's own data sheet for that exact product, not from the product name.
