@@ -15,7 +15,7 @@ export const strings = {
       title: "BuildWise",
       description: "PC-kokoonpanot suomalaisten kauppojen hinnoilla ja rehellisellä FPS-arviolla",
     },
-    footer: "Hinnat: Datatronic · Jimms · Proshop. Päivitetään kerran yössä.",
+    footer: (shops: string, date: string) => `Hinnat: ${shops}. Päivitetty ${date}.`,
 
     categories: {
       cpu: "Prosessori",
@@ -40,6 +40,7 @@ export const strings = {
       compatibility: "Yhteensopivuus",
       addPartsToCheck: "Lisää osia, niin tarkistamme yhteensopivuuden.",
       noProblems: "✓ Ei ongelmia.",
+      checkedOk: "✓ Tarkistetuissa kohdissa ei ongelmia.",
       fpsTitle: "FPS-arvio",
       fpsMockNote: "Valedataan perustuva arvio, joka huomioi vain näytönohjaimen.",
       chooseGpuForFps: "Valitse näytönohjain, niin näet arvion.",
@@ -53,6 +54,7 @@ export const strings = {
       add: "Lisää",
       shops: (n: number) => `${n} kauppaa`,
       noMatches: (query: string) => `Haulla ”${query}” ei löytynyt osia.`,
+      emptyCategory: "Tämän kategorian osia ei ole vielä haettu kaupoista.",
     },
 
     specs: {
@@ -64,6 +66,9 @@ export const strings = {
       modular: "modulaarinen",
       gpuUpTo: (mm: number) => `näytönohjain enintään ${mm} mm`,
       coolerUpTo: (mm: number) => `jäähdytin enintään ${mm} mm`,
+      clock: (ghz: number) => `${ghz.toLocaleString("fi-FI")} GHz`,
+      cache: (mb: number) => `${mb} MB välimuisti`,
+      colors: { black: "musta", white: "valkoinen", grey: "harmaa", wood: "puu" } as Record<string, string>,
     },
 
     preview: {
@@ -96,6 +101,7 @@ export const strings = {
 
     fps: {
       estimate: "Arvio",
+      noEstimate: "Tälle näytönohjaimelle ei ole vielä arviota.",
       settings: { low: "Matala", medium: "Keskitaso", high: "Korkea", ultra: "Ultra" },
     },
 
@@ -112,6 +118,14 @@ export const strings = {
         `Virtalähteessä on vähän varaa: ${p.psu} W, kun kulutus on noin ${p.draw} W. Suositus ${p.recommended} W.`,
       needsCooler: () => "Tämän prosessorin mukana ei tule jäähdytintä. Lisää jäähdytin.",
       needsGpu: () => "Tässä prosessorissa ei ole integroitua grafiikkaa. Lisää näytönohjain.",
+      laptopMemory: () => "Tämä on kannettavan tietokoneen muisti (SO-DIMM), eikä se sovi pöytäkoneen emolevyyn.",
+      socketUnknown: () => "Prosessorin ja emolevyn kantaa ei voitu verrata, koska tieto puuttuu.",
+      memoryUnknown: () => "Muistin ja emolevyn muistityyppiä ei voitu verrata, koska tieto puuttuu.",
+      coolerSocketUnknown: () => "Jäähdyttimen kantatukea ei voitu tarkistaa.",
+      formFactorUnknown: () => "Emolevyn mahtumista koteloon ei voitu tarkistaa, koska kotelon tukemat emolevykoot puuttuvat.",
+      gpuLengthUnknown: () => "Näytönohjaimen mahtumista koteloon ei voitu tarkistaa, koska mitat puuttuvat.",
+      coolerHeightUnknown: () => "Jäähdyttimen mahtumista koteloon ei voitu tarkistaa, koska mitat puuttuvat.",
+      powerUnknown: () => "Virtalähteen riittävyyttä ei voitu tarkistaa, koska osien virrankulutus puuttuu.",
     },
   },
 
@@ -122,7 +136,7 @@ export const strings = {
       title: "BuildWise",
       description: "PC builds with Finnish retailer prices and an honest FPS estimate",
     },
-    footer: "Prices from Datatronic · Jimms · Proshop. Updated nightly.",
+    footer: (shops: string, date: string) => `Prices from ${shops}. Updated ${date}.`,
 
     categories: {
       cpu: "Processor",
@@ -147,6 +161,7 @@ export const strings = {
       compatibility: "Compatibility",
       addPartsToCheck: "Add parts to check compatibility.",
       noProblems: "✓ No problems found.",
+      checkedOk: "✓ No problems in the checks we could run.",
       fpsTitle: "FPS estimate",
       fpsMockNote: "Mock estimate based on the graphics card only.",
       chooseGpuForFps: "Choose a graphics card to see an estimate.",
@@ -160,6 +175,7 @@ export const strings = {
       add: "Add",
       shops: (n: number) => `${n} shops`,
       noMatches: (query: string) => `No parts match “${query}”.`,
+      emptyCategory: "Parts in this category have not been scraped yet.",
     },
 
     specs: {
@@ -171,6 +187,9 @@ export const strings = {
       modular: "modular",
       gpuUpTo: (mm: number) => `GPU up to ${mm} mm`,
       coolerUpTo: (mm: number) => `cooler up to ${mm} mm`,
+      clock: (ghz: number) => `${ghz.toLocaleString("en-IE")} GHz`,
+      cache: (mb: number) => `${mb} MB cache`,
+      colors: { black: "black", white: "white", grey: "grey", wood: "wood" } as Record<string, string>,
     },
 
     preview: {
@@ -203,6 +222,7 @@ export const strings = {
 
     fps: {
       estimate: "Estimate",
+      noEstimate: "No estimate for this graphics card yet.",
       settings: { low: "Low", medium: "Medium", high: "High", ultra: "Ultra" },
     },
 
@@ -218,6 +238,14 @@ export const strings = {
         `Power supply has little headroom: ${p.psu} W for ~${p.draw} W. Aim for ${p.recommended} W.`,
       needsCooler: () => "This CPU is sold without a cooler. Add one.",
       needsGpu: () => "This CPU has no integrated graphics. Add a graphics card.",
+      laptopMemory: () => "This is laptop memory (SO-DIMM) and does not fit a desktop motherboard.",
+      socketUnknown: () => "Could not compare CPU and motherboard sockets: data is missing.",
+      memoryUnknown: () => "Could not compare memory types: data is missing.",
+      coolerSocketUnknown: () => "Could not check the cooler's socket support.",
+      formFactorUnknown: () => "Could not check if the motherboard fits the case: supported board sizes are missing.",
+      gpuLengthUnknown: () => "Could not check if the graphics card fits the case: dimensions are missing.",
+      coolerHeightUnknown: () => "Could not check if the cooler fits the case: dimensions are missing.",
+      powerUnknown: () => "Could not check the power supply: power draw of the parts is missing.",
     },
   },
 } as const;

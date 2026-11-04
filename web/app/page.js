@@ -1,7 +1,8 @@
 "use client";
 
 import { useMemo, useState } from "react";
-import { SLOTS, FPS_BASELINE, cheapestOffer, findComponent } from "@/mock/components";
+import { SLOTS, cheapestOffer, findComponent, chipsetKey } from "@/lib/catalog";
+import { FPS_BASELINE, PERF_BY_CHIPSET } from "@/mock/fps";
 import { GAMES } from "@/mock/build";
 import { checkCompatibility, estimateWattage, issueKey } from "@/lib/compat";
 import { formatEuros } from "@/lib/api";
@@ -31,11 +32,18 @@ export default function BuilderPage() {
   const errorParts = new Set(errors.flatMap((e) => e.parts));
   const gpuTooLong = errors.some((e) => e.code === "gpuLength");
 
-  const fps = build.gpu
+  // Problems first, then things we could not check
+  const LEVEL_ORDER = { error: 0, warning: 1, unknown: 2 };
+  const sortedIssues = [...issues].sort((a, b) => LEVEL_ORDER[a.level] - LEVEL_ORDER[b.level]);
+  const hasProblems = issues.some((i) => i.level !== "unknown");
+  const hasUnknowns = issues.some((i) => i.level === "unknown");
+
+  const perf = build.gpu ? PERF_BY_CHIPSET[chipsetKey(build.gpu.specs.chipset)] : undefined;
+  const fps = perf
     ? FPS_BASELINE[game].map((row) => ({
         ...row,
-        min: Math.round(row.min * build.gpu.specs.perf_index),
-        max: Math.round(row.max * build.gpu.specs.perf_index),
+        min: Math.round(row.min * perf),
+        max: Math.round(row.max * perf),
       }))
     : null;
 
@@ -87,7 +95,7 @@ export default function BuilderPage() {
                   <>
                     <div className="slot-part">
                       <a href={offer.url} target="_blank" rel="noopener noreferrer" className="part-name">
-                        {part.brand} {part.model}
+                        {part.name}
                       </a>
                       <div className="part-specs">{specSummary(part)}</div>
                     </div>
@@ -131,6 +139,24 @@ export default function BuilderPage() {
         </div>
 
         <div className="card">
+          <h2>{t.builder.compatibility}</h2>
+          {chosen.length === 0 ? (
+            <p className="muted small">{t.builder.addPartsToCheck}</p>
+          ) : (
+            <ul className="issues">
+              {!hasProblems && (
+                <li className="issue ok">{hasUnknowns ? t.builder.checkedOk : t.builder.noProblems}</li>
+              )}
+              {sortedIssues.map((issue) => (
+                <li key={issueKey(issue)} className={`issue ${issue.level}`}>
+                  {{ error: "✕", warning: "!", unknown: "?" }[issue.level]} {t.issues[issue.code](issue.params)}
+                </li>
+              ))}
+            </ul>
+          )}
+        </div>
+
+        <div className="card">
           <div className="summary-row">
             <span className="muted">{t.builder.total}</span>
             <span className="stat-value">{formatEuros(totalCents)}</span>
@@ -148,23 +174,6 @@ export default function BuilderPage() {
         </div>
 
         <div className="card">
-          <h2>{t.builder.compatibility}</h2>
-          {chosen.length === 0 ? (
-            <p className="muted small">{t.builder.addPartsToCheck}</p>
-          ) : issues.length === 0 ? (
-            <p className="issue ok">{t.builder.noProblems}</p>
-          ) : (
-            <ul className="issues">
-              {issues.map((issue) => (
-                <li key={issueKey(issue)} className={`issue ${issue.level}`}>
-                  {issue.level === "error" ? "✕" : "!"} {t.issues[issue.code](issue.params)}
-                </li>
-              ))}
-            </ul>
-          )}
-        </div>
-
-        <div className="card">
           <h2>{t.builder.fpsTitle}</h2>
           <select value={game} onChange={(e) => setGame(e.target.value)} className="full-width">
             {GAMES.map((g) => (
@@ -179,7 +188,7 @@ export default function BuilderPage() {
               <p className="muted small">{t.builder.fpsMockNote}</p>
             </>
           ) : (
-            <p className="muted small">{t.builder.chooseGpuForFps}</p>
+            <p className="muted small">{build.gpu ? t.fps.noEstimate : t.builder.chooseGpuForFps}</p>
           )}
         </div>
 

@@ -1,6 +1,10 @@
 import Link from "next/link";
 import "./globals.css";
 import { t, LOCALE } from "@/strings";
+import { COMPONENTS, CATALOG_META } from "@/lib/catalog";
+
+const shops = [...new Set(COMPONENTS.flatMap((c) => c.offers.map((o) => o.shop)))].sort().join(" · ");
+const updated = new Date(CATALOG_META.generatedAt).toLocaleDateString(t.locale, { timeZone: "UTC" });
 
 export const metadata = {
   title: t.meta.title,
@@ -18,7 +22,7 @@ export default function RootLayout({ children }) {
         </header>
         <main className="container">{children}</main>
         <footer className="site-footer">
-          {t.footer}
+          {t.footer(shops, updated)}
         </footer>
       </body>
     </html>

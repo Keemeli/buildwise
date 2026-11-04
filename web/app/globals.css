@@ -606,3 +606,8 @@ select {
 .pv-case-error {
   stroke: #e5484d;
 }
+
+.issue.unknown {
+  background: rgba(139, 147, 167, 0.1);
+  color: var(--muted);
+}
