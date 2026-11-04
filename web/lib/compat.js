@@ -20,14 +20,26 @@ const partPowerW = (part) => part.specs.tdp_w ?? part.specs.power_w ?? null;
 // part's power draw — it is only used to check the PSU.
 export const minimumPsuW = (build) => build.gpu?.specs.recommended_psu_w ?? null;
 
-// null = cannot estimate (a chosen CPU or GPU has neither a power figure nor a
-// manufacturer minimum PSU size in the data)
-export function estimateWattage(build) {
+// What a power number is based on, so the panel can say it out loud:
+//   "parts"           — summed from the chosen parts' own power figures (TDP / power_w)
+//   "manufacturerMin" — the GPU manufacturer's minimum PSU size for the system
+//   "none"            — no CPU or GPU chosen yet
+//   "unknown"         — neither a power figure nor a manufacturer minimum is in the data
+export function powerBasis(build) {
   const parts = [build.cpu, build.gpu].filter(Boolean);
-  if (parts.length === 0) return 0;
+  if (parts.length === 0) return { watts: null, basis: "none" };
   const powers = parts.map(partPowerW);
-  if (powers.some((w) => w == null)) return null;
-  return powers.reduce((sum, w) => sum + w, BASE_POWER_W);
+  if (powers.every((w) => w != null)) {
+    return { watts: powers.reduce((sum, w) => sum + w, BASE_POWER_W), basis: "parts" };
+  }
+  const minimum = minimumPsuW(build);
+  if (minimum != null) return { watts: minimum, basis: "manufacturerMin" };
+  return { watts: null, basis: "unknown" };
+}
+
+// null = cannot estimate (neither a power figure nor a manufacturer minimum)
+export function estimateWattage(build) {
+  return powerBasis(build).watts;
 }
 
 const known = (v) => v !== null && v !== undefined;
@@ -109,10 +121,11 @@ export function checkCompatibility(build) {
 
   // Power supply
   if (psu && (cpu || gpu)) {
-    const watts = estimateWattage(build);
+    const { basis } = powerBasis(build);
     const psuWatts = psu.specs.wattage_w;
     const minimum = minimumPsuW(build);
-    if (known(psuWatts) && known(watts)) {
+    if (known(psuWatts) && basis === "parts") {
+      const watts = estimateWattage(build);
       if (psuWatts < watts) {
         add("error", ["psu"], "psuTooWeak", { psu: psuWatts, draw: watts });
       } else if (psuWatts < watts * 1.3) {
@@ -156,4 +169,34 @@ export function issuesForCandidate(build, candidate) {
 // Key for React lists
 export function issueKey(issue) {
   return `${issue.code}:${issue.parts.join(",")}`;
+}
+
+// Which checks the engine can actually run with the parts chosen so far.
+// The panel uses this so a build with only a CPU and a GPU does not show a bare
+// green tick: it says how many checks ran and what is still waiting for parts.
+const CHECK_AREAS = [
+  { id: "cpuSocket", needs: ["cpu", "motherboard"] },
+  { id: "memoryType", needs: ["memory", "motherboard"] },
+  { id: "memoryForm", needs: ["memory"] },
+  { id: "coolerMount", needs: ["cooler", "motherboard"] },
+  { id: "coolerHeight", needs: ["cooler", "case"] },
+  { id: "gpuLength", needs: ["gpu", "case"] },
+  { id: "psuPower", needs: ["psu"], anyOf: ["cpu", "gpu"] },
+  { id: "cpuExtras", needs: ["cpu"] },
+];
+
+export function checkCoverage(build) {
+  const areas = CHECK_AREAS.map((area) => ({
+    ...area,
+    ready: area.needs.every((k) => build[k]) && (!area.anyOf || area.anyOf.some((k) => build[k])),
+  }));
+  const waitingFor = [...new Set(
+    areas.filter((a) => !a.ready).flatMap((a) => a.needs).filter((k) => !build[k]),
+  )];
+  return {
+    done: areas.filter((a) => a.ready).length,
+    total: areas.length,
+    waitingFor,
+    notDone: areas.length - areas.filter((a) => a.ready).length,
+  };
 }

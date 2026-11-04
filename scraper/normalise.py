@@ -398,8 +398,15 @@ def dedupe(components: List[Dict[str, Any]]) -> Tuple[List[Dict[str, Any]], int]
             continue
         duplicates += 1
         listing = component["listing"]
-        if all(l["url"] != listing["url"] for l in existing["listings"]):
+        previous = next((l for l in existing["listings"] if l["url"] == listing["url"]), None)
+        if previous is None:
             existing["listings"].append(listing)
+        else:
+            # The same product can appear in an older and a newer scrape (a refresh
+            # keeps both files on disk). The newer snapshot must win, otherwise a
+            # price refresh is silently ignored.
+            if str(listing.get("snapshot_date") or "") >= str(previous.get("snapshot_date") or ""):
+                previous.update(listing)
         # keep the best-covered spec set (more fields read from the name wins)
         if len(component["specs"]) - len(component["missing_specs"]) > len(existing["specs"]) - len(existing["missing_specs"]):
             existing["specs"] = component["specs"]

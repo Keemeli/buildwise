@@ -1,7 +1,7 @@
 {
   "generated_at": "2026-11-05",
   "source": "Datatronic (scraped category listings)",
-  "component_count": 332,
+  "component_count": 335,
   "components": [
     {
       "category": "case",
@@ -37,7 +37,7 @@
           "url": "https://datatronic.fi/komponentit/kotelot/lian-li-lancool-lan217x-tietokonekotelo-midi-tower-musta-puu-lian-li-g99lan217x00",
           "external_id": "168663",
           "price_cents": 11090,
-          "snapshot_date": "2026-11-03"
+          "snapshot_date": "2026-11-04"
         }
       ],
       "spec_sources": {
@@ -91,7 +91,7 @@
           "url": "https://datatronic.fi/komponentit/kotelot/sama-z60-midi-tower-musta-sama-gears-z60-bkawa4x1-gl",
           "external_id": "174181",
           "price_cents": 6290,
-          "snapshot_date": "2026-11-03"
+          "snapshot_date": "2026-11-04"
         }
       ],
       "spec_sources": {
@@ -144,14 +144,14 @@
           "url": "https://datatronic.fi/komponentit/kotelot/fractal-design-north-musta-fractal-design-fd-c-nor1c-02",
           "external_id": "84324",
           "price_cents": 15990,
-          "snapshot_date": "2026-11-03"
+          "snapshot_date": "2026-11-04"
         },
         {
           "shop": "Datatronic",
           "url": "https://datatronic.fi/komponentit/kotelot/fractal-design-north-musta-fractal-design-fd-c-nor1c-01",
           "external_id": "84323",
           "price_cents": 14090,
-          "snapshot_date": "2026-11-03"
+          "snapshot_date": "2026-11-04"
         }
       ],
       "spec_sources": {
@@ -202,7 +202,7 @@
           "url": "https://datatronic.fi/komponentit/kotelot/zalman-i3-neo-v2-black-tietokonekotelo-midi-tower-musta-zalman-i3-neo-v2-black",
           "external_id": "175110",
           "price_cents": 4890,
-          "snapshot_date": "2026-11-03"
+          "snapshot_date": "2026-11-04"
         }
       ],
       "spec_sources": {
@@ -251,7 +251,7 @@
           "url": "https://datatronic.fi/komponentit/kotelot/sama-s30-midi-tower-musta-sama-gears-s30-bkmpa3x1-gl",
           "external_id": "174179",
           "price_cents": 4490,
-          "snapshot_date": "2026-11-03"
+          "snapshot_date": "2026-11-04"
         }
       ],
       "spec_sources": {
@@ -302,7 +302,7 @@
           "url": "https://datatronic.fi/komponentit/kotelot/fractal-design-epoch-midi-tower-musta-fractal-design-fd-c-epo1a-04",
           "external_id": "171529",
           "price_cents": 9490,
-          "snapshot_date": "2026-11-03"
+          "snapshot_date": "2026-11-04"
         }
       ],
       "spec_sources": {
@@ -359,14 +359,14 @@
           "url": "https://datatronic.fi/komponentit/kotelot/fractal-design-north-xl-musta-fractal-design-fd-c-nor1x-01",
           "external_id": "154786",
           "price_cents": 17390,
-          "snapshot_date": "2026-11-03"
+          "snapshot_date": "2026-11-04"
         },
         {
           "shop": "Datatronic",
           "url": "https://datatronic.fi/komponentit/kotelot/fractal-design-north-xl-musta-fractal-design-fd-c-nor1x-02",
           "external_id": "154787",
           "price_cents": 17390,
-          "snapshot_date": "2026-11-03"
+          "snapshot_date": "2026-11-04"
         }
       ],
       "spec_sources": {
@@ -421,7 +421,7 @@
           "url": "https://datatronic.fi/komponentit/kotelot/fractal-design-north-valkoinen-fractal-design-fd-c-nor1c-03",
           "external_id": "84325",
           "price_cents": 14090,
-          "snapshot_date": "2026-11-03"
+          "snapshot_date": "2026-11-04"
         }
       ],
       "spec_sources": {
@@ -475,7 +475,7 @@
           "url": "https://datatronic.fi/komponentit/kotelot/fractal-design-pop-air-rgb-musta-fractal-design-fd-c-por1a-06",
           "external_id": "47328",
           "price_cents": 10890,
-          "snapshot_date": "2026-11-03"
+          "snapshot_date": "2026-11-04"
         }
       ],
       "spec_sources": {
@@ -527,7 +527,7 @@
           "url": "https://datatronic.fi/komponentit/kotelot/sama-gears-v62-midi-tower-musta-sama-gears-v62-bkada7x1-gl",
           "external_id": "176280",
           "price_cents": 8690,
-          "snapshot_date": "2026-11-03"
+          "snapshot_date": "2026-11-04"
         }
       ],
       "spec_sources": {
@@ -578,7 +578,7 @@
           "url": "https://datatronic.fi/komponentit/kotelot/sama-v40-midi-tower-musta-sama-gears-v40-bkada6x1-gl",
           "external_id": "174169",
           "price_cents": 6090,
-          "snapshot_date": "2026-11-03"
+          "snapshot_date": "2026-11-04"
         }
       ],
       "spec_sources": {
@@ -625,7 +625,7 @@
           "url": "https://datatronic.fi/komponentit/kotelot/zalman-z1-iceberg-white-matx-mid-tower-pc-case-pre-installed-fan-2-x-120mm-in-mini-tower-valkoinen-zalman-z1-iceberg-white",
           "external_id": "114003",
           "price_cents": 3590,
-          "snapshot_date": "2026-11-03"
+          "snapshot_date": "2026-11-04"
         }
       ],
       "spec_sources": {
@@ -675,7 +675,7 @@
           "url": "https://datatronic.fi/komponentit/kotelot/deepcool-ch560-midi-tower-musta-deepcool-r-ch560-bkape4-g-1",
           "external_id": "129436",
           "price_cents": 6590,
-          "snapshot_date": "2026-11-03"
+          "snapshot_date": "2026-11-04"
         }
       ],
       "spec_sources": {
@@ -727,7 +727,7 @@
           "url": "https://datatronic.fi/komponentit/kotelot/sama-v52-midi-tower-musta-sama-v52-bkada7x1-gl",
           "external_id": "179423",
           "price_cents": 6990,
-          "snapshot_date": "2026-11-03"
+          "snapshot_date": "2026-11-04"
         }
       ],
       "spec_sources": {
@@ -778,7 +778,7 @@
           "url": "https://datatronic.fi/komponentit/kotelot/sama-v60-midi-tower-valkoinen-sama-gears-v60-whada7x1-gl",
           "external_id": "174175",
           "price_cents": 7590,
-          "snapshot_date": "2026-11-03"
+          "snapshot_date": "2026-11-04"
         }
       ],
       "spec_sources": {
@@ -829,7 +829,7 @@
           "url": "https://datatronic.fi/komponentit/kotelot/corsair-frame-4000d-midi-tower-musta-corsair-cc-9011290-ww",
           "external_id": "165263",
           "price_cents": 8690,
-          "snapshot_date": "2026-11-03"
+          "snapshot_date": "2026-11-04"
         }
       ],
       "spec_sources": {
@@ -882,7 +882,7 @@
           "url": "https://datatronic.fi/komponentit/kotelot/lian-li-lancool-216-x-midi-tower-musta-lian-li-lancool216x",
           "external_id": "118553",
           "price_cents": 9390,
-          "snapshot_date": "2026-11-03"
+          "snapshot_date": "2026-11-04"
         }
       ],
       "spec_sources": {
@@ -932,8 +932,8 @@
           "shop": "Datatronic",
           "url": "https://datatronic.fi/komponentit/kotelot/phanteks-xt-pro-ultra-midi-tower-musta-phanteks-ph-xt523p1-dbk01",
           "external_id": "166631",
-          "price_cents": 8290,
-          "snapshot_date": "2026-11-03"
+          "price_cents": 8990,
+          "snapshot_date": "2026-11-04"
         }
       ],
       "spec_sources": {
@@ -981,7 +981,7 @@
           "url": "https://datatronic.fi/komponentit/kotelot/montech-xr-tower-musta-montech-xr-b",
           "external_id": "158775",
           "price_cents": 7290,
-          "snapshot_date": "2026-11-03"
+          "snapshot_date": "2026-11-04"
         }
       ],
       "spec_sources": {
@@ -1079,7 +1079,7 @@
           "url": "https://datatronic.fi/komponentit/kotelot/fractal-design-north-xl-momentum-edition-midi-tower-musta-fractal-design-fd-c-nor1x-07",
           "external_id": "175075",
           "price_cents": 20990,
-          "snapshot_date": "2026-11-03"
+          "snapshot_date": "2026-11-04"
         }
       ],
       "spec_sources": {
@@ -1133,7 +1133,7 @@
           "url": "https://datatronic.fi/komponentit/kotelot/fractal-design-pop-mini-air-musta-fractal-design-fd-c-por1m-06",
           "external_id": "47333",
           "price_cents": 9690,
-          "snapshot_date": "2026-11-03"
+          "snapshot_date": "2026-11-04"
         }
       ],
       "spec_sources": {
@@ -1150,6 +1150,60 @@
         "max_cooler_height_mm": "parsed_product_page",
         "max_gpu_length_mm": "parsed_product_page",
         "max_psu_length_mm": "parsed_product_page"
+      }
+    },
+    {
+      "category": "case",
+      "brand": "Lian Li",
+      "model": "Lancool LAN217W Midi Tower Valkoinen, Puu",
+      "raw_name": "Lian Li Lancool LAN217W tietokonekotelo Midi Tower Valkoinen, Puu",
+      "specs": {
+        "form_factor": "Midi Tower",
+        "color": "Valkoinen, Puu",
+        "max_gpu_length_mm": 380.0,
+        "width_mm": 238.0,
+        "depth_mm": 482.0,
+        "height_mm": 503.0,
+        "tower_size": "Midi Tower",
+        "psu_included": false,
+        "material": "Terästä, Karkaistu lasi, Puu",
+        "supported_motherboards": [
+          "ATX",
+          "EATX",
+          "SSI EEB"
+        ],
+        "hdd_35_bays": 1,
+        "expansion_slots": 7,
+        "max_cooler_height_mm": 180.0,
+        "max_psu_length_mm": 220.0,
+        "front_usb_c": 1
+      },
+      "missing_specs": [],
+      "category_confidence": "ok",
+      "listings": [
+        {
+          "shop": "Datatronic",
+          "url": "https://datatronic.fi/komponentit/kotelot/lian-li-lancool-lan217w-tietokonekotelo-midi-tower-valkoinen-puu-lian-li-g99lan217w00",
+          "external_id": "168661",
+          "price_cents": 11490,
+          "snapshot_date": "2026-11-04"
+        }
+      ],
+      "spec_sources": {
+        "color": "parsed_product_page",
+        "width_mm": "parsed_product_page",
+        "depth_mm": "parsed_product_page",
+        "height_mm": "parsed_product_page",
+        "tower_size": "parsed_product_page",
+        "psu_included": "parsed_product_page",
+        "material": "parsed_product_page",
+        "supported_motherboards": "parsed_product_page",
+        "hdd_35_bays": "parsed_product_page",
+        "expansion_slots": "parsed_product_page",
+        "max_cooler_height_mm": "parsed_product_page",
+        "max_gpu_length_mm": "parsed_product_page",
+        "max_psu_length_mm": "parsed_product_page",
+        "front_usb_c": "parsed_product_page"
       }
     },
     {
@@ -1404,60 +1458,6 @@
         "expansion_slots": "parsed_product_page",
         "max_cooler_height_mm": "parsed_product_page",
         "max_gpu_length_mm": "parsed_product_page",
-        "front_usb_c": "parsed_product_page"
-      }
-    },
-    {
-      "category": "case",
-      "brand": "Lian Li",
-      "model": "Lancool LAN217W Midi Tower Valkoinen, Puu",
-      "raw_name": "Lian Li Lancool LAN217W tietokonekotelo Midi Tower Valkoinen, Puu",
-      "specs": {
-        "form_factor": "Midi Tower",
-        "color": "Valkoinen, Puu",
-        "max_gpu_length_mm": 380.0,
-        "width_mm": 238.0,
-        "depth_mm": 482.0,
-        "height_mm": 503.0,
-        "tower_size": "Midi Tower",
-        "psu_included": false,
-        "material": "Terästä, Karkaistu lasi, Puu",
-        "supported_motherboards": [
-          "ATX",
-          "EATX",
-          "SSI EEB"
-        ],
-        "hdd_35_bays": 1,
-        "expansion_slots": 7,
-        "max_cooler_height_mm": 180.0,
-        "max_psu_length_mm": 220.0,
-        "front_usb_c": 1
-      },
-      "missing_specs": [],
-      "category_confidence": "ok",
-      "listings": [
-        {
-          "shop": "Datatronic",
-          "url": "https://datatronic.fi/komponentit/kotelot/lian-li-lancool-lan217w-tietokonekotelo-midi-tower-valkoinen-puu-lian-li-g99lan217w00",
-          "external_id": "168661",
-          "price_cents": 11490,
-          "snapshot_date": "2026-11-03"
-        }
-      ],
-      "spec_sources": {
-        "color": "parsed_product_page",
-        "width_mm": "parsed_product_page",
-        "depth_mm": "parsed_product_page",
-        "height_mm": "parsed_product_page",
-        "tower_size": "parsed_product_page",
-        "psu_included": "parsed_product_page",
-        "material": "parsed_product_page",
-        "supported_motherboards": "parsed_product_page",
-        "hdd_35_bays": "parsed_product_page",
-        "expansion_slots": "parsed_product_page",
-        "max_cooler_height_mm": "parsed_product_page",
-        "max_gpu_length_mm": "parsed_product_page",
-        "max_psu_length_mm": "parsed_product_page",
         "front_usb_c": "parsed_product_page"
       }
     },
@@ -2428,7 +2428,7 @@
           "url": "https://datatronic.fi/komponentit/prosessorit/amd-ryzen-7-9800x3d-suoritin-47-ghz-104-mb-l2-l3-laatikko-amd-100-100001084wof",
           "external_id": "165046",
           "price_cents": 43900,
-          "snapshot_date": "2026-11-03"
+          "snapshot_date": "2026-11-04"
         }
       ],
       "spec_sources": {
@@ -2483,7 +2483,7 @@
           "url": "https://datatronic.fi/komponentit/prosessorit/amd-ryzen-5-5600-suoritin-35-ghz-32-mb-l3-laatikko-amd-100-100000927box",
           "external_id": "45903",
           "price_cents": 14190,
-          "snapshot_date": "2026-11-03"
+          "snapshot_date": "2026-11-04"
         }
       ],
       "spec_sources": {
@@ -2540,7 +2540,7 @@
           "url": "https://datatronic.fi/komponentit/prosessorit/amd-ryzen-7-5800x3d-suoritin-34-ghz-96-mb-l3-laatikko-amd-100-100000651pof",
           "external_id": "180909",
           "price_cents": 36500,
-          "snapshot_date": "2026-11-03"
+          "snapshot_date": "2026-11-04"
         }
       ],
       "spec_sources": {
@@ -2597,7 +2597,7 @@
           "url": "https://datatronic.fi/komponentit/prosessorit/amd-ryzen-5-9600x-suoritin-39-ghz-38-mb-l2-l3-laatikko-amd-100-100001405wof",
           "external_id": "163850",
           "price_cents": 18390,
-          "snapshot_date": "2026-11-03"
+          "snapshot_date": "2026-11-04"
         }
       ],
       "spec_sources": {
@@ -2654,7 +2654,7 @@
           "url": "https://datatronic.fi/komponentit/prosessorit/amd-ryzen-7-7800x3d-suoritin-42-ghz-96-mb-l3-laatikko-amd-100-100000910wof",
           "external_id": "118634",
           "price_cents": 37500,
-          "snapshot_date": "2026-11-03"
+          "snapshot_date": "2026-11-04"
         }
       ],
       "spec_sources": {
@@ -2705,7 +2705,7 @@
           "url": "https://datatronic.fi/komponentit/prosessorit/amd-ryzen-9-7900x-suoritin-47-ghz-64-mb-l3-laatikko-amd-100-100000589wof",
           "external_id": "48298",
           "price_cents": 29590,
-          "snapshot_date": "2026-11-03"
+          "snapshot_date": "2026-11-04"
         }
       ],
       "spec_sources": {
@@ -2747,7 +2747,7 @@
           "url": "https://datatronic.fi/komponentit/prosessorit/amd-ryzen-5-5600xt-suoritin-laatikko-amd-100-100001585box",
           "external_id": "165044",
           "price_cents": 15990,
-          "snapshot_date": "2026-11-03"
+          "snapshot_date": "2026-11-04"
         }
       ],
       "spec_sources": {}
@@ -2789,7 +2789,7 @@
           "url": "https://datatronic.fi/komponentit/prosessorit/amd-ryzen-5-7500x3d-suoritin-4-ghz-96-mb-l3-laatikko-amd-100-100001904wof",
           "external_id": "174207",
           "price_cents": 22990,
-          "snapshot_date": "2026-11-03"
+          "snapshot_date": "2026-11-04"
         }
       ],
       "spec_sources": {
@@ -2846,7 +2846,7 @@
           "url": "https://datatronic.fi/komponentit/prosessorit/amd-ryzen-5-7500f-suoritin-37-ghz-32-mb-l3-konekasaukseen-amd-100-100000597mpk",
           "external_id": "150839",
           "price_cents": 15990,
-          "snapshot_date": "2026-11-03"
+          "snapshot_date": "2026-11-04"
         }
       ],
       "spec_sources": {
@@ -2900,7 +2900,7 @@
           "url": "https://datatronic.fi/komponentit/prosessorit/amd-ryzen-5-5600x-suoritin-37-ghz-32-mb-l3-laatikko-amd-100-100000065box",
           "external_id": "5102",
           "price_cents": 16490,
-          "snapshot_date": "2026-11-03"
+          "snapshot_date": "2026-11-04"
         }
       ],
       "spec_sources": {
@@ -2954,7 +2954,7 @@
           "url": "https://datatronic.fi/komponentit/prosessorit/amd-ryzen-7-5700x-suoritin-34-ghz-32-mb-l3-laatikko-amd-100-100000926wof",
           "external_id": "45902",
           "price_cents": 20990,
-          "snapshot_date": "2026-11-03"
+          "snapshot_date": "2026-11-04"
         }
       ],
       "spec_sources": {
@@ -3011,7 +3011,7 @@
           "url": "https://datatronic.fi/komponentit/prosessorit/amd-ryzen-7-9700x-suoritin-38-ghz-40-mb-l2-l3-laatikko-amd-100-100001404wof",
           "external_id": "163851",
           "price_cents": 33500,
-          "snapshot_date": "2026-11-03"
+          "snapshot_date": "2026-11-04"
         }
       ],
       "spec_sources": {
@@ -3068,7 +3068,7 @@
           "url": "https://datatronic.fi/komponentit/prosessorit/intel-core-i5-14600k-suoritin-24-mb-smart-cache-laatikko-intel-bx8071514600k",
           "external_id": "140804",
           "price_cents": 27390,
-          "snapshot_date": "2026-11-03"
+          "snapshot_date": "2026-11-04"
         }
       ],
       "spec_sources": {
@@ -3116,7 +3116,7 @@
           "url": "https://datatronic.fi/komponentit/prosessorit/amd-ryzen-5-7600x-suoritin-47-ghz-32-mb-l3-laatikko-amd-100-100000593wof",
           "external_id": "48297",
           "price_cents": 16690,
-          "snapshot_date": "2026-11-03"
+          "snapshot_date": "2026-11-04"
         }
       ],
       "spec_sources": {
@@ -3169,8 +3169,8 @@
           "shop": "Datatronic",
           "url": "https://datatronic.fi/komponentit/prosessorit/intel-core-i5-14400f-suoritin-20-mb-smart-cache-laatikko-intel-bx8071514400f",
           "external_id": "152270",
-          "price_cents": 16490,
-          "snapshot_date": "2026-11-03"
+          "price_cents": 16290,
+          "snapshot_date": "2026-11-04"
         }
       ],
       "spec_sources": {
@@ -3224,8 +3224,8 @@
           "shop": "Datatronic",
           "url": "https://datatronic.fi/komponentit/prosessorit/amd-ryzen-7-9850x3d-suoritin-47-ghz-96-mb-l3-laatikko-amd-100-100001973wof",
           "external_id": "175458",
-          "price_cents": 49500,
-          "snapshot_date": "2026-11-03"
+          "price_cents": 48900,
+          "snapshot_date": "2026-11-04"
         }
       ],
       "spec_sources": {
@@ -3282,7 +3282,7 @@
           "url": "https://datatronic.fi/komponentit/prosessorit/amd-ryzen-7-9800x3d-suoritin-47-ghz-96-mb-l3-tray-malli-konekasauksiin-amd-100-000001084",
           "external_id": "165102",
           "price_cents": 43900,
-          "snapshot_date": "2026-11-03"
+          "snapshot_date": "2026-11-04"
         }
       ],
       "spec_sources": {
@@ -3339,7 +3339,7 @@
           "url": "https://datatronic.fi/komponentit/prosessorit/amd-ryzen-5-5500-suoritin-36-ghz-16-mb-l3-laatikko-amd-100-100000457box",
           "external_id": "45904",
           "price_cents": 9990,
-          "snapshot_date": "2026-11-03"
+          "snapshot_date": "2026-11-04"
         }
       ],
       "spec_sources": {
@@ -3444,8 +3444,8 @@
           "shop": "Datatronic",
           "url": "https://datatronic.fi/komponentit/prosessorit/intel-core-i7-14700k-suoritin-33-mb-smart-cache-laatikko-intel-bx8071514700k",
           "external_id": "140808",
-          "price_cents": 38900,
-          "snapshot_date": "2026-11-03"
+          "price_cents": 38500,
+          "snapshot_date": "2026-11-04"
         }
       ],
       "spec_sources": {
@@ -3499,7 +3499,7 @@
           "url": "https://datatronic.fi/komponentit/prosessorit/amd-ryzen-9-9950x3d-suoritin-43-ghz-144-mb-l2-l3-laatikko-amd-100-100000719wof",
           "external_id": "168294",
           "price_cents": 69900,
-          "snapshot_date": "2026-11-03"
+          "snapshot_date": "2026-11-04"
         }
       ],
       "spec_sources": {
@@ -3608,7 +3608,7 @@
           "url": "https://datatronic.fi/komponentit/prosessorit/amd-ryzen-7-5800x-suoritin-38-ghz-32-mb-l3-amd-100-100000063wof",
           "external_id": "5101",
           "price_cents": 24590,
-          "snapshot_date": "2026-11-03"
+          "snapshot_date": "2026-11-04"
         }
       ],
       "spec_sources": {
@@ -3620,6 +3620,116 @@
         "memory_speed_mhz": "parsed_product_page",
         "integrated_graphics": "parsed_product_page",
         "base_clock_mhz": "parsed_product_page"
+      }
+    },
+    {
+      "category": "cpu",
+      "brand": "Intel",
+      "model": "Core i3-14100 12 MB Smart Cache Laatikko",
+      "raw_name": "Intel Core i3-14100 suoritin 12 MB Smart Cache Laatikko",
+      "specs": {
+        "family": "Core i3-14100",
+        "base_clock_ghz": null,
+        "cache_mb": 12,
+        "packaging": "boxed",
+        "socket": "LGA1700",
+        "socket_source": "parsed_product_page",
+        "igpu": null,
+        "efficiency_cores": null,
+        "cores": 4,
+        "threads": 8,
+        "boost_clock_mhz": 4700,
+        "memory_types": [
+          "DDR4-SDRAM",
+          "DDR5-SDRAM"
+        ],
+        "integrated_graphics": true,
+        "memory_channels": 2,
+        "pcie_version": "4.0, 5.0",
+        "cooler_included": true,
+        "tdp_w": 60,
+        "max_turbo_power_w": 110
+      },
+      "missing_specs": [
+        "base_clock_ghz"
+      ],
+      "category_confidence": "ok",
+      "listings": [
+        {
+          "shop": "Datatronic",
+          "url": "https://datatronic.fi/komponentit/prosessorit/intel-core-i3-14100-suoritin-12-mb-smart-cache-laatikko-intel-bx8071514100",
+          "external_id": "152267",
+          "price_cents": 13390,
+          "snapshot_date": "2026-11-04"
+        }
+      ],
+      "spec_sources": {
+        "cores": "parsed_product_page",
+        "socket": "parsed_product_page",
+        "threads": "parsed_product_page",
+        "cache_mb": "parsed_product_page",
+        "boost_clock_mhz": "parsed_product_page",
+        "memory_types": "parsed_product_page",
+        "integrated_graphics": "parsed_product_page",
+        "memory_channels": "parsed_product_page",
+        "pcie_version": "parsed_product_page",
+        "cooler_included": "parsed_product_page",
+        "tdp_w": "parsed_product_page",
+        "max_turbo_power_w": "parsed_product_page"
+      }
+    },
+    {
+      "category": "cpu",
+      "brand": "Intel",
+      "model": "Core i5-12400F 18 MB Smart Cache Laatikko",
+      "raw_name": "Intel Core i5-12400F suoritin 18 MB Smart Cache Laatikko",
+      "specs": {
+        "family": "Core i5-12400F",
+        "base_clock_ghz": null,
+        "cache_mb": 18,
+        "packaging": "boxed",
+        "socket": "LGA1700",
+        "socket_source": "parsed_product_page",
+        "igpu": null,
+        "efficiency_cores": null,
+        "cores": 6,
+        "threads": 12,
+        "boost_clock_mhz": 4400,
+        "memory_types": [
+          "DDR4-SDRAM",
+          "DDR5-SDRAM"
+        ],
+        "integrated_graphics": false,
+        "memory_channels": 2,
+        "pcie_version": "5.0, 4.0",
+        "tdp_w": 65,
+        "max_turbo_power_w": 117
+      },
+      "missing_specs": [
+        "base_clock_ghz"
+      ],
+      "category_confidence": "ok",
+      "listings": [
+        {
+          "shop": "Datatronic",
+          "url": "https://datatronic.fi/komponentit/prosessorit/intel-core-i5-12400f-suoritin-18-mb-smart-cache-laatikko-intel-cm8071504555318",
+          "external_id": "36863",
+          "price_cents": 15590,
+          "snapshot_date": "2026-11-04"
+        }
+      ],
+      "spec_sources": {
+        "cores": "parsed_product_page",
+        "socket": "parsed_product_page",
+        "threads": "parsed_product_page",
+        "cache_mb": "parsed_product_page",
+        "boost_clock_mhz": "parsed_product_page",
+        "memory_types": "parsed_product_page",
+        "integrated_graphics": "parsed_product_page",
+        "memory_channels": "parsed_product_page",
+        "pcie_version": "parsed_product_page",
+        "tdp_w": "parsed_product_page",
+        "max_turbo_power_w": "parsed_product_page"
       }
     },
     {
@@ -3725,62 +3835,6 @@
         "memory_speed_mhz": "parsed_product_page",
         "integrated_graphics": "parsed_product_page",
         "base_clock_mhz": "parsed_product_page"
-      }
-    },
-    {
-      "category": "cpu",
-      "brand": "Intel",
-      "model": "Core i3-14100 12 MB Smart Cache Laatikko",
-      "raw_name": "Intel Core i3-14100 suoritin 12 MB Smart Cache Laatikko",
-      "specs": {
-        "family": "Core i3-14100",
-        "base_clock_ghz": null,
-        "cache_mb": 12,
-        "packaging": "boxed",
-        "socket": "LGA1700",
-        "socket_source": "parsed_product_page",
-        "igpu": null,
-        "efficiency_cores": null,
-        "cores": 4,
-        "threads": 8,
-        "boost_clock_mhz": 4700,
-        "memory_types": [
-          "DDR4-SDRAM",
-          "DDR5-SDRAM"
-        ],
-        "integrated_graphics": true,
-        "memory_channels": 2,
-        "pcie_version": "4.0, 5.0",
-        "cooler_included": true,
-        "tdp_w": 60,
-        "max_turbo_power_w": 110
-      },
-      "missing_specs": [
-        "base_clock_ghz"
-      ],
-      "category_confidence": "ok",
-      "listings": [
-        {
-          "shop": "Datatronic",
-          "url": "https://datatronic.fi/komponentit/prosessorit/intel-core-i3-14100-suoritin-12-mb-smart-cache-laatikko-intel-bx8071514100",
-          "external_id": "152267",
-          "price_cents": 13390,
-          "snapshot_date": "2026-11-03"
-        }
-      ],
-      "spec_sources": {
-        "cores": "parsed_product_page",
-        "socket": "parsed_product_page",
-        "threads": "parsed_product_page",
-        "cache_mb": "parsed_product_page",
-        "boost_clock_mhz": "parsed_product_page",
-        "memory_types": "parsed_product_page",
-        "integrated_graphics": "parsed_product_page",
-        "memory_channels": "parsed_product_page",
-        "pcie_version": "parsed_product_page",
-        "cooler_included": "parsed_product_page",
-        "tdp_w": "parsed_product_page",
-        "max_turbo_power_w": "parsed_product_page"
       }
     },
     {
@@ -4117,60 +4171,6 @@
         "pcie_version": "parsed_product_page",
         "cooler_included": "parsed_product_page",
         "base_clock_mhz": "parsed_product_page"
-      }
-    },
-    {
-      "category": "cpu",
-      "brand": "Intel",
-      "model": "Core i5-12400F 18 MB Smart Cache Laatikko",
-      "raw_name": "Intel Core i5-12400F suoritin 18 MB Smart Cache Laatikko",
-      "specs": {
-        "family": "Core i5-12400F",
-        "base_clock_ghz": null,
-        "cache_mb": 18,
-        "packaging": "boxed",
-        "socket": "LGA1700",
-        "socket_source": "parsed_product_page",
-        "igpu": null,
-        "efficiency_cores": null,
-        "cores": 6,
-        "threads": 12,
-        "boost_clock_mhz": 4400,
-        "memory_types": [
-          "DDR4-SDRAM",
-          "DDR5-SDRAM"
-        ],
-        "integrated_graphics": false,
-        "memory_channels": 2,
-        "pcie_version": "5.0, 4.0",
-        "tdp_w": 65,
-        "max_turbo_power_w": 117
-      },
-      "missing_specs": [
-        "base_clock_ghz"
-      ],
-      "category_confidence": "ok",
-      "listings": [
-        {
-          "shop": "Datatronic",
-          "url": "https://datatronic.fi/komponentit/prosessorit/intel-core-i5-12400f-suoritin-18-mb-smart-cache-laatikko-intel-cm8071504555318",
-          "external_id": "36863",
-          "price_cents": 15590,
-          "snapshot_date": "2026-11-03"
-        }
-      ],
-      "spec_sources": {
-        "cores": "parsed_product_page",
-        "socket": "parsed_product_page",
-        "threads": "parsed_product_page",
-        "cache_mb": "parsed_product_page",
-        "boost_clock_mhz": "parsed_product_page",
-        "memory_types": "parsed_product_page",
-        "integrated_graphics": "parsed_product_page",
-        "memory_channels": "parsed_product_page",
-        "pcie_version": "parsed_product_page",
-        "tdp_w": "parsed_product_page",
-        "max_turbo_power_w": "parsed_product_page"
       }
     },
     {
@@ -4965,7 +4965,7 @@
           "url": "https://datatronic.fi/komponentit/naytonohjaimet/palit-geforce-rtx-5060-ti-infinity-3-nvidia-16-gb-gddr7-palit-ne7506t019t1-gb2061s",
           "external_id": "170849",
           "price_cents": 91900,
-          "snapshot_date": "2026-11-03"
+          "snapshot_date": "2026-11-04"
         }
       ],
       "spec_sources": {
@@ -5004,7 +5004,7 @@
           "url": "https://datatronic.fi/komponentit/naytonohjaimet/palit-geforce-rtx-5060-ti-dual-nvidia-8-gb-gddr7-palit-ne7506t019p1-gb2062d",
           "external_id": "169981",
           "price_cents": 54900,
-          "snapshot_date": "2026-11-03"
+          "snapshot_date": "2026-11-04"
         }
       ],
       "spec_sources": {
@@ -5044,7 +5044,7 @@
           "url": "https://datatronic.fi/komponentit/naytonohjaimet/gigabyte-geforce-rtx-5070-ti-windforce-oc-sff-16g-nvidia-16-gb-gddr7-gigabyte-gv-n507twf3oc-16gd",
           "external_id": "166662",
           "price_cents": 173500,
-          "snapshot_date": "2026-11-03"
+          "snapshot_date": "2026-11-04"
         }
       ],
       "spec_sources": {
@@ -5085,7 +5085,7 @@
           "url": "https://datatronic.fi/komponentit/naytonohjaimet/gigabyte-geforce-rtx-5060-windforce-oc-8g-nvidia-8-gb-gddr7-gigabyte-gv-n5060wf2oc-8gd",
           "external_id": "170644",
           "price_cents": 49590,
-          "snapshot_date": "2026-11-03"
+          "snapshot_date": "2026-11-04"
         }
       ],
       "spec_sources": {
@@ -5125,7 +5125,7 @@
           "url": "https://datatronic.fi/komponentit/naytonohjaimet/palit-geforce-rtx-5060-infinity-2-oc-nvidia-8-gb-gddr7-palit-ne75060v19p1-gb2063l",
           "external_id": "176591",
           "price_cents": 45990,
-          "snapshot_date": "2026-11-03"
+          "snapshot_date": "2026-11-04"
         }
       ],
       "spec_sources": {
@@ -5164,7 +5164,7 @@
           "url": "https://datatronic.fi/komponentit/naytonohjaimet/palit-geforce-rtx-5070-infinity-3-nvidia-12-gb-gddr7-palit-ne75070019k9-gb2050s",
           "external_id": "169965",
           "price_cents": 89990,
-          "snapshot_date": "2026-11-03"
+          "snapshot_date": "2026-11-04"
         }
       ],
       "spec_sources": {
@@ -5203,7 +5203,7 @@
           "url": "https://datatronic.fi/komponentit/naytonohjaimet/asus-prime-rtx5060-o8g-nvidia-geforce-rtx-5060-8-gb-gddr7-asus-90yv0n10-m0na00",
           "external_id": "170797",
           "price_cents": 48990,
-          "snapshot_date": "2026-11-03"
+          "snapshot_date": "2026-11-04"
         }
       ],
       "spec_sources": {
@@ -5241,7 +5241,7 @@
           "url": "https://datatronic.fi/komponentit/naytonohjaimet/powercolor-reaper-amd-radeon-rx-9070-gre-12gb-gddr6-powercolor-rx9070gre-12g-a",
           "external_id": "180685",
           "price_cents": 79900,
-          "snapshot_date": "2026-11-03"
+          "snapshot_date": "2026-11-04"
         }
       ],
       "spec_sources": {
@@ -5279,7 +5279,7 @@
           "url": "https://datatronic.fi/komponentit/naytonohjaimet/gigabyte-radeon-rx-9070-xt-gaming-oc-16g-amd-16-gb-gddr6-gigabyte-gv-r9070xtgaming-oc-16gd",
           "external_id": "170846",
           "price_cents": 118900,
-          "snapshot_date": "2026-11-03"
+          "snapshot_date": "2026-11-04"
         }
       ],
       "spec_sources": {
@@ -5317,8 +5317,8 @@
           "shop": "Datatronic",
           "url": "https://datatronic.fi/komponentit/naytonohjaimet/palit-geforce-rtx-5070-ti-gamingpro-s-nvidia-16-gb-gddr7-palit-ne7507t019t2-gb2031u",
           "external_id": "170999",
-          "price_cents": 145500,
-          "snapshot_date": "2026-11-03"
+          "price_cents": 135500,
+          "snapshot_date": "2026-11-04"
         }
       ],
       "spec_sources": {
@@ -5357,7 +5357,7 @@
           "url": "https://datatronic.fi/komponentit/naytonohjaimet/asus-tuf-rtx5070-o12g-gaming-nvidia-geforce-rtx-5070-12-gb-gddr7-asus-90yv0lz0-m0na00",
           "external_id": "168520",
           "price_cents": 89900,
-          "snapshot_date": "2026-11-03"
+          "snapshot_date": "2026-11-04"
         }
       ],
       "spec_sources": {
@@ -5396,7 +5396,7 @@
           "url": "https://datatronic.fi/komponentit/naytonohjaimet/asus-prime-rtx5070-o12g-nvidia-geforce-rtx-5070-12-gb-gddr7-asus-90yv0m10-m0na00",
           "external_id": "168509",
           "price_cents": 94990,
-          "snapshot_date": "2026-11-03"
+          "snapshot_date": "2026-11-04"
         }
       ],
       "spec_sources": {
@@ -5434,8 +5434,8 @@
           "shop": "Datatronic",
           "url": "https://datatronic.fi/komponentit/naytonohjaimet/asus-dual-rx9060xt-8g-amd-radeon-rx-9060-xt-8-gb-gddr6-asus-90yv0mi1-m0na00",
           "external_id": "170996",
-          "price_cents": 67900,
-          "snapshot_date": "2026-11-03"
+          "price_cents": 68500,
+          "snapshot_date": "2026-11-04"
         }
       ],
       "spec_sources": {
@@ -5474,8 +5474,8 @@
           "shop": "Datatronic",
           "url": "https://datatronic.fi/komponentit/naytonohjaimet/gigabyte-radeon-rx-9070-gre-gaming-oc-12g-amd-12-gb-gddr6-gigabyte-gv-r907gregaming-oc-12gd",
           "external_id": "180682",
-          "price_cents": 83500,
-          "snapshot_date": "2026-11-03"
+          "price_cents": 84900,
+          "snapshot_date": "2026-11-04"
         }
       ],
       "spec_sources": {
@@ -5514,8 +5514,8 @@
           "shop": "Datatronic",
           "url": "https://datatronic.fi/komponentit/naytonohjaimet/gigabyte-geforce-rtx-5080-windforce-oc-sff-16g-nvidia-16-gb-gddr7-gigabyte-gv-n5080wf3oc-16gd",
           "external_id": "166091",
-          "price_cents": 228500,
-          "snapshot_date": "2026-11-03"
+          "price_cents": 235900,
+          "snapshot_date": "2026-11-04"
         }
       ],
       "spec_sources": {
@@ -5552,8 +5552,8 @@
           "shop": "Datatronic",
           "url": "https://datatronic.fi/komponentit/naytonohjaimet/sapphire-pulse-rx-9070-amd-radeon-rx-9070-gre-12-gb-gddr6-sapphire-11354-01-20g",
           "external_id": "180686",
-          "price_cents": 75500,
-          "snapshot_date": "2026-11-03"
+          "price_cents": 88900,
+          "snapshot_date": "2026-11-04"
         }
       ],
       "spec_sources": {
@@ -5591,7 +5591,7 @@
           "url": "https://datatronic.fi/komponentit/naytonohjaimet/gigabyte-geforce-rtx-5070-windforce-oc-sff-12g-nvidia-12-gb-gddr7-gigabyte-gv-n5070wf3oc-12gd",
           "external_id": "168519",
           "price_cents": 89990,
-          "snapshot_date": "2026-11-03"
+          "snapshot_date": "2026-11-04"
         }
       ],
       "spec_sources": {
@@ -5630,7 +5630,7 @@
           "url": "https://datatronic.fi/komponentit/naytonohjaimet/asus-tuf-gaming-tuf-rtx5080-o16g-gaming-nvidia-geforce-rtx-5080-16-gb-gddr7-asus-90yv0m30-m0na00",
           "external_id": "166086",
           "price_cents": 278500,
-          "snapshot_date": "2026-11-03"
+          "snapshot_date": "2026-11-04"
         }
       ],
       "spec_sources": {
@@ -5669,7 +5669,7 @@
           "url": "https://datatronic.fi/komponentit/naytonohjaimet/asrock-intel-arc-pro-b60-creator-24gb-gddr6-asrock-90-ga60zz-00ubnf",
           "external_id": "177903",
           "price_cents": 79990,
-          "snapshot_date": "2026-11-03"
+          "snapshot_date": "2026-11-04"
         }
       ],
       "spec_sources": {
@@ -5706,7 +5706,7 @@
           "url": "https://datatronic.fi/komponentit/naytonohjaimet/sapphire-nitro-radeon-rx-9070-amd-16-gb-gddr6-sapphire-11349-01-20g",
           "external_id": "168120",
           "price_cents": 79990,
-          "snapshot_date": "2026-11-03"
+          "snapshot_date": "2026-11-04"
         }
       ],
       "spec_sources": {
@@ -5746,7 +5746,7 @@
           "url": "https://datatronic.fi/komponentit/naytonohjaimet/gigabyte-geforce-rtx-5060-eagle-max-oc-8g-nvidia-8-gb-gddr7-gigabyte-gv-n5060eaglemax-oc-8gd",
           "external_id": "173396",
           "price_cents": 44990,
-          "snapshot_date": "2026-11-03"
+          "snapshot_date": "2026-11-04"
         }
       ],
       "spec_sources": {
@@ -5784,8 +5784,8 @@
           "shop": "Datatronic",
           "url": "https://datatronic.fi/komponentit/naytonohjaimet/powercolor-reaper-radeon-rx-9070-xt-amd-16-gb-gddr6-powercolor-rx9070xt-16g-a",
           "external_id": "168106",
-          "price_cents": 106900,
-          "snapshot_date": "2026-11-03"
+          "price_cents": 114500,
+          "snapshot_date": "2026-11-04"
         }
       ],
       "spec_sources": {
@@ -5834,6 +5834,43 @@
         "memory_type": "parsed_product_page",
         "interface": "parsed_product_page",
         "recommended_psu_w": "parsed_product_page",
+        "length_mm": "parsed_product_page"
+      }
+    },
+    {
+      "category": "gpu",
+      "brand": "ASUS",
+      "model": "Dual -RX9060XT-16G-WHITE AMD Radeon RX 9060 XT 16 GB GDDR6",
+      "raw_name": "ASUS Dual -RX9060XT-16G-WHITE AMD Radeon RX 9060 XT 16 GB GDDR6",
+      "specs": {
+        "chipset": "RX9060XT",
+        "vram_gb": 16,
+        "memory_type": "GDDR6",
+        "gpu_vendor": "AMD",
+        "width_mm": 364.0,
+        "height_mm": 66.0,
+        "graphics_chipset": "AMD",
+        "interface": "PCI Express 5.0",
+        "length_mm": 202.0
+      },
+      "missing_specs": [],
+      "category_confidence": "ok",
+      "listings": [
+        {
+          "shop": "Datatronic",
+          "url": "https://datatronic.fi/komponentit/naytonohjaimet/asus-dual-rx9060xt-16g-white-amd-radeon-rx-9060-xt-16-gb-gddr6-asus-90yv0lg3-m0na00",
+          "external_id": "172414",
+          "price_cents": 103500,
+          "snapshot_date": "2026-11-04"
+        }
+      ],
+      "spec_sources": {
+        "width_mm": "parsed_product_page",
+        "height_mm": "parsed_product_page",
+        "graphics_chipset": "parsed_product_page",
+        "vram_gb": "parsed_product_page",
+        "memory_type": "parsed_product_page",
+        "interface": "parsed_product_page",
         "length_mm": "parsed_product_page"
       }
     },
@@ -5949,43 +5986,6 @@
         "memory_type": "parsed_product_page",
         "interface": "parsed_product_page",
         "recommended_psu_w": "parsed_product_page",
-        "length_mm": "parsed_product_page"
-      }
-    },
-    {
-      "category": "gpu",
-      "brand": "ASUS",
-      "model": "Dual -RX9060XT-16G-WHITE AMD Radeon RX 9060 XT 16 GB GDDR6",
-      "raw_name": "ASUS Dual -RX9060XT-16G-WHITE AMD Radeon RX 9060 XT 16 GB GDDR6",
-      "specs": {
-        "chipset": "RX9060XT",
-        "vram_gb": 16,
-        "memory_type": "GDDR6",
-        "gpu_vendor": "AMD",
-        "width_mm": 364.0,
-        "height_mm": 66.0,
-        "graphics_chipset": "AMD",
-        "interface": "PCI Express 5.0",
-        "length_mm": 202.0
-      },
-      "missing_specs": [],
-      "category_confidence": "ok",
-      "listings": [
-        {
-          "shop": "Datatronic",
-          "url": "https://datatronic.fi/komponentit/naytonohjaimet/asus-dual-rx9060xt-16g-white-amd-radeon-rx-9060-xt-16-gb-gddr6-asus-90yv0lg3-m0na00",
-          "external_id": "172414",
-          "price_cents": 103500,
-          "snapshot_date": "2026-11-03"
-        }
-      ],
-      "spec_sources": {
-        "width_mm": "parsed_product_page",
-        "height_mm": "parsed_product_page",
-        "graphics_chipset": "parsed_product_page",
-        "vram_gb": "parsed_product_page",
-        "memory_type": "parsed_product_page",
-        "interface": "parsed_product_page",
         "length_mm": "parsed_product_page"
       }
     },
@@ -6771,8 +6771,8 @@
           "shop": "Datatronic",
           "url": "https://datatronic.fi/komponentit/muistit/goodram-irdm-ddr5-ir-6000d564l30s-32gdc-muistimoduuli-32-gb-2-x-16-gb-288-pin-dimm-goodram-ir-6000d564l30s-32gdc",
           "external_id": "178756",
-          "price_cents": 50500,
-          "snapshot_date": "2026-11-03"
+          "price_cents": 51990,
+          "snapshot_date": "2026-11-04"
         }
       ],
       "spec_sources": {
@@ -6808,7 +6808,7 @@
           "url": "https://datatronic.fi/komponentit/muistit/ram-patriot-viper-venom-ddr5-32-gb-2x16gb-6000mhz-cl30-xmp-30-pvv532g600c30k-patriot-memory-pvv532g600c30k",
           "external_id": "165817",
           "price_cents": 56900,
-          "snapshot_date": "2026-11-03"
+          "snapshot_date": "2026-11-04"
         }
       ],
       "spec_sources": {
@@ -6846,7 +6846,7 @@
           "url": "https://datatronic.fi/komponentit/muistit/kingston-technology-fury-beast-muistimoduuli-32-gb-2-x-16-gb-ddr5-kingston-technology-kf560c30bbek2-32",
           "external_id": "155031",
           "price_cents": 75900,
-          "snapshot_date": "2026-11-03"
+          "snapshot_date": "2026-11-04"
         }
       ],
       "spec_sources": {
@@ -6881,7 +6881,7 @@
           "url": "https://datatronic.fi/komponentit/muistit/kingston-technology-fury-beast-muistimoduuli-16-gb-2-x-8-gb-ddr5-6000-mhz-kingston-technology-kf560c36bbek2-16",
           "external_id": "106154",
           "price_cents": 41900,
-          "snapshot_date": "2026-11-03"
+          "snapshot_date": "2026-11-04"
         }
       ],
       "spec_sources": {
@@ -6917,7 +6917,7 @@
           "url": "https://datatronic.fi/komponentit/muistit/gskill-aegis-f4-3200c16d-16gis-muistimoduuli-16-gb-2-x-8-gb-ddr4-3200-mhz-gskill-f4-3200c16d-16gis",
           "external_id": "40618",
           "price_cents": 13790,
-          "snapshot_date": "2026-11-03"
+          "snapshot_date": "2026-11-04"
         }
       ],
       "spec_sources": {
@@ -6953,7 +6953,7 @@
           "url": "https://datatronic.fi/komponentit/muistit/gskill-aegis-f4-3200c16d-32gis-muistimoduuli-32-gb-2-x-16-gb-ddr4-3200-mhz-gskill-f4-3200c16d-32gis",
           "external_id": "40621",
           "price_cents": 28190,
-          "snapshot_date": "2026-11-03"
+          "snapshot_date": "2026-11-04"
         }
       ],
       "spec_sources": {
@@ -6988,8 +6988,8 @@
           "shop": "Datatronic",
           "url": "https://datatronic.fi/komponentit/muistit/kingston-technology-fury-beast-muistimoduuli-32-gb-2-x-16-gb-ddr4-3200-mhz-kingston-technology-kf432c16bbk2-32",
           "external_id": "47129",
-          "price_cents": 28690,
-          "snapshot_date": "2026-11-03"
+          "price_cents": 26590,
+          "snapshot_date": "2026-11-04"
         }
       ],
       "spec_sources": {
@@ -7024,8 +7024,8 @@
           "shop": "Datatronic",
           "url": "https://datatronic.fi/komponentit/muistit/kingston-technology-fury-beast-muistimoduuli-16-gb-2-x-8-gb-ddr4-3200-mhz-kingston-technology-kf432c16bbk2-16",
           "external_id": "32041",
-          "price_cents": 19590,
-          "snapshot_date": "2026-11-03"
+          "price_cents": 19090,
+          "snapshot_date": "2026-11-04"
         }
       ],
       "spec_sources": {
@@ -7096,7 +7096,7 @@
           "url": "https://datatronic.fi/komponentit/muistit/corsair-vengeance-cmk32gx5m2b6000c38-muistimoduuli-32-gb-2-x-16-gb-ddr5-6000-mhz-corsair-cmk32gx5m2b6000c38",
           "external_id": "151457",
           "price_cents": 44900,
-          "snapshot_date": "2026-11-03"
+          "snapshot_date": "2026-11-04"
         }
       ],
       "spec_sources": {
@@ -7131,7 +7131,7 @@
           "url": "https://datatronic.fi/komponentit/muistit/crucial-32gb-2-x-16gb-pro-oc-gaming-memory-ddr5-6000mhz-cl36-crucial-cp2k16g60c36u5b",
           "external_id": "154751",
           "price_cents": 55500,
-          "snapshot_date": "2026-11-03"
+          "snapshot_date": "2026-11-04"
         }
       ],
       "spec_sources": {
@@ -7170,7 +7170,7 @@
           "url": "https://datatronic.fi/komponentit/muistit/gskill-ripjaws-v-f4-3600c16d-32gvkc-muistimoduuli-32-gb-2-x-16-gb-ddr4-3600-mhz-gskill-f4-3600c16d-32gvkc",
           "external_id": "6490",
           "price_cents": 31900,
-          "snapshot_date": "2026-11-03"
+          "snapshot_date": "2026-11-04"
         }
       ],
       "spec_sources": {
@@ -7199,8 +7199,8 @@
           "shop": "Datatronic",
           "url": "https://datatronic.fi/komponentit/muistit/kingston-technology-fury-renegade-muistimoduuli-16-gb-2-x-8-gb-ddr4-3600-mhz-kingston-technology-kf436c16rb2k2-16",
           "external_id": "141258",
-          "price_cents": 14890,
-          "snapshot_date": "2026-11-03"
+          "price_cents": 13690,
+          "snapshot_date": "2026-11-04"
         }
       ],
       "spec_sources": {
@@ -7238,7 +7238,7 @@
           "url": "https://datatronic.fi/komponentit/muistit/gskill-ripjaws-v-muistimoduuli-32-gb-2-x-16-gb-ddr4-3200-mhz-gskill-f4-3200c16d-32gvk",
           "external_id": "6100",
           "price_cents": 28890,
-          "snapshot_date": "2026-11-03"
+          "snapshot_date": "2026-11-04"
         }
       ],
       "spec_sources": {
@@ -7272,8 +7272,8 @@
           "shop": "Datatronic",
           "url": "https://datatronic.fi/komponentit/muistit/patriot-memory-viper-elite-5-ultra-veur532g6028k-muistimoduuli-32-gb-2-x-16-gb-ddr5-6000-mt-s-288-pin-dimm-patriot-memory-veur53",
           "external_id": "180943",
-          "price_cents": 56500,
-          "snapshot_date": "2026-11-03"
+          "price_cents": 59990,
+          "snapshot_date": "2026-11-04"
         }
       ],
       "spec_sources": {
@@ -7308,7 +7308,7 @@
           "url": "https://datatronic.fi/komponentit/muistit/goodram-irdm-ddr5-ir-6400d564l32s-32gdc-muistimoduuli-32-gb-2-x-16-gb-288-pin-dimm-goodram-ir-6400d564l32s-32gdc",
           "external_id": "178757",
           "price_cents": 49990,
-          "snapshot_date": "2026-11-03"
+          "snapshot_date": "2026-11-04"
         }
       ],
       "spec_sources": {
@@ -7343,8 +7343,8 @@
           "shop": "Datatronic",
           "url": "https://datatronic.fi/komponentit/muistit/corsair-vengeance-muistimoduuli-64-gb-2-x-32-gb-ddr5-6000-mt-s-corsair-cmk64gx5m2d6000z40",
           "external_id": "174505",
-          "price_cents": 136900,
-          "snapshot_date": "2026-11-03"
+          "price_cents": 110500,
+          "snapshot_date": "2026-11-04"
         }
       ],
       "spec_sources": {
@@ -7379,7 +7379,7 @@
           "url": "https://datatronic.fi/komponentit/muistit/corsair-vengeance-rgb-cmh32gx5m2b6000c38-muistimoduuli-32-gb-2-x-16-gb-ddr5-6000-mhz-corsair-cmh32gx5m2b6000c38",
           "external_id": "151455",
           "price_cents": 47500,
-          "snapshot_date": "2026-11-03"
+          "snapshot_date": "2026-11-04"
         }
       ],
       "spec_sources": {
@@ -7414,7 +7414,7 @@
           "url": "https://datatronic.fi/komponentit/muistit/patriot-memory-viper-venom-pvv516g60c30-muistimoduuli-16-gb-1-x-16-gb-ddr5-6000-mt-s-288-pin-dimm-patriot-memory-pvv516g60c30",
           "external_id": "178580",
           "price_cents": 27990,
-          "snapshot_date": "2026-11-03"
+          "snapshot_date": "2026-11-04"
         }
       ],
       "spec_sources": {
@@ -7449,7 +7449,7 @@
           "url": "https://datatronic.fi/komponentit/muistit/corsair-vengeance-rgb-muistimoduuli-32-gb-2-x-16-gb-ddr5-288-pin-dimm-corsair-cmh32gx5m2b6400z36w",
           "external_id": "172632",
           "price_cents": 55900,
-          "snapshot_date": "2026-11-03"
+          "snapshot_date": "2026-11-04"
         }
       ],
       "spec_sources": {
@@ -7484,7 +7484,7 @@
           "url": "https://datatronic.fi/komponentit/muistit/gskill-aegis-f4-3200c16s-8gis-muistimoduuli-8-gb-1-x-8-gb-ddr4-3200-mhz-gskill-f4-3200c16s-8gis",
           "external_id": "40617",
           "price_cents": 7090,
-          "snapshot_date": "2026-11-03"
+          "snapshot_date": "2026-11-04"
         }
       ],
       "spec_sources": {
@@ -7520,7 +7520,7 @@
           "url": "https://datatronic.fi/komponentit/muistit/crucial-ct16g56c46s5-muistimoduuli-16-gb-1-x-16-gb-ddr5-5600-mhz-ecc-crucial-ct16g56c46s5",
           "external_id": "73099",
           "price_cents": 30500,
-          "snapshot_date": "2026-11-03"
+          "snapshot_date": "2026-11-04"
         }
       ],
       "spec_sources": {
@@ -7607,6 +7607,41 @@
     },
     {
       "category": "memory",
+      "brand": "Corsair",
+      "model": "Vengeance CMK48GX5M2B7000C40 48 GB 2 x 24 GB DDR5 7000 MHz",
+      "raw_name": "Corsair Vengeance CMK48GX5M2B7000C40 muistimoduuli 48 GB 2 x 24 GB DDR5 7000 MHz",
+      "specs": {
+        "memory_type": "DDR5",
+        "modules": 2,
+        "capacity_gb": 48,
+        "speed_mhz": 7000,
+        "cas_latency": 40,
+        "form_factor": null,
+        "ecc": null,
+        "voltage_v": "1.4 V"
+      },
+      "missing_specs": [],
+      "category_confidence": "ok",
+      "listings": [
+        {
+          "shop": "Datatronic",
+          "url": "https://datatronic.fi/komponentit/muistit/corsair-vengeance-cmk48gx5m2b7000c40-muistimoduuli-48-gb-2-x-24-gb-ddr5-7000-mhz-corsair-cmk48gx5m2b7000c40",
+          "external_id": "117925",
+          "price_cents": 71900,
+          "snapshot_date": "2026-11-04"
+        }
+      ],
+      "spec_sources": {
+        "capacity_gb": "parsed_product_page",
+        "modules": "parsed_product_page",
+        "memory_type": "parsed_product_page",
+        "speed_mhz": "parsed_product_page",
+        "cas_latency": "parsed_product_page",
+        "voltage_v": "parsed_product_page"
+      }
+    },
+    {
+      "category": "memory",
       "brand": "Crucial",
       "model": "CT8G4SFRA32A 8 GB 1 x 8 GB DDR4 3200 MHz",
       "raw_name": "Crucial CT8G4SFRA32A muistimoduuli 8 GB 1 x 8 GB DDR4 3200 MHz",
@@ -7627,8 +7662,8 @@
           "shop": "Datatronic",
           "url": "https://datatronic.fi/komponentit/muistit/crucial-ct8g4sfra32a-muistimoduuli-8-gb-1-x-8-gb-ddr4-3200-mhz-crucial-ct8g4sfra32a",
           "external_id": "39171",
-          "price_cents": 8090,
-          "snapshot_date": "2026-11-03"
+          "price_cents": 7690,
+          "snapshot_date": "2026-11-04"
         }
       ],
       "spec_sources": {
@@ -7663,8 +7698,8 @@
           "shop": "Datatronic",
           "url": "https://datatronic.fi/komponentit/muistit/kingston-technology-fury-impact-muistimoduuli-8-gb-1-x-8-gb-ddr4-3200-mhz-kingston-technology-kf432s20ib-8",
           "external_id": "47160",
-          "price_cents": 9890,
-          "snapshot_date": "2026-11-03"
+          "price_cents": 9490,
+          "snapshot_date": "2026-11-04"
         }
       ],
       "spec_sources": {
@@ -7675,41 +7710,6 @@
         "cas_latency": "parsed_product_page",
         "voltage_v": "parsed_product_page",
         "ecc": "parsed_product_page"
-      }
-    },
-    {
-      "category": "memory",
-      "brand": "Corsair",
-      "model": "Vengeance CMK48GX5M2B7000C40 48 GB 2 x 24 GB DDR5 7000 MHz",
-      "raw_name": "Corsair Vengeance CMK48GX5M2B7000C40 muistimoduuli 48 GB 2 x 24 GB DDR5 7000 MHz",
-      "specs": {
-        "memory_type": "DDR5",
-        "modules": 2,
-        "capacity_gb": 48,
-        "speed_mhz": 7000,
-        "cas_latency": 40,
-        "form_factor": null,
-        "ecc": null,
-        "voltage_v": "1.4 V"
-      },
-      "missing_specs": [],
-      "category_confidence": "ok",
-      "listings": [
-        {
-          "shop": "Datatronic",
-          "url": "https://datatronic.fi/komponentit/muistit/corsair-vengeance-cmk48gx5m2b7000c40-muistimoduuli-48-gb-2-x-24-gb-ddr5-7000-mhz-corsair-cmk48gx5m2b7000c40",
-          "external_id": "117925",
-          "price_cents": 71900,
-          "snapshot_date": "2026-11-03"
-        }
-      ],
-      "spec_sources": {
-        "capacity_gb": "parsed_product_page",
-        "modules": "parsed_product_page",
-        "memory_type": "parsed_product_page",
-        "speed_mhz": "parsed_product_page",
-        "cas_latency": "parsed_product_page",
-        "voltage_v": "parsed_product_page"
       }
     },
     {
@@ -8494,7 +8494,7 @@
           "url": "https://datatronic.fi/komponentit/emolevyt/gigabyte-b550m-gaming-x-wifi6-emolevy-amd-b550-kanta-am4-mikro-atx-gigabyte-b550m-gaming-x-wifi6",
           "external_id": "168630",
           "price_cents": 10990,
-          "snapshot_date": "2026-11-03"
+          "snapshot_date": "2026-11-04"
         }
       ],
       "spec_sources": {
@@ -8538,7 +8538,7 @@
           "url": "https://datatronic.fi/komponentit/emolevyt/asus-prime-b760-plus-d4-lga-1700-atx-asus-90mb1cw0-m0eay0",
           "external_id": "86727",
           "price_cents": 11290,
-          "snapshot_date": "2026-11-03"
+          "snapshot_date": "2026-11-04"
         }
       ],
       "spec_sources": {
@@ -8582,7 +8582,7 @@
           "url": "https://datatronic.fi/komponentit/emolevyt/gigabyte-b760-gaming-x-ddr4-gen5-intel-b760-lga-1700-atx-gigabyte-b760-gaming-x-d4-gen5",
           "external_id": "175384",
           "price_cents": 13290,
-          "snapshot_date": "2026-11-03"
+          "snapshot_date": "2026-11-04"
         }
       ],
       "spec_sources": {
@@ -8625,7 +8625,7 @@
           "url": "https://datatronic.fi/komponentit/emolevyt/asrock-b650-pg-lightning-amd-b650-socket-am5-atx-asrock-b650-pg-lightning",
           "external_id": "48510",
           "price_cents": 14990,
-          "snapshot_date": "2026-11-03"
+          "snapshot_date": "2026-11-04"
         }
       ],
       "spec_sources": {
@@ -8668,7 +8668,7 @@
           "url": "https://datatronic.fi/komponentit/emolevyt/msi-b550-a-pro-emolevy-amd-b550-kanta-am4-atx-msi-b550-a-pro",
           "external_id": "4736",
           "price_cents": 12590,
-          "snapshot_date": "2026-11-03"
+          "snapshot_date": "2026-11-04"
         }
       ],
       "spec_sources": {
@@ -8712,7 +8712,7 @@
           "url": "https://datatronic.fi/komponentit/emolevyt/gigabyte-b550m-ds3h-r2-emolevy-amd-b550-kanta-am4-mikro-atx-gigabyte-b550m-ds3h-r2",
           "external_id": "169063",
           "price_cents": 9090,
-          "snapshot_date": "2026-11-03"
+          "snapshot_date": "2026-11-04"
         }
       ],
       "spec_sources": {
@@ -8756,7 +8756,7 @@
           "url": "https://datatronic.fi/komponentit/emolevyt/gigabyte-b650-gaming-x-ax-v2-emolevy-amd-b650-pistoke-am5-atx-gigabyte-b650-gaming-x-ax-v2",
           "external_id": "152294",
           "price_cents": 13790,
-          "snapshot_date": "2026-11-03"
+          "snapshot_date": "2026-11-04"
         }
       ],
       "spec_sources": {
@@ -8800,7 +8800,7 @@
           "url": "https://datatronic.fi/komponentit/emolevyt/gigabyte-b850-gaming-wifi6-amd-b850-pistoke-am5-atx-gigabyte-b850-gaming-wf6",
           "external_id": "166038",
           "price_cents": 17390,
-          "snapshot_date": "2026-11-03"
+          "snapshot_date": "2026-11-04"
         }
       ],
       "spec_sources": {
@@ -8844,7 +8844,7 @@
           "url": "https://datatronic.fi/komponentit/emolevyt/gigabyte-x870-gaming-wifi6-amd-x870-pistoke-am5-atx-gigabyte-x870-gaming-wf6",
           "external_id": "164683",
           "price_cents": 20990,
-          "snapshot_date": "2026-11-03"
+          "snapshot_date": "2026-11-04"
         }
       ],
       "spec_sources": {
@@ -8887,7 +8887,7 @@
           "url": "https://datatronic.fi/komponentit/emolevyt/asrock-a520m-hvs-amd-a520-kanta-am4-mikro-atx-asrock-90-mxbe60-a0uayz",
           "external_id": "18932",
           "price_cents": 5690,
-          "snapshot_date": "2026-11-03"
+          "snapshot_date": "2026-11-04"
         }
       ],
       "spec_sources": {
@@ -8930,7 +8930,7 @@
           "url": "https://datatronic.fi/komponentit/emolevyt/gigabyte-b550m-ds3h-ac-r2-emolevy-amd-b550-kanta-am4-mikro-atx-gigabyte-b550m-ds3h-ac-r2",
           "external_id": "171218",
           "price_cents": 8990,
-          "snapshot_date": "2026-11-03"
+          "snapshot_date": "2026-11-04"
         }
       ],
       "spec_sources": {
@@ -8974,7 +8974,7 @@
           "url": "https://datatronic.fi/komponentit/emolevyt/gigabyte-b650-eagle-ax-emolevy-amd-b650-pistoke-am5-atx-gigabyte-b650-eagle-ax",
           "external_id": "152063",
           "price_cents": 13590,
-          "snapshot_date": "2026-11-03"
+          "snapshot_date": "2026-11-04"
         }
       ],
       "spec_sources": {
@@ -9017,7 +9017,7 @@
           "url": "https://datatronic.fi/komponentit/emolevyt/asrock-b550m-hdv-amd-b550-kanta-am4-mikro-atx-asrock-b550m-hdv",
           "external_id": "4720",
           "price_cents": 7090,
-          "snapshot_date": "2026-11-03"
+          "snapshot_date": "2026-11-04"
         }
       ],
       "spec_sources": {
@@ -9060,7 +9060,7 @@
           "url": "https://datatronic.fi/komponentit/emolevyt/gigabyte-b550-gaming-x-v2-amd-b550-kanta-am4-atx-gigabyte-b550-gaming-x-v2",
           "external_id": "5854",
           "price_cents": 10590,
-          "snapshot_date": "2026-11-03"
+          "snapshot_date": "2026-11-04"
         }
       ],
       "spec_sources": {
@@ -9104,7 +9104,7 @@
           "url": "https://datatronic.fi/komponentit/emolevyt/asus-prime-b550m-a-wifi-ii-amd-b550-kanta-am4-mikro-atx-asus-90mb19x0-m0eay0",
           "external_id": "39060",
           "price_cents": 11090,
-          "snapshot_date": "2026-11-03"
+          "snapshot_date": "2026-11-04"
         }
       ],
       "spec_sources": {
@@ -9148,7 +9148,7 @@
           "url": "https://datatronic.fi/komponentit/emolevyt/gigabyte-b850-aorus-elite-wifi7-amd-b850-pistoke-am5-atx-gigabyte-b850-a-elite-wf7",
           "external_id": "166033",
           "price_cents": 21990,
-          "snapshot_date": "2026-11-03"
+          "snapshot_date": "2026-11-04"
         }
       ],
       "spec_sources": {
@@ -9192,7 +9192,7 @@
           "url": "https://datatronic.fi/komponentit/emolevyt/msi-b550m-pro-vdh-emolevy-amd-b550-kanta-am4-mikro-atx-msi-7c95-017r",
           "external_id": "165645",
           "price_cents": 10090,
-          "snapshot_date": "2026-11-03"
+          "snapshot_date": "2026-11-04"
         }
       ],
       "spec_sources": {
@@ -9236,7 +9236,7 @@
           "url": "https://datatronic.fi/komponentit/emolevyt/asrock-b550m-pro4-amd-b550-kanta-am4-mikro-atx-asrock-b550m-pro4",
           "external_id": "4719",
           "price_cents": 9790,
-          "snapshot_date": "2026-11-03"
+          "snapshot_date": "2026-11-04"
         }
       ],
       "spec_sources": {
@@ -9280,7 +9280,7 @@
           "url": "https://datatronic.fi/komponentit/emolevyt/gigabyte-b850m-gaming-x-wifi6e-amd-b850-pistoke-am5-mikro-atx-gigabyte-b850m-gaming-x-wf6e",
           "external_id": "166037",
           "price_cents": 16390,
-          "snapshot_date": "2026-11-03"
+          "snapshot_date": "2026-11-04"
         }
       ],
       "spec_sources": {
@@ -9323,8 +9323,8 @@
           "shop": "Datatronic",
           "url": "https://datatronic.fi/komponentit/emolevyt/gigabyte-b760m-d3hp-ddr4-emolevy-intel-b760-express-lga-1700-mikro-atx-gigabyte-b760m-d3hp-ddr4",
           "external_id": "161766",
-          "price_cents": 10090,
-          "snapshot_date": "2026-11-03"
+          "price_cents": 9690,
+          "snapshot_date": "2026-11-04"
         }
       ],
       "spec_sources": {
@@ -9368,7 +9368,7 @@
           "url": "https://datatronic.fi/komponentit/emolevyt/gigabyte-b650-eagle-emolevy-amd-b650-pistoke-am5-atx-gigabyte-b650-eagle",
           "external_id": "161767",
           "price_cents": 12290,
-          "snapshot_date": "2026-11-03"
+          "snapshot_date": "2026-11-04"
         }
       ],
       "spec_sources": {
@@ -9412,7 +9412,7 @@
           "url": "https://datatronic.fi/komponentit/emolevyt/asus-tuf-gaming-b550m-plus-wifi-ii-amd-b550-kanta-am4-mikro-atx-asus-90mb19y0-m0eay0",
           "external_id": "36824",
           "price_cents": 15490,
-          "snapshot_date": "2026-11-03"
+          "snapshot_date": "2026-11-04"
         }
       ],
       "spec_sources": {
@@ -9456,7 +9456,7 @@
           "url": "https://datatronic.fi/komponentit/emolevyt/asus-tuf-gaming-b850i-wifi-neo-amd-b850-pistoke-am5-mini-itx-asus-90mb1pi0-m0eay0",
           "external_id": "179717",
           "price_cents": 22890,
-          "snapshot_date": "2026-11-03"
+          "snapshot_date": "2026-11-04"
         }
       ],
       "spec_sources": {
@@ -9500,7 +9500,7 @@
           "url": "https://datatronic.fi/komponentit/emolevyt/gigabyte-a520m-h-argb-emolevy-amd-a520-kanta-am4-mikro-atx-gigabyte-a520m-h-argb",
           "external_id": "179168",
           "price_cents": 6390,
-          "snapshot_date": "2026-11-03"
+          "snapshot_date": "2026-11-04"
         }
       ],
       "spec_sources": {
@@ -10595,8 +10595,8 @@
           "shop": "Datatronic",
           "url": "https://datatronic.fi/komponentit/virtalahteet/seasonic-core-bc-650-virtalahdeyksikko-650-w-20-4-pin-atx-atx-musta-seasonic-srp-cbc651-a5a51jf",
           "external_id": "175260",
-          "price_cents": 5190,
-          "snapshot_date": "2026-11-03"
+          "price_cents": 5090,
+          "snapshot_date": "2026-11-04"
         }
       ],
       "spec_sources": {
@@ -10639,7 +10639,7 @@
           "url": "https://datatronic.fi/komponentit/virtalahteet/sama-g1000-virtalahdeyksikko-1000-w-24-pin-atx-atx-musta-sama-gears-g1000-bkgff001-eu",
           "external_id": "174191",
           "price_cents": 8190,
-          "snapshot_date": "2026-11-03"
+          "snapshot_date": "2026-11-04"
         }
       ],
       "spec_sources": {
@@ -10683,7 +10683,7 @@
           "url": "https://datatronic.fi/komponentit/virtalahteet/cooler-master-gx-ii-gold-750-atx31-virtalahdeyksikko-750-w-24-pin-atx-atx-musta-cooler-master-mpx-7503-afag-2ebeu",
           "external_id": "171778",
           "price_cents": 9990,
-          "snapshot_date": "2026-11-03"
+          "snapshot_date": "2026-11-04"
         }
       ],
       "spec_sources": {
@@ -10728,7 +10728,7 @@
           "url": "https://datatronic.fi/komponentit/virtalahteet/be-quiet-pure-power-13-m-850w-virtalahdeyksikko-20-4-pin-atx-atx-musta-be-quiet-bp027eu",
           "external_id": "170829",
           "price_cents": 12790,
-          "snapshot_date": "2026-11-03"
+          "snapshot_date": "2026-11-04"
         }
       ],
       "spec_sources": {
@@ -10773,7 +10773,7 @@
           "url": "https://datatronic.fi/komponentit/virtalahteet/seasonic-focus-gx-virtalahdeyksikko-850-w-20-4-pin-atx-atx-musta-seasonic-focus-gx-850-v4",
           "external_id": "164503",
           "price_cents": 12990,
-          "snapshot_date": "2026-11-03"
+          "snapshot_date": "2026-11-04"
         }
       ],
       "spec_sources": {
@@ -10817,7 +10817,7 @@
           "url": "https://datatronic.fi/komponentit/virtalahteet/sama-p1000-virtalahdeyksikko-1000-w-24-pin-atx-atx-musta-sama-gears-p1000-bkpff001-eu",
           "external_id": "174183",
           "price_cents": 11090,
-          "snapshot_date": "2026-11-03"
+          "snapshot_date": "2026-11-04"
         }
       ],
       "spec_sources": {
@@ -10860,7 +10860,7 @@
           "url": "https://datatronic.fi/komponentit/virtalahteet/sama-g850-virtalahdeyksikko-850-w-24-pin-atx-atx-musta-sama-gears-g0850-bkgff001-eu",
           "external_id": "174189",
           "price_cents": 7390,
-          "snapshot_date": "2026-11-03"
+          "snapshot_date": "2026-11-04"
         }
       ],
       "spec_sources": {
@@ -10904,7 +10904,7 @@
           "url": "https://datatronic.fi/komponentit/virtalahteet/be-quiet-pure-power-13-m-1000w-virtalahdeyksikko-20-4-pin-atx-atx-musta-be-quiet-bp028eu",
           "external_id": "171126",
           "price_cents": 15990,
-          "snapshot_date": "2026-11-03"
+          "snapshot_date": "2026-11-04"
         }
       ],
       "spec_sources": {
@@ -10948,7 +10948,7 @@
           "url": "https://datatronic.fi/komponentit/virtalahteet/corsair-rm750e-virtalahdeyksikko-750-w-24-pin-atx-atx-musta-corsair-cp-9020295-eu",
           "external_id": "167704",
           "price_cents": 11290,
-          "snapshot_date": "2026-11-03"
+          "snapshot_date": "2026-11-04"
         }
       ],
       "spec_sources": {
@@ -10991,7 +10991,7 @@
           "url": "https://datatronic.fi/komponentit/virtalahteet/corsair-rm650e-virtalahdeyksikko-650-w-24-pin-atx-atx-musta-corsair-cp-9020302-eu",
           "external_id": "167707",
           "price_cents": 8890,
-          "snapshot_date": "2026-11-03"
+          "snapshot_date": "2026-11-04"
         }
       ],
       "spec_sources": {
@@ -11033,7 +11033,7 @@
           "url": "https://datatronic.fi/komponentit/virtalahteet/asus-prime-850w-gold-atx-31-atx-virtalahde-850-w-asus-90ye00u0-b0na00",
           "external_id": "165381",
           "price_cents": 14390,
-          "snapshot_date": "2026-11-03"
+          "snapshot_date": "2026-11-04"
         }
       ],
       "spec_sources": {
@@ -11075,7 +11075,7 @@
           "url": "https://datatronic.fi/komponentit/virtalahteet/seasonic-core-gc-850-atx-31-virtalahdeyksikko-850-w-24-pin-atx-musta-seasonic-srp-cgc851-a5a32sf",
           "external_id": "175255",
           "price_cents": 8390,
-          "snapshot_date": "2026-11-03"
+          "snapshot_date": "2026-11-04"
         }
       ],
       "spec_sources": {
@@ -11119,7 +11119,7 @@
           "url": "https://datatronic.fi/komponentit/virtalahteet/corsair-rm850x-virtalahdeyksikko-850-w-24-pin-atx-atx-musta-corsair-cp-9020270-eu",
           "external_id": "164921",
           "price_cents": 15990,
-          "snapshot_date": "2026-11-03"
+          "snapshot_date": "2026-11-04"
         }
       ],
       "spec_sources": {
@@ -11164,7 +11164,7 @@
           "url": "https://datatronic.fi/komponentit/virtalahteet/seasonic-focus-gx-atx-30-virtalahdeyksikko-1000-w-20-4-pin-atx-musta-seasonic-focus-gx-1000-v4",
           "external_id": "164502",
           "price_cents": 16390,
-          "snapshot_date": "2026-11-03"
+          "snapshot_date": "2026-11-04"
         }
       ],
       "spec_sources": {
@@ -11207,7 +11207,7 @@
           "url": "https://datatronic.fi/komponentit/virtalahteet/sama-p1200-virtalahdeyksikko-1200-w-24-pin-atx-atx-musta-sama-gears-p1200-bkpff001-eu",
           "external_id": "174185",
           "price_cents": 13990,
-          "snapshot_date": "2026-11-03"
+          "snapshot_date": "2026-11-04"
         }
       ],
       "spec_sources": {
@@ -11250,7 +11250,7 @@
           "url": "https://datatronic.fi/komponentit/virtalahteet/seasonic-core-gc-650-atx-31-virtalahdeyksikko-650-w-24-pin-atx-musta-seasonic-srp-cgc651-a5a32sf",
           "external_id": "175257",
           "price_cents": 7090,
-          "snapshot_date": "2026-11-03"
+          "snapshot_date": "2026-11-04"
         }
       ],
       "spec_sources": {
@@ -11293,7 +11293,7 @@
           "url": "https://datatronic.fi/komponentit/virtalahteet/corsair-rm850e-virtalahdeyksikko-850-w-24-pin-atx-atx-musta-corsair-cp-9020296-eu",
           "external_id": "167705",
           "price_cents": 13590,
-          "snapshot_date": "2026-11-03"
+          "snapshot_date": "2026-11-04"
         }
       ],
       "spec_sources": {
@@ -11336,7 +11336,7 @@
           "url": "https://datatronic.fi/komponentit/virtalahteet/asus-tuf-gaming-750w-gold-virtalahdeyksikko-20-4-pin-atx-atx-musta-asus-90ye00s3-b0na00",
           "external_id": "60693",
           "price_cents": 10390,
-          "snapshot_date": "2026-11-03"
+          "snapshot_date": "2026-11-04"
         }
       ],
       "spec_sources": {
@@ -11380,7 +11380,7 @@
           "url": "https://datatronic.fi/komponentit/virtalahteet/be-quiet-pure-power-12-550w-virtalahdeyksikko-20-4-pin-atx-atx-musta-be-quiet-bp001eu",
           "external_id": "165416",
           "price_cents": 7490,
-          "snapshot_date": "2026-11-03"
+          "snapshot_date": "2026-11-04"
         }
       ],
       "spec_sources": {
@@ -11422,7 +11422,7 @@
           "url": "https://datatronic.fi/komponentit/virtalahteet/seasonic-850w-core-gx-850-atx-3-2024-atx-virtalahde-80-plus-gold-musta-seasonic-srp-cgx851-a5a32sf",
           "external_id": "166350",
           "price_cents": 11490,
-          "snapshot_date": "2026-11-03"
+          "snapshot_date": "2026-11-04"
         }
       ],
       "spec_sources": {
@@ -11463,7 +11463,7 @@
           "url": "https://datatronic.fi/komponentit/virtalahteet/gigabyte-ud1000gm-pg5-v2-virtalahdeyksikko-1000-w-20-4-pin-atx-atx-musta-gigabyte-gp-ud1000gm-pg5-v2",
           "external_id": "176481",
           "price_cents": 10990,
-          "snapshot_date": "2026-11-03"
+          "snapshot_date": "2026-11-04"
         }
       ],
       "spec_sources": {
@@ -11506,7 +11506,7 @@
           "url": "https://datatronic.fi/komponentit/virtalahteet/asus-prime-850w-gold-ap-850g-virtalahdeyksikko-20-4-pin-atx-atx-musta-valkoinen-asus-90ye00u0-b0nb00",
           "external_id": "165921",
           "price_cents": 11390,
-          "snapshot_date": "2026-11-03"
+          "snapshot_date": "2026-11-04"
         }
       ],
       "spec_sources": {
@@ -11546,7 +11546,7 @@
           "url": "https://datatronic.fi/komponentit/virtalahteet/thermalright-sg-1000w-thermalright-tr-sg1000",
           "external_id": "177511",
           "price_cents": 10590,
-          "snapshot_date": "2026-11-03"
+          "snapshot_date": "2026-11-04"
         }
       ],
       "spec_sources": {}
@@ -11580,6 +11580,51 @@
         }
       ],
       "spec_sources": {
+        "fan_size_mm": "parsed_product_page",
+        "wattage_w": "parsed_product_page",
+        "main_connector": "parsed_product_page",
+        "pcie_connectors": "parsed_product_page",
+        "efficiency": "parsed_product_page",
+        "atx_version": "parsed_product_page",
+        "length_mm": "parsed_product_page",
+        "modular": "parsed_product_page"
+      }
+    },
+    {
+      "category": "psu",
+      "brand": "Seasonic",
+      "model": "Focus GX 750 W 24-pin ATX ATX Valkoinen",
+      "raw_name": "Seasonic Focus GX virtalähdeyksikkö 750 W 24-pin ATX ATX Valkoinen",
+      "specs": {
+        "wattage_w": 750,
+        "efficiency": "80 PLUS Gold",
+        "atx_version": "3.1",
+        "form_factor": "ATX",
+        "modular": "Täysin modulaarinen",
+        "connectors": "24-pin",
+        "width_mm": 150.0,
+        "depth_mm": 140.0,
+        "height_mm": 86.0,
+        "fan_size_mm": 135.0,
+        "main_connector": "24-pin ATX",
+        "pcie_connectors": 2,
+        "length_mm": 610.0
+      },
+      "missing_specs": [],
+      "category_confidence": "ok",
+      "listings": [
+        {
+          "shop": "Datatronic",
+          "url": "https://datatronic.fi/komponentit/virtalahteet/seasonic-focus-gx-virtalahdeyksikko-750-w-24-pin-atx-atx-valkoinen-seasonic-focus-gx-750-v4-white",
+          "external_id": "172418",
+          "price_cents": 11990,
+          "snapshot_date": "2026-11-04"
+        }
+      ],
+      "spec_sources": {
+        "width_mm": "parsed_product_page",
+        "depth_mm": "parsed_product_page",
+        "height_mm": "parsed_product_page",
         "fan_size_mm": "parsed_product_page",
         "wattage_w": "parsed_product_page",
         "main_connector": "parsed_product_page",
@@ -12247,51 +12292,6 @@
     },
     {
       "category": "psu",
-      "brand": "Seasonic",
-      "model": "Focus GX 750 W 24-pin ATX ATX Valkoinen",
-      "raw_name": "Seasonic Focus GX virtalähdeyksikkö 750 W 24-pin ATX ATX Valkoinen",
-      "specs": {
-        "wattage_w": 750,
-        "efficiency": "80 PLUS Gold",
-        "atx_version": "3.1",
-        "form_factor": "ATX",
-        "modular": "Täysin modulaarinen",
-        "connectors": "24-pin",
-        "width_mm": 150.0,
-        "depth_mm": 140.0,
-        "height_mm": 86.0,
-        "fan_size_mm": 135.0,
-        "main_connector": "24-pin ATX",
-        "pcie_connectors": 2,
-        "length_mm": 610.0
-      },
-      "missing_specs": [],
-      "category_confidence": "ok",
-      "listings": [
-        {
-          "shop": "Datatronic",
-          "url": "https://datatronic.fi/komponentit/virtalahteet/seasonic-focus-gx-virtalahdeyksikko-750-w-24-pin-atx-atx-valkoinen-seasonic-focus-gx-750-v4-white",
-          "external_id": "172418",
-          "price_cents": 11990,
-          "snapshot_date": "2026-11-03"
-        }
-      ],
-      "spec_sources": {
-        "width_mm": "parsed_product_page",
-        "depth_mm": "parsed_product_page",
-        "height_mm": "parsed_product_page",
-        "fan_size_mm": "parsed_product_page",
-        "wattage_w": "parsed_product_page",
-        "main_connector": "parsed_product_page",
-        "pcie_connectors": "parsed_product_page",
-        "efficiency": "parsed_product_page",
-        "atx_version": "parsed_product_page",
-        "length_mm": "parsed_product_page",
-        "modular": "parsed_product_page"
-      }
-    },
-    {
-      "category": "psu",
       "brand": "Cooler Master",
       "model": "MWE GOLD 850 V3 850 W 24-pin ATX ATX musta",
       "raw_name": "Cooler Master MWE GOLD 850 V3 virtalähdeyksikkö 850 W 24-pin ATX ATX musta",
@@ -12667,7 +12667,7 @@
           "url": "https://datatronic.fi/komponentit/kiintolevyt-ssd-levyt/ssd/sandisk-1tb-wd-black-sn7100-nvme-ssd-levy-m2-2280-pcie-40-x4-7250-6900-mb-s-sandisk-wds100t4x0e-00cja0",
           "external_id": "166359",
           "price_cents": 18990,
-          "snapshot_date": "2026-11-03"
+          "snapshot_date": "2026-11-04"
         }
       ],
       "spec_sources": {
@@ -12702,7 +12702,7 @@
           "url": "https://datatronic.fi/komponentit/kiintolevyt-ssd-levyt/ssd/kingston-technology-nv3-2-tb-m2-pci-express-40-nvme-3d-nand-kingston-technology-snv3s-2000g",
           "external_id": "163563",
           "price_cents": 27990,
-          "snapshot_date": "2026-11-03"
+          "snapshot_date": "2026-11-04"
         }
       ],
       "spec_sources": {
@@ -12736,7 +12736,7 @@
           "url": "https://datatronic.fi/komponentit/kiintolevyt-ssd-levyt/hdd/seagate-ironwolf-st4000vn006-sisainen-kiintolevy-35-4000-gb-serial-ata-iii-seagate-st4000vn006",
           "external_id": "46594",
           "price_cents": 22390,
-          "snapshot_date": "2026-11-03"
+          "snapshot_date": "2026-11-04"
         }
       ],
       "spec_sources": {
@@ -12769,7 +12769,7 @@
           "url": "https://datatronic.fi/komponentit/kiintolevyt-ssd-levyt/ssd/pny-cs900-25-1000-gb-serial-ata-iii-3d-tlc-pny-ssd7cs900-1tb-rb",
           "external_id": "59553",
           "price_cents": 13390,
-          "snapshot_date": "2026-11-03"
+          "snapshot_date": "2026-11-04"
         }
       ],
       "spec_sources": {
@@ -12803,7 +12803,7 @@
           "url": "https://datatronic.fi/komponentit/kiintolevyt-ssd-levyt/ssd/sandisk-wds200t4g0e-00cps0-ssd-massamuisti-500gb-m2-pci-express-40-nvme-sandisk-wds500g4g0e-00cps0",
           "external_id": "166355",
           "price_cents": 9390,
-          "snapshot_date": "2026-11-03"
+          "snapshot_date": "2026-11-04"
         }
       ],
       "spec_sources": {
@@ -12837,7 +12837,7 @@
           "url": "https://datatronic.fi/komponentit/kiintolevyt-ssd-levyt/ssd/samsung-990-pro-m2-1000-gb-pci-express-40-v-nand-mlc-nvme-samsung-mz-v9p1t0bw",
           "external_id": "48853",
           "price_cents": 24090,
-          "snapshot_date": "2026-11-03"
+          "snapshot_date": "2026-11-04"
         }
       ],
       "spec_sources": {
@@ -12871,7 +12871,7 @@
           "url": "https://datatronic.fi/komponentit/kiintolevyt-ssd-levyt/ssd/msi-spatium-m461-pcie-40-nvme-2-tb-msi-s78-440q550-p83",
           "external_id": "117668",
           "price_cents": 40900,
-          "snapshot_date": "2026-11-03"
+          "snapshot_date": "2026-11-04"
         }
       ],
       "spec_sources": {
@@ -12906,7 +12906,7 @@
           "url": "https://datatronic.fi/komponentit/kiintolevyt-ssd-levyt/ssd/kingston-technology-nv3-500-gb-m2-pci-express-40-nvme-3d-nand-kingston-technology-snv3s-500g",
           "external_id": "163561",
           "price_cents": 10990,
-          "snapshot_date": "2026-11-03"
+          "snapshot_date": "2026-11-04"
         }
       ],
       "spec_sources": {
@@ -12941,7 +12941,7 @@
           "url": "https://datatronic.fi/komponentit/kiintolevyt-ssd-levyt/ssd/kingston-technology-kc3000-m2-2048-gb-pci-express-40-3d-tlc-nvme-kingston-technology-skc3000d-2048g",
           "external_id": "32826",
           "price_cents": 34990,
-          "snapshot_date": "2026-11-03"
+          "snapshot_date": "2026-11-04"
         }
       ],
       "spec_sources": {
@@ -12976,7 +12976,7 @@
           "url": "https://datatronic.fi/komponentit/kiintolevyt-ssd-levyt/ssd/intenso-top-25-128-gb-serial-ata-iii-intenso-3812430",
           "external_id": "46559",
           "price_cents": 2990,
-          "snapshot_date": "2026-11-03"
+          "snapshot_date": "2026-11-04"
         }
       ],
       "spec_sources": {
@@ -13008,7 +13008,7 @@
           "url": "https://datatronic.fi/komponentit/kiintolevyt-ssd-levyt/hdd/western-digital-red-plus-wd40efpx-sisainen-kiintolevy-35-4000-gb-serial-ata-iii-western-digital-wd40efpx",
           "external_id": "122284",
           "price_cents": 22990,
-          "snapshot_date": "2026-11-03"
+          "snapshot_date": "2026-11-04"
         }
       ],
       "spec_sources": {
@@ -13039,7 +13039,7 @@
           "url": "https://datatronic.fi/komponentit/kiintolevyt-ssd-levyt/ssd/western-digital-black-sn850x-m2-2000-gb-pci-express-40-nvme-western-digital-wds200t2x0e",
           "external_id": "47459",
           "price_cents": 45900,
-          "snapshot_date": "2026-11-03"
+          "snapshot_date": "2026-11-04"
         }
       ],
       "spec_sources": {
@@ -13073,7 +13073,7 @@
           "url": "https://datatronic.fi/komponentit/kiintolevyt-ssd-levyt/ssd/pny-cs1030-m2-nvme-250-gb-pci-express-30-pny-m280cs1030-250-rb",
           "external_id": "46058",
           "price_cents": 6290,
-          "snapshot_date": "2026-11-03"
+          "snapshot_date": "2026-11-04"
         }
       ],
       "spec_sources": {
@@ -13107,7 +13107,7 @@
           "url": "https://datatronic.fi/komponentit/kiintolevyt-ssd-levyt/ssd/kingston-technology-kc3000-m2-512-gb-pci-express-40-3d-tlc-nvme-kingston-technology-skc3000s-512g",
           "external_id": "32821",
           "price_cents": 17990,
-          "snapshot_date": "2026-11-03"
+          "snapshot_date": "2026-11-04"
         }
       ],
       "spec_sources": {
@@ -13142,7 +13142,7 @@
           "url": "https://datatronic.fi/komponentit/kiintolevyt-ssd-levyt/ssd/adata-ultimate-su630-25-240-gb-sata-qlc-3d-nand-adata-asu630ss-240gq-r",
           "external_id": "3678",
           "price_cents": 4990,
-          "snapshot_date": "2026-11-03"
+          "snapshot_date": "2026-11-04"
         }
       ],
       "spec_sources": {
@@ -13174,7 +13174,7 @@
           "url": "https://datatronic.fi/komponentit/kiintolevyt-ssd-levyt/hdd/seagate-ironwolf-st8000vn004-sisainen-kiintolevy-35-8000-gb-serial-ata-iii-seagate-st8000vn004",
           "external_id": "14957",
           "price_cents": 39500,
-          "snapshot_date": "2026-11-03"
+          "snapshot_date": "2026-11-04"
         }
       ],
       "spec_sources": {
@@ -13204,7 +13204,7 @@
           "url": "https://datatronic.fi/komponentit/kiintolevyt-ssd-levyt/hdd/seagate-barracuda-st4000dm004-sisainen-kiintolevy-35-4000-gb-serial-ata-iii-seagate-st4000dm004",
           "external_id": "48433",
           "price_cents": 19290,
-          "snapshot_date": "2026-11-03"
+          "snapshot_date": "2026-11-04"
         }
       ],
       "spec_sources": {
@@ -13234,7 +13234,7 @@
           "url": "https://datatronic.fi/komponentit/kiintolevyt-ssd-levyt/hdd/western-digital-red-plus-wd60efpx-sisainen-kiintolevy-35-6000-gb-serial-ata-iii-western-digital-wd60efpx",
           "external_id": "68952",
           "price_cents": 32900,
-          "snapshot_date": "2026-11-03"
+          "snapshot_date": "2026-11-04"
         }
       ],
       "spec_sources": {
@@ -13295,7 +13295,7 @@
           "url": "https://datatronic.fi/komponentit/kiintolevyt-ssd-levyt/ssd/crucial-p510-2-tb-m2-pci-express-50-nvme-tlc-crucial-ct2000p510ssd8",
           "external_id": "171482",
           "price_cents": 33900,
-          "snapshot_date": "2026-11-03"
+          "snapshot_date": "2026-11-04"
         }
       ],
       "spec_sources": {
@@ -13329,7 +13329,7 @@
           "url": "https://datatronic.fi/komponentit/kiintolevyt-ssd-levyt/hdd/seagate-barracuda-st2000dm008-sisainen-kiintolevy-35-2000-gb-serial-ata-iii-seagate-st2000dm008",
           "external_id": "14895",
           "price_cents": 15190,
-          "snapshot_date": "2026-11-03"
+          "snapshot_date": "2026-11-04"
         }
       ],
       "spec_sources": {
@@ -13439,6 +13439,147 @@
         "read_mb_s": "parsed_product_page",
         "write_mb_s": "parsed_product_page",
         "nvme": "parsed_product_page"
+      }
+    },
+    {
+      "category": "storage",
+      "brand": null,
+      "model": "WD Black SN7100 NVMe 2TB M.2 2280 (WDS200T4X0E-00CJA0)",
+      "raw_name": "WD Black SN7100 NVMe SSD 2TB M.2 2280 (WDS200T4X0E-00CJA0)",
+      "specs": {
+        "capacity_gb": 2048,
+        "interface": "PCI Express 4.0",
+        "form_factor": "2280 (22 x 80 mm)",
+        "pcie_gen": null,
+        "kind": "nvme",
+        "read_mb_s": 7250,
+        "write_mb_s": 6900,
+        "nvme": true
+      },
+      "missing_specs": [
+        "pcie_gen"
+      ],
+      "category_confidence": "ok",
+      "listings": [
+        {
+          "shop": "Datatronic",
+          "url": "https://datatronic.fi/komponentit/kiintolevyt-ssd-levyt/ssd/wd-black-sn7100-nvme-ssd-2tb-m2-2280-wds200t4x0e-00cja0-sandisk-wds200t4x0e-00cja0",
+          "external_id": "166358",
+          "price_cents": 36500,
+          "snapshot_date": "2026-11-04"
+        }
+      ],
+      "spec_sources": {
+        "capacity_gb": "parsed_product_page",
+        "interface": "parsed_product_page",
+        "read_mb_s": "parsed_product_page",
+        "write_mb_s": "parsed_product_page",
+        "nvme": "parsed_product_page",
+        "form_factor": "parsed_product_page"
+      }
+    },
+    {
+      "category": "storage",
+      "brand": "Kingston Technology",
+      "model": "NV3 1 TB M.2 PCI Express 4.0 NVMe 3D NAND",
+      "raw_name": "Kingston Technology NV3 1 TB M.2 PCI Express 4.0 NVMe 3D NAND",
+      "specs": {
+        "capacity_gb": 1024,
+        "interface": "PCI Express 4.0",
+        "form_factor": "2280 (22 x 80 mm)",
+        "pcie_gen": "4.0",
+        "kind": "nvme",
+        "read_mb_s": 6000,
+        "write_mb_s": 4000,
+        "nvme": true
+      },
+      "missing_specs": [],
+      "category_confidence": "ok",
+      "listings": [
+        {
+          "shop": "Datatronic",
+          "url": "https://datatronic.fi/komponentit/kiintolevyt-ssd-levyt/ssd/kingston-technology-nv3-1-tb-m2-pci-express-40-nvme-3d-nand-kingston-technology-snv3s-1000g",
+          "external_id": "163562",
+          "price_cents": 16090,
+          "snapshot_date": "2026-11-04"
+        }
+      ],
+      "spec_sources": {
+        "capacity_gb": "parsed_product_page",
+        "interface": "parsed_product_page",
+        "read_mb_s": "parsed_product_page",
+        "write_mb_s": "parsed_product_page",
+        "nvme": "parsed_product_page",
+        "form_factor": "parsed_product_page"
+      }
+    },
+    {
+      "category": "storage",
+      "brand": null,
+      "model": "Intenso High Performance 2.5\" 120 GB Serial ATA III TLC",
+      "raw_name": "Intenso High Performance 2.5\" 120 GB Serial ATA III TLC",
+      "specs": {
+        "capacity_gb": 120,
+        "interface": "Serial ATA III",
+        "form_factor": "2.5\"",
+        "pcie_gen": null,
+        "kind": "sata-ssd",
+        "read_mb_s": 520,
+        "write_mb_s": 480
+      },
+      "missing_specs": [
+        "pcie_gen"
+      ],
+      "category_confidence": "ok",
+      "listings": [
+        {
+          "shop": "Datatronic",
+          "url": "https://datatronic.fi/komponentit/kiintolevyt-ssd-levyt/ssd/intenso-high-performance-25-120-gb-serial-ata-iii-tlc-intenso-3813430",
+          "external_id": "41786",
+          "price_cents": 2990,
+          "snapshot_date": "2026-11-04"
+        }
+      ],
+      "spec_sources": {
+        "capacity_gb": "parsed_product_page",
+        "interface": "parsed_product_page",
+        "read_mb_s": "parsed_product_page",
+        "write_mb_s": "parsed_product_page"
+      }
+    },
+    {
+      "category": "storage",
+      "brand": "Lexar",
+      "model": "NQ790 4 TB M.2 PCI Express 4.0 NVMe 3D NAND",
+      "raw_name": "Lexar NQ790 4 TB M.2 PCI Express 4.0 NVMe 3D NAND",
+      "specs": {
+        "capacity_gb": 4096,
+        "interface": "PCI Express 4.0",
+        "form_factor": "2280 (22 x 80 mm)",
+        "pcie_gen": "4.0",
+        "kind": "nvme",
+        "read_mb_s": 7000,
+        "write_mb_s": 6000,
+        "nvme": true
+      },
+      "missing_specs": [],
+      "category_confidence": "ok",
+      "listings": [
+        {
+          "shop": "Datatronic",
+          "url": "https://datatronic.fi/komponentit/kiintolevyt-ssd-levyt/ssd/lexar-nq790-4-tb-m2-pci-express-40-nvme-3d-nand-lexar-lnq790x004t-rnnng",
+          "external_id": "164022",
+          "price_cents": 47900,
+          "snapshot_date": "2026-11-04"
+        }
+      ],
+      "spec_sources": {
+        "capacity_gb": "parsed_product_page",
+        "interface": "parsed_product_page",
+        "read_mb_s": "parsed_product_page",
+        "write_mb_s": "parsed_product_page",
+        "nvme": "parsed_product_page",
+        "form_factor": "parsed_product_page"
       }
     },
     {
@@ -13594,41 +13735,6 @@
           "url": "https://datatronic.fi/komponentit/kiintolevyt-ssd-levyt/ssd/crucial-p310-2-tb-m2-pci-express-40-nvme-crucial-ct2000p310ssd8",
           "external_id": "165147",
           "price_cents": 31500,
-          "snapshot_date": "2026-11-03"
-        }
-      ],
-      "spec_sources": {
-        "capacity_gb": "parsed_product_page",
-        "interface": "parsed_product_page",
-        "read_mb_s": "parsed_product_page",
-        "write_mb_s": "parsed_product_page",
-        "nvme": "parsed_product_page",
-        "form_factor": "parsed_product_page"
-      }
-    },
-    {
-      "category": "storage",
-      "brand": "Lexar",
-      "model": "NQ790 4 TB M.2 PCI Express 4.0 NVMe 3D NAND",
-      "raw_name": "Lexar NQ790 4 TB M.2 PCI Express 4.0 NVMe 3D NAND",
-      "specs": {
-        "capacity_gb": 4096,
-        "interface": "PCI Express 4.0",
-        "form_factor": "2280 (22 x 80 mm)",
-        "pcie_gen": "4.0",
-        "kind": "nvme",
-        "read_mb_s": 7000,
-        "write_mb_s": 6000,
-        "nvme": true
-      },
-      "missing_specs": [],
-      "category_confidence": "ok",
-      "listings": [
-        {
-          "shop": "Datatronic",
-          "url": "https://datatronic.fi/komponentit/kiintolevyt-ssd-levyt/ssd/lexar-nq790-4-tb-m2-pci-express-40-nvme-3d-nand-lexar-lnq790x004t-rnnng",
-          "external_id": "164022",
-          "price_cents": 47900,
           "snapshot_date": "2026-11-03"
         }
       ],

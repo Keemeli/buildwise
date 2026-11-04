@@ -130,6 +130,25 @@ python scrape.py --all --pages 2          # every category
 Output lands in `data/raw/` (one JSON per category/page), with raw HTML cached in
 `data/raw/html/` and one line per run in `data/raw/scrape_runs.jsonl`.
 
+**Refreshing everything (the normal way):** the pipeline is four stages and the web
+app reads a copy of the last one, so there is one command instead of four:
+
+```bash
+cd scraper
+python refresh.py                  # scrape -> specs -> normalise -> export (~6 min warm)
+python refresh.py --pages 1        # only the first listing page per category (~40 s)
+python refresh.py --skip-scrape    # no network: re-normalise and re-export what we have
+python refresh.py --skip-specs     # prices only
+python refresh.py --cold           # refetch product pages, ignore today's cache
+```
+
+Every stage must succeed, the run is appended to `data/refresh_log.jsonl`, and the
+command prints what it actually produced (components, how many have product-page
+specs, whether the web copy matches the catalogue).
+
+`scraper/export_web_data.py --check` answers one question on its own: does the copy
+the deployed site reads still match the normalised catalogue?
+
 ```bash
 # web app
 cd web
