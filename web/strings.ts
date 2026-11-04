@@ -116,6 +116,8 @@ export const strings = {
       psuTooWeak: (p: Params) => `Virtalähde (${p.psu} W) on heikompi kuin arvioitu kulutus ${p.draw} W.`,
       psuLowHeadroom: (p: Params) =>
         `Virtalähteessä on vähän varaa: ${p.psu} W, kun kulutus on noin ${p.draw} W. Suositus ${p.recommended} W.`,
+      psuBelowMinimum: (p: Params) =>
+        `Virtalähde (${p.psu} W) on pienempi kuin näytönohjaimen valmistajan vähimmäissuositus ${p.minimum} W.`,
       needsCooler: () => "Tämän prosessorin mukana ei tule jäähdytintä. Lisää jäähdytin.",
       needsGpu: () => "Tässä prosessorissa ei ole integroitua grafiikkaa. Lisää näytönohjain.",
       laptopMemory: () => "Tämä on kannettavan tietokoneen muisti (SO-DIMM), eikä se sovi pöytäkoneen emolevyyn.",
@@ -236,6 +238,8 @@ export const strings = {
       psuTooWeak: (p: Params) => `Power supply (${p.psu} W) is below the estimated draw of ${p.draw} W.`,
       psuLowHeadroom: (p: Params) =>
         `Power supply has little headroom: ${p.psu} W for ~${p.draw} W. Aim for ${p.recommended} W.`,
+      psuBelowMinimum: (p: Params) =>
+        `Power supply (${p.psu} W) is below the minimum the graphics card manufacturer specifies (${p.minimum} W).`,
       needsCooler: () => "This CPU is sold without a cooler. Add one.",
       needsGpu: () => "This CPU has no integrated graphics. Add a graphics card.",
       laptopMemory: () => "This is laptop memory (SO-DIMM) and does not fit a desktop motherboard.",
