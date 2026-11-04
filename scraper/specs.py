@@ -160,7 +160,8 @@ FIELD_MAP: Dict[str, Dict[str, List[str]]] = {
         "height_mm": ["Korkeus"],
         "slot_width": ["Korttipaikkojen lukumäärä", "Paksuus"],
         "power_connectors": ["Virransyöttöliitäntä", "Virransyöttöliitännät"],
-        "recommended_psu_w": ["Järjestelmän virtalähteen vähimmäisteho", "Suositeltu virtalähde"],
+        "recommended_psu_w": ["Virtalähteen minimikoko", "Järjestelmän virtalähteen vähimmäisteho",
+                              "Suositeltu virtalähde"],
         "interface": ["Väylä", "PCI-väylä", "PCI Express -versio"],
         "vram_gb": ["Diskreetti näytönohjainmuisti", "Näytönohjaimen muisti"],
         "memory_type": ["Näytönohjaimen muistityyppi"],
@@ -168,7 +169,8 @@ FIELD_MAP: Dict[str, Dict[str, List[str]]] = {
         "memory_bus_bit": ["Muistiväylä"],
     },
     "cpu": {
-        "tdp_w": ["Thermal Design Power (TDP)", "TDP", "Tehonkulutus (TDP)"],
+        "tdp_w": ["Thermal Design Power (TDP)", "TDP", "Tehonkulutus (TDP)", "Prosessorin pohjateho"],
+        "max_turbo_power_w": ["Enimmäisturboteho", "Prosessorin enimmäisteho"],
         "socket": ["Prosessorin kanta", "Kanta"],
         "memory_types": ["Prosessorin tukemat muistityypit", "Tuetut muistityypit"],
         "cores": ["Prosessorin ytimet", "Ytimien lukumäärä"],
@@ -249,7 +251,7 @@ FIELD_MAP: Dict[str, Dict[str, List[str]]] = {
 
 PARSERS: Dict[str, Callable[[str], Any]] = {
     "power_w": parse_watts, "tdp_w": parse_watts, "wattage_w": parse_watts,
-    "recommended_psu_w": parse_watts,
+    "recommended_psu_w": parse_watts, "max_turbo_power_w": parse_watts,
     "length_mm": parse_mm, "width_mm": parse_mm, "height_mm": parse_mm,
     "depth_mm": parse_mm, "max_gpu_length_mm": parse_mm, "max_cooler_height_mm": parse_mm,
     "max_psu_length_mm": parse_mm, "fan_size_mm": parse_mm,
