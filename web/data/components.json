@@ -6694,7 +6694,10 @@
       "raw_name": "Goodram IRDM DDR5 IR-6000D564L30S/32GDC muistimoduuli 32 GB 2 x 16 GB 288-pin DIMM",
       "specs": {
         "memory_type": "DDR5",
-        "modules": 2,
+        "modules": {
+          "count": 2,
+          "size_gb": 16
+        },
         "capacity_gb": 32,
         "speed_mhz": 6000,
         "cas_latency": 30,
@@ -6730,7 +6733,10 @@
       "raw_name": "RAM PATRIOT VIPER Venom DDR5 32 GB (2x16GB) 6000MHz CL30 XMP 3.0 (PVV532G600C30K)",
       "specs": {
         "memory_type": "DDR5",
-        "modules": 2,
+        "modules": {
+          "count": 2,
+          "size_gb": 16
+        },
         "capacity_gb": 32,
         "speed_mhz": 6000,
         "cas_latency": 30,
@@ -6766,7 +6772,10 @@
       "raw_name": "Kingston Technology FURY Beast muistimoduuli 32 GB 2 x 16 GB DDR5",
       "specs": {
         "memory_type": "DDR5",
-        "modules": 2,
+        "modules": {
+          "count": 2,
+          "size_gb": 16
+        },
         "capacity_gb": 32,
         "speed_mhz": null,
         "cas_latency": 30,
@@ -6803,7 +6812,10 @@
       "raw_name": "Kingston Technology FURY Beast muistimoduuli 16 GB 2 x 8 GB DDR5 6000 MHz",
       "specs": {
         "memory_type": "DDR5",
-        "modules": 2,
+        "modules": {
+          "count": 2,
+          "size_gb": 8
+        },
         "capacity_gb": 16,
         "speed_mhz": 6000,
         "cas_latency": 36,
@@ -6839,7 +6851,10 @@
       "raw_name": "G.Skill Aegis F4-3200C16D-16GIS muistimoduuli 16 GB 2 x 8 GB DDR4 3200 MHz",
       "specs": {
         "memory_type": "DDR4",
-        "modules": 2,
+        "modules": {
+          "count": 2,
+          "size_gb": 8
+        },
         "capacity_gb": 16,
         "speed_mhz": 3200,
         "cas_latency": 16,
@@ -6875,7 +6890,10 @@
       "raw_name": "G.Skill Aegis F4-3200C16D-32GIS muistimoduuli 32 GB 2 x 16 GB DDR4 3200 MHz",
       "specs": {
         "memory_type": "DDR4",
-        "modules": 2,
+        "modules": {
+          "count": 2,
+          "size_gb": 16
+        },
         "capacity_gb": 32,
         "speed_mhz": 3200,
         "cas_latency": 16,
@@ -6911,7 +6929,10 @@
       "raw_name": "Kingston Technology FURY Beast muistimoduuli 32 GB 2 x 16 GB DDR4 3200 MHz",
       "specs": {
         "memory_type": "DDR4",
-        "modules": 2,
+        "modules": {
+          "count": 2,
+          "size_gb": 16
+        },
         "capacity_gb": 32,
         "speed_mhz": 3200,
         "cas_latency": 16,
@@ -6947,7 +6968,10 @@
       "raw_name": "Kingston Technology FURY Beast muistimoduuli 16 GB 2 x 8 GB DDR4 3200 MHz",
       "specs": {
         "memory_type": "DDR4",
-        "modules": 2,
+        "modules": {
+          "count": 2,
+          "size_gb": 8
+        },
         "capacity_gb": 16,
         "speed_mhz": 3200,
         "cas_latency": 16,
@@ -6983,7 +7007,10 @@
       "raw_name": "Corsair Vengeance CMK32GX5M2E6000Z36W muistimoduuli 32 GB 2 x 16 GB DDR5 6000 MHz",
       "specs": {
         "memory_type": "DDR5",
-        "modules": 2,
+        "modules": {
+          "count": 2,
+          "size_gb": 16
+        },
         "capacity_gb": 32,
         "speed_mhz": 6000,
         "cas_latency": 36,
@@ -7018,7 +7045,10 @@
       "raw_name": "Corsair Vengeance CMK32GX5M2B6000C38 muistimoduuli 32 GB 2 x 16 GB DDR5 6000 MHz",
       "specs": {
         "memory_type": "DDR5",
-        "modules": 2,
+        "modules": {
+          "count": 2,
+          "size_gb": 16
+        },
         "capacity_gb": 32,
         "speed_mhz": 6000,
         "cas_latency": 38,
@@ -7053,7 +7083,10 @@
       "raw_name": "Crucial 32GB (2 x 16GB) Pro - OC Gaming Memory, DDR5 6000MHz, CL36",
       "specs": {
         "memory_type": "DDR5",
-        "modules": 2,
+        "modules": {
+          "count": 2,
+          "size_gb": 16
+        },
         "capacity_gb": 32,
         "speed_mhz": 6000,
         "cas_latency": 36,
@@ -7122,7 +7155,10 @@
       "raw_name": "Kingston Technology FURY Renegade muistimoduuli 16 GB 2 x 8 GB DDR4 3600 MHz",
       "specs": {
         "memory_type": "DDR4",
-        "modules": 2,
+        "modules": {
+          "count": 2,
+          "size_gb": 8
+        },
         "capacity_gb": 16,
         "speed_mhz": 3600,
         "cas_latency": 16,
@@ -7158,7 +7194,10 @@
       "raw_name": "G.Skill Ripjaws V muistimoduuli 32 GB 2 x 16 GB DDR4 3200 MHz",
       "specs": {
         "memory_type": "DDR4",
-        "modules": 2,
+        "modules": {
+          "count": 2,
+          "size_gb": 16
+        },
         "capacity_gb": 32,
         "speed_mhz": 3200,
         "cas_latency": null,
@@ -7195,7 +7234,10 @@
       "raw_name": "Patriot Memory Viper Elite 5 Ultra VEUR532G6028K muistimoduuli 32 GB 2 x 16 GB DDR5 6000 MT/s 288-pin DIMM",
       "specs": {
         "memory_type": "DDR5",
-        "modules": 2,
+        "modules": {
+          "count": 2,
+          "size_gb": 16
+        },
         "capacity_gb": 32,
         "speed_mhz": 6000,
         "cas_latency": 28,
@@ -7230,7 +7272,10 @@
       "raw_name": "Goodram IRDM DDR5 IR-6400D564L32S/32GDC muistimoduuli 32 GB 2 x 16 GB 288-pin DIMM",
       "specs": {
         "memory_type": "DDR5",
-        "modules": 2,
+        "modules": {
+          "count": 2,
+          "size_gb": 16
+        },
         "capacity_gb": 32,
         "speed_mhz": 6400,
         "cas_latency": 32,
@@ -7266,7 +7311,10 @@
       "raw_name": "Corsair Vengeance muistimoduuli 64 GB 2 x 32 GB DDR5 6000 MT/s",
       "specs": {
         "memory_type": "DDR5",
-        "modules": 2,
+        "modules": {
+          "count": 2,
+          "size_gb": 32
+        },
         "capacity_gb": 64,
         "speed_mhz": 3000,
         "cas_latency": 40,
@@ -7301,7 +7349,10 @@
       "raw_name": "Corsair Vengeance RGB CMH32GX5M2B6000C38 muistimoduuli 32 GB 2 x 16 GB DDR5 6000 MHz",
       "specs": {
         "memory_type": "DDR5",
-        "modules": 2,
+        "modules": {
+          "count": 2,
+          "size_gb": 16
+        },
         "capacity_gb": 32,
         "speed_mhz": 6000,
         "cas_latency": 38,
@@ -7336,7 +7387,10 @@
       "raw_name": "Patriot Memory Viper Venom PVV516G60C30 muistimoduuli 16 GB 1 x 16 GB DDR5 6000 MT/s 288-pin DIMM",
       "specs": {
         "memory_type": "DDR5",
-        "modules": 1,
+        "modules": {
+          "count": 1,
+          "size_gb": 16
+        },
         "capacity_gb": 16,
         "speed_mhz": 6000,
         "cas_latency": 30,
@@ -7371,7 +7425,10 @@
       "raw_name": "Corsair Vengeance RGB muistimoduuli 32 GB 2 x 16 GB DDR5 288-pin DIMM",
       "specs": {
         "memory_type": "DDR5",
-        "modules": 2,
+        "modules": {
+          "count": 2,
+          "size_gb": 16
+        },
         "capacity_gb": 32,
         "speed_mhz": 6400,
         "cas_latency": 32,
@@ -7406,7 +7463,10 @@
       "raw_name": "G.Skill Aegis F4-3200C16S-8GIS muistimoduuli 8 GB 1 x 8 GB DDR4 3200 MHz",
       "specs": {
         "memory_type": "DDR4",
-        "modules": 1,
+        "modules": {
+          "count": 1,
+          "size_gb": 8
+        },
         "capacity_gb": 8,
         "speed_mhz": 3200,
         "cas_latency": 16,
@@ -7442,7 +7502,10 @@
       "raw_name": "Crucial CT16G56C46S5 muistimoduuli 16 GB 1 x 16 GB DDR5 5600 MHz ECC",
       "specs": {
         "memory_type": "DDR5",
-        "modules": 1,
+        "modules": {
+          "count": 1,
+          "size_gb": 16
+        },
         "capacity_gb": 16,
         "speed_mhz": 5600,
         "cas_latency": 46,
@@ -7478,7 +7541,10 @@
       "raw_name": "Kingston Technology FURY Renegade muistimoduuli 32 GB 2 x 16 GB DDR4 3600 MHz",
       "specs": {
         "memory_type": "DDR4",
-        "modules": 2,
+        "modules": {
+          "count": 2,
+          "size_gb": 16
+        },
         "capacity_gb": 32,
         "speed_mhz": 3600,
         "cas_latency": 16,
@@ -7514,7 +7580,10 @@
       "raw_name": "Crucial CT16G4SFRA32A muistimoduuli 16 GB 1 x 16 GB DDR4 3200 MHz",
       "specs": {
         "memory_type": "DDR4",
-        "modules": 1,
+        "modules": {
+          "count": 1,
+          "size_gb": 16
+        },
         "capacity_gb": 16,
         "speed_mhz": 3200,
         "cas_latency": 22,
@@ -7550,7 +7619,10 @@
       "raw_name": "Corsair Vengeance CMK48GX5M2B7000C40 muistimoduuli 48 GB 2 x 24 GB DDR5 7000 MHz",
       "specs": {
         "memory_type": "DDR5",
-        "modules": 2,
+        "modules": {
+          "count": 2,
+          "size_gb": 24
+        },
         "capacity_gb": 48,
         "speed_mhz": 7000,
         "cas_latency": 40,
@@ -7585,7 +7657,10 @@
       "raw_name": "Crucial CT8G4SFRA32A muistimoduuli 8 GB 1 x 8 GB DDR4 3200 MHz",
       "specs": {
         "memory_type": "DDR4",
-        "modules": 1,
+        "modules": {
+          "count": 1,
+          "size_gb": 8
+        },
         "capacity_gb": 8,
         "speed_mhz": 3200,
         "cas_latency": 22,
@@ -7621,7 +7696,10 @@
       "raw_name": "Kingston Technology FURY Impact muistimoduuli 8 GB 1 x 8 GB DDR4 3200 MHz",
       "specs": {
         "memory_type": "DDR4",
-        "modules": 1,
+        "modules": {
+          "count": 1,
+          "size_gb": 8
+        },
         "capacity_gb": 8,
         "speed_mhz": 3200,
         "cas_latency": 20,
@@ -7657,7 +7735,10 @@
       "raw_name": "G.Skill Ripjaws V F4-3600C18D-32GVK muistimoduuli 32 GB 2 x 16 GB DDR4 3600 MHz",
       "specs": {
         "memory_type": "DDR4",
-        "modules": 2,
+        "modules": {
+          "count": 2,
+          "size_gb": 16
+        },
         "capacity_gb": 32,
         "speed_mhz": 3600,
         "cas_latency": 18,
@@ -7693,7 +7774,10 @@
       "raw_name": "Crucial CT16G48C40S5 muistimoduuli 16 GB 1 x 16 GB DDR5 4800 MHz",
       "specs": {
         "memory_type": "DDR5",
-        "modules": 1,
+        "modules": {
+          "count": 1,
+          "size_gb": 16
+        },
         "capacity_gb": 16,
         "speed_mhz": 4800,
         "cas_latency": 40,
@@ -7729,7 +7813,10 @@
       "raw_name": "Team Group DELTA RGB muistimoduuli 32 GB 2 x 16 GB DDR5 288-pin DIMM",
       "specs": {
         "memory_type": "DDR5",
-        "modules": 2,
+        "modules": {
+          "count": 2,
+          "size_gb": 16
+        },
         "capacity_gb": 32,
         "speed_mhz": 6000,
         "cas_latency": 30,
@@ -7765,7 +7852,10 @@
       "raw_name": "G.Skill F5-6000J3636F16GX2-RS5K muistimoduuli 32 GB 2 x 16 GB DDR5 6000 MHz",
       "specs": {
         "memory_type": "DDR5",
-        "modules": 2,
+        "modules": {
+          "count": 2,
+          "size_gb": 16
+        },
         "capacity_gb": 32,
         "speed_mhz": 6000,
         "cas_latency": 36,
@@ -7801,7 +7891,10 @@
       "raw_name": "Kingston Technology FURY Beast muistimoduuli 8 GB 1 x 8 GB DDR5 5600 MHz",
       "specs": {
         "memory_type": "DDR5",
-        "modules": 1,
+        "modules": {
+          "count": 1,
+          "size_gb": 8
+        },
         "capacity_gb": 8,
         "speed_mhz": 5600,
         "cas_latency": 40,
@@ -7837,7 +7930,10 @@
       "raw_name": "Kingston Technology ValueRAM 4GB DDR3-1600 muistimoduuli 1 x 4 GB 1600 MHz",
       "specs": {
         "memory_type": "DDR3",
-        "modules": 1,
+        "modules": {
+          "count": 1,
+          "size_gb": 4
+        },
         "capacity_gb": 4,
         "speed_mhz": 1600,
         "cas_latency": 11,
@@ -7873,7 +7969,10 @@
       "raw_name": "Crucial CT8G4DFRA32A muistimoduuli 8 GB 1 x 8 GB DDR4 3200 MHz",
       "specs": {
         "memory_type": "DDR4",
-        "modules": 1,
+        "modules": {
+          "count": 1,
+          "size_gb": 8
+        },
         "capacity_gb": 8,
         "speed_mhz": 3200,
         "cas_latency": 22,
@@ -7909,7 +8008,10 @@
       "raw_name": "ADATA AX5U6000C4816G-DTLABWH muistimoduuli 32 GB 2 x 16 GB DDR5 6000 MHz ECC",
       "specs": {
         "memory_type": "DDR5",
-        "modules": 2,
+        "modules": {
+          "count": 2,
+          "size_gb": 16
+        },
         "capacity_gb": 32,
         "speed_mhz": 6000,
         "cas_latency": 48,
@@ -7945,7 +8047,10 @@
       "raw_name": "ADATA AX5U6000C4816G-DTLABBK muistimoduuli 32 GB 2 x 16 GB DDR5 6000 MHz ECC",
       "specs": {
         "memory_type": "DDR5",
-        "modules": 2,
+        "modules": {
+          "count": 2,
+          "size_gb": 16
+        },
         "capacity_gb": 32,
         "speed_mhz": 6000,
         "cas_latency": 48,
@@ -7981,7 +8086,10 @@
       "raw_name": "G.Skill Ripjaws F4-3200C22D-16GRS SO-DIMM muistimoduuli 16 GB 2 x 8 GB DDR4 3200 MHz",
       "specs": {
         "memory_type": "DDR4",
-        "modules": 2,
+        "modules": {
+          "count": 2,
+          "size_gb": 8
+        },
         "capacity_gb": 16,
         "speed_mhz": 3200,
         "cas_latency": 22,
@@ -8016,7 +8124,10 @@
       "raw_name": "Kingston Technology FURY Beast muistimoduuli 16 GB 2 x 8 GB DDR5",
       "specs": {
         "memory_type": "DDR5",
-        "modules": 2,
+        "modules": {
+          "count": 2,
+          "size_gb": 8
+        },
         "capacity_gb": 16,
         "speed_mhz": null,
         "cas_latency": 30,
@@ -8053,7 +8164,10 @@
       "raw_name": "Crucial CT32G4SFD832A muistimoduuli 32 GB 1 x 32 GB DDR4 3200 MHz",
       "specs": {
         "memory_type": "DDR4",
-        "modules": 1,
+        "modules": {
+          "count": 1,
+          "size_gb": 32
+        },
         "capacity_gb": 32,
         "speed_mhz": 3200,
         "cas_latency": 22,
@@ -8089,7 +8203,10 @@
       "raw_name": "G.Skill Ripjaws V 16GB DDR4-3200Mhz muistimoduuli 1 x 16 GB",
       "specs": {
         "memory_type": "DDR4",
-        "modules": 1,
+        "modules": {
+          "count": 1,
+          "size_gb": 16
+        },
         "capacity_gb": 16,
         "speed_mhz": 3200,
         "cas_latency": 16,
@@ -8125,7 +8242,10 @@
       "raw_name": "G.Skill Ripjaws V F4-3600C18D-16GVK muistimoduuli 16 GB 2 x 8 GB DDR4 3600 MHz",
       "specs": {
         "memory_type": "DDR4",
-        "modules": 2,
+        "modules": {
+          "count": 2,
+          "size_gb": 8
+        },
         "capacity_gb": 16,
         "speed_mhz": 3600,
         "cas_latency": 18,
@@ -8161,7 +8281,10 @@
       "raw_name": "Corsair CMK16GX5M2E6000Z36 muistimoduuli 16 GB 2 x 8 GB DDR5 6000 MT/s 288-pin DIMM",
       "specs": {
         "memory_type": "DDR5",
-        "modules": 2,
+        "modules": {
+          "count": 2,
+          "size_gb": 8
+        },
         "capacity_gb": 16,
         "speed_mhz": 6000,
         "cas_latency": 36,
@@ -8195,7 +8318,10 @@
       "raw_name": "Goodram GR3200S464L22/16G muistimoduuli 16 GB 1 x 16 GB DDR4 260-pin SO-DIMM",
       "specs": {
         "memory_type": "DDR4",
-        "modules": 1,
+        "modules": {
+          "count": 1,
+          "size_gb": 16
+        },
         "capacity_gb": 16,
         "speed_mhz": 3200,
         "cas_latency": 22,
@@ -8231,7 +8357,10 @@
       "raw_name": "G.Skill F4-3600C16D-32GTZNC muistimoduuli 32 GB 2 x 16 GB DDR4 3600 MHz",
       "specs": {
         "memory_type": "DDR4",
-        "modules": 2,
+        "modules": {
+          "count": 2,
+          "size_gb": 16
+        },
         "capacity_gb": 32,
         "speed_mhz": 3600,
         "cas_latency": 16,
@@ -8267,7 +8396,10 @@
       "raw_name": "Crucial CT2K16G4DFRA32A muistimoduuli 32 GB 2 x 16 GB DDR4 3200 MHz",
       "specs": {
         "memory_type": "DDR4",
-        "modules": 2,
+        "modules": {
+          "count": 2,
+          "size_gb": 16
+        },
         "capacity_gb": 32,
         "speed_mhz": 3200,
         "cas_latency": 22,
@@ -8303,7 +8435,10 @@
       "raw_name": "Kingston Technology FURY Beast RGB muistimoduuli 16 GB 2 x 8 GB DDR5 ECC",
       "specs": {
         "memory_type": "DDR5",
-        "modules": 2,
+        "modules": {
+          "count": 2,
+          "size_gb": 8
+        },
         "capacity_gb": 16,
         "speed_mhz": null,
         "cas_latency": 30,
@@ -8340,7 +8475,10 @@
       "raw_name": "Corsair Vengeance CMSX16GX5M1A5600C48 muistimoduuli 16 GB 1 x 16 GB DDR5 5600 MHz",
       "specs": {
         "memory_type": "DDR5",
-        "modules": 1,
+        "modules": {
+          "count": 1,
+          "size_gb": 16
+        },
         "capacity_gb": 16,
         "speed_mhz": 5600,
         "cas_latency": 48,
@@ -8375,7 +8513,10 @@
       "raw_name": "Kingston Technology FURY Impact muistimoduuli 8 GB 1 x 8 GB DDR5 4800 MHz",
       "specs": {
         "memory_type": "DDR5",
-        "modules": 1,
+        "modules": {
+          "count": 1,
+          "size_gb": 8
+        },
         "capacity_gb": 8,
         "speed_mhz": 4800,
         "cas_latency": 38,
