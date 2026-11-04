@@ -1,0 +1,61 @@
+name: CI
+
+# Every pull request must pass before it can be merged, and `main` is checked after
+# every merge so a broken build is visible on the deployed branch too.
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  web:
+    name: web — lint, data contract, build
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: web
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: npm
+          cache-dependency-path: web/package-lock.json
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Lint
+        run: npm run lint
+
+      # The seam between the Python pipeline and this app has produced two visible bugs
+      # (wrong DDR mismatch, "undefined×undefined GB"). This is the check for that seam.
+      - name: Data contract (pipeline ↔ app)
+        run: npm run check:contract
+
+      - name: Build
+        run: npm run build
+
+  data:
+    name: data — web copy in sync with the pipeline
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      # `web/data/components.json` is a committed copy of the pipeline output, so it can
+      # be edited by hand or left stale by a refresh. This refuses both.
+      - name: Web copy up to date
+        run: python3 scraper/export_web_data.py --check
