@@ -407,8 +407,67 @@ def dedupe(components: List[Dict[str, Any]]) -> Tuple[List[Dict[str, Any]], int]
     return list(merged.values()), duplicates
 
 
+def load_product_specs(path: Path) -> Dict[str, Dict[str, Any]]:
+    """specs.json written by scraper/specs.py, keyed by product URL."""
+    if not path.exists():
+        return {}
+    try:
+        payload = json.loads(path.read_text(encoding="utf-8"))
+    except json.JSONDecodeError:
+        return {}
+    return {url: entry for url, entry in payload.get("items", {}).items()
+            if entry.get("status") == "ok" and entry.get("specs")}
+
+
+def merge_product_specs(components: List[Dict[str, Any]],
+                        specs_path: Path) -> Dict[str, int]:
+    """Overwrite name-derived values with values parsed from the product page.
+
+    A parsed value always wins over a guessed one, but the provenance is kept:
+    every field that came from a data sheet is recorded in `spec_sources`, and the
+    CPU `socket_source` stops saying "inferred" once a real socket was read.
+    """
+    specs_by_url = load_product_specs(specs_path)
+    stats = {"components_matched": 0, "fields_parsed": 0, "upgraded_from_inferred": 0,
+             "sockets_parsed": 0, "gaps_closed": 0}
+    if not specs_by_url:
+        return stats
+
+    for component in components:
+        sources = component.setdefault("spec_sources", {})
+        matched: Dict[str, Any] = {}
+        for listing in component["listings"]:
+            entry = specs_by_url.get(listing["url"])
+            if entry:
+                matched.update(entry["specs"])
+        if not matched:
+            continue
+        stats["components_matched"] += 1
+
+        for field, value in matched.items():
+            if value in (None, [], ""):
+                continue
+            previous = component["specs"].get(field)
+            if previous is not None and sources.get(field, "").startswith("inferred"):
+                stats["upgraded_from_inferred"] += 1
+            if previous is None:
+                if field in component.get("missing_specs", []):
+                    component["missing_specs"] = [f for f in component["missing_specs"] if f != field]
+                    stats["gaps_closed"] += 1
+                stats["fields_parsed"] += 1
+            component["specs"][field] = value
+            sources[field] = "parsed_product_page"
+
+        if matched.get("socket") and component["specs"].get("socket_source"):
+            component["specs"]["socket_source"] = "parsed_product_page"
+            stats["sockets_parsed"] += 1
+
+    return stats
+
+
 def write_report(out_dir: Path, components: List[Dict[str, Any]], duplicates: int,
-                 scanned: int, excluded: List[str]) -> Path:
+                 scanned: int, excluded: List[str],
+                 spec_stats: Optional[Dict[str, int]] = None) -> Path:
     lines: List[str] = []
     lines.append(f"# Normalisation report — {date.today().isoformat()}")
     lines.append("")
@@ -436,6 +495,20 @@ def write_report(out_dir: Path, components: List[Dict[str, Any]], duplicates: in
             pct = round(100 * found / len(group))
             lines.append(f"| {category} | {len(group)} | `{field}` | {found} | {pct}% |")
     lines.append("")
+
+    if spec_stats and spec_stats.get("components_matched"):
+        lines.append("## Values parsed from product pages (data sheet)")
+        lines.append("")
+        lines.append(f"- Components matched to a product page: **{spec_stats['components_matched']}**")
+        lines.append(f"- Fields filled in from the data sheet: {spec_stats['fields_parsed']} "
+                     f"({spec_stats['gaps_closed']} gaps in the name-based specs closed)")
+        lines.append(f"- Guessed values replaced by parsed ones: {spec_stats['upgraded_from_inferred']}")
+        lines.append(f"- CPU sockets now parsed instead of inferred: {spec_stats['sockets_parsed']}")
+        lines.append("")
+        lines.append("Each such field is recorded in the component's `spec_sources` as "
+                     "`parsed_product_page`. It comes from the shop's own data sheet for that exact "
+                     "product, not from the product name.")
+        lines.append("")
 
     lines.append("## Products needing review (fewest specs found)")
     lines.append("")
@@ -500,6 +573,7 @@ def main() -> int:
 
     normalised = [normalise_item(item) for item in products]
     components, duplicates = dedupe(normalised)
+    spec_stats = merge_product_specs(components, args.out / "specs.json")
 
     args.out.mkdir(parents=True, exist_ok=True)
     payload = {
@@ -512,7 +586,7 @@ def main() -> int:
     components_path.write_text(json.dumps(payload, ensure_ascii=False, indent=2), encoding="utf-8")
     excluded_path = args.out / "excluded_non_components.json"
     excluded_path.write_text(json.dumps({"excluded": excluded}, ensure_ascii=False, indent=2), encoding="utf-8")
-    report_path = write_report(args.out, components, duplicates, len(raw_items), excluded)
+    report_path = write_report(args.out, components, duplicates, len(raw_items), excluded, spec_stats)
 
     print(f"scanned {len(raw_items)} raw products → {len(components)} components "
           f"({duplicates} duplicates merged, {len(excluded)} non-components excluded)")
