@@ -7,6 +7,8 @@
 Course project for **Product Design and Implementation (15 cr), OAMK autumn 2026**.
 Demo video + self-assessment deadline: **15.12.2026**.
 
+**Live demo:** https://buildwise-two-rust.vercel.app/ — deployed from `main` (root directory `web`, Next.js preset). Every pull request gets its own preview deployment, linked automatically from the PR.
+
 ---
 
 ## What it does
@@ -17,10 +19,20 @@ Demo video + self-assessment deadline: **15.12.2026**.
 
 ## Project status
 
-Sprint 1 (week of 28.10–5.11): repository, board, database schema, first scraping proof, deployed skeleton.
+Sprint 1 (week of 28.10–5.11) — what is actually in `main` today:
+
+| Deliverable | State |
+|---|---|
+| Repository, branch protection, Kanban board as GitHub issues | Done — every change went through a pull request (4 merged, each reviewed by a team member) |
+| Database schema (`shops`, `components`, `listings`, `price_snapshots`, `scrape_runs` + `latest_prices` view) | Done — prices as integer cents, one snapshot per listing per day |
+| Datatronic scraper | Done — **336 products** from 7 categories, each with a price and a product URL; raw HTML cached, every run logged |
+| Component normaliser | Done — 336 raw rows → **332 components**, plus a coverage report that lists what could **not** be parsed instead of guessing it |
+| Web application | Deployed on the real catalogue, with a grey **"could not check"** state wherever the data cannot answer a compatibility question |
+| Proshop / Jimms scrapers (Andrew) | In progress |
+| CI workflow | Not started |
+| Recommendation engine, FPS estimates from measured data | Not started — FPS numbers are still mock data |
 
 Board: **[BuildWise — Sprint board](https://github.com/Keemeli/buildwise/projects)**
-See `docs/` and the board for current tasks. Nothing below "What it does" is finished yet — this README grows with the project.
 
 ## Team
 
@@ -36,7 +48,7 @@ Supervisors: Teemu Korpela ([@t2946282](https://github.com/t2946282)), Pekka Ala
 
 | Layer | Choice | Notes |
 |---|---|---|
-| Frontend | Next.js + Recharts | Deployed on Vercel (free tier) |
+| Frontend | Next.js 16 + React 19 + Recharts | Live at https://buildwise-two-rust.vercel.app/ (Vercel Hobby; project root `web`) |
 | API / engine | Node (Express) | Compatibility rules, scoring, intent parsing |
 | Data worker | Python (httpx + BeautifulSoup) | Nightly cron, runs independently |
 | Database | PostgreSQL (Supabase free tier) | Falls back to SQLite locally |
@@ -129,7 +141,7 @@ npm run dev
 
 | Milestone | Date | Deliverable |
 |---|---|---|
-| Repo + first data proof | 5.11 | 200+ products scraped, board active |
+| Repo + first data proof | 5.11 | ✅ 336 products scraped, board active, web deployed |
 | Normalisation + compatibility rules v1 | 17.11 | parts normalised, socket/RAM/PSU rules tested |
 | Budget recommendation works | 24.11 | "€1200 CS2 1080p" returns 3 builds |
 | Performance estimates + charts | 1.12 | FPS ranges with confidence labels |
