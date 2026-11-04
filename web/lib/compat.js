@@ -1,0 +1,140 @@
+// Compatibility rules for a build.
+// `build` is an object like { cpu: component, motherboard: component, ... } (missing slots are null).
+//
+// Returns a list of issues: { level, parts: [categories], code, params }.
+//   level "error"   — the parts do not work together
+//   level "warning" — works, but something needs attention
+//   level "unknown" — the check could not run because a spec is missing from the data.
+//                     Never report "ok" for a check we could not do.
+// `code` is a key in strings.ts → issues, which turns it into text in the right language.
+// The real version will live in the Express engine; keep the rules in sync with it.
+
+const BASE_POWER_W = 75; // motherboard, RAM, SSD, fans
+
+// null = cannot estimate (a chosen CPU or GPU has no TDP in the data)
+export function estimateWattage(build) {
+  const parts = [build.cpu, build.gpu].filter(Boolean);
+  if (parts.length === 0) return 0;
+  if (parts.some((p) => p.specs.tdp_w == null)) return null;
+  return parts.reduce((sum, p) => sum + p.specs.tdp_w, BASE_POWER_W);
+}
+
+const known = (v) => v !== null && v !== undefined;
+
+export function checkCompatibility(build) {
+  const { cpu, cooler, motherboard, memory, gpu, psu } = build;
+  const pcCase = build.case;
+  const issues = [];
+  const add = (level, parts, code, params = {}) => issues.push({ level, parts, code, params });
+
+  // CPU ↔ motherboard
+  if (cpu && motherboard) {
+    const a = cpu.specs.socket;
+    const b = motherboard.specs.socket;
+    if (known(a) && known(b)) {
+      if (a !== b) add("error", ["cpu", "motherboard"], "socketMismatch", { cpuSocket: a, boardSocket: b });
+    } else {
+      add("unknown", ["cpu", "motherboard"], "socketUnknown");
+    }
+  }
+
+  // Memory ↔ motherboard
+  if (memory && memory.specs.form_factor === "SO-DIMM") {
+    add("error", ["memory"], "laptopMemory");
+  }
+  if (memory && motherboard) {
+    const a = memory.specs.memory_type;
+    const b = motherboard.specs.memory_type;
+    if (known(a) && known(b)) {
+      if (a !== b) add("error", ["memory", "motherboard"], "memoryMismatch", { memoryType: a, boardType: b });
+    } else {
+      add("unknown", ["memory", "motherboard"], "memoryUnknown");
+    }
+  }
+
+  // Cooler ↔ CPU
+  if (cooler && cpu) {
+    const sockets = cooler.specs.sockets;
+    if (known(sockets) && known(cpu.specs.socket)) {
+      if (!sockets.includes(cpu.specs.socket)) add("error", ["cooler", "cpu"], "coolerSocket", { socket: cpu.specs.socket });
+    } else {
+      add("unknown", ["cooler", "cpu"], "coolerSocketUnknown");
+    }
+  }
+
+  // Motherboard ↔ case
+  if (motherboard && pcCase) {
+    const supported = pcCase.specs.form_factors;
+    if (known(supported) && known(motherboard.specs.form_factor)) {
+      if (!supported.includes(motherboard.specs.form_factor)) {
+        add("error", ["motherboard", "case"], "formFactor", { formFactor: motherboard.specs.form_factor });
+      }
+    } else {
+      add("unknown", ["motherboard", "case"], "formFactorUnknown");
+    }
+  }
+
+  // GPU ↔ case
+  if (gpu && pcCase) {
+    const length = gpu.specs.length_mm;
+    const max = pcCase.specs.max_gpu_length_mm;
+    if (known(length) && known(max)) {
+      if (length > max) add("error", ["gpu", "case"], "gpuLength", { length, max });
+    } else {
+      add("unknown", ["gpu", "case"], "gpuLengthUnknown");
+    }
+  }
+
+  // Cooler ↔ case
+  if (cooler && pcCase) {
+    const height = cooler.specs.height_mm;
+    const max = pcCase.specs.max_cooler_height_mm;
+    if (known(height) && known(max)) {
+      if (height > max) add("error", ["cooler", "case"], "coolerHeight", { height, max });
+    } else {
+      add("unknown", ["cooler", "case"], "coolerHeightUnknown");
+    }
+  }
+
+  // Power supply
+  if (psu && (cpu || gpu)) {
+    const watts = estimateWattage(build);
+    const psuWatts = psu.specs.wattage_w;
+    if (known(watts) && known(psuWatts)) {
+      if (psuWatts < watts) {
+        add("error", ["psu"], "psuTooWeak", { psu: psuWatts, draw: watts });
+      } else if (psuWatts < watts * 1.3) {
+        add("warning", ["psu"], "psuLowHeadroom", {
+          psu: psuWatts,
+          draw: watts,
+          recommended: Math.ceil((watts * 1.3) / 50) * 50,
+        });
+      }
+    } else {
+      add("unknown", ["psu"], "powerUnknown");
+    }
+  }
+
+  // Only warn when the data says so explicitly: null means "not known", not "no".
+  if (cpu && !cooler && cpu.specs.cooler_included === false) {
+    add("warning", ["cooler", "cpu"], "needsCooler");
+  }
+  if (cpu && !gpu && cpu.specs.igpu === false) {
+    add("warning", ["gpu", "cpu"], "needsGpu");
+  }
+
+  return issues;
+}
+
+// Errors that a candidate part would cause, given the rest of the build.
+export function issuesForCandidate(build, candidate) {
+  const next = { ...build, [candidate.category]: candidate };
+  return checkCompatibility(next).filter(
+    (issue) => issue.level === "error" && issue.parts.includes(candidate.category),
+  );
+}
+
+// Key for React lists
+export function issueKey(issue) {
+  return `${issue.code}:${issue.parts.join(",")}`;
+}
