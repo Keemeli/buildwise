@@ -2410,9 +2410,7 @@
         "cores": 8,
         "threads": 16,
         "tdp_w": 120,
-        "memory_types": [
-          "DDR5-SDRAM"
-        ],
+        "memory_types": "DDR5",
         "memory_speed_mhz": 3601,
         "integrated_graphics": true,
         "memory_channels": 2,
@@ -2465,9 +2463,7 @@
         "threads": 12,
         "tdp_w": 65,
         "boost_clock_mhz": 4400,
-        "memory_types": [
-          "DDR4-SDRAM"
-        ],
+        "memory_types": "DDR4",
         "memory_speed_mhz": 2667,
         "integrated_graphics": false,
         "memory_channels": 2,
@@ -2522,9 +2518,7 @@
         "threads": 16,
         "tdp_w": 105,
         "boost_clock_mhz": 4500,
-        "memory_types": [
-          "DDR4-SDRAM"
-        ],
+        "memory_types": "DDR4",
         "memory_speed_mhz": 2667,
         "integrated_graphics": false,
         "memory_channels": 2,
@@ -2579,9 +2573,7 @@
         "threads": 12,
         "tdp_w": 65,
         "boost_clock_mhz": 5400,
-        "memory_types": [
-          "DDR5-SDRAM"
-        ],
+        "memory_types": "DDR5",
         "memory_speed_mhz": 3601,
         "integrated_graphics": true,
         "memory_channels": 2,
@@ -2636,9 +2628,7 @@
         "threads": 16,
         "tdp_w": 120,
         "boost_clock_mhz": 5000,
-        "memory_types": [
-          "DDR5-SDRAM"
-        ],
+        "memory_types": "DDR5",
         "memory_speed_mhz": 3601,
         "integrated_graphics": true,
         "memory_channels": 2,
@@ -2771,9 +2761,7 @@
         "threads": 12,
         "tdp_w": 65,
         "boost_clock_mhz": 4500,
-        "memory_types": [
-          "DDR5-SDRAM"
-        ],
+        "memory_types": "DDR5",
         "memory_speed_mhz": 3601,
         "integrated_graphics": true,
         "memory_channels": 2,
@@ -2828,9 +2816,7 @@
         "threads": 12,
         "tdp_w": 65,
         "boost_clock_mhz": 5000,
-        "memory_types": [
-          "DDR5-SDRAM"
-        ],
+        "memory_types": "DDR5",
         "memory_speed_mhz": 3601,
         "integrated_graphics": false,
         "memory_channels": 2,
@@ -2885,9 +2871,7 @@
         "threads": 12,
         "tdp_w": 65,
         "boost_clock_mhz": 4600,
-        "memory_types": [
-          "DDR4-SDRAM"
-        ],
+        "memory_types": "DDR4",
         "memory_speed_mhz": 3200,
         "integrated_graphics": false,
         "base_clock_mhz": 3700
@@ -2936,9 +2920,7 @@
         "threads": 16,
         "tdp_w": 65,
         "boost_clock_mhz": 4600,
-        "memory_types": [
-          "DDR4-SDRAM"
-        ],
+        "memory_types": "DDR4",
         "memory_speed_mhz": 2667,
         "integrated_graphics": false,
         "memory_channels": 2,
@@ -2993,9 +2975,7 @@
         "threads": 16,
         "tdp_w": 65,
         "boost_clock_mhz": 5500,
-        "memory_types": [
-          "DDR5-SDRAM"
-        ],
+        "memory_types": "DDR5",
         "memory_speed_mhz": 3601,
         "integrated_graphics": true,
         "memory_channels": 2,
@@ -3049,8 +3029,8 @@
         "threads": 20,
         "boost_clock_mhz": 5300,
         "memory_types": [
-          "DDR4-SDRAM",
-          "DDR5-SDRAM"
+          "DDR4",
+          "DDR5"
         ],
         "integrated_graphics": true,
         "memory_channels": 2,
@@ -3150,8 +3130,8 @@
         "threads": 16,
         "boost_clock_mhz": 4700,
         "memory_types": [
-          "DDR4-SDRAM",
-          "DDR5-SDRAM"
+          "DDR4",
+          "DDR5"
         ],
         "integrated_graphics": false,
         "memory_channels": 2,
@@ -3207,9 +3187,7 @@
         "threads": 16,
         "tdp_w": 120,
         "boost_clock_mhz": 5600,
-        "memory_types": [
-          "DDR5-SDRAM"
-        ],
+        "memory_types": "DDR5",
         "memory_speed_mhz": 3601,
         "integrated_graphics": true,
         "memory_channels": 2,
@@ -3264,9 +3242,7 @@
         "threads": 16,
         "tdp_w": 120,
         "boost_clock_mhz": 5200,
-        "memory_types": [
-          "DDR5-SDRAM"
-        ],
+        "memory_types": "DDR5",
         "memory_speed_mhz": 3601,
         "integrated_graphics": true,
         "memory_channels": 2,
@@ -3321,9 +3297,7 @@
         "threads": 12,
         "tdp_w": 65,
         "boost_clock_mhz": 4200,
-        "memory_types": [
-          "DDR4-SDRAM"
-        ],
+        "memory_types": "DDR4",
         "memory_speed_mhz": 2667,
         "integrated_graphics": false,
         "memory_channels": 2,
@@ -3426,8 +3400,8 @@
         "threads": 28,
         "boost_clock_mhz": 5600,
         "memory_types": [
-          "DDR4-SDRAM",
-          "DDR5-SDRAM"
+          "DDR4",
+          "DDR5"
         ],
         "integrated_graphics": true,
         "memory_channels": 2,
@@ -3481,9 +3455,7 @@
         "threads": 32,
         "tdp_w": 170,
         "boost_clock_mhz": 5700,
-        "memory_types": [
-          "DDR5-SDRAM"
-        ],
+        "memory_types": "DDR5",
         "memory_speed_mhz": 3601,
         "integrated_graphics": true,
         "memory_channels": 2,
@@ -3538,9 +3510,7 @@
         "threads": 16,
         "tdp_w": 65,
         "boost_clock_mhz": 4600,
-        "memory_types": [
-          "DDR4-SDRAM"
-        ],
+        "memory_types": "DDR4",
         "memory_speed_mhz": 3200,
         "integrated_graphics": true,
         "memory_channels": 2,
@@ -3593,9 +3563,7 @@
         "threads": 16,
         "tdp_w": 105,
         "boost_clock_mhz": 4700,
-        "memory_types": [
-          "DDR4-SDRAM"
-        ],
+        "memory_types": "DDR4",
         "memory_speed_mhz": 3200,
         "integrated_graphics": false,
         "base_clock_mhz": 3800
@@ -3640,8 +3608,8 @@
         "threads": 8,
         "boost_clock_mhz": 4700,
         "memory_types": [
-          "DDR4-SDRAM",
-          "DDR5-SDRAM"
+          "DDR4",
+          "DDR5"
         ],
         "integrated_graphics": true,
         "memory_channels": 2,
@@ -3696,8 +3664,8 @@
         "threads": 12,
         "boost_clock_mhz": 4400,
         "memory_types": [
-          "DDR4-SDRAM",
-          "DDR5-SDRAM"
+          "DDR4",
+          "DDR5"
         ],
         "integrated_graphics": false,
         "memory_channels": 2,
@@ -3750,8 +3718,8 @@
         "threads": 16,
         "boost_clock_mhz": 4900,
         "memory_types": [
-          "DDR4-SDRAM",
-          "DDR5-SDRAM"
+          "DDR4",
+          "DDR5"
         ],
         "integrated_graphics": false,
         "memory_channels": 2,
@@ -3805,9 +3773,7 @@
         "threads": 32,
         "tdp_w": 105,
         "boost_clock_mhz": 4900,
-        "memory_types": [
-          "DDR4-SDRAM"
-        ],
+        "memory_types": "DDR4",
         "memory_speed_mhz": 3200,
         "integrated_graphics": false,
         "base_clock_mhz": 3400
@@ -3856,9 +3822,7 @@
         "threads": 24,
         "tdp_w": 120,
         "boost_clock_mhz": 5600,
-        "memory_types": [
-          "DDR5-SDRAM"
-        ],
+        "memory_types": "DDR5",
         "memory_speed_mhz": 3601,
         "integrated_graphics": true,
         "memory_channels": 2,
@@ -3911,9 +3875,7 @@
         "threads": 12,
         "tdp_w": 65,
         "boost_clock_mhz": 4600,
-        "memory_types": [
-          "DDR4-SDRAM"
-        ],
+        "memory_types": "DDR4",
         "memory_speed_mhz": 2667,
         "integrated_graphics": true,
         "memory_channels": 2,
@@ -3968,9 +3930,7 @@
         "threads": 12,
         "tdp_w": 65,
         "boost_clock_mhz": 5000,
-        "memory_types": [
-          "DDR5-SDRAM"
-        ],
+        "memory_types": "DDR5",
         "memory_speed_mhz": 3601,
         "integrated_graphics": true,
         "memory_channels": 2,
@@ -4023,9 +3983,7 @@
         "cores": 18,
         "threads": 18,
         "boost_clock_mhz": 5300,
-        "memory_types": [
-          "DDR5-SDRAM"
-        ],
+        "memory_types": "DDR5",
         "integrated_graphics": true,
         "memory_channels": 2,
         "pcie_version": "4.0, 5.0",
@@ -4078,9 +4036,7 @@
         "threads": 32,
         "tdp_w": 120,
         "boost_clock_mhz": 5700,
-        "memory_types": [
-          "DDR5-SDRAM"
-        ],
+        "memory_types": "DDR5",
         "memory_speed_mhz": 3601,
         "integrated_graphics": true,
         "memory_channels": 2,
@@ -4135,9 +4091,7 @@
         "threads": 32,
         "tdp_w": 200,
         "boost_clock_mhz": 5600,
-        "memory_types": [
-          "DDR5-SDRAM"
-        ],
+        "memory_types": "DDR5",
         "memory_speed_mhz": 5600,
         "integrated_graphics": true,
         "memory_channels": 2,
@@ -4191,8 +4145,8 @@
         "threads": 8,
         "boost_clock_mhz": 4300,
         "memory_types": [
-          "DDR4-SDRAM",
-          "DDR5-SDRAM"
+          "DDR4",
+          "DDR5"
         ],
         "integrated_graphics": true,
         "memory_channels": 2,
@@ -4246,9 +4200,7 @@
         "threads": 12,
         "tdp_w": 65,
         "boost_clock_mhz": 5100,
-        "memory_types": [
-          "DDR5-SDRAM"
-        ],
+        "memory_types": "DDR5",
         "memory_speed_mhz": 3601,
         "integrated_graphics": true,
         "memory_channels": 2,
@@ -4354,9 +4306,7 @@
         "threads": 12,
         "tdp_w": 65,
         "boost_clock_mhz": 4400,
-        "memory_types": [
-          "DDR4-SDRAM"
-        ],
+        "memory_types": "DDR4",
         "integrated_graphics": false,
         "memory_channels": 2,
         "pcie_version": "4.0",
@@ -4408,8 +4358,8 @@
         "threads": 20,
         "boost_clock_mhz": 5300,
         "memory_types": [
-          "DDR4-SDRAM",
-          "DDR5-SDRAM"
+          "DDR4",
+          "DDR5"
         ],
         "integrated_graphics": false,
         "memory_channels": 2,
@@ -4463,9 +4413,7 @@
         "threads": 12,
         "tdp_w": 65,
         "boost_clock_mhz": 4400,
-        "memory_types": [
-          "DDR4-SDRAM"
-        ],
+        "memory_types": "DDR4",
         "memory_speed_mhz": 3200,
         "integrated_graphics": true,
         "memory_channels": 2,
@@ -4519,8 +4467,8 @@
         "threads": 16,
         "boost_clock_mhz": 4700,
         "memory_types": [
-          "DDR4-SDRAM",
-          "DDR5-SDRAM"
+          "DDR4",
+          "DDR5"
         ],
         "integrated_graphics": true,
         "memory_channels": 2,
@@ -4575,8 +4523,8 @@
         "threads": 28,
         "boost_clock_mhz": 5600,
         "memory_types": [
-          "DDR4-SDRAM",
-          "DDR5-SDRAM"
+          "DDR4",
+          "DDR5"
         ],
         "integrated_graphics": false,
         "memory_channels": 2,
@@ -4630,9 +4578,7 @@
         "threads": 32,
         "tdp_w": 170,
         "boost_clock_mhz": 5700,
-        "memory_types": [
-          "DDR5-SDRAM"
-        ],
+        "memory_types": "DDR5",
         "memory_speed_mhz": 3601,
         "integrated_graphics": true,
         "memory_channels": 2,
@@ -4685,9 +4631,7 @@
         "threads": 16,
         "tdp_w": 65,
         "boost_clock_mhz": 5300,
-        "memory_types": [
-          "DDR5-SDRAM"
-        ],
+        "memory_types": "DDR5",
         "memory_speed_mhz": 3601,
         "integrated_graphics": true,
         "memory_channels": 2,
@@ -4739,8 +4683,8 @@
         "threads": 32,
         "boost_clock_mhz": 6000,
         "memory_types": [
-          "DDR4-SDRAM",
-          "DDR5-SDRAM"
+          "DDR4",
+          "DDR5"
         ],
         "integrated_graphics": false,
         "memory_channels": 2,
@@ -4794,9 +4738,7 @@
         "threads": 24,
         "tdp_w": 120,
         "boost_clock_mhz": 5500,
-        "memory_types": [
-          "DDR5-SDRAM"
-        ],
+        "memory_types": "DDR5",
         "memory_speed_mhz": 3601,
         "integrated_graphics": true,
         "memory_channels": 2,
@@ -4849,9 +4791,7 @@
         "cores": 10,
         "threads": 10,
         "boost_clock_mhz": 4900,
-        "memory_types": [
-          "DDR5-SDRAM"
-        ],
+        "memory_types": "DDR5",
         "memory_speed_mhz": 6400,
         "integrated_graphics": true,
         "memory_channels": 2,
@@ -4905,9 +4845,7 @@
         "threads": 32,
         "tdp_w": 350,
         "boost_clock_mhz": 5400,
-        "memory_types": [
-          "DDR5-SDRAM"
-        ],
+        "memory_types": "DDR5",
         "integrated_graphics": false,
         "pcie_version": "5.0",
         "cooler_included": false,
@@ -8476,7 +8414,7 @@
         "chipset_raw": "B550M",
         "socket": "AM4",
         "form_factor": "mikro ATX",
-        "memory_type": "DDR4-SDRAM",
+        "memory_type": "DDR4",
         "memory_type_source": "inferred_from_chipset",
         "wifi": true,
         "width_mm": 244.0,
@@ -8520,7 +8458,7 @@
         "chipset_raw": "B760",
         "socket": "LGA1700",
         "form_factor": "ATX",
-        "memory_type": "DDR4-SDRAM",
+        "memory_type": "DDR4",
         "memory_type_source": null,
         "wifi": null,
         "width_mm": 305.0,
@@ -8564,7 +8502,7 @@
         "chipset_raw": "B760",
         "socket": "LGA1700",
         "form_factor": "ATX",
-        "memory_type": "DDR4-SDRAM",
+        "memory_type": "DDR4",
         "memory_type_source": "parsed_from_name",
         "wifi": null,
         "width_mm": 305.0,
@@ -8608,7 +8546,7 @@
         "chipset_raw": "B650",
         "socket": "AM5",
         "form_factor": "ATX",
-        "memory_type": "DDR5-SDRAM",
+        "memory_type": "DDR5",
         "memory_type_source": "inferred_from_chipset",
         "wifi": null,
         "width_mm": 305.0,
@@ -8650,7 +8588,7 @@
         "chipset_raw": "B550",
         "socket": "AM4",
         "form_factor": "ATX",
-        "memory_type": "DDR4-SDRAM",
+        "memory_type": "DDR4",
         "memory_type_source": "inferred_from_chipset",
         "wifi": null,
         "width_mm": 305.0,
@@ -8694,7 +8632,7 @@
         "chipset_raw": "B550M",
         "socket": "AM4",
         "form_factor": "mikro ATX",
-        "memory_type": "DDR4-SDRAM",
+        "memory_type": "DDR4",
         "memory_type_source": "inferred_from_chipset",
         "wifi": null,
         "width_mm": 244.0,
@@ -8738,7 +8676,7 @@
         "chipset_raw": "B650",
         "socket": "AM5",
         "form_factor": "ATX",
-        "memory_type": "DDR5-SDRAM",
+        "memory_type": "DDR5",
         "memory_type_source": "inferred_from_chipset",
         "wifi": null,
         "width_mm": 305.0,
@@ -8782,7 +8720,7 @@
         "chipset_raw": "B850",
         "socket": "AM5",
         "form_factor": "ATX",
-        "memory_type": "DDR5-SDRAM",
+        "memory_type": "DDR5",
         "memory_type_source": "inferred_from_chipset",
         "wifi": true,
         "width_mm": 305.0,
@@ -8826,7 +8764,7 @@
         "chipset_raw": "X870",
         "socket": "AM5",
         "form_factor": "ATX",
-        "memory_type": "DDR5-SDRAM",
+        "memory_type": "DDR5",
         "memory_type_source": "inferred_from_chipset",
         "wifi": true,
         "width_mm": 305.0,
@@ -8870,7 +8808,7 @@
         "chipset_raw": "A520M",
         "socket": "AM4",
         "form_factor": "mikro ATX",
-        "memory_type": "DDR4-SDRAM",
+        "memory_type": "DDR4",
         "memory_type_source": "inferred_from_chipset",
         "wifi": null,
         "width_mm": 230.0,
@@ -8912,7 +8850,7 @@
         "chipset_raw": "B550M",
         "socket": "AM4",
         "form_factor": "mikro ATX",
-        "memory_type": "DDR4-SDRAM",
+        "memory_type": "DDR4",
         "memory_type_source": "inferred_from_chipset",
         "wifi": null,
         "width_mm": 244.0,
@@ -8956,7 +8894,7 @@
         "chipset_raw": "B650",
         "socket": "AM5",
         "form_factor": "ATX",
-        "memory_type": "DDR5-SDRAM",
+        "memory_type": "DDR5",
         "memory_type_source": "inferred_from_chipset",
         "wifi": null,
         "width_mm": 305.0,
@@ -9000,7 +8938,7 @@
         "chipset_raw": "B550M",
         "socket": "AM4",
         "form_factor": "mikro ATX",
-        "memory_type": "DDR4-SDRAM",
+        "memory_type": "DDR4",
         "memory_type_source": "inferred_from_chipset",
         "wifi": null,
         "width_mm": 230.0,
@@ -9042,7 +8980,7 @@
         "chipset_raw": "B550",
         "socket": "AM4",
         "form_factor": "ATX",
-        "memory_type": "DDR4-SDRAM",
+        "memory_type": "DDR4",
         "memory_type_source": "inferred_from_chipset",
         "wifi": null,
         "width_mm": 305.0,
@@ -9086,7 +9024,7 @@
         "chipset_raw": "B550M",
         "socket": "AM4",
         "form_factor": "mikro ATX",
-        "memory_type": "DDR4-SDRAM",
+        "memory_type": "DDR4",
         "memory_type_source": "inferred_from_chipset",
         "wifi": true,
         "width_mm": 244.0,
@@ -9130,7 +9068,7 @@
         "chipset_raw": "B850",
         "socket": "AM5",
         "form_factor": "ATX",
-        "memory_type": "DDR5-SDRAM",
+        "memory_type": "DDR5",
         "memory_type_source": "inferred_from_chipset",
         "wifi": true,
         "width_mm": 305.0,
@@ -9174,7 +9112,7 @@
         "chipset_raw": "B550M",
         "socket": "AM4",
         "form_factor": "mikro ATX",
-        "memory_type": "DDR4-SDRAM",
+        "memory_type": "DDR4",
         "memory_type_source": "inferred_from_chipset",
         "wifi": null,
         "width_mm": 244.0,
@@ -9218,7 +9156,7 @@
         "chipset_raw": "B550M",
         "socket": "AM4",
         "form_factor": "mikro ATX",
-        "memory_type": "DDR4-SDRAM",
+        "memory_type": "DDR4",
         "memory_type_source": "inferred_from_chipset",
         "wifi": null,
         "width_mm": 244.0,
@@ -9262,7 +9200,7 @@
         "chipset_raw": "B850M",
         "socket": "AM5",
         "form_factor": "mikro ATX",
-        "memory_type": "DDR5-SDRAM",
+        "memory_type": "DDR5",
         "memory_type_source": "inferred_from_chipset",
         "wifi": true,
         "width_mm": 244.0,
@@ -9306,7 +9244,7 @@
         "chipset_raw": "B760M",
         "socket": "LGA1700",
         "form_factor": "mikro ATX",
-        "memory_type": "DDR4-SDRAM",
+        "memory_type": "DDR4",
         "memory_type_source": "parsed_from_name",
         "wifi": null,
         "width_mm": 244.0,
@@ -9350,7 +9288,7 @@
         "chipset_raw": "B650",
         "socket": "AM5",
         "form_factor": "ATX",
-        "memory_type": "DDR5-SDRAM",
+        "memory_type": "DDR5",
         "memory_type_source": "inferred_from_chipset",
         "wifi": null,
         "width_mm": 305.0,
@@ -9394,7 +9332,7 @@
         "chipset_raw": "B550M",
         "socket": "AM4",
         "form_factor": "mikro ATX",
-        "memory_type": "DDR4-SDRAM",
+        "memory_type": "DDR4",
         "memory_type_source": "inferred_from_chipset",
         "wifi": true,
         "width_mm": 244.0,
@@ -9438,7 +9376,7 @@
         "chipset_raw": "B850I",
         "socket": "AM5",
         "form_factor": "Mini ITX",
-        "memory_type": "DDR5-SDRAM",
+        "memory_type": "DDR5",
         "memory_type_source": "inferred_from_chipset",
         "wifi": true,
         "width_mm": 170.0,
@@ -9482,7 +9420,7 @@
         "chipset_raw": "A520M",
         "socket": "AM4",
         "form_factor": "mikro ATX",
-        "memory_type": "DDR4-SDRAM",
+        "memory_type": "DDR4",
         "memory_type_source": "inferred_from_chipset",
         "wifi": null,
         "width_mm": 233.0,
@@ -9526,7 +9464,7 @@
         "chipset_raw": "B850M",
         "socket": "AM5",
         "form_factor": "mikro ATX",
-        "memory_type": "DDR5-SDRAM",
+        "memory_type": "DDR5",
         "memory_type_source": "inferred_from_chipset",
         "wifi": true,
         "width_mm": 244.0,
@@ -9570,7 +9508,7 @@
         "chipset_raw": "A520I",
         "socket": "AM4",
         "form_factor": "Mini ITX",
-        "memory_type": "DDR4-SDRAM",
+        "memory_type": "DDR4",
         "memory_type_source": "inferred_from_chipset",
         "wifi": null,
         "width_mm": 170.0,
@@ -9614,7 +9552,7 @@
         "chipset_raw": "A520M",
         "socket": "AM4",
         "form_factor": "mikro ATX",
-        "memory_type": "DDR4-SDRAM",
+        "memory_type": "DDR4",
         "memory_type_source": "inferred_from_chipset",
         "wifi": true,
         "width_mm": 244.0,
@@ -9658,7 +9596,7 @@
         "chipset_raw": "B650M",
         "socket": "AM5",
         "form_factor": "mikro ATX",
-        "memory_type": "DDR5-SDRAM",
+        "memory_type": "DDR5",
         "memory_type_source": "inferred_from_chipset",
         "wifi": true,
         "width_mm": 240.0,
@@ -9702,7 +9640,7 @@
         "chipset_raw": "B850",
         "socket": "AM5",
         "form_factor": "ATX",
-        "memory_type": "DDR5-SDRAM",
+        "memory_type": "DDR5",
         "memory_type_source": "inferred_from_chipset",
         "wifi": true,
         "width_mm": 243.8,
@@ -9746,7 +9684,7 @@
         "chipset_raw": "B850",
         "socket": "AM5",
         "form_factor": "ATX",
-        "memory_type": "DDR5-SDRAM",
+        "memory_type": "DDR5",
         "memory_type_source": "inferred_from_chipset",
         "wifi": true,
         "width_mm": 305.0,
@@ -9790,7 +9728,7 @@
         "chipset_raw": "B850",
         "socket": "AM5",
         "form_factor": "ATX",
-        "memory_type": "DDR5-SDRAM",
+        "memory_type": "DDR5",
         "memory_type_source": "inferred_from_chipset",
         "wifi": true,
         "width_mm": 243.8,
@@ -9834,7 +9772,7 @@
         "chipset_raw": "B650I",
         "socket": "AM5",
         "form_factor": "Mini ITX",
-        "memory_type": "DDR5-SDRAM",
+        "memory_type": "DDR5",
         "memory_type_source": "inferred_from_chipset",
         "wifi": null,
         "width_mm": 170.0,
@@ -9878,7 +9816,7 @@
         "chipset_raw": "B850I",
         "socket": "AM5",
         "form_factor": "Mini ITX",
-        "memory_type": "DDR5-SDRAM",
+        "memory_type": "DDR5",
         "memory_type_source": "inferred_from_chipset",
         "wifi": null,
         "width_mm": 170.0,
@@ -9922,7 +9860,7 @@
         "chipset_raw": "B550M",
         "socket": "AM4",
         "form_factor": "Mini ITX",
-        "memory_type": "DDR4-SDRAM",
+        "memory_type": "DDR4",
         "memory_type_source": "inferred_from_chipset",
         "wifi": null,
         "width_mm": 170.0,
@@ -9964,7 +9902,7 @@
         "chipset_raw": "B760M",
         "socket": "LGA1700",
         "form_factor": "mikro ATX",
-        "memory_type": "DDR4-SDRAM",
+        "memory_type": "DDR4",
         "memory_type_source": "parsed_from_name",
         "wifi": true,
         "width_mm": 244.0,
@@ -10008,7 +9946,7 @@
         "chipset_raw": "B650M",
         "socket": "AM5",
         "form_factor": "mikro ATX",
-        "memory_type": "DDR5-SDRAM",
+        "memory_type": "DDR5",
         "memory_type_source": "inferred_from_chipset",
         "wifi": null,
         "width_mm": 244.0,
@@ -10050,7 +9988,7 @@
         "chipset_raw": "X870",
         "socket": "AM5",
         "form_factor": "ATX",
-        "memory_type": "DDR5-SDRAM",
+        "memory_type": "DDR5",
         "memory_type_source": "inferred_from_chipset",
         "wifi": null,
         "width_mm": 305.0,
@@ -10094,7 +10032,7 @@
         "chipset_raw": "B650M",
         "socket": "AM5",
         "form_factor": "mikro ATX",
-        "memory_type": "DDR5-SDRAM",
+        "memory_type": "DDR5",
         "memory_type_source": "inferred_from_chipset",
         "wifi": null,
         "width_mm": 244.0,
@@ -10138,7 +10076,7 @@
         "chipset_raw": "X870E",
         "socket": "AM5",
         "form_factor": "ATX",
-        "memory_type": "DDR5-SDRAM",
+        "memory_type": "DDR5",
         "memory_type_source": "inferred_from_chipset",
         "wifi": null,
         "width_mm": 305.0,
@@ -10182,7 +10120,7 @@
         "chipset_raw": "X870",
         "socket": "AM5",
         "form_factor": "ATX",
-        "memory_type": "DDR5-SDRAM",
+        "memory_type": "DDR5",
         "memory_type_source": "inferred_from_chipset",
         "wifi": true,
         "width_mm": 305.0,
@@ -10226,7 +10164,7 @@
         "chipset_raw": "B850",
         "socket": "AM5",
         "form_factor": "ATX",
-        "memory_type": "DDR5-SDRAM",
+        "memory_type": "DDR5",
         "memory_type_source": "inferred_from_chipset",
         "wifi": true,
         "width_mm": 305.0,
@@ -10270,7 +10208,7 @@
         "chipset_raw": "B650M",
         "socket": "AM5",
         "form_factor": "mikro ATX",
-        "memory_type": "DDR5-SDRAM",
+        "memory_type": "DDR5",
         "memory_type_source": "inferred_from_chipset",
         "wifi": null,
         "width_mm": 244.0,
@@ -10314,7 +10252,7 @@
         "chipset_raw": "X870E",
         "socket": "AM5",
         "form_factor": "ATX",
-        "memory_type": "DDR5-SDRAM",
+        "memory_type": "DDR5",
         "memory_type_source": "inferred_from_chipset",
         "wifi": null,
         "width_mm": 305.0,
@@ -10358,7 +10296,7 @@
         "chipset_raw": "X870",
         "socket": "AM5",
         "form_factor": "ATX",
-        "memory_type": "DDR5-SDRAM",
+        "memory_type": "DDR5",
         "memory_type_source": "inferred_from_chipset",
         "wifi": true,
         "width_mm": 305.0,
@@ -10402,7 +10340,7 @@
         "chipset_raw": "B850M",
         "socket": "AM5",
         "form_factor": "mikro ATX",
-        "memory_type": "DDR5-SDRAM",
+        "memory_type": "DDR5",
         "memory_type_source": "inferred_from_chipset",
         "wifi": true,
         "width_mm": 244.0,
@@ -10446,7 +10384,7 @@
         "chipset_raw": "B650M",
         "socket": "AM5",
         "form_factor": "mikro ATX",
-        "memory_type": "DDR5-SDRAM",
+        "memory_type": "DDR5",
         "memory_type_source": "inferred_from_chipset",
         "wifi": null,
         "width_mm": 244.0,
@@ -10488,7 +10426,7 @@
         "chipset_raw": "B850",
         "socket": "AM5",
         "form_factor": "ATX",
-        "memory_type": "DDR5-SDRAM",
+        "memory_type": "DDR5",
         "memory_type_source": "inferred_from_chipset",
         "wifi": true,
         "width_mm": 305.0,
@@ -10532,7 +10470,7 @@
         "chipset_raw": "B550M",
         "socket": "AM4",
         "form_factor": "mikro ATX",
-        "memory_type": "DDR4-SDRAM",
+        "memory_type": "DDR4",
         "memory_type_source": "inferred_from_chipset",
         "wifi": true,
         "width_mm": 244.0,
@@ -12652,7 +12590,7 @@
       "specs": {
         "capacity_gb": 1044,
         "interface": "PCI Express 4.0",
-        "form_factor": "2280 (22 x 80 mm)",
+        "form_factor": "M.2 2280",
         "pcie_gen": "4.0",
         "kind": "nvme",
         "read_mb_s": 7250,
@@ -12687,7 +12625,7 @@
       "specs": {
         "capacity_gb": 2048,
         "interface": "PCI Express 4.0",
-        "form_factor": "2280 (22 x 80 mm)",
+        "form_factor": "M.2 2280",
         "pcie_gen": "4.0",
         "kind": "nvme",
         "read_mb_s": 6000,
@@ -12721,7 +12659,7 @@
       "raw_name": "Seagate IronWolf ST4000VN006 sisäinen kiintolevy 3.5\" 4000 GB Serial ATA III",
       "specs": {
         "capacity_gb": 4000,
-        "interface": "Serial ATA III",
+        "interface": "SATA III",
         "form_factor": "3.5\"",
         "pcie_gen": null,
         "kind": "hdd"
@@ -12751,7 +12689,7 @@
       "raw_name": "PNY CS900 2.5\" 1000 GB Serial ATA III 3D TLC",
       "specs": {
         "capacity_gb": 1000,
-        "interface": "Serial ATA III",
+        "interface": "SATA III",
         "form_factor": "2.5\"",
         "pcie_gen": null,
         "kind": "sata-ssd",
@@ -12856,7 +12794,7 @@
       "specs": {
         "capacity_gb": 2000,
         "interface": "PCI Express 4.0",
-        "form_factor": "2280 (22 x 80 mm)",
+        "form_factor": "M.2 2280",
         "pcie_gen": "4.0",
         "kind": "nvme",
         "read_mb_s": 5000,
@@ -12891,7 +12829,7 @@
       "specs": {
         "capacity_gb": 500,
         "interface": "PCI Express 4.0",
-        "form_factor": "2280 (22 x 80 mm)",
+        "form_factor": "M.2 2280",
         "pcie_gen": "4.0",
         "kind": "nvme",
         "read_mb_s": 6000,
@@ -12959,7 +12897,7 @@
       "raw_name": "Intenso Top 2.5\" 128 GB Serial ATA III",
       "specs": {
         "capacity_gb": 128,
-        "interface": "Serial ATA III",
+        "interface": "SATA III",
         "form_factor": "2.5\"",
         "pcie_gen": null,
         "kind": "sata-ssd",
@@ -12993,7 +12931,7 @@
       "raw_name": "Western Digital Red Plus WD40EFPX sisäinen kiintolevy 3.5\" 4000 GB Serial ATA III",
       "specs": {
         "capacity_gb": 4000,
-        "interface": "Serial ATA III",
+        "interface": "SATA III",
         "form_factor": "3.5\"",
         "pcie_gen": null,
         "kind": "hdd"
@@ -13159,7 +13097,7 @@
       "raw_name": "Seagate IronWolf ST8000VN004 sisäinen kiintolevy 3.5\" 8000 GB Serial ATA III",
       "specs": {
         "capacity_gb": 8000,
-        "interface": "Serial ATA III",
+        "interface": "SATA III",
         "form_factor": "3.5\"",
         "pcie_gen": null,
         "kind": "hdd"
@@ -13189,7 +13127,7 @@
       "raw_name": "Seagate Barracuda ST4000DM004 sisäinen kiintolevy 3.5\" 4000 GB Serial ATA III",
       "specs": {
         "capacity_gb": 4000,
-        "interface": "Serial ATA III",
+        "interface": "SATA III",
         "form_factor": "3.5\"",
         "pcie_gen": null,
         "kind": "hdd"
@@ -13219,7 +13157,7 @@
       "raw_name": "Western Digital Red Plus WD60EFPX sisäinen kiintolevy 3.5\" 6000 GB Serial ATA III",
       "specs": {
         "capacity_gb": 6000,
-        "interface": "Serial ATA III",
+        "interface": "SATA III",
         "form_factor": "3.5\"",
         "pcie_gen": null,
         "kind": "hdd"
@@ -13280,7 +13218,7 @@
       "specs": {
         "capacity_gb": 2048,
         "interface": "PCI Express 5.0",
-        "form_factor": "2280 (22 x 80 mm)",
+        "form_factor": "M.2 2280",
         "pcie_gen": "5.0",
         "kind": "nvme",
         "read_mb_s": 10000,
@@ -13314,7 +13252,7 @@
       "raw_name": "Seagate Barracuda ST2000DM008 sisäinen kiintolevy 3.5\" 2000 GB Serial ATA III",
       "specs": {
         "capacity_gb": 2000,
-        "interface": "Serial ATA III",
+        "interface": "SATA III",
         "form_factor": "3.5\"",
         "pcie_gen": null,
         "kind": "hdd"
@@ -13344,7 +13282,7 @@
       "raw_name": "Intenso 3812440 SSD-massamuisti 2.5\" 256 GB Serial ATA III",
       "specs": {
         "capacity_gb": 256,
-        "interface": "Serial ATA III",
+        "interface": "SATA III",
         "form_factor": "2.5\"",
         "pcie_gen": null,
         "kind": "sata-ssd",
@@ -13378,7 +13316,7 @@
       "raw_name": "Intenso Top M.2 1000 GB Serial ATA III 3D NAND",
       "specs": {
         "capacity_gb": 1000,
-        "interface": "Serial ATA III",
+        "interface": "SATA III",
         "form_factor": "M.2",
         "pcie_gen": null,
         "kind": "sata-ssd",
@@ -13449,7 +13387,7 @@
       "specs": {
         "capacity_gb": 2048,
         "interface": "PCI Express 4.0",
-        "form_factor": "2280 (22 x 80 mm)",
+        "form_factor": "M.2 2280",
         "pcie_gen": null,
         "kind": "nvme",
         "read_mb_s": 7250,
@@ -13486,7 +13424,7 @@
       "specs": {
         "capacity_gb": 1024,
         "interface": "PCI Express 4.0",
-        "form_factor": "2280 (22 x 80 mm)",
+        "form_factor": "M.2 2280",
         "pcie_gen": "4.0",
         "kind": "nvme",
         "read_mb_s": 6000,
@@ -13520,7 +13458,7 @@
       "raw_name": "Intenso High Performance 2.5\" 120 GB Serial ATA III TLC",
       "specs": {
         "capacity_gb": 120,
-        "interface": "Serial ATA III",
+        "interface": "SATA III",
         "form_factor": "2.5\"",
         "pcie_gen": null,
         "kind": "sata-ssd",
@@ -13555,7 +13493,7 @@
       "specs": {
         "capacity_gb": 4096,
         "interface": "PCI Express 4.0",
-        "form_factor": "2280 (22 x 80 mm)",
+        "form_factor": "M.2 2280",
         "pcie_gen": "4.0",
         "kind": "nvme",
         "read_mb_s": 7000,
@@ -13653,7 +13591,7 @@
       "raw_name": "PNY CS900 2.5\" 500 GB Serial ATA III 3D TLC",
       "specs": {
         "capacity_gb": 500,
-        "interface": "Serial ATA III",
+        "interface": "SATA III",
         "form_factor": "2.5\"",
         "pcie_gen": null,
         "kind": "sata-ssd",
@@ -13720,7 +13658,7 @@
       "specs": {
         "capacity_gb": 2048,
         "interface": "PCI Express 4.0",
-        "form_factor": "2280 (22 x 80 mm)",
+        "form_factor": "M.2 2280",
         "pcie_gen": "4.0",
         "kind": "nvme",
         "read_mb_s": 7100,
@@ -13754,7 +13692,7 @@
       "raw_name": "Intenso Top M.2 128 GB Serial ATA III",
       "specs": {
         "capacity_gb": 128,
-        "interface": "Serial ATA III",
+        "interface": "SATA III",
         "form_factor": "M.2",
         "pcie_gen": null,
         "kind": "sata-ssd",
@@ -13788,7 +13726,7 @@
       "raw_name": "Seagate Barracuda ST8000DM004 sisäinen kiintolevy 3.5\" 8000 GB Serial ATA III",
       "specs": {
         "capacity_gb": 8000,
-        "interface": "Serial ATA III",
+        "interface": "SATA III",
         "form_factor": "3.5\"",
         "pcie_gen": null,
         "kind": "hdd"
@@ -13818,7 +13756,7 @@
       "raw_name": "PNY CS900 2.5\" 250 GB Serial ATA III 3D TLC",
       "specs": {
         "capacity_gb": 250,
-        "interface": "Serial ATA III",
+        "interface": "SATA III",
         "form_factor": "2.5\"",
         "pcie_gen": null,
         "kind": "sata-ssd",
@@ -13854,7 +13792,7 @@
       "raw_name": "Crucial BX500 2.5\" 240 GB Serial ATA III",
       "specs": {
         "capacity_gb": 240,
-        "interface": "Serial ATA III",
+        "interface": "SATA III",
         "form_factor": "2.5\"",
         "pcie_gen": null,
         "kind": "sata-ssd",
@@ -13926,7 +13864,7 @@
       "specs": {
         "capacity_gb": 4096,
         "interface": "PCI Express 4.0",
-        "form_factor": "2280 (22 x 80 mm)",
+        "form_factor": "M.2 2280",
         "pcie_gen": "4.0",
         "kind": "nvme",
         "read_mb_s": 6900,
@@ -13960,7 +13898,7 @@
       "raw_name": "Intenso Top Performance M.2 512 GB Serial ATA III",
       "specs": {
         "capacity_gb": 512,
-        "interface": "Serial ATA III",
+        "interface": "SATA III",
         "form_factor": "M.2",
         "pcie_gen": null,
         "kind": "sata-ssd",
@@ -14030,7 +13968,7 @@
       "raw_name": "Verbatim Vi550 S3 2.5\" 512 GB Serial ATA III",
       "specs": {
         "capacity_gb": 512,
-        "interface": "Serial ATA III",
+        "interface": "SATA III",
         "form_factor": "2.5\"",
         "pcie_gen": null,
         "kind": "sata-ssd",
@@ -14066,7 +14004,7 @@
       "raw_name": "Kingston Technology KC600 2.5\" 512 GB Serial ATA III 3D TLC",
       "specs": {
         "capacity_gb": 512,
-        "interface": "Serial ATA III",
+        "interface": "SATA III",
         "form_factor": "2.5\"",
         "pcie_gen": null,
         "kind": "sata-ssd",
@@ -14101,7 +14039,7 @@
       "specs": {
         "capacity_gb": 1024,
         "interface": "PCI Express 4.0",
-        "form_factor": "2280 (22 x 80 mm)",
+        "form_factor": "M.2 2280",
         "pcie_gen": "4.0",
         "kind": "nvme",
         "read_mb_s": 7100,
@@ -14135,7 +14073,7 @@
       "raw_name": "ADATA Ultimate SU650 2.5\" 256 GB Serial ATA III 3D NAND",
       "specs": {
         "capacity_gb": 256,
-        "interface": "Serial ATA III",
+        "interface": "SATA III",
         "form_factor": "2.5\"",
         "pcie_gen": null,
         "kind": "sata-ssd",
@@ -14205,7 +14143,7 @@
       "raw_name": "Goodram CX400 gen.2 1 TB 2.5\" Serial ATA III 3D TLC NAND",
       "specs": {
         "capacity_gb": 1024,
-        "interface": "Serial ATA III",
+        "interface": "SATA III",
         "form_factor": "2.5\"",
         "pcie_gen": null,
         "kind": "sata-ssd",
@@ -14241,7 +14179,7 @@
       "raw_name": "Western Digital Blue SA510 2.5\" 1000 GB Serial ATA III",
       "specs": {
         "capacity_gb": 1000,
-        "interface": "Serial ATA III",
+        "interface": "SATA III",
         "form_factor": "2.5\"",
         "pcie_gen": null,
         "kind": "sata-ssd",
@@ -14278,7 +14216,7 @@
       "specs": {
         "capacity_gb": 2099,
         "interface": "PCI Express 4.0",
-        "form_factor": "2280 (22 x 80 mm)",
+        "form_factor": "M.2 2280",
         "pcie_gen": "4.0",
         "kind": "nvme",
         "read_mb_s": 5000,
@@ -14312,7 +14250,7 @@
       "raw_name": "Kingston Technology A400 2.5\" 480 GB Serial ATA III TLC",
       "specs": {
         "capacity_gb": 480,
-        "interface": "Serial ATA III",
+        "interface": "SATA III",
         "form_factor": "2.5\"",
         "pcie_gen": null,
         "kind": "sata-ssd",

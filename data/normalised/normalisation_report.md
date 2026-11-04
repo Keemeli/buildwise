@@ -36,6 +36,21 @@ Missing values are reported, not filled. A `null` spec means the shop's product 
 | case | 46 | `form_factor` | 33 | 72% |
 | case | 46 | `color` | 46 | 100% |
 
+## Facet vocabulary (values a UI filter would offer)
+
+- **gpu.gpu_vendor**: NVIDIA ×23, AMD ×21, Intel ×3
+- **gpu.memory_type**: GDDR6 ×27, GDDR7 ×20
+- **cpu.socket**: AM5 ×19, AM4 ×13, LGA1700 ×11, LGA1851 ×3, STR5 ×1
+- **motherboard.memory_type**: DDR5 ×28, DDR4 ×20
+- **motherboard.socket**: AM5 ×28, AM4 ×16, LGA1700 ×4
+- **motherboard.form_factor**: mikro ATX ×22, ATX ×21, Mini ITX ×5
+- **memory.memory_type**: DDR5 ×26, DDR4 ×21, DDR3 ×1
+- **memory.speed_mhz**: 3200 ×15, 6000 ×14, 3600 ×6, 5600 ×3, 6400 ×2, 4800 ×2
+- **storage.interface**: SATA III ×23, PCI Express 4.0 ×20, PCI Express 3.0 ×2, SATA ×2, PCI Express 5.0 ×2, PCI Express ×1
+- **storage.form_factor**: M.2 ×15, 2.5" ×14, M.2 2280 ×12, 3.5" ×9
+- **psu.efficiency**: 80 PLUS Gold ×21, 90% ×11, 92% ×3, 85% ×3, 80 PLUS ×2, 80 PLUS Bronze ×1
+- **case.tower_size**: Midi Tower ×28, Mini Tower ×9, Tower ×3, Micro Tower ×3, Kuutio ×1
+
 ## Values parsed from product pages (data sheet)
 
 - Components matched to a product page: **333**

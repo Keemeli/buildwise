@@ -44,6 +44,21 @@ export function estimateWattage(build) {
 
 const known = (v) => v !== null && v !== undefined;
 
+// "DDR4", "DDR4-SDRAM", "ddr5 sdram", ["DDR4-SDRAM", "DDR5-SDRAM"] -> ["DDR4"] / ["DDR5"] / ["DDR4","DDR5"].
+// Data sheets and product names describe the same memory generation in different
+// words, so comparing the raw strings reports a mismatch between compatible parts.
+const ddrGenerations = (value) => {
+  const parts = Array.isArray(value) ? value : [value];
+  const found = [];
+  for (const part of parts) {
+    for (const match of String(part ?? "").match(/G?DDR\d/gi) || []) {
+      const token = match.toUpperCase();
+      if (!found.includes(token)) found.push(token);
+    }
+  }
+  return found;
+};
+
 export function checkCompatibility(build) {
   const { cpu, cooler, motherboard, memory, gpu, psu } = build;
   const pcCase = build.case;
@@ -66,10 +81,17 @@ export function checkCompatibility(build) {
     add("error", ["memory"], "laptopMemory");
   }
   if (memory && motherboard) {
-    const a = memory.specs.memory_type;
-    const b = motherboard.specs.memory_type;
-    if (known(a) && known(b)) {
-      if (a !== b) add("error", ["memory", "motherboard"], "memoryMismatch", { memoryType: a, boardType: b });
+    const memoryTypes = ddrGenerations(memory.specs.memory_type);
+    const boardTypes = ddrGenerations(motherboard.specs.memory_type);
+    if (memoryTypes.length > 0 && boardTypes.length > 0) {
+      // Compare generations, not shop wording: one shop writes "DDR4", the next
+      // "DDR4-SDRAM", and a board can legitimately support two generations.
+      if (!memoryTypes.some((type) => boardTypes.includes(type))) {
+        add("error", ["memory", "motherboard"], "memoryMismatch", {
+          memoryType: memory.specs.memory_type,
+          boardType: motherboard.specs.memory_type,
+        });
+      }
     } else {
       add("unknown", ["memory", "motherboard"], "memoryUnknown");
     }

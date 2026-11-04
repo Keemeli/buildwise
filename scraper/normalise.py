@@ -50,6 +50,19 @@ EXPECTED_FIELDS = {
     "case": ("form_factor", "color"),
 }
 
+# Facet fields the UI filters on. Their distinct values are listed in the report so a
+# shop spelling the same thing two ways (DDR4 vs DDR4-SDRAM) is caught here instead
+# of surfacing as a wrong compatibility warning in the app.
+FACET_FIELDS = {
+    "memory": ("memory_type", "speed_mhz"),
+    "motherboard": ("memory_type", "socket", "form_factor"),
+    "cpu": ("socket",),
+    "gpu": ("gpu_vendor", "memory_type"),
+    "storage": ("interface", "form_factor"),
+    "psu": ("efficiency",),
+    "case": ("tower_size",),
+}
+
 # Most specific alternatives first: a loose pattern would otherwise match
 # "Intel Core i5" and lose the model number that carries the generation.
 FAMILY_PATTERN = (
@@ -505,6 +518,26 @@ def write_report(out_dir: Path, components: List[Dict[str, Any]], duplicates: in
             found = sum(1 for c in group if c["specs"].get(field))
             pct = round(100 * found / len(group))
             lines.append(f"| {category} | {len(group)} | `{field}` | {found} | {pct}% |")
+    lines.append("")
+
+    # Facet vocabulary: the values a UI filter would offer. If the same real thing
+    # appears in two spellings here, that is a data bug to fix in the pipeline, not a
+    # comparison to special-case in the app.
+    lines.append("## Facet vocabulary (values a UI filter would offer)")
+    lines.append("")
+    for category in CATEGORIES:
+        for field in FACET_FIELDS.get(category, ()):
+            counts: Dict[str, int] = defaultdict(int)
+            for component in by_category.get(category, []):
+                value = component["specs"].get(field)
+                if value in (None, [], ""):
+                    continue
+                for item in (value if isinstance(value, list) else [value]):
+                    counts[str(item)] += 1
+            if counts:
+                listed = ", ".join(f"{name} ×{count}" for name, count
+                                   in sorted(counts.items(), key=lambda kv: -kv[1])[:6])
+                lines.append(f"- **{category}.{field}**: {listed}")
     lines.append("")
 
     if spec_stats and spec_stats.get("components_matched"):
