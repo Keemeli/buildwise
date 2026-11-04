@@ -368,6 +368,10 @@ select {
   background: rgba(48, 164, 108, 0.12);
   color: #6fd3a0;
 }
+.issue.neutral {
+  background: rgba(139, 147, 167, 0.1);
+  color: var(--muted);
+}
 .budget-card summary {
   cursor: pointer;
   font-weight: 600;

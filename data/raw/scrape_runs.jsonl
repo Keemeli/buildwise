@@ -5,3 +5,10 @@
 {"shop": "Datatronic", "category": "motherboard", "pages_fetched": 2, "items_found": 48, "site_total_products": 661, "started_at": "2026-11-03T14:00:08+00:00", "finished_at": "2026-11-03T14:00:10+00:00", "status": "ok"}
 {"shop": "Datatronic", "category": "psu", "pages_fetched": 2, "items_found": 48, "site_total_products": 672, "started_at": "2026-11-03T14:00:11+00:00", "finished_at": "2026-11-03T14:00:14+00:00", "status": "ok"}
 {"shop": "Datatronic", "category": "storage", "pages_fetched": 2, "items_found": 48, "site_total_products": 583, "started_at": "2026-11-03T14:00:15+00:00", "finished_at": "2026-11-03T14:00:18+00:00", "status": "ok"}
+{"shop": "Datatronic", "category": "case", "pages_fetched": 1, "items_found": 24, "site_total_products": 620, "started_at": "2026-11-04T22:16:35+00:00", "finished_at": "2026-11-04T22:16:36+00:00", "status": "ok"}
+{"shop": "Datatronic", "category": "cpu", "pages_fetched": 1, "items_found": 24, "site_total_products": 169, "started_at": "2026-11-04T22:16:36+00:00", "finished_at": "2026-11-04T22:16:37+00:00", "status": "ok"}
+{"shop": "Datatronic", "category": "gpu", "pages_fetched": 1, "items_found": 24, "site_total_products": 480, "started_at": "2026-11-04T22:16:37+00:00", "finished_at": "2026-11-04T22:16:38+00:00", "status": "ok"}
+{"shop": "Datatronic", "category": "memory", "pages_fetched": 1, "items_found": 24, "site_total_products": 759, "started_at": "2026-11-04T22:16:38+00:00", "finished_at": "2026-11-04T22:16:39+00:00", "status": "ok"}
+{"shop": "Datatronic", "category": "motherboard", "pages_fetched": 1, "items_found": 24, "site_total_products": 661, "started_at": "2026-11-04T22:16:39+00:00", "finished_at": "2026-11-04T22:16:40+00:00", "status": "ok"}
+{"shop": "Datatronic", "category": "psu", "pages_fetched": 1, "items_found": 24, "site_total_products": 672, "started_at": "2026-11-04T22:16:40+00:00", "finished_at": "2026-11-04T22:16:41+00:00", "status": "ok"}
+{"shop": "Datatronic", "category": "storage", "pages_fetched": 1, "items_found": 24, "site_total_products": 588, "started_at": "2026-11-04T22:16:41+00:00", "finished_at": "2026-11-04T22:16:42+00:00", "status": "ok"}

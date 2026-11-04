@@ -4,7 +4,7 @@ import { useMemo, useState } from "react";
 import { SLOTS, cheapestOffer, findComponent, chipsetKey } from "@/lib/catalog";
 import { FPS_BASELINE, PERF_BY_CHIPSET } from "@/mock/fps";
 import { GAMES } from "@/mock/build";
-import { checkCompatibility, estimateWattage, issueKey } from "@/lib/compat";
+import { checkCompatibility, checkCoverage, powerBasis, issueKey } from "@/lib/compat";
 import { formatEuros } from "@/lib/api";
 import PartPicker, { specSummary } from "@/components/PartPicker";
 import FpsChart from "@/components/FpsChart";
@@ -26,8 +26,9 @@ export default function BuilderPage() {
 
   const chosen = SLOTS.map((s) => build[s.category]).filter(Boolean);
   const totalCents = chosen.reduce((sum, c) => sum + cheapestOffer(c).priceCents, 0);
-  const watts = estimateWattage(build);
+  const { watts, basis: powerBasisKind } = powerBasis(build);
   const issues = checkCompatibility(build);
+  const coverage = checkCoverage(build);
   const errors = issues.filter((i) => i.level === "error");
   const errorParts = new Set(errors.flatMap((e) => e.parts));
   const gpuTooLong = errors.some((e) => e.code === "gpuLength");
@@ -145,7 +146,16 @@ export default function BuilderPage() {
           ) : (
             <ul className="issues">
               {!hasProblems && (
-                <li className="issue ok">{hasUnknowns ? t.builder.checkedOk : t.builder.noProblems}</li>
+                <li className={`issue ${coverage.done > 0 && !hasUnknowns ? "ok" : "neutral"}`}>
+                  {coverage.done === 0
+                    ? t.builder.checksNone
+                    : t.builder.checksSummary({ done: coverage.done, total: coverage.total })}
+                  {coverage.waitingFor.length > 0
+                    ? ` ${t.builder.checksWaiting({
+                        parts: coverage.waitingFor.map((c) => t.categories[c]).join(", "),
+                      })}`
+                    : ""}
+                </li>
               )}
               {sortedIssues.map((issue) => (
                 <li key={issueKey(issue)} className={`issue ${issue.level}`}>
@@ -163,8 +173,13 @@ export default function BuilderPage() {
           </div>
           <div className="summary-row">
             <span className="muted">{t.builder.powerDraw}</span>
-            <span>{watts ? `~${watts} W` : "–"}</span>
+            <span>{watts == null ? "–" : `${powerBasisKind === "manufacturerMin" ? "≥" : "~"}${watts} W`}</span>
           </div>
+          {(powerBasisKind === "parts" || powerBasisKind === "manufacturerMin") && (
+            <p className="muted small">
+              {powerBasisKind === "parts" ? t.builder.powerFromParts : t.builder.powerFromMinimum}
+            </p>
+          )}
           <div className="summary-row">
             <span className="muted">{t.builder.partsChosen}</span>
             <span>

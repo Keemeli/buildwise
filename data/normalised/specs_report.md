@@ -1,6 +1,6 @@
-# Product-page data sheet report — 2026-11-04
+# Product-page data sheet report — 2026-11-05
 
-Fetched **336** product pages; **336** parsed successfully, 0 failed.
+Fetched **339** product pages; **339** parsed successfully, 0 failed.
 
 Values here are **parsed from the shop's own data sheet**, not inferred from the product name. Unmapped labels are listed below instead of being guessed.
 
@@ -53,13 +53,13 @@ Values here are **parsed from the shop's own data sheet**, not inferred from the
 | memory | 48 | `form_factor` | 0 | ❌ 0% |
 | memory | 48 | `voltage_v` | 48 | ✅ 100% |
 | memory | 48 | `ecc` | 38 | ⚠️ 79% |
-| storage | 48 | `capacity_gb` | 48 | ✅ 100% |
-| storage | 48 | `interface` | 47 | ✅ 98% |
-| storage | 48 | `form_factor` | 10 | ❌ 21% |
-| storage | 48 | `pcie_gen` | 0 | ❌ 0% |
-| storage | 48 | `nvme` | 31 | ⚠️ 65% |
-| storage | 48 | `read_mb_s` | 38 | ⚠️ 79% |
-| storage | 48 | `write_mb_s` | 38 | ⚠️ 79% |
+| storage | 51 | `capacity_gb` | 51 | ✅ 100% |
+| storage | 51 | `interface` | 50 | ✅ 98% |
+| storage | 51 | `form_factor` | 12 | ❌ 24% |
+| storage | 51 | `pcie_gen` | 0 | ❌ 0% |
+| storage | 51 | `nvme` | 33 | ⚠️ 65% |
+| storage | 51 | `read_mb_s` | 41 | ✅ 80% |
+| storage | 51 | `write_mb_s` | 41 | ✅ 80% |
 | psu | 48 | `wattage_w` | 47 | ✅ 98% |
 | psu | 48 | `efficiency` | 47 | ✅ 98% |
 | psu | 48 | `atx_version` | 43 | ✅ 90% |
@@ -91,6 +91,8 @@ Values here are **parsed from the shop's own data sheet**, not inferred from the
 
 These are preserved for review — add them to `FIELD_MAP` in `specs.py` when they matter for a compatibility rule.
 
+-   51× storage: Varastossa
+-   49× storage: Komponentti (tuotteelle)
 -   48× case: Varastossa
 -   48× gpu: Tuotteen syvyys
 -   48× gpu: Varastossa
@@ -107,7 +109,6 @@ These are preserved for review — add them to `FIELD_MAP` in `specs.py` when th
 -   48× motherboard: Ethernet-liitännän tyyppi
 -   48× motherboard: Varastossa
 -   48× memory: Varastossa
--   48× storage: Varastossa
 -   48× psu: Varastossa
 -   47× case: Malli
 -   47× gpu: Grafiikkaprosessori
@@ -115,5 +116,4 @@ These are preserved for review — add them to `FIELD_MAP` in `specs.py` when th
 -   47× cpu: Suoritinperhe
 -   47× cpu: Prosessorin välimuistityyppi
 -   47× cpu: Erillinen grafiikka-adapteri
--   47× cpu: Sisältyvän näytönohjaimen malli
 
