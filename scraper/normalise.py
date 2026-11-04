@@ -427,6 +427,23 @@ def dedupe(components: List[Dict[str, Any]]) -> Tuple[List[Dict[str, Any]], int]
     return list(merged.values()), duplicates
 
 
+def shape_modules(components: List[Dict[str, Any]]) -> int:
+    """The web UI shows memory as '32 GB (2×16 GB)', reading `modules.count` and
+    `modules.size_gb`. The pipeline stores `modules` as a plain count, so the shape is
+    built here from the two values we already have rather than left for the UI to guess
+    (it rendered 'undefined×undefined GB' when the shape did not match).
+    """
+    shaped = 0
+    for component in components:
+        specs = component["specs"]
+        count = specs.get("modules")
+        capacity = specs.get("capacity_gb")
+        if component["category"] == "memory" and isinstance(count, int) and count > 0 and capacity:
+            specs["modules"] = {"count": count, "size_gb": round(capacity / count)}
+            shaped += 1
+    return shaped
+
+
 def load_product_specs(path: Path) -> Dict[str, Dict[str, Any]]:
     """specs.json written by scraper/specs.py, keyed by product URL."""
     if not path.exists():
@@ -618,6 +635,7 @@ def main() -> int:
     normalised = [normalise_item(item) for item in products]
     components, duplicates = dedupe(normalised)
     spec_stats = merge_product_specs(components, args.out / "specs.json")
+    spec_stats["modules_shaped"] = shape_modules(components)
 
     args.out.mkdir(parents=True, exist_ok=True)
     payload = {
