@@ -1,0 +1,20 @@
+{
+  "shop": "Jimms",
+  "category": "gpu",
+  "page": 36,
+  "source_url": "https://www.jimms.fi/fi/Product/Show/119553/gt-710-2gd3h-lp/msi-nvidia-geforce-gt-710-2gd3h-lp-naytonohjain-2gb-ddr3",
+  "fetched_at": "2026-11-05T21:38:19+00:00",
+  "site_total_products": null,
+  "items_on_page": 1,
+  "raw_html": "raw/html/jimms/2026-11-05/8562eb1d75da93b13343336ef5b0f2916f5d2242dead40a47b4f944dede398a6.html",
+  "origin": "network",
+  "items": [
+    {
+      "name": "MSI NVIDIA GeForce GT 710 2GD3H LP -näytönohjain, 2GB DDR3",
+      "price_cents": 7190,
+      "extraction": "meta[property=\"product:price:amount\"]",
+      "url": "https://www.jimms.fi/fi/Product/Show/119553/gt-710-2gd3h-lp/msi-nvidia-geforce-gt-710-2gd3h-lp-naytonohjain-2gb-ddr3",
+      "external_id": null
+    }
+  ]
+}

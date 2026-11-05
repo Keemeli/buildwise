@@ -1,0 +1,20 @@
+{
+  "shop": "Jimms",
+  "category": "gpu",
+  "page": 27,
+  "source_url": "https://www.jimms.fi/fi/Product/Show/211184/11350-03-20g/sapphire-radeon-rx-9060-xt-pulse-naytonohjain-16gb-gddr6",
+  "fetched_at": "2026-11-05T21:38:10+00:00",
+  "site_total_products": null,
+  "items_on_page": 1,
+  "raw_html": "raw/html/jimms/2026-11-05/88069cb3d202c727b438d92623ce30d4f86c28393399e49ed74296b8a2cf899d.html",
+  "origin": "network",
+  "items": [
+    {
+      "name": "Sapphire Radeon RX 9060 XT PULSE -näytönohjain, 16GB GDDR6",
+      "price_cents": 89990,
+      "extraction": "meta[property=\"product:price:amount\"]",
+      "url": "https://www.jimms.fi/fi/Product/Show/211184/11350-03-20g/sapphire-radeon-rx-9060-xt-pulse-naytonohjain-16gb-gddr6",
+      "external_id": null
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "shop": "Jimms",
+  "category": "gpu",
+  "page": 23,
+  "source_url": "https://www.jimms.fi/fi/Product/Show/211198/dual-rx9060xt-8g/asus-radeon-rx-9060-xt-dual-naytonohjain-8gb-gddr6",
+  "fetched_at": "2026-11-05T21:35:58+00:00",
+  "site_total_products": null,
+  "items_on_page": 1,
+  "raw_html": "raw/html/jimms/2026-11-05/2f9c91fa1c7c708ca1041869a133254ae0b5aaa160ac1b41fd8a53ce4c9c8249.html",
+  "origin": "network",
+  "items": [
+    {
+      "name": "Asus Radeon RX 9060 XT Dual -näytönohjain, 8GB GDDR6",
+      "price_cents": 43490,
+      "extraction": "meta[property=\"product:price:amount\"]",
+      "url": "https://www.jimms.fi/fi/Product/Show/211198/dual-rx9060xt-8g/asus-radeon-rx-9060-xt-dual-naytonohjain-8gb-gddr6",
+      "external_id": null
+    }
+  ]
+}
