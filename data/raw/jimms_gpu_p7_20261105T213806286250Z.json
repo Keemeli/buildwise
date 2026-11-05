@@ -1,20 +1,22 @@
 {
+  "schema_version": 1,
   "shop": "Jimms",
   "category": "gpu",
-  "page": 7,
+  "source_type": "product",
   "source_url": "https://www.jimms.fi/fi/Product/Show/209093/rog-astral-rtx5090-o32g-gaming/asus-geforce-rtx-5090-rog-astral-oc-edition-naytonohjain-32gb-gddr7",
   "fetched_at": "2026-11-05T21:35:42+00:00",
-  "site_total_products": null,
-  "items_on_page": 1,
   "raw_html": "raw/html/jimms/2026-11-05/e650aa3050b66c24550229650ede9719170b5d47ad080484aa6a9a72afd88601.html",
   "origin": "cache",
   "items": [
     {
       "name": "Asus GeForce RTX 5090 ROG Astral - OC Edition -näytönohjain, 32GB GDDR7",
       "price_cents": 709990,
-      "extraction": "meta[property=\"product:price:amount\"]",
       "url": "https://www.jimms.fi/fi/Product/Show/209093/rog-astral-rtx5090-o32g-gaming/asus-geforce-rtx-5090-rog-astral-oc-edition-naytonohjain-32gb-gddr7",
-      "external_id": null
+      "external_id": null,
+      "extraction": "meta[property=\"product:price:amount\"]"
     }
-  ]
+  ],
+  "page": null,
+  "site_total_products": null,
+  "item_count": 1
 }

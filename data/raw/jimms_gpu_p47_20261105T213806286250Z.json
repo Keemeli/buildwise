@@ -1,20 +1,22 @@
 {
+  "schema_version": 1,
   "shop": "Jimms",
   "category": "gpu",
-  "page": 47,
+  "source_type": "product",
   "source_url": "https://www.jimms.fi/fi/Product/Show/208864/11348-03-20g/sapphire-radeon-rx-9070-xt-pulse-naytonohjain-16gb-gddr6",
   "fetched_at": "2026-11-05T21:38:30+00:00",
-  "site_total_products": null,
-  "items_on_page": 1,
   "raw_html": "raw/html/jimms/2026-11-05/e24aa925d49e29ebe7da6bfac9588a2b088832af905486b84883b30d466b7d1e.html",
   "origin": "network",
   "items": [
     {
       "name": "Sapphire Radeon RX 9070 XT PULSE -näytönohjain, 16GB GDDR6",
       "price_cents": 125190,
-      "extraction": "meta[property=\"product:price:amount\"]",
       "url": "https://www.jimms.fi/fi/Product/Show/208864/11348-03-20g/sapphire-radeon-rx-9070-xt-pulse-naytonohjain-16gb-gddr6",
-      "external_id": null
+      "external_id": null,
+      "extraction": "meta[property=\"product:price:amount\"]"
     }
-  ]
+  ],
+  "page": null,
+  "site_total_products": null,
+  "item_count": 1
 }

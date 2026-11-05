@@ -158,3 +158,13 @@ __pycache__/
 
 # Scraper cache (raw HTML snapshots are regenerable; JSON payloads are committed)
 data/raw/html/
+
+# Local URL inputs; examples are shared with the project
+/scraper/inputs/*.json
+!/scraper/inputs/*.example.json
+
+# Regenerable category discovery manifests and reports
+/data/discovery/
+
+# Original raw observations retained locally before schema migrations
+/data/migrations/*/backup.zip

@@ -1,20 +1,22 @@
 {
+  "schema_version": 1,
   "shop": "Jimms",
   "category": "gpu",
-  "page": 40,
+  "source_type": "product",
   "source_url": "https://www.jimms.fi/fi/Product/Show/217345/vcg50608dfxpb1-o/pny-geforce-rtx-5060-dual-fan-oc-naytonohjain-8gb-gddr7",
   "fetched_at": "2026-11-05T21:38:23+00:00",
-  "site_total_products": null,
-  "items_on_page": 1,
   "raw_html": "raw/html/jimms/2026-11-05/fd1b326dbb4adbf0610e1677ec60df28fe6bdf79c21b56422d5c220c42bd80cd.html",
   "origin": "network",
   "items": [
     {
       "name": "PNY GeForce RTX 5060 Dual Fan OC -näytönohjain, 8GB GDDR7",
       "price_cents": 51990,
-      "extraction": "meta[property=\"product:price:amount\"]",
       "url": "https://www.jimms.fi/fi/Product/Show/217345/vcg50608dfxpb1-o/pny-geforce-rtx-5060-dual-fan-oc-naytonohjain-8gb-gddr7",
-      "external_id": null
+      "external_id": null,
+      "extraction": "meta[property=\"product:price:amount\"]"
     }
-  ]
+  ],
+  "page": null,
+  "site_total_products": null,
+  "item_count": 1
 }

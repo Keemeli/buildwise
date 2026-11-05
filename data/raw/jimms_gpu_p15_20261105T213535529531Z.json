@@ -1,20 +1,22 @@
 {
+  "schema_version": 1,
   "shop": "Jimms",
   "category": "gpu",
-  "page": 15,
+  "source_type": "product",
   "source_url": "https://www.jimms.fi/fi/Product/Show/209080/gv-r9070xtgaming-oc-16gd/gigabyte-radeon-rx-9070-xt-gaming-oc-naytonohjain-16gb-gddr6",
   "fetched_at": "2026-11-05T21:35:50+00:00",
-  "site_total_products": null,
-  "items_on_page": 1,
   "raw_html": "raw/html/jimms/2026-11-05/8328ba5e820970039f7efcd5fab764489ad33b723912a8b16ec3f3d0f307206e.html",
   "origin": "network",
   "items": [
     {
       "name": "Gigabyte Radeon RX 9070 XT GAMING OC -näytönohjain, 16GB GDDR6",
       "price_cents": 126490,
-      "extraction": "meta[property=\"product:price:amount\"]",
       "url": "https://www.jimms.fi/fi/Product/Show/209080/gv-r9070xtgaming-oc-16gd/gigabyte-radeon-rx-9070-xt-gaming-oc-naytonohjain-16gb-gddr6",
-      "external_id": null
+      "external_id": null,
+      "extraction": "meta[property=\"product:price:amount\"]"
     }
-  ]
+  ],
+  "page": null,
+  "site_total_products": null,
+  "item_count": 1
 }

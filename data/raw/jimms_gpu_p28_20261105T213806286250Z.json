@@ -1,20 +1,22 @@
 {
+  "schema_version": 1,
   "shop": "Jimms",
   "category": "gpu",
-  "page": 28,
+  "source_type": "product",
   "source_url": "https://www.jimms.fi/fi/Product/Show/208916/gv-n5070wf3oc-12gd/gigabyte-geforce-rtx-5070-windforce-oc-sff-naytonohjain-12gb-gddr7",
   "fetched_at": "2026-11-05T21:38:11+00:00",
-  "site_total_products": null,
-  "items_on_page": 1,
   "raw_html": "raw/html/jimms/2026-11-05/a8c909ff5432c51db2d250f67b0b03d58fbc65e3a9e884b91d4efb1adbefc4fe.html",
   "origin": "network",
   "items": [
     {
       "name": "Gigabyte GeForce RTX 5070 WINDFORCE OC SFF -näytönohjain, 12GB GDDR7",
       "price_cents": 98990,
-      "extraction": "meta[property=\"product:price:amount\"]",
       "url": "https://www.jimms.fi/fi/Product/Show/208916/gv-n5070wf3oc-12gd/gigabyte-geforce-rtx-5070-windforce-oc-sff-naytonohjain-12gb-gddr7",
-      "external_id": null
+      "external_id": null,
+      "extraction": "meta[property=\"product:price:amount\"]"
     }
-  ]
+  ],
+  "page": null,
+  "site_total_products": null,
+  "item_count": 1
 }

@@ -1,20 +1,22 @@
 {
+  "schema_version": 1,
   "shop": "Jimms",
   "category": "gpu",
-  "page": 2,
+  "source_type": "product",
   "source_url": "https://www.jimms.fi/fi/Product/Show/218821/tg-dm-gpu-001/thermal-grizzly-deltamate-gpu-block-rog-astral-rtx-5090-gpu-blokki",
   "fetched_at": "2026-11-05T00:51:24+00:00",
-  "site_total_products": null,
-  "items_on_page": 1,
   "raw_html": "raw/html/jimms/2026-11-05/7b4db9f37b2ca641f2e67b51a3b268a64d6c122dc9b2f148b55541f9e3cbc9d2.html",
   "origin": "network",
   "items": [
     {
       "name": "Thermal Grizzly DeltaMate GPU Block - ROG Astral RTX 5090, GPU-blokki",
       "price_cents": 59990,
-      "extraction": "meta[property=\"product:price:amount\"]",
       "url": "https://www.jimms.fi/fi/Product/Show/218821/tg-dm-gpu-001/thermal-grizzly-deltamate-gpu-block-rog-astral-rtx-5090-gpu-blokki",
-      "external_id": null
+      "external_id": null,
+      "extraction": "meta[property=\"product:price:amount\"]"
     }
-  ]
+  ],
+  "page": null,
+  "site_total_products": null,
+  "item_count": 1
 }

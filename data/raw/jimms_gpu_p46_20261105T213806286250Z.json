@@ -1,20 +1,22 @@
 {
+  "schema_version": 1,
   "shop": "Jimms",
   "category": "gpu",
-  "page": 46,
+  "source_type": "product",
   "source_url": "https://www.jimms.fi/fi/Product/Show/208990/gv-n5080aorusm-ice-16gd/gigabyte-geforce-rtx-5080-aorus-master-ice-naytonohjain-16gb-gddr7",
   "fetched_at": "2026-11-05T21:38:29+00:00",
-  "site_total_products": null,
-  "items_on_page": 1,
   "raw_html": "raw/html/jimms/2026-11-05/a33d0405cd8a2dbf3fe48a347a6e0a608e40762980dc46407621c42a109576be.html",
   "origin": "network",
   "items": [
     {
       "name": "Gigabyte GeForce RTX 5080 AORUS MASTER ICE -näytönohjain, 16GB GDDR7",
       "price_cents": 198990,
-      "extraction": "meta[property=\"product:price:amount\"]",
       "url": "https://www.jimms.fi/fi/Product/Show/208990/gv-n5080aorusm-ice-16gd/gigabyte-geforce-rtx-5080-aorus-master-ice-naytonohjain-16gb-gddr7",
-      "external_id": null
+      "external_id": null,
+      "extraction": "meta[property=\"product:price:amount\"]"
     }
-  ]
+  ],
+  "page": null,
+  "site_total_products": null,
+  "item_count": 1
 }
