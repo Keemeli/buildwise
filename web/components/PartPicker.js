@@ -3,6 +3,7 @@
 import { useEffect, useMemo, useState } from "react";
 import { COMPONENTS, cheapestOffer } from "@/lib/catalog";
 import { issuesForCandidate, issueKey } from "@/lib/compat";
+import { UNKNOWN, facetsFor, facetOptions, applyFacets } from "@/lib/facets";
 import { formatEuros } from "@/lib/api";
 import PartIcon from "./PartIcon";
 import { t } from "@/strings";
@@ -68,8 +69,21 @@ function specSummary(c) {
 
 export { specSummary };
 
+// Picker rows are { component, offer, issues }; the facet helpers read the component.
+const getComponent = (row) => row.component;
+
+function optionLabel(facet, key) {
+  if (key === UNKNOWN) return t.picker.unknown;
+  if (facet.id === "wattage") return t.picker.wattage[key] ?? key;
+  return key; // spec values are shown as the pipeline writes them (language-neutral)
+}
+
 export default function PartPicker({ slot, build, onSelect, onClose }) {
   const [query, setQuery] = useState("");
+  // { [facetId]: optionKey[] } — ticked filter options
+  const [selections, setSelections] = useState({});
+  // Parts that don't fit the rest of the build are hidden by default, behind a "show all" toggle.
+  const [showAll, setShowAll] = useState(false);
 
   // Close with the Escape key
   useEffect(() => {
@@ -78,14 +92,44 @@ export default function PartPicker({ slot, build, onSelect, onClose }) {
     return () => window.removeEventListener("keydown", onKey);
   }, [onClose]);
 
-  const parts = useMemo(() => {
+  const facets = facetsFor(slot.category);
+
+  // Every part in this category, with its cheapest offer and the errors it would cause.
+  const all = useMemo(
+    () =>
+      COMPONENTS.filter((c) => c.category === slot.category).map((c) => ({
+        component: c,
+        offer: cheapestOffer(c),
+        issues: issuesForCandidate(build, c),
+      })),
+    [slot.category, build],
+  );
+
+  const view = useMemo(() => {
     const q = query.trim().toLowerCase();
-    return COMPONENTS.filter((c) => c.category === slot.category)
-      .filter((c) => !q || c.name.toLowerCase().includes(q))
-      .map((c) => ({ component: c, offer: cheapestOffer(c), issues: issuesForCandidate(build, c) }))
+    const searched = all.filter((row) => !q || row.component.name.toLowerCase().includes(q));
+    const incompatible = searched.filter((row) => row.issues.length > 0).length;
+    const pool = showAll ? searched : searched.filter((row) => row.issues.length === 0);
+    const options = facetOptions(pool, facets, selections, getComponent);
+    const parts = applyFacets(pool, facets, selections, getComponent)
       // Compatible parts first, then cheapest first
       .sort((a, b) => a.issues.length - b.issues.length || a.offer.priceCents - b.offer.priceCents);
-  }, [slot.category, build, query]);
+    return { parts, options, incompatible };
+  }, [all, facets, query, selections, showAll]);
+
+  const anySelected = Object.values(selections).some((keys) => keys.length > 0);
+
+  function toggleOption(facetId, key) {
+    setSelections((prev) => {
+      const current = prev[facetId] ?? [];
+      const next = current.includes(key) ? current.filter((k) => k !== key) : [...current, key];
+      return { ...prev, [facetId]: next };
+    });
+  }
+
+  let emptyText = t.picker.noFilterMatches;
+  if (all.length === 0) emptyText = t.picker.emptyCategory;
+  else if (query.trim() && !anySelected) emptyText = t.picker.noMatches(query);
 
   return (
     <div className="modal-backdrop" onClick={onClose}>
@@ -110,13 +154,59 @@ export default function PartPicker({ slot, build, onSelect, onClose }) {
           autoFocus
         />
 
+        {facets.length > 0 && all.length > 0 && (
+          <div className="facets" aria-label={t.picker.filters}>
+            {view.options.map(({ facet, options }) => (
+              <div key={facet.id} className="facet" role="group" aria-label={t.picker.facets[facet.id]}>
+                <span className="facet-label">{t.picker.facets[facet.id]}</span>
+                <div className="facet-options">
+                  {options.map(({ key, count }) => {
+                    const on = (selections[facet.id] ?? []).includes(key);
+                    return (
+                      <button
+                        key={key}
+                        type="button"
+                        className={`chip${on ? " on" : ""}${count === 0 && !on ? " zero" : ""}${key === UNKNOWN ? " unknown" : ""}`}
+                        aria-pressed={on}
+                        onClick={() => toggleOption(facet.id, key)}
+                      >
+                        {optionLabel(facet, key)}
+                        <span className="chip-count">{count}</span>
+                      </button>
+                    );
+                  })}
+                </div>
+              </div>
+            ))}
+          </div>
+        )}
+
+        {/* Shown whenever something is hidden, so a part never disappears silently. */}
+        {(view.incompatible > 0 || showAll) && (
+          <div className="compat-filter">
+            <span>{showAll ? t.picker.showingAll : t.picker.compatibleOnly(view.incompatible)}</span>
+            <button type="button" className="link-button" onClick={() => setShowAll((v) => !v)}>
+              {showAll ? t.picker.showCompatibleOnly : t.picker.showAll}
+            </button>
+          </div>
+        )}
+
+        {all.length > 0 && (
+          <div className="picker-status muted small">
+            <span>{t.picker.resultCount(view.parts.length, all.length)}</span>
+            {anySelected && (
+              <button type="button" className="link-button" onClick={() => setSelections({})}>
+                {t.picker.clearFilters}
+              </button>
+            )}
+          </div>
+        )}
+
         <ul className="picker-list">
-          {parts.map(({ component, offer, issues }) => (
+          {view.parts.map(({ component, offer, issues }) => (
             <li key={component.id} className={issues.length ? "picker-item incompatible" : "picker-item"}>
               <div className="picker-info">
-                <div className="part-name">
-                  {component.name}
-                </div>
+                <div className="part-name">{component.name}</div>
                 <div className="part-specs">{specSummary(component)}</div>
                 {issues.map((issue) => (
                   <div key={issueKey(issue)} className="issue-inline error">
@@ -136,9 +226,7 @@ export default function PartPicker({ slot, build, onSelect, onClose }) {
               </button>
             </li>
           ))}
-          {parts.length === 0 && (
-            <li className="muted empty">{query.trim() ? t.picker.noMatches(query) : t.picker.emptyCategory}</li>
-          )}
+          {view.parts.length === 0 && <li className="muted empty">{emptyText}</li>}
         </ul>
       </div>
     </div>

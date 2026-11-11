@@ -34,6 +34,11 @@ const engineSource = readFileSync(join(webRoot, "lib", "compat.js"), "utf8");
 const { checkCompatibility } = await import(
   `data:text/javascript;charset=utf-8,${encodeURIComponent(engineSource)}`
 );
+// The picker's spec filters (issue #25), loaded the same way.
+const facetsSource = readFileSync(join(webRoot, "lib", "facets.js"), "utf8");
+const { FACETS, UNKNOWN, optionKeys, applyFacets, facetOptions } = await import(
+  `data:text/javascript;charset=utf-8,${encodeURIComponent(facetsSource)}`
+);
 
 // Coverage floors, set well below today's numbers on purpose: a parser regression that
 // silently drops most values must fail, ordinary catalogue churn must not. Raise them as
@@ -208,6 +213,35 @@ check("engine: DDR generations are compared, not spellings", () => {
     "a missing memory type is not reported as unchecked");
 
   return "positive, inverse, raw and dual cases all behave";
+});
+
+// ---------------------------------------------------------------------------
+// 4. Picker filters — a missing spec must never make a part unreachable (issue #25).
+// ---------------------------------------------------------------------------
+check("every part is reachable through every picker filter", () => {
+  let facetCount = 0;
+  for (const [category, facets] of Object.entries(FACETS)) {
+    const items = of(category);
+    for (const facet of facets) {
+      facetCount += 1;
+      const [{ options }] = facetOptions(items, [facet], {});
+      // Ticking every option, the "not known" one included, must give back the whole category.
+      const everything = applyFacets(items, [facet], { [facet.id]: options.map((o) => o.key) });
+      assert(everything.length === items.length,
+        `${category}.${facet.id}: ${items.length - everything.length} parts fall in no option`);
+      assert(options.some((o) => o.key === UNKNOWN), `${category}.${facet.id} has no "not known" option`);
+      for (const item of items) {
+        for (const key of optionKeys(facet, item)) {
+          assert(options.some((o) => o.key === key), `${category}.${facet.id}: option "${key}" is not listed`);
+        }
+      }
+    }
+  }
+  // A part without the spec lands in "not known", not in "no".
+  const blank = { category: "memory", specs: { memory_type: null } };
+  const [memoryFacet] = FACETS.memory;
+  assert(optionKeys(memoryFacet, blank).join() === UNKNOWN, "a missing memory type is not filed under 'not known'");
+  return `${facetCount} facets, all parts reachable`;
 });
 
 // ---------------------------------------------------------------------------

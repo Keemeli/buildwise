@@ -615,3 +615,86 @@ select {
   background: rgba(139, 147, 167, 0.1);
   color: var(--muted);
 }
+
+/* Spec filters in the part picker (issue #25) */
+.facets {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+.facet {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+}
+.facet-label {
+  flex: 0 0 110px;
+  color: var(--muted);
+  font-size: 0.85rem;
+}
+.facet-options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+.chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: transparent;
+  color: var(--text);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: 4px 10px;
+  font-size: 0.85rem;
+  cursor: pointer;
+}
+.chip:hover {
+  border-color: var(--accent);
+}
+.chip.on {
+  background: rgba(79, 140, 255, 0.15);
+  border-color: var(--accent);
+  color: var(--accent);
+}
+.chip.zero {
+  opacity: 0.45;
+}
+.chip.unknown {
+  border-style: dashed;
+}
+.chip-count {
+  color: var(--muted);
+  font-size: 0.75rem;
+}
+.chip.on .chip-count {
+  color: var(--accent);
+}
+.compat-filter {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  background: rgba(79, 140, 255, 0.08);
+  border-radius: 8px;
+  padding: 8px 12px;
+  margin-bottom: 8px;
+  font-size: 0.85rem;
+}
+.picker-status {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 4px 6px;
+}
+@media (max-width: 600px) {
+  .facet {
+    flex-direction: column;
+    gap: 4px;
+  }
+  .facet-label {
+    flex: none;
+  }
+}

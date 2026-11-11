@@ -58,6 +58,32 @@ export const strings = {
       shops: (n: number) => `${n} kauppaa`,
       noMatches: (query: string) => `Haulla ”${query}” ei löytynyt osia.`,
       emptyCategory: "Tämän kategorian osia ei ole vielä haettu kaupoista.",
+      // Spec filters (issue #25)
+      facets: {
+        socket: "Kanta",
+        memoryType: "Muistityyppi",
+        formFactor: "Koko",
+        vendor: "Valmistaja",
+        interface: "Liitäntä",
+        wattage: "Teho",
+        caseSize: "Kotelon koko",
+      } as Record<string, string>,
+      unknown: "Ei tiedossa",
+      wattage: {
+        "w-lt600": "alle 600 W",
+        "w-600-749": "600–749 W",
+        "w-750-999": "750–999 W",
+        "w-gte1000": "1000 W tai yli",
+      } as Record<string, string>,
+      filters: "Suodattimet",
+      clearFilters: "Tyhjennä suodattimet",
+      resultCount: (shown: number, total: number) => `${shown} / ${total} osaa`,
+      compatibleOnly: (hidden: number) =>
+        `Näytetään vain kokoonpanoon sopivat osat. ${hidden} ${hidden === 1 ? "osa" : "osaa"} piilotettu.`,
+      showAll: "Näytä kaikki",
+      showingAll: "Näytetään myös osat, jotka eivät sovi kokoonpanoon.",
+      showCompatibleOnly: "Näytä vain yhteensopivat",
+      noFilterMatches: "Valituilla suodattimilla ei löytynyt osia.",
     },
 
     specs: {
@@ -184,6 +210,32 @@ export const strings = {
       shops: (n: number) => `${n} shops`,
       noMatches: (query: string) => `No parts match “${query}”.`,
       emptyCategory: "Parts in this category have not been scraped yet.",
+      // Spec filters (issue #25)
+      facets: {
+        socket: "Socket",
+        memoryType: "Memory type",
+        formFactor: "Size",
+        vendor: "Vendor",
+        interface: "Interface",
+        wattage: "Wattage",
+        caseSize: "Case size",
+      } as Record<string, string>,
+      unknown: "Not known",
+      wattage: {
+        "w-lt600": "under 600 W",
+        "w-600-749": "600–749 W",
+        "w-750-999": "750–999 W",
+        "w-gte1000": "1000 W or more",
+      } as Record<string, string>,
+      filters: "Filters",
+      clearFilters: "Clear filters",
+      resultCount: (shown: number, total: number) => `${shown} / ${total} parts`,
+      compatibleOnly: (hidden: number) =>
+        `Showing only parts that fit this build. ${hidden} ${hidden === 1 ? "part" : "parts"} hidden.`,
+      showAll: "Show all",
+      showingAll: "Also showing parts that don't fit this build.",
+      showCompatibleOnly: "Show compatible only",
+      noFilterMatches: "No parts match the selected filters.",
     },
 
     specs: {
