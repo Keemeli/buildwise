@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "shop": "Jimms",
+  "category": "gpu",
+  "source_type": "product",
+  "source_url": "https://www.jimms.fi/fi/Product/Show/209302/rtx-5070-12g-gaming-trio-oc/msi-geforce-rtx-5070-gaming-trio-oc-naytonohjain-12gb-gddr7",
+  "fetched_at": "2026-11-05T21:38:12+00:00",
+  "raw_html": "raw/html/jimms/2026-11-05/594d99f332f0c6cb5d504045f88527824cd62d255aa3bbe899f3b4b1f49e98bc.html",
+  "origin": "network",
+  "items": [
+    {
+      "name": "MSI GeForce RTX 5070 GAMING TRIO OC -näytönohjain, 12GB GDDR7",
+      "price_cents": 101990,
+      "url": "https://www.jimms.fi/fi/Product/Show/209302/rtx-5070-12g-gaming-trio-oc/msi-geforce-rtx-5070-gaming-trio-oc-naytonohjain-12gb-gddr7",
+      "external_id": null,
+      "extraction": "meta[property=\"product:price:amount\"]"
+    }
+  ],
+  "page": null,
+  "site_total_products": null,
+  "item_count": 1
+}

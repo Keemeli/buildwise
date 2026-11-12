@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "shop": "Jimms",
+  "category": "gpu",
+  "source_type": "product",
+  "source_url": "https://www.jimms.fi/fi/Product/Show/210470/dual-rtx5060ti-o16g/asus-geforce-rtx-5060-ti-dual-oc-edition-naytonohjain-16gb-gddr7",
+  "fetched_at": "2026-11-05T21:35:44+00:00",
+  "raw_html": "raw/html/jimms/2026-11-05/2cac97525dd70ced56bdba9f7ebaf9156e92c0888ace0ffbb7ff771d9c3e2276.html",
+  "origin": "cache",
+  "items": [
+    {
+      "name": "Asus GeForce RTX 5060 Ti DUAL - OC Edition -näytönohjain, 16GB GDDR7",
+      "price_cents": 86990,
+      "url": "https://www.jimms.fi/fi/Product/Show/210470/dual-rtx5060ti-o16g/asus-geforce-rtx-5060-ti-dual-oc-edition-naytonohjain-16gb-gddr7",
+      "external_id": null,
+      "extraction": "meta[property=\"product:price:amount\"]"
+    }
+  ],
+  "page": null,
+  "site_total_products": null,
+  "item_count": 1
+}

@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "shop": "Jimms",
+  "category": "gpu",
+  "source_type": "product",
+  "source_url": "https://www.jimms.fi/fi/Product/Show/217374/prime-rx9070gre-o12g/asus-radeon-rx-9070-gre-prime-oc-edition-naytonohjain-12gb-gddr6",
+  "fetched_at": "2026-11-05T21:38:31+00:00",
+  "raw_html": "raw/html/jimms/2026-11-05/f8fdd85317b332145bad4651b04b66a2287c18f8715daf9006ea7abd694e4f24.html",
+  "origin": "network",
+  "items": [
+    {
+      "name": "Asus Radeon RX 9070 GRE PRIME - OC Edition -näytönohjain, 12GB GDDR6",
+      "price_cents": 78990,
+      "url": "https://www.jimms.fi/fi/Product/Show/217374/prime-rx9070gre-o12g/asus-radeon-rx-9070-gre-prime-oc-edition-naytonohjain-12gb-gddr6",
+      "external_id": null,
+      "extraction": "meta[property=\"product:price:amount\"]"
+    }
+  ],
+  "page": null,
+  "site_total_products": null,
+  "item_count": 1
+}

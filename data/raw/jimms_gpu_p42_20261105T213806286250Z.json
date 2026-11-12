@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "shop": "Jimms",
+  "category": "gpu",
+  "source_type": "product",
+  "source_url": "https://www.jimms.fi/fi/Product/Show/208913/gv-n507teagleoc-ice-16gd/gigabyte-geforce-rtx-5070-ti-eagle-oc-ice-sff-naytonohjain-16gb-gddr7",
+  "fetched_at": "2026-11-05T21:38:25+00:00",
+  "raw_html": "raw/html/jimms/2026-11-05/afd5f8782e838229e4ba47e02aed4bb16bde607400e9053cfc9cad9e5dd64fb4.html",
+  "origin": "network",
+  "items": [
+    {
+      "name": "Gigabyte GeForce RTX 5070 Ti EAGLE OC ICE SFF -näytönohjain, 16GB GDDR7",
+      "price_cents": 146990,
+      "url": "https://www.jimms.fi/fi/Product/Show/208913/gv-n507teagleoc-ice-16gd/gigabyte-geforce-rtx-5070-ti-eagle-oc-ice-sff-naytonohjain-16gb-gddr7",
+      "external_id": null,
+      "extraction": "meta[property=\"product:price:amount\"]"
+    }
+  ],
+  "page": null,
+  "site_total_products": null,
+  "item_count": 1
+}

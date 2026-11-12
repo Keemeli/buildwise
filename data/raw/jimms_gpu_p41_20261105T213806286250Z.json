@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "shop": "Jimms",
+  "category": "gpu",
+  "source_type": "product",
+  "source_url": "https://www.jimms.fi/fi/Product/Show/199796/dual-rtx3050-o6g/asus-geforce-rtx-3050-dual-oc-edition-naytonohjain-6gb-gddr6",
+  "fetched_at": "2026-11-05T21:38:24+00:00",
+  "raw_html": "raw/html/jimms/2026-11-05/eb0cb35fc34892ccadd2443472273cdb228142058117d496b49c50bd76d19d72.html",
+  "origin": "network",
+  "items": [
+    {
+      "name": "Asus GeForce RTX 3050 DUAL - OC Edition -näytönohjain, 6GB GDDR6",
+      "price_cents": 33390,
+      "url": "https://www.jimms.fi/fi/Product/Show/199796/dual-rtx3050-o6g/asus-geforce-rtx-3050-dual-oc-edition-naytonohjain-6gb-gddr6",
+      "external_id": null,
+      "extraction": "meta[property=\"product:price:amount\"]"
+    }
+  ],
+  "page": null,
+  "site_total_products": null,
+  "item_count": 1
+}

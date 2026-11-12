@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "shop": "Jimms",
+  "category": "gpu",
+  "source_type": "product",
+  "source_url": "https://www.jimms.fi/fi/Product/Show/208865/11349-01-20g/sapphire-radeon-rx-9070-nitro-naytonohjain-16gb-gddr6",
+  "fetched_at": "2026-11-05T21:38:21+00:00",
+  "raw_html": "raw/html/jimms/2026-11-05/91e77dd129ffa9a66eac318311b9fb0ec5369af9647f5027a8a4c59141be43e5.html",
+  "origin": "network",
+  "items": [
+    {
+      "name": "Sapphire Radeon RX 9070 NITRO+ -näytönohjain, 16GB GDDR6",
+      "price_cents": 107390,
+      "url": "https://www.jimms.fi/fi/Product/Show/208865/11349-01-20g/sapphire-radeon-rx-9070-nitro-naytonohjain-16gb-gddr6",
+      "external_id": null,
+      "extraction": "meta[property=\"product:price:amount\"]"
+    }
+  ],
+  "page": null,
+  "site_total_products": null,
+  "item_count": 1
+}

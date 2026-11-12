@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "shop": "Jimms",
+  "category": "gpu",
+  "source_type": "product",
+  "source_url": "https://www.jimms.fi/fi/Product/Show/208568/prime-rx9070xt-o16g/asus-radeon-rx-9070-xt-prime-oc-edition-naytonohjain-16gb-gddr6",
+  "fetched_at": "2026-11-05T21:35:38+00:00",
+  "raw_html": "raw/html/jimms/2026-11-05/9a20b729e363290d38137b2616c7077d868d698a68dc8d39a2ee9b824db1b232.html",
+  "origin": "network",
+  "items": [
+    {
+      "name": "Asus Radeon RX 9070 XT PRIME - OC Edition -näytönohjain, 16GB GDDR6",
+      "price_cents": 109990,
+      "url": "https://www.jimms.fi/fi/Product/Show/208568/prime-rx9070xt-o16g/asus-radeon-rx-9070-xt-prime-oc-edition-naytonohjain-16gb-gddr6",
+      "external_id": null,
+      "extraction": "meta[property=\"product:price:amount\"]"
+    }
+  ],
+  "page": null,
+  "site_total_products": null,
+  "item_count": 1
+}

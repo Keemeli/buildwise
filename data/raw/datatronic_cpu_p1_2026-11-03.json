@@ -1,156 +1,183 @@
 {
+  "schema_version": 1,
   "shop": "Datatronic",
   "category": "cpu",
-  "page": 1,
+  "source_type": "category",
   "source_url": "https://datatronic.fi/prosessorit",
   "fetched_at": "2026-11-03T13:59:57+00:00",
-  "site_total_products": 169,
-  "items_on_page": 24,
-  "raw_html": "data/raw/html/datatronic_cpu_p1_2026-11-03_043a263d01c2.html",
+  "raw_html": "raw/html/datatronic_cpu_p1_2026-11-03_043a263d01c2.html",
+  "origin": null,
   "items": [
     {
       "name": "AMD Ryzen 7 9800X3D suoritin 4,7 GHz 104 MB L2 & L3 Laatikko",
       "price_cents": 43900,
       "url": "https://datatronic.fi/komponentit/prosessorit/amd-ryzen-7-9800x3d-suoritin-47-ghz-104-mb-l2-l3-laatikko-amd-100-100001084wof",
-      "external_id": "165046"
+      "external_id": "165046",
+      "extraction": "listing_card"
     },
     {
       "name": "AMD Ryzen 5 5600 suoritin 3,5 GHz 32 MB L3 Laatikko",
       "price_cents": 14190,
       "url": "https://datatronic.fi/komponentit/prosessorit/amd-ryzen-5-5600-suoritin-35-ghz-32-mb-l3-laatikko-amd-100-100000927box",
-      "external_id": "45903"
+      "external_id": "45903",
+      "extraction": "listing_card"
     },
     {
       "name": "AMD Ryzen 7 5800X3D suoritin 3,4 GHz 96 MB L3 Laatikko",
       "price_cents": 36500,
       "url": "https://datatronic.fi/komponentit/prosessorit/amd-ryzen-7-5800x3d-suoritin-34-ghz-96-mb-l3-laatikko-amd-100-100000651pof",
-      "external_id": "180909"
+      "external_id": "180909",
+      "extraction": "listing_card"
     },
     {
       "name": "AMD Ryzen 5 9600X suoritin 3,9 GHz 38 MB L2 & L3 Laatikko",
       "price_cents": 18390,
       "url": "https://datatronic.fi/komponentit/prosessorit/amd-ryzen-5-9600x-suoritin-39-ghz-38-mb-l2-l3-laatikko-amd-100-100001405wof",
-      "external_id": "163850"
+      "external_id": "163850",
+      "extraction": "listing_card"
     },
     {
       "name": "AMD Ryzen 7 7800X3D suoritin 4,2 GHz 96 MB L3 Laatikko",
       "price_cents": 37500,
       "url": "https://datatronic.fi/komponentit/prosessorit/amd-ryzen-7-7800x3d-suoritin-42-ghz-96-mb-l3-laatikko-amd-100-100000910wof",
-      "external_id": "118634"
+      "external_id": "118634",
+      "extraction": "listing_card"
     },
     {
       "name": "AMD Ryzen 9 7900X suoritin 4,7 GHz 64 MB L3 Laatikko",
       "price_cents": 29590,
       "url": "https://datatronic.fi/komponentit/prosessorit/amd-ryzen-9-7900x-suoritin-47-ghz-64-mb-l3-laatikko-amd-100-100000589wof",
-      "external_id": "48298"
+      "external_id": "48298",
+      "extraction": "listing_card"
     },
     {
       "name": "AMD Ryzen 5 5600XT suoritin Laatikko",
       "price_cents": 15990,
       "url": "https://datatronic.fi/komponentit/prosessorit/amd-ryzen-5-5600xt-suoritin-laatikko-amd-100-100001585box",
-      "external_id": "165044"
+      "external_id": "165044",
+      "extraction": "listing_card"
     },
     {
       "name": "AMD Ryzen 5 7500X3D suoritin 4 GHz 96 MB L3 Laatikko",
       "price_cents": 22990,
       "url": "https://datatronic.fi/komponentit/prosessorit/amd-ryzen-5-7500x3d-suoritin-4-ghz-96-mb-l3-laatikko-amd-100-100001904wof",
-      "external_id": "174207"
+      "external_id": "174207",
+      "extraction": "listing_card"
     },
     {
       "name": "AMD Ryzen 5 7500F suoritin 3,7 GHz 32 MB L3 Konekasaukseen",
       "price_cents": 15990,
       "url": "https://datatronic.fi/komponentit/prosessorit/amd-ryzen-5-7500f-suoritin-37-ghz-32-mb-l3-konekasaukseen-amd-100-100000597mpk",
-      "external_id": "150839"
+      "external_id": "150839",
+      "extraction": "listing_card"
     },
     {
       "name": "AMD Ryzen 5 5600X suoritin 3,7 GHz 32 MB L3 Laatikko",
       "price_cents": 16490,
       "url": "https://datatronic.fi/komponentit/prosessorit/amd-ryzen-5-5600x-suoritin-37-ghz-32-mb-l3-laatikko-amd-100-100000065box",
-      "external_id": "5102"
+      "external_id": "5102",
+      "extraction": "listing_card"
     },
     {
       "name": "AMD Ryzen 7 5700X suoritin 3,4 GHz 32 MB L3 Laatikko",
       "price_cents": 20990,
       "url": "https://datatronic.fi/komponentit/prosessorit/amd-ryzen-7-5700x-suoritin-34-ghz-32-mb-l3-laatikko-amd-100-100000926wof",
-      "external_id": "45902"
+      "external_id": "45902",
+      "extraction": "listing_card"
     },
     {
       "name": "AMD Ryzen 7 9700X suoritin 3,8 GHz 40 MB L2 & L3 Laatikko",
       "price_cents": 33500,
       "url": "https://datatronic.fi/komponentit/prosessorit/amd-ryzen-7-9700x-suoritin-38-ghz-40-mb-l2-l3-laatikko-amd-100-100001404wof",
-      "external_id": "163851"
+      "external_id": "163851",
+      "extraction": "listing_card"
     },
     {
       "name": "Intel Core i5-14600K suoritin 24 MB Smart Cache Laatikko",
       "price_cents": 27390,
       "url": "https://datatronic.fi/komponentit/prosessorit/intel-core-i5-14600k-suoritin-24-mb-smart-cache-laatikko-intel-bx8071514600k",
-      "external_id": "140804"
+      "external_id": "140804",
+      "extraction": "listing_card"
     },
     {
       "name": "AMD Ryzen 5 7600X suoritin 4,7 GHz 32 MB L3 Laatikko",
       "price_cents": 16690,
       "url": "https://datatronic.fi/komponentit/prosessorit/amd-ryzen-5-7600x-suoritin-47-ghz-32-mb-l3-laatikko-amd-100-100000593wof",
-      "external_id": "48297"
+      "external_id": "48297",
+      "extraction": "listing_card"
     },
     {
       "name": "Intel Core i5-14400F suoritin 20 MB Smart Cache Laatikko",
       "price_cents": 16490,
       "url": "https://datatronic.fi/komponentit/prosessorit/intel-core-i5-14400f-suoritin-20-mb-smart-cache-laatikko-intel-bx8071514400f",
-      "external_id": "152270"
+      "external_id": "152270",
+      "extraction": "listing_card"
     },
     {
       "name": "AMD Ryzen 7 9850X3D suoritin 4,7 GHz 96 MB L3 Laatikko",
       "price_cents": 49500,
       "url": "https://datatronic.fi/komponentit/prosessorit/amd-ryzen-7-9850x3d-suoritin-47-ghz-96-mb-l3-laatikko-amd-100-100001973wof",
-      "external_id": "175458"
+      "external_id": "175458",
+      "extraction": "listing_card"
     },
     {
       "name": "AMD Ryzen 7 9800X3D suoritin 4,7 GHz 96 MB L3 Tray malli Konekasauksiin",
       "price_cents": 43900,
       "url": "https://datatronic.fi/komponentit/prosessorit/amd-ryzen-7-9800x3d-suoritin-47-ghz-96-mb-l3-tray-malli-konekasauksiin-amd-100-000001084",
-      "external_id": "165102"
+      "external_id": "165102",
+      "extraction": "listing_card"
     },
     {
       "name": "AMD Ryzen 5 5500 suoritin 3,6 GHz 16 MB L3 Laatikko",
       "price_cents": 9990,
       "url": "https://datatronic.fi/komponentit/prosessorit/amd-ryzen-5-5500-suoritin-36-ghz-16-mb-l3-laatikko-amd-100-100000457box",
-      "external_id": "45904"
+      "external_id": "45904",
+      "extraction": "listing_card"
     },
     {
       "name": "Intel Core Ultra 7 270K Plus suoritin 36 MB Smart Cache Laatikko",
       "price_cents": 34900,
       "url": "https://datatronic.fi/komponentit/prosessorit/intel-core-ultra-7-270k-plus-suoritin-36-mb-smart-cache-laatikko-intel-bx80768270k",
-      "external_id": "178171"
+      "external_id": "178171",
+      "extraction": "listing_card"
     },
     {
       "name": "AMD Ryzen 7 7800X3D suoritin 4,2 GHz 96 MB L3 TRAY Kasauspalveluun",
       "price_cents": 34990,
       "url": "https://datatronic.fi/komponentit/prosessorit/amd-ryzen-7-7800x3d-suoritin-42-ghz-96-mb-l3-tray-kasauspalveluun-amd-100-000000910",
-      "external_id": "165960"
+      "external_id": "165960",
+      "extraction": "listing_card"
     },
     {
       "name": "Intel Core i7-14700K suoritin 33 MB Smart Cache Laatikko",
       "price_cents": 38900,
       "url": "https://datatronic.fi/komponentit/prosessorit/intel-core-i7-14700k-suoritin-33-mb-smart-cache-laatikko-intel-bx8071514700k",
-      "external_id": "140808"
+      "external_id": "140808",
+      "extraction": "listing_card"
     },
     {
       "name": "AMD Ryzen 9 9950X3D suoritin 4,3 GHz 144 MB L2 & L3 Laatikko",
       "price_cents": 69900,
       "url": "https://datatronic.fi/komponentit/prosessorit/amd-ryzen-9-9950x3d-suoritin-43-ghz-144-mb-l2-l3-laatikko-amd-100-100000719wof",
-      "external_id": "168294"
+      "external_id": "168294",
+      "extraction": "listing_card"
     },
     {
       "name": "AMD Ryzen 7 5700G suoritin 3,8 GHz 16 MB L3 Laatikko",
       "price_cents": 22190,
       "url": "https://datatronic.fi/komponentit/prosessorit/amd-ryzen-7-5700g-suoritin-38-ghz-16-mb-l3-laatikko-amd-100-100000263box",
-      "external_id": "30902"
+      "external_id": "30902",
+      "extraction": "listing_card"
     },
     {
       "name": "AMD Ryzen 7 5800X suoritin 3,8 GHz 32 MB L3",
       "price_cents": 24590,
       "url": "https://datatronic.fi/komponentit/prosessorit/amd-ryzen-7-5800x-suoritin-38-ghz-32-mb-l3-amd-100-100000063wof",
-      "external_id": "5101"
+      "external_id": "5101",
+      "extraction": "listing_card"
     }
-  ]
+  ],
+  "page": 1,
+  "site_total_products": 169,
+  "item_count": 24
 }

@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "shop": "Jimms",
+  "category": "gpu",
+  "source_type": "product",
+  "source_url": "https://www.jimms.fi/fi/Product/Show/208911/gv-n507taero-oc-16gd/gigabyte-geforce-rtx-5070-ti-aero-oc-naytonohjain-16gb-gddr7",
+  "fetched_at": "2026-11-05T21:38:28+00:00",
+  "raw_html": "raw/html/jimms/2026-11-05/8232ed9675ef9bb56853051632f4db7b9b0bf7a4c87661b323a62542a26f31bb.html",
+  "origin": "network",
+  "items": [
+    {
+      "name": "Gigabyte GeForce RTX 5070 Ti AERO OC -näytönohjain, 16GB GDDR7",
+      "price_cents": 189290,
+      "url": "https://www.jimms.fi/fi/Product/Show/208911/gv-n507taero-oc-16gd/gigabyte-geforce-rtx-5070-ti-aero-oc-naytonohjain-16gb-gddr7",
+      "external_id": null,
+      "extraction": "meta[property=\"product:price:amount\"]"
+    }
+  ],
+  "page": null,
+  "site_total_products": null,
+  "item_count": 1
+}

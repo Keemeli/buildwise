@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "shop": "Jimms",
+  "category": "gpu",
+  "source_type": "product",
+  "source_url": "https://www.jimms.fi/fi/Product/Show/208570/rog-astral-rtx5080-o16g-gaming/asus-geforce-rtx-5080-rog-astral-oc-edition-naytonohjain-16gb-gddr7",
+  "fetched_at": "2026-11-05T21:38:13+00:00",
+  "raw_html": "raw/html/jimms/2026-11-05/5652c339cb9d16fedce1fcae6fd88be42a77a8d564e23816704122603c057dc8.html",
+  "origin": "network",
+  "items": [
+    {
+      "name": "Asus GeForce RTX 5080 ROG Astral - OC Edition -näytönohjain, 16GB GDDR7",
+      "price_cents": 226990,
+      "url": "https://www.jimms.fi/fi/Product/Show/208570/rog-astral-rtx5080-o16g-gaming/asus-geforce-rtx-5080-rog-astral-oc-edition-naytonohjain-16gb-gddr7",
+      "external_id": null,
+      "extraction": "meta[property=\"product:price:amount\"]"
+    }
+  ],
+  "page": null,
+  "site_total_products": null,
+  "item_count": 1
+}

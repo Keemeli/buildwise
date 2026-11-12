@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "shop": "Jimms",
+  "category": "gpu",
+  "source_type": "product",
+  "source_url": "https://www.jimms.fi/fi/Product/Show/208871/rx9070xt-16g-a/powercolor-radeon-rx-9070-xt-reaper-naytonohjain-16gb-gddr6",
+  "fetched_at": "2026-11-05T21:35:59+00:00",
+  "raw_html": "raw/html/jimms/2026-11-05/ba87f1cd7a352a52bae2b48e11ad212b266b170cbdc29e513aba550d4456973c.html",
+  "origin": "cache",
+  "items": [
+    {
+      "name": "PowerColor Radeon RX 9070 XT Reaper -näytönohjain, 16GB GDDR6",
+      "price_cents": 121990,
+      "url": "https://www.jimms.fi/fi/Product/Show/208871/rx9070xt-16g-a/powercolor-radeon-rx-9070-xt-reaper-naytonohjain-16gb-gddr6",
+      "external_id": null,
+      "extraction": "meta[property=\"product:price:amount\"]"
+    }
+  ],
+  "page": null,
+  "site_total_products": null,
+  "item_count": 1
+}

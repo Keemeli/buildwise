@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "shop": "Jimms",
+  "category": "gpu",
+  "source_type": "product",
+  "source_url": "https://www.jimms.fi/fi/Product/Show/214520/900-5g144-2500-000/nvidia-rtx-pro-6000-blackwell-workstation-edition-naytonohjain-96gb-gddr7-retail",
+  "fetched_at": "2026-11-05T21:38:33+00:00",
+  "raw_html": "raw/html/jimms/2026-11-05/a658ca50f89946b7f5236fbcb82bff16017a83981cde2a60fe7bdb89abcbf41f.html",
+  "origin": "network",
+  "items": [
+    {
+      "name": "NVIDIA RTX PRO 6000 Blackwell Workstation Edition -näytönohjain, 96GB GDDR7, Retail",
+      "price_cents": 1958790,
+      "url": "https://www.jimms.fi/fi/Product/Show/214520/900-5g144-2500-000/nvidia-rtx-pro-6000-blackwell-workstation-edition-naytonohjain-96gb-gddr7-retail",
+      "external_id": null,
+      "extraction": "meta[property=\"product:price:amount\"]"
+    }
+  ],
+  "page": null,
+  "site_total_products": null,
+  "item_count": 1
+}

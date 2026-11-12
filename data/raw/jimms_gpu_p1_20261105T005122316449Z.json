@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "shop": "Jimms",
+  "category": "gpu",
+  "source_type": "product",
+  "source_url": "https://www.jimms.fi/fi/Product/Show/196681/cx-9025002-ww/corsair-icue-link-xg3-rgb-hybrid-gpu-water-block-7900-xt-x-gpu-vesiblokki",
+  "fetched_at": "2026-11-05T00:51:23+00:00",
+  "raw_html": "raw/html/jimms/2026-11-05/03db330ab4e9f2267ab390f551c2d78f60d8bfceb3990c9b7e8fa8e7d56906f0.html",
+  "origin": "network",
+  "items": [
+    {
+      "name": "Corsair iCUE LINK XG3 RGB Hybrid GPU Water Block (7900 XT(X)), GPU-vesiblokki",
+      "price_cents": 23990,
+      "url": "https://www.jimms.fi/fi/Product/Show/196681/cx-9025002-ww/corsair-icue-link-xg3-rgb-hybrid-gpu-water-block-7900-xt-x-gpu-vesiblokki",
+      "external_id": null,
+      "extraction": "meta[property=\"product:price:amount\"]"
+    }
+  ],
+  "page": null,
+  "site_total_products": null,
+  "item_count": 1
+}

@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "shop": "Jimms",
+  "category": "gpu",
+  "source_type": "product",
+  "source_url": "https://www.jimms.fi/fi/Product/Show/218059/geforce-rtx-3050-lp-e-6g-oc/msi-geforce-rtx-3050-lp-e-6g-oc-naytonohjain-6gb-gddr6",
+  "fetched_at": "2026-11-05T21:35:47+00:00",
+  "raw_html": "raw/html/jimms/2026-11-05/5e34d231ab27f23ebee6a5d9062cf8a2a5ece14d3085ee92c68e7994ebf039b0.html",
+  "origin": "network",
+  "items": [
+    {
+      "name": "MSI GeForce RTX 3050 LP E 6G OC -näytönohjain, 6GB GDDR6",
+      "price_cents": 25590,
+      "url": "https://www.jimms.fi/fi/Product/Show/218059/geforce-rtx-3050-lp-e-6g-oc/msi-geforce-rtx-3050-lp-e-6g-oc-naytonohjain-6gb-gddr6",
+      "external_id": null,
+      "extraction": "meta[property=\"product:price:amount\"]"
+    }
+  ],
+  "page": null,
+  "site_total_products": null,
+  "item_count": 1
+}

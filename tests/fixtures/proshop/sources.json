@@ -1,0 +1,34 @@
+{
+  "capture_method": "BuildWise PageFetcher, identified user agent, robots checked, delay 2 seconds; no scripts executed",
+  "robots_url": "https://www.proshop.fi/robots.txt",
+  "sources": [
+    {
+      "fixture": "gpu_page_1.html",
+      "source_url": "https://www.proshop.fi/Naeytoenohjaimet",
+      "fetched_at": "2026-11-11T21:17:04.780459+00:00",
+      "original_sha256": "8f50dfebcf88b29e8de1a7ec86b5a2cfe30b54eec3bfc1c637e123f830647b78",
+      "fixture_sha256": "fa0cb38d70cbe8b08408278ff041d7e8380bacbec039095019a98bbb48251f1b"
+    },
+    {
+      "fixture": "product_3331069.html",
+      "source_url": "https://www.proshop.fi/Naeytoenohjaimet/ASUS-GeForce-RTX-5090-ROG-Astral-OC-32GB-GDDR7-RAM-Naeytoenohjaimet/3331069",
+      "fetched_at": "2026-11-11T21:17:06.763786+00:00",
+      "original_sha256": "fa9c3a486c9f3c1d17aa57fa00c7c550f06f8ac91f28eef72a79b9b5a17baceb",
+      "fixture_sha256": "b8b26e4eddb9f116ffe1e042fc1610c400a3d1b35743e6ec2bb8c49e6a19484d"
+    },
+    {
+      "fixture": "product_3331106.html",
+      "source_url": "https://www.proshop.fi/Naeytoenohjaimet/GIGABYTE-GeForce-RTX-5070-Ti-WindForce-3-OC-16GB-GDDR7-RAM-Naeytoenohjaimet/3331106",
+      "fetched_at": "2026-11-11T21:17:08.735143+00:00",
+      "original_sha256": "10927b9cac9d7a426fc004b11ee71b0f4cc1fc62af5fa25f0373d38034761d95",
+      "fixture_sha256": "c9416bb63d7d898c8ddf4fc831604db13c32cdb7bdcce40745bd045c3f5eddc1"
+    },
+    {
+      "fixture": "gpu_page_2.html",
+      "source_url": "https://www.proshop.fi/Naeytoenohjaimet?pn=2",
+      "fetched_at": "2026-11-11T21:17:56.354882+00:00",
+      "original_sha256": "cb211c65033bef5743138c26b31197d34dd9961088e09884638f81672bd1fdd3",
+      "fixture_sha256": "02ab4bb3440c19040e925d0ef854304445b63252684d78f93a2285aec11195c9"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "shop": "Jimms",
+  "category": "gpu",
+  "source_type": "product",
+  "source_url": "https://www.jimms.fi/fi/Product/Show/196680/cx-9025003-ww/corsair-icue-link-xg3-rgb-hybrid-gpu-water-block-4070-ti-4070-gpu-vesiblokki",
+  "fetched_at": "2026-11-05T00:51:25+00:00",
+  "raw_html": "raw/html/jimms/2026-11-05/3d5b3979d6d33b10569c9b9d5a09296c61ceb6eab2702e2c00d70337a6608f2f.html",
+  "origin": "cache",
+  "items": [
+    {
+      "name": "Corsair iCUE LINK XG3 RGB Hybrid GPU Water Block (4070 Ti/4070), GPU-vesiblokki",
+      "price_cents": 23990,
+      "url": "https://www.jimms.fi/fi/Product/Show/196680/cx-9025003-ww/corsair-icue-link-xg3-rgb-hybrid-gpu-water-block-4070-ti-4070-gpu-vesiblokki",
+      "external_id": null,
+      "extraction": "meta[property=\"product:price:amount\"]"
+    }
+  ],
+  "page": null,
+  "site_total_products": null,
+  "item_count": 1
+}

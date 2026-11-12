@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "shop": "Jimms",
+  "category": "gpu",
+  "source_type": "product",
+  "source_url": "https://www.jimms.fi/fi/Product/Show/208870/rx9070xt-16g-l-oc/powercolor-radeon-rx-9070-xt-hellhound-naytonohjain-16gb-gddr6",
+  "fetched_at": "2026-11-05T21:35:45+00:00",
+  "raw_html": "raw/html/jimms/2026-11-05/5c0cae0ac2cb3bd62fc54e8581fffefbcc1def1f32572729ef1a0b204d167b22.html",
+  "origin": "cache",
+  "items": [
+    {
+      "name": "PowerColor Radeon RX 9070 XT Hellhound -näytönohjain, 16GB GDDR6",
+      "price_cents": 125490,
+      "url": "https://www.jimms.fi/fi/Product/Show/208870/rx9070xt-16g-l-oc/powercolor-radeon-rx-9070-xt-hellhound-naytonohjain-16gb-gddr6",
+      "external_id": null,
+      "extraction": "meta[property=\"product:price:amount\"]"
+    }
+  ],
+  "page": null,
+  "site_total_products": null,
+  "item_count": 1
+}

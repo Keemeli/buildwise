@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "shop": "Jimms",
+  "category": "gpu",
+  "source_type": "product",
+  "source_url": "https://www.jimms.fi/fi/Product/Show/210620/dual-rtx5060ti-o8g/asus-geforce-rtx-5060-ti-dual-oc-edition-naytonohjain-8gb-gddr7",
+  "fetched_at": "2026-11-05T21:35:37+00:00",
+  "raw_html": "raw/html/jimms/2026-11-05/bf6bec50681b057061c366d319c8e8148b23fb715b59d57aa7544fb7c6730baf.html",
+  "origin": "network",
+  "items": [
+    {
+      "name": "Asus GeForce RTX 5060 Ti DUAL - OC Edition -näytönohjain, 8GB GDDR7",
+      "price_cents": 56990,
+      "url": "https://www.jimms.fi/fi/Product/Show/210620/dual-rtx5060ti-o8g/asus-geforce-rtx-5060-ti-dual-oc-edition-naytonohjain-8gb-gddr7",
+      "external_id": null,
+      "extraction": "meta[property=\"product:price:amount\"]"
+    }
+  ],
+  "page": null,
+  "site_total_products": null,
+  "item_count": 1
+}

@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "shop": "Jimms",
+  "category": "gpu",
+  "source_type": "product",
+  "source_url": "https://www.jimms.fi/fi/Product/Show/208016/b580-cl-12go/asrock-intel-arc-b580-challenger-12gb-oc-naytonohjain-12gb-gddr6",
+  "fetched_at": "2026-11-05T21:35:51+00:00",
+  "raw_html": "raw/html/jimms/2026-11-05/29d2f0e1d636b3182080fb62176db277bdc4a4dfed189eef5428aab5e3257412.html",
+  "origin": "network",
+  "items": [
+    {
+      "name": "ASRock Intel Arc B580 Challenger 12GB OC -näytönohjain, 12GB GDDR6",
+      "price_cents": 45290,
+      "url": "https://www.jimms.fi/fi/Product/Show/208016/b580-cl-12go/asrock-intel-arc-b580-challenger-12gb-oc-naytonohjain-12gb-gddr6",
+      "external_id": null,
+      "extraction": "meta[property=\"product:price:amount\"]"
+    }
+  ],
+  "page": null,
+  "site_total_products": null,
+  "item_count": 1
+}
