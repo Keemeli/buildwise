@@ -110,11 +110,15 @@ buildwise/
 │   ├── raw/          # raw scraped payloads (JSON, cached HTML)
 │   ├── normalised/   # components.json + normalisation report
 │   └── schema.sql    # database schema
-├── engine/           # compatibility rules, scoring, performance model
-├── web/              # Next.js application
-├── docs/             # hours log, meeting notes, design decisions
+├── web/              # Next.js application (compatibility rules in web/lib/compat.js)
+├── docs/             # written-down rules and design decisions
 └── .github/workflows # CI
 ```
+
+The build checker's rules are written down in
+[`docs/compatibility-rules.md`](docs/compatibility-rules.md): every check it makes, which
+field it reads for that check, what it refuses to decide, and what has to be added when a
+new rule appears.
 
 ## Getting started (development)
 
