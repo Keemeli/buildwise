@@ -23,6 +23,7 @@ class CollectionCounters:
     duplicates_skipped: int = 0
     recovered_issues: int = 0
     unresolved_outcomes: int = 0
+    excluded_products: int = 0
 
 
 @dataclass(frozen=True)
@@ -38,6 +39,7 @@ class CollectionOutcome:
     error: str
     external_id: str | None = None
     retailer_sku: str | None = None
+    page: int | None = None
 
 
 def classify_problem(error=None, *, reason='missing_price', stage='parse') -> tuple[str, str]:
@@ -83,6 +85,7 @@ class CollectionResult:
     recovered: tuple[CollectionOutcome, ...]
     counters: CollectionCounters
     coverage: tuple[dict, ...]
+    exclusions: tuple[dict, ...] = ()
 
     @property
     def status(self) -> str:

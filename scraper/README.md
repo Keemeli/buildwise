@@ -1,79 +1,156 @@
 # BuildWise data pipeline
 
-Run all commands from the repository root through one entry point:
+Run all commands from the repository root. Install or update dependencies in
+an activated virtual environment after pulling scraper changes:
+
+```sh
+python3 -m pip install -r scraper/requirements.txt
+```
+
+The shared entry point is:
 
 ```sh
 python3 -m scraper --help
 ```
 
-## Commands
+## Common usage
+
+The command structure is shared. Choose a retailer once, then use the same
+commands below. Set `RETAILER` to `jimms`, `datatronic` or `proshop`.
+`gpu` is configured for all three, including price collection and product-page
+specifications. Check the capability table before using an optional operation.
 
 ```sh
-# Collect displayed Jimms category prices
-python3 -m scraper collect --shop jimms --category gpu --pages 2
+RETAILER=jimms
 
-# Use an explicit category URL instead of the configured path
-python3 -m scraper collect --shop jimms --category gpu --url 'https://www.jimms.fi/fi/Product/List/000-00P/komponentit--naytonohjaimet' --pages 2
+# Collect displayed prices from two category pages
+python3 -m scraper collect --shop "$RETAILER" --category gpu --pages 2
 
-# Reuse existing Jimms product URLs; discovery is skipped
-python3 -m scraper collect --shop jimms --input scraper/inputs/jimms_urls.json
+# Collect specifications for up to 25 saved product URLs
+python3 -m scraper specs --shop "$RETAILER" --category gpu --limit 25
 
-# Datatronic category-card prices through the same interface
-python3 -m scraper collect --shop datatronic --category gpu --pages 2
+# Retry up to five eligible pending price-collection entries
+python3 -m scraper retry --shop "$RETAILER" --limit 5
 
-# Read today's cached category and product HTML without network requests
-python3 -m scraper collect --shop jimms --category gpu --pages 2 --offline
-
-# Collect specifications through the same worker for either retailer
-python3 -m scraper specs --shop datatronic --category gpu --limit 25
-python3 -m scraper specs --shop jimms --category gpu --limit 25
-python3 -m scraper specs --shop datatronic --offline
-python3 -m scraper specs --shop jimms --offline
-
-# Transform saved data and publish separately when needed
+# Rebuild the combined catalogue from saved observations
 python3 -m scraper normalise
+
+# Publish the catalogue to the web copy, or check that copy
 python3 -m scraper export
 python3 -m scraper export --check
-
-# Normal collection -> supported specs -> normalisation -> web export
-python3 -m scraper refresh --shops jimms,datatronic --categories gpu --pages 2
-
-# Rebuild and publish saved observations without any collection or spec requests
-python3 -m scraper refresh --offline
-
-python3 -m unittest discover -s tests -v
 ```
 
-`collect` saves observations; `refresh` also normalises and exports. Both
-retailers now use CollectionWorker and get displayed prices from category pages.
-Only explicit adapter ProductRequests trigger product-page price reads. The two
-verified Jimms GPU pages yield 50 products from two category responses, plus any
-robots.txt request required for an uncached run; no product-page visits are needed.
+`collect` saves observations without publishing. `specs` reads product URLs from
+saved raw observations; `retry` processes eligible pending price work, not
+specification failures. `normalise` and `export` combine all saved retailers and
+therefore take no `--shop` option.
 
-`--category` selects configured categories; repeat it for multiple categories.
-`--all` uses the selected adapter's configuration (seven categories for Datatronic,
-GPU/CPU for Jimms). GPU card prices are verified for Jimms; CPU layout still needs
-its own fixture validation. Use `--url` with exactly one category to override an
-allowed retailer URL. Use `--input` instead of categories to read product-page
-requests; the adapter must declare product-price support. Currently Jimms supports
-this, while Datatronic explicitly rejects it. Optional manifest fields
-`external_id` and `retailer_sku` are retained through follow-up parsing.
+To collect, fetch specifications, normalise and publish in one run:
 
-`--force` and `--offline` are mutually exclusive. Offline collection reads today's
-HTML cache; missing pages fail explicitly. The worker owns one fetcher for the
-entire run, so robots state and request spacing are retained across categories and
-follow-ups. Collection writes no new discovery manifests: saved
-`data/discovery/` files remain usable as manual inputs and are not deleted.
+```sh
+python3 -m scraper refresh --shops "$RETAILER" --categories gpu --pages 2
 
-Refresh uses one collection stage per retailer through the same CLI. `--input`
-and `--url` can target a single retailer; `--jimms-input` and
-`--jimms-category-url` remain legacy aliases at the refresh boundary. `--offline`
-means normalise/export only. `--skip-scrape` alone can still run supported
-specification stages. `--cold` forces specification refreshes for each selected retailer, not price reads.
+# Or select both retailers explicitly
+python3 -m scraper refresh --shops jimms,datatronic --categories gpu --pages 2
+```
 
-For isolated runs, collect accepts `--data-dir`. Refresh accepts `--data-dir` and
-`--web-output`; normalise accepts `--raw-dir`/`--out`, and export accepts
-`--source`/`--target`. Default export still writes `web/data/components.json`.
+Refresh stops if a collection or specification stage fails. It writes
+`data/refresh_log.jsonl`; collection runs write `data/raw/scrape_runs.jsonl`.
+
+### Shared options and supported capabilities
+
+The same interface does not require identical retailer HTML or request patterns.
+All three retailers extract category prices; supported product-page specifications use
+the selected adapter's parser.
+
+| Capability | Datatronic | Jimms | Proshop |
+| --- | --- | --- | --- |
+| Configured categories | GPU, CPU, motherboard, memory, storage, PSU, case | GPU, CPU | GPU |
+| Category-page prices | Supported | Supported | Supported |
+| Product-page specifications | Supported | Supported | Supported (GPU) |
+| Direct product-page prices (`collect --input`) | Unsupported | Supported | Unsupported |
+
+`--category` selects a configured category; repeat it to select several.
+`collect --all` selects every category configured for that retailer. Refresh
+categories must be supported by each selected retailer; specify `--categories`
+when their configured category sets differ.
+
+`collect`, `specs` and `retry` accept `--offline` to use today's HTML cache or
+`--force` to fetch fresh pages. These options are mutually exclusive. Missing
+cache entries fail explicitly. Requests retain allowed-host validation, robots
+checks and delays; `--delay` defaults to one second and must be at least one.
+
+```sh
+# Cached collection and specification parsing, without network requests
+python3 -m scraper collect --shop "$RETAILER" --category gpu --pages 2 --offline
+python3 -m scraper specs --shop "$RETAILER" --category gpu --limit 25 --offline
+
+# Show saved specification status for the selected retailer
+python3 -m scraper specs --shop "$RETAILER" --status
+
+# Only rebuild and publish saved data; no collection/specification requests
+python3 -m scraper refresh --offline
+```
+
+Refresh's `--offline` means normalise/export only. `--skip-scrape` skips price
+collection while retaining supported specification stages; `--skip-specs` skips
+specification stages. `--cold` forces fresh specification reads for each selected
+retailer, without forcing fresh category prices.
+
+For isolated output, `collect` and `retry` accept `--data-dir`; `specs` and
+`normalise` accept `--raw-dir`/`--out`. Refresh accepts `--data-dir`/`--web-output`;
+export accepts `--source`/`--target`. Default export writes
+`web/data/components.json`.
+
+## Special usage
+
+These are optional ways to supply inputs to the same shared commands. Ordinary
+collection needs only `--shop`, `--category` and `--pages`. Optional features are
+available where the selected adapter supports them; there is no separate retailer
+command or worker.
+
+### Category URL overrides (either retailer)
+
+Use `--url` to test another category URL or temporarily replace an outdated
+configured path. Supply exactly one `--category`, and use an allowed retailer host.
+The URL must actually contain products belonging to that category; the category
+argument does not independently classify the products.
+
+```sh
+# Jimms example
+python3 -m scraper collect --shop jimms --category gpu --pages 2 \
+  --url 'https://www.jimms.fi/fi/Product/List/000-00P/komponentit--naytonohjaimet'
+
+# Datatronic example: the same option with a different retailer URL
+python3 -m scraper collect --shop datatronic --category gpu --pages 2 \
+  --url 'https://datatronic.fi/naytonohjaimet'
+```
+
+### Selected product URLs (currently Jimms)
+
+Use `--input` when you want a small debugging sample or specific product-page
+prices without category discovery. The adapter must support product-page prices;
+Datatronic currently rejects this mode. Standard category collection and
+specification collection work for both retailers without a product manifest.
+
+```sh
+cp scraper/inputs/jimms_urls.example.json scraper/inputs/jimms_urls.json
+# Edit the copied file and replace placeholder URLs with real product URLs
+python3 -m scraper collect --shop jimms --input scraper/inputs/jimms_urls.json
+```
+
+Manifests contain category/URL pairs and optional `external_id`/`retailer_sku`.
+Use `--input` instead of category options or `--url`. Local input JSON files are
+ignored; example manifests are shared. Earlier `data/discovery/` manifests can
+also be supplied explicitly. New collection runs do not generate discovery
+manifests.
+
+### Refresh overrides and compatibility options
+
+Refresh accepts generic `--input` or `--url` for a single selected retailer;
+product manifests require product-price support, and URL overrides require one
+category. Prefer the generic options. `--jimms-input` and `--jimms-category-url`
+are retained only as compatibility aliases for older scripts.
 
 ## Structure
 
@@ -88,6 +165,8 @@ scraper/
     registry.py          lazy retailer factories
     datatronic.py        Datatronic parser and adapter
     jimms.py             Jimms parser and adapter
+    proshop.py           Proshop GPU card prices and condition exclusions
+    proshop_specs.py     grouped Proshop GPU specifications
     datatronic_specs.py  Datatronic labels and data-sheet extraction
     jimms_specs.py       Jimms labels and product-description extraction
   workers/
@@ -121,34 +200,11 @@ selection, parser/report injection and real offline refresh subprocesses. The
 CI export check uses only the standard library; scraping dependencies are loaded
 only for collection/specification commands.
 
-Specification extraction supports both retailers. Jimms GPU parsing is verified
-against saved pages; CPU label conversion has unit coverage but needs real CPU
-product-page fixture validation. Component
-matching remains category/brand/model based, and different retailer titles can
+Specification extraction supports all three registered retailers for GPUs. Jimms GPU parsing is verified
+against saved pages. A manual run parsed five real CPUs and five GPUs without
+failures; checking CPU field accuracy and adding saved CPU regression fixtures
+remain outstanding. Component matching remains category/brand/model based, and different retailer titles can
 still produce separate components. Data schemas and parsing rules are unchanged.
-
-## URL input files
-
-Keep manually maintained product manifests under `scraper/inputs/`. Copy the
-committed example before editing your local list:
-
-```sh
-cp scraper/inputs/jimms_urls.example.json scraper/inputs/jimms_urls.json
-python3 -m scraper collect --shop jimms --input scraper/inputs/jimms_urls.json
-```
-
-The example URL is a placeholder; replace it with an actual product-page URL.
-Local JSON lists are ignored, while `*.example.json` files remain commit-ready.
-Generated category manifests and reports belong in `data/discovery/` and are
-ignored. The previous root-level GPU discovery files have moved to
-`data/discovery/jimms_gpu.json` and `data/discovery/jimms_gpu.report.json`, matching
-the collector's normal output. To reuse saved discovered links explicitly:
-
-```sh
-python3 -m scraper collect --shop jimms --input data/discovery/jimms_gpu.json
-```
-
-Raw product observations in `data/raw/` and the normalised catalogue are unchanged.
 
 ## Shared raw price-observation contract (version 2)
 
@@ -504,3 +560,89 @@ refresh, database work or live requests are part of this milestone's verificatio
 A read-only audit of 53 locally cached GPU-labelled Jimms pages parsed supported
 specifications from 50 pages. The other three were GPU water blocks rather than
 graphics cards and remained empty. No live retailer requests were made.
+
+
+## Proshop GPU prices (milestone 2)
+
+```sh
+python3 -m scraper collect --shop proshop --category gpu --pages 2
+python3 -m scraper retry --shop proshop --limit 5
+```
+
+The adapter reads the displayed VAT-inclusive EUR price from category cards and
+uses Proshop's `pn` pagination. Missing prices remain null; category-only retries
+revisit their source category page rather than requesting product-page prices.
+Proshop product manifests remain unsupported; GPU specifications are supported
+as described below.
+
+Known DEMO listings (title/badge or the verified ID suffix) are excluded from this
+initial new-product scope. Their original IDs, titles, URLs, source page and reason
+are retained in each run's `exclusions` list; `excluded_products` counts distinct
+excluded URLs. Exclusions do not create failures or pending retries. Pagination
+still recognises pages containing only exclusions. In the saved two-page sample,
+50 cards produce 48 regular observations and two reported DEMO exclusions.
+The published category total includes those excluded conditions.
+
+Shared robots matching now uses [Protego](https://github.com/scrapy/protego) for
+wildcards, longest matching rules and specific user-agent groups. Existing
+fail-closed fetching, host restrictions, delay/cache behaviour and status handling
+remain in the shared fetcher. Reinstall `scraper/requirements.txt` before running.
+
+New collection outcomes retain the source page number. Category retries use an
+exact work URL and never regenerate it through an adapter pagination helper.
+This supports `pn`, `page`, offset and path-based URLs without retailer branches
+in the retry worker. Older pending entries remain readable; legacy page-number
+fallbacks label observations only and never rewrite the source URL.
+
+Source evidence and limitations: [milestone 1 audit](docs/proshop-source-verification.md).
+Milestone 2 verification uses saved HTML and mocked responses only; no new live
+requests, existing observation migration or catalogue publication is performed.
+
+
+## Proshop GPU specifications (milestone 3)
+
+```sh
+python3 -m scraper specs --shop proshop --category gpu --limit 5
+
+# Reparse today's cached product pages without requests
+python3 -m scraper specs --shop proshop --category gpu --limit 5 --offline
+```
+
+This is the same shared specification worker used for Jimms and Datatronic. It
+reads saved regular-product URLs, retains retailer IDs, source HTML references and
+source fetch timestamps, and writes the shared `data/normalised/specs.json`.
+Refresh now includes a `proshop-specs` stage. Other categories remain unsupported.
+
+The adapter parser reads only the primary grouped data sheet in
+`#accordionPanel_specs #specItemsAccordion`. Exact section/label matching prevents
+memory `Koko` from becoming physical size and prevents shipping measurements,
+accessories or general summaries from supplying GPU dimensions. Confirmed GPU
+`Syvyys` maps to length; cm values are converted to mm by the canonical converters.
+
+The two saved ASUS/GIGABYTE pages each yield nine verified fields: chipset,
+interface, memory size/type/bus width, recommended PSU and three dimensions.
+GPU power consumption, slot width and power connectors remain null because the
+saved rows do not provide unambiguous standalone values. A PSU recommendation
+is never treated as GPU power consumption. Unknown or conflicting fields are
+reported rather than guessed.
+
+Verification uses the saved pages and temporary output, including shared CLI and
+normaliser integration, preservation of another retailer's entries, and retention
+of earlier specs after an empty refresh. No live requests, existing catalogue
+refresh or raw observation changes are performed by this milestone.
+
+
+## Proshop sample integration review (milestone 4)
+
+The five saved live results have been checked against their cached data sheets and
+normalised in temporary output. Three additional layouts are regression fixtures.
+The server card's explicit operating-power label now maps to `power_w: 600`,
+while its absent PSU recommendation and width remain null. Consumer cards without
+a consumption field still retain null. See the [verification report](docs/proshop-integration-verification.md).
+
+The real catalogue and specification store have not been rewritten by this review.
+To apply the new label to today's cached pages without additional requests:
+
+```sh
+python3 -m scraper specs --shop proshop --category gpu --limit 5 --offline
+```

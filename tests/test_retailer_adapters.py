@@ -61,7 +61,7 @@ class RetailerAdapterTests(unittest.TestCase):
     def test_registry_adapters_implement_contract_without_network(self):
         with patch('requests.Session.get', side_effect=AssertionError('unexpected network')):
             registry = default_registry()
-            self.assertEqual(registry.keys, ('datatronic', 'jimms'))
+            self.assertEqual(registry.keys, ('datatronic', 'jimms', 'proshop'))
             for key in registry.keys:
                 adapter = registry.get(key)
                 self.assertIsInstance(adapter, RetailerAdapter)

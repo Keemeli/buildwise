@@ -1,0 +1,23 @@
+[
+  {
+    "fixture": "product_3331067.html",
+    "source_url": "https://www.proshop.fi/Naeytoenohjaimet/ASUS-GeForce-RTX-5090-TUF-OC-32GB-GDDR7-RAM-Naeytoenohjaimet/3331067",
+    "fetched_at": "2026-11-11T22:28:47+00:00",
+    "original_sha256": "09a924ec4ebc0f2fb688ce91c3e6d3d5b1baf6f15a9e409a655b36db28325f5b",
+    "fixture_sha256": "879c87f111832f64a3dab81692d189d7a745d7ae94713fb45f13d296924911e3"
+  },
+  {
+    "fixture": "product_3395203.html",
+    "source_url": "https://www.proshop.fi/Naeytoenohjaimet/ASUS-GeForce-RTX-5090-ROG-Astral-BTF-OC-32GB-GDDR7-RAM-Naeytoenohjaimet/3395203",
+    "fetched_at": "2026-11-11T22:28:48+00:00",
+    "original_sha256": "63a67c85d3367285fdb3212696921e9d77f358f26574091c1217ab92e179b0ae",
+    "fixture_sha256": "be41d809e62218fcffab7f17cf3c88d8b4e30bda519f41ca4dd7701491d57ab1"
+  },
+  {
+    "fixture": "product_3371545.html",
+    "source_url": "https://www.proshop.fi/Naeytoenohjaimet/NVIDIA-RTX-PRO-6000-Blackwell-Server-Edition-96GB-GDDR7-RAM-Naeytoenohjaimet/3371545",
+    "fetched_at": "2026-11-11T22:28:50+00:00",
+    "original_sha256": "e14639478a73648d234c1b4f356c508e9c5be1c4fec18e16ff8a5384bfa78bff",
+    "fixture_sha256": "f9bbc57731b83f3bba6c8898033f60c683afb7bead218dae1f197a50373b2334"
+  }
+]

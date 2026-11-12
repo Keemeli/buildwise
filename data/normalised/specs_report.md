@@ -1,6 +1,6 @@
-# Product-page data sheet report — 2026-11-05
+# Product-page data sheet report — 2026-11-12
 
-Fetched **339** product pages; **339** parsed successfully, 0 failed.
+Fetched **344** product pages; **344** parsed successfully, 0 failed.
 
 Values here are **parsed from the shop's own data sheet**, not inferred from the product name. Unmapped labels are listed below instead of being guessed.
 
@@ -8,18 +8,18 @@ Values here are **parsed from the shop's own data sheet**, not inferred from the
 
 | Category | Products | Field | Parsed | Coverage |
 |---|---|---|---|---|
-| gpu | 48 | `power_w` | 13 | ❌ 27% |
-| gpu | 48 | `length_mm` | 47 | ✅ 98% |
-| gpu | 48 | `width_mm` | 25 | ⚠️ 52% |
-| gpu | 48 | `height_mm` | 48 | ✅ 100% |
-| gpu | 48 | `slot_width` | 0 | ❌ 0% |
-| gpu | 48 | `power_connectors` | 0 | ❌ 0% |
-| gpu | 48 | `recommended_psu_w` | 43 | ✅ 90% |
-| gpu | 48 | `interface` | 47 | ✅ 98% |
-| gpu | 48 | `vram_gb` | 47 | ✅ 98% |
-| gpu | 48 | `memory_type` | 47 | ✅ 98% |
-| gpu | 48 | `graphics_chipset` | 47 | ✅ 98% |
-| gpu | 48 | `memory_bus_bit` | 0 | ❌ 0% |
+| gpu | 53 | `power_w` | 14 | ❌ 26% |
+| gpu | 53 | `length_mm` | 52 | ✅ 98% |
+| gpu | 53 | `width_mm` | 29 | ⚠️ 55% |
+| gpu | 53 | `height_mm` | 53 | ✅ 100% |
+| gpu | 53 | `slot_width` | 0 | ❌ 0% |
+| gpu | 53 | `power_connectors` | 0 | ❌ 0% |
+| gpu | 53 | `recommended_psu_w` | 47 | ✅ 89% |
+| gpu | 53 | `interface` | 52 | ✅ 98% |
+| gpu | 53 | `vram_gb` | 52 | ✅ 98% |
+| gpu | 53 | `memory_type` | 52 | ✅ 98% |
+| gpu | 53 | `graphics_chipset` | 52 | ✅ 98% |
+| gpu | 53 | `memory_bus_bit` | 5 | ❌ 9% |
 | cpu | 48 | `tdp_w` | 47 | ✅ 98% |
 | cpu | 48 | `max_turbo_power_w` | 14 | ❌ 29% |
 | cpu | 48 | `socket` | 46 | ✅ 96% |
@@ -89,7 +89,7 @@ Values here are **parsed from the shop's own data sheet**, not inferred from the
 
 ## Labels we could not map (top 25)
 
-These are preserved for review — add them to `FIELD_MAP` in `specs.py` when they matter for a compatibility rule.
+These are preserved for review — add them to the selected retailer specification field map when they matter for a compatibility rule.
 
 -   51× storage: Varastossa
 -   49× storage: Komponentti (tuotteelle)

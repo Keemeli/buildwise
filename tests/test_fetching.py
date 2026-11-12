@@ -54,6 +54,31 @@ class SharedFetchingTests(unittest.TestCase):
                     self.assertEqual(get.call_count, 1)
                 fetcher.close()
 
+    def test_proshop_wildcards_allow_only_matching_query_exceptions(self):
+        rules = (Path(__file__).parent / 'fixtures/proshop/robots.txt').read_text()
+        with tempfile.TemporaryDirectory() as directory:
+            fetcher = PageFetcher(Path(directory), 'proshop', {'www.proshop.fi'})
+            self.addCleanup(fetcher.close)
+            with patch.object(fetcher.session, 'get', return_value=Mock(status_code=200, text=rules)) as get:
+                for path in ('/Naeytoenohjaimet', '/Naeytoenohjaimet?pn=2', '/CustomerCenter/CustomerAccount/Login', '/CustomerCenter/Newsletter/start'):
+                    self.assertEqual(fetcher._check_robots('https://www.proshop.fi' + path), 1)
+                for path in ('/Naeytoenohjaimet?page=2', '/Naeytoenohjaimet?sort=price', '/Basket/AddItem', '/CustomerCenter/Account', '/manual.pdf'):
+                    with self.subTest(path=path), self.assertRaisesRegex(ValueError, 'disallows'):
+                        fetcher._check_robots('https://www.proshop.fi' + path)
+                self.assertEqual(get.call_count, 1)
+
+    def test_longest_allow_rule_and_specific_user_agent_group_are_respected(self):
+        from protego import Protego
+        from scraper.common.fetching import USER_AGENT
+        rules = Protego.parse('User-agent: BuildWise-course-project\nDisallow: /private/*\nAllow: /private/public$\nCrawl-delay: 3\nRequest-rate: 2/10\n\nUser-agent: *\nDisallow: /\n')
+        self.assertTrue(rules.can_fetch('https://example.org/private/public', USER_AGENT))
+        self.assertFalse(rules.can_fetch('https://example.org/private/public/extra', USER_AGENT))
+        self.assertFalse(rules.can_fetch('https://example.org/private/secret', USER_AGENT))
+        self.assertTrue(rules.can_fetch('https://example.org/other', USER_AGENT))
+        self.assertFalse(rules.can_fetch('https://example.org/other', 'OtherBot'))
+        self.assertEqual(rules.crawl_delay(USER_AGENT), 3)
+        self.assertEqual(rules.request_rate(USER_AGENT).seconds, 10)
+
 
 if __name__ == '__main__':
     unittest.main()

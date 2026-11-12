@@ -8,7 +8,7 @@ import time
 from datetime import date
 from pathlib import Path
 from urllib.parse import urlsplit
-from urllib.robotparser import RobotFileParser
+from protego import Protego
 
 import requests
 
@@ -44,7 +44,7 @@ class PageFetcher:
         self.hosts = hosts
         self.delay, self.offline, self.force = delay, offline, force
         self.last_attempt: float | None = None
-        self.robots: dict[str, tuple[RobotFileParser, float] | RobotsUnavailableError] = {}
+        self.robots: dict[str, tuple[Protego, float] | RobotsUnavailableError] = {}
         self.session = requests.Session() if session is None else session
         self.session.headers.update({"User-Agent": USER_AGENT,
                                      "Accept-Language": "fi-FI,fi;q=0.9,en;q=0.8"})
@@ -84,8 +84,7 @@ class PageFetcher:
                         raise ValueError("robots.txt returned HTML")
                 else:
                     raise ValueError(f"robots.txt returned HTTP {response.status_code}")
-                rules = RobotFileParser(robots_url)
-                rules.parse(text.splitlines())
+                rules = Protego.parse(text)
                 wait = max(self.delay, float(rules.crawl_delay(USER_AGENT) or 0))
                 rate = rules.request_rate(USER_AGENT)
                 if rate and rate.requests > 0:
@@ -102,7 +101,7 @@ class PageFetcher:
         if isinstance(entry, RobotsUnavailableError):
             raise entry
         rules, wait = entry
-        if not rules.can_fetch(USER_AGENT, url):
+        if not rules.can_fetch(url, USER_AGENT):
             raise RobotsDisallowedError(f"robots.txt disallows {url}")
         return wait
 

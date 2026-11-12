@@ -1,7 +1,7 @@
 """Adapter-driven collection with explicit unresolved outcomes and run identity."""
 from __future__ import annotations
 
-from dataclasses import dataclass, replace
+from dataclasses import asdict, dataclass, replace
 from datetime import datetime, timezone
 import json
 from pathlib import Path
@@ -39,11 +39,15 @@ class CollectionWorker:
 
     def __init__(self, adapter: RetailerAdapter, data_dir: Path, fetcher,
                  categories=(), pages: int = 1, product_requests=(), raw_writer=None,
-                 category_url_overrides=None, start_page=1, close_fetcher=True):
+                 category_url_overrides=None, start_page=1, close_fetcher=True, category_request_urls=None):
         if type(pages) is not int or pages < 1:
             raise ValueError('pages must be positive')
         if type(start_page) is not int or start_page < 1:
             raise ValueError('start_page must be positive')
+        categories = tuple(categories)
+        self.category_request_urls = dict(category_request_urls or {})
+        if self.category_request_urls and (pages != 1 or not set(self.category_request_urls).issubset(categories)):
+            raise ValueError('exact category requests need one page and selected categories')
         self.start_page = start_page
         self.close_fetcher = close_fetcher
         self.adapter, self.data_dir, self.fetcher = adapter, data_dir, fetcher
@@ -57,7 +61,8 @@ class CollectionWorker:
         started = datetime.now(timezone.utc).isoformat(timespec='seconds')
         self.counters = CollectionCounters(category_pages_planned=len(self.categories) * self.pages)
         self.pages_fetched = self.products_fetched = 0
-        self.issues, self.queue, self.coverage = [], [], []
+        self.issues, self.queue, self.coverage, self.exclusions = [], [], [], []
+        self.category_pages, self.excluded_urls = {}, set()
         self.outcomes, self.recovered, self.deferred = {}, {}, {}
         self.identified, self.saved, self.priced = set(), set(), set()
         self.visited_pages, self.queued_products, self.failed_sources = set(), set(), set()
@@ -67,6 +72,8 @@ class CollectionWorker:
                 self.adapter.category_url(category)
                 if category in self.overrides:
                     self.adapter.config.validate_url(self.overrides[category])
+            for url in self.category_request_urls.values():
+                self.adapter.config.validate_url(url)
             for request in self.product_requests:
                 self._validate_request(request)
                 self._enqueue(request)
@@ -80,6 +87,7 @@ class CollectionWorker:
             self._save_remaining_nulls()
             self.counters.unique_products_identified = len(self.identified)
             self.counters.source_failures = len(self.failed_sources)
+            self.counters.excluded_products = len(self.excluded_urls)
             self.counters.recovered_issues = len(self.recovered)
             self.counters.unresolved_outcomes = len(self.outcomes)
             result = CollectionResult(
@@ -89,7 +97,7 @@ class CollectionWorker:
                 items_found=len(self.saved), duplicates_skipped=self.counters.duplicates_skipped,
                 started_at=started, finished_at=datetime.now(timezone.utc).isoformat(timespec='seconds'),
                 failures=tuple(self.outcomes.values()), issues=tuple(self.issues),
-                recovered=tuple(self.recovered.values()), counters=self.counters, coverage=tuple(self.coverage))
+                recovered=tuple(self.recovered.values()), counters=self.counters, coverage=tuple(self.coverage), exclusions=tuple(self.exclusions))
             raw_dir = self.data_dir / 'raw'
             raw_dir.mkdir(parents=True, exist_ok=True)
             with (raw_dir / 'scrape_runs.jsonl').open('a', encoding='utf-8') as handle:
@@ -107,7 +115,8 @@ class CollectionWorker:
             print(f'{result.status} [run {result.run_id}]: {result.items_found} products; '
                   f'{self.counters.observations_saved} observations '
                   f'({self.counters.priced_observations} priced, {self.counters.null_price_observations} null); '
-                  f'{len(result.failures)} unresolved, {len(result.recovered)} recovered')
+                  f'{len(result.failures)} unresolved, {len(result.recovered)} recovered, '
+                  f'{self.counters.excluded_products} excluded')
             print(f'  sources: {self.counters.cache_hits} cached, {self.counters.network_responses} network '
                   f'responses, {self.counters.source_failures} failed attempts')
             return result
@@ -126,7 +135,8 @@ class CollectionWorker:
         self.outcomes[self._key(category, url, kind)] = CollectionOutcome(
             self.run_id, self.adapter.config.name, stage, category, url, source_url, code, retry,
             message or (str(error) if error is not None else reason.replace('_', ' ')),
-            getattr(identity, 'external_id', None), getattr(identity, 'retailer_sku', None))
+            getattr(identity, 'external_id', None), getattr(identity, 'retailer_sku', None),
+            self.category_pages.get(source_url))
 
     def _resolve(self, url):
         for key in list(self.outcomes):
@@ -208,8 +218,12 @@ class CollectionWorker:
     def _collect_category(self, category):
         signatures = set()
         for page in range(self.start_page, self.start_page + self.pages):
-            url = self.adapter.page_url(category, page, category_url=self.overrides[category]) \
-                if category in self.overrides else self.adapter.page_url(category, page)
+            if category in self.category_request_urls:
+                url = self.category_request_urls[category]
+            else:
+                url = self.adapter.page_url(category, page, category_url=self.overrides[category]) \
+                    if category in self.overrides else self.adapter.page_url(category, page)
+            self.category_pages[url] = page
             if url in self.visited_pages:
                 self.counters.duplicates_skipped += 1
                 continue
@@ -222,7 +236,7 @@ class CollectionWorker:
                 phase = 'parse'
                 result = self.adapter.parse_category(html, category, url)
                 context = SourceContext(category, 'category', url, path, origin, page, result.site_total_products)
-                signature = frozenset([*(p.url for p in result.observations), *(r.url for r in result.product_requests)])
+                signature = frozenset([*(p.url for p in result.observations), *(r.url for r in result.product_requests), *(e.url for e in result.exclusions)])
                 if (not signature and not result.end_of_category) or signature and signature in signatures:
                     reason = 'empty_page' if not signature else 'repeated_page'
                     self._record(category, url, url, 'category', reason=reason, kind='category',
@@ -235,7 +249,13 @@ class CollectionWorker:
                 if signature:
                     signatures.add(signature)
                 self.counters.category_pages_processed += 1
-                self.identified.update(signature)
+                self.identified.update(p.url for p in result.observations)
+                self.identified.update(r.url for r in result.product_requests)
+                for excluded in result.exclusions:
+                    if excluded.url not in self.excluded_urls:
+                        self.excluded_urls.add(excluded.url)
+                        self.exclusions.append({**asdict(excluded), 'shop': self.adapter.config.name,
+                                                'category': category, 'source_url': url, 'page': page})
                 priced = []
                 seen = set(self.priced)
                 for product in result.observations:
@@ -257,7 +277,8 @@ class CollectionWorker:
                         known = self.deferred.get(request.url)
                         self._record(category, request.url, url, 'product', error=exc,
                                      product=known[0] if known else None, request=request)
-                print(f'  [{category}] page {page}: {len(result.observations)} identified observations ({origin})')
+                print(f'  [{category}] page {page}: {len(result.observations)} identified observations, '
+                      f'{len(result.exclusions)} excluded ({origin})')
                 if result.end_of_category:
                     self.coverage.append({'category': category, 'reason': 'confirmed_end',
                                           'evidence': result.end_reason, 'last_page': page})

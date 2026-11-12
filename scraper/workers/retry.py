@@ -33,10 +33,20 @@ class RetryService:
             # Category-only retailers must revisit the listing containing the item.
             url = entry['url'] if entry['kind'] == 'category' else outcome['source_url']
             self.adapter.config.validate_url(url)
-            page = int(parse_qs(urlsplit(url).query).get('page', ['1'])[0])
-            if page < 1:
+            page = outcome.get('page')
+            if page is None:
+                for sighting in reversed(entry.get('sightings', [])):
+                    context = sighting.get('source_context') or {}
+                    if context.get('source_url') == url and context.get('page'):
+                        page = context['page']
+                        break
+            if page is None:
+                # Legacy reports lack page metadata. This fallback labels the
+                # observation only; the exact work URL is never reconstructed.
+                page = int(parse_qs(urlsplit(url).query).get('page', ['1'])[0])
+            if type(page) is not int or page < 1:
                 raise ValueError('pending category page must be positive')
-            kwargs.update(categories=(category,), category_url_overrides={category: url},
+            kwargs.update(categories=(category,), category_request_urls={category: url},
                           start_page=page)
         return CollectionWorker(self.adapter, self.options.data_dir, self.fetcher,
                                 pages=1, close_fetcher=False, **kwargs)

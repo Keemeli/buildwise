@@ -30,4 +30,8 @@ def default_registry() -> RetailerRegistry:
         from scraper.retailers.jimms import JimmsAdapter
         return JimmsAdapter()
 
-    return RetailerRegistry({'datatronic': datatronic, 'jimms': jimms})
+    def proshop():
+        from scraper.retailers.proshop import ProshopAdapter
+        return ProshopAdapter()
+
+    return RetailerRegistry({'datatronic': datatronic, 'jimms': jimms, 'proshop': proshop})

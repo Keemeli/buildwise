@@ -1,0 +1,26 @@
+User-agent: Googlebot-Image
+Disallow:
+
+User-agent: *
+# QUERIES
+Disallow: /*?*
+Allow: /?s=
+Allow: /*?pn=
+Allow: /*?utm_*=
+
+# PATHS
+Disallow: /CustomerCenter/*
+Allow: /CustomerCenter/CustomerAccount/Login
+Allow: /CustomerCenter/Newsletter/*
+Disallow: /Basket/*
+Disallow: /Pdf/*
+Disallow: /basisbank/*
+
+# DOCS
+Disallow: /*.pdf$
+
+# API
+Disallow: /api/addresslookup/*
+
+# SITEMAP
+Sitemap: https://www.proshop.fi/sitemap.xml

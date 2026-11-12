@@ -16,7 +16,7 @@ python3 -m unittest discover -s tests -p test_fetching.py -v
 | test_datatronic_parser.py | Listing-card parsing | 1 |
 | test_datatronic_worker.py | Collection output, pagination and failure handling | 3 |
 | test_datatronic_specifications.py | Specification filtering, parsing, cache and failure policy | 11 |
-| test_fetching.py | Shared robots checks, throttling and cache behaviour | 3 |
+| test_fetching.py | Shared robots checks, wildcard rules, throttling and cache behaviour | 5 |
 | test_prices.py | Exact price conversion | 1 |
 | test_raw_data.py | Shared observation schema and mixed-source compatibility | 7 |
 | test_normalisation.py | Component parsing, multi-shop merging and newest prices | 4 |
@@ -35,7 +35,10 @@ python3 -m unittest discover -s tests -p test_fetching.py -v
 | test_price_workflow.py | Collection/null/retry/normalisation and mixed-format integration | 2 |
 | test_jimms_specifications.py | Saved Jimms markup, canonical fields and conservative parsing | 5 |
 | test_specifications_shared.py | Cross-retailer specification CLI, policy, persistence and normalisation | 7 |
-| **Total** | | **145** |
+| test_proshop_adapter.py | Proshop card identity, prices, pagination, conditions and errors | 6 |
+| test_proshop_collection.py | Shared Proshop CLI, exact-page retries and exclusion reporting | 6 |
+| test_proshop_specifications.py | Grouped GPU fields, units, unknowns and shared specs/normalisation | 8 |
+| **Total** | | **167** |
 
 Tests are grouped by the responsibility they verify. A shared fetching test may
 use a Jimms URL as a fixture, but its behaviour applies to both retailers. CLI and
@@ -94,3 +97,18 @@ checks for Jimms parsing and shared orchestration. Tests reuse cached/fixture HT
 or mock responses, preserve source timestamps, check both retailers in one store,
 and verify normaliser compatibility without writing real catalogue files. Refresh
 planning now expects both supported specification stages.
+
+Proshop milestone 2 adds saved-card extraction and offline CLI/retry checks. The
+shared robots tests cover Proshop's query exceptions and longest/specific-agent
+rules. Registered-adapter checks now include Proshop. Tests run with the updated
+requirements (Protego included); no retailer requests are made.
+
+Proshop milestone 3 adds six focused parser/workflow checks. The existing Proshop
+collection checks now expect its shared specification stage instead of rejecting
+specs. Tests cover both saved product pages, unknown/conflicting values, exclusion
+of shipping and summary dimensions, source times, IDs, other-retailer entries,
+normaliser compatibility and preservation of earlier successful specs.
+
+Proshop milestone 4 saves TUF/BTF/server layouts and adds two regression checks
+for their dimensions and distinct operating-power/PSU meanings. The five actual
+product results were audited and normalised in temporary output without requests.

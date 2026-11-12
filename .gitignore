@@ -171,3 +171,6 @@ data/raw/html/
 
 # Local resumable collection state
 /data/pending/
+
+# Operational specification command lock
+/data/normalised/specs.lock

@@ -93,6 +93,20 @@ class ParseIssue:
 
 
 @dataclass(frozen=True)
+class ExcludedProduct:
+    """An identified listing intentionally omitted by the adapter's scope policy."""
+    name: str
+    url: str
+    external_id: str
+    reason: str
+
+    def __post_init__(self):
+        if any(not isinstance(value, str) or not value.strip()
+               for value in (self.name, self.url, self.external_id, self.reason)):
+            raise ValueError('excluded products need identity and an explicit reason')
+
+
+@dataclass(frozen=True)
 class CategoryResult:
     observations: tuple[RawProduct, ...] = ()
     product_requests: tuple[ProductRequest, ...] = ()
@@ -100,6 +114,7 @@ class CategoryResult:
     issues: tuple[ParseIssue, ...] = ()
     end_of_category: bool = False
     end_reason: str | None = None
+    exclusions: tuple[ExcludedProduct, ...] = ()
 
     def __post_init__(self):
         if self.end_of_category and not self.end_reason:
@@ -124,14 +139,14 @@ class RetailerAdapter(Protocol):
     def specification_parser(self) -> SpecificationParser: ...
 
 
-def listing_page_url(url: str, page: int, *, include_first: bool = False) -> str:
-    """Preserve category filters and replace only the page parameter."""
+def listing_page_url(url: str, page: int, *, include_first: bool = False, page_parameter: str = "page") -> str:
+    """Preserve category filters and replace only the configured page parameter."""
     from urllib.parse import parse_qsl, urlencode, urlunsplit
     if type(page) is not int or page < 1:
         raise ValueError('page must be a positive integer')
     parsed = urlsplit(url)
     query = [(key, value) for key, value in parse_qsl(parsed.query, keep_blank_values=True)
-             if key.lower() != 'page']
+             if key.casefold() != page_parameter.casefold()]
     if page != 1 or include_first:
-        query.append(('page', str(page)))
+        query.append((page_parameter, str(page)))
     return urlunsplit((parsed.scheme, parsed.netloc, parsed.path, urlencode(query), ''))

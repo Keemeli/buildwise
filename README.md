@@ -122,9 +122,13 @@ buildwise/
 # data worker (run from the repository root)
 python3 -m venv .venv && source .venv/bin/activate
 pip install -r scraper/requirements.txt
-python3 -m scraper collect --shop datatronic --category gpu --pages 2
-python3 -m scraper collect --shop jimms --category gpu --pages 2
+RETAILER=jimms  # or datatronic
+python3 -m scraper collect --shop "$RETAILER" --category gpu --pages 2
+python3 -m scraper specs --shop "$RETAILER" --category gpu --limit 25
 ```
+
+See [the scraper guide](scraper/README.md#common-usage) for shared commands,
+supported capabilities and optional retailer inputs.
 
 Output lands in `data/raw/` (one JSON per category/page), with raw HTML cached in
 `data/raw/html/` and one line per run in `data/raw/scrape_runs.jsonl`.
@@ -137,7 +141,7 @@ python3 -m scraper refresh --pages 1
 python3 -m scraper refresh --shops jimms,datatronic --categories gpu --pages 2
 python3 -m scraper refresh --offline       # no network: normalise + export
 python3 -m scraper refresh --skip-specs    # collect prices, normalise + export
-python3 -m scraper refresh --cold          # force Datatronic product specs
+python3 -m scraper refresh --cold          # force specs for selected retailers
 ```
 
 Every stage must succeed, the run is appended to `data/refresh_log.jsonl`, and the

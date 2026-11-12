@@ -1,0 +1,216 @@
+{
+  "schema_version": 2,
+  "shop": "Proshop",
+  "category": "gpu",
+  "source_type": "category",
+  "source_url": "https://www.proshop.fi/Naeytoenohjaimet?pn=2",
+  "fetched_at": "2026-11-11T22:09:42+00:00",
+  "raw_html": "raw/html/proshop/2026-11-12/3bd62fc633f3166bf3e122173bd3098106a15d84c4d302f2ea573985811b3336.html",
+  "origin": "network",
+  "items": [
+    {
+      "name": "ASUS GeForce RTX 5070 Prime OC - 12GB GDDR7 RAM - Näytönohjaimet",
+      "price_cents": 100990,
+      "url": "https://www.proshop.fi/Naeytoenohjaimet/ASUS-GeForce-RTX-5070-Prime-OC-12GB-GDDR7-RAM-Naeytoenohjaimet/3331035",
+      "external_id": "3331035",
+      "extraction": "category:.priceContainer .site-currency-lg",
+      "retailer_sku": null
+    },
+    {
+      "name": "ASUS GeForce RTX 5060 Ti DUAL OC - 16GB GDDR7 RAM - Näytönohjaimet",
+      "price_cents": 90990,
+      "url": "https://www.proshop.fi/Naeytoenohjaimet/ASUS-GeForce-RTX-5060-Ti-DUAL-OC-16GB-GDDR7-RAM-Naeytoenohjaimet/3354513",
+      "external_id": "3354513",
+      "extraction": "category:.priceContainer .site-currency-lg",
+      "retailer_sku": null
+    },
+    {
+      "name": "ASUS GeForce RTX 5060 Ti DUAL OC - 8GB GDDR7 RAM - Näytönohjaimet",
+      "price_cents": 63990,
+      "url": "https://www.proshop.fi/Naeytoenohjaimet/ASUS-GeForce-RTX-5060-Ti-DUAL-OC-8GB-GDDR7-RAM-Naeytoenohjaimet/3358070",
+      "external_id": "3358070",
+      "extraction": "category:.priceContainer .site-currency-lg",
+      "retailer_sku": null
+    },
+    {
+      "name": "ASUS GeForce RTX 5070 Ti TUF White OC - 16GB GDDR7 RAM - Näytönohjaimet",
+      "price_cents": 158990,
+      "url": "https://www.proshop.fi/Naeytoenohjaimet/ASUS-GeForce-RTX-5070-Ti-TUF-White-OC-16GB-GDDR7-RAM-Naeytoenohjaimet/3369599",
+      "external_id": "3369599",
+      "extraction": "category:.priceContainer .site-currency-lg",
+      "retailer_sku": null
+    },
+    {
+      "name": "PowerColor Radeon RX 9070 XT Hellhound Spectral White - 16GB GDDR6 RAM - Näytönohjaimet",
+      "price_cents": 112990,
+      "url": "https://www.proshop.fi/Naeytoenohjaimet/PowerColor-Radeon-RX-9070-XT-Hellhound-Spectral-White-16GB-GDDR6-RAM-Naeytoenohjaimet/3347945",
+      "external_id": "3347945",
+      "extraction": "category:.priceContainer .site-currency-lg",
+      "retailer_sku": null
+    },
+    {
+      "name": "GIGABYTE GeForce RTX 5070 Ti WindForce 3 OC V2 - 16GB GDDR7 RAM - Näytönohjaimet",
+      "price_cents": 127990,
+      "url": "https://www.proshop.fi/Naeytoenohjaimet/GIGABYTE-GeForce-RTX-5070-Ti-WindForce-3-OC-V2-16GB-GDDR7-RAM-Naeytoenohjaimet/3443927",
+      "external_id": "3443927",
+      "extraction": "category:.priceContainer .site-currency-lg",
+      "retailer_sku": null
+    },
+    {
+      "name": "Sapphire Radeon RX 9070 XT NITRO+ - 16GB GDDR6 RAM - Näytönohjaimet",
+      "price_cents": 120065,
+      "url": "https://www.proshop.fi/Naeytoenohjaimet/Sapphire-Radeon-RX-9070-XT-NITRO-16GB-GDDR6-RAM-Naeytoenohjaimet/3331616",
+      "external_id": "3331616",
+      "extraction": "category:.priceContainer .site-currency-lg",
+      "retailer_sku": null
+    },
+    {
+      "name": "NVIDIA RTX PRO 4000 Blackwell Retail - 24GB GDDR7 RAM - Näytönohjaimet",
+      "price_cents": 319990,
+      "url": "https://www.proshop.fi/Naeytoenohjaimet/NVIDIA-RTX-PRO-4000-Blackwell-Retail-24GB-GDDR7-RAM-Naeytoenohjaimet/3358861",
+      "external_id": "3358861",
+      "extraction": "category:.priceContainer .site-currency-lg",
+      "retailer_sku": null
+    },
+    {
+      "name": "PNY RTX PRO 6000 Blackwell Server Edition (Small Box) - 96GB GDDR7 RAM - Näytönohjaimet",
+      "price_cents": 2099000,
+      "url": "https://www.proshop.fi/Naeytoenohjaimet/PNY-RTX-PRO-6000-Blackwell-Server-Edition-Small-Box-96GB-GDDR7-RAM-Naeytoenohjaimet/3519258",
+      "external_id": "3519258",
+      "extraction": "category:.priceContainer .site-currency-lg",
+      "retailer_sku": null
+    },
+    {
+      "name": "NVIDIA RTX PRO 4000 Blackwell SFF Retail - 24GB GDDR7 RAM - Näytönohjaimet",
+      "price_cents": 319990,
+      "url": "https://www.proshop.fi/Naeytoenohjaimet/NVIDIA-RTX-PRO-4000-Blackwell-SFF-Retail-24GB-GDDR7-RAM-Naeytoenohjaimet/3358857",
+      "external_id": "3358857",
+      "extraction": "category:.priceContainer .site-currency-lg",
+      "retailer_sku": null
+    },
+    {
+      "name": "GIGABYTE GeForce RTX 5060 Ti GAMING OC - 16GB GDDR7 RAM - Näytönohjaimet",
+      "price_cents": 106198,
+      "url": "https://www.proshop.fi/Naeytoenohjaimet/GIGABYTE-GeForce-RTX-5060-Ti-GAMING-OC-16GB-GDDR7-RAM-Naeytoenohjaimet/3362033",
+      "external_id": "3362033",
+      "extraction": "category:.priceContainer .site-currency-lg",
+      "retailer_sku": null
+    },
+    {
+      "name": "GIGABYTE Radeon AI Pro R9700 AI TOP - 32GB GDDR6 RAM - Näytönohjaimet",
+      "price_cents": 249990,
+      "url": "https://www.proshop.fi/Naeytoenohjaimet/GIGABYTE-Radeon-AI-Pro-R9700-AI-TOP-32GB-GDDR6-RAM-Naeytoenohjaimet/3419626",
+      "external_id": "3419626",
+      "extraction": "category:.priceContainer .site-currency-lg",
+      "retailer_sku": null
+    },
+    {
+      "name": "GIGABYTE Radeon RX 9070 XT GAMING OC ICE - 16GB GDDR6 RAM - Näytönohjaimet",
+      "price_cents": 109990,
+      "url": "https://www.proshop.fi/Naeytoenohjaimet/GIGABYTE-Radeon-RX-9070-XT-GAMING-OC-ICE-16GB-GDDR6-RAM-Naeytoenohjaimet/3425155",
+      "external_id": "3425155",
+      "extraction": "category:.priceContainer .site-currency-lg",
+      "retailer_sku": null
+    },
+    {
+      "name": "XFX Radeon RX 9070 XT GAMING - 16GB GDDR6 RAM - Näytönohjaimet",
+      "price_cents": 103988,
+      "url": "https://www.proshop.fi/Naeytoenohjaimet/XFX-Radeon-RX-9070-XT-GAMING-16GB-GDDR6-RAM-Naeytoenohjaimet/3383838",
+      "external_id": "3383838",
+      "extraction": "category:.priceContainer .site-currency-lg",
+      "retailer_sku": null
+    },
+    {
+      "name": "ASUS Arc Pro B70 UGen - 32GB GDDR6 RAM - Näytönohjaimet",
+      "price_cents": 209990,
+      "url": "https://www.proshop.fi/Naeytoenohjaimet/ASUS-Arc-Pro-B70-UGen-32GB-GDDR6-RAM-Naeytoenohjaimet/3512657",
+      "external_id": "3512657",
+      "extraction": "category:.priceContainer .site-currency-lg",
+      "retailer_sku": null
+    },
+    {
+      "name": "ASUS Radeon RX 9060 XT DUAL - 16GB GDDR6 RAM - Näytönohjaimet",
+      "price_cents": 79990,
+      "url": "https://www.proshop.fi/Naeytoenohjaimet/ASUS-Radeon-RX-9060-XT-DUAL-16GB-GDDR6-RAM-Naeytoenohjaimet/3369604",
+      "external_id": "3369604",
+      "extraction": "category:.priceContainer .site-currency-lg",
+      "retailer_sku": null
+    },
+    {
+      "name": "ASUS GeForce RTX 5060 DUAL OC Advanced - 8GB GDDR7 RAM - Näytönohjaimet",
+      "price_cents": 57990,
+      "url": "https://www.proshop.fi/Naeytoenohjaimet/ASUS-GeForce-RTX-5060-DUAL-OC-Advanced-8GB-GDDR7-RAM-Naeytoenohjaimet/3482635",
+      "external_id": "3482635",
+      "extraction": "category:.priceContainer .site-currency-lg",
+      "retailer_sku": null
+    },
+    {
+      "name": "XFX Radeon RX 9070 XT Mercury Magnetic Air OC Black - 16GB GDDR6 RAM - Näytönohjaimet",
+      "price_cents": 115770,
+      "url": "https://www.proshop.fi/Naeytoenohjaimet/XFX-Radeon-RX-9070-XT-Mercury-Magnetic-Air-OC-Black-16GB-GDDR6-RAM-Naeytoenohjaimet/3378176",
+      "external_id": "3378176",
+      "extraction": "category:.priceContainer .site-currency-lg",
+      "retailer_sku": null
+    },
+    {
+      "name": "ASUS GeForce RTX 5070 Ti TUF OC - 16GB GDDR7 RAM - Näytönohjaimet",
+      "price_cents": 162990,
+      "url": "https://www.proshop.fi/Naeytoenohjaimet/ASUS-GeForce-RTX-5070-Ti-TUF-OC-16GB-GDDR7-RAM-Naeytoenohjaimet/3331057",
+      "external_id": "3331057",
+      "extraction": "category:.priceContainer .site-currency-lg",
+      "retailer_sku": null
+    },
+    {
+      "name": "ASUS GeForce RTX 5070 DUAL OC - 12GB GDDR7 RAM - Näytönohjaimet",
+      "price_cents": 97990,
+      "url": "https://www.proshop.fi/Naeytoenohjaimet/ASUS-GeForce-RTX-5070-DUAL-OC-12GB-GDDR7-RAM-Naeytoenohjaimet/3369597",
+      "external_id": "3369597",
+      "extraction": "category:.priceContainer .site-currency-lg",
+      "retailer_sku": null
+    },
+    {
+      "name": "Sparkle Arc A310 ECO - 4GB GDDR6 RAM - Näytönohjaimet",
+      "price_cents": 24587,
+      "url": "https://www.proshop.fi/Naeytoenohjaimet/Sparkle-Arc-A310-ECO-4GB-GDDR6-RAM-Naeytoenohjaimet/3376173",
+      "external_id": "3376173",
+      "extraction": "category:.priceContainer .site-currency-lg",
+      "retailer_sku": null
+    },
+    {
+      "name": "GIGABYTE GeForce RTX 5060 Ti WindForce 2 OC - 16GB GDDR7 RAM - Näytönohjaimet",
+      "price_cents": 88559,
+      "url": "https://www.proshop.fi/Naeytoenohjaimet/GIGABYTE-GeForce-RTX-5060-Ti-WindForce-2-OC-16GB-GDDR7-RAM-Naeytoenohjaimet/3362030",
+      "external_id": "3362030",
+      "extraction": "category:.priceContainer .site-currency-lg",
+      "retailer_sku": null
+    },
+    {
+      "name": "ASUS Radeon RX 9070 XT Prime OC White - 16GB GDDR6 RAM - Näytönohjaimet",
+      "price_cents": 114930,
+      "url": "https://www.proshop.fi/Naeytoenohjaimet/ASUS-Radeon-RX-9070-XT-Prime-OC-White-16GB-GDDR6-RAM-Naeytoenohjaimet/3402811",
+      "external_id": "3402811",
+      "extraction": "category:.priceContainer .site-currency-lg",
+      "retailer_sku": null
+    },
+    {
+      "name": "Sapphire Radeon RX 9070 XT Pure OC - 16GB GDDR6 RAM - Näytönohjaimet",
+      "price_cents": 116567,
+      "url": "https://www.proshop.fi/Naeytoenohjaimet/Sapphire-Radeon-RX-9070-XT-Pure-OC-16GB-GDDR6-RAM-Naeytoenohjaimet/3331615",
+      "external_id": "3331615",
+      "extraction": "category:.priceContainer .site-currency-lg",
+      "retailer_sku": null
+    },
+    {
+      "name": "GIGABYTE GeForce RTX 5070 Ti AORUS Master - 16GB GDDR7 RAM - Näytönohjaimet",
+      "price_cents": 139990,
+      "url": "https://www.proshop.fi/Naeytoenohjaimet/GIGABYTE-GeForce-RTX-5070-Ti-AORUS-Master-16GB-GDDR7-RAM-Naeytoenohjaimet/3331120",
+      "external_id": "3331120",
+      "extraction": "category:.priceContainer .site-currency-lg",
+      "retailer_sku": null
+    }
+  ],
+  "page": 2,
+  "site_total_products": 489,
+  "run_id": "700506a8e3ea4c8c8fab6af90621a20d",
+  "item_count": 25
+}
