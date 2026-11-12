@@ -34,6 +34,11 @@ const engineSource = readFileSync(join(webRoot, "lib", "compat.js"), "utf8");
 const { checkCompatibility } = await import(
   `data:text/javascript;charset=utf-8,${encodeURIComponent(engineSource)}`
 );
+// The picker's spec filters (issue #25), loaded the same way.
+const facetsSource = readFileSync(join(webRoot, "lib", "facets.js"), "utf8");
+const { FACETS, UNKNOWN, optionKeys, applyFacets, facetOptions } = await import(
+  `data:text/javascript;charset=utf-8,${encodeURIComponent(facetsSource)}`
+);
 
 // Coverage floors, set well below today's numbers on purpose: a parser regression that
 // silently drops most values must fail, ordinary catalogue churn must not. Raise them as
@@ -208,6 +213,59 @@ check("engine: DDR generations are compared, not spellings", () => {
     "a missing memory type is not reported as unchecked");
 
   return "positive, inverse, raw and dual cases all behave";
+});
+
+// ---------------------------------------------------------------------------
+// 5. Owned parts — "I already have this" must never turn into a silent pass.
+// ---------------------------------------------------------------------------
+check("an owned part of unknown model is reported, not silently skipped", () => {
+  const gpu = sample(of("gpu").filter((c) => filled(value(c, "length_mm"))), "no GPU with a length");
+  const cpuNoIgpu = of("cpu").find((c) => value(c, "integrated_graphics") === false || value(c, "igpu") === false);
+
+  // Own case, model not given, GPU chosen → the GPU-length check says why it could not run.
+  const issues = checkCompatibility({ gpu }, { ownedUnknown: ["case"] });
+  const owned = issues.filter((i) => i.code === "ownedModelUnknown");
+  assert(owned.length === 1 && owned[0].level === "unknown", "owned case without a model is not reported");
+  assert(owned[0].params.checks.includes("gpuLength"), "the blocked GPU-length check is not listed");
+
+  // Nothing to compare against yet → no message (it would only be noise).
+  assert(checkCompatibility({}, { ownedUnknown: ["case"] }).length === 0, "owned case reported with no other parts");
+
+  // Own GPU, model not given → no "add a graphics card" warning for an iGPU-less CPU.
+  if (cpuNoIgpu) {
+    const warns = checkCompatibility({ cpu: cpuNoIgpu }, { ownedUnknown: ["gpu"] }).filter((i) => i.code === "needsGpu");
+    assert(warns.length === 0, "asks for a graphics card the user already owns");
+  }
+  return "owned case, owned GPU and empty build behave";
+});
+
+// ---------------------------------------------------------------------------
+// 4. Picker filters — a missing spec must never make a part unreachable (issue #25).
+// ---------------------------------------------------------------------------
+check("every part is reachable through every picker filter", () => {
+  let facetCount = 0;
+  for (const [category, facets] of Object.entries(FACETS)) {
+    const items = of(category);
+    for (const facet of facets) {
+      facetCount += 1;
+      const [{ options }] = facetOptions(items, [facet], {});
+      // Ticking every option, the "not known" one included, must give back the whole category.
+      const everything = applyFacets(items, [facet], { [facet.id]: options.map((o) => o.key) });
+      assert(everything.length === items.length,
+        `${category}.${facet.id}: ${items.length - everything.length} parts fall in no option`);
+      assert(options.some((o) => o.key === UNKNOWN), `${category}.${facet.id} has no "not known" option`);
+      for (const item of items) {
+        for (const key of optionKeys(facet, item)) {
+          assert(options.some((o) => o.key === key), `${category}.${facet.id}: option "${key}" is not listed`);
+        }
+      }
+    }
+  }
+  // A part without the spec lands in "not known", not in "no".
+  const blank = { category: "memory", specs: { memory_type: null } };
+  const [memoryFacet] = FACETS.memory;
+  assert(optionKeys(memoryFacet, blank).join() === UNKNOWN, "a missing memory type is not filed under 'not known'");
+  return `${facetCount} facets, all parts reachable`;
 });
 
 // ---------------------------------------------------------------------------

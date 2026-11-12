@@ -7,6 +7,51 @@ type Params = Record<string, string | number>;
 // "Emolevy" -> "emolevy", but "CPU-jäähdytin" stays as is.
 const lowerFirst = (s: string) => (/^\p{Lu}\p{Ll}/u.test(s) ? s[0].toLowerCase() + s.slice(1) : s);
 
+// Names of the compatibility check areas (lib/compat.js → CHECK_AREAS), for messages
+// that list which checks could not run.
+const FI_CHECKS: Record<string, string> = {
+  cpuSocket: "prosessorin ja emolevyn kanta",
+  memoryType: "muistin ja emolevyn muistityyppi",
+  memoryForm: "onko muisti pöytäkoneeseen",
+  coolerMount: "jäähdyttimen kiinnitys",
+  coolerHeight: "jäähdyttimen mahtuminen koteloon",
+  gpuLength: "näytönohjaimen mahtuminen koteloon",
+  psuPower: "virtalähteen riittävyys",
+  cpuExtras: "tarvitaanko erillinen jäähdytin tai näytönohjain",
+};
+const EN_CHECKS: Record<string, string> = {
+  cpuSocket: "CPU and motherboard socket",
+  memoryType: "memory type",
+  memoryForm: "whether the memory is for desktops",
+  coolerMount: "cooler mounting",
+  coolerHeight: "whether the cooler fits the case",
+  gpuLength: "whether the graphics card fits the case",
+  psuPower: "whether the power supply is enough",
+  cpuExtras: "whether a separate cooler or graphics card is needed",
+};
+// Finnish genitive of each part ("kotelon mallia ei tiedetä")
+const FI_GENITIVE: Record<string, string> = {
+  cpu: "prosessorin",
+  cooler: "jäähdyttimen",
+  motherboard: "emolevyn",
+  memory: "muistin",
+  gpu: "näytönohjaimen",
+  storage: "tallennustilan",
+  psu: "virtalähteen",
+  case: "kotelon",
+};
+const EN_PART: Record<string, string> = {
+  cpu: "processor",
+  cooler: "CPU cooler",
+  motherboard: "motherboard",
+  memory: "memory",
+  gpu: "graphics card",
+  storage: "storage",
+  psu: "power supply",
+  case: "case",
+};
+type OwnedParams = { category: string; checks: string[] };
+
 export const strings = {
   fi: {
     locale: "fi-FI",
@@ -37,6 +82,14 @@ export const strings = {
       total: "Yhteensä",
       powerDraw: "Arvioitu virrankulutus",
       partsChosen: "Osia valittu",
+      // "I already have this part" (owned parts are not counted in the price or the budget)
+      ownedBadge: "Oma osa",
+      ownedNoModel: "Oma osa, malli ei tiedossa",
+      ownedNoModelHint: "Valitse malli, jos haluat, että tarkistamme yhteensopivuuden.",
+      chooseModel: "Valitse malli",
+      notOwned: "ostan uuden",
+      ownedParts: "Omat osat (ei hintaan)",
+      budgetOwnedNote: (parts: string[]) => `Budjetti käytetään muihin osiin. Omat osat: ${parts.map(lowerFirst).join(", ")}.`,
       compatibility: "Yhteensopivuus",
       addPartsToCheck: "Lisää osia, niin tarkistamme yhteensopivuuden.",
       checksSummary: (p: Params) => `✓ ${p.done}/${p.total} tarkistusta tehtiin, ei ongelmia.`,
@@ -58,6 +111,38 @@ export const strings = {
       shops: (n: number) => `${n} kauppaa`,
       noMatches: (query: string) => `Haulla ”${query}” ei löytynyt osia.`,
       emptyCategory: "Tämän kategorian osia ei ole vielä haettu kaupoista.",
+      // Spec filters (issue #25)
+      facets: {
+        socket: "Kanta",
+        memoryType: "Muistityyppi",
+        formFactor: "Koko",
+        vendor: "Valmistaja",
+        interface: "Liitäntä",
+        wattage: "Teho",
+        caseSize: "Kotelon koko",
+      } as Record<string, string>,
+      unknown: "Ei tiedossa",
+      wattage: {
+        "w-lt600": "alle 600 W",
+        "w-600-749": "600–749 W",
+        "w-750-999": "750–999 W",
+        "w-gte1000": "1000 W tai yli",
+      } as Record<string, string>,
+      filters: "Suodattimet",
+      clearFilters: "Tyhjennä suodattimet",
+      resultCount: (shown: number, total: number) => `${shown} / ${total} osaa`,
+      compatibleOnly: (hidden: number) =>
+        `Näytetään vain kokoonpanoon sopivat osat. ${hidden} ${hidden === 1 ? "osa" : "osaa"} piilotettu.`,
+      showAll: "Näytä kaikki",
+      showingAll: "Näytetään myös osat, jotka eivät sovi kokoonpanoon.",
+      showCompatibleOnly: "Näytä vain yhteensopivat",
+      noFilterMatches: "Valituilla suodattimilla ei löytynyt osia.",
+      // "I already have this part"
+      haveIt: (category: string) => `Minulla on jo ${lowerFirst(category)}`,
+      haveItHint: "ei lasketa hintaan eikä budjettiin",
+      haveItHelp: "Valitse oma mallisi listasta, niin tarkistamme yhteensopivuuden.",
+      noModel: "En tiedä mallia",
+      addOwned: "Minun",
     },
 
     specs: {
@@ -82,6 +167,7 @@ export const strings = {
       cooler: "Jäähdytin",
       storage: "SSD",
       psu: "PSU",
+      owned: "katkoviiva = oma osa",
     },
 
     budget: {
@@ -96,6 +182,7 @@ export const strings = {
       loading: "Lasketaan kokoonpanoa…",
       totalPrice: "Kokonaishinta",
       leftInBudget: "Budjettia jää",
+      ownedParts: (parts: string[]) => `Omat osat, ei budjetissa: ${parts.map(lowerFirst).join(", ")}.`,
       fps1080: "FPS, 1080p",
       components: "Komponentit",
       fpsEstimate: "FPS-arvio",
@@ -123,6 +210,10 @@ export const strings = {
         `Virtalähde (${p.psu} W) on pienempi kuin näytönohjaimen valmistajan vähimmäissuositus ${p.minimum} W.`,
       needsCooler: () => "Tämän prosessorin mukana ei tule jäähdytintä. Lisää jäähdytin.",
       needsGpu: () => "Tässä prosessorissa ei ole integroitua grafiikkaa. Lisää näytönohjain.",
+      ownedModelUnknown: (p: OwnedParams) =>
+        `Ei voida tarkistaa, koska oman ${FI_GENITIVE[p.category] ?? p.category} mallia ei tiedetä: ${p.checks
+          .map((c) => FI_CHECKS[c] ?? c)
+          .join(", ")}. Valitse malli, niin tarkistamme.`,
       laptopMemory: () => "Tämä on kannettavan tietokoneen muisti (SO-DIMM), eikä se sovi pöytäkoneen emolevyyn.",
       socketUnknown: () => "Prosessorin ja emolevyn kantaa ei voitu verrata, koska tieto puuttuu.",
       memoryUnknown: () => "Muistin ja emolevyn muistityyppiä ei voitu verrata, koska tieto puuttuu.",
@@ -163,6 +254,14 @@ export const strings = {
       total: "Total",
       powerDraw: "Estimated power draw",
       partsChosen: "Parts chosen",
+      // "I already have this part" (owned parts are not counted in the price or the budget)
+      ownedBadge: "Your part",
+      ownedNoModel: "Your part, model not known",
+      ownedNoModelHint: "Choose the model if you want us to check compatibility.",
+      chooseModel: "Choose model",
+      notOwned: "buy new",
+      ownedParts: "Your own parts (not in price)",
+      budgetOwnedNote: (parts: string[]) => `The budget goes to the other parts. Your own parts: ${parts.map(lowerFirst).join(", ")}.`,
       compatibility: "Compatibility",
       addPartsToCheck: "Add parts to check compatibility.",
       checksSummary: (p: Params) => `✓ ${p.done}/${p.total} checks ran, no problems found.`,
@@ -184,6 +283,38 @@ export const strings = {
       shops: (n: number) => `${n} shops`,
       noMatches: (query: string) => `No parts match “${query}”.`,
       emptyCategory: "Parts in this category have not been scraped yet.",
+      // Spec filters (issue #25)
+      facets: {
+        socket: "Socket",
+        memoryType: "Memory type",
+        formFactor: "Size",
+        vendor: "Vendor",
+        interface: "Interface",
+        wattage: "Wattage",
+        caseSize: "Case size",
+      } as Record<string, string>,
+      unknown: "Not known",
+      wattage: {
+        "w-lt600": "under 600 W",
+        "w-600-749": "600–749 W",
+        "w-750-999": "750–999 W",
+        "w-gte1000": "1000 W or more",
+      } as Record<string, string>,
+      filters: "Filters",
+      clearFilters: "Clear filters",
+      resultCount: (shown: number, total: number) => `${shown} / ${total} parts`,
+      compatibleOnly: (hidden: number) =>
+        `Showing only parts that fit this build. ${hidden} ${hidden === 1 ? "part" : "parts"} hidden.`,
+      showAll: "Show all",
+      showingAll: "Also showing parts that don't fit this build.",
+      showCompatibleOnly: "Show compatible only",
+      noFilterMatches: "No parts match the selected filters.",
+      // "I already have this part"
+      haveIt: (category: string) => `I already have my own ${lowerFirst(category)}`,
+      haveItHint: "not counted in the price or the budget",
+      haveItHelp: "Pick your model from the list so we can check compatibility.",
+      noModel: "I don't know the model",
+      addOwned: "Mine",
     },
 
     specs: {
@@ -208,6 +339,7 @@ export const strings = {
       cooler: "Cooler",
       storage: "SSD",
       psu: "PSU",
+      owned: "dashed = your own part",
     },
 
     budget: {
@@ -222,6 +354,7 @@ export const strings = {
       loading: "Putting your build together…",
       totalPrice: "Total price",
       leftInBudget: "Left in budget",
+      ownedParts: (parts: string[]) => `Your own parts, not in the budget: ${parts.map(lowerFirst).join(", ")}.`,
       fps1080: "FPS, 1080p",
       components: "Components",
       fpsEstimate: "FPS estimate",
@@ -248,6 +381,10 @@ export const strings = {
         `Power supply (${p.psu} W) is below the minimum the graphics card manufacturer specifies (${p.minimum} W).`,
       needsCooler: () => "This CPU is sold without a cooler. Add one.",
       needsGpu: () => "This CPU has no integrated graphics. Add a graphics card.",
+      ownedModelUnknown: (p: OwnedParams) =>
+        `Can't check ${p.checks.map((c) => EN_CHECKS[c] ?? c).join(", ")}: the model of your own ${
+          EN_PART[p.category] ?? p.category
+        } isn't known. Choose the model to check it.`,
       laptopMemory: () => "This is laptop memory (SO-DIMM) and does not fit a desktop motherboard.",
       socketUnknown: () => "Could not compare CPU and motherboard sockets: data is missing.",
       memoryUnknown: () => "Could not compare memory types: data is missing.",

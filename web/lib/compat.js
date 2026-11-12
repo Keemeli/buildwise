@@ -59,7 +59,9 @@ const ddrGenerations = (value) => {
   return found;
 };
 
-export function checkCompatibility(build) {
+// options.ownedUnknown: categories the user already owns but has not told us the model of
+// ("I have some case"). The checks that need such a part cannot run, and say so.
+export function checkCompatibility(build, options = {}) {
   const { cpu, cooler, motherboard, memory, gpu, psu } = build;
   const pcCase = build.case;
   const issues = [];
@@ -173,8 +175,27 @@ export function checkCompatibility(build) {
   if (cpu && !cooler && cpu.specs.cooler_included === false) {
     add("warning", ["cooler", "cpu"], "needsCooler");
   }
-  if (cpu && !gpu && (cpu.specs.igpu ?? cpu.specs.integrated_graphics) === false) {
+  // An owned part counts as present: the user has a cooler / GPU, we just don't know which.
+  const owned = new Set(options.ownedUnknown ?? []);
+  if (cpu && !cooler && !owned.has("cooler") && cpu.specs.cooler_included === false) {
+    add("warning", ["cooler", "cpu"], "needsCooler");
+  }
+  if (cpu && !gpu && !owned.has("gpu") && (cpu.specs.igpu ?? cpu.specs.integrated_graphics) === false) {
     add("warning", ["gpu", "cpu"], "needsGpu");
+  }
+
+  // Checks blocked by an owned part of unknown model: one honest "could not check" per
+  // owned part, listing the checks it blocks. Only checks whose other parts are chosen.
+  for (const category of owned) {
+    if (build[category]) continue;
+    const blocked = CHECK_AREAS.filter((area) => {
+      if (!area.needs.includes(category)) return false;
+      const others = area.needs.filter((k) => k !== category);
+      return others.every((k) => build[k]) && (!area.anyOf || area.anyOf.some((k) => build[k]));
+    });
+    if (blocked.length > 0) {
+      add("unknown", [category], "ownedModelUnknown", { category, checks: blocked.map((a) => a.id) });
+    }
   }
 
   return issues;
@@ -196,7 +217,7 @@ export function issueKey(issue) {
 // Which checks the engine can actually run with the parts chosen so far.
 // The panel uses this so a build with only a CPU and a GPU does not show a bare
 // green tick: it says how many checks ran and what is still waiting for parts.
-const CHECK_AREAS = [
+export const CHECK_AREAS = [
   { id: "cpuSocket", needs: ["cpu", "motherboard"] },
   { id: "memoryType", needs: ["memory", "motherboard"] },
   { id: "memoryForm", needs: ["memory"] },
@@ -207,13 +228,16 @@ const CHECK_AREAS = [
   { id: "cpuExtras", needs: ["cpu"] },
 ];
 
-export function checkCoverage(build) {
+// options.owned: categories the user already owns without a known model. They are not
+// "waiting for a part" (the user decided), so they are left out of `waitingFor`.
+export function checkCoverage(build, options = {}) {
+  const owned = new Set(options.owned ?? []);
   const areas = CHECK_AREAS.map((area) => ({
     ...area,
     ready: area.needs.every((k) => build[k]) && (!area.anyOf || area.anyOf.some((k) => build[k])),
   }));
   const waitingFor = [...new Set(
-    areas.filter((a) => !a.ready).flatMap((a) => a.needs).filter((k) => !build[k]),
+    areas.filter((a) => !a.ready).flatMap((a) => a.needs).filter((k) => !build[k] && !owned.has(k)),
   )];
   return {
     done: areas.filter((a) => a.ready).length,
