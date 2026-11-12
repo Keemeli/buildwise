@@ -1,5 +1,7 @@
 """BuildWise — exact conversion of retailer prices into integer euro cents."""
 
+from __future__ import annotations
+
 from decimal import Decimal, InvalidOperation
 import re
 

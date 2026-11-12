@@ -2,6 +2,8 @@
 
 Retailer markup stays here; requests and cache handling are shared.
 """
+from __future__ import annotations
+
 import re
 from bs4 import BeautifulSoup
 from scraper.common.prices import parse_price_cents

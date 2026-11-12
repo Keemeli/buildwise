@@ -1,4 +1,6 @@
 """Validated product identifiers and source evidence; no product matching or I/O."""
+from __future__ import annotations
+
 from dataclasses import asdict, dataclass
 import re
 

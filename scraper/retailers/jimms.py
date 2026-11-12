@@ -7,6 +7,8 @@ Missing data is reported, never invented. This parser does not fetch pages or
 extract hardware specifications. Selectors must be checked against live samples.
 """
 
+from __future__ import annotations
+
 import re
 from bs4 import BeautifulSoup
 from scraper.common.prices import parse_price_cents
