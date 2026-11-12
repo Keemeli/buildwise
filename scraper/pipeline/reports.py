@@ -77,6 +77,17 @@ class NormalisationReportWriter:
                          "product, not from the product name.")
             lines.append("")
 
+        conflicts = [listing for component in components for listing in component['listings']
+                     if listing.get('price_status') == 'conflict']
+        if conflicts:
+            lines.extend(['## Price conflicts requiring inspection', ''])
+            for listing in conflicts:
+                lines.append(f"- **{listing['shop']}** — {listing['url']} — current price unknown")
+                for observation in listing['price_observations']:
+                    lines.append(f"  - {observation['price_cents']} cents at {observation['fetched_at']} "
+                                 f"— source: {observation.get('provenance')}")
+            lines.append('')
+
         lines.append("## Products needing review (fewest specs found)")
         lines.append("")
         review = sorted(components, key=lambda c: (len(c["missing_specs"]), c["raw_name"]), reverse=True)[:15]

@@ -352,6 +352,7 @@ class ComponentNameParser:
                 "price_cents": item["price_cents"],
                 "snapshot_date": item["snapshot_date"],
                 "fetched_at": item["fetched_at"],
+                **({"provenance": item["provenance"]} if item.get("provenance") is not None else {}),
             },
         }
 

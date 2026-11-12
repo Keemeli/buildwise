@@ -31,7 +31,9 @@ python3 -m unittest discover -s tests -p test_fetching.py -v
 | test_collection_policy_matrix.py | Cross-retailer outcomes, counters, failures and CLI policy | 26 |
 | test_pending_work.py | Pending identity, evidence, eligibility and atomic persistence | 8 |
 | test_retry.py | Explicit retry recovery, filtering, attempts and resolution | 11 |
-| **Total** | | **125** |
+| test_listing_prices.py | Current/null/history selection, timestamp ties and conflict evidence | 6 |
+| test_price_workflow.py | Collection/null/retry/normalisation and mixed-format integration | 2 |
+| **Total** | | **133** |
 
 Tests are grouped by the responsibility they verify. A shared fetching test may
 use a Jimms URL as a fixture, but its behaviour applies to both retailers. CLI and
@@ -75,3 +77,12 @@ checks use temporary data and cached or mocked responses, with no live scraping.
 
 Review regressions check batch-wide robots caching, crawl-delay spacing and
 session cleanup, plus missing versus malformed Datatronic price classification.
+
+Milestone 4 checkpoint 2 adds six focused price-selection checks and runs the
+existing normalisation/report checks. Verification writes only temporary output;
+full milestone verification remains checkpoint 3.
+
+Milestone 4 checkpoint 3 verifies both retailers through offline collection, null
+observations, pending resolution, normalisation and temporary export. Older-cache
+reparsing retains source times, original raw observations remain unchanged, and
+mixed legacy/versioned conflicts stay isolated by retailer.

@@ -10,6 +10,7 @@ from scraper.config import PROJECT_ROOT, RAW_DIR as DEFAULT_RAW_DIR, NORMALISED_
 from scraper.pipeline.components import (CATEGORIES, EXPECTED_FIELDS, clean,
     is_non_component, normalise_item, ComponentNameParser)
 from scraper.pipeline.reports import NormalisationReportWriter
+from scraper.pipeline.listing_prices import ListingPriceSelector
 
 
 def iter_raw_items(raw_dir: Path, only_category: Optional[str]) -> List[Dict[str, Any]]:
@@ -36,8 +37,11 @@ def iter_raw_items(raw_dir: Path, only_category: Optional[str]) -> List[Dict[str
                 "retailer_sku": item.get("retailer_sku"),
                 "shop": payload.get("shop", "Datatronic"),
                 "fetched_at": payload.get("fetched_at") or "",
-                "snapshot_date": (payload.get("fetched_at") or "")[:10] or date.today().isoformat(),
+                "snapshot_date": (payload.get("fetched_at") or "")[:10] or "",
                 "source_file": path.name,
+                "provenance": {"source_file": path.name, **{key: payload.get(key) for key in
+                    ("source_type", "source_url", "raw_html", "origin", "run_id")},
+                    "extraction": item.get("extraction")},
             })
     return items
 
@@ -54,19 +58,17 @@ def dedupe(components: List[Dict[str, Any]]) -> Tuple[List[Dict[str, Any]], int]
             continue
         duplicates += 1
         listing = component["listing"]
-        previous = next((l for l in existing["listings"] if l["url"] == listing["url"]), None)
-        if previous is None:
-            existing["listings"].append(listing)
-        else:
-            # The same product can appear in an older and a newer scrape (a refresh
-            # keeps both files on disk). The newer snapshot must win, otherwise a
-            # price refresh is silently ignored.
-            if str(listing.get("fetched_at") or listing.get("snapshot_date") or "") >= str(previous.get("fetched_at") or previous.get("snapshot_date") or ""):
-                previous.update(listing)
+        existing["listings"].append(listing)
         # keep the best-covered spec set (more fields read from the name wins)
         if len(component["specs"]) - len(component["missing_specs"]) > len(existing["specs"]) - len(existing["missing_specs"]):
             existing["specs"] = component["specs"]
             existing["missing_specs"] = component["missing_specs"]
+    selector = ListingPriceSelector()
+    for component in merged.values():
+        groups = {}
+        for listing in component['listings']:
+            groups.setdefault((listing['shop'], listing['url']), []).append(listing)
+        component['listings'] = [selector.select(group) for _, group in sorted(groups.items())]
     return list(merged.values()), duplicates
 
 

@@ -427,3 +427,32 @@ Retry batches share one fetcher/session, retaining robots rules and request timi
 between entries. Datatronic distinguishes absent/empty prices (`missing_price`,
 retryable) from displayed malformed values (`invalid_price`, inspect). Both retain
 null-price observations.
+
+
+### Normalised listing prices (milestone 4)
+
+Each retailer listing selects observations by their source fetch timestamp, not
+filename, processing time or retry time. Timestamp offsets are compared as actual
+UTC instants. Legacy date-only/naive times are treated as UTC; absent times remain
+unknown and sort before dated observations. Invalid timestamp text is rejected.
+
+- `price_cents` is the latest observed price, including null.
+- `price_status` is `available`, `unknown` or `conflict`.
+- `last_known_price_cents` and `last_known_price_fetched_at` retain the newest
+  unambiguous valid price, including the current price when available. They remain
+  null if none exists; conflicting timestamp groups are skipped.
+- `last_known_price_source` identifies that price's observation.
+- `price_observations` retains the latest timestamp group's evidence, including
+  source file, run, source URL, HTML reference and extraction method where present.
+
+At equal instants a valid price takes precedence over null; different valid prices
+produce a null current price and an inspection entry in the normalisation report.
+A stable metadata tie-break makes this independent of file order. Listings are
+kept separate by retailer and URL. Retailer IDs/SKUs are retained; when missing in
+the selected observation, earlier identifiers retain their evidence in
+`identifier_sources`. Earlier prices are never substituted into `price_cents`.
+
+These fields are additive. No raw schema migration or database change is required.
+Checkpoint 3 verifies the complete collection/null/retry/normalisation workflow
+for both retailers, plus mixed-format timestamp conflicts and temporary export.
+All output is temporary; the existing catalogue and web copy are unchanged.
