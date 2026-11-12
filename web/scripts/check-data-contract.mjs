@@ -31,7 +31,7 @@ const components = catalogue.components;
 // "type": "module", so node cannot import it directly. Importing the source through a
 // data: URL keeps the app's module setup untouched.
 const engineSource = readFileSync(join(webRoot, "lib", "compat.js"), "utf8");
-const { checkCompatibility } = await import(
+const { checkCompatibility, issueKey } = await import(
   `data:text/javascript;charset=utf-8,${encodeURIComponent(engineSource)}`
 );
 // The picker's spec filters (issue #25), loaded the same way.
@@ -236,11 +236,36 @@ check("an owned part of unknown model is reported, not silently skipped", () => 
     const warns = checkCompatibility({ cpu: cpuNoIgpu }, { ownedUnknown: ["gpu"] }).filter((i) => i.code === "needsGpu");
     assert(warns.length === 0, "asks for a graphics card the user already owns");
   }
-  return "owned case, owned GPU and empty build behave";
+
+  // Own cooler, model not given → no "add a cooler" warning, and never the warning twice.
+  // A duplicate would render as the same row twice under one React key.
+  const cpuNeedsCooler = of("cpu").find((c) => value(c, "cooler_included") === false);
+  if (cpuNeedsCooler) {
+    const bare = checkCompatibility({ cpu: cpuNeedsCooler });
+    const bareWarnings = bare.filter((i) => i.code === "needsCooler");
+    assert(bareWarnings.length === 1, `expected one needsCooler, got ${bareWarnings.length}`);
+    const keys = bare.map(issueKey);
+    assert(new Set(keys).size === keys.length, `duplicate issue keys: ${keys.join(", ")}`);
+    const ownedCooler = checkCompatibility({ cpu: cpuNeedsCooler }, { ownedUnknown: ["cooler"] })
+      .filter((i) => i.code === "needsCooler");
+    assert(ownedCooler.length === 0, "asks for a cooler the user already owns");
+  }
+
+  // Own case, model not given, board chosen → the board-in-case check must be named,
+  // not dropped from the panel without a trace.
+  const board = sample(of("motherboard").filter((c) => filled(value(c, "form_factor"))),
+    "no motherboard with a form factor");
+  const withBoard = checkCompatibility({ motherboard: board }, { ownedUnknown: ["case"] })
+    .filter((i) => i.code === "ownedModelUnknown");
+  assert(withBoard.length === 1, "owned case with a board chosen is not reported at all");
+  assert(withBoard[0].params.checks.includes("formFactor"),
+    `the blocked board-in-case check is not listed (got: ${withBoard[0].params.checks.join(", ")})`);
+
+  return "owned case, owned GPU, owned cooler and empty build behave";
 });
 
 // ---------------------------------------------------------------------------
-// 4. Picker filters — a missing spec must never make a part unreachable (issue #25).
+// 6. Picker filters — a missing spec must never make a part unreachable (issue #25).
 // ---------------------------------------------------------------------------
 check("every part is reachable through every picker filter", () => {
   let facetCount = 0;
