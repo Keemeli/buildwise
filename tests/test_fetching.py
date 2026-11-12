@@ -1,15 +1,10 @@
-"""Shared fetching, robots rules, throttling and HTML cache."""
-import sys
+"""Shared robots rules, throttling, request failures and HTML cache."""
 import tempfile
 import unittest
 from pathlib import Path
 from unittest.mock import Mock, patch
 
-ROOT = Path(__file__).resolve().parents[1]
-sys.path.insert(0, str(ROOT))
-
 from scraper.common.fetching import PageFetcher
-
 
 
 class SharedFetchingTests(unittest.TestCase):

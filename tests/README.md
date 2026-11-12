@@ -1,114 +1,65 @@
 # Scraper tests
 
-Run from the repository root. Tests use temporary files, saved/synthetic HTML and
-mocked requests; they do not require live retailer access or a database.
+Run from the repository root with the scraper dependencies installed. Tests use
+saved/synthetic HTML, temporary output and mocked requests. They need no retailer
+access or database and do not update the real catalogue.
 
 ```sh
-python3 -m unittest discover -s tests -v
-python3 -m unittest discover -s tests -p 'test_datatronic*.py' -v
-python3 -m unittest discover -s tests -p test_fetching.py -v
+# Full suite at a milestone or commit boundary
+python3 -m unittest discover -s tests
+
+# Focused checks while changing one responsibility
+python3 -m unittest tests.test_collection_worker
+python3 -m unittest tests.test_collection_policy
+python3 -m unittest tests.test_specifications
+
+# One retailer's adapter or specification parser
+python3 -m unittest tests.test_adapters.ProshopAdapterTests
+python3 -m unittest tests.test_specification_parsers.ProshopSpecificationTests
 ```
 
-| File | Responsibility | Tests |
+## Layout
+
+| Module | Responsibility | Checks |
 | --- | --- | ---: |
-| test_jimms_parser.py | Product metadata and category-link extraction | 4 |
-| test_jimms_worker.py | Category prices, manifests, pagination and follow-ups | 5 |
-| test_datatronic_parser.py | Listing-card parsing | 1 |
-| test_datatronic_worker.py | Collection output, pagination and failure handling | 3 |
-| test_datatronic_specifications.py | Specification filtering, parsing, cache and failure policy | 11 |
-| test_fetching.py | Shared robots checks, wildcard rules, throttling and cache behaviour | 5 |
-| test_prices.py | Exact price conversion | 1 |
-| test_raw_data.py | Shared observation schema and mixed-source compatibility | 7 |
-| test_normalisation.py | Component parsing, multi-shop merging and newest prices | 4 |
+| test_adapters.py | Contracts, registry, retailer price parsing and parser configuration | 27 |
+| test_collection_worker.py | Controlled orchestration, follow-ups, deduplication and cleanup | 10 |
+| test_collection_policy.py | Real-adapter outcome policy, counters, provenance and failure handling | 26 |
+| test_collection_integration.py | Saved retailer pages, CLI collection, exclusions and exact-page retries | 13 |
+| test_specification_parsers.py | Retailer labels, units, scoped fields and ambiguous values | 10 |
+| test_specifications.py | Shared collection, compatibility, storage, reporting and normalisation | 22 |
+| test_fetching.py | Robots matching, request failures, throttling and caching | 5 |
+| test_raw_data.py | Shared observations, IDs, immutable writes, legacy formats and exact cents | 8 |
+| test_normalisation.py | Component parsing, price history/conflicts and end-to-end recovery | 12 |
+| test_pending_work.py | Work identity, evidence, classification and atomic persistence | 8 |
+| test_retry.py | Selection, limits, attempts, recovery, locks and request spacing | 11 |
+| test_cli.py | Arguments, help, offline subprocesses, export and drift checks | 8 |
 | test_refresh.py | Stage planning, category selection and stopping on failure | 3 |
-| test_cli.py | Unified commands and offline end-to-end workflows | 7 |
-| test_export.py | Complete-content export drift checks | 1 |
-| test_reports.py | Specification report field configuration | 1 |
-| test_configuration.py | Project paths and isolated parser configuration | 2 |
-| test_retailer_adapters.py | Shared contract, registry and offline adapter parity | 13 |
-| test_collection_worker.py | Generic orchestration, third-adapter integration and cleanup | 10 |
-| test_collection_policy.py | Checkpoint 2 null-preservation and reporting implementation checks | 4 |
-| test_collection_policy_matrix.py | Cross-retailer outcomes, counters, failures and CLI policy | 26 |
-| test_pending_work.py | Pending identity, evidence, eligibility and atomic persistence | 8 |
-| test_retry.py | Explicit retry recovery, filtering, attempts and resolution | 11 |
-| test_listing_prices.py | Current/null/history selection, timestamp ties and conflict evidence | 6 |
-| test_price_workflow.py | Collection/null/retry/normalisation and mixed-format integration | 2 |
-| test_jimms_specifications.py | Saved Jimms markup, canonical fields and conservative parsing | 5 |
-| test_specifications_shared.py | Cross-retailer specification CLI, policy, persistence and normalisation | 7 |
-| test_proshop_adapter.py | Proshop card identity, prices, pagination, conditions and errors | 6 |
-| test_proshop_collection.py | Shared Proshop CLI, exact-page retries and exclusion reporting | 6 |
-| test_proshop_specifications.py | Grouped GPU fields, units, unknowns and shared specs/normalisation | 8 |
-| **Total** | | **167** |
+| **Total** | | **163** |
 
-Tests are grouped by the responsibility they verify. A shared fetching test may
-use a Jimms URL as a fixture, but its behaviour applies to both retailers. CLI and
-raw-data integration tests deliberately exercise multiple layers. Cross-retailer
-parser configuration belongs in test_configuration.py.
+`support.py` contains reusable synthetic HTML builders, HTTP responses and the
+repository path. It contains no test cases. Import shared helpers from there,
+rather than importing a `test_*.py` module. Helpers used by only one module stay
+beside their tests.
 
-This reorganisation preserves all 49 existing test methods, assertions and class
-fixtures. Existing overlapping coverage has not been removed or consolidated;
-that requires a separate review. No new test framework or dependency was added.
+## Coverage and fixtures
 
-Adapter fixtures under `fixtures/jimms/` verify 50 saved GPU category prices against
-independent product-page observations without network requests.
+- Unit checks use controlled inputs; integration checks exercise real adapters
+  and the shared commands. Keep these distinct even when they cover the same
+  feature at different boundaries.
+- `fixtures/jimms/` preserves 50 independent saved price observations and GPU
+  specification layouts, including a misfiled cooler rejection case.
+- `fixtures/proshop/` preserves category cards, DEMO listings, robots rules,
+  identity evidence and five GPU specification layouts with source manifests.
+- Fixture files and production code are unchanged by this test consolidation.
+- The four early null-price/fallback/empty-ending tests were consolidated into
+  the richer collection policy checks. Their pending-store assertions and cached
+  timestamps remain covered, and failed fallback coverage includes timeouts.
+- Retained checks include Datatronic's compatibility extractor, unknown fields,
+  preservation of successful data, all three registered adapters and the export
+  command's ability to run with only the Python standard library.
 
-Identifier regression tests distinguish retailer record IDs from displayed SKUs,
-check all 50 saved Jimms cards, preserve follow-up identifiers, and verify mixed
-legacy/version-1/version-2 normalisation without rewriting old data.
-
-Milestone 2 replaces obsolete worker-specific execution tests with shared-worker
-integration tests. Jimms category collection explicitly asserts zero product-page
-requests for 50 saved products; Datatronic tests preserve listing fields/totals
-across pages. Command tests continue to verify offline collection for both.
-
-Milestone 3 checkpoint 2 adds four focused implementation checks. Checkpoint 3
-adds 26 matrix tests using real adapters and the shared fetcher with cached HTML
-and mocked network responses; no live retailer requests are made. The matrix
-checks both retailers, success/partial/failure exits, null-price preservation,
-recovery, HTTP/connection/robots failures, empty/repeated pages, overlapping
-categories, malformed cards, atomic writes, run IDs and refresh stopping before
-publication after partial collection. Jimms-specific follow-ups also cover
-offline misses, blocked product requests and missing identity.
-
-Milestone 3.1 checkpoint 1 adds six pending-store tests and checks that collection
-links its persisted outcome and original source context to the run.
-
-Milestone 3.1 checkpoint 2 uses focused offline retry tests for both retailers;
-the full suite is reserved for milestone completion.
-
-Milestone 3.1 checkpoint 3 verifies interrupted attempts, stale resolution guards,
-retry-command locking, robots blocking and HTTP 429 classification/counters. All
-checks use temporary data and cached or mocked responses, with no live scraping.
-
-Review regressions check batch-wide robots caching, crawl-delay spacing and
-session cleanup, plus missing versus malformed Datatronic price classification.
-
-Milestone 4 checkpoint 2 adds six focused price-selection checks and runs the
-existing normalisation/report checks. Verification writes only temporary output;
-full milestone verification remains checkpoint 3.
-
-Milestone 4 checkpoint 3 verifies both retailers through offline collection, null
-observations, pending resolution, normalisation and temporary export. Older-cache
-reparsing retains source times, original raw observations remain unchanged, and
-mixed legacy/versioned conflicts stay isolated by retailer.
-
-Milestone 5 preserves the 11 Datatronic specification checks and adds 12 focused
-checks for Jimms parsing and shared orchestration. Tests reuse cached/fixture HTML
-or mock responses, preserve source timestamps, check both retailers in one store,
-and verify normaliser compatibility without writing real catalogue files. Refresh
-planning now expects both supported specification stages.
-
-Proshop milestone 2 adds saved-card extraction and offline CLI/retry checks. The
-shared robots tests cover Proshop's query exceptions and longest/specific-agent
-rules. Registered-adapter checks now include Proshop. Tests run with the updated
-requirements (Protego included); no retailer requests are made.
-
-Proshop milestone 3 adds six focused parser/workflow checks. The existing Proshop
-collection checks now expect its shared specification stage instead of rejecting
-specs. Tests cover both saved product pages, unknown/conflicting values, exclusion
-of shipping and summary dimensions, source times, IDs, other-retailer entries,
-normaliser compatibility and preservation of earlier successful specs.
-
-Proshop milestone 4 saves TUF/BTF/server layouts and adds two regression checks
-for their dimensions and distinct operating-power/PSU meanings. The five actual
-product results were audited and normalised in temporary output without requests.
+When adding a retailer, extend adapter and specification-parser cases, then add
+integration coverage where its request or failure behaviour differs. Reuse shared
+policy checks; avoid creating milestone-specific test files or repeating generic
+worker checks under each retailer's name.

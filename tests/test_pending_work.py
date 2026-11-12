@@ -1,10 +1,10 @@
-"""Checkpoint 1 persistence, identity and failure-safety checks."""
-from dataclasses import replace
+"""Pending identity, evidence, eligibility and atomic persistence."""
 import json
-from pathlib import Path
 import tempfile
-from types import SimpleNamespace
 import unittest
+from dataclasses import replace
+from pathlib import Path
+from types import SimpleNamespace
 from unittest.mock import patch
 
 from scraper.workers.collection_reporting import CollectionOutcome

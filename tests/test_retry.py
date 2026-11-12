@@ -1,15 +1,15 @@
-"""Focused explicit-retry checks using real adapters and offline cached HTML."""
+"""Explicit retry recovery, filtering, attempt history and resolution."""
 import contextlib
-from dataclasses import replace
-from datetime import date
-import hashlib
 import fcntl
+import hashlib
 import io
 import json
-from pathlib import Path
 import tempfile
-from types import SimpleNamespace
 import unittest
+from dataclasses import replace
+from datetime import date
+from pathlib import Path
+from types import SimpleNamespace
 from unittest.mock import patch
 
 from scraper.cli import main
@@ -17,7 +17,8 @@ from scraper.retailers.datatronic import DatatronicAdapter
 from scraper.retailers.jimms import JimmsAdapter
 from scraper.workers.collection_reporting import CollectionOutcome
 from scraper.workers.pending_work import PendingWorkStore
-from test_collection_policy_matrix import listing, product_page, product_url, response
+
+from tests.support import listing, product_page, product_url, response
 
 
 class RetryTests(unittest.TestCase):

@@ -1,4 +1,4 @@
-"""Unified command interface and offline end-to-end workflows."""
+"""Command dispatch, argument validation, publication and offline subprocesses."""
 import contextlib
 import hashlib
 import io
@@ -10,14 +10,13 @@ import unittest
 from pathlib import Path
 from unittest.mock import patch
 
-ROOT = Path(__file__).resolve().parents[1]
-sys.path.insert(0, str(ROOT))
-
 from scraper.cli import main
 from scraper.common.fetching import PageFetcher
-from scraper.retailers.jimms import CATEGORY_URLS
+from scraper.pipeline.export import CatalogueExporter
 from scraper.retailers.contracts import listing_page_url as page_url
+from scraper.retailers.jimms import CATEGORY_URLS
 
+from tests.support import ROOT
 
 
 class ManifestCollectionCLITests(unittest.TestCase):
@@ -134,6 +133,29 @@ class CommandHelpTests(unittest.TestCase):
                                         cwd=ROOT, capture_output=True, text=True)
                 self.assertEqual(result.returncode, 0, result.stderr)
                 self.assertIn('usage:', result.stdout)
+
+
+class CatalogueExportTests(unittest.TestCase):
+    def setUp(self):
+        self.output = contextlib.ExitStack()
+        self.output.enter_context(contextlib.redirect_stdout(io.StringIO()))
+        self.output.enter_context(contextlib.redirect_stderr(io.StringIO()))
+
+    def tearDown(self):
+        self.output.close()
+
+    def test_export_detects_price_change_with_unchanged_summary(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            source, target = root / 'source.json', root / 'target.json'
+            payload = {'generated_at': 'today', 'component_count': 1, 'components': [{'price_cents': 100}]}
+            source.write_text(json.dumps(payload))
+            payload['components'][0]['price_cents'] = 200
+            target.write_text(json.dumps(payload))
+            exporter = CatalogueExporter(source, target, root)
+            self.assertEqual(exporter.run(check=True), 1)
+            self.assertEqual(exporter.run(), 0)
+            self.assertEqual(exporter.run(check=True), 0)
 
 
 if __name__ == '__main__':

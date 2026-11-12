@@ -1,14 +1,13 @@
-"""Shared raw-data contract and path/time semantics, independent of retailers."""
-from datetime import datetime, timezone
+"""Raw observation schema, immutable writes, compatibility and exact prices."""
 import json
 import os
-from pathlib import Path
-import sys
 import tempfile
 import unittest
+from datetime import datetime, timezone
+from pathlib import Path
 
-sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
-from scraper.common.raw_data import RawProduct, RawDocument, RawDataWriter
+from scraper.common.prices import parse_price_cents
+from scraper.common.raw_data import RawDataWriter, RawDocument, RawProduct
 from scraper.pipeline.normalisation import iter_raw_items
 
 
@@ -133,6 +132,13 @@ class RawDataTests(unittest.TestCase):
         self.assertIsNone(RawProduct('GPU', None, 'https://shop.fi/gpu').retailer_sku)
         with self.assertRaises(ValueError):
             RawProduct('GPU', 100, 'https://shop.fi/gpu', retailer_sku=209432)
+
+
+class PriceParsingTests(unittest.TestCase):
+    def test_exact_cents(self):
+        self.assertEqual(parse_price_cents('0,29 €'), 29)
+        for value in ('-1', 'NaN', '0', '1.234', '1,234.56'):
+            self.assertIsNone(parse_price_cents(value))
 
 
 if __name__ == '__main__':

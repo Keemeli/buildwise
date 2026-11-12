@@ -1,16 +1,16 @@
-"""Shared collection orchestration using a fake adapter, without retailer I/O."""
+"""Shared collection orchestration with a controlled fake adapter."""
 import contextlib
 import io
 import json
-from pathlib import Path
-import sys
 import tempfile
 import unittest
+from pathlib import Path
 from unittest.mock import Mock
 
-sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 from scraper.common.raw_data import RawProduct
-from scraper.retailers.contracts import CategoryResult, ProductRequest, RetailerConfig, RetailerCapabilities, listing_page_url
+from scraper.retailers.contracts import (
+    CategoryResult, ProductRequest, RetailerCapabilities, RetailerConfig, listing_page_url,
+)
 from scraper.workers.collection_worker import CollectionWorker
 
 
