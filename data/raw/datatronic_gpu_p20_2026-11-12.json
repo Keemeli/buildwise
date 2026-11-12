@@ -1,0 +1,156 @@
+{
+  "shop": "Datatronic",
+  "category": "gpu",
+  "page": 20,
+  "source_url": "https://datatronic.fi/naytonohjaimet?page=20",
+  "fetched_at": "2026-11-12T14:45:33+00:00",
+  "site_total_products": 480,
+  "items_on_page": 24,
+  "raw_html": "data/raw/html/datatronic_gpu_p20_2026-11-12_9170f9d8e299.html",
+  "items": [
+    {
+      "name": "Zotac GAMING GeForce RTX 5060 Ti AMP NVIDIA 8 GB GDDR7",
+      "price_cents": 64500,
+      "url": "https://datatronic.fi/komponentit/naytonohjaimet/zotac-gaming-geforce-rtx-5060-ti-amp-nvidia-8-gb-gddr7-zotac-zt-b50610f-10m",
+      "external_id": "168573"
+    },
+    {
+      "name": "ASUS ROG Astral - -RTX5080-O16G-WHITE NVIDIA GeForce RTX 5080 16 GB GDDR7",
+      "price_cents": 321900,
+      "url": "https://datatronic.fi/komponentit/naytonohjaimet/asus-rog-astral-rtx5080-o16g-white-nvidia-geforce-rtx-5080-16-gb-gddr7-asus-90yv0lv4-m0na00",
+      "external_id": "171463"
+    },
+    {
+      "name": "DELL RTX PRO 4000 Blackwell NVIDIA 24 GB GDDR7",
+      "price_cents": 319900,
+      "url": "https://datatronic.fi/komponentit/naytonohjaimet/dell-rtx-pro-4000-blackwell-nvidia-24-gb-gddr7-dell-dell-d2jww",
+      "external_id": "182081"
+    },
+    {
+      "name": "PNY RTX PRO 6000 Blackwell Server Edition NVIDIA 96 GB GDDR7",
+      "price_cents": 2199900,
+      "url": "https://datatronic.fi/komponentit/naytonohjaimet/pny-rtx-pro-6000-blackwell-server-edition-nvidia-96-gb-gddr7-pny-tcsrtxpro6000se-pb",
+      "external_id": "182436"
+    },
+    {
+      "name": "INNO3D RTX5060 Twin X2 V2 8GB GDDR7 3xDP+HDMI",
+      "price_cents": 62900,
+      "url": "https://datatronic.fi/komponentit/naytonohjaimet/inno3d-rtx5060-twin-x2-v2-8gb-gddr7-3xdp-hdmi-n50602-08d7-198072n",
+      "external_id": "184690"
+    },
+    {
+      "name": "ASUS TUF-RTX5080-O16G-BTF-GAMING NVIDIA GeForce RTX 5080 16 GB GDDR7",
+      "price_cents": 333900,
+      "url": "https://datatronic.fi/komponentit/naytonohjaimet/asus-tuf-rtx5080-o16g-btf-gaming-nvidia-geforce-rtx-5080-16-gb-gddr7-asus-90yv0pu0-m0na00",
+      "external_id": "181279"
+    },
+    {
+      "name": "Palit GeForce RTX 5080 GamingPro OC V1 NVIDIA 16 GB GDDR7",
+      "price_cents": 253500,
+      "url": "https://datatronic.fi/komponentit/naytonohjaimet/palit-geforce-rtx-5080-gamingpro-oc-v1-nvidia-16-gb-gddr7-palit-ne75080s19t2-gb2031y",
+      "external_id": "182434"
+    },
+    {
+      "name": "AMD Radeon PRO W7900 48 GB GDDR6",
+      "price_cents": 475900,
+      "url": "https://datatronic.fi/komponentit/naytonohjaimet/amd-radeon-pro-w7900-48-gb-gddr6-amd-100-300000074",
+      "external_id": "181835"
+    },
+    {
+      "name": "PNY GeForce RTX 5070 Ti Slim NVIDIA 16 GB GDDR7",
+      "price_cents": 170500,
+      "url": "https://datatronic.fi/komponentit/naytonohjaimet/pny-geforce-rtx-5070-ti-slim-nvidia-16-gb-gddr7-pny-vcg5070t16dfsxpb1-o",
+      "external_id": "181040"
+    },
+    {
+      "name": "Nvidia RTX A400 4 GB GDDR6",
+      "price_cents": 23790,
+      "url": "https://datatronic.fi/komponentit/naytonohjaimet/nvidia-rtx-a400-4-gb-gddr6-nvidia-900-5g172-2260-000",
+      "external_id": "177454"
+    },
+    {
+      "name": "PNY NVIDIA RTX 2000E Ada Generaton LowProfile OEM Version",
+      "price_cents": 134900,
+      "url": "https://datatronic.fi/pelaaminen/peliohjaimet/pny-nvidia-rtx-2000e-ada-generaton-lowprofile-oem-version-vcnrtx2000eada-sb",
+      "external_id": "162580"
+    },
+    {
+      "name": "Noctua NA-SAV2 chromax.yellow",
+      "price_cents": 1290,
+      "url": "https://datatronic.fi/komponentit/naytonohjaimet/noctua-na-sav2-chromaxyellow-na-sav2yellow",
+      "external_id": "169959"
+    },
+    {
+      "name": "ASUS ROG-ASTRAL-RTX5090-32G-BTF-GAMING NVIDIA GeForce RTX 5090 32 GB GDDR7",
+      "price_cents": 680900,
+      "url": "https://datatronic.fi/komponentit/naytonohjaimet/asus-rog-astral-rtx5090-32g-btf-gaming-nvidia-geforce-rtx-5090-32-gb-gddr7-asus-90yv0nf1-m0na00",
+      "external_id": "184887"
+    },
+    {
+      "name": "Sparkle Technology Intel Arc B570 GUARDIAN OC 10 GB GDDR6",
+      "price_cents": 39900,
+      "url": "https://datatronic.fi/komponentit/naytonohjaimet/sparkle-technology-intel-arc-b570-guardian-oc-10-gb-gddr6-sparkle-technology-sb570g-10goc",
+      "external_id": "184754"
+    },
+    {
+      "name": "MSI GeForce RTX 5080 16G INSPIRE 3X OC BLACK NVIDIA 16 GB GDDR7",
+      "price_cents": 293500,
+      "url": "https://datatronic.fi/komponentit/naytonohjaimet/msi-geforce-rtx-5080-16g-inspire-3x-oc-black-nvidia-16-gb-gddr7-msi-912-v531-681",
+      "external_id": "185789"
+    },
+    {
+      "name": "Sapphire NITRO+ Radeon RX 9070 XT OC Valor Mortis Edition AMD 16 GB GDDR6",
+      "price_cents": 133500,
+      "url": "https://datatronic.fi/komponentit/naytonohjaimet/sapphire-nitro-radeon-rx-9070-xt-oc-valor-mortis-edition-amd-16-gb-gddr6-sapphire-11348-12-20g",
+      "external_id": "185913"
+    },
+    {
+      "name": "GIGABYTE AORUS GeForce RTX 5060 ARI 8G NVIDIA 8 GB GDDR7",
+      "price_cents": 247900,
+      "url": "https://datatronic.fi/komponentit/naytonohjaimet/gigabyte-aorus-geforce-rtx-5060-ari-8g-nvidia-8-gb-gddr7-gigabyte-gv-n5060aorus-ari-8gd",
+      "external_id": "185157"
+    },
+    {
+      "name": "HP NVIDIA RTX PH x2xxx 4mDP Graphics",
+      "price_cents": 88900,
+      "url": "https://datatronic.fi/komponentit/naytonohjaimet/hp-nvidia-rtx-ph-x2xxx-4mdp-graphics-hp-8d6b8aa",
+      "external_id": "185925"
+    },
+    {
+      "name": "Thermal Grizzly Putty Basic jäähdytyslevyn yhdiste Lämpötahna",
+      "price_cents": 3390,
+      "url": "https://datatronic.fi/komponentit/naytonohjaimet/thermal-grizzly-putty-basic-jaahdytyslevyn-yhdiste-lampotahna-thermal-grizzly-tg-p-b-100-r",
+      "external_id": "170869"
+    },
+    {
+      "name": "HP NVIDIA RTX A400 4 GB with Mini Bracket 4mDP Graphics",
+      "price_cents": 41900,
+      "url": "https://datatronic.fi/komponentit/naytonohjaimet/hp-nvidia-rtx-a400-4-gb-with-mini-bracket-4mdp-graphics-hp-av8j3aa",
+      "external_id": "185643"
+    },
+    {
+      "name": "ASUS UGEN-ARC-PRO-B70-32G Intel Arc Pro B70 32 GB GDDR6",
+      "price_cents": 195900,
+      "url": "https://datatronic.fi/komponentit/naytonohjaimet/asus-ugen-arc-pro-b70-32g-intel-arc-pro-b70-32-gb-gddr6-asus-90yt00e0-mvna00",
+      "external_id": "184781"
+    },
+    {
+      "name": "Sparkle Technology Intel Arc A750 TITAN OC Edition 8 GB GDDR6",
+      "price_cents": 43500,
+      "url": "https://datatronic.fi/komponentit/naytonohjaimet/sparkle-technology-intel-arc-a750-titan-oc-edition-8-gb-gddr6-sparkle-technology-sa750t-8goc",
+      "external_id": "184696"
+    },
+    {
+      "name": "VGA SPARKLE Intel ARC B570 10GB Eclipse OC (Battlemage Lineup)",
+      "price_cents": 39900,
+      "url": "https://datatronic.fi/komponentit/naytonohjaimet/vga-sparkle-intel-arc-b570-10gb-eclipse-oc-battlemage-lineup-sb570gb-10goc",
+      "external_id": "184697"
+    },
+    {
+      "name": "ARKN Intel Arc Pro B50 16GB GDDR6 4x mini-DP",
+      "price_cents": 73900,
+      "url": "https://datatronic.fi/komponentit/naytonohjaimet/arkn-intel-arc-pro-b50-16gb-gddr6-4x-mini-dp-8360-00128",
+      "external_id": "185984"
+    }
+  ]
+}

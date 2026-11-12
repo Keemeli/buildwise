@@ -1,0 +1,156 @@
+{
+  "shop": "Datatronic",
+  "category": "storage",
+  "page": 2,
+  "source_url": "https://datatronic.fi/kiintolevyt-ssd-levyt?page=2",
+  "fetched_at": "2026-11-12T14:47:42+00:00",
+  "site_total_products": 589,
+  "items_on_page": 24,
+  "raw_html": "data/raw/html/datatronic_storage_p2_2026-11-12_c34c19e1b449.html",
+  "items": [
+    {
+      "name": "Intenso Top M.2 1000 GB Serial ATA III 3D NAND",
+      "price_cents": 13790,
+      "url": "https://datatronic.fi/komponentit/kiintolevyt-ssd-levyt/ssd/intenso-top-m2-1000-gb-serial-ata-iii-3d-nand-intenso-3832460",
+      "external_id": "46580"
+    },
+    {
+      "name": "Intenso Top 2.5\" 128 GB Serial ATA III",
+      "price_cents": 2990,
+      "url": "https://datatronic.fi/komponentit/kiintolevyt-ssd-levyt/ssd/intenso-top-25-128-gb-serial-ata-iii-intenso-3812430",
+      "external_id": "46559"
+    },
+    {
+      "name": "Samsung 990 PRO M.2 2000 GB PCI Express 4.0 V-NAND MLC NVMe",
+      "price_cents": 49900,
+      "url": "https://datatronic.fi/komponentit/kiintolevyt-ssd-levyt/ssd/samsung-990-pro-m2-2000-gb-pci-express-40-v-nand-mlc-nvme-samsung-mz-v9p2t0bw",
+      "external_id": "48854"
+    },
+    {
+      "name": "Lexar NQ790 4 TB M.2 PCI Express 4.0 NVMe 3D NAND",
+      "price_cents": 48500,
+      "url": "https://datatronic.fi/komponentit/kiintolevyt-ssd-levyt/ssd/lexar-nq790-4-tb-m2-pci-express-40-nvme-3d-nand-lexar-lnq790x004t-rnnng",
+      "external_id": "164022"
+    },
+    {
+      "name": "Western Digital Red Plus WD20EFPX sisäinen kiintolevy 3.5\" 2 TB SATA",
+      "price_cents": 17190,
+      "url": "https://datatronic.fi/komponentit/kiintolevyt-ssd-levyt/hdd/western-digital-red-plus-wd20efpx-sisainen-kiintolevy-35-2-tb-sata-western-digital-wd20efpx",
+      "external_id": "131396"
+    },
+    {
+      "name": "Verbatim Vi550 S3 2.5\" 512 GB Serial ATA III",
+      "price_cents": 7290,
+      "url": "https://datatronic.fi/komponentit/kiintolevyt-ssd-levyt/ssd/verbatim-vi550-s3-25-512-gb-serial-ata-iii-verbatim-49352",
+      "external_id": "7873"
+    },
+    {
+      "name": "Seagate Barracuda ST2000DM008 sisäinen kiintolevy 3.5\" 2000 GB Serial ATA III",
+      "price_cents": 14990,
+      "url": "https://datatronic.fi/komponentit/kiintolevyt-ssd-levyt/hdd/seagate-barracuda-st2000dm008-sisainen-kiintolevy-35-2000-gb-serial-ata-iii-seagate-st2000dm008",
+      "external_id": "14895"
+    },
+    {
+      "name": "Western Digital WD Blue SN5100 4 TB M.2 PCI Express 4.0 NVMe QLC 3D NAND",
+      "price_cents": 59990,
+      "url": "https://datatronic.fi/komponentit/kiintolevyt-ssd-levyt/ssd/western-digital-wd-blue-sn5100-4-tb-m2-pci-express-40-nvme-qlc-3d-nand-western-digital-wds400t5b0e-00cpe0",
+      "external_id": "173964"
+    },
+    {
+      "name": "PNY CS900 2.5\" 500 GB Serial ATA III 3D TLC",
+      "price_cents": 7390,
+      "url": "https://datatronic.fi/komponentit/kiintolevyt-ssd-levyt/ssd/pny-cs900-25-500-gb-serial-ata-iii-3d-tlc-pny-ssd7cs900-500-rb",
+      "external_id": "120808"
+    },
+    {
+      "name": "Western Digital Black SN850X M.2 1000 GB PCI Express 4.0 NVMe",
+      "price_cents": 22990,
+      "url": "https://datatronic.fi/komponentit/kiintolevyt-ssd-levyt/ssd/western-digital-black-sn850x-m2-1000-gb-pci-express-40-nvme-western-digital-wds100t2x0e",
+      "external_id": "47457"
+    },
+    {
+      "name": "Kingston Technology A400 2.5\" 480 GB Serial ATA III TLC",
+      "price_cents": 9490,
+      "url": "https://datatronic.fi/komponentit/kiintolevyt-ssd-levyt/ssd/kingston-technology-a400-25-480-gb-serial-ata-iii-tlc-kingston-technology-sa400s37-480g",
+      "external_id": "3003"
+    },
+    {
+      "name": "Seagate IronWolf ST8000VN004 sisäinen kiintolevy 3.5\" 8000 GB Serial ATA III",
+      "price_cents": 39500,
+      "url": "https://datatronic.fi/komponentit/kiintolevyt-ssd-levyt/hdd/seagate-ironwolf-st8000vn004-sisainen-kiintolevy-35-8000-gb-serial-ata-iii-seagate-st8000vn004",
+      "external_id": "14957"
+    },
+    {
+      "name": "PNY CS900 2.5\" 250 GB Serial ATA III 3D TLC",
+      "price_cents": 4690,
+      "url": "https://datatronic.fi/komponentit/kiintolevyt-ssd-levyt/ssd/pny-cs900-25-250-gb-serial-ata-iii-3d-tlc-pny-ssd7cs900-250-rb",
+      "external_id": "129457"
+    },
+    {
+      "name": "Kingston Technology KC3000 M.2 1024 GB PCI Express 4.0 3D TLC NVMe",
+      "price_cents": 22890,
+      "url": "https://datatronic.fi/komponentit/kiintolevyt-ssd-levyt/ssd/kingston-technology-kc3000-m2-1024-gb-pci-express-40-3d-tlc-nvme-kingston-technology-skc3000s-1024g",
+      "external_id": "32822"
+    },
+    {
+      "name": "Patriot Memory P300P128GM28 SSD-massamuisti M.2 128 GB PCI Express NVMe",
+      "price_cents": 5490,
+      "url": "https://datatronic.fi/komponentit/kiintolevyt-ssd-levyt/ssd/patriot-memory-p300p128gm28-ssd-massamuisti-m2-128-gb-pci-express-nvme-patriot-memory-p300p128gm28",
+      "external_id": "45044"
+    },
+    {
+      "name": "Crucial P310 1 TB M.2 PCI Express 4.0 NVMe",
+      "price_cents": 19990,
+      "url": "https://datatronic.fi/komponentit/kiintolevyt-ssd-levyt/ssd/crucial-p310-1-tb-m2-pci-express-40-nvme-crucial-ct1000p310ssd8",
+      "external_id": "165148"
+    },
+    {
+      "name": "ADATA Ultimate SU650 2.5\" 256 GB Serial ATA III 3D NAND",
+      "price_cents": 4590,
+      "url": "https://datatronic.fi/komponentit/kiintolevyt-ssd-levyt/ssd/adata-ultimate-su650-25-256-gb-serial-ata-iii-3d-nand-adata-asu650ss-256gt-r",
+      "external_id": "37356"
+    },
+    {
+      "name": "Crucial BX500 2.5\" 240 GB Serial ATA III",
+      "price_cents": 6590,
+      "url": "https://datatronic.fi/komponentit/kiintolevyt-ssd-levyt/ssd/crucial-bx500-25-240-gb-serial-ata-iii-crucial-ct240bx500ssd1",
+      "external_id": "39215"
+    },
+    {
+      "name": "Kingston Technology KC600 2.5\" 512 GB Serial ATA III 3D TLC",
+      "price_cents": 16690,
+      "url": "https://datatronic.fi/komponentit/kiintolevyt-ssd-levyt/ssd/kingston-technology-kc600-25-512-gb-serial-ata-iii-3d-tlc-kingston-technology-skc600-512g",
+      "external_id": "4166"
+    },
+    {
+      "name": "Intenso SSD 500GB Premium M.2 PCIe PCI Express 3.0 NVMe",
+      "price_cents": 9490,
+      "url": "https://datatronic.fi/komponentit/kiintolevyt-ssd-levyt/ssd/intenso-ssd-500gb-premium-m2-pcie-pci-express-30-nvme-intenso-3835450",
+      "external_id": "178074"
+    },
+    {
+      "name": "Verbatim Vi550 S3 2.5\" SSD 256GB",
+      "price_cents": 4290,
+      "url": "https://datatronic.fi/komponentit/kiintolevyt-ssd-levyt/ssd/verbatim-vi550-s3-25-ssd-256gb-verbatim-49351",
+      "external_id": "7872"
+    },
+    {
+      "name": "Seagate IronWolf Pro ST10000NT001 sisäinen kiintolevy 3.5\" 10000 GB",
+      "price_cents": 56500,
+      "url": "https://datatronic.fi/komponentit/kiintolevyt-ssd-levyt/hdd/seagate-ironwolf-pro-st10000nt001-sisainen-kiintolevy-35-10000-gb-seagate-st10000nt001",
+      "external_id": "113290"
+    },
+    {
+      "name": "Western Digital Blue SA510 2.5\" 1000 GB Serial ATA III",
+      "price_cents": 19990,
+      "url": "https://datatronic.fi/komponentit/kiintolevyt-ssd-levyt/ssd/western-digital-blue-sa510-25-1000-gb-serial-ata-iii-western-digital-wds100t3b0a",
+      "external_id": "46126"
+    },
+    {
+      "name": "Goodram CX400 gen.2 1 TB 2.5\" Serial ATA III 3D TLC NAND",
+      "price_cents": 12690,
+      "url": "https://datatronic.fi/komponentit/kiintolevyt-ssd-levyt/ssd/goodram-cx400-gen2-1-tb-25-serial-ata-iii-3d-tlc-nand-goodram-ssdpr-cx400-01t-g2",
+      "external_id": "178723"
+    }
+  ]
+}

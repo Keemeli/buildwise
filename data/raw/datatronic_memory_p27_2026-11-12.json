@@ -1,0 +1,156 @@
+{
+  "shop": "Datatronic",
+  "category": "memory",
+  "page": 27,
+  "source_url": "https://datatronic.fi/muistit?page=27",
+  "fetched_at": "2026-11-12T14:47:29+00:00",
+  "site_total_products": 761,
+  "items_on_page": 24,
+  "raw_html": "data/raw/html/datatronic_memory_p27_2026-11-12_2a71f6ed0d2c.html",
+  "items": [
+    {
+      "name": "G.Skill Ripjaws M5 RGB F5-6000J3636F16GX2-RM5RK muistimoduuli 32 GB 2 x 16 GB DDR5 6000 MHz",
+      "price_cents": 67900,
+      "url": "https://datatronic.fi/komponentit/muistit/gskill-ripjaws-m5-rgb-f5-6000j3636f16gx2-rm5rk-muistimoduuli-32-gb-2-x-16-gb-ddr5-6000-mhz-gskill-f5-6000j3636f16gx2-rm5rk",
+      "external_id": "165471"
+    },
+    {
+      "name": "Core Geforce RTX 5080/5070Ti TUF Gaming (mit Backplate)",
+      "price_cents": 22990,
+      "url": "https://datatronic.fi/komponentit/muistit/core-geforce-rtx-5080-5070ti-tuf-gaming-mit-backplate-10266",
+      "external_id": "170837"
+    },
+    {
+      "name": "Corsair Vengeance CMK96GX5M2E6000Z36 muistimoduuli 96 GB 2 x 48 GB DDR5 6000 MT/s",
+      "price_cents": 239500,
+      "url": "https://datatronic.fi/komponentit/muistit/corsair-vengeance-cmk96gx5m2e6000z36-muistimoduuli-96-gb-2-x-48-gb-ddr5-6000-mt-s-corsair-cmk96gx5m2e6000z36",
+      "external_id": "173717"
+    },
+    {
+      "name": "G.Skill Trident Z5 RGB F5-6400J3239G16GX2-TZ5RK muistimoduuli 32 GB 2 x 16 GB DDR5",
+      "price_cents": 81900,
+      "url": "https://datatronic.fi/komponentit/muistit/gskill-trident-z5-rgb-f5-6400j3239g16gx2-tz5rk-muistimoduuli-32-gb-2-x-16-gb-ddr5-gskill-f5-6400j3239g16gx2-tz5rk",
+      "external_id": "173729"
+    },
+    {
+      "name": "Team Group EXPERT DDR4 OC10L muistimoduuli 32 GB 2 x 16 GB 3200 MHz",
+      "price_cents": 29900,
+      "url": "https://datatronic.fi/komponentit/muistit/team-group-expert-ddr4-oc10l-muistimoduuli-32-gb-2-x-16-gb-3200-mhz-team-group-ttced432g3200hc16fdc01",
+      "external_id": "166463"
+    },
+    {
+      "name": "Kingston Technology KSM64R52BS8-16MD muistimoduuli 16 GB 1 x 16 GB DDR5 6400 MT/s",
+      "price_cents": 109900,
+      "url": "https://datatronic.fi/komponentit/muistit/kingston-technology-ksm64r52bs8-16md-muistimoduuli-16-gb-1-x-16-gb-ddr5-6400-mt-s-kingston-technology-ksm64r52bs8-16md",
+      "external_id": "172552"
+    },
+    {
+      "name": "Samsung M393A8G40AB2-CWE muistimoduuli 64 GB 1 x 64 GB DDR4 ECC",
+      "price_cents": 134900,
+      "url": "https://datatronic.fi/komponentit/muistit/samsung-m393a8g40ab2-cwe-muistimoduuli-64-gb-1-x-64-gb-ddr4-ecc-samsung-m393a8g40ab2-cwe",
+      "external_id": "175290"
+    },
+    {
+      "name": "Lenovo Tab M10 Plus (3rd Gen) 32 GB 26,9 cm (10.6\") Mediatek 3 GB Wi-Fi 5 (802.11ac) Android 12 Harmaa",
+      "price_cents": 124500,
+      "url": "https://datatronic.fi/komponentit/muistit/lenovo-tab-m10-plus-3rd-gen-32-gb-269-cm-106-mediatek-3-gb-wi-fi-5-80211ac-android-12-harmaa-lenovo-zaaj0233es",
+      "external_id": "106291"
+    },
+    {
+      "name": "Kingston Technology KSM32RD4/64HD muistimoduuli 64 GB 1 x 64 GB DDR4 3200 MT/s ECC",
+      "price_cents": 134900,
+      "url": "https://datatronic.fi/komponentit/muistit/kingston-technology-ksm32rd4-64hd-muistimoduuli-64-gb-1-x-64-gb-ddr4-3200-mt-s-ecc-kingston-technology-ksm32rd4-64hd",
+      "external_id": "171897"
+    },
+    {
+      "name": "Corsair Vengeance RGB CMH96GX5M2E6000Z36 muistimoduuli 96 GB 2 x 48 GB DDR5 6000 MT/s",
+      "price_cents": 240500,
+      "url": "https://datatronic.fi/komponentit/muistit/corsair-vengeance-rgb-cmh96gx5m2e6000z36-muistimoduuli-96-gb-2-x-48-gb-ddr5-6000-mt-s-corsair-cmh96gx5m2e6000z36",
+      "external_id": "173716"
+    },
+    {
+      "name": "Lenovo 4X71D09536 muistimoduuli 32 GB 1 x 32 GB DDR4 3200 MHz",
+      "price_cents": 23790,
+      "url": "https://datatronic.fi/komponentit/muistit/lenovo-4x71d09536-muistimoduuli-32-gb-1-x-32-gb-ddr4-3200-mhz-lenovo-4x71d09536",
+      "external_id": "58078"
+    },
+    {
+      "name": "Goodram GR5600D564L46S/16G muistimoduuli 16 GB 1 x 16 GB DDR5 288-pin DIMM",
+      "price_cents": 26990,
+      "url": "https://datatronic.fi/komponentit/muistit/goodram-gr5600d564l46s-16g-muistimoduuli-16-gb-1-x-16-gb-ddr5-288-pin-dimm-goodram-gr5600d564l46s-16g",
+      "external_id": "178750"
+    },
+    {
+      "name": "Corsair Vengeance RGB CMK48GX5M2B6000C30W muistimoduuli 48 GB 2 x 24 GB DDR5 4800 MHz",
+      "price_cents": 120900,
+      "url": "https://datatronic.fi/komponentit/muistit/corsair-vengeance-rgb-cmk48gx5m2b6000c30w-muistimoduuli-48-gb-2-x-24-gb-ddr5-4800-mhz-corsair-cmk48gx5m2b6000c30w",
+      "external_id": "164268"
+    },
+    {
+      "name": "ADATA DDR5 5600 U-DIMM muistimoduuli 32 GB 2 x 16 GB 5600 MHz ECC",
+      "price_cents": 64500,
+      "url": "https://datatronic.fi/komponentit/muistit/adata-ddr5-5600-u-dimm-muistimoduuli-32-gb-2-x-16-gb-5600-mhz-ecc-adata-ad5u560016g-dt",
+      "external_id": "169266"
+    },
+    {
+      "name": "G.Skill Flare X5 F5-5200J4040A24GX1-FX5 muistimoduuli 24 GB 1 x 24 GB DDR5 5200 MT/s 288-pin DIMM",
+      "price_cents": 57900,
+      "url": "https://datatronic.fi/komponentit/muistit/gskill-flare-x5-f5-5200j4040a24gx1-fx5-muistimoduuli-24-gb-1-x-24-gb-ddr5-5200-mt-s-288-pin-dimm-gskill-f5-5200j4040a24gx1-fx5",
+      "external_id": "176501"
+    },
+    {
+      "name": "Corsair Vengeance CMSX24GX5M1A4800C40 muistimoduuli 24 GB 1 x 24 GB DDR5 262-pin SO-DIMM",
+      "price_cents": 35500,
+      "url": "https://datatronic.fi/komponentit/muistit/corsair-vengeance-cmsx24gx5m1a4800c40-muistimoduuli-24-gb-1-x-24-gb-ddr5-262-pin-so-dimm-corsair-cmsx24gx5m1a4800c40",
+      "external_id": "177842"
+    },
+    {
+      "name": "G.Skill Flare X5 F5-6000J3636F16GX1-FX5 muistimoduuli 16 GB 1 x 16 GB DDR5 6000 MT/s 288-pin DIMM",
+      "price_cents": 37900,
+      "url": "https://datatronic.fi/komponentit/muistit/gskill-flare-x5-f5-6000j3636f16gx1-fx5-muistimoduuli-16-gb-1-x-16-gb-ddr5-6000-mt-s-288-pin-dimm-gskill-f5-6000j3636f16gx1-fx5",
+      "external_id": "176507"
+    },
+    {
+      "name": "Goodram IRDM DDR5 IR-6000D564L30/64GDC muistimoduuli 64 GB 2 x 32 GB 288-pin DIMM",
+      "price_cents": 145500,
+      "url": "https://datatronic.fi/komponentit/muistit/goodram-irdm-ddr5-ir-6000d564l30-64gdc-muistimoduuli-64-gb-2-x-32-gb-288-pin-dimm-goodram-ir-6000d564l30-64gdc",
+      "external_id": "178758"
+    },
+    {
+      "name": "Goodram IRDM RGB DDR5 IRG-60D5L30S/32GDC muistimoduuli 32 GB 2 x 16 GB 288-pin DIMM",
+      "price_cents": 86900,
+      "url": "https://datatronic.fi/komponentit/muistit/goodram-irdm-rgb-ddr5-irg-60d5l30s-32gdc-muistimoduuli-32-gb-2-x-16-gb-288-pin-dimm-goodram-irg-60d5l30s-32gdc",
+      "external_id": "178771"
+    },
+    {
+      "name": "XPG LANCER BLADE muistimoduuli 16 GB 1 x 16 GB DDR5 288-pin DIMM ECC",
+      "price_cents": 34900,
+      "url": "https://datatronic.fi/komponentit/muistit/xpg-lancer-blade-muistimoduuli-16-gb-1-x-16-gb-ddr5-288-pin-dimm-ecc-xpg-ax5u5600c4616g-slabbk",
+      "external_id": "176403"
+    },
+    {
+      "name": "XPG LANCER BLADE DDR5 muistimoduuli 16 GB 2 x 8 GB 288-pin DIMM ECC",
+      "price_cents": 35900,
+      "url": "https://datatronic.fi/komponentit/muistit/xpg-lancer-blade-ddr5-muistimoduuli-16-gb-2-x-8-gb-288-pin-dimm-ecc-xpg-ax5u5600c468g-dtlabbk",
+      "external_id": "176423"
+    },
+    {
+      "name": "Montech HP140 ARGB PWM Tietokonekotelo Tuuletin 14 cm Valkoinen 3 kpl",
+      "price_cents": 3890,
+      "url": "https://datatronic.fi/komponentit/muistit/montech-hp140-argb-pwm-tietokonekotelo-tuuletin-14-cm-valkoinen-3-kpl-montech-hp140-argb-pwm-3-in-1-pack",
+      "external_id": "169899"
+    },
+    {
+      "name": "Corsair Vengeance CMK128GX5M2D6000C40 muistimoduuli 128 GB 2 x 64 GB DDR5 6000 MT/s 288-pin DIMM",
+      "price_cents": 455900,
+      "url": "https://datatronic.fi/komponentit/muistit/corsair-vengeance-cmk128gx5m2d6000c40-muistimoduuli-128-gb-2-x-64-gb-ddr5-6000-mt-s-288-pin-dimm-corsair-cmk128gx5m2d6000c40",
+      "external_id": "176487"
+    },
+    {
+      "name": "G.Skill Flare X5 F5-5600J3636C8GH1-FX5 muistimoduuli 8 GB 1 x 8 GB DDR5 5600 MT/s 288-pin DIMM",
+      "price_cents": 18790,
+      "url": "https://datatronic.fi/komponentit/muistit/gskill-flare-x5-f5-5600j3636c8gh1-fx5-muistimoduuli-8-gb-1-x-8-gb-ddr5-5600-mt-s-288-pin-dimm-gskill-f5-5600j3636c8gh1-fx5",
+      "external_id": "175510"
+    }
+  ]
+}

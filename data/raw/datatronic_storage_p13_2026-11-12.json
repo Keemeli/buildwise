@@ -1,0 +1,156 @@
+{
+  "shop": "Datatronic",
+  "category": "storage",
+  "page": 13,
+  "source_url": "https://datatronic.fi/kiintolevyt-ssd-levyt?page=13",
+  "fetched_at": "2026-11-12T14:48:11+00:00",
+  "site_total_products": 589,
+  "items_on_page": 24,
+  "raw_html": "data/raw/html/datatronic_storage_p13_2026-11-12_35da0d00fb30.html",
+  "items": [
+    {
+      "name": "ASUS B850M MAX GAMING WIFI AMD B850 Pistoke AM5 mikro ATX",
+      "price_cents": 18190,
+      "url": "https://datatronic.fi/komponentit/kiintolevyt-ssd-levyt/ssd/asus-b850m-max-gaming-wifi-amd-b850-pistoke-am5-mikro-atx-asus-90mb1ll0-m0eay0",
+      "external_id": "170460"
+    },
+    {
+      "name": "Samsung 870 QVO 2.5\" 2000 GB Serial ATA III QLC V-NAND",
+      "price_cents": 103500,
+      "url": "https://datatronic.fi/komponentit/kiintolevyt-ssd-levyt/ssd/samsung-870-qvo-25-2000-gb-serial-ata-iii-qlc-v-nand-samsung-mz-77q2t0bw",
+      "external_id": "32984"
+    },
+    {
+      "name": "Seagate Enterprise ST600MM0009 sisäinen kiintolevy 2.5\" 600 GB SAS",
+      "price_cents": 27690,
+      "url": "https://datatronic.fi/komponentit/kiintolevyt-ssd-levyt/hdd/seagate-enterprise-st600mm0009-sisainen-kiintolevy-25-600-gb-sas-seagate-st600mm0009",
+      "external_id": "16944"
+    },
+    {
+      "name": "Intenso 3813450 SSD-massamuisti 2.5\" 480 GB Serial ATA III",
+      "price_cents": 8090,
+      "url": "https://datatronic.fi/komponentit/kiintolevyt-ssd-levyt/ssd/intenso-3813450-ssd-massamuisti-25-480-gb-serial-ata-iii-intenso-3813450",
+      "external_id": "41788"
+    },
+    {
+      "name": "ADATA SE920 Thunderbolt-teknologia 4 TB USB Type-C USB4 Gen 3x2 musta",
+      "price_cents": 88500,
+      "url": "https://datatronic.fi/komponentit/kiintolevyt-ssd-levyt/adata-se920-thunderbolt-teknologia-4-tb-usb-type-c-usb4-gen-3x2-musta-adata-se920-4tcbk",
+      "external_id": "154369"
+    },
+    {
+      "name": "MSI MEG X870E GODLIKE emolevy AMD X870E Pistoke AM5 Laajennettu ATX",
+      "price_cents": 144500,
+      "url": "https://datatronic.fi/komponentit/kiintolevyt-ssd-levyt/ssd/msi-meg-x870e-godlike-emolevy-amd-x870e-pistoke-am5-laajennettu-atx-msi-7e48-001r",
+      "external_id": "165981"
+    },
+    {
+      "name": "Seagate Surveillance HDD SkyHawk AI 3.5\" 8000 GB Serial ATA III",
+      "price_cents": 40900,
+      "url": "https://datatronic.fi/komponentit/kiintolevyt-ssd-levyt/hdd/seagate-surveillance-hdd-skyhawk-ai-35-8000-gb-serial-ata-iii-seagate-st8000ve001",
+      "external_id": "46584"
+    },
+    {
+      "name": "StarTech.com M2-REMOVABLE-PCIE-N1 liitäntäkortti/-sovitin Sisäinen M.2",
+      "price_cents": 12790,
+      "url": "https://datatronic.fi/komponentit/kiintolevyt-ssd-levyt/startechcom-m2-removable-pcie-n1-liitantakortti-sovitin-sisainen-m2-startechcom-m2-removable-pcie-n1",
+      "external_id": "160254"
+    },
+    {
+      "name": "Western Digital Red Pro 3.5\" 2000 GB Serial ATA III",
+      "price_cents": 17890,
+      "url": "https://datatronic.fi/komponentit/kiintolevyt-ssd-levyt/hdd/western-digital-red-pro-35-2000-gb-serial-ata-iii-western-digital-wd2002ffsx",
+      "external_id": "16041"
+    },
+    {
+      "name": "Western Digital Purple Pro 3.5\" 18000 GB Serial ATA III",
+      "price_cents": 103900,
+      "url": "https://datatronic.fi/komponentit/kiintolevyt-ssd-levyt/hdd/western-digital-purple-pro-35-18000-gb-serial-ata-iii-western-digital-wd181purp",
+      "external_id": "38918"
+    },
+    {
+      "name": "Western Digital Purple sisäinen kiintolevy 6 TB 5400 RPM 256 MB 3.5\" Serial ATA III",
+      "price_cents": 32900,
+      "url": "https://datatronic.fi/komponentit/kiintolevyt-ssd-levyt/hdd/western-digital-purple-sisainen-kiintolevy-6-tb-5400-rpm-256-mb-35-serial-ata-iii-western-digital-wd64purz",
+      "external_id": "175961"
+    },
+    {
+      "name": "Seagate IronWolf Pro ST18000NE000 sisäinen kiintolevy 18 TB 7200 RPM 256 MB 3.5\" Serial ATA III",
+      "price_cents": 60500,
+      "url": "https://datatronic.fi/komponentit/kiintolevyt-ssd-levyt/hdd/seagate-ironwolf-pro-st18000ne000-sisainen-kiintolevy-18-tb-7200-rpm-256-mb-35-serial-ata-iii-seagate-st18000ne000",
+      "external_id": "175566"
+    },
+    {
+      "name": "Kingston Technology FURY Renegade G5 8 TB M.2 PCI Express 5.0 NVMe 3D TLC",
+      "price_cents": 259900,
+      "url": "https://datatronic.fi/komponentit/kiintolevyt-ssd-levyt/ssd/kingston-technology-fury-renegade-g5-8-tb-m2-pci-express-50-nvme-3d-tlc-kingston-technology-sfyr2d-8t1",
+      "external_id": "173713"
+    },
+    {
+      "name": "Kingston Technology KC600 2.5\" 256 GB Serial ATA III 3D TLC",
+      "price_cents": 10090,
+      "url": "https://datatronic.fi/komponentit/kiintolevyt-ssd-levyt/ssd/kingston-technology-kc600-25-256-gb-serial-ata-iii-3d-tlc-kingston-technology-skc600-256g",
+      "external_id": "4165"
+    },
+    {
+      "name": "Western Digital 22TB Ultrastar HC570 3.5\"",
+      "price_cents": 130500,
+      "url": "https://datatronic.fi/komponentit/kiintolevyt-ssd-levyt/hdd/western-digital-22tb-ultrastar-hc570-35-western-digital-0f48155",
+      "external_id": "118326"
+    },
+    {
+      "name": "Kingston Technology NV3 1 TB M.2 PCI Express 4.0 NVMe 3D NAND",
+      "price_cents": 24690,
+      "url": "https://datatronic.fi/komponentit/kiintolevyt-ssd-levyt/ssd/kingston-technology-nv3-1-tb-m2-pci-express-40-nvme-3d-nand-kingston-technology-snv3sm3-1t0",
+      "external_id": "171421"
+    },
+    {
+      "name": "Kingston Technology KC600 2.5\" 2048 GB Serial ATA III 3D TLC",
+      "price_cents": 54900,
+      "url": "https://datatronic.fi/komponentit/kiintolevyt-ssd-levyt/ssd/kingston-technology-kc600-25-2048-gb-serial-ata-iii-3d-tlc-kingston-technology-skc600-2048g",
+      "external_id": "4395"
+    },
+    {
+      "name": "WD Black SN850X NVMe SSD Gaming Storage",
+      "price_cents": 184900,
+      "url": "https://datatronic.fi/komponentit/kiintolevyt-ssd-levyt/wd-black-sn850x-nvme-ssd-gaming-storage-wdbb9h0080bnc-wrsn",
+      "external_id": "164231"
+    },
+    {
+      "name": "HPE 600GB hot-plug SAS 2.5\"",
+      "price_cents": 116500,
+      "url": "https://datatronic.fi/komponentit/kiintolevyt-ssd-levyt/hdd/hpe-600gb-hot-plug-sas-25-hpe-759212-b21",
+      "external_id": "151464"
+    },
+    {
+      "name": "Samsung 2TB 9100 PRO with Heatsink",
+      "price_cents": 55900,
+      "url": "https://datatronic.fi/komponentit/kiintolevyt-ssd-levyt/ssd/samsung-2tb-9100-pro-with-heatsink-samsung-mz-vap2t0cw",
+      "external_id": "170073"
+    },
+    {
+      "name": "SanDisk SDSSDA3N-1T00-G26 SSD-massamuisti 1 TB PCI Express 3.0",
+      "price_cents": 18190,
+      "url": "https://datatronic.fi/komponentit/kiintolevyt-ssd-levyt/ssd/sandisk-sdssda3n-1t00-g26-ssd-massamuisti-1-tb-pci-express-30-sandisk-sdssda3n-1t00-g26",
+      "external_id": "176131"
+    },
+    {
+      "name": "Seagate Enterprise ST2000NX0273 sisäinen kiintolevy 2.5\" 2048 GB SAS",
+      "price_cents": 63900,
+      "url": "https://datatronic.fi/komponentit/kiintolevyt-ssd-levyt/hdd/seagate-enterprise-st2000nx0273-sisainen-kiintolevy-25-2048-gb-sas-seagate-st2000nx0273",
+      "external_id": "16915"
+    },
+    {
+      "name": "Goodram CL100 gen.3 240 GB 2.5\" Serial ATA III 3D NAND",
+      "price_cents": 4590,
+      "url": "https://datatronic.fi/komponentit/kiintolevyt-ssd-levyt/ssd/goodram-cl100-gen3-240-gb-25-serial-ata-iii-3d-nand-goodram-ssdpr-cl100-240-g3",
+      "external_id": "178720"
+    },
+    {
+      "name": "SanDisk WD_BLACK SN8100 NVMe 8 TB M.2 PCI Express 5.0 TLC 3D NAND",
+      "price_cents": 229500,
+      "url": "https://datatronic.fi/komponentit/kiintolevyt-ssd-levyt/ssd/sandisk-wd-black-sn8100-nvme-8-tb-m2-pci-express-50-tlc-3d-nand-sandisk-wds800t1x0m-00cmt0",
+      "external_id": "174814"
+    }
+  ]
+}

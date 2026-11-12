@@ -1,0 +1,156 @@
+{
+  "shop": "Datatronic",
+  "category": "case",
+  "page": 11,
+  "source_url": "https://datatronic.fi/kotelot?page=11",
+  "fetched_at": "2026-11-12T14:49:01+00:00",
+  "site_total_products": 620,
+  "items_on_page": 24,
+  "raw_html": "data/raw/html/datatronic_case_p11_2026-11-12_7b141411fc82.html",
+  "items": [
+    {
+      "name": "Fractal Design Torrent Nano Valkoinen",
+      "price_cents": 14390,
+      "url": "https://datatronic.fi/komponentit/kotelot/fractal-design-torrent-nano-valkoinen-fractal-design-fd-c-tor1n-05",
+      "external_id": "112221"
+    },
+    {
+      "name": "Chieftec BW-01B-OP tietokonekotelo Midi Tower Musta",
+      "price_cents": 8390,
+      "url": "https://datatronic.fi/komponentit/kotelot/chieftec-bw-01b-op-tietokonekotelo-midi-tower-musta-chieftec-bw-01b-op",
+      "external_id": "177868"
+    },
+    {
+      "name": "MSI MAG FORGE 120A AIRFLOW tietokonekotelo Midi Tower musta, Läpinäkyvä",
+      "price_cents": 7990,
+      "url": "https://datatronic.fi/komponentit/kotelot/msi-mag-forge-120a-airflow-tietokonekotelo-midi-tower-musta-lapinakyva-msi-306-7g23a21-809",
+      "external_id": "162303"
+    },
+    {
+      "name": "LC-Power 7040B Midi Tower Musta",
+      "price_cents": 4190,
+      "url": "https://datatronic.fi/komponentit/kotelot/lc-power-7040b-midi-tower-musta-lc-power-lc-7040b-on",
+      "external_id": "123055"
+    },
+    {
+      "name": "Antec C8 Wood Full Tower musta, Puu",
+      "price_cents": 12190,
+      "url": "https://datatronic.fi/komponentit/kotelot/antec-c8-wood-full-tower-musta-puu-antec-0-761345-10079-3",
+      "external_id": "170873"
+    },
+    {
+      "name": "Fractal Design Pop Air Valkoinen",
+      "price_cents": 11290,
+      "url": "https://datatronic.fi/komponentit/kotelot/fractal-design-pop-air-valkoinen-fractal-design-fd-c-por1a-01",
+      "external_id": "47323"
+    },
+    {
+      "name": "Corsair 3500X RS-R ARGB Midi Tower Valkoinen",
+      "price_cents": 15090,
+      "url": "https://datatronic.fi/komponentit/kotelot/corsair-3500x-rs-r-argb-midi-tower-valkoinen-corsair-cc-9011323-ww",
+      "external_id": "173182"
+    },
+    {
+      "name": "Chieftec IX-03B-OP tietokonekotelo Mini Tower Musta",
+      "price_cents": 4190,
+      "url": "https://datatronic.fi/komponentit/kotelot/chieftec-ix-03b-op-tietokonekotelo-mini-tower-musta-chieftec-ix-03b-op",
+      "external_id": "38269"
+    },
+    {
+      "name": "Jonsbo D31 STD Midi Tower Valkoinen",
+      "price_cents": 11490,
+      "url": "https://datatronic.fi/komponentit/kotelot/jonsbo-d31-std-midi-tower-valkoinen-jonsbo-d31-std-white-sc",
+      "external_id": "128409"
+    },
+    {
+      "name": "Jonsbo D41 STD Midi Tower Valkoinen",
+      "price_cents": 11890,
+      "url": "https://datatronic.fi/komponentit/kotelot/jonsbo-d41-std-midi-tower-valkoinen-jonsbo-d41-std-white-sc",
+      "external_id": "128414"
+    },
+    {
+      "name": "Fractal Design Meshify 3 XL musta",
+      "price_cents": 21190,
+      "url": "https://datatronic.fi/komponentit/kotelot/fractal-design-meshify-3-xl-musta-fractal-design-fd-c-mes3x-02",
+      "external_id": "166197"
+    },
+    {
+      "name": "Fractal Design Meshify 3 Valkoinen",
+      "price_cents": 15990,
+      "url": "https://datatronic.fi/komponentit/kotelot/fractal-design-meshify-3-valkoinen-fractal-design-fd-c-mes3a-04",
+      "external_id": "166194"
+    },
+    {
+      "name": "Fractal Design Ridge Small Form Factor (SFF) Valkoinen",
+      "price_cents": 17890,
+      "url": "https://datatronic.fi/komponentit/kotelot/fractal-design-ridge-small-form-factor-sff-valkoinen-fractal-design-fd-c-rid1n-12",
+      "external_id": "129115"
+    },
+    {
+      "name": "Fractal Design Era 2 Mini Tower Puuhiili, Harmaa",
+      "price_cents": 23090,
+      "url": "https://datatronic.fi/komponentit/kotelot/fractal-design-era-2-mini-tower-puuhiili-harmaa-fractal-design-fd-c-era2n-02",
+      "external_id": "164493"
+    },
+    {
+      "name": "HYTE Y70 Midi Tower Vaaleanpunainen",
+      "price_cents": 22490,
+      "url": "https://datatronic.fi/komponentit/kotelot/hyte-y70-midi-tower-vaaleanpunainen-hyte-cs-hyte-y70-sm",
+      "external_id": "169725"
+    },
+    {
+      "name": "LC-Power 2014MB Midi Tower Musta",
+      "price_cents": 3990,
+      "url": "https://datatronic.fi/komponentit/kotelot/lc-power-2014mb-midi-tower-musta-lc-power-lc-2014mb-on",
+      "external_id": "122905"
+    },
+    {
+      "name": "Zalman P30 V2 Mini Tower Valkoinen",
+      "price_cents": 7490,
+      "url": "https://datatronic.fi/komponentit/kotelot/zalman-p30-v2-mini-tower-valkoinen-zalman-p30-white-v2",
+      "external_id": "166539"
+    },
+    {
+      "name": "Fractal Design Meshify 3 Valkoinen",
+      "price_cents": 17090,
+      "url": "https://datatronic.fi/komponentit/kotelot/fractal-design-meshify-3-valkoinen-fractal-design-fd-c-mes3a-07",
+      "external_id": "170354"
+    },
+    {
+      "name": "Chieftec BX-10B-M-OP tietokonekotelo Mini Tower Musta",
+      "price_cents": 6190,
+      "url": "https://datatronic.fi/komponentit/kotelot/chieftec-bx-10b-m-op-tietokonekotelo-mini-tower-musta-chieftec-bx-10b-m-op",
+      "external_id": "151809"
+    },
+    {
+      "name": "be quiet! LIGHT BASE 900 FX White Full Tower Valkoinen",
+      "price_cents": 26890,
+      "url": "https://datatronic.fi/komponentit/kotelot/be-quiet-light-base-900-fx-white-full-tower-valkoinen-be-quiet-bgw72",
+      "external_id": "164910"
+    },
+    {
+      "name": "ASUS TUF Gaming GT502 PLUS Midi Tower Musta",
+      "price_cents": 21190,
+      "url": "https://datatronic.fi/komponentit/kotelot/asus-tuf-gaming-gt502-plus-midi-tower-musta-asus-90dc0090-b19010",
+      "external_id": "154845"
+    },
+    {
+      "name": "Fractal Design Meshify 3 musta",
+      "price_cents": 28290,
+      "url": "https://datatronic.fi/komponentit/kotelot/fractal-design-meshify-3-musta-fractal-design-fd-c-mes3a-03",
+      "external_id": "166193"
+    },
+    {
+      "name": "DeepCool CH510 Midi Tower Musta",
+      "price_cents": 7190,
+      "url": "https://datatronic.fi/komponentit/kotelot/deepcool-ch510-midi-tower-musta-deepcool-r-ch510-bknne1-g-1",
+      "external_id": "48182"
+    },
+    {
+      "name": "Fractal Design Mood Micro-ATX musta",
+      "price_cents": 19490,
+      "url": "https://datatronic.fi/komponentit/kotelot/fractal-design-mood-micro-atx-musta-fractal-design-fd-c-mod1n-02",
+      "external_id": "162140"
+    }
+  ]
+}

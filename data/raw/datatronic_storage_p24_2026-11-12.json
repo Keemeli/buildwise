@@ -1,0 +1,156 @@
+{
+  "shop": "Datatronic",
+  "category": "storage",
+  "page": 24,
+  "source_url": "https://datatronic.fi/kiintolevyt-ssd-levyt?page=24",
+  "fetched_at": "2026-11-12T14:48:40+00:00",
+  "site_total_products": 589,
+  "items_on_page": 24,
+  "raw_html": "data/raw/html/datatronic_storage_p24_2026-11-12_ba964dba2e9a.html",
+  "items": [
+    {
+      "name": "Verbatim Vi550 S3 2.5\" SSD 128GB",
+      "price_cents": 3690,
+      "url": "https://datatronic.fi/komponentit/kiintolevyt-ssd-levyt/ssd/verbatim-vi550-s3-25-ssd-128gb-verbatim-49350",
+      "external_id": "7871"
+    },
+    {
+      "name": "Intel SSDSCKKB480GZ01 SSD-massamuisti M.2 480 GB Serial ATA III",
+      "price_cents": 111900,
+      "url": "https://datatronic.fi/komponentit/kiintolevyt-ssd-levyt/ssd/intel-ssdsckkb480gz01-ssd-massamuisti-m2-480-gb-serial-ata-iii-intel-ssdsckkb480gz01",
+      "external_id": "31834"
+    },
+    {
+      "name": "Samsung PM9D3a 1,92 TB 2.5\" PCI Express 5.0 NVMe",
+      "price_cents": 148900,
+      "url": "https://datatronic.fi/komponentit/kiintolevyt-ssd-levyt/ssd/samsung-pm9d3a-192-tb-25-pci-express-50-nvme-samsung-mzwl61t9hflt-00aw7",
+      "external_id": "184129"
+    },
+    {
+      "name": "Team Group Delta Max 2.5\" 500 GB Serial ATA III",
+      "price_cents": 10090,
+      "url": "https://datatronic.fi/komponentit/kiintolevyt-ssd-levyt/ssd/team-group-delta-max-25-500-gb-serial-ata-iii-team-group-t253tm500g3c302",
+      "external_id": "124658"
+    },
+    {
+      "name": "Western Digital Ultrastar DC HC555 sisäinen kiintolevy 16 TB 7200 RPM 512 MB 3.5\" SAS3",
+      "price_cents": 97900,
+      "url": "https://datatronic.fi/komponentit/kiintolevyt-ssd-levyt/hdd/western-digital-ultrastar-dc-hc555-sisainen-kiintolevy-16-tb-7200-rpm-512-mb-35-sas3-western-digital-0b47745",
+      "external_id": "182600"
+    },
+    {
+      "name": "Patriot Memory Burst Elite 2.5\" 120 GB Serial ATA III",
+      "price_cents": 3690,
+      "url": "https://datatronic.fi/komponentit/kiintolevyt-ssd-levyt/ssd/patriot-memory-burst-elite-25-120-gb-serial-ata-iii-patriot-memory-pbe120gs25ssdr",
+      "external_id": "45060"
+    },
+    {
+      "name": "Crucial T700 M.2 2 TB PCI Express 5.0 NVMe",
+      "price_cents": 69900,
+      "url": "https://datatronic.fi/komponentit/kiintolevyt-ssd-levyt/ssd/crucial-t700-m2-2-tb-pci-express-50-nvme-crucial-ct2000t700ssd3",
+      "external_id": "126276"
+    },
+    {
+      "name": "Western Digital WD Red SN700 M.2 500 GB PCI Express 3.0 NVMe",
+      "price_cents": 51900,
+      "url": "https://datatronic.fi/komponentit/kiintolevyt-ssd-levyt/ssd/western-digital-wd-red-sn700-m2-500-gb-pci-express-30-nvme-western-digital-wds500g1r0c",
+      "external_id": "38923"
+    },
+    {
+      "name": "ADATA SU650 2.5\" 2 TB Serial ATA III 3D NAND",
+      "price_cents": 36500,
+      "url": "https://datatronic.fi/komponentit/kiintolevyt-ssd-levyt/ssd/adata-su650-25-2-tb-serial-ata-iii-3d-nand-adata-asu650ss-2tt-r",
+      "external_id": "149219"
+    },
+    {
+      "name": "Western Digital Gold WD122KRYZ sisäinen kiintolevy 12 TB 7200 RPM 512 MB 3.5\" Serial ATA III",
+      "price_cents": 68900,
+      "url": "https://datatronic.fi/komponentit/kiintolevyt-ssd-levyt/hdd/western-digital-gold-wd122kryz-sisainen-kiintolevy-12-tb-7200-rpm-512-mb-35-serial-ata-iii-western-digital-wd122kryz",
+      "external_id": "166451"
+    },
+    {
+      "name": "Western Digital Ultrastar DC HC555 sisäinen kiintolevy 14 TB 7200 RPM 512 MB 3.5\" Serial ATA III",
+      "price_cents": 98900,
+      "url": "https://datatronic.fi/komponentit/kiintolevyt-ssd-levyt/hdd/western-digital-ultrastar-dc-hc555-sisainen-kiintolevy-14-tb-7200-rpm-512-mb-35-serial-ata-iii-western-digital-0b48721",
+      "external_id": "182622"
+    },
+    {
+      "name": "Western Digital Purple 3.5\" 2 TB Serial ATA III",
+      "price_cents": 22790,
+      "url": "https://datatronic.fi/komponentit/kiintolevyt-ssd-levyt/hdd/western-digital-purple-35-2-tb-serial-ata-iii-western-digital-wd20purx",
+      "external_id": "157822"
+    },
+    {
+      "name": "Western Digital Ultrastar DC HC580 sisäinen kiintolevy 22 TB 7200 RPM 512 MB 3.5\" SATA",
+      "price_cents": 123900,
+      "url": "https://datatronic.fi/komponentit/kiintolevyt-ssd-levyt/hdd/western-digital-ultrastar-dc-hc580-sisainen-kiintolevy-22-tb-7200-rpm-512-mb-35-sata-western-digital-0f62785",
+      "external_id": "182597"
+    },
+    {
+      "name": "Lenovo 4XB1S30114 SSD-massamuisti 2 TB M.2 PCI Express 5.0 NVMe",
+      "price_cents": 137900,
+      "url": "https://datatronic.fi/komponentit/kiintolevyt-ssd-levyt/ssd/lenovo-4xb1s30114-ssd-massamuisti-2-tb-m2-pci-express-50-nvme-lenovo-4xb1s30114",
+      "external_id": "184810"
+    },
+    {
+      "name": "Corsair MP700 PRO M.2 4 TB PCI Express 5.0 3D TLC NAND NVMe",
+      "price_cents": 96900,
+      "url": "https://datatronic.fi/komponentit/kiintolevyt-ssd-levyt/ssd/corsair-mp700-pro-m2-4-tb-pci-express-50-3d-tlc-nand-nvme-corsair-cssd-f4000gbmp700pnh",
+      "external_id": "154124"
+    },
+    {
+      "name": "Lenovo 4XB1K68129 SSD-massamuisti M.2 1000 GB PCI Express 4.0 NVMe",
+      "price_cents": 33500,
+      "url": "https://datatronic.fi/komponentit/kiintolevyt-ssd-levyt/ssd/lenovo-4xb1k68129-ssd-massamuisti-m2-1000-gb-pci-express-40-nvme-lenovo-4xb1k68129",
+      "external_id": "118516"
+    },
+    {
+      "name": "Goodram CX400 gen.2 128 GB 2.5\" Serial ATA III 3D TLC NAND",
+      "price_cents": 3190,
+      "url": "https://datatronic.fi/komponentit/kiintolevyt-ssd-levyt/ssd/goodram-cx400-gen2-128-gb-25-serial-ata-iii-3d-tlc-nand-goodram-ssdpr-cx400-128-g2",
+      "external_id": "178733"
+    },
+    {
+      "name": "SanDisk Optimus GX PRO 1 TB M.2 PCI Express 4.0 NVMe 3D TLC NAND",
+      "price_cents": 40500,
+      "url": "https://datatronic.fi/komponentit/kiintolevyt-ssd-levyt/ssd/sandisk-optimus-gx-pro-1-tb-m2-pci-express-40-nvme-3d-tlc-nand-sandisk-sdsg81100tah-000e0",
+      "external_id": "185897"
+    },
+    {
+      "name": "SanDisk SDSS31200TBB-000G0 SSD-massamuisti 2 TB 2.5\" Serial ATA III 3D NAND",
+      "price_cents": 36900,
+      "url": "https://datatronic.fi/komponentit/kiintolevyt-ssd-levyt/ssd/sandisk-sdss31200tbb-000g0-ssd-massamuisti-2-tb-25-serial-ata-iii-3d-nand-sandisk-sdss31200tbb-000g0",
+      "external_id": "185892"
+    },
+    {
+      "name": "SanDisk SDSS51100TAB-000G0 500 GB 2.5\" Serial ATA III 3D TLC NAND",
+      "price_cents": 11790,
+      "url": "https://datatronic.fi/komponentit/kiintolevyt-ssd-levyt/ssd/sandisk-sdss51100tab-000g0-500-gb-25-serial-ata-iii-3d-tlc-nand-sandisk-sdss51500gab-000g0",
+      "external_id": "185893"
+    },
+    {
+      "name": "SanDisk Optimus GX PRO 2 TB M.2 PCI Express 4.0 NVMe 3D TLC NAND",
+      "price_cents": 79500,
+      "url": "https://datatronic.fi/komponentit/kiintolevyt-ssd-levyt/ssd/sandisk-optimus-gx-pro-2-tb-m2-pci-express-40-nvme-3d-tlc-nand-sandisk-sdsg81200tah-000e0",
+      "external_id": "185889"
+    },
+    {
+      "name": "Seagate Exos X18 3.5\" 16000 GB SAS",
+      "price_cents": 137900,
+      "url": "https://datatronic.fi/komponentit/kiintolevyt-ssd-levyt/hdd/seagate-exos-x18-35-16000-gb-sas-seagate-st16000nm004j",
+      "external_id": "17261"
+    },
+    {
+      "name": "SanDisk SDSS51400TAB-000G0 SSD-massamuisti 4 TB 2.5\" Serial ATA III 3D TLC NAND",
+      "price_cents": 77500,
+      "url": "https://datatronic.fi/komponentit/kiintolevyt-ssd-levyt/ssd/sandisk-sdss51400tab-000g0-ssd-massamuisti-4-tb-25-serial-ata-iii-3d-tlc-nand-sandisk-sdss51400tab-000g0",
+      "external_id": "185896"
+    },
+    {
+      "name": "SanDisk Optimus GX PRO 850X 4 TB M.2 PCI Express 4.0 NVMe TLC 3D NAND",
+      "price_cents": 117900,
+      "url": "https://datatronic.fi/komponentit/kiintolevyt-ssd-levyt/ssd/sandisk-optimus-gx-pro-850x-4-tb-m2-pci-express-40-nvme-tlc-3d-nand-sandisk-sdsp81400tan-000e0",
+      "external_id": "181151"
+    }
+  ]
+}

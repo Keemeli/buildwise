@@ -1,0 +1,156 @@
+{
+  "shop": "Datatronic",
+  "category": "case",
+  "page": 20,
+  "source_url": "https://datatronic.fi/kotelot?page=20",
+  "fetched_at": "2026-11-12T14:49:18+00:00",
+  "site_total_products": 620,
+  "items_on_page": 24,
+  "raw_html": "data/raw/html/datatronic_case_p20_2026-11-12_ef220fec88c0.html",
+  "items": [
+    {
+      "name": "LC-Power Gehäuse Micro-ATX 717B black USB3.2/Audio o.Netzteil Micro Tower musta",
+      "price_cents": 7190,
+      "url": "https://datatronic.fi/komponentit/kotelot/lc-power-gehause-micro-atx-717b-black-usb32-audio-onetzteil-micro-tower-musta-lc-power-lc-717b-on",
+      "external_id": "171570"
+    },
+    {
+      "name": "Chieftec LT-01B-350GPB tietokonekotelo Mini Tower Musta 250 W",
+      "price_cents": 8790,
+      "url": "https://datatronic.fi/komponentit/kotelot/chieftec-lt-01b-350gpb-tietokonekotelo-mini-tower-musta-250-w-chieftec-lt-01b-350gpb",
+      "external_id": "38272"
+    },
+    {
+      "name": "ASUS TUF Gaming GT502 Midi Tower Musta",
+      "price_cents": 18390,
+      "url": "https://datatronic.fi/komponentit/kotelot/asus-tuf-gaming-gt502-midi-tower-musta-asus-90dc0090-b09010",
+      "external_id": "84220"
+    },
+    {
+      "name": "Phanteks NV7 Full Tower musta",
+      "price_cents": 21190,
+      "url": "https://datatronic.fi/komponentit/kotelot/phanteks-nv7-full-tower-musta-phanteks-ph-nv723tg-dbk01",
+      "external_id": "158851"
+    },
+    {
+      "name": "HYTE X50 AIR MID TOWER CASE SNOW WHITE",
+      "price_cents": 12190,
+      "url": "https://datatronic.fi/komponentit/kotelot/hyte-x50-air-mid-tower-case-snow-white-hyte-cs-hyte-x50a-ww",
+      "external_id": "174238"
+    },
+    {
+      "name": "Antec C3 Midi Tower Musta",
+      "price_cents": 10490,
+      "url": "https://datatronic.fi/komponentit/kotelot/antec-c3-midi-tower-musta-antec-0-761345-10029-8",
+      "external_id": "155728"
+    },
+    {
+      "name": "Antec 0-761345-10226-1 tietokonekotelo Midi Tower Valkoinen",
+      "price_cents": 12190,
+      "url": "https://datatronic.fi/komponentit/kotelot/antec-0-761345-10226-1-tietokonekotelo-midi-tower-valkoinen-antec-0-761345-10226-1",
+      "external_id": "179613"
+    },
+    {
+      "name": "Jonsbo T6 Midi Tower musta, Puu",
+      "price_cents": 14290,
+      "url": "https://datatronic.fi/komponentit/kotelot/jonsbo-t6-midi-tower-musta-puu-jonsbo-t6-black",
+      "external_id": "170770"
+    },
+    {
+      "name": "Cooler Master MasterBox 520 Mesh Midi Tower Musta",
+      "price_cents": 10290,
+      "url": "https://datatronic.fi/komponentit/kotelot/cooler-master-masterbox-520-mesh-midi-tower-musta-cooler-master-mb520-kgnn-s00",
+      "external_id": "73088"
+    },
+    {
+      "name": "Fractal Design Meshify 3 Valkoinen",
+      "price_cents": 25190,
+      "url": "https://datatronic.fi/komponentit/kotelot/fractal-design-meshify-3-valkoinen-fractal-design-fd-c-mes3a-05",
+      "external_id": "166195"
+    },
+    {
+      "name": "ASUS ROG HYPERION GR701 Tower Musta",
+      "price_cents": 54900,
+      "url": "https://datatronic.fi/komponentit/kotelot/asus-rog-hyperion-gr701-tower-musta-asus-90dc00f0-b39000",
+      "external_id": "117076"
+    },
+    {
+      "name": "Chieftec BE-10W-300 tietokonekotelo Small Form Factor (SFF) Valkoinen 300 W",
+      "price_cents": 10890,
+      "url": "https://datatronic.fi/komponentit/kotelot/chieftec-be-10w-300-tietokonekotelo-small-form-factor-sff-valkoinen-300-w-chieftec-be-10w-300",
+      "external_id": "174663"
+    },
+    {
+      "name": "MSI MAG PANO 110R PZ WHITE tietokonekotelo Midi Tower Valkoinen",
+      "price_cents": 12590,
+      "url": "https://datatronic.fi/komponentit/kotelot/msi-mag-pano-110r-pz-white-tietokonekotelo-midi-tower-valkoinen-msi-306-7g28w21-ja4",
+      "external_id": "171249"
+    },
+    {
+      "name": "Jonsbo Z20 Pink/White Mini Tower Vaaleanpunainen, Valkoinen",
+      "price_cents": 9490,
+      "url": "https://datatronic.fi/komponentit/kotelot/jonsbo-z20-pink-white-mini-tower-vaaleanpunainen-valkoinen-jonsbo-z20-white-pink",
+      "external_id": "166644"
+    },
+    {
+      "name": "MSI CAS MPG GUNGNIR 110R WHITE Midi Tower Valkoinen",
+      "price_cents": 17190,
+      "url": "https://datatronic.fi/komponentit/kotelot/msi-cas-mpg-gungnir-110r-white-midi-tower-valkoinen-msi-mpg-gungnir-110r-white",
+      "external_id": "122708"
+    },
+    {
+      "name": "Aerocool Graphite V3 Musta",
+      "price_cents": 8290,
+      "url": "https://datatronic.fi/komponentit/kotelot/aerocool-graphite-v3-musta-aerocool-accm-pb2413311",
+      "external_id": "37935"
+    },
+    {
+      "name": "GIGABYTE C102 GLASS Midi Tower Valkoinen",
+      "price_cents": 10190,
+      "url": "https://datatronic.fi/komponentit/kotelot/gigabyte-c102-glass-midi-tower-valkoinen-gigabyte-cb-c102gi",
+      "external_id": "170896"
+    },
+    {
+      "name": "HAVN HVN-FS-H1230-01 Tietokoneen jäähdytysjärjestelmä Tietokonekotelo Tuuletin 12 cm Valkoinen 1 kpl",
+      "price_cents": 2090,
+      "url": "https://datatronic.fi/komponentit/kotelot/havn-hvn-fs-h1230-01-tietokoneen-jaahdytysjarjestelma-tietokonekotelo-tuuletin-12-cm-valkoinen-1-kpl-havn-hvn-fs-h1230-01",
+      "external_id": "175042"
+    },
+    {
+      "name": "Cooler Master TD500 MAX Full Tower musta 850 W",
+      "price_cents": 23190,
+      "url": "https://datatronic.fi/komponentit/kotelot/cooler-master-td500-max-full-tower-musta-850-w-cooler-master-td500v2-mgnn85-sl0",
+      "external_id": "164926"
+    },
+    {
+      "name": "Aerocool RIFT tietokonekotelo Midi Tower Musta",
+      "price_cents": 4590,
+      "url": "https://datatronic.fi/komponentit/kotelot/aerocool-rift-tietokonekotelo-midi-tower-musta-aerocool-accm-pv1301211",
+      "external_id": "37389"
+    },
+    {
+      "name": "NZXT H7 Flow RGB Midi Tower Valkoinen",
+      "price_cents": 8990,
+      "url": "https://datatronic.fi/komponentit/kotelot/nzxt-h7-flow-rgb-midi-tower-valkoinen-nzxt-cm-h72fw-r1",
+      "external_id": "162567"
+    },
+    {
+      "name": "Antec P7 S Midi Tower Musta",
+      "price_cents": 7390,
+      "url": "https://datatronic.fi/komponentit/kotelot/antec-p7-s-midi-tower-musta-antec-0-761345-10258-2",
+      "external_id": "179456"
+    },
+    {
+      "name": "Phanteks NV9 MKII Full Tower Musta",
+      "price_cents": 26190,
+      "url": "https://datatronic.fi/komponentit/kotelot/phanteks-nv9-mkii-full-tower-musta-phanteks-ph-nv923tg-dbk02",
+      "external_id": "166786"
+    },
+    {
+      "name": "HYTE X50 MID TOWER CASE STRAWBERRY MILK",
+      "price_cents": 15990,
+      "url": "https://datatronic.fi/komponentit/kotelot/hyte-x50-mid-tower-case-strawberry-milk-hyte-cs-hyte-x50g-sm",
+      "external_id": "174244"
+    }
+  ]
+}

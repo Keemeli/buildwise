@@ -1,0 +1,156 @@
+{
+  "shop": "Datatronic",
+  "category": "storage",
+  "page": 16,
+  "source_url": "https://datatronic.fi/kiintolevyt-ssd-levyt?page=16",
+  "fetched_at": "2026-11-12T14:48:19+00:00",
+  "site_total_products": 589,
+  "items_on_page": 24,
+  "raw_html": "data/raw/html/datatronic_storage_p16_2026-11-12_9d412a583471.html",
+  "items": [
+    {
+      "name": "Kingston Technology FURY Renegade G5 1,02 TB M.2 PCI Express 5.0 NVMe 3D TLC",
+      "price_cents": 27790,
+      "url": "https://datatronic.fi/komponentit/kiintolevyt-ssd-levyt/ssd/kingston-technology-fury-renegade-g5-102-tb-m2-pci-express-50-nvme-3d-tlc-kingston-technology-sfyr2s-1t0",
+      "external_id": "169126"
+    },
+    {
+      "name": "Crucial E100 1 TB M.2 PCI Express 4.0 NVMe",
+      "price_cents": 16690,
+      "url": "https://datatronic.fi/komponentit/kiintolevyt-ssd-levyt/ssd/crucial-e100-1-tb-m2-pci-express-40-nvme-crucial-ct1000e100ssd8",
+      "external_id": "165354"
+    },
+    {
+      "name": "Crucial T500 M.2 500 GB PCI Express 4.0 3D TLC NAND NVMe",
+      "price_cents": 29690,
+      "url": "https://datatronic.fi/komponentit/kiintolevyt-ssd-levyt/ssd/crucial-t500-m2-500-gb-pci-express-40-3d-tlc-nand-nvme-crucial-ct500t500ssd8",
+      "external_id": "149347"
+    },
+    {
+      "name": "Kingston Technology DC600M 2.5\" 960 GB Serial ATA III 3D TLC NAND",
+      "price_cents": 74500,
+      "url": "https://datatronic.fi/komponentit/kiintolevyt-ssd-levyt/ssd/kingston-technology-dc600m-25-960-gb-serial-ata-iii-3d-tlc-nand-kingston-technology-sedc600m-960g",
+      "external_id": "125198"
+    },
+    {
+      "name": "Kingston Technology DC600ME 1,92 TB 2.5\" Serial ATA III 3D TLC NAND",
+      "price_cents": 143900,
+      "url": "https://datatronic.fi/komponentit/kiintolevyt-ssd-levyt/ssd/kingston-technology-dc600me-192-tb-25-serial-ata-iii-3d-tlc-nand-kingston-technology-sedc600me-1920g",
+      "external_id": "169133"
+    },
+    {
+      "name": "Seagate IronWolf 125 2.5\" 250 GB Serial ATA III 3D TLC NVMe",
+      "price_cents": 6590,
+      "url": "https://datatronic.fi/komponentit/kiintolevyt-ssd-levyt/ssd/seagate-ironwolf-125-25-250-gb-serial-ata-iii-3d-tlc-nvme-seagate-za250nm1a002",
+      "external_id": "46834"
+    },
+    {
+      "name": "Kioxia CD8-R 7,68 TB 2.5\" PCI Express 4.0 NVMe BiCS FLASH TLC",
+      "price_cents": 109500,
+      "url": "https://datatronic.fi/komponentit/kiintolevyt-ssd-levyt/ssd/kioxia-cd8-r-768-tb-25-pci-express-40-nvme-bics-flash-tlc-kioxia-kcd81rug7t68",
+      "external_id": "143846"
+    },
+    {
+      "name": "Crucial T705 - SSD - 1 TB - PCI Express 5.0 (NVMe)",
+      "price_cents": 24390,
+      "url": "https://datatronic.fi/komponentit/kiintolevyt-ssd-levyt/crucial-t705-ssd-1-tb-pci-express-50-nvme-ct1000t705ssd3t",
+      "external_id": "155457"
+    },
+    {
+      "name": "Western Digital Ultrastar Red Pro 3.5\" 18000 GB SATA",
+      "price_cents": 96500,
+      "url": "https://datatronic.fi/komponentit/kiintolevyt-ssd-levyt/hdd/western-digital-ultrastar-red-pro-35-18000-gb-sata-western-digital-wd181kfgx",
+      "external_id": "17250"
+    },
+    {
+      "name": "DELL AC037409 SSD-massamuisti 1 TB M.2 PCI Express 4.0 NVMe",
+      "price_cents": 35900,
+      "url": "https://datatronic.fi/komponentit/kiintolevyt-ssd-levyt/ssd/dell-ac037409-ssd-massamuisti-1-tb-m2-pci-express-40-nvme-dell-ac037409",
+      "external_id": "164695"
+    },
+    {
+      "name": "Kingston Technology DC600M 2.5\" 1920 GB Serial ATA III 3D TLC NAND",
+      "price_cents": 141900,
+      "url": "https://datatronic.fi/komponentit/kiintolevyt-ssd-levyt/ssd/kingston-technology-dc600m-25-1920-gb-serial-ata-iii-3d-tlc-nand-kingston-technology-sedc600m-1920g",
+      "external_id": "125199"
+    },
+    {
+      "name": "Goodram PX500 GEN.3 SSDPR-PX500-512-80-G3 SSD-massamuisti 512 GB M.2 PCI Express 3.0 NVMe 3D NAND",
+      "price_cents": 9690,
+      "url": "https://datatronic.fi/komponentit/kiintolevyt-ssd-levyt/ssd/goodram-px500-gen3-ssdpr-px500-512-80-g3-ssd-massamuisti-512-gb-m2-pci-express-30-nvme-3d-nand-goodram-ssdpr-px500-512-80-g3",
+      "external_id": "178776"
+    },
+    {
+      "name": "HPE 960GB SATA 6G Read Intensive SFF BC Multi Vendor SSD 2.5\" TLC",
+      "price_cents": 140500,
+      "url": "https://datatronic.fi/komponentit/kiintolevyt-ssd-levyt/ssd/hpe-960gb-sata-6g-read-intensive-sff-bc-multi-vendor-ssd-25-tlc-hpe-p40498-b21",
+      "external_id": "175950"
+    },
+    {
+      "name": "Corsair MP600 PRO NH M.2 4000 GB PCI Express 4.0 3D TLC NAND NVMe",
+      "price_cents": 132500,
+      "url": "https://datatronic.fi/komponentit/kiintolevyt-ssd-levyt/ssd/corsair-mp600-pro-nh-m2-4000-gb-pci-express-40-3d-tlc-nand-nvme-corsair-cssd-f4000gbmp600pnh",
+      "external_id": "59733"
+    },
+    {
+      "name": "Synology ?HAT3300-6T NAS 6TB SATA 3.5 HDD 3.5\" 6,14 TB",
+      "price_cents": 37500,
+      "url": "https://datatronic.fi/komponentit/kiintolevyt-ssd-levyt/hdd/synology-hat3300-6t-nas-6tb-sata-35-hdd-35-614-tb-synology-hat3300-6t",
+      "external_id": "133015"
+    },
+    {
+      "name": "Western Digital Red Pro 3.5\" 24 TB SATA",
+      "price_cents": 142900,
+      "url": "https://datatronic.fi/komponentit/kiintolevyt-ssd-levyt/hdd/western-digital-red-pro-35-24-tb-sata-western-digital-wd240kfgx",
+      "external_id": "157719"
+    },
+    {
+      "name": "Corsair MP600 PRO NH M.2 1000 GB PCI Express 4.0 3D TLC NAND NVMe",
+      "price_cents": 53900,
+      "url": "https://datatronic.fi/komponentit/kiintolevyt-ssd-levyt/ssd/corsair-mp600-pro-nh-m2-1000-gb-pci-express-40-3d-tlc-nand-nvme-corsair-cssd-f1000gbmp600pnh",
+      "external_id": "59732"
+    },
+    {
+      "name": "Kingston Technology DC600M 2.5\" 7680 GB Serial ATA III 3D TLC NAND",
+      "price_cents": 398500,
+      "url": "https://datatronic.fi/komponentit/kiintolevyt-ssd-levyt/ssd/kingston-technology-dc600m-25-7680-gb-serial-ata-iii-3d-tlc-nand-kingston-technology-sedc600m-7680g",
+      "external_id": "125201"
+    },
+    {
+      "name": "Transcend 110S M.2 512 GB PCI Express 3.0 3D NAND NVMe",
+      "price_cents": 31500,
+      "url": "https://datatronic.fi/komponentit/kiintolevyt-ssd-levyt/ssd/transcend-110s-m2-512-gb-pci-express-30-3d-nand-nvme-transcend-ts512gmte110s",
+      "external_id": "5521"
+    },
+    {
+      "name": "Goodram SSDPR-PX600-500-80 SSD-massamuisti 500 GB M.2 PCI Express 4.0 NVMe 3D NAND",
+      "price_cents": 12390,
+      "url": "https://datatronic.fi/komponentit/kiintolevyt-ssd-levyt/ssd/goodram-ssdpr-px600-500-80-ssd-massamuisti-500-gb-m2-pci-express-40-nvme-3d-nand-goodram-ssdpr-px600-500-80",
+      "external_id": "178752"
+    },
+    {
+      "name": "Western Digital Red SA500 2.5\" 500 GB Serial ATA III 3D NAND",
+      "price_cents": 89900,
+      "url": "https://datatronic.fi/komponentit/kiintolevyt-ssd-levyt/ssd/western-digital-red-sa500-25-500-gb-serial-ata-iii-3d-nand-western-digital-wds500g1r0a",
+      "external_id": "16128"
+    },
+    {
+      "name": "PNY CS1030 2 TB M.2 PCI Express 3.0 NVMe",
+      "price_cents": 26090,
+      "url": "https://datatronic.fi/komponentit/kiintolevyt-ssd-levyt/ssd/pny-cs1030-2-tb-m2-pci-express-30-nvme-pny-m280cs1030-2tb-rb",
+      "external_id": "178571"
+    },
+    {
+      "name": "Seagate FireCuda 530 M.2 2000 GB PCI Express 4.0 3D TLC NVMe",
+      "price_cents": 32900,
+      "url": "https://datatronic.fi/komponentit/kiintolevyt-ssd-levyt/ssd/seagate-firecuda-530-m2-2000-gb-pci-express-40-3d-tlc-nvme-seagate-zp2000gm3a023",
+      "external_id": "46283"
+    },
+    {
+      "name": "ADATA SE880 4 TB Sininen",
+      "price_cents": 86500,
+      "url": "https://datatronic.fi/komponentit/kiintolevyt-ssd-levyt/adata-se880-4-tb-sininen-adata-aeli-se880-4tcbu",
+      "external_id": "153675"
+    }
+  ]
+}
