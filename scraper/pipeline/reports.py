@@ -14,7 +14,8 @@ class NormalisationReportWriter:
 
     def write(self, out_dir: Path, components: List[Dict[str, Any]], duplicates: int,
                      scanned: int, excluded: List[str],
-                     spec_stats: Optional[Dict[str, int]] = None) -> Path:
+                     spec_stats: Optional[Dict[str, int]] = None,
+                     mismatched: Optional[List[Dict[str, Any]]] = None) -> Path:
         lines: List[str] = []
         lines.append(f"# Normalisation report — {date.today().isoformat()}")
         lines.append("")
@@ -130,6 +131,20 @@ class NormalisationReportWriter:
         for name in excluded[:10]:
             lines.append(f"- `{name[:90]}`")
         lines.append("")
+
+        if mismatched:
+            lines.append("## Rows excluded for contradicting their category")
+            lines.append("")
+            lines.append(f"{len(mismatched)} scraped rows carry a parsed value that cannot belong to "
+                         "their shop category — a motherboard on a storage page, parsed with the "
+                         "storage vocabulary. They are listed in `excluded_category_mismatch.json`; "
+                         "the category is never guessed.")
+            lines.append("")
+            for component in mismatched[:10]:
+                value = (component.get('specs') or {}).get('form_factor')
+                lines.append(f"- **{component.get('category')}** — `{str(component.get('raw_name'))[:80]}`"
+                             f"{f' (form_factor {value})' if value else ''}")
+            lines.append("")
 
         suspects = [c for c in components if c.get("category_confidence") == "suspect"]
         if suspects:
