@@ -15,7 +15,7 @@ from urllib.parse import urljoin, urlsplit, urlunsplit
 from scraper.common.raw_data import RawProduct
 from scraper.retailers.contracts import (
     CategoryResult, ParseIssue, ProductRequest, RetailerConfig,
-    RetailerCapabilities, listing_page_url,
+    RetailerCapabilities, listing_page_url, PriceExtractionError,
 )
 
 SHOP = "Jimms"
@@ -36,9 +36,8 @@ class JimmsParser:
     def __init__(self, hosts: set[str] | None = None):
         self.hosts = set(HOSTS if hosts is None else hosts)
 
-    def parse_product(self, html: str) -> dict:
-        """Return name + price, rejecting missing, invalid or conflicting metadata."""
-        soup = BeautifulSoup(html, "html.parser")
+    def parse_name(self, soup) -> str:
+        """Read product identity independently of price availability."""
         name = None
         for selector in ('h1[itemprop="name"]', 'h1', 'meta[property="og:title"]'):
             element = soup.select_one(selector)
@@ -48,6 +47,13 @@ class JimmsParser:
                     break
         if not name:
             raise ValueError("missing product name")
+
+        return name
+
+    def parse_product(self, html: str) -> dict:
+        """Return name + price, rejecting missing, invalid or conflicting metadata."""
+        soup = BeautifulSoup(html, "html.parser")
+        name = self.parse_name(soup)
 
         currencies = {str(el.get("content") or el.get_text(strip=True)).strip().upper()
                       for el in soup.select('meta[property="product:price:currency"], [itemprop="priceCurrency"]')}
@@ -177,6 +183,8 @@ class JimmsAdapter:
                 reason = None
             if reason:
                 issues.append(ParseIssue(reason, 'no unambiguous displayed price on product card', url))
+                observations.append(RawProduct(name, None, url, external_id=external_id,
+                                               retailer_sku=sku or None, extraction='category:.price__amount'))
                 requests.append(ProductRequest(category, url, external_id=external_id, reason=reason, retailer_sku=sku or None))
                 continue
             observations.append(RawProduct(name, amounts[0], url, external_id=external_id,
@@ -192,6 +200,16 @@ class JimmsAdapter:
         external_id = self.product_id_from_url(request.url)
         if request.external_id is not None and request.external_id != external_id:
             raise ValueError('Jimms request product ID conflicts with its URL')
-        result = self.parser.parse_product(html)
+        try:
+            result = self.parser.parse_product(html)
+        except ValueError as exc:
+            message = str(exc)
+            if not any(token in message for token in ('price metadata', 'currency')):
+                raise
+            name = self.parser.parse_name(BeautifulSoup(html, 'html.parser'))
+            product = RawProduct(name, None, request.url, external_id=external_id,
+                                 retailer_sku=request.retailer_sku, extraction='product:metadata')
+            reason = 'missing_price' if 'missing price' in message else 'conflicting_price' if 'conflicting' in message else 'invalid_price'
+            raise PriceExtractionError(message, product, reason) from exc
         return RawProduct.from_item({**result, 'url': request.url, 'external_id': external_id,
                                      'retailer_sku': request.retailer_sku})

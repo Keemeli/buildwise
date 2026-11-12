@@ -12,6 +12,7 @@ import hashlib
 import json
 from pathlib import Path
 import re
+from tempfile import NamedTemporaryFile
 
 from scraper.config import CATEGORIES
 
@@ -66,6 +67,7 @@ class RawDocument:
     items: tuple[RawProduct, ...]
     page: int | None = None
     site_total_products: int | None = None
+    run_id: str | None = None
 
     def __post_init__(self):
         if self.category not in CATEGORIES or not self.shop.strip():
@@ -84,6 +86,8 @@ class RawDocument:
             raise ValueError("site_total_products must be a non-negative integer or null")
         if not all(isinstance(item, RawProduct) for item in self.items):
             raise ValueError("items must contain RawProduct objects")
+        if self.run_id is not None and (not isinstance(self.run_id, str) or not self.run_id.strip()):
+            raise ValueError("run_id must be non-empty text or null")
         timestamp = datetime.fromisoformat(self.fetched_at)
         if timestamp.tzinfo is None:
             raise ValueError("fetched_at needs an explicit timezone")
@@ -109,18 +113,28 @@ class RawDataWriter:
 
     def write(self, *, shop: str, category: str, source_type: str, source_url: str,
               raw_path: Path, items: list[RawProduct], page: int | None = None,
-              site_total_products: int | None = None, origin: str | None = None) -> Path:
+              site_total_products: int | None = None, origin: str | None = None,
+              run_id: str | None = None) -> Path:
         raw_path = raw_path.resolve()
         document = RawDocument(
             shop=shop, category=category, source_type=source_type, source_url=source_url,
             fetched_at=datetime.fromtimestamp(raw_path.stat().st_mtime, timezone.utc).isoformat(timespec="seconds"),
             raw_html=raw_path.relative_to(self.data_dir).as_posix(), origin=origin,
-            items=tuple(items), page=page, site_total_products=site_total_products)
+            items=tuple(items), page=page, site_total_products=site_total_products, run_id=run_id)
         payload = document.to_dict()
         self.raw_dir.mkdir(parents=True, exist_ok=True)
         slug = re.sub(r"[^a-z0-9]+", "_", shop.lower()).strip('_')
         digest = hashlib.sha256(source_url.encode('utf-8')).hexdigest()[:16]
         written_at = datetime.now(timezone.utc).strftime('%Y%m%dT%H%M%S%fZ')
         path = self.raw_dir / f"{slug}_{category}_{source_type}_{digest}_{written_at}.json"
-        path.write_text(json.dumps(payload, ensure_ascii=False, indent=2), encoding="utf-8")
+        temporary = None
+        try:
+            with NamedTemporaryFile(mode='w', encoding='utf-8', dir=self.raw_dir,
+                                    prefix='.', suffix='.tmp', delete=False) as handle:
+                temporary = Path(handle.name)
+                handle.write(json.dumps(payload, ensure_ascii=False, indent=2))
+            temporary.replace(path)
+        finally:
+            if temporary is not None:
+                temporary.unlink(missing_ok=True)
         return path

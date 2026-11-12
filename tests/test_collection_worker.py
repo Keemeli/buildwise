@@ -148,7 +148,9 @@ class CollectionWorkerTests(unittest.TestCase):
         self.fetcher.fetch.side_effect = [('page', self.path, 'cache'), ('product', self.path, 'cache')]
         result = self.run_worker()
         self.assertEqual((result.exit_code, result.items_found, result.products_fetched), (0, 1, 1))
-        self.assertEqual(self.writer.write.call_count, 2)
+        self.assertEqual(self.writer.write.call_count, 1)
+        self.assertEqual(result.counters.recovered_issues, 1)
+        self.assertEqual(result.counters.null_price_observations, 0)
         self.assertEqual(self.writer.write.call_args.kwargs['items'][0].price_cents, 100)
 
 

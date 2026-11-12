@@ -129,7 +129,11 @@ class RetailerAdapterTests(unittest.TestCase):
                               ('<span class="price__amount">10,00 €</span><span class="price__amount">20,00 €</span>', 'conflicting_price')]:
             with self.subTest(reason=reason):
                 result = adapter.parse_category(jimms_card(price), 'gpu', adapter.page_url('gpu', 1))
-                self.assertEqual(result.observations, ())
+                self.assertEqual(len(result.observations), 1)
+                self.assertIsNone(result.observations[0].price_cents)
+                self.assertEqual(result.observations[0].name, 'MSI GPU')
+                self.assertEqual(result.observations[0].external_id, '123')
+                self.assertEqual(result.observations[0].retailer_sku, 'TEST-SKU')
                 self.assertEqual(result.issues[0].code, reason)
                 self.assertEqual(result.product_requests, (ProductRequest('gpu', 'https://www.jimms.fi/fi/Product/Show/123/gpu', '123', reason, retailer_sku='TEST-SKU'),))
 

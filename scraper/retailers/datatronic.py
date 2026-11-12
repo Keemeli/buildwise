@@ -106,11 +106,29 @@ class DatatronicAdapter:
     def parse_category(self, html: str, category: str, source_url: str) -> CategoryResult:
         self.category_url(category)  # Reject unsupported categories explicitly.
         self.config.validate_url(source_url)
+        container = BeautifulSoup(html, 'html.parser').find(id='js-product-list')
+        if container is None:
+            raise ValueError('missing Datatronic category listing #js-product-list')
         items, total = self.parser.parse_listing(html)
         observations = tuple(RawProduct.from_item(item, extraction='listing_card') for item in items)
-        issues = tuple(ParseIssue('missing_price', 'listing card has no parseable price', item.url)
-                       for item in observations if item.price_cents is None)
-        return CategoryResult(observations=observations, site_total_products=total, issues=issues)
+        issues = []
+        for card in container.select('article.js-product-miniature, article.product-miniature'):
+            name = card.select_one('.product-title a') or card.select_one('h3 a')
+            link = card.select_one('a.js-product-image') or card.select_one('a[href]')
+            if name is None or not name.get_text(strip=True) or link is None or not link.get('href'):
+                issues.append(ParseIssue('missing_identity', 'listing card has no name or product URL'))
+                continue
+            price = card.select_one('.price')
+            text = price.get_text(' ', strip=True) if price is not None else ''
+            if parse_price_cents(text) is None:
+                href = link.get('href')
+                url = self.parser.base_url + href if href.startswith('/') else href
+                reason = 'invalid_price' if text else 'missing_price'
+                issues.append(ParseIssue(reason, 'listing card has no parseable price', url))
+        confirmed_empty = total == 0 and not observations and not issues
+        return CategoryResult(observations=observations, site_total_products=total, issues=tuple(issues),
+                              end_of_category=confirmed_empty,
+                              end_reason='published_total_zero' if confirmed_empty else None)
 
     def parse_product(self, html: str, request: ProductRequest) -> RawProduct:
         raise UnsupportedOperationError('Datatronic product-page price extraction is not implemented')

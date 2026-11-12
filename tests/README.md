@@ -27,7 +27,11 @@ python3 -m unittest discover -s tests -p test_fetching.py -v
 | test_configuration.py | Project paths and isolated parser configuration | 2 |
 | test_retailer_adapters.py | Shared contract, registry and offline adapter parity | 13 |
 | test_collection_worker.py | Generic orchestration, third-adapter integration and cleanup | 10 |
-| **Total** | | **76** |
+| test_collection_policy.py | Checkpoint 2 null-preservation and reporting implementation checks | 4 |
+| test_collection_policy_matrix.py | Cross-retailer outcomes, counters, failures and CLI policy | 26 |
+| test_pending_work.py | Pending identity, evidence, eligibility and atomic persistence | 8 |
+| test_retry.py | Explicit retry recovery, filtering, attempts and resolution | 11 |
+| **Total** | | **125** |
 
 Tests are grouped by the responsibility they verify. A shared fetching test may
 use a Jimms URL as a fixture, but its behaviour applies to both retailers. CLI and
@@ -49,3 +53,25 @@ Milestone 2 replaces obsolete worker-specific execution tests with shared-worker
 integration tests. Jimms category collection explicitly asserts zero product-page
 requests for 50 saved products; Datatronic tests preserve listing fields/totals
 across pages. Command tests continue to verify offline collection for both.
+
+Milestone 3 checkpoint 2 adds four focused implementation checks. Checkpoint 3
+adds 26 matrix tests using real adapters and the shared fetcher with cached HTML
+and mocked network responses; no live retailer requests are made. The matrix
+checks both retailers, success/partial/failure exits, null-price preservation,
+recovery, HTTP/connection/robots failures, empty/repeated pages, overlapping
+categories, malformed cards, atomic writes, run IDs and refresh stopping before
+publication after partial collection. Jimms-specific follow-ups also cover
+offline misses, blocked product requests and missing identity.
+
+Milestone 3.1 checkpoint 1 adds six pending-store tests and checks that collection
+links its persisted outcome and original source context to the run.
+
+Milestone 3.1 checkpoint 2 uses focused offline retry tests for both retailers;
+the full suite is reserved for milestone completion.
+
+Milestone 3.1 checkpoint 3 verifies interrupted attempts, stale resolution guards,
+retry-command locking, robots blocking and HTTP 429 classification/counters. All
+checks use temporary data and cached or mocked responses, with no live scraping.
+
+Review regressions check batch-wide robots caching, crawl-delay spacing and
+session cleanup, plus missing versus malformed Datatronic price classification.

@@ -38,6 +38,12 @@ class ScraperCLI:
         self._network_options(collect)
         collect.add_argument("--data-dir", type=Path, default=PROJECT_ROOT / "data")
 
+        retry = commands.add_parser("retry", help="retry eligible pending collection work")
+        retry.add_argument("--shop", required=True, choices=self.registry.keys)
+        retry.add_argument("--limit", type=int, default=25, help="maximum pending entries to attempt")
+        retry.add_argument("--data-dir", type=Path, default=PROJECT_ROOT / "data")
+        self._network_options(retry)
+
         specs = commands.add_parser("specs", help="collect product-page specifications")
         specs.add_argument("--shop", required=True, choices=("datatronic",))
         specs.add_argument("--category", action="append", choices=CATEGORIES)
@@ -105,6 +111,11 @@ class ScraperCLI:
                     raise ValueError("supply --category, --all or an --input manifest")
                 from scraper.workers.collection import CollectionService
                 return CollectionService(args, adapter=adapter, registry=self.registry).run()
+            if args.command == "retry":
+                if args.limit < 1:
+                    raise ValueError("limit must be positive")
+                from scraper.workers.retry import RetryService
+                return RetryService(args, self.registry.get(args.shop)).run()
             if args.command == "specs":
                 if args.checkpoint_every < 1 or (args.limit is not None and args.limit < 1):
                     raise ValueError("checkpoint-every and limit must be positive")

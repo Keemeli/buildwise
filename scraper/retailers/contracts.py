@@ -77,6 +77,14 @@ class ProductRequest:
             raise ValueError('product request identifiers must be strings or null')
 
 
+class PriceExtractionError(ValueError):
+    """A product is identified, but its price is missing or ambiguous."""
+    def __init__(self, message: str, product: RawProduct, reason: str):
+        super().__init__(message)
+        self.product = product
+        self.reason = reason
+
+
 @dataclass(frozen=True)
 class ParseIssue:
     code: str
@@ -90,6 +98,12 @@ class CategoryResult:
     product_requests: tuple[ProductRequest, ...] = ()
     site_total_products: int | None = None
     issues: tuple[ParseIssue, ...] = ()
+    end_of_category: bool = False
+    end_reason: str | None = None
+
+    def __post_init__(self):
+        if self.end_of_category and not self.end_reason:
+            raise ValueError("confirmed category endings require explicit evidence")
 
 
 @runtime_checkable

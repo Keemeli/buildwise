@@ -15,6 +15,17 @@ import requests
 USER_AGENT = "BuildWise-course-project/0.1 (eekarjal24@students.oamk.fi)"
 
 
+class RobotsDisallowedError(ValueError):
+    """Published robots rules prohibit the requested URL."""
+
+
+class RobotsUnavailableError(ValueError):
+    def __init__(self, message, *, status_code=None, cause=None):
+        super().__init__(message)
+        self.status_code = status_code
+        self.cause = cause
+
+
 class PageFetcher:
     """One identified session; failed requests also count toward the delay.
 
@@ -33,7 +44,7 @@ class PageFetcher:
         self.hosts = hosts
         self.delay, self.offline, self.force = delay, offline, force
         self.last_attempt: float | None = None
-        self.robots: dict[str, tuple[RobotFileParser, float] | str] = {}
+        self.robots: dict[str, tuple[RobotFileParser, float] | RobotsUnavailableError] = {}
         self.session = requests.Session() if session is None else session
         self.session.headers.update({"User-Agent": USER_AGENT,
                                      "Accept-Language": "fi-FI,fi;q=0.9,en;q=0.8"})
@@ -61,8 +72,10 @@ class PageFetcher:
         host = urlsplit(url).netloc
         if host not in self.robots:
             robots_url = f"https://{host}/robots.txt"
+            status_code = None
             try:
                 response = self._request(robots_url, self.delay)
+                status_code = response.status_code
                 if response.status_code == 404:
                     text = "User-agent: *\nAllow: /\n"
                 elif response.status_code == 200:
@@ -83,13 +96,14 @@ class PageFetcher:
                                 "rules": text}, indent=2), encoding="utf-8")
                 self.robots[host] = (rules, wait)
             except (requests.RequestException, OSError, ValueError) as exc:
-                self.robots[host] = f"robots check unavailable for {host}: {exc}"
+                self.robots[host] = RobotsUnavailableError(f"robots check unavailable for {host}: {exc}",
+                                                          status_code=status_code, cause=exc)
         entry = self.robots[host]
-        if isinstance(entry, str):
-            raise ValueError(entry)
+        if isinstance(entry, RobotsUnavailableError):
+            raise entry
         rules, wait = entry
         if not rules.can_fetch(USER_AGENT, url):
-            raise ValueError(f"robots.txt disallows {url}")
+            raise RobotsDisallowedError(f"robots.txt disallows {url}")
         return wait
 
     def fetch(self, url: str) -> tuple[str, Path, str]:

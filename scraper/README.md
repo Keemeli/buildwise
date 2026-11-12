@@ -278,3 +278,152 @@ and retain record IDs/SKUs without product visits. Datatronic pagination preserv
 its existing parser fields and category totals without product visits. Shared raw
 schema and mixed-retailer normalisation checks pass. No live scraping, historical
 migration, database writes or saved catalogue updates are performed by these tests.
+
+## Milestone 3 policy — checkpoint 2 implementation
+
+Identified products with unresolved prices are saved with `price_cents: null`.
+When a category adapter requests a product fallback, the worker retains that
+category observation in memory until the fallback finishes. Successful recovery
+saves the priced product response only. If recovery fails, the null observation
+is saved against the original category HTML and its observation timestamp. A
+manual product response with readable identity but missing/ambiguous metadata is
+also saved with a null price; identity is never invented for failed requests.
+
+A run is `ok`/exit 0 when requested work is resolved, `partial`/exit 1 when some
+observations were saved but outcomes remain unresolved, or `failed`/exit 1 when
+nothing was saved and work is unresolved. All-null runs are partial. An explicitly
+confirmed empty category is successful even when it contains no observations.
+Category failures do not prevent other selected categories from being attempted.
+
+CategoryResult can confirm an ending only with `end_of_category=True` and a
+nonempty `end_reason`. The Datatronic adapter recognises a published zero total
+with its actual listing container. No Jimms ending is guessed from JS placeholders.
+Empty pages without evidence and repeated pages stop that category as unresolved.
+Coverage records distinguish requested `page_limit`, `confirmed_end` and
+`unresolved` stops; a page limit does not claim complete catalogue coverage.
+
+Every collection run has a UUID run_id. Its summary, unresolved/recovered outcomes
+and saved raw envelopes carry that ID. Raw schema version 2 accepts this additive
+nullable metadata; old files remain readable and are not rewritten. Cached HTML
+mtime still determines fetched_at, independently of processing time and run ID.
+Raw observation files are written through a temporary file and atomically renamed
+so failed writes do not expose partially written JSON to readers.
+
+Run records use report_version 2 in `data/raw/scrape_runs.jsonl`. `failures` contains
+unresolved work, not just HTTP exceptions; `recovered` contains previously
+unresolved product work resolved during this run. Each record retains run ID,
+retailer, category, stage, work URL, source URL, known retailer ID/SKU, reason and
+retry classification. Replacing an initial missing-price outcome with its failed
+fallback outcome avoids counting the same product twice. Raw parser `issues`
+remain diagnostic context and do not add another unresolved work item.
+
+Retry classifications are descriptive only:
+
+- `retryable`: connection/timeout failures, HTTP 429/5xx, missing prices and missing
+  offline cache entries;
+- `inspect`: ambiguous/invalid prices, missing markup, repeated/unexplained empty
+  pages and other errors requiring inspection;
+- `blocked`: robots disallow or unsupported extraction operations;
+- `unavailable`: HTTP 404/410, with no automatic retry.
+
+Invalid command arguments are still rejected before collection. Network-free
+cache reads do not re-request robots rules. Unavailable robots rules retain their
+underlying status/cause for classification; they never allow requests by default.
+
+### Counter definitions
+
+- category_pages_planned: selected unique categories multiplied by the requested
+  maximum pages, before confirmed early endings;
+- category_pages_attempted: category fetch calls, including blocked/cache misses;
+- category_pages_processed: category responses accepted after parsing and
+  empty/repetition checks, including a confirmed empty ending;
+- product_followups_attempted: product fetch calls, including manifests;
+- source_responses: cached HTML reads plus final source responses delivered to
+  the worker (successful HTML or HTTP errors);
+- cache_hits / network_responses: source-response origins; HTTP error responses
+  count as network responses, while connection failures have no response. These
+  counters exclude robots.txt housekeeping requests and intermediate redirects;
+- source_failures: distinct attempted source work with fetch/parse/write failure;
+  a valid source with an unresolved price alone is counted in unresolved outcomes;
+- unique_products_identified: distinct product URLs identified by category parsing
+  or product-page parsing; an unfetched manifest URL alone is not proof of identity;
+- observations_saved: product entries successfully persisted, split into
+  priced_observations and null_price_observations;
+- duplicates_skipped: redundant category/product URLs or observation candidates;
+- recovered_issues / unresolved_outcomes: unique product/page work items, avoiding
+  double-counting missing-price and fallback errors for the same product.
+
+The existing pages_fetched/products_fetched fields count successful HTML reads;
+items_found counts unique products successfully saved. Observations and unique
+products differ if a future adapter legitimately produces multiple observations.
+
+Explicit retries, attempt tracking and resolution are described below. Checkpoint 3 verifies the
+policy with cached HTML and mocked responses for both retailers, including CLI
+exit codes and stopping refresh before publication when collection is partial.
+The verification makes no live retailer requests.
+
+
+### Pending collection work (milestone 3.1, checkpoint 1)
+
+Collection persists unresolved outcomes to `data/pending/collection.json`, a local
+operational store separate from raw observations. All classifications are retained;
+only `retryable` outcomes have `retry_eligible: true`. Nothing is retried automatically.
+
+Identity is retailer + work kind + URL, with category included for category-page
+work. Products appearing in multiple categories or runs share one entry. Each
+entry keeps its first/latest run, latest outcome, and per-run sightings containing
+identifiers, classification, stage, category and source URLs. Deferred null products
+also retain the original cached HTML reference and page context. Recording the
+same run twice does not duplicate its sighting. Sightings are not retry attempts.
+
+Updates lock the store and atomically replace its JSON. Invalid/unsupported stores
+are rejected without overwriting them; persistence errors fail the command rather
+than claiming pending work was saved. Earlier raw observations remain intact. An ordinary
+successful collection does not resolve or delete pending entries. Explicit retries
+can resolve entries as described below. The file lock uses
+the standard Unix `fcntl` module (macOS/Linux).
+
+
+### Retry pending work (milestone 3.1, checkpoint 2)
+
+```sh
+# Retry at most 25 eligible entries using the normal cache/network policy
+python3 -m scraper retry --shop jimms --limit 25
+python3 -m scraper retry --shop datatronic --limit 25
+
+# Reparse today's cache without network requests
+python3 -m scraper retry --shop jimms --offline
+
+# Fetch fresh pages instead of reusing today's cached missing prices
+python3 -m scraper retry --shop datatronic --force --limit 5
+```
+
+Retries are explicit and sequential. Each selected pending entry gets one attempt
+per command; `--limit` counts entries, not HTTP requests. Blocked, unavailable,
+inspection-required and resolved entries are excluded. The shared fetcher retains
+robots checks, delays, allowed hosts and caching; `--delay` defaults to one second.
+
+Jimms product work revisits the product URL. Datatronic product work reparses the
+original category page and resolves only if the target URL has a saved price.
+Category work revisits that exact page, including its page number. A recovered
+category can produce new pending product work; the command still exits 1 if its
+collection has unresolved outcomes. Successful retries append raw observations;
+earlier observations and sightings are retained.
+
+Attempts retain an ID, timestamps, run ID, result and resolution status. Resolved
+entries stay in the store and are skipped on later retries. New collection failures
+reopen the same entry without removing attempt history. A newer collection failure
+prevents an older retry from resolving it. A local command lock prevents concurrent
+retry commands. If interrupted, the running attempt remains visible and is marked
+interrupted when the entry is retried again. No automatic retry loop or scheduler
+is installed. Exit 0 means selected work resolved (or no eligible entries); it does
+not claim every pending entry or retailer category is complete.
+
+Checkpoint 3 verifies retry interruption history, newer-failure resolution guards,
+command locking, robots blocking and HTTP 429 reporting alongside offline
+recovery for both retailers. Verification uses temporary data and mocked requests.
+
+Retry batches share one fetcher/session, retaining robots rules and request timing
+between entries. Datatronic distinguishes absent/empty prices (`missing_price`,
+retryable) from displayed malformed values (`invalid_price`, inspect). Both retain
+null-price observations.

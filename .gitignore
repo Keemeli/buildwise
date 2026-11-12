@@ -168,3 +168,6 @@ data/raw/html/
 
 # Original raw observations retained locally before schema migrations
 /data/migrations/*/backup.zip
+
+# Local resumable collection state
+/data/pending/
