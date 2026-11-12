@@ -1,0 +1,156 @@
+{
+  "shop": "Datatronic",
+  "category": "cpu",
+  "page": 6,
+  "source_url": "https://datatronic.fi/prosessorit?page=6",
+  "fetched_at": "2026-11-12T14:45:44+00:00",
+  "site_total_products": 171,
+  "items_on_page": 24,
+  "raw_html": "data/raw/html/datatronic_cpu_p6_2026-11-12_de4fa07a52b1.html",
+  "items": [
+    {
+      "name": "AMD Ryzen Threadripper PRO 7985WX suoritin 3,2 GHz 256 MB L3 Laatikko",
+      "price_cents": 836900,
+      "url": "https://datatronic.fi/komponentit/prosessorit/amd-ryzen-threadripper-pro-7985wx-suoritin-32-ghz-256-mb-l3-laatikko-amd-100-100000454wof",
+      "external_id": "141759"
+    },
+    {
+      "name": "AMD EPYC 4364P suoritin 4,5 GHz 32 MB L3 Lokero",
+      "price_cents": 35500,
+      "url": "https://datatronic.fi/komponentit/prosessorit/amd-epyc-4364p-suoritin-45-ghz-32-mb-l3-lokero-amd-100-000001477",
+      "external_id": "183377"
+    },
+    {
+      "name": "Intel Core i5-13400F suoritin 20 MB Smart Cache Laatikko",
+      "price_cents": 20690,
+      "url": "https://datatronic.fi/komponentit/prosessorit/intel-core-i5-13400f-suoritin-20-mb-smart-cache-laatikko-intel-bx8071513400f",
+      "external_id": "84494"
+    },
+    {
+      "name": "Intel Core i7-13700F suoritin 30 MB Smart Cache Laatikko",
+      "price_cents": 32900,
+      "url": "https://datatronic.fi/komponentit/prosessorit/intel-core-i7-13700f-suoritin-30-mb-smart-cache-laatikko-intel-bx8071513700f",
+      "external_id": "84488"
+    },
+    {
+      "name": "Intel Core i9-14900 suoritin 36 MB Smart Cache Laatikko",
+      "price_cents": 67900,
+      "url": "https://datatronic.fi/komponentit/prosessorit/intel-core-i9-14900-suoritin-36-mb-smart-cache-laatikko-intel-bx8071514900",
+      "external_id": "152274"
+    },
+    {
+      "name": "Intel Celeron G5900 suoritin 3,4 GHz 2 MB Smart Cache Laatikko",
+      "price_cents": 6090,
+      "url": "https://datatronic.fi/komponentit/prosessorit/intel-celeron-g5900-suoritin-34-ghz-2-mb-smart-cache-laatikko-intel-bx80701g5900",
+      "external_id": "179175"
+    },
+    {
+      "name": "Intel Core i5-12600 suoritin 18 MB Smart Cache Laatikko",
+      "price_cents": 25990,
+      "url": "https://datatronic.fi/komponentit/prosessorit/intel-core-i5-12600-suoritin-18-mb-smart-cache-laatikko-intel-bx8071512600",
+      "external_id": "36866"
+    },
+    {
+      "name": "AMD Ryzen Threadripper PRO 9975WX suoritin 4 GHz 128 MB L3 Laatikko",
+      "price_cents": 468900,
+      "url": "https://datatronic.fi/komponentit/prosessorit/amd-ryzen-threadripper-pro-9975wx-suoritin-4-ghz-128-mb-l3-laatikko-amd-100-100000723wof",
+      "external_id": "177466"
+    },
+    {
+      "name": "Intel Core i5-12500 suoritin 18 MB Smart Cache Laatikko",
+      "price_cents": 23990,
+      "url": "https://datatronic.fi/komponentit/prosessorit/intel-core-i5-12500-suoritin-18-mb-smart-cache-laatikko-intel-bx8071512500",
+      "external_id": "36865"
+    },
+    {
+      "name": "Intel Xeon 4208 suoritin 2,1 GHz 11 MB Lokero",
+      "price_cents": 104900,
+      "url": "https://datatronic.fi/komponentit/prosessorit/intel-xeon-4208-suoritin-21-ghz-11-mb-lokero-intel-cd8069503956401",
+      "external_id": "178055"
+    },
+    {
+      "name": "AMD EPYC 9175F suoritin 4,2 GHz 512 MB L3 Lokero",
+      "price_cents": 310900,
+      "url": "https://datatronic.fi/komponentit/prosessorit/amd-epyc-9175f-suoritin-42-ghz-512-mb-l3-lokero-amd-100-000001145",
+      "external_id": "183373"
+    },
+    {
+      "name": "Intel Core i9-12900KF suoritin 30 MB Smart Cache Laatikko",
+      "price_cents": 34500,
+      "url": "https://datatronic.fi/komponentit/prosessorit/intel-core-i9-12900kf-suoritin-30-mb-smart-cache-laatikko-intel-bx8071512900kf",
+      "external_id": "32918"
+    },
+    {
+      "name": "Intel Core Ultra 7 265 suoritin 30 MB Smart Cache Laatikko",
+      "price_cents": 43900,
+      "url": "https://datatronic.fi/komponentit/prosessorit/intel-core-ultra-7-265-suoritin-30-mb-smart-cache-laatikko-intel-bx80768265",
+      "external_id": "170513"
+    },
+    {
+      "name": "Intel Xeon w7-3445 suoritin 2,6 GHz 52,5 MB Smart Cache Lokero",
+      "price_cents": 356500,
+      "url": "https://datatronic.fi/komponentit/prosessorit/intel-xeon-w7-3445-suoritin-26-ghz-525-mb-smart-cache-lokero-intel-pk8071305081900",
+      "external_id": "181840"
+    },
+    {
+      "name": "AMD Ryzen Threadripper PRO 9965WX suoritin 4,2 GHz 128 MB L3 Laatikko",
+      "price_cents": 330500,
+      "url": "https://datatronic.fi/komponentit/prosessorit/amd-ryzen-threadripper-pro-9965wx-suoritin-42-ghz-128-mb-l3-laatikko-amd-100-100000724wof",
+      "external_id": "177467"
+    },
+    {
+      "name": "Intel Core i7-14700 suoritin 33 MB Smart Cache Laatikko",
+      "price_cents": 36900,
+      "url": "https://datatronic.fi/komponentit/prosessorit/intel-core-i7-14700-suoritin-33-mb-smart-cache-laatikko-intel-bx8071514700",
+      "external_id": "152272"
+    },
+    {
+      "name": "AMD EPYC 9745 suoritin 2,4 GHz 256 MB L3 Lokero",
+      "price_cents": 862900,
+      "url": "https://datatronic.fi/komponentit/prosessorit/amd-epyc-9745-suoritin-24-ghz-256-mb-l3-lokero-amd-100-000001460",
+      "external_id": "183398"
+    },
+    {
+      "name": "Intel Core Ultra 5 235 suoritin 24 MB Smart Cache Laatikko",
+      "price_cents": 30900,
+      "url": "https://datatronic.fi/komponentit/prosessorit/intel-core-ultra-5-235-suoritin-24-mb-smart-cache-laatikko-intel-bx80768235",
+      "external_id": "170517"
+    },
+    {
+      "name": "AMD EPYC 9554P suoritin 3,1 GHz 256 MB L3 Lokero",
+      "price_cents": 268500,
+      "url": "https://datatronic.fi/komponentit/prosessorit/amd-epyc-9554p-suoritin-31-ghz-256-mb-l3-lokero-amd-100-000000804",
+      "external_id": "183400"
+    },
+    {
+      "name": "Intel Core i5-13400 suoritin 20 MB Smart Cache Laatikko",
+      "price_cents": 27490,
+      "url": "https://datatronic.fi/komponentit/prosessorit/intel-core-i5-13400-suoritin-20-mb-smart-cache-laatikko-intel-bx8071513400",
+      "external_id": "84491"
+    },
+    {
+      "name": "AMD EPYC 8124P suoritin 2,45 GHz 64 MB L3 Lokero",
+      "price_cents": 73500,
+      "url": "https://datatronic.fi/komponentit/prosessorit/amd-epyc-8124p-suoritin-245-ghz-64-mb-l3-lokero-amd-100-000001135",
+      "external_id": "183388"
+    },
+    {
+      "name": "AMD Ryzen Threadripper PRO 5955WX suoritin 4 GHz 64 MB L3 Laatikko",
+      "price_cents": 79500,
+      "url": "https://datatronic.fi/komponentit/prosessorit/amd-ryzen-threadripper-pro-5955wx-suoritin-4-ghz-64-mb-l3-laatikko-amd-100-100000447wof",
+      "external_id": "48472"
+    },
+    {
+      "name": "AMD Ryzen Threadripper PRO 7965WX suoritin 4,2 GHz 128 MB L3 Laatikko",
+      "price_cents": 286500,
+      "url": "https://datatronic.fi/komponentit/prosessorit/amd-ryzen-threadripper-pro-7965wx-suoritin-42-ghz-128-mb-l3-laatikko-amd-100-100000885wof",
+      "external_id": "141757"
+    },
+    {
+      "name": "Intel Core i7-12700 suoritin 25 MB Smart Cache Laatikko",
+      "price_cents": 34500,
+      "url": "https://datatronic.fi/komponentit/prosessorit/intel-core-i7-12700-suoritin-25-mb-smart-cache-laatikko-intel-bx8071512700",
+      "external_id": "36868"
+    }
+  ]
+}

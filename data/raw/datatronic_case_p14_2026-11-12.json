@@ -1,0 +1,156 @@
+{
+  "shop": "Datatronic",
+  "category": "case",
+  "page": 14,
+  "source_url": "https://datatronic.fi/kotelot?page=14",
+  "fetched_at": "2026-11-12T14:49:07+00:00",
+  "site_total_products": 620,
+  "items_on_page": 24,
+  "raw_html": "data/raw/html/datatronic_case_p14_2026-11-12_cfe62fe013c0.html",
+  "items": [
+    {
+      "name": "Fractal Design Meshify 2 Compact Musta",
+      "price_cents": 14690,
+      "url": "https://datatronic.fi/komponentit/kotelot/fractal-design-meshify-2-compact-musta-fractal-design-fd-c-mes2c-03",
+      "external_id": "16895"
+    },
+    {
+      "name": "SAMA V40E Midi Tower musta",
+      "price_cents": 4690,
+      "url": "https://datatronic.fi/komponentit/kotelot/sama-v40e-midi-tower-musta-sama-gears-v40e-bkad00x1-ru",
+      "external_id": "174171"
+    },
+    {
+      "name": "Chieftec GS-03B-OP tietokonekotelo Midi Tower musta",
+      "price_cents": 5190,
+      "url": "https://datatronic.fi/komponentit/kotelot/chieftec-gs-03b-op-tietokonekotelo-midi-tower-musta-chieftec-gs-03b-op",
+      "external_id": "169570"
+    },
+    {
+      "name": "HAVN HS 420 VGPU Midi Tower Valkoinen",
+      "price_cents": 26490,
+      "url": "https://datatronic.fi/komponentit/kotelot/havn-hs-420-vgpu-midi-tower-valkoinen-havn-hvn-ca-hs420-07",
+      "external_id": "164996"
+    },
+    {
+      "name": "HYTE X50 Midi Tower Purppura",
+      "price_cents": 15990,
+      "url": "https://datatronic.fi/komponentit/kotelot/hyte-x50-midi-tower-purppura-hyte-cs-hyte-x50g-tm",
+      "external_id": "174243"
+    },
+    {
+      "name": "Cooler Master MasterFrame 360 PANORAMA Full Tower Musta, Läpinäkyvä",
+      "price_cents": 26090,
+      "url": "https://datatronic.fi/komponentit/kotelot/cooler-master-masterframe-360-panorama-full-tower-musta-lapinakyva-cooler-master-mf360-kinn-s00",
+      "external_id": "176733"
+    },
+    {
+      "name": "ASUS Prime AP303 Mesh Midi Tower musta",
+      "price_cents": 11590,
+      "url": "https://datatronic.fi/komponentit/kotelot/asus-prime-ap303-mesh-midi-tower-musta-asus-90dc00v0-b39000",
+      "external_id": "174616"
+    },
+    {
+      "name": "Fractal Design Meshify 3 XL Valkoinen",
+      "price_cents": 28690,
+      "url": "https://datatronic.fi/komponentit/kotelot/fractal-design-meshify-3-xl-valkoinen-fractal-design-fd-c-mes3x-05",
+      "external_id": "170355"
+    },
+    {
+      "name": "Corsair 2500X RGB Micro Tower Valkoinen",
+      "price_cents": 21790,
+      "url": "https://datatronic.fi/komponentit/kotelot/corsair-2500x-rgb-micro-tower-valkoinen-corsair-cc-9011268-ww",
+      "external_id": "154176"
+    },
+    {
+      "name": "Chieftec UNC-209S-B-OP tietokonekotelo Teline musta",
+      "price_cents": 14690,
+      "url": "https://datatronic.fi/komponentit/kotelot/chieftec-unc-209s-b-op-tietokonekotelo-teline-musta-chieftec-unc-209s-b-op",
+      "external_id": "173548"
+    },
+    {
+      "name": "Cooler Master MasterBox 520 MESH Blackout Edition Midi Tower musta",
+      "price_cents": 10590,
+      "url": "https://datatronic.fi/komponentit/kotelot/cooler-master-masterbox-520-mesh-blackout-edition-midi-tower-musta-cooler-master-mb520-kgnn-sno",
+      "external_id": "84218"
+    },
+    {
+      "name": "LC-Power 7034B Midi Tower Musta",
+      "price_cents": 4290,
+      "url": "https://datatronic.fi/komponentit/kotelot/lc-power-7034b-midi-tower-musta-lc-power-lc-7034b-on",
+      "external_id": "114222"
+    },
+    {
+      "name": "Montech KING 65 PRO Tower musta",
+      "price_cents": 7090,
+      "url": "https://datatronic.fi/komponentit/kotelot/montech-king-65-pro-tower-musta-montech-king-65-pro-b",
+      "external_id": "167366"
+    },
+    {
+      "name": "Fractal Design Meshify 3 XL musta",
+      "price_cents": 20790,
+      "url": "https://datatronic.fi/komponentit/kotelot/fractal-design-meshify-3-xl-musta-fractal-design-fd-c-mes3x-01",
+      "external_id": "166196"
+    },
+    {
+      "name": "HYTE Y70 Touch Infinite Midi Tower musta, Valkoinen",
+      "price_cents": 41900,
+      "url": "https://datatronic.fi/komponentit/kotelot/hyte-y70-touch-infinite-midi-tower-musta-valkoinen-hyte-cs-hyte-y70tti-wb",
+      "external_id": "167658"
+    },
+    {
+      "name": "Sharkoon VK3 Full Tower musta",
+      "price_cents": 6090,
+      "url": "https://datatronic.fi/komponentit/kotelot/sharkoon-vk3-full-tower-musta-sharkoon-4044951041220",
+      "external_id": "169434"
+    },
+    {
+      "name": "Phanteks ENTHOO PRO 2 Full Tower musta",
+      "price_cents": 16590,
+      "url": "https://datatronic.fi/komponentit/kotelot/phanteks-enthoo-pro-2-full-tower-musta-phanteks-ph-es620ptg-dbk01",
+      "external_id": "166679"
+    },
+    {
+      "name": "HYTE Y70 Midi Tower musta, Punainen",
+      "price_cents": 21990,
+      "url": "https://datatronic.fi/komponentit/kotelot/hyte-y70-midi-tower-musta-punainen-hyte-cs-hyte-y70-br",
+      "external_id": "155836"
+    },
+    {
+      "name": "Kolink VOID RGB Midi-Tower - Black Window - Midi/Minitower - ATX Midi Tower Musta",
+      "price_cents": 5690,
+      "url": "https://datatronic.fi/komponentit/kotelot/kolink-void-rgb-midi-tower-black-window-midi-minitower-atx-midi-tower-musta-kolink-void-rgb",
+      "external_id": "45868"
+    },
+    {
+      "name": "Lian Li O11D EVO RGB Tower Valkoinen",
+      "price_cents": 18190,
+      "url": "https://datatronic.fi/komponentit/kotelot/lian-li-o11d-evo-rgb-tower-valkoinen-lian-li-o11dergbw",
+      "external_id": "152198"
+    },
+    {
+      "name": "Thermaltake View 170 WS ARGB Micro Tower musta",
+      "price_cents": 7290,
+      "url": "https://datatronic.fi/komponentit/kotelot/thermaltake-view-170-ws-argb-micro-tower-musta-thermaltake-ca-1z4-00m1wn-ws",
+      "external_id": "174865"
+    },
+    {
+      "name": "Corsair 3500X Midi Tower musta",
+      "price_cents": 10690,
+      "url": "https://datatronic.fi/komponentit/kotelot/corsair-3500x-midi-tower-musta-corsair-cc-9011276-ww",
+      "external_id": "156296"
+    },
+    {
+      "name": "HYTE Y70 touch infinite Midi Tower musta",
+      "price_cents": 41900,
+      "url": "https://datatronic.fi/komponentit/kotelot/hyte-y70-touch-infinite-midi-tower-musta-hyte-cs-hyte-y70ti-bb",
+      "external_id": "162489"
+    },
+    {
+      "name": "Chieftec LG-01B-OP tietokonekotelo Midi Tower Musta",
+      "price_cents": 6290,
+      "url": "https://datatronic.fi/komponentit/kotelot/chieftec-lg-01b-op-tietokonekotelo-midi-tower-musta-chieftec-lg-01b-op",
+      "external_id": "2470"
+    }
+  ]
+}

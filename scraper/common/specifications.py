@@ -181,12 +181,38 @@ PARSERS: Dict[str, Callable[[str], Any]] = {
     "graphics_chipset": parse_text, "pcie_version": parse_text, "main_connector": parse_text,
 }
 
+MOTHERBOARD_FORM_FACTORS = {
+    "laajennettu atx": "E-ATX", "extended atx": "E-ATX", "e-atx": "E-ATX", "eatx": "E-ATX",
+    "mikro atx": "Micro-ATX", "micro atx": "Micro-ATX", "micro-atx": "Micro-ATX",
+    "m-atx": "Micro-ATX", "matx": "Micro-ATX",
+    "mini itx": "Mini-ITX", "mini-itx": "Mini-ITX", "miniitx": "Mini-ITX",
+    "atx": "ATX", "eeb": "EEB", "ssi-eeb": "EEB", "ssi ceb": "SSI-CEB",
+}
+
+
+def parse_motherboard_form_factor(text: str) -> Optional[str]:
+    """'mikro ATX' -> 'Micro-ATX' ; 'Laajennettu ATX' -> 'E-ATX' ; 'ATX' stays.
+
+    Datatronic writes the short formats in Finnish ("mikro ATX"), some data sheets in
+    English ("Micro-ATX"), so without this a UI filter would offer both spellings as
+    separate buckets for the same board size.
+    """
+    lowered = re.sub(r"\s+", " ", (text or "").strip().lower())
+    if lowered in MOTHERBOARD_FORM_FACTORS:
+        return MOTHERBOARD_FORM_FACTORS[lowered]
+    for wording, canonical in MOTHERBOARD_FORM_FACTORS.items():   # longest first
+        if wording in lowered:
+            return canonical
+    return parse_text(text)
+
+
 # Some fields share a name across categories but need a category-specific value shape:
 # a storage device's form factor ("M.2 2280") is not a motherboard's ("mikro ATX").
 # Anything listed here wins over the generic parser above.
 PARSERS_BY_CATEGORY: Dict[Tuple[str, str], Callable[[str], Any]] = {
     ("storage", "form_factor"): parse_storage_form_factor,
     ("storage", "interface"): parse_storage_interface,
+    ("motherboard", "form_factor"): parse_motherboard_form_factor,
 }
 
 

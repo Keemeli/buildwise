@@ -1,0 +1,156 @@
+{
+  "shop": "Datatronic",
+  "category": "case",
+  "page": 23,
+  "source_url": "https://datatronic.fi/kotelot?page=23",
+  "fetched_at": "2026-11-12T14:49:23+00:00",
+  "site_total_products": 620,
+  "items_on_page": 24,
+  "raw_html": "data/raw/html/datatronic_case_p23_2026-11-12_ddad047bd6fb.html",
+  "items": [
+    {
+      "name": "ASUS A32 Plus TG ARGB White Valkoinen",
+      "price_cents": 14490,
+      "url": "https://datatronic.fi/komponentit/kotelot/asus-a32-plus-tg-argb-white-valkoinen-asus-90dc00s3-b19000",
+      "external_id": "177746"
+    },
+    {
+      "name": "Sharkoon MK3 RGB Micro Tower musta",
+      "price_cents": 8590,
+      "url": "https://datatronic.fi/komponentit/kotelot/sharkoon-mk3-rgb-micro-tower-musta-sharkoon-4044951041749",
+      "external_id": "169446"
+    },
+    {
+      "name": "Cooler Master MasterBox NR400 Mini Tower Musta",
+      "price_cents": 7090,
+      "url": "https://datatronic.fi/komponentit/kotelot/cooler-master-masterbox-nr400-mini-tower-musta-cooler-master-mcb-nr400-kgnn-s00",
+      "external_id": "7375"
+    },
+    {
+      "name": "Phanteks NV7 Full Tower Valkoinen",
+      "price_cents": 21190,
+      "url": "https://datatronic.fi/komponentit/kotelot/phanteks-nv7-full-tower-valkoinen-phanteks-ph-nv723tg-dmw01",
+      "external_id": "158854"
+    },
+    {
+      "name": "Cooler Master MasterFrame 360 STAGE LCD Full Tower musta, Läpinäkyvä",
+      "price_cents": 32500,
+      "url": "https://datatronic.fi/komponentit/kotelot/cooler-master-masterframe-360-stage-lcd-full-tower-musta-lapinakyva-cooler-master-mf360-khnn-s02",
+      "external_id": "176456"
+    },
+    {
+      "name": "Fractal Design Define One Light Solid Midi Tower Valkoinen",
+      "price_cents": 16990,
+      "url": "https://datatronic.fi/komponentit/kotelot/fractal-design-define-one-light-solid-midi-tower-valkoinen-fractal-design-fd-c-defoa-04",
+      "external_id": "181895"
+    },
+    {
+      "name": "NZXT H7 Flow RGB Midi Tower musta",
+      "price_cents": 14690,
+      "url": "https://datatronic.fi/komponentit/kotelot/nzxt-h7-flow-rgb-midi-tower-musta-nzxt-cm-h72fb-r1",
+      "external_id": "162566"
+    },
+    {
+      "name": "Antec C6 Curve Air White",
+      "price_cents": 12790,
+      "url": "https://datatronic.fi/komponentit/kotelot/antec-c6-curve-air-white-0-761345-10276-6",
+      "external_id": "179660"
+    },
+    {
+      "name": "ASUS ProArt PA401 Wood TG PWM (Black) Tower musta",
+      "price_cents": 13390,
+      "url": "https://datatronic.fi/komponentit/kotelot/asus-proart-pa401-wood-tg-pwm-black-tower-musta-asus-90dc00m0-b39000",
+      "external_id": "168774"
+    },
+    {
+      "name": "Phanteks P600S Midi Tower Valkoinen",
+      "price_cents": 17390,
+      "url": "https://datatronic.fi/komponentit/kotelot/phanteks-p600s-midi-tower-valkoinen-phanteks-ph-ec600pstg-dmw01",
+      "external_id": "166677"
+    },
+    {
+      "name": "Streacom BC1 V2 Avoin Hopea",
+      "price_cents": 15990,
+      "url": "https://datatronic.fi/komponentit/kotelot/streacom-bc1-v2-avoin-hopea-streacom-st-bc1s-v2",
+      "external_id": "123906"
+    },
+    {
+      "name": "Lian Li B4-mATX Mesh Mini Tower Valkoinen",
+      "price_cents": 7190,
+      "url": "https://datatronic.fi/komponentit/kotelot/lian-li-b4-matx-mesh-mini-tower-valkoinen-lian-li-b4w",
+      "external_id": "181255"
+    },
+    {
+      "name": "Lian Li B4-mATX Wood Mini Tower Valkoinen, Puu",
+      "price_cents": 8190,
+      "url": "https://datatronic.fi/komponentit/kotelot/lian-li-b4-matx-wood-mini-tower-valkoinen-puu-lian-li-b4w-wd",
+      "external_id": "181257"
+    },
+    {
+      "name": "Sharkoon MK4 RGB Strip Micro Tower musta",
+      "price_cents": 7290,
+      "url": "https://datatronic.fi/komponentit/kotelot/sharkoon-mk4-rgb-strip-micro-tower-musta-sharkoon-4044951041756",
+      "external_id": "169447"
+    },
+    {
+      "name": "Corsair FRAME 4000D LCD RS ARGB Midi Tower musta",
+      "price_cents": 37900,
+      "url": "https://datatronic.fi/komponentit/kotelot/corsair-frame-4000d-lcd-rs-argb-midi-tower-musta-corsair-cc-9011326-ww",
+      "external_id": "176493"
+    },
+    {
+      "name": "Cooler Master Elite 502 Midi Tower musta",
+      "price_cents": 8890,
+      "url": "https://datatronic.fi/komponentit/kotelot/cooler-master-elite-502-midi-tower-musta-cooler-master-e502-kgnn-s00",
+      "external_id": "172505"
+    },
+    {
+      "name": "Sharkoon MK3 Micro Tower musta",
+      "price_cents": 6990,
+      "url": "https://datatronic.fi/komponentit/kotelot/sharkoon-mk3-micro-tower-musta-sharkoon-4044951041732",
+      "external_id": "169445"
+    },
+    {
+      "name": "Corsair FRAME 4000D WOOD RS Midi Tower Musta, Puu",
+      "price_cents": 16290,
+      "url": "https://datatronic.fi/komponentit/kotelot/corsair-frame-4000d-wood-rs-midi-tower-musta-puu-corsair-cc-9011340-ww",
+      "external_id": "179821"
+    },
+    {
+      "name": "Fractal Design Summit Blackout TG Light Tint Midi Tower Musta",
+      "price_cents": 19790,
+      "url": "https://datatronic.fi/komponentit/kotelot/fractal-design-summit-blackout-tg-light-tint-midi-tower-musta-fractal-design-fd-c-sum1a-05",
+      "external_id": "181890"
+    },
+    {
+      "name": "Fractal Design Epoch XL Tower musta",
+      "price_cents": 15490,
+      "url": "https://datatronic.fi/komponentit/kotelot/fractal-design-epoch-xl-tower-musta-fractal-design-fd-c-epo1x-04",
+      "external_id": "174683"
+    },
+    {
+      "name": "Jonsbo T7 Midi Tower Puu, Hopea",
+      "price_cents": 15490,
+      "url": "https://datatronic.fi/komponentit/kotelot/jonsbo-t7-midi-tower-puu-hopea-jonsbo-t7-silver",
+      "external_id": "177186"
+    },
+    {
+      "name": "Cooler Master QUBE 540 Midi Tower Hopea",
+      "price_cents": 7290,
+      "url": "https://datatronic.fi/komponentit/kotelot/cooler-master-qube-540-midi-tower-hopea-cooler-master-q540-lgnn-s00",
+      "external_id": "179997"
+    },
+    {
+      "name": "Corsair FRAME 5000D WORKSTATION Midi Tower Musta",
+      "price_cents": 21290,
+      "url": "https://datatronic.fi/komponentit/kotelot/corsair-frame-5000d-workstation-midi-tower-musta-corsair-cc-9011330-ww",
+      "external_id": "183078"
+    },
+    {
+      "name": "Thermaltake Tower 300 Matcha Plum Micro Tower Luumu",
+      "price_cents": 19190,
+      "url": "https://datatronic.fi/komponentit/kotelot/thermaltake-tower-300-matcha-plum-micro-tower-luumu-thermaltake-ca-1y4-00sjwn-00",
+      "external_id": "180655"
+    }
+  ]
+}

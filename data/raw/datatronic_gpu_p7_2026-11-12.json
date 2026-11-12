@@ -1,0 +1,156 @@
+{
+  "shop": "Datatronic",
+  "category": "gpu",
+  "page": 7,
+  "source_url": "https://datatronic.fi/naytonohjaimet?page=7",
+  "fetched_at": "2026-11-12T14:45:08+00:00",
+  "site_total_products": 480,
+  "items_on_page": 24,
+  "raw_html": "data/raw/html/datatronic_gpu_p7_2026-11-12_6cdadb0265ae.html",
+  "items": [
+    {
+      "name": "Gainward GeForce RTX 5060 Ghost OC NVIDIA 8 GB GDDR7",
+      "price_cents": 64500,
+      "url": "https://datatronic.fi/komponentit/naytonohjaimet/gainward-geforce-rtx-5060-ghost-oc-nvidia-8-gb-gddr7-gainward-ne75060s19p1-gb2063b",
+      "external_id": "170426"
+    },
+    {
+      "name": "XFX Quicksilver Radeon RX 9070 XT Gaming Edition AMD 16 GB GDDR6",
+      "price_cents": 115900,
+      "url": "https://datatronic.fi/komponentit/naytonohjaimet/xfx-quicksilver-radeon-rx-9070-xt-gaming-edition-amd-16-gb-gddr6-xfx-rx-97tqickb9",
+      "external_id": "168905"
+    },
+    {
+      "name": "MSI GAMING GeForce RTX 5060 TI 16G TRIO OC WHITE NVIDIA 16 GB GDDR7",
+      "price_cents": 4672900,
+      "url": "https://datatronic.fi/komponentit/naytonohjaimet/msi-gaming-geforce-rtx-5060-ti-16g-trio-oc-white-nvidia-16-gb-gddr7-msi-geforce-rtx-5060-ti-16g-gaming-trio",
+      "external_id": "170680"
+    },
+    {
+      "name": "GIGABYTE GeForce RTX 5060 WINDFORCE MAX OC 8G NVIDIA 8 GB GDDR7",
+      "price_cents": 57500,
+      "url": "https://datatronic.fi/komponentit/naytonohjaimet/gigabyte-geforce-rtx-5060-windforce-max-oc-8g-nvidia-8-gb-gddr7-gigabyte-gv-n5060wf2max-oc-8gd",
+      "external_id": "171549"
+    },
+    {
+      "name": "Zotac GAMING GeForce RTX 5080 SOLID OC NVIDIA 16 GB GDDR7",
+      "price_cents": 260900,
+      "url": "https://datatronic.fi/komponentit/naytonohjaimet/zotac-gaming-geforce-rtx-5080-solid-oc-nvidia-16-gb-gddr7-zotac-zt-b50800q-10p",
+      "external_id": "168847"
+    },
+    {
+      "name": "XFX Quicksilver Radeon RX 9070 XT Gaming Edition AMD 16 GB GDDR6",
+      "price_cents": 116500,
+      "url": "https://datatronic.fi/komponentit/naytonohjaimet/xfx-quicksilver-radeon-rx-9070-xt-gaming-edition-amd-16-gb-gddr6-xfx-rx-97tqickw9",
+      "external_id": "168911"
+    },
+    {
+      "name": "PNY A400 NVIDIA 4 GB GDDR6",
+      "price_cents": 28490,
+      "url": "https://datatronic.fi/komponentit/naytonohjaimet/pny-a400-nvidia-4-gb-gddr6-pny-vcnrtxa400-pb",
+      "external_id": "159832"
+    },
+    {
+      "name": "GIGABYTE GeForce RTX 5070 Ti AERO OC 16G NVIDIA 16 GB GDDR7",
+      "price_cents": 179900,
+      "url": "https://datatronic.fi/komponentit/naytonohjaimet/gigabyte-geforce-rtx-5070-ti-aero-oc-16g-nvidia-16-gb-gddr7-gigabyte-gv-n507taero-oc-16gd",
+      "external_id": "166658"
+    },
+    {
+      "name": "Gigabyte GV-N1030D4-2GL näytönohjain NVIDIA GeForce GT 1030 2 GB GDDR4",
+      "price_cents": 11990,
+      "url": "https://datatronic.fi/komponentit/naytonohjaimet/gigabyte-gv-n1030d4-2gl-naytonohjain-nvidia-geforce-gt-1030-2-gb-gddr4-gigabyte-gv-n1030d4-2gl",
+      "external_id": "32552"
+    },
+    {
+      "name": "Palit GeForce RTX 3060 Infinity 2 OC NVIDIA 12 GB GDDR6",
+      "price_cents": 51900,
+      "url": "https://datatronic.fi/komponentit/naytonohjaimet/palit-geforce-rtx-3060-infinity-2-oc-nvidia-12-gb-gddr6-palit-ne63060u19k9-pg190l",
+      "external_id": "181245"
+    },
+    {
+      "name": "Sapphire NITRO+ Radeon RX 9070 XT AMD 16 GB GDDR6",
+      "price_cents": 122900,
+      "url": "https://datatronic.fi/komponentit/naytonohjaimet/sapphire-nitro-radeon-rx-9070-xt-amd-16-gb-gddr6-sapphire-11348-01-20g",
+      "external_id": "168117"
+    },
+    {
+      "name": "GIGABYTE GeForce RTX 5060 GAMING OC 8G NVIDIA 8 GB GDDR7",
+      "price_cents": 61900,
+      "url": "https://datatronic.fi/komponentit/naytonohjaimet/gigabyte-geforce-rtx-5060-gaming-oc-8g-nvidia-8-gb-gddr7-gigabyte-gv-n5060gaming-oc-8gd",
+      "external_id": "170642"
+    },
+    {
+      "name": "Palit GeForce RTX 5070 Ti GamingPro-S OC NVIDIA 16 GB GDDR7",
+      "price_cents": 172900,
+      "url": "https://datatronic.fi/komponentit/naytonohjaimet/palit-geforce-rtx-5070-ti-gamingpro-s-oc-nvidia-16-gb-gddr7-palit-ne7507ts19t2-gb2031u",
+      "external_id": "171344"
+    },
+    {
+      "name": "MSI GAMING GeForce RTX 5060 TI 16G OC NVIDIA 16 GB GDDR7",
+      "price_cents": 576500,
+      "url": "https://datatronic.fi/komponentit/naytonohjaimet/msi-gaming-geforce-rtx-5060-ti-16g-oc-nvidia-16-gb-gddr7-msi-geforce-rtx-5060-ti-16g-gaming-oc",
+      "external_id": "168821"
+    },
+    {
+      "name": "PNY VCNRTXA400-SB näytönohjain NVIDIA RTX A400 4 GB GDDR6",
+      "price_cents": 25390,
+      "url": "https://datatronic.fi/komponentit/naytonohjaimet/pny-vcnrtxa400-sb-naytonohjain-nvidia-rtx-a400-4-gb-gddr6-pny-vcnrtxa400-sb",
+      "external_id": "159831"
+    },
+    {
+      "name": "GIGABYTE GeForce RTX 5060 Ti WINDFORCE MAX OC 8G NVIDIA 8 GB GDDR7",
+      "price_cents": 75900,
+      "url": "https://datatronic.fi/komponentit/naytonohjaimet/gigabyte-geforce-rtx-5060-ti-windforce-max-oc-8g-nvidia-8-gb-gddr7-gigabyte-gv-n506twf2max-oc-8gd",
+      "external_id": "171550"
+    },
+    {
+      "name": "ASUS ROG-ASTRAL-RTX5090-O32G-BTF-GAMING NVIDIA GeForce RTX 5090 32 GB GDDR7",
+      "price_cents": 1334900,
+      "url": "https://datatronic.fi/komponentit/naytonohjaimet/asus-rog-astral-rtx5090-o32g-btf-gaming-nvidia-geforce-rtx-5090-32-gb-gddr7-asus-90yv0nf0-m0na00",
+      "external_id": "171769"
+    },
+    {
+      "name": "PNY GeForce RTX 5070 Ti 16GB NVIDIA GDDR7",
+      "price_cents": 173500,
+      "url": "https://datatronic.fi/komponentit/naytonohjaimet/pny-geforce-rtx-5070-ti-16gb-nvidia-gddr7-pny-vcg5071t16tfxpb1-o",
+      "external_id": "171329"
+    },
+    {
+      "name": "Sparkle Technology Intel Arc A770 ROC OC Edition 16 GB GDDR6",
+      "price_cents": 73500,
+      "url": "https://datatronic.fi/komponentit/naytonohjaimet/sparkle-technology-intel-arc-a770-roc-oc-edition-16-gb-gddr6-sparkle-technology-sa770r-16goc",
+      "external_id": "171221"
+    },
+    {
+      "name": "Sapphire NITRO+ AMD Radeon RX 9060 XT GPU 16 GB GDDR6",
+      "price_cents": 84500,
+      "url": "https://datatronic.fi/komponentit/naytonohjaimet/sapphire-nitro-amd-radeon-rx-9060-xt-gpu-16-gb-gddr6-sapphire-11350-01-20g",
+      "external_id": "170810"
+    },
+    {
+      "name": "Inno3D GeForce RTX 5080 X3 OS NVIDIA 16 GB GDDR7",
+      "price_cents": 236500,
+      "url": "https://datatronic.fi/komponentit/naytonohjaimet/inno3d-geforce-rtx-5080-x3-os-nvidia-16-gb-gddr7-inno3d-n50803-16d7x-17603930",
+      "external_id": "166264"
+    },
+    {
+      "name": "ASUS Dual -RTX5050-O8G NVIDIA GeForce RTX 5050 8 GB GDDR6",
+      "price_cents": 68900,
+      "url": "https://datatronic.fi/komponentit/naytonohjaimet/asus-dual-rtx5050-o8g-nvidia-geforce-rtx-5050-8-gb-gddr6-asus-90yv0n72-m0na00",
+      "external_id": "171759"
+    },
+    {
+      "name": "GIGABYTE GeForce RTX 5060 AERO OC 8G NVIDIA 8 GB GDDR7",
+      "price_cents": 1049900,
+      "url": "https://datatronic.fi/komponentit/naytonohjaimet/gigabyte-geforce-rtx-5060-aero-oc-8g-nvidia-8-gb-gddr7-gigabyte-gv-n5060aero-oc-8gd",
+      "external_id": "170818"
+    },
+    {
+      "name": "ASUS Prime -RTX5080-O16G NVIDIA GeForce RTX 5080 16 GB GDDR7",
+      "price_cents": 265900,
+      "url": "https://datatronic.fi/komponentit/naytonohjaimet/asus-prime-rtx5080-o16g-nvidia-geforce-rtx-5080-16-gb-gddr7-asus-90yv0lx0-m0na00",
+      "external_id": "166087"
+    }
+  ]
+}

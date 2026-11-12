@@ -1,0 +1,156 @@
+{
+  "shop": "Datatronic",
+  "category": "storage",
+  "page": 10,
+  "source_url": "https://datatronic.fi/kiintolevyt-ssd-levyt?page=10",
+  "fetched_at": "2026-11-12T14:48:04+00:00",
+  "site_total_products": 589,
+  "items_on_page": 24,
+  "raw_html": "data/raw/html/datatronic_storage_p10_2026-11-12_5b4ec19a9e19.html",
+  "items": [
+    {
+      "name": "Western Digital Green SN350 500 GB M.2 PCI Express 3.0 NVMe TLC",
+      "price_cents": 10190,
+      "url": "https://datatronic.fi/komponentit/kiintolevyt-ssd-levyt/western-digital-green-sn350-500-gb-m2-pci-express-30-nvme-tlc-western-digital-wds500g2g0c-00cdh0",
+      "external_id": "170859"
+    },
+    {
+      "name": "Synology HAT3320-8T sisäinen kiintolevy 8 TB 7200 RPM 3.5\" Serial ATA III",
+      "price_cents": 52900,
+      "url": "https://datatronic.fi/komponentit/kiintolevyt-ssd-levyt/hdd/synology-hat3320-8t-sisainen-kiintolevy-8-tb-7200-rpm-35-serial-ata-iii-synology-hat3320-8t",
+      "external_id": "174889"
+    },
+    {
+      "name": "Silicon Power Ace A55 2.5\" 1000 GB Serial ATA III 3D TLC",
+      "price_cents": 12890,
+      "url": "https://datatronic.fi/komponentit/kiintolevyt-ssd-levyt/ssd/silicon-power-ace-a55-25-1000-gb-serial-ata-iii-3d-tlc-silicon-power-sp001tbss3a55s25",
+      "external_id": "57984"
+    },
+    {
+      "name": "Verbatim Vi5000 M.2 2 TB PCI Express 4.0 3D NAND NVMe",
+      "price_cents": 38500,
+      "url": "https://datatronic.fi/komponentit/kiintolevyt-ssd-levyt/ssd/verbatim-vi5000-m2-2-tb-pci-express-40-3d-nand-nvme-verbatim-31827",
+      "external_id": "150521"
+    },
+    {
+      "name": "DeepCool PN750M virtalähdeyksikkö 750 W 20+4 pin ATX ATX musta",
+      "price_cents": 9190,
+      "url": "https://datatronic.fi/komponentit/kiintolevyt-ssd-levyt/ssd/deepcool-pn750m-virtalahdeyksikko-750-w-20-4-pin-atx-atx-musta-deepcool-r-pn750m-fc0b-jgeu",
+      "external_id": "170718"
+    },
+    {
+      "name": "Crucial CT2000P310SSD2 SSD-massamuisti M.2 2 TB PCI Express 4.0 NVMe",
+      "price_cents": 70500,
+      "url": "https://datatronic.fi/komponentit/kiintolevyt-ssd-levyt/ssd/crucial-ct2000p310ssd2-ssd-massamuisti-m2-2-tb-pci-express-40-nvme-crucial-ct2000p310ssd2",
+      "external_id": "162604"
+    },
+    {
+      "name": "Western Digital Purple Surveillance 3.5\" 6 TB SATA",
+      "price_cents": 44900,
+      "url": "https://datatronic.fi/komponentit/kiintolevyt-ssd-levyt/hdd/western-digital-purple-surveillance-35-6-tb-sata-western-digital-wd62purz",
+      "external_id": "157624"
+    },
+    {
+      "name": "Western Digital WD22PURZ sisäinen kiintolevy 2 TB 3.5\" SATA",
+      "price_cents": 20690,
+      "url": "https://datatronic.fi/komponentit/kiintolevyt-ssd-levyt/hdd/western-digital-wd22purz-sisainen-kiintolevy-2-tb-35-sata-western-digital-wd22purz",
+      "external_id": "166409"
+    },
+    {
+      "name": "Intel SSDPE2KX020T801 SSD-massamuisti U.2 2000 GB PCI Express 3.1 TLC 3D NAND NVMe",
+      "price_cents": 126500,
+      "url": "https://datatronic.fi/komponentit/kiintolevyt-ssd-levyt/ssd/intel-ssdpe2kx020t801-ssd-massamuisti-u2-2000-gb-pci-express-31-tlc-3d-nand-nvme-intel-ssdpe2kx020t801",
+      "external_id": "17481"
+    },
+    {
+      "name": "Transcend PCIe SSD 400S M.2 512 GB PCI Express 3D NAND NVMe",
+      "price_cents": 19490,
+      "url": "https://datatronic.fi/komponentit/kiintolevyt-ssd-levyt/ssd/transcend-pcie-ssd-400s-m2-512-gb-pci-express-3d-nand-nvme-transcend-ts512gmte400s",
+      "external_id": "112034"
+    },
+    {
+      "name": "Emtec X250 M.2 128 GB Serial ATA III 3D NAND",
+      "price_cents": 4690,
+      "url": "https://datatronic.fi/komponentit/kiintolevyt-ssd-levyt/ssd/emtec-x250-m2-128-gb-serial-ata-iii-3d-nand-emtec-ecssd128gx250",
+      "external_id": "40107"
+    },
+    {
+      "name": "Seagate Surveillance HDD SkyHawk AI 3.5\" 12000 GB Serial ATA III",
+      "price_cents": 112900,
+      "url": "https://datatronic.fi/komponentit/kiintolevyt-ssd-levyt/hdd/seagate-surveillance-hdd-skyhawk-ai-35-12000-gb-serial-ata-iii-seagate-st12000ve001",
+      "external_id": "15924"
+    },
+    {
+      "name": "DeepCool LE360 WH V2 Suoritin All-in-one-nesteenjäähdytin 12 cm Valkoinen 1 kpl",
+      "price_cents": 7490,
+      "url": "https://datatronic.fi/komponentit/kiintolevyt-ssd-levyt/ssd/deepcool-le360-wh-v2-suoritin-all-in-one-nesteenjaahdytin-12-cm-valkoinen-1-kpl-deepcool-r-le360-whammn-g-2",
+      "external_id": "169130"
+    },
+    {
+      "name": "Gigabyte Gen3 2500E SSD 500GB M.2 PCI Express 3.0 NVMe",
+      "price_cents": 9790,
+      "url": "https://datatronic.fi/komponentit/kiintolevyt-ssd-levyt/ssd/gigabyte-gen3-2500e-ssd-500gb-m2-pci-express-30-nvme-gigabyte-g325e500g",
+      "external_id": "113858"
+    },
+    {
+      "name": "Corsair MP600 ELITE M.2 1 TB PCI Express 4.0 3D TLC NVMe",
+      "price_cents": 36500,
+      "url": "https://datatronic.fi/komponentit/kiintolevyt-ssd-levyt/ssd/corsair-mp600-elite-m2-1-tb-pci-express-40-3d-tlc-nvme-corsair-cssd-f1000gbmp600ehs",
+      "external_id": "152283"
+    },
+    {
+      "name": "Western Digital Red SA500 2.5\" 1 TB Serial ATA III 3D NAND",
+      "price_cents": 96900,
+      "url": "https://datatronic.fi/komponentit/kiintolevyt-ssd-levyt/ssd/western-digital-red-sa500-25-1-tb-serial-ata-iii-3d-nand-western-digital-wds100t1r0a",
+      "external_id": "154183"
+    },
+    {
+      "name": "Western Digital Blue 3.5\" 2000 GB SATA",
+      "price_cents": 16490,
+      "url": "https://datatronic.fi/komponentit/kiintolevyt-ssd-levyt/hdd/western-digital-blue-35-2000-gb-sata-western-digital-wd20ezbx",
+      "external_id": "16985"
+    },
+    {
+      "name": "Micron 5300 PRO 1.92TB SATA M.2 SSD",
+      "price_cents": 26190,
+      "url": "https://datatronic.fi/komponentit/kiintolevyt-ssd-levyt/micron-5300-pro-192tb-sata-m2-ssd-mtfddav1t9tds-1aw1zabyyr",
+      "external_id": "144040"
+    },
+    {
+      "name": "Western Digital Black WDS800T2XHE SSD-massamuisti 8 TB M.2 PCI Express 4.0 NVMe",
+      "price_cents": 259900,
+      "url": "https://datatronic.fi/komponentit/kiintolevyt-ssd-levyt/western-digital-black-wds800t2xhe-ssd-massamuisti-8-tb-m2-pci-express-40-nvme-western-digital-wds800t2xhe-00cdd0",
+      "external_id": "170860"
+    },
+    {
+      "name": "DELL AB400209 SSD-massamuisti M.2 2000 GB PCI Express NVMe",
+      "price_cents": 36900,
+      "url": "https://datatronic.fi/komponentit/kiintolevyt-ssd-levyt/ssd/dell-ab400209-ssd-massamuisti-m2-2000-gb-pci-express-nvme-dell-ab400209",
+      "external_id": "10729"
+    },
+    {
+      "name": "Verbatim 49362 SSD-massamuisti M.2 256 GB Serial ATA III",
+      "price_cents": 5290,
+      "url": "https://datatronic.fi/komponentit/kiintolevyt-ssd-levyt/ssd/verbatim-49362-ssd-massamuisti-m2-256-gb-serial-ata-iii-verbatim-49362",
+      "external_id": "7875"
+    },
+    {
+      "name": "Transcend 430S M.2 512 GB Serial ATA III 3D NAND",
+      "price_cents": 48500,
+      "url": "https://datatronic.fi/komponentit/kiintolevyt-ssd-levyt/ssd/transcend-430s-m2-512-gb-serial-ata-iii-3d-nand-transcend-ts512gmts430s",
+      "external_id": "5523"
+    },
+    {
+      "name": "Patriot Memory P410 500 GB M.2 PCI Express NVMe",
+      "price_cents": 12690,
+      "url": "https://datatronic.fi/komponentit/kiintolevyt-ssd-levyt/ssd/patriot-memory-p410-500-gb-m2-pci-express-nvme-patriot-memory-p410p500gm28h",
+      "external_id": "176604"
+    },
+    {
+      "name": "Western Digital Green WD 2.5\" 1000 GB Serial ATA III",
+      "price_cents": 13690,
+      "url": "https://datatronic.fi/komponentit/kiintolevyt-ssd-levyt/ssd/western-digital-green-wd-25-1000-gb-serial-ata-iii-western-digital-wds100t3g0a",
+      "external_id": "47447"
+    }
+  ]
+}

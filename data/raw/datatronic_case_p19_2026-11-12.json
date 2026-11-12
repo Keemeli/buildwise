@@ -1,0 +1,156 @@
+{
+  "shop": "Datatronic",
+  "category": "case",
+  "page": 19,
+  "source_url": "https://datatronic.fi/kotelot?page=19",
+  "fetched_at": "2026-11-12T14:49:16+00:00",
+  "site_total_products": 620,
+  "items_on_page": 24,
+  "raw_html": "data/raw/html/datatronic_case_p19_2026-11-12_d969aca50091.html",
+  "items": [
+    {
+      "name": "Aerocool Atomic Lite Mini Tower Musta Versio 1",
+      "price_cents": 4190,
+      "url": "https://datatronic.fi/komponentit/kotelot/aerocool-atomic-lite-mini-tower-musta-versio-1-aerocool-accs-pv3302311",
+      "external_id": "37435"
+    },
+    {
+      "name": "Lian Li O11 Dynamic EVO XL Tower Valkoinen",
+      "price_cents": 27890,
+      "url": "https://datatronic.fi/komponentit/kotelot/lian-li-o11-dynamic-evo-xl-tower-valkoinen-lian-li-o11dexl-w",
+      "external_id": "127704"
+    },
+    {
+      "name": "Sharkoon VK3 Full Tower musta",
+      "price_cents": 6890,
+      "url": "https://datatronic.fi/komponentit/kotelot/sharkoon-vk3-full-tower-musta-sharkoon-4044951041237",
+      "external_id": "169435"
+    },
+    {
+      "name": "LC-Power 7038B Midi Tower Musta",
+      "price_cents": 4590,
+      "url": "https://datatronic.fi/komponentit/kotelot/lc-power-7038b-midi-tower-musta-lc-power-lc-7038b-on",
+      "external_id": "122948"
+    },
+    {
+      "name": "Lian Li B4-mATX Mesh Mini Tower Musta",
+      "price_cents": 6790,
+      "url": "https://datatronic.fi/komponentit/kotelot/lian-li-b4-matx-mesh-mini-tower-musta-lian-li-b4x",
+      "external_id": "181254"
+    },
+    {
+      "name": "ASUS ProArt PA401 - Mesh Panel musta",
+      "price_cents": 11590,
+      "url": "https://datatronic.fi/komponentit/kotelot/asus-proart-pa401-mesh-panel-musta-asus-90dc00m0-b39050",
+      "external_id": "174625"
+    },
+    {
+      "name": "Jonsbo D41 STD Midi Tower Valkoinen",
+      "price_cents": 6590,
+      "url": "https://datatronic.fi/komponentit/kotelot/jonsbo-d41-std-midi-tower-valkoinen-jonsbo-d41-std-white",
+      "external_id": "128411"
+    },
+    {
+      "name": "Zalman Z9 Iceberg MS Black Midi Tower Musta",
+      "price_cents": 7290,
+      "url": "https://datatronic.fi/komponentit/kotelot/zalman-z9-iceberg-ms-black-midi-tower-musta-zalman-z9-iceberg-ms-black",
+      "external_id": "153658"
+    },
+    {
+      "name": "ASUS TEK COMPUTER",
+      "price_cents": 12090,
+      "url": "https://datatronic.fi/komponentit/kotelot/asus-tek-computer-asus-90dc00p0-b19000",
+      "external_id": "172268"
+    },
+    {
+      "name": "Corsair FRAME 4000D LCD RS ARGB Midi Tower Valkoinen",
+      "price_cents": 37900,
+      "url": "https://datatronic.fi/komponentit/kotelot/corsair-frame-4000d-lcd-rs-argb-midi-tower-valkoinen-corsair-cc-9011327-ww",
+      "external_id": "176494"
+    },
+    {
+      "name": "TRYX FLOVA F50 Midi Tower Musta",
+      "price_cents": 13590,
+      "url": "https://datatronic.fi/komponentit/kotelot/tryx-flova-f50-midi-tower-musta-tryx-c-f500f-fm1e-g0k",
+      "external_id": "176737"
+    },
+    {
+      "name": "ASUS A21 PLUS Valkoinen",
+      "price_cents": 12390,
+      "url": "https://datatronic.fi/komponentit/kotelot/asus-a21-plus-valkoinen-asus-90dc00h3-b19010",
+      "external_id": "165394"
+    },
+    {
+      "name": "Corsair FRAME 4000D WOOD RS Midi Tower Puu, Valkoinen",
+      "price_cents": 16290,
+      "url": "https://datatronic.fi/komponentit/kotelot/corsair-frame-4000d-wood-rs-midi-tower-puu-valkoinen-corsair-cc-9011341-ww",
+      "external_id": "179822"
+    },
+    {
+      "name": "HYTE Y70 Milk Midi Tower Vaaleanpunainen",
+      "price_cents": 21390,
+      "url": "https://datatronic.fi/komponentit/kotelot/hyte-y70-milk-midi-tower-vaaleanpunainen-hyte-cs-hyte-y70-mm",
+      "external_id": "174246"
+    },
+    {
+      "name": "XPG Invader X Mini Midi Tower musta",
+      "price_cents": 6990,
+      "url": "https://datatronic.fi/komponentit/kotelot/xpg-invader-x-mini-midi-tower-musta-xpg-75261541",
+      "external_id": "163273"
+    },
+    {
+      "name": "ASUS A31 Plus TG ARGB WHITE Midi Tower Valkoinen",
+      "price_cents": 11990,
+      "url": "https://datatronic.fi/komponentit/kotelot/asus-a31-plus-tg-argb-white-midi-tower-valkoinen-asus-90dc00r3-b19000",
+      "external_id": "168756"
+    },
+    {
+      "name": "Cooler Master Silencio S600 Midi Tower Musta",
+      "price_cents": 11290,
+      "url": "https://datatronic.fi/komponentit/kotelot/cooler-master-silencio-s600-midi-tower-musta-cooler-master-mcs-s600-kn5n-s00",
+      "external_id": "7312"
+    },
+    {
+      "name": "Phanteks NV9 MKII Full Tower musta",
+      "price_cents": 26190,
+      "url": "https://datatronic.fi/komponentit/kotelot/phanteks-nv9-mkii-full-tower-musta-phanteks-ph-nv923tg-dmw02",
+      "external_id": "166787"
+    },
+    {
+      "name": "Cooler Master TD300 Mini Tower Musta",
+      "price_cents": 9090,
+      "url": "https://datatronic.fi/komponentit/kotelot/cooler-master-td300-mini-tower-musta-cooler-master-td300-kgnn-s00",
+      "external_id": "36906"
+    },
+    {
+      "name": "Corsair 3200D RS ARGB Mid-Tower PC Case - Smoke Midi Tower Musta",
+      "price_cents": 9790,
+      "url": "https://datatronic.fi/komponentit/kotelot/corsair-3200d-rs-argb-mid-tower-pc-case-smoke-midi-tower-musta-corsair-cc-9011346-ww",
+      "external_id": "179824"
+    },
+    {
+      "name": "ASUS A31 Plus TG ARGB BLACK Midi Tower musta",
+      "price_cents": 12290,
+      "url": "https://datatronic.fi/komponentit/kotelot/asus-a31-plus-tg-argb-black-midi-tower-musta-asus-90dc00r0-b19000",
+      "external_id": "168752"
+    },
+    {
+      "name": "Chieftec IX-06B-OP tietokonekotelo Small Form Factor (SFF) Musta",
+      "price_cents": 4390,
+      "url": "https://datatronic.fi/komponentit/kotelot/chieftec-ix-06b-op-tietokonekotelo-small-form-factor-sff-musta-chieftec-ix-06b-op",
+      "external_id": "68959"
+    },
+    {
+      "name": "Phanteks Eclipse G370A Midi Tower Musta",
+      "price_cents": 6590,
+      "url": "https://datatronic.fi/komponentit/kotelot/phanteks-eclipse-g370a-midi-tower-musta-phanteks-ph-ec370a-dbk01",
+      "external_id": "171677"
+    },
+    {
+      "name": "Fractal Design Pop 2 Vision Tower Musta",
+      "price_cents": 10890,
+      "url": "https://datatronic.fi/komponentit/kotelot/fractal-design-pop-2-vision-tower-musta-fractal-design-fd-c-pov2a-02",
+      "external_id": "179633"
+    }
+  ]
+}

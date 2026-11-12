@@ -124,7 +124,9 @@ new rule appears.
 
 ```bash
 # data worker (run from the repository root)
-python3 -m venv .venv && source .venv/bin/activate
+# Python 3.11+ is required: protego>=0.7 needs 3.10+, and 3.9 crashes the CLI on the
+# PEP 604 unions in scraper/common (TypeError: unsupported operand type(s) for |).
+python3.11 -m venv scraper/.venv && source scraper/.venv/bin/activate
 pip install -r scraper/requirements.txt
 RETAILER=jimms  # or datatronic
 python3 -m scraper collect --shop "$RETAILER" --category gpu --pages 2

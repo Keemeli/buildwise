@@ -1,0 +1,156 @@
+{
+  "shop": "Datatronic",
+  "category": "case",
+  "page": 7,
+  "source_url": "https://datatronic.fi/kotelot?page=7",
+  "fetched_at": "2026-11-12T14:48:54+00:00",
+  "site_total_products": 620,
+  "items_on_page": 24,
+  "raw_html": "data/raw/html/datatronic_case_p7_2026-11-12_5dbe1bdb1f80.html",
+  "items": [
+    {
+      "name": "Phanteks EX5 Midi Tower Musta",
+      "price_cents": 10090,
+      "url": "https://datatronic.fi/komponentit/kotelot/phanteks-ex5-midi-tower-musta-phanteks-ph-ex526-dbk01",
+      "external_id": "182375"
+    },
+    {
+      "name": "Antec FLUX PRO EUV Full Tower musta, Puu",
+      "price_cents": 22390,
+      "url": "https://datatronic.fi/komponentit/kotelot/antec-flux-pro-euv-full-tower-musta-puu-antec-0-761345-10154-7",
+      "external_id": "166581"
+    },
+    {
+      "name": "ASUS TUF Gaming GT302 ARGB Midi Tower Valkoinen",
+      "price_cents": 8090,
+      "url": "https://datatronic.fi/komponentit/kotelot/asus-tuf-gaming-gt302-argb-midi-tower-valkoinen-asus-90dc00i3-b19000",
+      "external_id": "154302"
+    },
+    {
+      "name": "ASUS ProArt PA602 Midi Tower Musta",
+      "price_cents": 21790,
+      "url": "https://datatronic.fi/komponentit/kotelot/asus-proart-pa602-midi-tower-musta-asus-90dc00j0-b09000",
+      "external_id": "150381"
+    },
+    {
+      "name": "Fractal Design Pop XL Air Musta",
+      "price_cents": 12490,
+      "url": "https://datatronic.fi/komponentit/kotelot/fractal-design-pop-xl-air-musta-fractal-design-fd-c-por1x-06",
+      "external_id": "47335"
+    },
+    {
+      "name": "Fractal Design North XL Valkoinen",
+      "price_cents": 17390,
+      "url": "https://datatronic.fi/komponentit/kotelot/fractal-design-north-xl-valkoinen-fractal-design-fd-c-nor1x-03",
+      "external_id": "154788"
+    },
+    {
+      "name": "DeepCool CG580 4F WH Midi Tower Valkoinen",
+      "price_cents": 8890,
+      "url": "https://datatronic.fi/komponentit/kotelot/deepcool-cg580-4f-wh-midi-tower-valkoinen-deepcool-r-cg580-whada4-g-1",
+      "external_id": "166903"
+    },
+    {
+      "name": "Aerocool CS102 tietokonekotelo Midi Tower Musta",
+      "price_cents": 2790,
+      "url": "https://datatronic.fi/komponentit/kotelot/aerocool-cs102-tietokonekotelo-midi-tower-musta-aerocool-accs-pc0801411",
+      "external_id": "30822"
+    },
+    {
+      "name": "DeepCool CG580 4F V2 Midi Tower musta",
+      "price_cents": 8490,
+      "url": "https://datatronic.fi/komponentit/kotelot/deepcool-cg580-4f-v2-midi-tower-musta-deepcool-r-cg580-bkada4-g-2",
+      "external_id": "174397"
+    },
+    {
+      "name": "Chieftec BX-10B-OP tietokonekotelo Tower Musta",
+      "price_cents": 6090,
+      "url": "https://datatronic.fi/komponentit/kotelot/chieftec-bx-10b-op-tietokonekotelo-tower-musta-chieftec-bx-10b-op",
+      "external_id": "116725"
+    },
+    {
+      "name": "Lian Li 011 Vision COMPACT Tower musta",
+      "price_cents": 14190,
+      "url": "https://datatronic.fi/komponentit/kotelot/lian-li-011-vision-compact-tower-musta-lian-li-g99o11vpx00",
+      "external_id": "170879"
+    },
+    {
+      "name": "Lian Li 011 Vision O11 VISION-M Midi Tower Musta",
+      "price_cents": 6690,
+      "url": "https://datatronic.fi/komponentit/kotelot/lian-li-011-vision-o11-vision-m-midi-tower-musta-lian-li-g99o11vmx00",
+      "external_id": "180382"
+    },
+    {
+      "name": "Antec VSK2000-U3 Työpöytä Musta",
+      "price_cents": 5290,
+      "url": "https://datatronic.fi/komponentit/kotelot/antec-vsk2000-u3-tyopoyta-musta-antec-0-761345-92003-2",
+      "external_id": "47080"
+    },
+    {
+      "name": "SAMA S50 Black Mid-tower Case",
+      "price_cents": 6990,
+      "url": "https://datatronic.fi/komponentit/kotelot/sama-s50-black-mid-tower-case-s50-bkaga4x1-gl",
+      "external_id": "180761"
+    },
+    {
+      "name": "LC-Power LC-1400MI-300SFX tietokonekotelo Micro Tower musta",
+      "price_cents": 7890,
+      "url": "https://datatronic.fi/komponentit/kotelot/lc-power-lc-1400mi-300sfx-tietokonekotelo-micro-tower-musta-lc-power",
+      "external_id": "163849"
+    },
+    {
+      "name": "Lian Li LANCOOL 216 Midi Tower Läpinäkyvä, Valkoinen",
+      "price_cents": 10890,
+      "url": "https://datatronic.fi/komponentit/kotelot/lian-li-lancool-216-midi-tower-lapinakyva-valkoinen-lian-li-lancool216rw",
+      "external_id": "67146"
+    },
+    {
+      "name": "DeepCool CH270 Digital Mini Tower musta",
+      "price_cents": 7290,
+      "url": "https://datatronic.fi/komponentit/kotelot/deepcool-ch270-digital-mini-tower-musta-deepcool-r-ch270-bkndm0-g-1",
+      "external_id": "169098"
+    },
+    {
+      "name": "SAMA V40 Midi Tower Valkoinen",
+      "price_cents": 7290,
+      "url": "https://datatronic.fi/komponentit/kotelot/sama-v40-midi-tower-valkoinen-sama-gears-v40-whada6x1-gl",
+      "external_id": "174170"
+    },
+    {
+      "name": "NZXT H6 Air Flow Midi Tower Musta",
+      "price_cents": 7090,
+      "url": "https://datatronic.fi/komponentit/kotelot/nzxt-h6-air-flow-midi-tower-musta-nzxt-cc-h61fb-01",
+      "external_id": "146891"
+    },
+    {
+      "name": "Phanteks EX5 Plus Midi Tower Musta",
+      "price_cents": 14990,
+      "url": "https://datatronic.fi/komponentit/kotelot/phanteks-ex5-plus-midi-tower-musta-phanteks-ph-ex526p-dbk01",
+      "external_id": "182374"
+    },
+    {
+      "name": "FOURZE T320 Midi Tower Musta",
+      "price_cents": 11290,
+      "url": "https://datatronic.fi/komponentit/kotelot/fourze-t320-midi-tower-musta-fourze-fz-ct320-001",
+      "external_id": "139500"
+    },
+    {
+      "name": "Fractal Design Focus 2 Musta",
+      "price_cents": 8390,
+      "url": "https://datatronic.fi/komponentit/kotelot/fractal-design-focus-2-musta-fractal-design-fd-c-foc2a-03",
+      "external_id": "47553"
+    },
+    {
+      "name": "SAMA S50 White Mid-tower Case",
+      "price_cents": 7190,
+      "url": "https://datatronic.fi/komponentit/kotelot/sama-s50-white-mid-tower-case-s50-whaga4x1-gl",
+      "external_id": "180762"
+    },
+    {
+      "name": "Corsair iCUE 5000X RGB Midi Tower Valkoinen",
+      "price_cents": 20900,
+      "url": "https://datatronic.fi/komponentit/kotelot/corsair-icue-5000x-rgb-midi-tower-valkoinen-corsair-cc-9011213-ww",
+      "external_id": "5131"
+    }
+  ]
+}

@@ -313,6 +313,23 @@ def is_non_component(raw_name: str) -> bool:
     return bool(re.search(NON_COMPONENT_PATTERN, raw_name, re.I))
 
 
+# A storage device's form factor is a size ("M.2 2280", "2.5\"", "U.2"), so anything else
+# means the row was filed under the wrong shop category and was parsed with the wrong
+# vocabulary too. Observed on the full catalogue: five motherboards sat in the storage
+# category with interface "2.7" (parsed from their clock speed). They are reported and
+# kept out of the catalogue rather than shown as broken rows.
+STORAGE_FORM_FACTOR_PATTERN = re.compile(r'^(M\.2\b|2[.,]5"|3[.,]5"|U\.2|PCIe|SATA|SSD|HDD)', re.I)
+
+
+def contradicts_category(category: str, specs: Optional[Dict[str, Any]]) -> bool:
+    """True when a parsed value cannot belong to the component's category."""
+    if category == "storage":
+        form_factor = (specs or {}).get("form_factor")
+        if form_factor and not STORAGE_FORM_FACTOR_PATTERN.match(str(form_factor)):
+            return True
+    return False
+
+
 class ComponentNameParser:
     """Own category parser selection and expected fields for one normalisation.
 

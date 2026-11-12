@@ -1,0 +1,156 @@
+{
+  "shop": "Datatronic",
+  "category": "memory",
+  "page": 12,
+  "source_url": "https://datatronic.fi/muistit?page=12",
+  "fetched_at": "2026-11-12T14:47:01+00:00",
+  "site_total_products": 761,
+  "items_on_page": 24,
+  "raw_html": "data/raw/html/datatronic_memory_p12_2026-11-12_97f1f6ea00ba.html",
+  "items": [
+    {
+      "name": "G.Skill RipjawsX 16GB (8GBx2) DDR3-2133 MHz muistimoduuli 2 x 8 GB",
+      "price_cents": 18490,
+      "url": "https://datatronic.fi/komponentit/muistit/gskill-ripjawsx-16gb-8gbx2-ddr3-2133-mhz-muistimoduuli-2-x-8-gb-gskill-f3-2133c10d-16gxm",
+      "external_id": "151011"
+    },
+    {
+      "name": "ADATA AD4U32008G22-SGN muistimoduuli 8 GB 1 x 8 GB DDR4 3200 MHz",
+      "price_cents": 8090,
+      "url": "https://datatronic.fi/komponentit/muistit/adata-ad4u32008g22-sgn-muistimoduuli-8-gb-1-x-8-gb-ddr4-3200-mhz-adata-ad4u32008g22-sgn",
+      "external_id": "47429"
+    },
+    {
+      "name": "Kingston Technology FURY Beast RGB muistimoduuli 32 GB 1 x 32 GB DDR5 5200 MHz",
+      "price_cents": 67900,
+      "url": "https://datatronic.fi/komponentit/muistit/kingston-technology-fury-beast-rgb-muistimoduuli-32-gb-1-x-32-gb-ddr5-5200-mhz-kingston-technology-kf552c40bba-32",
+      "external_id": "46392"
+    },
+    {
+      "name": "Kingston Technology FURY Impact SO-DDR5 16GB 6400MHz muistimoduuli",
+      "price_cents": 44900,
+      "url": "https://datatronic.fi/komponentit/muistit/kingston-technology-fury-impact-so-ddr5-16gb-6400mhz-muistimoduuli-kingston-technology-kf564s38ib-16",
+      "external_id": "129298"
+    },
+    {
+      "name": "Crucial CP2K16G64C38U5B muistimoduuli 32 GB 2 x 16 GB DDR5 6400 MHz ECC",
+      "price_cents": 74900,
+      "url": "https://datatronic.fi/komponentit/muistit/crucial-cp2k16g64c38u5b-muistimoduuli-32-gb-2-x-16-gb-ddr5-6400-mhz-ecc-crucial-cp2k16g64c38u5b",
+      "external_id": "165331"
+    },
+    {
+      "name": "G.Skill Flare X5 F5-6000J2836G16GX2-FX5W muistimoduuli 32 GB 2 x 16 GB DDR5 6000 MHz",
+      "price_cents": 113900,
+      "url": "https://datatronic.fi/komponentit/muistit/gskill-flare-x5-f5-6000j2836g16gx2-fx5w-muistimoduuli-32-gb-2-x-16-gb-ddr5-6000-mhz-gskill-f5-6000j2836g16gx2-fx5w",
+      "external_id": "165515"
+    },
+    {
+      "name": "Kingston Technology FURY Beast RGB muistimoduuli 32 GB 2 x 16 GB DDR5 5600 MHz",
+      "price_cents": 74500,
+      "url": "https://datatronic.fi/komponentit/muistit/kingston-technology-fury-beast-rgb-muistimoduuli-32-gb-2-x-16-gb-ddr5-5600-mhz-kingston-technology-kf556c40bbak2-32",
+      "external_id": "46163"
+    },
+    {
+      "name": "G.Skill Aegis DDR4 muistimoduuli 8 GB 1 x 8 GB 2666 MHz",
+      "price_cents": 7690,
+      "url": "https://datatronic.fi/komponentit/muistit/gskill-aegis-ddr4-muistimoduuli-8-gb-1-x-8-gb-2666-mhz-gskill-f4-2666c19s-8gis",
+      "external_id": "6073"
+    },
+    {
+      "name": "Kingston Technology FURY Beast RGB muistimoduuli 16 GB 1 x 16 GB DDR5 5600 MHz",
+      "price_cents": 36500,
+      "url": "https://datatronic.fi/komponentit/muistit/kingston-technology-fury-beast-rgb-muistimoduuli-16-gb-1-x-16-gb-ddr5-5600-mhz-kingston-technology-kf556c36bbea-16",
+      "external_id": "48355"
+    },
+    {
+      "name": "Corsair Vengeance CMK64GX5M2B5200C40W muistimoduuli 64 GB 2 x 32 GB DDR5 5200 MHz",
+      "price_cents": 1367500,
+      "url": "https://datatronic.fi/komponentit/muistit/corsair-vengeance-cmk64gx5m2b5200c40w-muistimoduuli-64-gb-2-x-32-gb-ddr5-5200-mhz-corsair-cmk64gx5m2b5200c40w",
+      "external_id": "46407"
+    },
+    {
+      "name": "Corsair Vengeance CMK64GX5M2B6600C32 muistimoduuli 64 GB 2 x 32 GB DDR5 6600 MHz",
+      "price_cents": 206900,
+      "url": "https://datatronic.fi/komponentit/muistit/corsair-vengeance-cmk64gx5m2b6600c32-muistimoduuli-64-gb-2-x-32-gb-ddr5-6600-mhz-corsair-cmk64gx5m2b6600c32",
+      "external_id": "114203"
+    },
+    {
+      "name": "Corsair Vengeance LPX 16GB DDR4-2666 muistimoduuli 1 x 16 GB 2666 MHz",
+      "price_cents": 25390,
+      "url": "https://datatronic.fi/komponentit/muistit/corsair-vengeance-lpx-16gb-ddr4-2666-muistimoduuli-1-x-16-gb-2666-mhz-corsair-cmk16gx4m1a2666c16",
+      "external_id": "2709"
+    },
+    {
+      "name": "Kingston Technology FURY Impact muistimoduuli 64 GB 2 x 32 GB DDR4",
+      "price_cents": 93900,
+      "url": "https://datatronic.fi/komponentit/muistit/kingston-technology-fury-impact-muistimoduuli-64-gb-2-x-32-gb-ddr4-kingston-technology-kf432s20ibk2-64",
+      "external_id": "153512"
+    },
+    {
+      "name": "ADATA LANCER BLADE RGB muistimoduuli 32 GB 2 x 16 GB DDR5 6000 MHz",
+      "price_cents": 70900,
+      "url": "https://datatronic.fi/komponentit/muistit/adata-lancer-blade-rgb-muistimoduuli-32-gb-2-x-16-gb-ddr5-6000-mhz-adata-ax5u6000c3016g-dtlabrbk",
+      "external_id": "151316"
+    },
+    {
+      "name": "G.Skill Trident Z F5-6000J3636F16GX2-TZ5S muistimoduuli 32 GB 2 x 16 GB DDR5 6000 MHz",
+      "price_cents": 77500,
+      "url": "https://datatronic.fi/komponentit/muistit/gskill-trident-z-f5-6000j3636f16gx2-tz5s-muistimoduuli-32-gb-2-x-16-gb-ddr5-6000-mhz-gskill-f5-6000j3636f16gx2-tz5s",
+      "external_id": "40717"
+    },
+    {
+      "name": "G.Skill Value F4-2666C19S-32GNT muistimoduuli 32 GB 1 x 32 GB DDR4 2666 MHz",
+      "price_cents": 49900,
+      "url": "https://datatronic.fi/komponentit/muistit/gskill-value-f4-2666c19s-32gnt-muistimoduuli-32-gb-1-x-32-gb-ddr4-2666-mhz-gskill-f4-2666c19s-32gnt",
+      "external_id": "6632"
+    },
+    {
+      "name": "Corsair Vengeance CMK64GX5M2B6000C30 muistimoduuli 64 GB 2 x 32 GB DDR5 6000 MHz",
+      "price_cents": 210500,
+      "url": "https://datatronic.fi/komponentit/muistit/corsair-vengeance-cmk64gx5m2b6000c30-muistimoduuli-64-gb-2-x-32-gb-ddr5-6000-mhz-corsair-cmk64gx5m2b6000c30",
+      "external_id": "126256"
+    },
+    {
+      "name": "G.Skill Value muistimoduuli 8 GB 1 x 8 GB DDR4 2400 MHz",
+      "price_cents": 15790,
+      "url": "https://datatronic.fi/komponentit/muistit/gskill-value-muistimoduuli-8-gb-1-x-8-gb-ddr4-2400-mhz-gskill-f4-2400c17s-8gnt",
+      "external_id": "40605"
+    },
+    {
+      "name": "Crucial CT16G56C46S5T muistimoduuli 16 GB 1 x 16 GB DDR5 5600 MHz ECC",
+      "price_cents": 30900,
+      "url": "https://datatronic.fi/komponentit/muistit/crucial-ct16g56c46s5t-muistimoduuli-16-gb-1-x-16-gb-ddr5-5600-mhz-ecc-crucial-ct16g56c46s5t",
+      "external_id": "126265"
+    },
+    {
+      "name": "Corsair Vengeance CMSX64GX5M2A5600C48 muistimoduuli 64 GB 2 x 32 GB DDR5 5600 MHz",
+      "price_cents": 163500,
+      "url": "https://datatronic.fi/komponentit/muistit/corsair-vengeance-cmsx64gx5m2a5600c48-muistimoduuli-64-gb-2-x-32-gb-ddr5-5600-mhz-corsair-cmsx64gx5m2a5600c48",
+      "external_id": "156025"
+    },
+    {
+      "name": "Corsair Vengeance CMK32GX5M2B6000C36 muistimoduuli 32 GB 2 x 16 GB DDR5 6000 MHz ECC",
+      "price_cents": 94500,
+      "url": "https://datatronic.fi/komponentit/muistit/corsair-vengeance-cmk32gx5m2b6000c36-muistimoduuli-32-gb-2-x-16-gb-ddr5-6000-mhz-ecc-corsair-cmk32gx5m2e6000c36",
+      "external_id": "121299"
+    },
+    {
+      "name": "Kingston Technology FURY Impact muistimoduuli 32 GB 2 x 16 GB DDR5 5600 MHz",
+      "price_cents": 73900,
+      "url": "https://datatronic.fi/komponentit/muistit/kingston-technology-fury-impact-muistimoduuli-32-gb-2-x-16-gb-ddr5-5600-mhz-kingston-technology-kf556s40ibk2-32",
+      "external_id": "106158"
+    },
+    {
+      "name": "Corsair Vengeance LPX 32GB, DDR4, 3000MHz muistimoduuli 2 x 16 GB",
+      "price_cents": 51500,
+      "url": "https://datatronic.fi/komponentit/muistit/corsair-vengeance-lpx-32gb-ddr4-3000mhz-muistimoduuli-2-x-16-gb-corsair-cmk32gx4m2d3000c16",
+      "external_id": "3300"
+    },
+    {
+      "name": "Kingston Technology FURY Beast muistimoduuli 32 GB 1 x 32 GB DDR5 5600 MHz",
+      "price_cents": 67900,
+      "url": "https://datatronic.fi/komponentit/muistit/kingston-technology-fury-beast-muistimoduuli-32-gb-1-x-32-gb-ddr5-5600-mhz-kingston-technology-kf556c40bb-32",
+      "external_id": "46380"
+    }
+  ]
+}

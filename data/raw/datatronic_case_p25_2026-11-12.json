@@ -1,0 +1,156 @@
+{
+  "shop": "Datatronic",
+  "category": "case",
+  "page": 25,
+  "source_url": "https://datatronic.fi/kotelot?page=25",
+  "fetched_at": "2026-11-12T14:49:27+00:00",
+  "site_total_products": 620,
+  "items_on_page": 24,
+  "raw_html": "data/raw/html/datatronic_case_p25_2026-11-12_0a115217715e.html",
+  "items": [
+    {
+      "name": "Thermaltake The Tower 600 Midi Tower Mintunvärinen",
+      "price_cents": 19690,
+      "url": "https://datatronic.fi/komponentit/kotelot/thermaltake-the-tower-600-midi-tower-mintunvarinen-thermaltake-ca-1z1-00mlwn-00",
+      "external_id": "180642"
+    },
+    {
+      "name": "Cooler Master QUBE 540 Midi Tower Musta",
+      "price_cents": 8090,
+      "url": "https://datatronic.fi/komponentit/kotelot/cooler-master-qube-540-midi-tower-musta-cooler-master-q540-mgnn-s00",
+      "external_id": "179998"
+    },
+    {
+      "name": "Corsair Midi Tower 3200D RS ARGB PC Case Valkoinen",
+      "price_cents": 9790,
+      "url": "https://datatronic.fi/komponentit/kotelot/corsair-midi-tower-3200d-rs-argb-pc-case-valkoinen-corsair-cc-9011345-ww",
+      "external_id": "179391"
+    },
+    {
+      "name": "Fractal Design Epoch XL Tower Valkoinen",
+      "price_cents": 15490,
+      "url": "https://datatronic.fi/komponentit/kotelot/fractal-design-epoch-xl-tower-valkoinen-fractal-design-fd-c-epo1x-05",
+      "external_id": "174684"
+    },
+    {
+      "name": "Fractal Design Summit Chalk White TG Clear Tint Midi Tower Valkoinen",
+      "price_cents": 19790,
+      "url": "https://datatronic.fi/komponentit/kotelot/fractal-design-summit-chalk-white-tg-clear-tint-midi-tower-valkoinen-fractal-design-fd-c-sum1a-02",
+      "external_id": "181887"
+    },
+    {
+      "name": "Thermaltake View 270 Plus TG ARGB Matcha Green Midi Tower Vihreä",
+      "price_cents": 10690,
+      "url": "https://datatronic.fi/komponentit/kotelot/thermaltake-view-270-plus-tg-argb-matcha-green-midi-tower-vihrea-thermaltake-ca-1y7-00mewn-01",
+      "external_id": "180638"
+    },
+    {
+      "name": "ASUS ROG CRONOX GR801 CURVE TG ARGB BLACK Midi Tower Musta",
+      "price_cents": 62500,
+      "url": "https://datatronic.fi/komponentit/kotelot/asus-rog-cronox-gr801-curve-tg-argb-black-midi-tower-musta-asus-90dc00t0-b09030",
+      "external_id": "182432"
+    },
+    {
+      "name": "Y70 Firefly Edition (Tempered Glass)",
+      "price_cents": 34900,
+      "url": "https://datatronic.fi/komponentit/kotelot/y70-firefly-edition-tempered-glass-hyte-y70-hsr-firefly-jp",
+      "external_id": "182037"
+    },
+    {
+      "name": "Sama V52 Midi Tower Valkoinen",
+      "price_cents": 8090,
+      "url": "https://datatronic.fi/komponentit/kotelot/sama-v52-midi-tower-valkoinen-sama-v52-whada7x1-gl",
+      "external_id": "179424"
+    },
+    {
+      "name": "Zalman P40 Prism White Midi Tower Valkoinen",
+      "price_cents": 7390,
+      "url": "https://datatronic.fi/komponentit/kotelot/zalman-p40-prism-white-midi-tower-valkoinen-zalman-p40-prism-white",
+      "external_id": "168851"
+    },
+    {
+      "name": "NZXT H6 RGB+ Compact Dual-chamber ATX Case Black With RGB Fans and Controller",
+      "price_cents": 23590,
+      "url": "https://datatronic.fi/komponentit/kotelot/nzxt-h6-rgb-compact-dual-chamber-atx-case-black-with-rgb-fans-and-controller-cc-h62fb-p1",
+      "external_id": "181817"
+    },
+    {
+      "name": "Fractal Design Define One Dark Solid Midi Tower Musta",
+      "price_cents": 17590,
+      "url": "https://datatronic.fi/komponentit/kotelot/fractal-design-define-one-dark-solid-midi-tower-musta-fractal-design-fd-c-defoa-01",
+      "external_id": "181892"
+    },
+    {
+      "name": "Fractal Design Summit Black Solid Midi Tower Musta",
+      "price_cents": 19790,
+      "url": "https://datatronic.fi/komponentit/kotelot/fractal-design-summit-black-solid-midi-tower-musta-fractal-design-fd-c-sum1a-03",
+      "external_id": "181888"
+    },
+    {
+      "name": "Jonsbo V12 PC-Chassi Mini-Tower Micro-ATX - White",
+      "price_cents": 10890,
+      "url": "https://datatronic.fi/komponentit/kotelot/jonsbo-v12-pc-chassi-mini-tower-micro-atx-white-v12-white",
+      "external_id": "183644"
+    },
+    {
+      "name": "NZXT H6 Compact Dual-chamber ATX Case All White",
+      "price_cents": 12490,
+      "url": "https://datatronic.fi/komponentit/kotelot/nzxt-h6-compact-dual-chamber-atx-case-all-white-cc-h62fw-01",
+      "external_id": "181816"
+    },
+    {
+      "name": "Silverstone SST-RM44 tietokonekotelo Tower Musta",
+      "price_cents": 48500,
+      "url": "https://datatronic.fi/komponentit/kotelot/silverstone-sst-rm44-tietokonekotelo-tower-musta-silverstone-sst-rm44",
+      "external_id": "182024"
+    },
+    {
+      "name": "Corsair WARTHOG Midi Tower Oliivi",
+      "price_cents": 21290,
+      "url": "https://datatronic.fi/komponentit/kotelot/corsair-warthog-midi-tower-oliivi-corsair-cc-9011350-ww",
+      "external_id": "184103"
+    },
+    {
+      "name": "Cooler Master Q300L V3 Työpöytä Valkoinen",
+      "price_cents": 5290,
+      "url": "https://datatronic.fi/komponentit/kotelot/cooler-master-q300l-v3-tyopoyta-valkoinen-cooler-master-q300lv3-wgnn-s00",
+      "external_id": "184578"
+    },
+    {
+      "name": "ASUS ROG Hyperion GR701 BTF Edition Tower Musta, Läpinäkyvä",
+      "price_cents": 52900,
+      "url": "https://datatronic.fi/komponentit/kotelot/asus-rog-hyperion-gr701-btf-edition-tower-musta-lapinakyva-asus-90dc00f0-b39020",
+      "external_id": "183861"
+    },
+    {
+      "name": "Corsair 3200D RS Midi Tower Harmaa",
+      "price_cents": 8590,
+      "url": "https://datatronic.fi/komponentit/kotelot/corsair-3200d-rs-midi-tower-harmaa-corsair-cc-9011336-ww",
+      "external_id": "179823"
+    },
+    {
+      "name": "FRAME 4000X RS White",
+      "price_cents": 17390,
+      "url": "https://datatronic.fi/komponentit/kotelot/frame-4000x-rs-white-cc-9011303-ww",
+      "external_id": "184543"
+    },
+    {
+      "name": "Thermaltake View 270 Plus TG Midi Tower Vaaleanpunainen",
+      "price_cents": 10690,
+      "url": "https://datatronic.fi/komponentit/kotelot/thermaltake-view-270-plus-tg-midi-tower-vaaleanpunainen-thermaltake-ca-1y7-00mawn-00",
+      "external_id": "170308"
+    },
+    {
+      "name": "Corsair WARTHOG RS Midi Tower Musta",
+      "price_cents": 25190,
+      "url": "https://datatronic.fi/komponentit/kotelot/corsair-warthog-rs-midi-tower-musta-corsair-cc-9011351-ww",
+      "external_id": "184098"
+    },
+    {
+      "name": "HAVN HS 360 VGPU White",
+      "price_cents": 20990,
+      "url": "https://datatronic.fi/komponentit/kotelot/havn-hs-360-vgpu-white-hvn-ca-hs360-03",
+      "external_id": "185753"
+    }
+  ]
+}

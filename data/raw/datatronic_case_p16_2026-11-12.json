@@ -1,0 +1,156 @@
+{
+  "shop": "Datatronic",
+  "category": "case",
+  "page": 16,
+  "source_url": "https://datatronic.fi/kotelot?page=16",
+  "fetched_at": "2026-11-12T14:49:10+00:00",
+  "site_total_products": 620,
+  "items_on_page": 24,
+  "raw_html": "data/raw/html/datatronic_case_p16_2026-11-12_22ccd1136e97.html",
+  "items": [
+    {
+      "name": "Zalman P50 DS Black Midi Tower Musta",
+      "price_cents": 10390,
+      "url": "https://datatronic.fi/komponentit/kotelot/zalman-p50-ds-black-midi-tower-musta-zalman-p50-ds-black",
+      "external_id": "179489"
+    },
+    {
+      "name": "Aerocool Mirage Musta",
+      "price_cents": 9190,
+      "url": "https://datatronic.fi/komponentit/kotelot/aerocool-mirage-musta-aerocool-accm-pb2501311",
+      "external_id": "37934"
+    },
+    {
+      "name": "Chieftec UNC-409S-AIO-OP tietokonekotelo Teline musta",
+      "price_cents": 19690,
+      "url": "https://datatronic.fi/komponentit/kotelot/chieftec-unc-409s-aio-op-tietokonekotelo-teline-musta-chieftec-unc-409s-aio-op",
+      "external_id": "174098"
+    },
+    {
+      "name": "SAMA SV-01 Black ATX Mid-tower Case",
+      "price_cents": 6790,
+      "url": "https://datatronic.fi/komponentit/kotelot/sama-sv-01-black-atx-mid-tower-case-sv01-bkad4ax1-us",
+      "external_id": "180185"
+    },
+    {
+      "name": "ASUS AP201 PRIME CASE TG Mini Tower Musta",
+      "price_cents": 10690,
+      "url": "https://datatronic.fi/komponentit/kotelot/asus-ap201-prime-case-tg-mini-tower-musta-asus-90dc00g0-b39010",
+      "external_id": "116995"
+    },
+    {
+      "name": "MSI MAG FORGE M100R tietokonekotelo Midi Tower musta, Läpinäkyvä",
+      "price_cents": 7090,
+      "url": "https://datatronic.fi/komponentit/kotelot/msi-mag-forge-m100r-tietokonekotelo-midi-tower-musta-lapinakyva-msi-mag-forge-m100r",
+      "external_id": "162302"
+    },
+    {
+      "name": "ENDORFY Arx 700 Air Full Tower Musta",
+      "price_cents": 12190,
+      "url": "https://datatronic.fi/komponentit/kotelot/endorfy-arx-700-air-full-tower-musta-endorfy-ey2a012",
+      "external_id": "178818"
+    },
+    {
+      "name": "Chieftec HT-01B-OP tietokonekotelo Mini Tower Musta",
+      "price_cents": 6090,
+      "url": "https://datatronic.fi/komponentit/kotelot/chieftec-ht-01b-op-tietokonekotelo-mini-tower-musta-chieftec-ht-01b-op",
+      "external_id": "2674"
+    },
+    {
+      "name": "Corsair 4500X LX-R RGB Tempered Glass Mid-Tower, White Midi Tower Valkoinen",
+      "price_cents": 24790,
+      "url": "https://datatronic.fi/komponentit/kotelot/corsair-4500x-lx-r-rgb-tempered-glass-mid-tower-white-midi-tower-valkoinen-corsair-cc-9011317-ww",
+      "external_id": "173188"
+    },
+    {
+      "name": "Cooler Master Q300L V2 Mini Tower Musta, Läpinäkyvä",
+      "price_cents": 4890,
+      "url": "https://datatronic.fi/komponentit/kotelot/cooler-master-q300l-v2-mini-tower-musta-lapinakyva-cooler-master-q300lv2-kgnn-s00",
+      "external_id": "131637"
+    },
+    {
+      "name": "XPG Invader X Mini Midi Tower Valkoinen",
+      "price_cents": 7390,
+      "url": "https://datatronic.fi/komponentit/kotelot/xpg-invader-x-mini-midi-tower-valkoinen-xpg-75261542",
+      "external_id": "163274"
+    },
+    {
+      "name": "ASUS TUF Gaming GT302 ARGB Midi Tower Musta",
+      "price_cents": 19390,
+      "url": "https://datatronic.fi/komponentit/kotelot/asus-tuf-gaming-gt302-argb-midi-tower-musta-asus-90dc00i0-b19000",
+      "external_id": "154301"
+    },
+    {
+      "name": "ASUS ProArt PA602 Wood Edition Midi Tower musta",
+      "price_cents": 29900,
+      "url": "https://datatronic.fi/komponentit/kotelot/asus-proart-pa602-wood-edition-midi-tower-musta-asus-90dc00j0-b09010",
+      "external_id": "165912"
+    },
+    {
+      "name": "Chieftec Mesh MidiTower LCX-01SLSLB Hopea 350 W",
+      "price_cents": 7190,
+      "url": "https://datatronic.fi/komponentit/kotelot/chieftec-mesh-miditower-lcx-01slslb-hopea-350-w-chieftec-ct-01b-350gpb",
+      "external_id": "3052"
+    },
+    {
+      "name": "DeepCool CH170 PLUS Tower musta",
+      "price_cents": 6490,
+      "url": "https://datatronic.fi/komponentit/kotelot/deepcool-ch170-plus-tower-musta-deepcool-r-ch170-bkngm0-g",
+      "external_id": "174403"
+    },
+    {
+      "name": "Sharkoon VK2 Full Tower musta",
+      "price_cents": 6090,
+      "url": "https://datatronic.fi/komponentit/kotelot/sharkoon-vk2-full-tower-musta-sharkoon-4044951041190",
+      "external_id": "169432"
+    },
+    {
+      "name": "Chieftec UE-02B tietokonekotelo Mini Tower Musta 250 W",
+      "price_cents": 8290,
+      "url": "https://datatronic.fi/komponentit/kotelot/chieftec-ue-02b-tietokonekotelo-mini-tower-musta-250-w-chieftec-ue-02b",
+      "external_id": "9467"
+    },
+    {
+      "name": "Corsair 4500X RS-R ARGB Tempered Glass Mid-Tower, White Midi Tower Valkoinen",
+      "price_cents": 19390,
+      "url": "https://datatronic.fi/komponentit/kotelot/corsair-4500x-rs-r-argb-tempered-glass-mid-tower-white-midi-tower-valkoinen-corsair-cc-9011315-ww",
+      "external_id": "173186"
+    },
+    {
+      "name": "Chieftec HUNTER 2 Midi Tower Musta",
+      "price_cents": 7090,
+      "url": "https://datatronic.fi/komponentit/kotelot/chieftec-hunter-2-midi-tower-musta-chieftec-gs-02b-op",
+      "external_id": "151615"
+    },
+    {
+      "name": "ADATA XPG Valor Air Midi Tower Musta",
+      "price_cents": 5990,
+      "url": "https://datatronic.fi/komponentit/kotelot/adata-xpg-valor-air-midi-tower-musta-adata-75261054",
+      "external_id": "128090"
+    },
+    {
+      "name": "Fractal Design Pop Mini Silent Musta",
+      "price_cents": 9990,
+      "url": "https://datatronic.fi/komponentit/kotelot/fractal-design-pop-mini-silent-musta-fractal-design-fd-c-pos1m-01",
+      "external_id": "46344"
+    },
+    {
+      "name": "Corsair iCUE LINK 3500X RGB Midi Tower Valkoinen",
+      "price_cents": 20190,
+      "url": "https://datatronic.fi/komponentit/kotelot/corsair-icue-link-3500x-rgb-midi-tower-valkoinen-corsair-cc-9011281-ww",
+      "external_id": "156301"
+    },
+    {
+      "name": "Sharkoon MK2 RGB Micro Tower musta",
+      "price_cents": 7890,
+      "url": "https://datatronic.fi/komponentit/kotelot/sharkoon-mk2-rgb-micro-tower-musta-sharkoon-4044951041725",
+      "external_id": "169444"
+    },
+    {
+      "name": "Xilence Performance C XILENT BLADE II | X613.ARGB Midi Tower musta",
+      "price_cents": 5790,
+      "url": "https://datatronic.fi/komponentit/kotelot/xilence-performance-c-xilent-blade-ii-x613argb-midi-tower-musta-xilence-x613",
+      "external_id": "153703"
+    }
+  ]
+}

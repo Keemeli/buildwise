@@ -1,0 +1,156 @@
+{
+  "shop": "Datatronic",
+  "category": "motherboard",
+  "page": 5,
+  "source_url": "https://datatronic.fi/emolevyt?page=5",
+  "fetched_at": "2026-11-12T14:45:57+00:00",
+  "site_total_products": 657,
+  "items_on_page": 24,
+  "raw_html": "data/raw/html/datatronic_motherboard_p5_2026-11-12_8e2787a8cdb4.html",
+  "items": [
+    {
+      "name": "MSI B850M GAMING PLUS WIFI6E AMD B850 Pistoke AM5 mikro ATX",
+      "price_cents": 16890,
+      "url": "https://datatronic.fi/komponentit/emolevyt/msi-b850m-gaming-plus-wifi6e-amd-b850-pistoke-am5-mikro-atx-msi-7e81-001r",
+      "external_id": "171598"
+    },
+    {
+      "name": "ASUS TUF GAMING B650-E WIFI AMD B650 Pistoke AM5 ATX",
+      "price_cents": 23790,
+      "url": "https://datatronic.fi/komponentit/emolevyt/asus-tuf-gaming-b650-e-wifi-amd-b650-pistoke-am5-atx-asus-90mb1gt0-m0eay0",
+      "external_id": "151541"
+    },
+    {
+      "name": "ASUS PRIME B650-PLUS WIFI AMD B650 Pistoke AM5 ATX",
+      "price_cents": 16590,
+      "url": "https://datatronic.fi/komponentit/emolevyt/asus-prime-b650-plus-wifi-amd-b650-pistoke-am5-atx-asus-90mb1kp0-m0eay0",
+      "external_id": "168791"
+    },
+    {
+      "name": "Asrock B760I Lightning WiFi Intel B760 LGA 1700 Mini ITX",
+      "price_cents": 19990,
+      "url": "https://datatronic.fi/komponentit/emolevyt/asrock-b760i-lightning-wifi-intel-b760-lga-1700-mini-itx-asrock-90-mxbnn0-a0uayz",
+      "external_id": "159387"
+    },
+    {
+      "name": "Asrock B550 Pro4 AMD B550 Kanta AM4 ATX",
+      "price_cents": 10490,
+      "url": "https://datatronic.fi/komponentit/emolevyt/asrock-b550-pro4-amd-b550-kanta-am4-atx-asrock-90-mxbcz0-a0uayz",
+      "external_id": "4715"
+    },
+    {
+      "name": "MSI PRO H610M-G DDR4 emolevy Intel H610 LGA 1700 mikro ATX",
+      "price_cents": 7390,
+      "url": "https://datatronic.fi/komponentit/emolevyt/msi-pro-h610m-g-ddr4-emolevy-intel-h610-lga-1700-mikro-atx-msi-7d46-009r",
+      "external_id": "39135"
+    },
+    {
+      "name": "MSI PRO B760M-P DDR4 emolevy Intel B760 LGA 1700 mikro ATX",
+      "price_cents": 10990,
+      "url": "https://datatronic.fi/komponentit/emolevyt/msi-pro-b760m-p-ddr4-emolevy-intel-b760-lga-1700-mikro-atx-msi-pro-b760m-p-ddr4",
+      "external_id": "105225"
+    },
+    {
+      "name": "GIGABYTE B550 EAGLE emolevy AMD B550 Kanta AM4 ATX",
+      "price_cents": 10790,
+      "url": "https://datatronic.fi/komponentit/emolevyt/gigabyte-b550-eagle-emolevy-amd-b550-kanta-am4-atx-gigabyte-b550-eagle",
+      "external_id": "175373"
+    },
+    {
+      "name": "Gigabyte A520M DS3H V2 (rev. 1.0) Kanta AM4 mikro ATX",
+      "price_cents": 7090,
+      "url": "https://datatronic.fi/komponentit/emolevyt/gigabyte-a520m-ds3h-v2-rev-10-kanta-am4-mikro-atx-gigabyte-a520m-ds3h-v2",
+      "external_id": "139535"
+    },
+    {
+      "name": "ASUS ROG STRIX X870E-E GAMING WIFI AMD X870E Pistoke AM5 ATX",
+      "price_cents": 52900,
+      "url": "https://datatronic.fi/komponentit/emolevyt/asus-rog-strix-x870e-e-gaming-wifi-amd-x870e-pistoke-am5-atx-asus-90mb1ib0-m0eay0",
+      "external_id": "164656"
+    },
+    {
+      "name": "ASUS ROG STRIX B850-I GAMING WIFI AMD B850 Pistoke AM5 Mini ITX",
+      "price_cents": 31900,
+      "url": "https://datatronic.fi/komponentit/emolevyt/asus-rog-strix-b850-i-gaming-wifi-amd-b850-pistoke-am5-mini-itx-asus-90mb1k30-m0eay0",
+      "external_id": "166031"
+    },
+    {
+      "name": "GIGABYTE B550M X AORUS ELITE WIFI7 AMD B550 Kanta AM4 mikro ATX",
+      "price_cents": 15090,
+      "url": "https://datatronic.fi/komponentit/emolevyt/gigabyte-b550m-x-aorus-elite-wifi7-amd-b550-kanta-am4-mikro-atx-gigabyte-b550m-x-a-elite-wf7",
+      "external_id": "181924"
+    },
+    {
+      "name": "Asrock H610M-HDV/M.2+ D5 Intel H610 LGA 1700 mikro ATX",
+      "price_cents": 5790,
+      "url": "https://datatronic.fi/komponentit/emolevyt/asrock-h610m-hdv-m2-d5-intel-h610-lga-1700-mikro-atx-asrock-90-mxbm50-a0uayz",
+      "external_id": "131121"
+    },
+    {
+      "name": "Asrock B650 Steel Legend WiFi AMD B650 Pistoke AM5 ATX",
+      "price_cents": 19190,
+      "url": "https://datatronic.fi/komponentit/emolevyt/asrock-b650-steel-legend-wifi-amd-b650-pistoke-am5-atx-asrock-90-mxbn90-a0uayz",
+      "external_id": "154972"
+    },
+    {
+      "name": "MSI MAG B850 TOMAHAWK MAX WIFI emolevy AMD B850 Pistoke AM5 ATX",
+      "price_cents": 31900,
+      "url": "https://datatronic.fi/komponentit/emolevyt/msi-mag-b850-tomahawk-max-wifi-emolevy-amd-b850-pistoke-am5-atx-msi-7e62-002r",
+      "external_id": "165710"
+    },
+    {
+      "name": "Asrock B850 Pro RS WiFi AMD B850 Pistoke AM5 ATX",
+      "price_cents": 17490,
+      "url": "https://datatronic.fi/komponentit/emolevyt/asrock-b850-pro-rs-wifi-amd-b850-pistoke-am5-atx-asrock-90-mxbql-a0uayz",
+      "external_id": "166045"
+    },
+    {
+      "name": "MSI PRO B850-P WIFI emolevy AMD B850 Pistoke AM5 ATX",
+      "price_cents": 1255900,
+      "url": "https://datatronic.fi/komponentit/emolevyt/msi-pro-b850-p-wifi-emolevy-amd-b850-pistoke-am5-atx-msi-7e56-002r",
+      "external_id": "165712"
+    },
+    {
+      "name": "Asrock B860 Steel Legend WiFi Intel B860 LGA 1851 (Socket V1) ATX",
+      "price_cents": 21190,
+      "url": "https://datatronic.fi/komponentit/emolevyt/asrock-b860-steel-legend-wifi-intel-b860-lga-1851-socket-v1-atx-asrock-90-mxbr3-a0uayz",
+      "external_id": "165357"
+    },
+    {
+      "name": "MSI MPG B850 EDGE TI WIFI emolevy AMD B850 Pistoke AM5 ATX",
+      "price_cents": 27990,
+      "url": "https://datatronic.fi/komponentit/emolevyt/msi-mpg-b850-edge-ti-wifi-emolevy-amd-b850-pistoke-am5-atx-msi-7e62-001r",
+      "external_id": "165709"
+    },
+    {
+      "name": "GIGABYTE B550 AORUS ELITE WIFI7 AMD B550 Kanta AM4 ATX",
+      "price_cents": 17390,
+      "url": "https://datatronic.fi/komponentit/emolevyt/gigabyte-b550-aorus-elite-wifi7-amd-b550-kanta-am4-atx-gigabyte-b550-aorus-elite-wf7",
+      "external_id": "184663"
+    },
+    {
+      "name": "GIGABYTE A520M K V2 emolevy AMD A520 Kanta AM4 mikro ATX",
+      "price_cents": 6390,
+      "url": "https://datatronic.fi/komponentit/emolevyt/gigabyte-a520m-k-v2-emolevy-amd-a520-kanta-am4-mikro-atx-gigabyte-a520m-k-v2",
+      "external_id": "167720"
+    },
+    {
+      "name": "GIGABYTE B650 UD AX emolevy AMD B650 Pistoke AM5 ATX",
+      "price_cents": 12290,
+      "url": "https://datatronic.fi/komponentit/emolevyt/gigabyte-b650-ud-ax-emolevy-amd-b650-pistoke-am5-atx-gigabyte-b650-ud-ax",
+      "external_id": "165459"
+    },
+    {
+      "name": "GIGABYTE B550M X AORUS ELITE AMD B550 Kanta AM4 mikro ATX",
+      "price_cents": 12490,
+      "url": "https://datatronic.fi/komponentit/emolevyt/gigabyte-b550m-x-aorus-elite-amd-b550-kanta-am4-mikro-atx-gigabyte-b550m-x-a-elite",
+      "external_id": "181926"
+    },
+    {
+      "name": "MSI PRO B850-S EVO WIFI emolevy AMD B850 Pistoke AM5 ATX",
+      "price_cents": 19690,
+      "url": "https://datatronic.fi/komponentit/emolevyt/msi-pro-b850-s-evo-wifi-emolevy-amd-b850-pistoke-am5-atx-msi-7e97-001r",
+      "external_id": "178252"
+    }
+  ]
+}

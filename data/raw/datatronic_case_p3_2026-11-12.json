@@ -1,0 +1,156 @@
+{
+  "shop": "Datatronic",
+  "category": "case",
+  "page": 3,
+  "source_url": "https://datatronic.fi/kotelot?page=3",
+  "fetched_at": "2026-11-12T14:48:47+00:00",
+  "site_total_products": 620,
+  "items_on_page": 24,
+  "raw_html": "data/raw/html/datatronic_case_p3_2026-11-12_67cc6b30ea1e.html",
+  "items": [
+    {
+      "name": "Kolink Citadel Mesh Micro Tower Musta",
+      "price_cents": 3090,
+      "url": "https://datatronic.fi/komponentit/kotelot/kolink-citadel-mesh-micro-tower-musta-kolink-pgw-ch-kol-056",
+      "external_id": "45839"
+    },
+    {
+      "name": "Aerocool CS-103 Mini Tower Musta",
+      "price_cents": 2790,
+      "url": "https://datatronic.fi/komponentit/kotelot/aerocool-cs-103-mini-tower-musta-aerocool-accs-pc1101411",
+      "external_id": "37394"
+    },
+    {
+      "name": "Fractal Design Pop 2 Air Black TG Midi Tower musta",
+      "price_cents": 9990,
+      "url": "https://datatronic.fi/komponentit/kotelot/fractal-design-pop-2-air-black-tg-midi-tower-musta-fractal-design-fd-c-poa2a-02",
+      "external_id": "175577"
+    },
+    {
+      "name": "NZXT H6 Air Flow Midi Tower Valkoinen",
+      "price_cents": 9790,
+      "url": "https://datatronic.fi/komponentit/kotelot/nzxt-h6-air-flow-midi-tower-valkoinen-nzxt-cc-h61fw-r1",
+      "external_id": "146893"
+    },
+    {
+      "name": "be quiet! Silent Base 802 Black Midi Tower Musta",
+      "price_cents": 16390,
+      "url": "https://datatronic.fi/komponentit/kotelot/be-quiet-silent-base-802-black-midi-tower-musta-be-quiet-bg039",
+      "external_id": "5160"
+    },
+    {
+      "name": "DeepCool CC360 WH ARGB Valkoinen",
+      "price_cents": 5690,
+      "url": "https://datatronic.fi/komponentit/kotelot/deepcool-cc360-wh-argb-valkoinen-deepcool-r-cc360-whapm3-g-1",
+      "external_id": "118888"
+    },
+    {
+      "name": "Antec ST10M Mini Tower musta",
+      "price_cents": 2490,
+      "url": "https://datatronic.fi/komponentit/kotelot/antec-st10m-mini-tower-musta-antec-0-761345-10235-3",
+      "external_id": "173750"
+    },
+    {
+      "name": "Aerocool CS‐1101 Midi Tower Musta",
+      "price_cents": 3490,
+      "url": "https://datatronic.fi/komponentit/kotelot/aerocool-cs-1101-midi-tower-musta-aerocool-accm-pc0201411",
+      "external_id": "37381"
+    },
+    {
+      "name": "Jonsbo D32 PRO Midi Tower Musta",
+      "price_cents": 6390,
+      "url": "https://datatronic.fi/komponentit/kotelot/jonsbo-d32-pro-midi-tower-musta-jonsbo-d32-pro-black",
+      "external_id": "177184"
+    },
+    {
+      "name": "Phanteks XT View Tower musta",
+      "price_cents": 6490,
+      "url": "https://datatronic.fi/komponentit/kotelot/phanteks-xt-view-tower-musta-phanteks-ph-xt523v1-dbk01",
+      "external_id": "166811"
+    },
+    {
+      "name": "SAMA Z60 Midi Tower Valkoinen",
+      "price_cents": 7090,
+      "url": "https://datatronic.fi/komponentit/kotelot/sama-z60-midi-tower-valkoinen-sama-gears-z60-whawa4x1-gl",
+      "external_id": "174182"
+    },
+    {
+      "name": "ASUS A23 PLUS TG ARGB WHITE Valkoinen",
+      "price_cents": 6190,
+      "url": "https://datatronic.fi/komponentit/kotelot/asus-a23-plus-tg-argb-white-valkoinen-asus-90dc00k3-b19010",
+      "external_id": "165925"
+    },
+    {
+      "name": "DeepCool MATREXX 30 Mini Tower Musta",
+      "price_cents": 3590,
+      "url": "https://datatronic.fi/komponentit/kotelot/deepcool-matrexx-30-mini-tower-musta-deepcool-dp-matx-matrexx30",
+      "external_id": "31971"
+    },
+    {
+      "name": "SAMA S40 Midi Tower Valkoinen",
+      "price_cents": 6290,
+      "url": "https://datatronic.fi/komponentit/kotelot/sama-s40-midi-tower-valkoinen-sama-gears-s40-whapa4x1-gl",
+      "external_id": "174177"
+    },
+    {
+      "name": "Fractal Design Epoch Midi Tower musta",
+      "price_cents": 11290,
+      "url": "https://datatronic.fi/komponentit/kotelot/fractal-design-epoch-midi-tower-musta-fractal-design-fd-c-epo1a-02",
+      "external_id": "171527"
+    },
+    {
+      "name": "Phanteks Evolv X2 Midi Tower musta",
+      "price_cents": 11900,
+      "url": "https://datatronic.fi/komponentit/kotelot/phanteks-evolv-x2-midi-tower-musta-phanteks-ph-es524xtg-dbk01",
+      "external_id": "166720"
+    },
+    {
+      "name": "Lian Li Lancool 207 Midi Tower Valkoinen",
+      "price_cents": 9490,
+      "url": "https://datatronic.fi/komponentit/kotelot/lian-li-lancool-207-midi-tower-valkoinen-lian-li-g99lan207rw00",
+      "external_id": "165023"
+    },
+    {
+      "name": "Fractal Design North XL Momentum Edition Midi Tower Musta",
+      "price_cents": 20990,
+      "url": "https://datatronic.fi/komponentit/kotelot/fractal-design-north-xl-momentum-edition-midi-tower-musta-fractal-design-fd-c-nor1x-07",
+      "external_id": "175075"
+    },
+    {
+      "name": "Sharkoon VK2 Full Tower musta",
+      "price_cents": 6790,
+      "url": "https://datatronic.fi/komponentit/kotelot/sharkoon-vk2-full-tower-musta-sharkoon-4044951041206",
+      "external_id": "169433"
+    },
+    {
+      "name": "Lian Li 011 Vision O11 VISION-M Midi Tower Valkoinen",
+      "price_cents": 7090,
+      "url": "https://datatronic.fi/komponentit/kotelot/lian-li-011-vision-o11-vision-m-midi-tower-valkoinen-lian-li-g99o11vmw00",
+      "external_id": "180383"
+    },
+    {
+      "name": "Fractal Design North Valkoinen",
+      "price_cents": 14090,
+      "url": "https://datatronic.fi/komponentit/kotelot/fractal-design-north-valkoinen-fractal-design-fd-c-nor1c-04",
+      "external_id": "84326"
+    },
+    {
+      "name": "XPG 75261651 tietokonekotelo Midi Tower musta",
+      "price_cents": 6490,
+      "url": "https://datatronic.fi/komponentit/kotelot/xpg-75261651-tietokonekotelo-midi-tower-musta-xpg-75261651",
+      "external_id": "173461"
+    },
+    {
+      "name": "Chieftec Visio GM-30B-TG-OP schwarz Tempered Glass x 2 Kuutio musta",
+      "price_cents": 7590,
+      "url": "https://datatronic.fi/komponentit/kotelot/chieftec-visio-gm-30b-tg-op-schwarz-tempered-glass-x-2-kuutio-musta-chieftec-gm-30b-tg-op",
+      "external_id": "165401"
+    },
+    {
+      "name": "Chieftec GT-01B-OP tietokonekotelo Midi Tower musta",
+      "price_cents": 4690,
+      "url": "https://datatronic.fi/komponentit/kotelot/chieftec-gt-01b-op-tietokonekotelo-midi-tower-musta-chieftec-gt-01b-op",
+      "external_id": "171459"
+    }
+  ]
+}
