@@ -23,9 +23,10 @@ async function BuildResult({ searchParams }) {
   const params = await searchParams;
   const budget = Number(params.budget) || 1000;
   const game = params.game || "cs2";
+  const exclude = (params.exclude || "").split(",").filter((c) => c in t.categories);
   const gameName = GAMES.find((g) => g.id === game)?.name ?? game;
 
-  const build = await getBuild({ budget, game });
+  const build = await getBuild({ budget, game, exclude });
   const leftover = build.budgetCents - build.totalCents;
 
   return (
@@ -33,6 +34,9 @@ async function BuildResult({ searchParams }) {
       <h1>
         {gameName} · {formatEuros(build.budgetCents)}
       </h1>
+      {exclude.length > 0 && (
+        <p className="muted">{t.result.ownedParts(exclude.map((c) => t.categories[c]))}</p>
+      )}
 
       <div className="summary">
         <div className="card stat">

@@ -8,7 +8,9 @@ import { t } from "@/strings";
 const MIN = 500;
 const MAX = 4000;
 
-export default function BudgetForm() {
+// `owned`: categories the user already has. They are left out of the budget, so the
+// whole budget goes to the other parts.
+export default function BudgetForm({ owned = [] }) {
   const router = useRouter();
   const [budget, setBudget] = useState(1200);
   const [game, setGame] = useState(GAMES[0].id);
@@ -16,6 +18,7 @@ export default function BudgetForm() {
   function handleSubmit(event) {
     event.preventDefault();
     const params = new URLSearchParams({ budget: String(budget), game });
+    if (owned.length > 0) params.set("exclude", owned.join(","));
     router.push(`/build?${params}`);
   }
 
@@ -56,6 +59,10 @@ export default function BudgetForm() {
           ))}
         </select>
       </label>
+
+      {owned.length > 0 && (
+        <p className="muted small">{t.builder.budgetOwnedNote(owned.map((c) => t.categories[c]))}</p>
+      )}
 
       <button type="submit" className="button">
         {t.budget.submit}

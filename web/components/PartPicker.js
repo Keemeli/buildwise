@@ -78,12 +78,17 @@ function optionLabel(facet, key) {
   return key; // spec values are shown as the pipeline writes them (language-neutral)
 }
 
-export default function PartPicker({ slot, build, onSelect, onClose }) {
+// owned: the slot is already marked as the user's own part.
+// onSelect(component, { asOwned }) — asOwned when "I already have one" is on.
+// onOwnedWithoutModel() — "I have one but don't know the model".
+export default function PartPicker({ slot, build, owned = false, onSelect, onOwnedWithoutModel, onClose }) {
   const [query, setQuery] = useState("");
   // { [facetId]: optionKey[] } — ticked filter options
   const [selections, setSelections] = useState({});
   // Parts that don't fit the rest of the build are hidden by default, behind a "show all" toggle.
   const [showAll, setShowAll] = useState(false);
+  // "I already have one": picking a part marks it as the user's own (not in price / budget).
+  const [haveIt, setHaveIt] = useState(owned);
 
   // Close with the Escape key
   useEffect(() => {
@@ -145,6 +150,22 @@ export default function PartPicker({ slot, build, onSelect, onClose }) {
             ✕
           </button>
         </div>
+
+        <label className={`have-it-toggle${haveIt ? " on" : ""}`}>
+          <input type="checkbox" checked={haveIt} onChange={(e) => setHaveIt(e.target.checked)} />
+          <span>
+            <strong>{t.picker.haveIt(t.categories[slot.category])}</strong>
+            <span className="muted small"> · {t.picker.haveItHint}</span>
+          </span>
+        </label>
+        {haveIt && (
+          <div className="have-it-help">
+            <span>{t.picker.haveItHelp}</span>
+            <button type="button" className="link-button" onClick={onOwnedWithoutModel}>
+              {t.picker.noModel}
+            </button>
+          </div>
+        )}
 
         <input
           className="search"
@@ -221,8 +242,11 @@ export default function PartPicker({ slot, build, onSelect, onClose }) {
                   {component.offers.length > 1 && ` · ${t.picker.shops(component.offers.length)}`}
                 </div>
               </div>
-              <button className="button small-button" onClick={() => onSelect(component)}>
-                {t.picker.add}
+              <button
+                className={`button small-button${haveIt ? " secondary" : ""}`}
+                onClick={() => onSelect(component, { asOwned: haveIt })}
+              >
+                {haveIt ? t.picker.addOwned : t.picker.add}
               </button>
             </li>
           ))}
