@@ -33,7 +33,9 @@ python3 -m unittest discover -s tests -p test_fetching.py -v
 | test_retry.py | Explicit retry recovery, filtering, attempts and resolution | 11 |
 | test_listing_prices.py | Current/null/history selection, timestamp ties and conflict evidence | 6 |
 | test_price_workflow.py | Collection/null/retry/normalisation and mixed-format integration | 2 |
-| **Total** | | **133** |
+| test_jimms_specifications.py | Saved Jimms markup, canonical fields and conservative parsing | 5 |
+| test_specifications_shared.py | Cross-retailer specification CLI, policy, persistence and normalisation | 7 |
+| **Total** | | **145** |
 
 Tests are grouped by the responsibility they verify. A shared fetching test may
 use a Jimms URL as a fixture, but its behaviour applies to both retailers. CLI and
@@ -86,3 +88,9 @@ Milestone 4 checkpoint 3 verifies both retailers through offline collection, nul
 observations, pending resolution, normalisation and temporary export. Older-cache
 reparsing retains source times, original raw observations remain unchanged, and
 mixed legacy/versioned conflicts stay isolated by retailer.
+
+Milestone 5 preserves the 11 Datatronic specification checks and adds 12 focused
+checks for Jimms parsing and shared orchestration. Tests reuse cached/fixture HTML
+or mock responses, preserve source timestamps, check both retailers in one store,
+and verify normaliser compatibility without writing real catalogue files. Refresh
+planning now expects both supported specification stages.

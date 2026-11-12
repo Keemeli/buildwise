@@ -9,7 +9,7 @@ python3 -m scraper --help
 ## Commands
 
 ```sh
-# Discover Jimms category URLs and collect their product-page prices in one run
+# Collect displayed Jimms category prices
 python3 -m scraper collect --shop jimms --category gpu --pages 2
 
 # Use an explicit category URL instead of the configured path
@@ -24,9 +24,11 @@ python3 -m scraper collect --shop datatronic --category gpu --pages 2
 # Read today's cached category and product HTML without network requests
 python3 -m scraper collect --shop jimms --category gpu --pages 2 --offline
 
-# Collect specifications where implemented
+# Collect specifications through the same worker for either retailer
 python3 -m scraper specs --shop datatronic --category gpu --limit 25
+python3 -m scraper specs --shop jimms --category gpu --limit 25
 python3 -m scraper specs --shop datatronic --offline
+python3 -m scraper specs --shop jimms --offline
 
 # Transform saved data and publish separately when needed
 python3 -m scraper normalise
@@ -67,7 +69,7 @@ Refresh uses one collection stage per retailer through the same CLI. `--input`
 and `--url` can target a single retailer; `--jimms-input` and
 `--jimms-category-url` remain legacy aliases at the refresh boundary. `--offline`
 means normalise/export only. `--skip-scrape` alone can still run supported
-specification stages. `--cold` forces Datatronic specifications, not price reads.
+specification stages. `--cold` forces specification refreshes for each selected retailer, not price reads.
 
 For isolated runs, collect accepts `--data-dir`. Refresh accepts `--data-dir` and
 `--web-output`; normalise accepts `--raw-dir`/`--out`, and export accepts
@@ -86,11 +88,12 @@ scraper/
     registry.py          lazy retailer factories
     datatronic.py        Datatronic parser and adapter
     jimms.py             Jimms parser and adapter
-    datatronic_specs.py  existing specification parser
+    datatronic_specs.py  Datatronic labels and data-sheet extraction
+    jimms_specs.py       Jimms labels and product-description extraction
   workers/
     collection.py        input validation and shared-worker construction
     collection_worker.py adapter-driven loop, follow-ups and run result
-    specifications.py    existing Datatronic specification worker
+    specifications.py    shared specification collection and checkpoints
   pipeline/              component parsing, normalisation, reports and refresh
 ```
 
@@ -98,8 +101,8 @@ The obsolete DatatronicScraper, JimmsCategoryDiscovery and JimmsPriceScraper
 collection implementations and their compatibility helpers have been removed.
 Retailer-specific price logic belongs in adapters; collection orchestration has
 no retailer-name branches. New collection adapters need only a registry entry,
-configuration, parsing implementation and tests. Specification generalisation is
-a separate milestone; its CLI currently supports Datatronic only.
+configuration, parsing implementation and tests. Specification support uses the
+adapter specification-parser factory and capability flag.
 
 CollectionResult records pages/products fetched, unique items found, duplicate
 URLs skipped, parser issues, failures and status. Results use the common
@@ -118,7 +121,9 @@ selection, parser/report injection and real offline refresh subprocesses. The
 CI export check uses only the standard library; scraping dependencies are loaded
 only for collection/specification commands.
 
-Specification extraction is currently implemented for Datatronic only. Component
+Specification extraction supports both retailers. Jimms GPU parsing is verified
+against saved pages; CPU label conversion has unit coverage but needs real CPU
+product-page fixture validation. Component
 matching remains category/brand/model based, and different retailer titles can
 still produce separate components. Data schemas and parsing rules are unchanged.
 
@@ -194,16 +199,18 @@ not refetched or fabricated; the migration audit records 21 missing HTML files.
 
 A verified local backup and checksums are retained under `data/migrations/`.
 Backup ZIP files are ignored by Git; audit/migration reports can be committed.
-The normaliser and Datatronic specification URL reader still accept unversioned
+The normaliser and shared specification URL reader still accept unversioned
 files for backward compatibility.
 
 
 ## Specification request and failure policy
 
-The Datatronic specification worker uses the same PageFetcher as price
+The shared specification worker uses the same PageFetcher as price
 collection: allowed-host validation, robots rules, sequential request spacing
 (including after failures), timeouts and cached HTML reads. Existing specification
-cache paths under `data/raw/html/specs/datatronic/<date>/` are retained.
+cache paths under `data/raw/html/specs/datatronic/<date>/` remain readable without
+migration. New specification reads reuse the collection cache under
+`data/raw/html/<retailer>/<date>/`.
 
 A specification pass returns nonzero when any requested page fails, yields no
 supported specification fields, or is missing from an offline cache. Successful
@@ -456,3 +463,44 @@ These fields are additive. No raw schema migration or database change is require
 Checkpoint 3 verifies the complete collection/null/retry/normalisation workflow
 for both retailers, plus mixed-format timestamp conflicts and temporary export.
 All output is temporary; the existing catalogue and web copy are unchanged.
+
+
+## Shared specifications (milestone 5)
+
+Both commands read the selected retailer's saved product URLs and write the same
+URL-keyed `data/normalised/specs.json`. Use `--raw-dir` and `--out` for isolated
+runs, `--limit` to bound products, `--offline` to reparse today's cached HTML,
+`--force` to fetch fresh HTML, and `--status` to inspect the selected retailer.
+Unknown supported fields are null; unknown labels are reported, not inferred.
+`spec_count` counts parsed values rather than nullable field slots.
+
+Adapters supply a specification-parser factory and advertise the capability.
+Retailer modules own labels and HTML. Canonical units and field mapping live in
+`common/specifications.py`; the shared worker owns fetch policy, checkpoints,
+status and storage. The old Datatronic extractor class is a thin compatibility
+entry point, with no separate collection implementation.
+
+Jimms reads labelled technical descriptions and description tables/definition
+lists. It excludes marketing text before an explicit technical section. Dimensions
+are interpreted only with published axis order; contradictory aliases remain
+unknown and are reported. Saved cooler pages do not become CPU specifications
+from compatibility text. GPU fixtures include original description excerpts; CPU
+conversion tests are synthetic and do not claim verified real CPU markup.
+
+Cached HTML mtime determines `fetched_at`; `processed_at` records parsing time.
+Entries retain retailer ID/SKU, category, extraction method, origin and HTML
+reference. Successful prior specifications survive request/parser/empty failures,
+with the failed attempt recorded separately as `last_attempt`. Offline misses
+leave existing entries untouched. Failed passes return nonzero and stop refresh.
+The normaliser skips null fields when combining retailer data sheets, so one
+retailer's unknown values cannot erase another's parsed values.
+
+The shared store is replaced atomically. Corrupt stores are rejected without
+overwriting them, and a command lock prevents concurrent passes from losing each
+other's updates. Commands preserve the other retailer's entries. Refresh schedules
+specification stages for both retailers using the same options. No catalogue
+refresh, database work or live requests are part of this milestone's verification.
+
+A read-only audit of 53 locally cached GPU-labelled Jimms pages parsed supported
+specifications from 50 pages. The other three were GPU water blocks rather than
+graphics cards and remained empty. No live retailer requests were made.

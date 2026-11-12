@@ -36,8 +36,9 @@ class RefreshPipelineTests(unittest.TestCase):
                                    ['gpu'], ['datatronic', 'jimms'])
         stages = pipeline.build_stages()
         self.assertEqual([name for name, _ in stages], [
-            'datatronic-collect', 'jimms-collect', 'datatronic-specs', 'normalise', 'export'])
+            'datatronic-collect', 'jimms-collect', 'datatronic-specs', 'jimms-specs', 'normalise', 'export'])
         self.assertIn('--force', dict(stages)['datatronic-specs'])
+        self.assertIn('--force', dict(stages)['jimms-specs'])
 
     def test_pipeline_stops_before_export_on_worker_failure(self):
         with tempfile.TemporaryDirectory() as directory:

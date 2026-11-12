@@ -90,7 +90,7 @@ def shape_modules(components: List[Dict[str, Any]]) -> int:
 
 
 def load_product_specs(path: Path) -> Dict[str, Dict[str, Any]]:
-    """specs.json written by python3 -m scraper specs --shop datatronic, keyed by product URL."""
+    """Shared specs.json from retailer specification collection, keyed by product URL."""
     if not path.exists():
         return {}
     try:
@@ -121,7 +121,8 @@ def merge_product_specs(components: List[Dict[str, Any]],
         for listing in component["listings"]:
             entry = specs_by_url.get(listing["url"])
             if entry:
-                matched.update(entry["specs"])
+                matched.update({field: value for field, value in entry["specs"].items()
+                                if value not in (None, [], "")})
         if not matched:
             continue
         stats["components_matched"] += 1

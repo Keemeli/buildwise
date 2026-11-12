@@ -45,7 +45,7 @@ class ScraperCLI:
         self._network_options(retry)
 
         specs = commands.add_parser("specs", help="collect product-page specifications")
-        specs.add_argument("--shop", required=True, choices=("datatronic",))
+        specs.add_argument("--shop", required=True, choices=self.registry.keys)
         specs.add_argument("--category", action="append", choices=CATEGORIES)
         specs.add_argument("--raw-dir", type=Path, default=RAW_DIR)
         specs.add_argument("--out", type=Path, default=NORMALISED_DIR)
@@ -75,7 +75,7 @@ class ScraperCLI:
         refresh.add_argument("--skip-scrape", action="store_true")
         refresh.add_argument("--skip-specs", action="store_true")
         refresh.add_argument("--offline", action="store_true", help="normalise and export only")
-        refresh.add_argument("--cold", action="store_true", help="force Datatronic specification refresh")
+        refresh.add_argument("--cold", action="store_true", help="force specification refresh")
         refresh.add_argument("--input", type=Path, help="product manifest for a single retailer")
         refresh.add_argument("--url", help="category URL override for a single retailer/category")
         refresh.add_argument("--jimms-input", type=Path, help="legacy Jimms manifest option")
@@ -119,8 +119,8 @@ class ScraperCLI:
             if args.command == "specs":
                 if args.checkpoint_every < 1 or (args.limit is not None and args.limit < 1):
                     raise ValueError("checkpoint-every and limit must be positive")
-                from scraper.workers.specifications import DatatronicSpecExtractor
-                return DatatronicSpecExtractor(args).run()
+                from scraper.workers.specifications import SpecificationWorker
+                return SpecificationWorker(args, self.registry.get(args.shop)).run()
             if args.command == "normalise":
                 return ComponentNormaliser(args.raw_dir, args.out, args.category).run()
             if args.command == "export":

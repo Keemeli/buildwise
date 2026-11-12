@@ -106,6 +106,13 @@ class CategoryResult:
             raise ValueError("confirmed category endings require explicit evidence")
 
 
+class SpecificationParser(Protocol):
+    field_map: Mapping
+
+    def extract_features(self, html: str) -> tuple[list[tuple[str, str]], str]: ...
+    def parse_specs(self, category: str, features: list[tuple[str, str]]) -> tuple[dict, list[str]]: ...
+
+
 @runtime_checkable
 class RetailerAdapter(Protocol):
     config: RetailerConfig
@@ -114,6 +121,7 @@ class RetailerAdapter(Protocol):
     def page_url(self, category: str, page: int, *, category_url: str | None = None) -> str: ...
     def parse_category(self, html: str, category: str, source_url: str) -> CategoryResult: ...
     def parse_product(self, html: str, request: ProductRequest) -> RawProduct: ...
+    def specification_parser(self) -> SpecificationParser: ...
 
 
 def listing_page_url(url: str, page: int, *, include_first: bool = False) -> str:

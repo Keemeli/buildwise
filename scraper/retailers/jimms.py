@@ -121,7 +121,7 @@ class JimmsAdapter:
     config = RetailerConfig(
         key='jimms', name=SHOP, base_url='https://www.jimms.fi', allowed_hosts=frozenset(HOSTS),
         category_paths={key: urlsplit(url).path for key, url in CATEGORY_URLS.items()},
-        capabilities=RetailerCapabilities(category_prices=True, product_prices=True, specifications=False))
+        capabilities=RetailerCapabilities(category_prices=True, product_prices=True, specifications=True))
 
     def __init__(self, parser: JimmsParser | None = None):
         self.parser = parser if parser is not None else JimmsParser(set(self.config.allowed_hosts))
@@ -213,3 +213,8 @@ class JimmsAdapter:
             raise PriceExtractionError(message, product, reason) from exc
         return RawProduct.from_item({**result, 'url': request.url, 'external_id': external_id,
                                      'retailer_sku': request.retailer_sku})
+
+    def specification_parser(self):
+        """Create the retailer's parser; shared workers own requests and storage."""
+        from scraper.retailers.jimms_specs import JimmsSpecParser
+        return JimmsSpecParser()

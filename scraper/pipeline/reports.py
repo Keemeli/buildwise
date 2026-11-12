@@ -187,7 +187,7 @@ class SpecificationReportWriter:
         if unmapped_counts:
             lines.append("## Labels we could not map (top 25)")
             lines.append("")
-            lines.append("These are preserved for review — add them to `FIELD_MAP` in `scraper/retailers/datatronic_specs.py` "
+            lines.append("These are preserved for review — add them to the selected retailer specification field map "
                          "when they matter for a compatibility rule.")
             lines.append("")
             for key, count in sorted(unmapped_counts.items(), key=lambda kv: -kv[1])[:25]:
@@ -200,6 +200,14 @@ class SpecificationReportWriter:
             for category, name, error in failures[:20]:
                 lines.append(f"- **{category}** `{name}` — {error}")
             lines.append("")
+
+        retained = [(url, entry['last_attempt']) for url, entry in items.items()
+                    if entry.get('status') == 'ok' and entry.get('last_attempt', {}).get('status') in {'failed', 'empty'}]
+        if retained:
+            lines.extend(['## Failed refresh attempts (earlier specs retained)', ''])
+            for url, attempt in retained:
+                lines.append(f"- {url} — {attempt.get('error', attempt['status'])}")
+            lines.append('')
 
         out_dir.mkdir(parents=True, exist_ok=True)
         path = out_dir / "specs_report.md"

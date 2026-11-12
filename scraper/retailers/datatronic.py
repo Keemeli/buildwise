@@ -132,3 +132,8 @@ class DatatronicAdapter:
 
     def parse_product(self, html: str, request: ProductRequest) -> RawProduct:
         raise UnsupportedOperationError('Datatronic product-page price extraction is not implemented')
+
+    def specification_parser(self):
+        """Create the retailer's parser; shared workers own requests and storage."""
+        from scraper.retailers.datatronic_specs import DatatronicSpecParser
+        return DatatronicSpecParser()
