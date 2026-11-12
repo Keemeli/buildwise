@@ -93,7 +93,7 @@ Supervisors: Teemu Korpela ([@t2946282](https://github.com/t2946282)), Pekka Ala
 
 **Scraping rules we hold ourselves to:** respect `robots.txt`, one request at a time with a delay, identify the crawler with a contact User-Agent, cache raw HTML and store daily price snapshots, always show the retailer and the timestamp of the price, never republish a retailer catalogue as our own.
 
-**Pipeline:** `scraper/scrape.py` (raw JSON + cached HTML) → `scraper/normalise.py` → `data/normalised/components.json` and `data/normalised/normalisation_report.md`. The report records coverage per spec field and lists every row that could not be parsed, so gaps are visible instead of hidden. A value that is *inferred* rather than read from the product name carries a source marker (`socket_source: inferred_from_sku`, `memory_type_source: inferred_from_chipset`) so the engine can weight it as lower confidence. Rows that are not hardware at all (assembly services, monitor accessories listed inside a component category) are excluded into `excluded_non_components.json`.
+**Pipeline:** `python3 -m scraper collect` (raw JSON + cached HTML) → `python3 -m scraper normalise` → `data/normalised/components.json` and `data/normalised/normalisation_report.md`. The report records coverage per spec field and lists every row that could not be parsed, so gaps are visible instead of hidden. A value that is *inferred* rather than read from the product name carries a source marker (`socket_source: inferred_from_sku`, `memory_type_source: inferred_from_chipset`) so the engine can weight it as lower confidence. Rows that are not hardware at all (assembly services, monitor accessories listed inside a component category) are excluded into `excluded_non_components.json`.
 
 **Performance model:** estimated FPS = GPU index × per-game resolution scaling × ray-tracing multiplier × frame-generation uplift (capability-gated) ÷ CPU-bound penalty, with VRAM limits. Coverage is explicitly tiered:
 
@@ -119,12 +119,11 @@ buildwise/
 ## Getting started (development)
 
 ```bash
-# data worker
-cd scraper
+# data worker (run from the repository root)
 python3 -m venv .venv && source .venv/bin/activate
-pip install -r requirements.txt
-python scrape.py --category gpu --pages 2
-python scrape.py --all --pages 2          # every category
+pip install -r scraper/requirements.txt
+python3 -m scraper collect --shop datatronic --category gpu --pages 2
+python3 -m scraper collect --shop jimms --category gpu --pages 2
 ```
 
 Output lands in `data/raw/` (one JSON per category/page), with raw HTML cached in
@@ -134,19 +133,18 @@ Output lands in `data/raw/` (one JSON per category/page), with raw HTML cached i
 app reads a copy of the last one, so there is one command instead of four:
 
 ```bash
-cd scraper
-python refresh.py                  # scrape -> specs -> normalise -> export (~6 min warm)
-python refresh.py --pages 1        # only the first listing page per category (~40 s)
-python refresh.py --skip-scrape    # no network: re-normalise and re-export what we have
-python refresh.py --skip-specs     # prices only
-python refresh.py --cold           # refetch product pages, ignore today's cache
+python3 -m scraper refresh --pages 1
+python3 -m scraper refresh --shops jimms,datatronic --categories gpu --pages 2
+python3 -m scraper refresh --offline       # no network: normalise + export
+python3 -m scraper refresh --skip-specs    # collect prices, normalise + export
+python3 -m scraper refresh --cold          # force Datatronic product specs
 ```
 
 Every stage must succeed, the run is appended to `data/refresh_log.jsonl`, and the
 command prints what it actually produced (components, how many have product-page
 specs, whether the web copy matches the catalogue).
 
-`scraper/export_web_data.py --check` answers one question on its own: does the copy
+`python3 -m scraper export --check` answers one question on its own: does the copy
 the deployed site reads still match the normalised catalogue?
 
 ```bash

@@ -1,20 +1,22 @@
 {
+  "schema_version": 1,
   "shop": "Jimms",
   "category": "cpu",
-  "page": 1,
+  "source_type": "product",
   "source_url": "https://www.jimms.fi/fi/Product/Show/206102/90rc00v2-m0uay0/asus-rog-ryujin-iii-wb-white-edition-cpu-blokki",
   "fetched_at": "2026-11-05T00:51:26+00:00",
-  "site_total_products": null,
-  "items_on_page": 1,
   "raw_html": "raw/html/jimms/2026-11-05/b6620f7313d11b10af2d270caf2b594d1d42b667a953f97ccdd02bb66d73e517.html",
   "origin": "network",
   "items": [
     {
       "name": "Asus ROG RYUJIN III WB White Edition, CPU-blokki",
       "price_cents": 28990,
-      "extraction": "meta[property=\"product:price:amount\"]",
       "url": "https://www.jimms.fi/fi/Product/Show/206102/90rc00v2-m0uay0/asus-rog-ryujin-iii-wb-white-edition-cpu-blokki",
-      "external_id": null
+      "external_id": null,
+      "extraction": "meta[property=\"product:price:amount\"]"
     }
-  ]
+  ],
+  "page": null,
+  "site_total_products": null,
+  "item_count": 1
 }

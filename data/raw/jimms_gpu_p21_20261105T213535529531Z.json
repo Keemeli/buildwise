@@ -1,20 +1,22 @@
 {
+  "schema_version": 1,
   "shop": "Jimms",
   "category": "gpu",
-  "page": 21,
+  "source_type": "product",
   "source_url": "https://www.jimms.fi/fi/Product/Show/172864/dual-rtx3060-o12g-v2/asus-geforce-rtx-3060-dual-oc-edition-v2-naytonohjain-12gb-gddr6",
   "fetched_at": "2026-11-05T21:35:56+00:00",
-  "site_total_products": null,
-  "items_on_page": 1,
   "raw_html": "raw/html/jimms/2026-11-05/8d2e52d455cc2a4fbd75be920e74c4989953e5fb311995caab593d8bd5d67b33.html",
   "origin": "network",
   "items": [
     {
       "name": "Asus GeForce RTX 3060 DUAL - OC Edition V2 -näytönohjain, 12GB GDDR6",
       "price_cents": 53490,
-      "extraction": "meta[property=\"product:price:amount\"]",
       "url": "https://www.jimms.fi/fi/Product/Show/172864/dual-rtx3060-o12g-v2/asus-geforce-rtx-3060-dual-oc-edition-v2-naytonohjain-12gb-gddr6",
-      "external_id": null
+      "external_id": null,
+      "extraction": "meta[property=\"product:price:amount\"]"
     }
-  ]
+  ],
+  "page": null,
+  "site_total_products": null,
+  "item_count": 1
 }

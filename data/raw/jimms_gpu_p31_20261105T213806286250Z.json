@@ -1,20 +1,22 @@
 {
+  "schema_version": 1,
   "shop": "Jimms",
   "category": "gpu",
-  "page": 31,
+  "source_type": "product",
   "source_url": "https://www.jimms.fi/fi/Product/Show/208571/tuf-rtx5080-o16g-gaming/asus-geforce-rtx-5080-tuf-gaming-oc-edition-naytonohjain-16gb-gddr7",
   "fetched_at": "2026-11-05T21:38:14+00:00",
-  "site_total_products": null,
-  "items_on_page": 1,
   "raw_html": "raw/html/jimms/2026-11-05/0c0eb36c0a8787fdae8cab3d7034363ddd31b48ae6bc692aca5fe6ecf8fc84b9.html",
   "origin": "network",
   "items": [
     {
       "name": "Asus GeForce RTX 5080 TUF Gaming - OC Edition -näytönohjain, 16GB GDDR7",
       "price_cents": 194990,
-      "extraction": "meta[property=\"product:price:amount\"]",
       "url": "https://www.jimms.fi/fi/Product/Show/208571/tuf-rtx5080-o16g-gaming/asus-geforce-rtx-5080-tuf-gaming-oc-edition-naytonohjain-16gb-gddr7",
-      "external_id": null
+      "external_id": null,
+      "extraction": "meta[property=\"product:price:amount\"]"
     }
-  ]
+  ],
+  "page": null,
+  "site_total_products": null,
+  "item_count": 1
 }

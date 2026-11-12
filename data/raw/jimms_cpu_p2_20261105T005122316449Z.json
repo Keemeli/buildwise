@@ -1,20 +1,22 @@
 {
+  "schema_version": 1,
   "shop": "Jimms",
   "category": "cpu",
-  "page": 2,
+  "source_type": "product",
   "source_url": "https://www.jimms.fi/fi/Product/Show/138860/at1013981/alphacool-eisbaer-lt240-cpu-aio-vesijaahdytin-prosessorille-musta",
   "fetched_at": "2026-11-05T00:51:27+00:00",
-  "site_total_products": null,
-  "items_on_page": 1,
   "raw_html": "raw/html/jimms/2026-11-05/53d301835e3b8ba55a1c4479b5a7f79dcbc4c9af464ba27ae23304ff011dd4a6.html",
   "origin": "network",
   "items": [
     {
       "name": "Alphacool Eisbaer LT240 CPU, AIO-vesijäähdytin prosessorille, musta",
       "price_cents": 12190,
-      "extraction": "meta[property=\"product:price:amount\"]",
       "url": "https://www.jimms.fi/fi/Product/Show/138860/at1013981/alphacool-eisbaer-lt240-cpu-aio-vesijaahdytin-prosessorille-musta",
-      "external_id": null
+      "external_id": null,
+      "extraction": "meta[property=\"product:price:amount\"]"
     }
-  ]
+  ],
+  "page": null,
+  "site_total_products": null,
+  "item_count": 1
 }

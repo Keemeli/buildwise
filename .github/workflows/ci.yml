@@ -58,4 +58,4 @@ jobs:
       # `web/data/components.json` is a committed copy of the pipeline output, so it can
       # be edited by hand or left stale by a refresh. This refuses both.
       - name: Web copy up to date
-        run: python3 scraper/export_web_data.py --check
+        run: python3 -m scraper export --check
