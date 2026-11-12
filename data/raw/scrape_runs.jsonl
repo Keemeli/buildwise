@@ -12,3 +12,5 @@
 {"shop": "Datatronic", "category": "motherboard", "pages_fetched": 1, "items_found": 24, "site_total_products": 661, "started_at": "2026-11-04T22:16:39+00:00", "finished_at": "2026-11-04T22:16:40+00:00", "status": "ok"}
 {"shop": "Datatronic", "category": "psu", "pages_fetched": 1, "items_found": 24, "site_total_products": 672, "started_at": "2026-11-04T22:16:40+00:00", "finished_at": "2026-11-04T22:16:41+00:00", "status": "ok"}
 {"shop": "Datatronic", "category": "storage", "pages_fetched": 1, "items_found": 24, "site_total_products": 588, "started_at": "2026-11-04T22:16:41+00:00", "finished_at": "2026-11-04T22:16:42+00:00", "status": "ok"}
+{"shop": "Jimms", "started_at": "2026-11-05T00:51:22+00:00", "finished_at": "2026-11-05T00:51:27+00:00", "items_found": 5, "failures": [], "status": "ok"}
+{"shop": "Jimms", "started_at": "2026-11-05T00:59:07+00:00", "finished_at": "2026-11-05T00:59:08+00:00", "items_found": 5, "failures": [], "status": "ok"}
