@@ -1,0 +1,20 @@
+{
+  "shop": "Jimms",
+  "category": "gpu",
+  "page": 20,
+  "source_url": "https://www.jimms.fi/fi/Product/Show/212104/dual-rtx5050-o8g/asus-geforce-rtx-5050-dual-oc-edition-naytonohjain-8gb-gddr6",
+  "fetched_at": "2026-11-05T21:35:55+00:00",
+  "site_total_products": null,
+  "items_on_page": 1,
+  "raw_html": "raw/html/jimms/2026-11-05/06fb84d696630a4ed7a27bf0f00f81a70b51f82de05dcf2b3c095c8d80561661.html",
+  "origin": "cache",
+  "items": [
+    {
+      "name": "Asus GeForce RTX 5050 Dual - OC Edition -näytönohjain, 8GB GDDR6",
+      "price_cents": 45990,
+      "extraction": "meta[property=\"product:price:amount\"]",
+      "url": "https://www.jimms.fi/fi/Product/Show/212104/dual-rtx5050-o8g/asus-geforce-rtx-5050-dual-oc-edition-naytonohjain-8gb-gddr6",
+      "external_id": null
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "shop": "Jimms",
+  "category": "gpu",
+  "page": 4,
+  "source_url": "https://www.jimms.fi/fi/Product/Show/208572/prime-rtx5080-o16g/asus-geforce-rtx-5080-prime-oc-edition-naytonohjain-16gb-gddr7",
+  "fetched_at": "2026-11-05T21:35:39+00:00",
+  "site_total_products": null,
+  "items_on_page": 1,
+  "raw_html": "raw/html/jimms/2026-11-05/4d639c2d409657f069e818905d7e4d4340f1e050281daf57bbfaf1e767d13633.html",
+  "origin": "network",
+  "items": [
+    {
+      "name": "Asus GeForce RTX 5080 PRIME - OC Edition -näytönohjain, 16GB GDDR7",
+      "price_cents": 179990,
+      "extraction": "meta[property=\"product:price:amount\"]",
+      "url": "https://www.jimms.fi/fi/Product/Show/208572/prime-rtx5080-o16g/asus-geforce-rtx-5080-prime-oc-edition-naytonohjain-16gb-gddr7",
+      "external_id": null
+    }
+  ]
+}

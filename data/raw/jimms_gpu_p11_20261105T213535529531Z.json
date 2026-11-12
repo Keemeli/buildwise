@@ -1,0 +1,20 @@
+{
+  "shop": "Jimms",
+  "category": "gpu",
+  "page": 11,
+  "source_url": "https://www.jimms.fi/fi/Product/Show/208210/b570-cl-10go/asrock-intel-arc-b570-challenger-oc-naytonohjain-10gb-gddr6",
+  "fetched_at": "2026-11-05T21:35:46+00:00",
+  "site_total_products": null,
+  "items_on_page": 1,
+  "raw_html": "raw/html/jimms/2026-11-05/fd2fc5eb19fccd7c155758b1e5db6cd3389ae26c6ea2917ded7dd307431599e6.html",
+  "origin": "network",
+  "items": [
+    {
+      "name": "ASRock Intel Arc B570 Challenger OC -näytönohjain, 10GB GDDR6",
+      "price_cents": 31990,
+      "extraction": "meta[property=\"product:price:amount\"]",
+      "url": "https://www.jimms.fi/fi/Product/Show/208210/b570-cl-10go/asrock-intel-arc-b570-challenger-oc-naytonohjain-10gb-gddr6",
+      "external_id": null
+    }
+  ]
+}

@@ -47,3 +47,28 @@ def parse_product(html: str) -> dict:
     if len(set(prices)) != 1:
         raise ValueError("conflicting price metadata")
     return {"name": name, "price_cents": prices[0], "extraction": methods[0]}
+
+
+def parse_category(html: str, source_url: str) -> list[str]:
+    """Read only the actual listing, excluding menus and recommended products.
+
+    Jimms currently renders product-box links inside #initproductlist in the
+    initial HTML, even though its pagination controls use JavaScript.
+    """
+    from urllib.parse import urljoin, urlsplit, urlunsplit
+    soup = BeautifulSoup(html, "html.parser")
+    container = soup.select_one('#initproductlist')
+    if container is None:
+        raise ValueError("missing Jimms category listing #initproductlist")
+    urls = []
+    for anchor in container.select('product-box a[href]'):
+        parsed = urlsplit(urljoin(source_url, anchor['href']))
+        if (parsed.scheme != 'https' or parsed.hostname not in HOSTS
+                or not parsed.path.startswith('/fi/Product/Show/')):
+            continue
+        url = urlunsplit((parsed.scheme, parsed.netloc, parsed.path, '', ''))
+        if url not in urls:
+            urls.append(url)
+    if not urls:
+        raise ValueError("no product links found; inspect cached category HTML")
+    return urls

@@ -1,0 +1,20 @@
+{
+  "shop": "Jimms",
+  "category": "gpu",
+  "page": 44,
+  "source_url": "https://www.jimms.fi/fi/Product/Show/208914/gv-n507tgaming-oc-16gd/gigabyte-geforce-rtx-5070-ti-gaming-oc-naytonohjain-16gb-gddr7",
+  "fetched_at": "2026-11-05T21:38:28+00:00",
+  "site_total_products": null,
+  "items_on_page": 1,
+  "raw_html": "raw/html/jimms/2026-11-05/fad433ff02eb4f86651c5657dddf734ef44193ea36976531a09e8278d307d43d.html",
+  "origin": "network",
+  "items": [
+    {
+      "name": "Gigabyte GeForce RTX 5070 Ti GAMING OC -näytönohjain, 16GB GDDR7",
+      "price_cents": 142890,
+      "extraction": "meta[property=\"product:price:amount\"]",
+      "url": "https://www.jimms.fi/fi/Product/Show/208914/gv-n507tgaming-oc-16gd/gigabyte-geforce-rtx-5070-ti-gaming-oc-naytonohjain-16gb-gddr7",
+      "external_id": null
+    }
+  ]
+}

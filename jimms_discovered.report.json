@@ -1,0 +1,23 @@
+{
+  "category": "gpu",
+  "pages_requested": 2,
+  "pages": [
+    {
+      "page": 1,
+      "url": "https://www.jimms.fi/fi/Product/List/000-00P/komponentit--naytonohjaimet?page=1",
+      "raw_html": "/Users/unadrewn/Documents/School/PDI/buildwise/data/raw/html/jimms/2026-11-05/994f97f1bcab8c5b55ee2aecb38fe26c5ca4dcdaca8a01aeb030524c97433d5d.html",
+      "origin": "cache",
+      "products_found": 25
+    },
+    {
+      "page": 2,
+      "url": "https://www.jimms.fi/fi/Product/List/000-00P/komponentit--naytonohjaimet?page=2",
+      "raw_html": "/Users/unadrewn/Documents/School/PDI/buildwise/data/raw/html/jimms/2026-11-05/762f233b8e57b75a54dd58ac093b058bec266ef8767893337a5d98bf21774426.html",
+      "origin": "cache",
+      "products_found": 25
+    }
+  ],
+  "unique_products": 50,
+  "failure": null,
+  "status": "ok"
+}
