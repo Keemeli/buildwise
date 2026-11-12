@@ -25,6 +25,21 @@ class NormalisationReportWriter:
                      "product name does not contain that information.")
         lines.append("")
 
+        statuses = defaultdict(int)
+        for component in components:
+            statuses[component.get('identity_match', {}).get('status', 'unresolved')] += 1
+        lines.extend(['## Product identity grouping', '',
+                      'Cross-retailer groups require every pair to match validated identifiers. '
+                      'Titles alone do not merge listings. See `identity_matches.json` for '
+                      'source evidence, contradictions and ambiguous groups.', ''])
+        for status, count in sorted(statuses.items()):
+            lines.append(f'- {status}: {count} components')
+        spec_conflicts = sum(len(component.get('spec_conflicts', {})) for component in components)
+        if spec_conflicts:
+            lines.append(f'- Conflicting product-page fields retained as null: {spec_conflicts}; '
+                         'values and source URLs remain in each component’s `spec_conflicts`.')
+        lines.append('')
+
         lines.append("## Coverage per category")
         lines.append("")
         lines.append("| Category | Components | Field | Parsed | Coverage |")
@@ -168,6 +183,20 @@ class SpecificationReportWriter:
         lines.append("Values here are **parsed from the shop's own data sheet**, not inferred from the "
                      "product name. Unmapped labels are listed below instead of being guessed.")
         lines.append("")
+
+        identities = [(url, entry['identity']) for url, entry in items.items()
+                      if isinstance(entry.get('identity'), dict)]
+        if identities:
+            lines.extend(['## Product identifier evidence', ''])
+            lines.append(f"Identity inspected on {len(identities)} saved product pages; "
+                         f"GTIN on {sum(bool(identity.get('gtin')) for _, identity in identities)}, "
+                         f"manufacturer part number on {sum(bool(identity.get('manufacturer_part_number')) for _, identity in identities)}.")
+            lines.append('Identifiers are retained as evidence; listings are not matched or merged by them yet.')
+            lines.append('')
+            for url, identity in identities:
+                if identity.get('issues'):
+                    lines.append(f"- {url} — {', '.join(identity['issues'])}")
+            lines.append('')
 
         lines.append("## Coverage per category and field")
         lines.append("")

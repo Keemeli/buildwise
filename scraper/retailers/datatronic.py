@@ -137,3 +137,60 @@ class DatatronicAdapter:
         """Create the retailer's parser; shared workers own requests and storage."""
         from scraper.retailers.datatronic_specs import DatatronicSpecParser
         return DatatronicSpecParser()
+
+    def extract_identity(self, html, source_url, external_id=None):
+        """Bind identity to the primary PrestaShop product, never recommendations."""
+        import json
+        from scraper.common.product_identity import ProductIdentity
+        from scraper.retailers.identifiers import product_identity, canonical_product_url
+        self.config.validate_url(source_url)
+        # Datatronic's displayed sku is a manufacturer reference, not its numeric
+        # external_id. JSON-LD can bind via URL but cannot compare these as IDs.
+        structured = product_identity(html, source_url, external_id)
+        soup = BeautifulSoup(html, 'html.parser')
+        details = soup.select_one('#product-details')
+        if details is None:
+            return structured
+        issues = list(structured.issues)
+        try:
+            data = json.loads(details.get('data-product') or '{}')
+            if not isinstance(data, dict):
+                raise ValueError('product data must be an object')
+        except (ValueError, TypeError):
+            data = {}
+            issues.append('datatronic_product_json_invalid')
+        ids = {str(data[key]) for key in ('id', 'id_product') if data.get(key) is not None}
+        primary = soup.select_one('#product_page_product_id')
+        if primary is not None and primary.get('value'):
+            ids.add(primary['value'])
+        canonical = soup.select_one('link[rel=canonical][href]')
+        urls = [data['link']] if isinstance(data.get('link'), str) else []
+        if canonical is not None:
+            urls.append(canonical['href'])
+        try:
+            matching_urls = bool(urls) and all(canonical_product_url(url, source_url) == canonical_product_url(source_url, source_url) for url in urls)
+        except ValueError:
+            matching_urls = False
+        matching_id = external_id is not None and str(external_id) in ids
+        if (len(ids) > 1 or (external_id is not None and ids and not matching_id)
+                or (urls and not matching_urls)):
+            return ProductIdentity.from_candidates(
+                [(item.field, item.raw_value, item.source) for item in structured.evidence],
+                [*issues, 'source_product_identity_conflict'])
+        if not matching_urls and not matching_id:
+            return ProductIdentity.from_candidates(
+                [(item.field, item.raw_value, item.source) for item in structured.evidence],
+                [*issues, 'source_product_identity_unbound'])
+        candidates = [(item.field, item.raw_value, item.source) for item in structured.evidence]
+        for element in details.select('[itemprop=gtin13]'):
+            candidates.append(('gtin', element.get('content') or element.get_text(' ', strip=True),
+                               '#product-details [itemprop=gtin13]'))
+        if 'reference' in data:
+            candidates.append(('manufacturer_part_number', data['reference'], '#product-details data-product.reference'))
+        for element in details.select('.product-reference [itemprop=sku]'):
+            candidates.append(('manufacturer_part_number', element.get('content') or element.get_text(' ', strip=True),
+                               '#product-details .product-reference [itemprop=sku] (Tuotekoodi)'))
+        logo = details.select_one('.product-manufacturer img[alt]')
+        if logo is not None:
+            candidates.append(('brand', logo['alt'], '#product-details .product-manufacturer img[alt]'))
+        return ProductIdentity.from_candidates(candidates, issues)

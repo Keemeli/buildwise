@@ -107,8 +107,9 @@ class RawDataTests(unittest.TestCase):
                 self.assertTrue((data / document['raw_html']).is_file())
                 self.assertEqual(document['origin'], 'cache')
             catalogue = json.loads((data / 'normalised/components.json').read_text())
-            self.assertEqual(catalogue['component_count'], 1)
-            self.assertEqual(len(catalogue['components'][0]['listings']), 2)
+            self.assertEqual(catalogue['component_count'], 2)
+            self.assertTrue(all(len(component['listings']) == 1 for component in catalogue['components']))
+            self.assertEqual({component['listings'][0]['shop'] for component in catalogue['components']}, {'Jimms', 'Datatronic'})
             self.assertEqual([entry['shop'] for entry in iter_listings(data / 'raw', None)], ['Datatronic'])
 
     def test_writer_preserves_previous_observations(self):

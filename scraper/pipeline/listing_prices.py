@@ -63,4 +63,9 @@ class ListingPriceSelector:
                                 key=lambda item: json.dumps(item, sort_keys=True))
                     selected[field] = known[field]
                     selected.setdefault('identifier_sources', {})[field] = self.evidence(known)
+        identity_observations = [source for item in observations
+                                 for source in item.get('identity_observations', [])]
+        if identity_observations:
+            unique = {json.dumps(source, sort_keys=True): source for source in identity_observations}
+            selected['identity_observations'] = [unique[key] for key in sorted(unique)]
         return selected

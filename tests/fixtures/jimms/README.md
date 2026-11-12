@@ -18,3 +18,7 @@ prices, which differ from displayed `.price__amount` prices in these responses.
 These are historical offline fixtures, not claims about current prices or all
 Jimms categories. GPU card parsing is verified; CPU card parsing still needs a
 separate fixture check. Tests make no live retailer requests.
+
+Product identity milestone 1 adds product_identity.html and its source manifest.
+This reduced GPU metadata block preserves explicit GTIN/MPN and retailer-ID
+markup; it does not infer manufacturer identifiers from the displayed SKU.

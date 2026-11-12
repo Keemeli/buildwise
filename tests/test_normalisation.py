@@ -40,8 +40,8 @@ class MultiShopNormalisationTests(unittest.TestCase):
                 '--raw-dir', str(raw), '--out', str(Path(directory) / 'out')], cwd=ROOT, capture_output=True, text=True)
             self.assertEqual(result.returncode, 0, result.stderr)
             catalogue = json.loads((Path(directory) / 'out/components.json').read_text())
-            self.assertEqual(catalogue['component_count'], 1)
-            listings = catalogue['components'][0]['listings']
+            self.assertEqual(catalogue['component_count'], 2)
+            listings = [listing for component in catalogue['components'] for listing in component['listings']]
             self.assertEqual({x['shop']: x['price_cents'] for x in listings}, {'Jimms': 100, 'Datatronic': 300})
             self.assertIn('Jimms', catalogue['source'])
 
@@ -69,7 +69,7 @@ class MultiShopNormalisationTests(unittest.TestCase):
             with contextlib.redirect_stdout(io.StringIO()):
                 self.assertEqual(ComponentNormaliser(raw, root / 'out').run(), 0)
             catalogue = json.loads((root / 'out/components.json').read_text())
-            listings = {item['url']: item for item in catalogue['components'][0]['listings']}
+            listings = {item['url']: item for component in catalogue['components'] for item in component['listings']}
             for _, _, _, url, external_id, sku in records:
                 self.assertEqual(listings[url]['external_id'], external_id)
                 self.assertEqual(listings[url].get('retailer_sku'), sku)
@@ -290,7 +290,7 @@ class PriceWorkflowTests(unittest.TestCase):
                     payload['schema_version'] = version
                 (raw / f'{filename}.json').write_text(json.dumps(payload))
             self.assertEqual(main(['normalise', '--raw-dir', str(raw), '--out', str(out)]), 0)
-            listings = {item['shop']: item for item in json.loads((out / 'components.json').read_text())['components'][0]['listings']}
+            listings = {item['shop']: item for component in json.loads((out / 'components.json').read_text())['components'] for item in component['listings']}
             self.assertEqual(listings['Jimms']['price_status'], 'conflict')
             self.assertIsNone(listings['Jimms']['price_cents'])
             self.assertEqual(listings['Jimms']['last_known_price_cents'], 100)

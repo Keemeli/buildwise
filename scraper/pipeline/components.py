@@ -349,6 +349,11 @@ class ComponentNameParser:
                 "url": item["url"],
                 "external_id": item["external_id"],
                 **({"retailer_sku": item["retailer_sku"]} if item.get("retailer_sku") is not None else {}),
+                **({'identity_observations': [{
+                    **item.get('provenance', {}), 'identity': item['identity'],
+                    'shop': item['shop'], 'listing_url': item['url'],
+                    'fetched_at': item['fetched_at'],
+                }]} if item.get('identity') is not None else {}),
                 "price_cents": item["price_cents"],
                 "snapshot_date": item["snapshot_date"],
                 "fetched_at": item["fetched_at"],

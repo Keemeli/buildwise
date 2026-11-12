@@ -1,6 +1,7 @@
 """Read retailer observations, merge components and write the catalogue."""
 from __future__ import annotations
 import json
+from copy import deepcopy
 import sys
 from collections import defaultdict
 from datetime import date, datetime, timezone
@@ -11,6 +12,7 @@ from scraper.pipeline.components import (CATEGORIES, EXPECTED_FIELDS, clean,
     is_non_component, normalise_item, ComponentNameParser)
 from scraper.pipeline.reports import NormalisationReportWriter
 from scraper.pipeline.listing_prices import ListingPriceSelector
+from scraper.pipeline.identity_matching import ProductIdentityMatcher, VerifiedProductGrouper
 
 
 def iter_raw_items(raw_dir: Path, only_category: Optional[str]) -> List[Dict[str, Any]]:
@@ -35,6 +37,7 @@ def iter_raw_items(raw_dir: Path, only_category: Optional[str]) -> List[Dict[str
                 "url": item.get("url"),
                 "external_id": item.get("external_id"),
                 "retailer_sku": item.get("retailer_sku"),
+                "identity": item.get("identity"),
                 "shop": payload.get("shop", "Datatronic"),
                 "fetched_at": payload.get("fetched_at") or "",
                 "snapshot_date": (payload.get("fetched_at") or "")[:10] or "",
@@ -46,30 +49,42 @@ def iter_raw_items(raw_dir: Path, only_category: Optional[str]) -> List[Dict[str
     return items
 
 
-def dedupe(components: List[Dict[str, Any]]) -> Tuple[List[Dict[str, Any]], int]:
-    merged: Dict[Tuple[str, str, str], Dict[str, Any]] = {}
-    duplicates = 0
+def dedupe(components: List[Dict[str, Any]], identity_report=None) -> Tuple[List[Dict[str, Any]], int]:
+    """Collapse source snapshots and group only identifier-confirmed listings."""
+    if identity_report is None:
+        inputs = [{**item, 'listings': [item['listing']]} for item in components]
+        identity_report = VerifiedProductGrouper().plan(ProductIdentityMatcher().build_report(inputs))
+    memberships = {}
+    group_details = {}
+    for group_index, group in enumerate(identity_report['groups']):
+        for position in group['listings']:
+            listing = identity_report['listings'][position]
+            memberships[(listing['shop'], listing['url'])] = group_index
+        group_details[group_index] = group
+    grouped = defaultdict(list)
     for component in components:
-        key = (component["category"], (component["brand"] or "").lower(), component["model"].lower())
-        existing = merged.get(key)
-        if existing is None:
-            component["listings"] = [component.pop("listing")]
-            merged[key] = component
-            continue
-        duplicates += 1
-        listing = component["listing"]
-        existing["listings"].append(listing)
-        # keep the best-covered spec set (more fields read from the name wins)
-        if len(component["specs"]) - len(component["missing_specs"]) > len(existing["specs"]) - len(existing["missing_specs"]):
-            existing["specs"] = component["specs"]
-            existing["missing_specs"] = component["missing_specs"]
+        listing = component['listing']
+        group_index = memberships[(listing['shop'].casefold(), listing['url'])]
+        # A malformed source assigning a URL to multiple categories cannot cross
+        # category boundaries, even within that listing's historical snapshots.
+        grouped[(component['category'], group_index)].append(component)
     selector = ListingPriceSelector()
-    for component in merged.values():
-        groups = {}
-        for listing in component['listings']:
-            groups.setdefault((listing['shop'], listing['url']), []).append(listing)
-        component['listings'] = [selector.select(group) for _, group in sorted(groups.items())]
-    return list(merged.values()), duplicates
+    output = []
+    for (_, group_index), entries in sorted(grouped.items()):
+        representative = max(entries, key=lambda item: (
+            len(item['specs']) - len(item['missing_specs']),
+            selector.observed_at(item['listing']), json.dumps(item, sort_keys=True)))
+        component = deepcopy(representative)
+        component.pop('listing')
+        by_listing = defaultdict(list)
+        for entry in entries:
+            listing = entry['listing']
+            by_listing[(listing['shop'].casefold(), listing['url'])].append(listing)
+        component['listings'] = [selector.select(rows) for _, rows in sorted(by_listing.items())]
+        group = group_details[group_index]
+        component['identity_match'] = {'status': group['status'], 'reasons': group['reasons']}
+        output.append(component)
+    return output, len(components) - len(output)
 
 
 def shape_modules(components: List[Dict[str, Any]]) -> int:
@@ -89,6 +104,36 @@ def shape_modules(components: List[Dict[str, Any]]) -> int:
     return shaped
 
 
+def retain_product_identity_evidence(components, path):
+    """Attach source observations to listings without selecting a match or ID."""
+    if not path.exists():
+        return
+    try:
+        payload = json.loads(path.read_text(encoding='utf-8'))
+    except json.JSONDecodeError:
+        return
+    by_url = {}
+    for url, entry in payload.get('items', {}).items():
+        for observed in (entry, entry.get('last_attempt', {})):
+            identity = observed.get('identity')
+            if not isinstance(identity, dict) or not observed.get('fetched_at'):
+                continue
+            by_url.setdefault(url, []).append({
+                'identity': identity, 'shop': observed.get('shop', entry.get('shop')),
+                'listing_url': url, 'source_url': url, 'source_type': 'product',
+                'raw_html': observed.get('raw_html'), 'fetched_at': observed['fetched_at'],
+                'origin': observed.get('origin'),
+            })
+    for component in components:
+        for listing in component['listings']:
+            observations = list(listing.get('identity_observations', []))
+            observations.extend(source for source in by_url.get(listing['url'], [])
+                                if str(source.get('shop', '')).casefold() == listing['shop'].casefold())
+            if observations:
+                unique = {json.dumps(source, sort_keys=True): source for source in observations}
+                listing['identity_observations'] = [unique[key] for key in sorted(unique)]
+
+
 def load_product_specs(path: Path) -> Dict[str, Dict[str, Any]]:
     """Shared specs.json from retailer specification collection, keyed by product URL."""
     if not path.exists():
@@ -106,7 +151,8 @@ def merge_product_specs(components: List[Dict[str, Any]],
     """Overwrite name-derived values with values parsed from the product page.
 
     A parsed value always wins over a guessed one, but the provenance is kept:
-    every field that came from a data sheet is recorded in `spec_sources`, and the
+    Contradictory product-page values stay null with their source evidence.
+    Every field that came from a data sheet is recorded in `spec_sources`, and the
     CPU `socket_source` stops saying "inferred" once a real socket was read.
     """
     specs_by_url = load_product_specs(specs_path)
@@ -118,12 +164,30 @@ def merge_product_specs(components: List[Dict[str, Any]],
     for component in components:
         sources = component.setdefault("spec_sources", {})
         matched: Dict[str, Any] = {}
+        candidates = defaultdict(list)
         for listing in component["listings"]:
             entry = specs_by_url.get(listing["url"])
-            if entry:
-                matched.update({field: value for field, value in entry["specs"].items()
-                                if value not in (None, [], "")})
-        if not matched:
+            if not entry or (entry.get('shop') and entry['shop'].casefold() != listing['shop'].casefold()):
+                continue
+            if entry.get('category') and entry['category'] != component['category']:
+                continue
+            for field, value in entry['specs'].items():
+                if value not in (None, [], ""):
+                    candidates[field].append({'value': value, 'shop': listing['shop'],
+                                              'url': listing['url'], 'raw_html': entry.get('raw_html'),
+                                              'fetched_at': entry.get('fetched_at')})
+        for field, observations in sorted(candidates.items()):
+            values = {json.dumps(item['value'], sort_keys=True) for item in observations}
+            if len(values) == 1:
+                matched[field] = observations[0]['value']
+                continue
+            component['specs'][field] = None
+            sources[field] = 'conflicting_product_pages'
+            component.setdefault('spec_conflicts', {})[field] = sorted(
+                observations, key=lambda item: json.dumps(item, sort_keys=True))
+            if field in EXPECTED_FIELDS.get(component['category'], ()) and field not in component['missing_specs']:
+                component['missing_specs'].append(field)
+        if not candidates:
             continue
         stats["components_matched"] += 1
 
@@ -182,7 +246,14 @@ class ComponentNormaliser:
         products = [item for item in raw_items if not is_non_component(item["raw_name"])]
 
         normalised = [self.normalise_item(item) for item in products]
-        components, duplicates = dedupe(normalised)
+        # Resolve identity and variant evidence per listing before grouping.
+        identity_inputs = [deepcopy({**item, 'listings': [item['listing']]}) for item in normalised]
+        retain_product_identity_evidence(identity_inputs, self.out_dir / "specs.json")
+        merge_product_specs(identity_inputs, self.out_dir / "specs.json")
+        identity_report = ProductIdentityMatcher().build_report(identity_inputs)
+        identity_report = VerifiedProductGrouper().plan(identity_report)
+        components, duplicates = dedupe(normalised, identity_report)
+        retain_product_identity_evidence(components, self.out_dir / "specs.json")
         spec_stats = merge_product_specs(components, self.out_dir / "specs.json")
         spec_stats["modules_shaped"] = shape_modules(components)
 
@@ -191,8 +262,11 @@ class ComponentNormaliser:
             "generated_at": datetime.now(timezone.utc).isoformat(timespec="microseconds"),
             "source": ", ".join(sorted({item["shop"] for item in raw_items})),
             "component_count": len(components),
+            "identity_policy_version": identity_report["policy_version"],
             "components": components,
         }
+        identity_path = self.out_dir / "identity_matches.json"
+        identity_path.write_text(json.dumps(identity_report, ensure_ascii=False, indent=2), encoding="utf-8")
         components_path = self.out_dir / "components.json"
         components_path.write_text(json.dumps(payload, ensure_ascii=False, indent=2), encoding="utf-8")
         excluded_path = self.out_dir / "excluded_non_components.json"
@@ -202,6 +276,7 @@ class ComponentNormaliser:
         print(f"scanned {len(raw_items)} raw products → {len(components)} components "
               f"({duplicates} duplicates merged, {len(excluded)} non-components excluded)")
         print(f"wrote {components_path}")
+        print(f"wrote {identity_path} (verified grouping and review cases)")
         print(f"wrote {excluded_path}")
         print(f"wrote {report_path}")
 

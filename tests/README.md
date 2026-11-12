@@ -35,7 +35,8 @@ python3 -m unittest tests.test_specification_parsers.ProshopSpecificationTests
 | test_retry.py | Selection, limits, attempts, recovery, locks and request spacing | 11 |
 | test_cli.py | Arguments, help, offline subprocesses, export and drift checks | 8 |
 | test_refresh.py | Stage planning, category selection and stopping on failure | 3 |
-| **Total** | | **163** |
+| test_product_identity.py | GTIN/MPN validation, bound source extraction, evidence preservation, match decisions and verified grouping | 19 |
+| **Total** | | **182** |
 
 `support.py` contains reusable synthetic HTML builders, HTTP responses and the
 repository path. It contains no test cases. Import shared helpers from there,
@@ -63,3 +64,13 @@ When adding a retailer, extend adapter and specification-parser cases, then add
 integration coverage where its request or failure behaviour differs. Reuse shared
 policy checks; avoid creating milestone-specific test files or repeating generic
 worker checks under each retailer's name.
+
+Identity evidence checks use saved Jimms/Proshop/Datatronic metadata and temporary stores.
+They verify checksum/leading-zero handling, raw round trips, source binding,
+cache reuse and conservative cross-retailer grouping. Unknown listings stay separate.
+
+Matching checks cover different titles for the same identifiers, identical titles
+without identifiers, category/GTIN/MPN/brand/variant conflicts, retained historical
+conflicts and special offers. The saved Datatronic/Proshop pair confirms the
+verified cross-retailer group. Additional cases cover incomplete match chains,
+duplicate shop offers, input ordering and per-shop price/specification provenance.

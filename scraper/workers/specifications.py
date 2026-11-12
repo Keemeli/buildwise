@@ -192,6 +192,7 @@ class SpecificationWorker:
                 entry.update(fetched_at=datetime.fromtimestamp(raw_path.stat().st_mtime, timezone.utc).isoformat(timespec='seconds'),
                              origin=origin, raw_html=str(raw_path.resolve().relative_to(options.raw_dir.parent.resolve()))
                              if raw_path.resolve().is_relative_to(options.raw_dir.parent.resolve()) else str(raw_path.resolve()))
+                entry['identity'] = self.adapter.extract_identity(html, url, listing['external_id'] or None).to_dict()
                 features, method, values, unmapped = self._parse(html, listing['category'])
                 specs = dict.fromkeys(self.spec_parser.field_map.get(listing['category'], {}))
                 specs.update(values)

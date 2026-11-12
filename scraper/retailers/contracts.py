@@ -7,6 +7,7 @@ from typing import Mapping, Protocol, runtime_checkable
 from urllib.parse import urljoin, urlsplit
 
 from scraper.common.raw_data import RawProduct
+from scraper.common.product_identity import ProductIdentity
 from scraper.config import CATEGORIES
 
 
@@ -137,6 +138,7 @@ class RetailerAdapter(Protocol):
     def parse_category(self, html: str, category: str, source_url: str) -> CategoryResult: ...
     def parse_product(self, html: str, request: ProductRequest) -> RawProduct: ...
     def specification_parser(self) -> SpecificationParser: ...
+    def extract_identity(self, html: str, source_url: str, external_id: str | None = None) -> ProductIdentity: ...
 
 
 def listing_page_url(url: str, page: int, *, include_first: bool = False, page_parameter: str = "page") -> str:

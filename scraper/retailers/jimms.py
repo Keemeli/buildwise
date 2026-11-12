@@ -208,13 +208,24 @@ class JimmsAdapter:
                 raise
             name = self.parser.parse_name(BeautifulSoup(html, 'html.parser'))
             product = RawProduct(name, None, request.url, external_id=external_id,
-                                 retailer_sku=request.retailer_sku, extraction='product:metadata')
+                                 retailer_sku=request.retailer_sku, extraction='product:metadata',
+                                 identity=self.extract_identity(html, request.url, external_id))
             reason = 'missing_price' if 'missing price' in message else 'conflicting_price' if 'conflicting' in message else 'invalid_price'
             raise PriceExtractionError(message, product, reason) from exc
         return RawProduct.from_item({**result, 'url': request.url, 'external_id': external_id,
-                                     'retailer_sku': request.retailer_sku})
+                                     'retailer_sku': request.retailer_sku,
+                                     'identity': self.extract_identity(html, request.url, external_id)})
 
     def specification_parser(self):
         """Create the retailer's parser; shared workers own requests and storage."""
         from scraper.retailers.jimms_specs import JimmsSpecParser
         return JimmsSpecParser()
+
+    def extract_identity(self, html, source_url, external_id=None):
+        """Read explicit identifiers from an already-fetched product response."""
+        from scraper.retailers.identifiers import product_identity
+        self.config.validate_url(source_url)
+        # URL identity also supports historical manifests whose external_id
+        # once contained a model code instead of the retailer's numeric ID.
+        return product_identity(html, source_url, self.product_id_from_url(source_url),
+                                metadata_selector='jim-product-sku-ean-warranty-info')

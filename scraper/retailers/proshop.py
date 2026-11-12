@@ -110,3 +110,9 @@ class ProshopAdapter:
     def specification_parser(self):
         from scraper.retailers.proshop_specs import ProshopSpecParser
         return ProshopSpecParser()
+
+    def extract_identity(self, html, source_url, external_id=None):
+        """Read explicit identifiers from an already-fetched product response."""
+        from scraper.retailers.identifiers import product_identity
+        self.config.validate_url(source_url)
+        return product_identity(html, source_url, external_id, sku_is_listing_id=True)

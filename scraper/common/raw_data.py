@@ -15,6 +15,7 @@ import re
 from tempfile import NamedTemporaryFile
 
 from scraper.config import CATEGORIES
+from scraper.common.product_identity import ProductIdentity
 
 SCHEMA_VERSION = 2
 
@@ -32,6 +33,7 @@ class RawProduct:
     external_id: str | None = None
     extraction: str | None = None
     retailer_sku: str | None = None
+    identity: ProductIdentity | None = None
 
     def __post_init__(self):
         if not isinstance(self.name, str) or not self.name.strip():
@@ -40,6 +42,8 @@ class RawProduct:
             raise ValueError("raw product needs a URL")
         if self.price_cents is not None and (type(self.price_cents) is not int or self.price_cents < 0):
             raise ValueError("price_cents must be a non-negative integer or null")
+        if self.identity is not None and not isinstance(self.identity, ProductIdentity):
+            raise ValueError('identity must be a ProductIdentity or null')
         for value in (self.external_id, self.extraction, self.retailer_sku):
             if value is not None and not isinstance(value, str):
                 raise ValueError("external_id, extraction and retailer_sku must be strings or null")
@@ -50,7 +54,8 @@ class RawProduct:
         external_id = item.get("external_id")
         return cls(name=item.get("name"), price_cents=item.get("price_cents"),
                    url=item.get("url"), external_id=str(external_id) if external_id is not None else None,
-                   extraction=item.get("extraction") or extraction, retailer_sku=item.get("retailer_sku"))
+                   extraction=item.get("extraction") or extraction, retailer_sku=item.get("retailer_sku"),
+                   identity=ProductIdentity.from_dict(item.get("identity")))
 
 
 @dataclass(frozen=True)

@@ -203,8 +203,10 @@ only for collection/specification commands.
 Specification extraction supports all three registered retailers for GPUs. Jimms GPU parsing is verified
 against saved pages. A manual run parsed five real CPUs and five GPUs without
 failures; checking CPU field accuracy and adding saved CPU regression fixtures
-remain outstanding. Component matching remains category/brand/model based, and different retailer titles can
-still produce separate components. Data schemas and parsing rules are unchanged.
+remain outstanding. Cross-retailer grouping now requires consistent GTIN or
+brand/manufacturer-part-number evidence. Products without sufficient identity
+evidence remain separate, including historical rows with identical titles.
+See the product identity section below for the current grouping contract.
 
 ## Shared raw price-observation contract (version 2)
 
@@ -646,3 +648,28 @@ To apply the new label to today's cached pages without additional requests:
 ```sh
 python3 -m scraper specs --shop proshop --category gpu --limit 5 --offline
 ```
+
+
+## Product identity evidence
+
+Raw product observations and product-page specification entries can now retain
+validated GTIN, manufacturer part number, published brand and original source
+evidence. Existing retailer IDs/SKUs keep their meanings. Invalid or conflicting
+identifiers are recorded for review and do not make otherwise valid prices fail.
+The normaliser preserves `identity_observations` on listings and groups shops
+only when every pair has consistent identifier evidence. Identity extraction reuses product responses, with no extra crawl
+for identifiers. See [the identity contract](docs/product-identity-evidence.md).
+
+### Product identity grouping and review
+
+Normalisation writes `identity_matches.json` beside `components.json`. It shows
+exact-identifier match candidates, contradictions and cases needing review,
+with retained source evidence and the applied grouping plan. Cross-retailer groups
+require every pair to match; incomplete match chains and duplicate offers from one
+shop stay separate. Titles alone never merge products. Older observations without
+identity remain readable as individual listings, so catalogue counts can increase.
+Repeated snapshots of one shop URL retain their price history.
+
+Components include `identity_match` status/reasons. Contradictory saved product-page
+specifications stay null with source values in `spec_conflicts`. Collection and
+specification commands are unchanged. See [the identity policy](docs/product-identity-evidence.md#milestone-3-verified-catalogue-grouping).

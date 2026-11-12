@@ -238,10 +238,13 @@ class SharedSpecificationTests(unittest.TestCase):
         jimms = next(entry for entry in self.items().values() if entry['shop'] == 'Jimms')
         self.assertEqual(jimms['retailer_sku'], 'SKU')
         self.assertEqual(main(['normalise', '--raw-dir', str(self.raw), '--out', str(self.out)]), 0)
-        component = json.loads((self.out / 'components.json').read_text())['components'][0]
-        self.assertEqual(component['specs']['power_w'], 180)
-        self.assertEqual(component['specs']['recommended_psu_w'], 800)
-        self.assertEqual(component['spec_sources']['power_w'], 'parsed_product_page')
+        catalogue = json.loads((self.out / 'components.json').read_text())
+        self.assertEqual(catalogue['component_count'], 2)  # titles alone cannot share specs
+        by_shop = {component['listings'][0]['shop']: component for component in catalogue['components']}
+        self.assertEqual(by_shop['Datatronic']['specs']['power_w'], 180)
+        self.assertEqual(by_shop['Jimms']['specs']['recommended_psu_w'], 800)
+        self.assertEqual(by_shop['Datatronic']['spec_sources']['power_w'], 'parsed_product_page')
+        self.assertNotIn('recommended_psu_w', by_shop['Datatronic']['specs'])
         self.assertEqual(self.run_shop(JimmsAdapter(), '--status'), 0)
 
     def test_failures_and_empty_pages_preserve_previous_success_and_other_shop(self):
