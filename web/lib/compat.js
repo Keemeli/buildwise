@@ -172,9 +172,6 @@ export function checkCompatibility(build, options = {}) {
   }
 
   // Only warn when the data says so explicitly: null means "not known", not "no".
-  if (cpu && !cooler && cpu.specs.cooler_included === false) {
-    add("warning", ["cooler", "cpu"], "needsCooler");
-  }
   // An owned part counts as present: the user has a cooler / GPU, we just don't know which.
   const owned = new Set(options.ownedUnknown ?? []);
   if (cpu && !cooler && !owned.has("cooler") && cpu.specs.cooler_included === false) {
@@ -221,8 +218,11 @@ export const CHECK_AREAS = [
   { id: "cpuSocket", needs: ["cpu", "motherboard"] },
   { id: "memoryType", needs: ["memory", "motherboard"] },
   { id: "memoryForm", needs: ["memory"] },
-  { id: "coolerMount", needs: ["cooler", "motherboard"] },
+  { id: "coolerMount", needs: ["cooler", "cpu"] },
   { id: "coolerHeight", needs: ["cooler", "case"] },
+  // The engine checks the board inside the case; without this area an owned case of
+  // unknown model dropped that check from the panel without saying so.
+  { id: "formFactor", needs: ["motherboard", "case"] },
   { id: "gpuLength", needs: ["gpu", "case"] },
   { id: "psuPower", needs: ["psu"], anyOf: ["cpu", "gpu"] },
   { id: "cpuExtras", needs: ["cpu"] },
