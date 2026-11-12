@@ -16,6 +16,7 @@ from unittest.mock import patch
 from scraper.cli import main
 from scraper.pipeline.components import ComponentNameParser
 from scraper.pipeline.listing_prices import ListingPriceSelector
+from scraper.pipeline.export import render
 from scraper.pipeline.normalisation import ComponentNormaliser, merge_product_specs
 from scraper.pipeline.specification_values import SpecificationValueResolver
 from scraper.retailers.datatronic import DatatronicAdapter
@@ -375,7 +376,8 @@ class PriceWorkflowTests(unittest.TestCase):
                     self.assertEqual(path.read_bytes(), content)
                 target = root / 'web/components.json'
                 self.assertEqual(main(['export', '--source', str(out / 'components.json'), '--target', str(target)]), 0)
-                self.assertEqual(json.loads(target.read_text()), json.loads((out / 'components.json').read_text()))
+                # Slimmed, minified deployment copy: exactly what the exporter would write.
+                self.assertEqual(target.read_bytes(), render(json.loads((out / 'components.json').read_text())))
 
     def test_legacy_and_versioned_ties_are_reported_without_cross_shop_history(self):
         with tempfile.TemporaryDirectory() as directory:
