@@ -67,10 +67,14 @@ class ProductRequest:
     url: str
     external_id: str | None = None
     reason: str = 'missing_price'
+    retailer_sku: str | None = None
 
     def __post_init__(self):
         if self.category not in CATEGORIES or not self.url.strip() or not self.reason.strip():
             raise ValueError('product request needs a supported category, URL and reason')
+        if any(value is not None and not isinstance(value, str)
+               for value in (self.external_id, self.retailer_sku)):
+            raise ValueError('product request identifiers must be strings or null')
 
 
 @dataclass(frozen=True)
@@ -93,7 +97,7 @@ class RetailerAdapter(Protocol):
     config: RetailerConfig
 
     def category_url(self, category: str) -> str: ...
-    def page_url(self, category: str, page: int) -> str: ...
+    def page_url(self, category: str, page: int, *, category_url: str | None = None) -> str: ...
     def parse_category(self, html: str, category: str, source_url: str) -> CategoryResult: ...
     def parse_product(self, html: str, request: ProductRequest) -> RawProduct: ...
 

@@ -18,20 +18,22 @@ from scraper.config import PROJECT_ROOT, CATEGORIES, RAW_DIR, NORMALISED_DIR
 from scraper.pipeline.export import CatalogueExporter
 from scraper.pipeline.normalisation import ComponentNormaliser
 from scraper.pipeline.refresh import RefreshPipeline
+from scraper.retailers.registry import default_registry
 
 
 class ScraperCLI:
     """Build command arguments and dispatch to independently testable workers."""
 
-    def __init__(self):
+    def __init__(self, registry=None):
+        self.registry = default_registry() if registry is None else registry
         self.parser = argparse.ArgumentParser(prog="python3 -m scraper", description="BuildWise retailer data pipeline")
         commands = self.parser.add_subparsers(dest="command", required=True)
         collect = commands.add_parser("collect", help="collect retailer names and prices")
-        collect.add_argument("--shop", required=True, choices=("datatronic", "jimms"))
+        collect.add_argument("--shop", required=True, choices=self.registry.keys)
         collect.add_argument("--category", action="append", choices=CATEGORIES)
         collect.add_argument("--all", action="store_true", help="all configured categories")
-        collect.add_argument("--url", help="override Jimms category URL (one category)")
-        collect.add_argument("--input", type=Path, help="existing Jimms product manifest")
+        collect.add_argument("--url", help="override retailer category URL (one category)")
+        collect.add_argument("--input", type=Path, help="existing product manifest (requires product-price support)")
         collect.add_argument("--pages", type=int, default=1)
         self._network_options(collect)
         collect.add_argument("--data-dir", type=Path, default=PROJECT_ROOT / "data")
@@ -68,7 +70,9 @@ class ScraperCLI:
         refresh.add_argument("--skip-specs", action="store_true")
         refresh.add_argument("--offline", action="store_true", help="normalise and export only")
         refresh.add_argument("--cold", action="store_true", help="force Datatronic specification refresh")
-        refresh.add_argument("--jimms-input", type=Path)
+        refresh.add_argument("--input", type=Path, help="product manifest for a single retailer")
+        refresh.add_argument("--url", help="category URL override for a single retailer/category")
+        refresh.add_argument("--jimms-input", type=Path, help="legacy Jimms manifest option")
         refresh.add_argument("--jimms-category-url")
         refresh.add_argument("--data-dir", type=Path, default=PROJECT_ROOT / "data")
         refresh.add_argument("--web-output", type=Path, default=PROJECT_ROOT / "web/data/components.json")
@@ -90,17 +94,17 @@ class ScraperCLI:
             if args.command == "collect":
                 if args.all and args.category:
                     raise ValueError("use --all or --category, not both")
-                if args.input and (args.shop != "jimms" or args.category or args.all or args.url):
-                    raise ValueError("--input is for Jimms product URLs and cannot be combined with categories/--url")
-                if args.url and (args.shop != "jimms" or len(args.category or []) != 1 or args.all):
-                    raise ValueError("--url needs Jimms and exactly one --category")
+                if args.input and (args.category or args.all or args.url):
+                    raise ValueError("--input cannot be combined with categories or --url")
+                if args.url and (len(args.category or []) != 1 or args.all):
+                    raise ValueError("--url needs exactly one --category")
+                adapter = self.registry.get(args.shop)
                 if args.all:
-                    from scraper.retailers.jimms import CATEGORY_URLS
-                    args.category = list(CATEGORIES if args.shop == "datatronic" else CATEGORY_URLS)
+                    args.category = list(adapter.config.category_paths)
                 if not args.input and not args.category:
-                    raise ValueError("supply --category, --all or a Jimms --input manifest")
+                    raise ValueError("supply --category, --all or an --input manifest")
                 from scraper.workers.collection import CollectionService
-                return CollectionService(args).run()
+                return CollectionService(args, adapter=adapter, registry=self.registry).run()
             if args.command == "specs":
                 if args.checkpoint_every < 1 or (args.limit is not None and args.limit < 1):
                     raise ValueError("checkpoint-every and limit must be positive")
@@ -111,15 +115,15 @@ class ScraperCLI:
             if args.command == "export":
                 return CatalogueExporter(args.source, args.target).run(check=args.check)
             shops = list(dict.fromkeys(shop.strip().lower() for shop in args.shops.split(',')))
-            if any(shop not in {"jimms", "datatronic"} for shop in shops):
-                raise ValueError("shops must be datatronic and/or jimms")
+            if any(shop not in self.registry.keys for shop in shops):
+                raise ValueError("unknown retailer in --shops")
             categories = args.categories.split(',') if args.categories else list(CATEGORIES)
             categories = list(dict.fromkeys(c.strip() for c in categories))
             if any(category not in CATEGORIES for category in categories):
                 raise ValueError("unknown component category")
             if args.offline:
                 args.skip_scrape = args.skip_specs = True
-            return RefreshPipeline(args, categories, shops).run()
+            return RefreshPipeline(args, categories, shops, registry=self.registry).run()
         except (OSError, ValueError) as exc:
             self.parser.error(str(exc))
 

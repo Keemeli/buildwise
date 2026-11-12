@@ -15,18 +15,22 @@ import re
 
 from scraper.config import CATEGORIES
 
-SCHEMA_VERSION = 1
+SCHEMA_VERSION = 2
 
 
 @dataclass(frozen=True)
 class RawProduct:
-    """Shared item shape. Unknown price, retailer ID or extraction stay null."""
+    """Shared item shape. Retailer record ID and SKU have separate meanings.
+
+    external_id is the retailer's internal product ID, stored as text.
+    retailer_sku is its displayed SKU/model code; neither is a BuildWise ID."""
 
     name: str
     price_cents: int | None
     url: str
     external_id: str | None = None
     extraction: str | None = None
+    retailer_sku: str | None = None
 
     def __post_init__(self):
         if not isinstance(self.name, str) or not self.name.strip():
@@ -35,9 +39,9 @@ class RawProduct:
             raise ValueError("raw product needs a URL")
         if self.price_cents is not None and (type(self.price_cents) is not int or self.price_cents < 0):
             raise ValueError("price_cents must be a non-negative integer or null")
-        for value in (self.external_id, self.extraction):
+        for value in (self.external_id, self.extraction, self.retailer_sku):
             if value is not None and not isinstance(value, str):
-                raise ValueError("external_id and extraction must be strings or null")
+                raise ValueError("external_id, extraction and retailer_sku must be strings or null")
 
     @classmethod
     def from_item(cls, item: dict, extraction: str | None = None) -> RawProduct:
@@ -45,7 +49,7 @@ class RawProduct:
         external_id = item.get("external_id")
         return cls(name=item.get("name"), price_cents=item.get("price_cents"),
                    url=item.get("url"), external_id=str(external_id) if external_id is not None else None,
-                   extraction=item.get("extraction") or extraction)
+                   extraction=item.get("extraction") or extraction, retailer_sku=item.get("retailer_sku"))
 
 
 @dataclass(frozen=True)

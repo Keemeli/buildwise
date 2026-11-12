@@ -7,6 +7,7 @@ Missing data is reported, never invented. This parser does not fetch pages or
 extract hardware specifications. Selectors must be checked against live samples.
 """
 
+import re
 from bs4 import BeautifulSoup
 from scraper.common.prices import parse_price_cents
 
@@ -119,11 +120,19 @@ class JimmsAdapter:
     def __init__(self, parser: JimmsParser | None = None):
         self.parser = parser if parser is not None else JimmsParser(set(self.config.allowed_hosts))
 
+    @staticmethod
+    def product_id_from_url(url: str) -> str:
+        """Read Jimms' internal record ID; never substitute a SKU or our own ID."""
+        match = re.fullmatch(r'/fi/Product/Show/([0-9]+)(?:/.*)?', urlsplit(url).path)
+        if match is None:
+            raise ValueError('Jimms product URL has no numeric retailer product ID')
+        return match.group(1)
+
     def category_url(self, category: str) -> str:
         return self.config.category_url(category)
 
-    def page_url(self, category: str, page: int) -> str:
-        return listing_page_url(self.category_url(category), page, include_first=True)
+    def page_url(self, category: str, page: int, *, category_url: str | None = None) -> str:
+        return listing_page_url(category_url or self.category_url(category), page, include_first=True)
 
     def parse_category(self, html: str, category: str, source_url: str) -> CategoryResult:
         self.category_url(category)
@@ -146,6 +155,11 @@ class JimmsAdapter:
                 issues.append(ParseIssue('invalid_identity', 'product card has an invalid name or URL'))
                 continue
             url = urlunsplit((parsed.scheme, parsed.netloc, parsed.path, '', ''))
+            try:
+                external_id = self.product_id_from_url(url)
+            except ValueError as exc:
+                issues.append(ParseIssue('invalid_product_id', str(exc), url))
+                continue
             if url in seen:
                 issues.append(ParseIssue('duplicate_url', 'product URL repeated in listing', url))
                 continue
@@ -163,18 +177,21 @@ class JimmsAdapter:
                 reason = None
             if reason:
                 issues.append(ParseIssue(reason, 'no unambiguous displayed price on product card', url))
-                requests.append(ProductRequest(category, url, external_id=sku or None, reason=reason))
+                requests.append(ProductRequest(category, url, external_id=external_id, reason=reason, retailer_sku=sku or None))
                 continue
-            observations.append(RawProduct(name, amounts[0], url, external_id=sku or None,
-                                           extraction='category:.price__amount'))
-        if not seen:
+            observations.append(RawProduct(name, amounts[0], url, external_id=external_id,
+                                           extraction='category:.price__amount', retailer_sku=sku or None))
+        if not seen and not issues:
             raise ValueError('no identifiable products found in Jimms category listing')
         # The saved page's totalCount element is a JS placeholder, not a total.
         return CategoryResult(observations=tuple(observations), product_requests=tuple(requests),
                               issues=tuple(issues), site_total_products=None)
 
     def parse_product(self, html: str, request: ProductRequest) -> RawProduct:
-        self.category_url(request.category)
         self.config.validate_url(request.url)
+        external_id = self.product_id_from_url(request.url)
+        if request.external_id is not None and request.external_id != external_id:
+            raise ValueError('Jimms request product ID conflicts with its URL')
         result = self.parser.parse_product(html)
-        return RawProduct.from_item({**result, 'url': request.url, 'external_id': request.external_id})
+        return RawProduct.from_item({**result, 'url': request.url, 'external_id': external_id,
+                                     'retailer_sku': request.retailer_sku})

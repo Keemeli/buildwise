@@ -38,6 +38,36 @@ class MultiShopNormalisationTests(unittest.TestCase):
             self.assertEqual({x['shop']: x['price_cents'] for x in listings}, {'Jimms': 100, 'Datatronic': 300})
             self.assertIn('Jimms', catalogue['source'])
 
+    def test_new_identifiers_survive_normalisation_with_legacy_files(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            raw = root / 'raw'
+            raw.mkdir()
+            records = [
+                ('new.json', 2, 'Jimms', 'https://www.jimms.fi/fi/Product/Show/209432/gpu',
+                 '209432', 'PRIME-RTX5070-O12G'),
+                ('old.json', 1, 'Datatronic', 'https://datatronic.fi/gpu', '168663', None),
+                ('legacy.json', None, 'Jimms', 'https://www.jimms.fi/legacy-gpu', 'OLD-SKU', None),
+            ]
+            for filename, version, shop, url, external_id, sku in records:
+                item = {'name': 'MSI RTX 5070 12GB GDDR7', 'url': url,
+                        'price_cents': 29999, 'external_id': external_id}
+                if sku is not None:
+                    item['retailer_sku'] = sku
+                payload = {'shop': shop, 'category': 'gpu', 'fetched_at': '2026-11-05T12:00:00+00:00',
+                           'items': [item]}
+                if version is not None:
+                    payload['schema_version'] = version
+                (raw / filename).write_text(json.dumps(payload))
+            with contextlib.redirect_stdout(io.StringIO()):
+                self.assertEqual(ComponentNormaliser(raw, root / 'out').run(), 0)
+            catalogue = json.loads((root / 'out/components.json').read_text())
+            listings = {item['url']: item for item in catalogue['components'][0]['listings']}
+            for _, _, _, url, external_id, sku in records:
+                self.assertEqual(listings[url]['external_id'], external_id)
+                self.assertEqual(listings[url].get('retailer_sku'), sku)
+            self.assertNotIn('retailer_sku', listings['https://datatronic.fi/gpu'])
+
 
 class NormaliserConfigurationTests(unittest.TestCase):
     def test_component_parser_configuration_does_not_change_default_parser(self):

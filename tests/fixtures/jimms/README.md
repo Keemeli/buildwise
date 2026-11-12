@@ -11,8 +11,8 @@ Source URLs:
 - https://www.jimms.fi/fi/Product/List/000-00P/komponentit--naytonohjaimet?page=2
 
 `expected_products.json` uses names, URLs and integer-cent prices from the
-independently saved product-page observations. SKU values come from the category
-cards' `.product-box-sku` elements. This cross-check catches use of analytics
+independently saved product-page observations. Numeric `external_id` values come from the product URL record ID.
+`retailer_sku` values come from the category cards' `.product-box-sku` elements. This cross-check catches use of analytics
 prices, which differ from displayed `.price__amount` prices in these responses.
 
 These are historical offline fixtures, not claims about current prices or all

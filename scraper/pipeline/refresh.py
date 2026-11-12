@@ -9,6 +9,7 @@ from collections import deque
 from datetime import datetime, timezone
 from pathlib import Path
 from scraper.config import PROJECT_ROOT, CATEGORIES
+from scraper.retailers.registry import default_registry
 
 SCRAPER_DIR = PROJECT_ROOT / "scraper"
 LOG_PATH = PROJECT_ROOT / "data" / "refresh_log.jsonl"
@@ -45,8 +46,9 @@ class RefreshPipeline:
     """
 
     def __init__(self, options: argparse.Namespace, categories: list[str], shops: list[str],
-                 stage_runner=None, project_root: Path | None = None, log_path: Path | None = None):
+                 stage_runner=None, project_root: Path | None = None, log_path: Path | None = None, registry=None):
         self.options, self.categories, self.shops = options, categories, shops
+        self.registry = default_registry() if registry is None else registry
         self.stage_runner = run_stage if stage_runner is None else stage_runner
         self.project_root = PROJECT_ROOT if project_root is None else project_root
         self.data_dir = getattr(options, "data_dir", self.project_root / "data")
@@ -57,40 +59,49 @@ class RefreshPipeline:
         stages: list[tuple[str, list[str]]] = []
         common = ["--pages", str(self.options.pages), "--delay", str(self.options.delay),
                   "--data-dir", str(self.data_dir)]
+        generic_input = getattr(self.options, 'input', None)
+        generic_url = getattr(self.options, 'url', None)
+        if (generic_input or generic_url) and len(self.shops) != 1:
+            raise ValueError('--input/--url needs exactly one retailer in --shops')
+        # Preserve old flags at the command boundary; collection stays generic.
+        legacy_inputs = {'jimms': getattr(self.options, 'jimms_input', None)}
+        legacy_urls = {'jimms': getattr(self.options, 'jimms_category_url', None)}
+        adapters = [self.registry.get(key) for key in self.shops]
         if not self.options.skip_scrape:
-            if "datatronic" in self.shops:
-                for category in self.categories:
-                    stages.append((f"datatronic-{category}", ["collect", "--shop", "datatronic",
-                                   "--category", category, *common]))
-            if "jimms" in self.shops:
-                collection = ["collect", "--shop", "jimms", *common]
-                if self.options.jimms_category_url and self.options.jimms_input:
-                    raise ValueError("use --jimms-input or --jimms-category-url, not both")
-                if self.options.jimms_input:
-                    collection += ["--input", str(self.options.jimms_input.resolve())]
+            for adapter in adapters:
+                key = adapter.config.key
+                manifest = generic_input or legacy_inputs.get(key)
+                url = generic_url or legacy_urls.get(key)
+                if manifest and url:
+                    raise ValueError('use a product manifest or category URL, not both')
+                collection = ['collect', '--shop', key, *common]
+                if manifest:
+                    if not adapter.config.capabilities.product_prices:
+                        raise ValueError(f'{adapter.config.name} does not support product-page prices')
+                    collection += ['--input', str(manifest.resolve())]
                 else:
-                    if self.options.jimms_category_url:
+                    if url:
                         if len(self.categories) != 1:
-                            raise ValueError("Jimms URL override needs exactly one --categories value")
-                        collection += ["--url", self.options.jimms_category_url]
+                            raise ValueError('URL override needs exactly one category')
+                        adapter.config.validate_url(url)
+                        collection += ['--url', url]
                     else:
-                        from scraper.retailers.jimms import CATEGORY_URLS
-                        missing = [c for c in self.categories if c not in CATEGORY_URLS]
-                        if missing:
-                            raise ValueError("Jimms categories need verified URLs: " + ", ".join(missing)
-                                             + "; choose gpu/cpu, supply a single --jimms-category-url or --jimms-input")
+                        for category in self.categories:
+                            adapter.category_url(category)
                     for category in self.categories:
-                        collection += ["--category", category]
-                stages.append(("jimms-collect", collection))
-        if not self.options.skip_specs and "datatronic" in self.shops:
-            specs_args = ["specs", "--shop", "datatronic", "--delay", str(self.options.delay),
-                          "--raw-dir", str(self.data_dir / "raw"),
-                          "--out", str(self.data_dir / "normalised")]
-            for category in self.categories:
-                specs_args += ["--category", category]
-            if self.options.cold:
-                specs_args.append("--force")
-            stages.append(("datatronic-specs", specs_args))
+                        collection += ['--category', category]
+                stages.append((f'{key}-collect', collection))
+        if not self.options.skip_specs:
+            for adapter in adapters:
+                if not adapter.config.capabilities.specifications:
+                    continue
+                specs_args = ['specs', '--shop', adapter.config.key, '--delay', str(self.options.delay),
+                              '--raw-dir', str(self.data_dir / 'raw'), '--out', str(self.data_dir / 'normalised')]
+                for category in self.categories:
+                    specs_args += ['--category', category]
+                if self.options.cold:
+                    specs_args.append('--force')
+                stages.append((f'{adapter.config.key}-specs', specs_args))
         stages.append(("normalise", ["normalise", "--raw-dir", str(self.data_dir / "raw"),
                                     "--out", str(self.data_dir / "normalised")]))
         stages.append(("export", ["export", "--source", str(self.data_dir / "normalised/components.json"),

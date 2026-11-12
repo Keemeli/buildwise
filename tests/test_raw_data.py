@@ -32,7 +32,7 @@ class RawDataTests(unittest.TestCase):
                 self.assertEqual(payload['raw_html'], 'raw/html/page.html')
                 self.assertEqual(payload['fetched_at'], observed.isoformat(timespec='seconds'))
                 self.assertEqual(payload['item_count'], len(payload['items']))
-                self.assertEqual(payload['schema_version'], 1)
+                self.assertEqual(payload['schema_version'], 2)
                 payloads.append(payload)
             self.assertEqual(set(payloads[0]), set(payloads[1]))
             self.assertEqual(set(payloads[0]['items'][0]), set(payloads[1]['items'][0]))
@@ -73,8 +73,10 @@ class RawDataTests(unittest.TestCase):
         import contextlib
         import io
         from unittest.mock import Mock
-        from scraper.workers.datatronic import DatatronicScraper
-        from scraper.workers.jimms import JimmsPriceScraper
+        from scraper.workers.collection_worker import CollectionWorker
+        from scraper.retailers.datatronic import DatatronicAdapter
+        from scraper.retailers.jimms import JimmsAdapter
+        from scraper.retailers.contracts import ProductRequest
         from scraper.pipeline.normalisation import ComponentNormaliser
         from scraper.workers.specifications import iter_listings
 
@@ -94,9 +96,9 @@ class RawDataTests(unittest.TestCase):
             datatronic.fetch.return_value = (listing, listing_path, 'cache')
             jimms.fetch.return_value = (product, product_path, 'cache')
             with contextlib.redirect_stdout(io.StringIO()):
-                self.assertEqual(DatatronicScraper(['gpu'], project_root=root, fetcher=datatronic).run(), 0)
-                self.assertEqual(JimmsPriceScraper([{'category': 'gpu', 'url': 'https://www.jimms.fi/gpu'}],
-                                                 data, jimms).run(), 0)
+                self.assertEqual(CollectionWorker(DatatronicAdapter(), data, datatronic, ['gpu']).run().exit_code, 0)
+                self.assertEqual(CollectionWorker(JimmsAdapter(), data, jimms, product_requests=(
+                    ProductRequest('gpu', 'https://www.jimms.fi/fi/Product/Show/123/gpu'),)).run().exit_code, 0)
                 self.assertEqual(ComponentNormaliser(data / 'raw', data / 'normalised').run(), 0)
             documents = [json.loads(path.read_text()) for path in (data / 'raw').glob('*.json')]
             self.assertEqual(len(documents), 2)
@@ -122,6 +124,15 @@ class RawDataTests(unittest.TestCase):
                 items=[RawProduct('GPU', 29999, 'https://www.jimms.fi/gpu')])
             self.assertNotEqual(writer.write(**args), writer.write(**args))
             self.assertEqual(len(list((root / 'raw').glob('*.json'))), 2)
+
+    def test_retailer_id_and_sku_are_distinct_and_unknown_values_stay_null(self):
+        product = RawProduct.from_item({'name': 'GPU', 'url': 'https://shop.fi/gpu',
+                                        'external_id': 209432, 'retailer_sku': 'PRIME-RTX5070-O12G'})
+        self.assertEqual(product.external_id, '209432')
+        self.assertEqual(product.retailer_sku, 'PRIME-RTX5070-O12G')
+        self.assertIsNone(RawProduct('GPU', None, 'https://shop.fi/gpu').retailer_sku)
+        with self.assertRaises(ValueError):
+            RawProduct('GPU', 100, 'https://shop.fi/gpu', retailer_sku=209432)
 
 
 if __name__ == '__main__':

@@ -16,7 +16,7 @@ sys.path.insert(0, str(ROOT))
 from scraper.cli import main
 from scraper.common.fetching import PageFetcher
 from scraper.retailers.jimms import CATEGORY_URLS
-from scraper.workers.jimms import page_url
+from scraper.retailers.contracts import listing_page_url as page_url
 
 
 
@@ -24,7 +24,7 @@ class ManifestCollectionCLITests(unittest.TestCase):
     def test_offline_cli_output_contract(self):
         with tempfile.TemporaryDirectory() as directory:
             root = Path(directory)
-            url = 'https://www.jimms.fi/product'
+            url = 'https://www.jimms.fi/fi/Product/Show/123/gpu'
             fetcher = PageFetcher(root / 'raw' / 'html', 'jimms', {'www.jimms.fi'})
             import hashlib
             fetcher.cache_dir.mkdir(parents=True)
@@ -55,8 +55,8 @@ class UnifiedCLITests(unittest.TestCase):
         with tempfile.TemporaryDirectory() as directory:
             root = Path(directory)
             product = 'https://www.jimms.fi/fi/Product/Show/123/gpu'
-            self.cache(root, 'jimms', page_url(CATEGORY_URLS['gpu'], 1),
-                '<div id="initproductlist"><product-box><a href="' + product + '">GPU</a></product-box></div>')
+            self.cache(root, 'jimms', page_url(CATEGORY_URLS['gpu'], 1, include_first=True),
+                '<div id="initproductlist"><product-box><h5 class="product-box-name"><a href="' + product + '">GPU</a></h5><div class="product-box-sku">SKU</div><span class="price__amount">299,99 €</span></product-box></div>')
             self.cache(root, 'jimms', product,
                 '<h1>MSI RTX 5070</h1><meta property="product:price:amount" content="299.99">')
             with patch('requests.Session.get', side_effect=AssertionError('offline request')), \
@@ -66,7 +66,10 @@ class UnifiedCLITests(unittest.TestCase):
             payload = json.loads(next((root / 'raw').glob('jimms_*.json')).read_text())
             self.assertEqual(payload['items'][0]['price_cents'], 29999)
             self.assertEqual(payload['origin'], 'cache')
-            self.assertTrue((root / 'discovery/jimms_gpu.report.json').exists())
+            self.assertEqual(payload['source_type'], 'category')
+            self.assertEqual(payload['items'][0]['external_id'], '123')
+            self.assertEqual(payload['items'][0]['retailer_sku'], 'SKU')
+            self.assertFalse((root / 'discovery').exists())
 
     def test_datatronic_collection_uses_same_command(self):
         with tempfile.TemporaryDirectory() as directory:

@@ -33,6 +33,7 @@ def iter_raw_items(raw_dir: Path, only_category: Optional[str]) -> List[Dict[str
                 "price_cents": item.get("price_cents"),
                 "url": item.get("url"),
                 "external_id": item.get("external_id"),
+                "retailer_sku": item.get("retailer_sku"),
                 "shop": payload.get("shop", "Datatronic"),
                 "fetched_at": payload.get("fetched_at") or "",
                 "snapshot_date": (payload.get("fetched_at") or "")[:10] or date.today().isoformat(),

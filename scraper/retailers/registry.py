@@ -21,7 +21,13 @@ class RetailerRegistry:
 
 
 def default_registry() -> RetailerRegistry:
-    """Import concrete adapters only when the collection layer asks for them."""
-    from scraper.retailers.datatronic import DatatronicAdapter
-    from scraper.retailers.jimms import JimmsAdapter
-    return RetailerRegistry({'datatronic': DatatronicAdapter, 'jimms': JimmsAdapter})
+    """Keep command help and export usable without HTML parsing dependencies."""
+    def datatronic():
+        from scraper.retailers.datatronic import DatatronicAdapter
+        return DatatronicAdapter()
+
+    def jimms():
+        from scraper.retailers.jimms import JimmsAdapter
+        return JimmsAdapter()
+
+    return RetailerRegistry({'datatronic': datatronic, 'jimms': jimms})

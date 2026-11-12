@@ -100,8 +100,8 @@ class DatatronicAdapter:
     def category_url(self, category: str) -> str:
         return self.config.category_url(category)
 
-    def page_url(self, category: str, page: int) -> str:
-        return listing_page_url(self.category_url(category), page)
+    def page_url(self, category: str, page: int, *, category_url: str | None = None) -> str:
+        return listing_page_url(category_url or self.category_url(category), page)
 
     def parse_category(self, html: str, category: str, source_url: str) -> CategoryResult:
         self.category_url(category)  # Reject unsupported categories explicitly.

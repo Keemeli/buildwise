@@ -42,56 +42,73 @@ python3 -m scraper refresh --offline
 python3 -m unittest discover -s tests -v
 ```
 
-`collect` only saves observations; `refresh` also normalises and exports. Jimms
-discovery runs internally and saves its manifest/report under
-`data/discovery/jimms_<category>.json` and `.report.json`. Category and product
-requests share one fetcher, preserving robots state and request spacing between
-phases. Failure in discovery stops collection before product requests and leaves
-an existing manifest intact for the failed category.
+`collect` saves observations; `refresh` also normalises and exports. Both
+retailers now use CollectionWorker and get displayed prices from category pages.
+Only explicit adapter ProductRequests trigger product-page price reads. The two
+verified Jimms GPU pages yield 50 products from two category responses, plus any
+robots.txt request required for an uncached run; no product-page visits are needed.
 
-Jimms has verified category paths configured for GPU and CPU. For another
-category, specify one `--category` with its actual `--url`. `--all` means all
-configured categories (GPU/CPU for Jimms; all seven for Datatronic). Repeat
-`--category` to select multiple configured categories. `--input` accepts the
-existing category/url product manifest instead of categories. `--force` and
-`--offline` are mutually exclusive. Cached observations retain their original
-cache timestamp.
+`--category` selects configured categories; repeat it for multiple categories.
+`--all` uses the selected adapter's configuration (seven categories for Datatronic,
+GPU/CPU for Jimms). GPU card prices are verified for Jimms; CPU layout still needs
+its own fixture validation. Use `--url` with exactly one category to override an
+allowed retailer URL. Use `--input` instead of categories to read product-page
+requests; the adapter must declare product-price support. Currently Jimms supports
+this, while Datatronic explicitly rejects it. Optional manifest fields
+`external_id` and `retailer_sku` are retained through follow-up parsing.
 
-Refresh retains `--skip-scrape`, `--skip-specs`, `--cold`, `--jimms-input` and
-`--jimms-category-url`. Choose `--categories gpu` or `gpu,cpu` when using configured
-Jimms discovery; an explicit Jimms URL override requires one category. `--offline`
-means normalise/export only; `--skip-scrape` alone can still run Datatronic specs.
-`--cold` forces Datatronic specification requests, not Jimms prices.
+`--force` and `--offline` are mutually exclusive. Offline collection reads today's
+HTML cache; missing pages fail explicitly. The worker owns one fetcher for the
+entire run, so robots state and request spacing are retained across categories and
+follow-ups. Collection writes no new discovery manifests: saved
+`data/discovery/` files remain usable as manual inputs and are not deleted.
+
+Refresh uses one collection stage per retailer through the same CLI. `--input`
+and `--url` can target a single retailer; `--jimms-input` and
+`--jimms-category-url` remain legacy aliases at the refresh boundary. `--offline`
+means normalise/export only. `--skip-scrape` alone can still run supported
+specification stages. `--cold` forces Datatronic specifications, not price reads.
 
 For isolated runs, collect accepts `--data-dir`. Refresh accepts `--data-dir` and
 `--web-output`; normalise accepts `--raw-dir`/`--out`, and export accepts
-`--source`/`--target`. The default export still writes the repository's
-`web/data/components.json`, which must be committed to reach the deployed site.
+`--source`/`--target`. Default export still writes `web/data/components.json`.
 
 ## Structure
 
 ```text
 scraper/
   __main__.py            python3 -m scraper entry point
-  cli.py                 command arguments and dispatch
+  cli.py                 generic collection options and command dispatch
   config.py              project paths and canonical categories
-  inputs/                maintained URL manifests and committed examples
-  common/                HTTP, robots rules, cache and exact price conversion
-  retailers/             retailer selectors, category paths and spec field maps
+  common/                requests, robots rules, caching and raw-data models
+  retailers/
+    contracts.py         configuration, capabilities and typed adapter results
+    registry.py          lazy retailer factories
+    datatronic.py        Datatronic parser and adapter
+    jimms.py             Jimms parser and adapter
+    datatronic_specs.py  existing specification parser
   workers/
-    collection.py        unified retailer collection service
-    jimms.py             internal discovery and product-price workers
-    datatronic.py        category-price worker
-    specifications.py    Datatronic specification collection and checkpoints
-  pipeline/              component parsing, normalisation, reports, refresh/export
+    collection.py        input validation and shared-worker construction
+    collection_worker.py adapter-driven loop, follow-ups and run result
+    specifications.py    existing Datatronic specification worker
+  pipeline/              component parsing, normalisation, reports and refresh
 ```
 
-The seven old top-level command scripts have been removed. Implementations remain
-in the worker/pipeline packages; import classes from those canonical paths.
-Discovery is an internal Jimms phase, not a separate CLI command. Specification
-collection remains separate from price collection behind `specs --shop ...`.
-Retailer strategies compose the shared PageFetcher; no artificial inheritance
-hierarchy or generic selector language is introduced.
+The obsolete DatatronicScraper, JimmsCategoryDiscovery and JimmsPriceScraper
+collection implementations and their compatibility helpers have been removed.
+Retailer-specific price logic belongs in adapters; collection orchestration has
+no retailer-name branches. New collection adapters need only a registry entry,
+configuration, parsing implementation and tests. Specification generalisation is
+a separate milestone; its CLI currently supports Datatronic only.
+
+CollectionResult records pages/products fetched, unique items found, duplicate
+URLs skipped, parser issues, failures and status. Results use the common
+`data/raw/scrape_runs.jsonl` log. Earlier successful observations are retained
+when later pages/products fail. Failed requests and repeated or empty listing
+pages return nonzero, stopping refresh. Parser diagnostics (for example a null
+Datatronic listing price) remain explicit without introducing a new missing-price
+policy in this milestone. Resolved follow-up issues are still retained as
+diagnostics. Broader policy/reporting changes remain milestone 3.
 
 ## Validation and current limits
 
@@ -128,7 +145,7 @@ python3 -m scraper collect --shop jimms --input data/discovery/jimms_gpu.json
 
 Raw product observations in `data/raw/` and the normalised catalogue are unchanged.
 
-## Shared raw price-observation contract (version 1)
+## Shared raw price-observation contract (version 2)
 
 Both collection workers write through `common/raw_data.py`: `RawProduct` defines
 item fields, `RawDocument` defines the source-response envelope, and
@@ -139,7 +156,7 @@ Every new document has the same keys:
 
 | Field | Meaning |
 | --- | --- |
-| schema_version | `1` for the shared versioned contract |
+| schema_version | `2` for separate retailer record IDs and SKU fields |
 | shop / category | Retailer attribution and canonical component category |
 | source_type | `category` or `product`, describing the fetched response |
 | source_url | URL of that response |
@@ -151,15 +168,16 @@ Every new document has the same keys:
 | item_count | Number of entries in `items` |
 | items | Products extracted from that response |
 
-Every item has exactly `name`, `price_cents`, `url`, `external_id`, `extraction`.
+Every new item has `name`, `price_cents`, `url`, `external_id`, `retailer_sku`,
+and `extraction`.
 Prices are integer euro cents or null; missing retailer IDs stay null.
 `extraction` records the parser method (Datatronic listing card or Jimms metadata
 selector) and is null when unknown. Retailer-specific extra parser keys are not
 persisted outside this common shape.
 
-Datatronic may return many items in one category response. Jimms returns one item
-per product response. Their grouping differs naturally, but their envelope/item
-schemas and field meanings are now identical. Jimms no longer uses a product
+Both retailers return multiple items from category responses. Explicit product
+follow-ups return one item per response. Their envelope/item schemas and field
+meanings are identical. Jimms no longer uses a product
 counter as a pretend page number. `item_count` replaces the old `items_on_page`.
 
 All new filenames follow
@@ -221,6 +239,42 @@ card SKU. No category total is invented from the page's JS placeholder.
 Two saved GPU pages (50 products) match independently saved product-page prices,
 names and URLs. Other category layouts are not verified by this result.
 
-This milestone is additive: existing parser functions, CLI behaviour and collection
-workers remain unchanged. The CLI still uses the previous Jimms discovery/product
-workflow until milestone 2 replaces worker branching with the adapter-driven loop.
+Milestone 2 now connects the adapters through the shared collection worker.
+Existing parser functions remain available for parser compatibility; the separate
+retailer-specific collection workers have been removed.
+
+
+## Identifier correction — milestone 1.1
+
+`external_id` means the retailer's internal product record ID, stored as text.
+For Datatronic this remains its `data-id-product` value. For Jimms the adapter
+extracts the numeric `/fi/Product/Show/<id>/...` URL segment, for example `209432`.
+Jimms's displayed `.product-box-sku` value, for example `PRIME-RTX5070-O12G`, is
+stored separately as nullable `retailer_sku`. An unknown SKU stays null. Neither
+field is a BuildWise-generated ID or proof of a cross-retailer component match.
+
+ProductRequest carries both identifiers through missing-price follow-ups. Jimms
+product parsing derives the ID from the validated URL and rejects a conflicting
+request ID. The normaliser preserves `retailer_sku` when supplied; historical
+listings without it keep their previous shape and values.
+
+New RawDataWriter documents use schema version 2. Readers still accept version 1
+and unversioned input. No historical files have been converted by this correction;
+legacy identifier values are not silently reinterpreted. The earlier 106-file
+migration remains version 1, and a further historical migration is a separate task.
+
+The corrected adapters are connected to collection in milestone 2. Category-card
+IDs and SKUs now flow directly to the shared raw writer. Unknown manifest SKU
+values stay null; existing files have not been rewritten.
+
+
+## Milestone 2 validation
+
+The shared worker is tested with a fake third retailer, complete category results,
+follow-ups, URL deduplication, partial failures, writer failures and fetcher cleanup.
+Both real adapters have offline worker/CLI integration checks. Jimms's 50 saved
+GPU observations match independently saved product-page prices, names and URLs,
+and retain record IDs/SKUs without product visits. Datatronic pagination preserves
+its existing parser fields and category totals without product visits. Shared raw
+schema and mixed-retailer normalisation checks pass. No live scraping, historical
+migration, database writes or saved catalogue updates are performed by these tests.

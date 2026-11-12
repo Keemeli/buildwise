@@ -111,7 +111,7 @@ class RetailerAdapterTests(unittest.TestCase):
                 self.assertEqual(result.issues, ())
                 self.assertIsNone(result.site_total_products)
                 actual.extend({'page': page, 'name': item.name, 'price_cents': item.price_cents,
-                               'url': item.url, 'external_id': item.external_id} for item in result.observations)
+                               'url': item.url, 'external_id': item.external_id, 'retailer_sku': item.retailer_sku} for item in result.observations)
         self.assertEqual(actual, expected)
         self.assertEqual(len({item['url'] for item in actual}), 50)
 
@@ -119,7 +119,8 @@ class RetailerAdapterTests(unittest.TestCase):
         adapter = JimmsAdapter()
         result = adapter.parse_category(jimms_card(), 'gpu', adapter.page_url('gpu', 1))
         self.assertEqual(result.observations[0].price_cents, 29999)
-        self.assertEqual(result.observations[0].external_id, 'TEST-SKU')
+        self.assertEqual(result.observations[0].external_id, '123')
+        self.assertEqual(result.observations[0].retailer_sku, 'TEST-SKU')
         self.assertEqual(result.observations[0].extraction, 'category:.price__amount')
 
     def test_missing_invalid_or_conflicting_display_price_requests_follow_up(self):
@@ -130,14 +131,15 @@ class RetailerAdapterTests(unittest.TestCase):
                 result = adapter.parse_category(jimms_card(price), 'gpu', adapter.page_url('gpu', 1))
                 self.assertEqual(result.observations, ())
                 self.assertEqual(result.issues[0].code, reason)
-                self.assertEqual(result.product_requests, (ProductRequest('gpu', 'https://www.jimms.fi/fi/Product/Show/123/gpu', 'TEST-SKU', reason),))
+                self.assertEqual(result.product_requests, (ProductRequest('gpu', 'https://www.jimms.fi/fi/Product/Show/123/gpu', '123', reason, retailer_sku='TEST-SKU'),))
 
     def test_product_fallback_preserves_sku_and_returns_raw_product(self):
-        request = ProductRequest('gpu', 'https://www.jimms.fi/fi/Product/Show/123/gpu', 'TEST-SKU')
+        request = ProductRequest('gpu', 'https://www.jimms.fi/fi/Product/Show/123/gpu', '123', retailer_sku='TEST-SKU')
         result = JimmsAdapter().parse_product('<h1>GPU</h1><meta property="product:price:amount" content="299.99">', request)
         self.assertIsInstance(result, RawProduct)
         self.assertEqual(result.price_cents, 29999)
-        self.assertEqual(result.external_id, 'TEST-SKU')
+        self.assertEqual(result.external_id, '123')
+        self.assertEqual(result.retailer_sku, 'TEST-SKU')
 
     def test_adapter_rejects_foreign_source_and_product_urls(self):
         for adapter in (JimmsAdapter(), DatatronicAdapter()):
@@ -145,6 +147,25 @@ class RetailerAdapterTests(unittest.TestCase):
                 adapter.parse_category('<html/>', 'gpu', 'https://other.example/list')
         with self.assertRaises(ValueError):
             JimmsAdapter().parse_product('<html/>', ProductRequest('gpu', 'https://other.example/gpu'))
+
+    def test_jimms_missing_sku_does_not_erase_numeric_id(self):
+        adapter = JimmsAdapter()
+        result = adapter.parse_category(jimms_card(sku=''), 'gpu', adapter.page_url('gpu', 1))
+        self.assertEqual(result.observations[0].external_id, '123')
+        self.assertIsNone(result.observations[0].retailer_sku)
+
+    def test_jimms_rejects_missing_or_conflicting_retailer_ids(self):
+        adapter = JimmsAdapter()
+        for url in ('https://www.jimms.fi/fi/Product/Show/gpu',
+                    'https://www.jimms.fi/fi/Product/Show/123abc/gpu'):
+            with self.subTest(url=url), self.assertRaises(ValueError):
+                adapter.product_id_from_url(url)
+        with self.assertRaisesRegex(ValueError, 'conflicts'):
+            adapter.parse_product('<html/>', ProductRequest('gpu', 'https://www.jimms.fi/fi/Product/Show/123/gpu', '456'))
+        html = jimms_card().replace('/fi/Product/Show/123/gpu', '/fi/Product/Show/not-a-number/gpu')
+        result = adapter.parse_category(html, 'gpu', adapter.page_url('gpu', 1))
+        self.assertEqual(result.observations, ())
+        self.assertEqual(result.issues[0].code, 'invalid_product_id')
 
 
 if __name__ == '__main__':

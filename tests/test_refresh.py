@@ -36,7 +36,7 @@ class RefreshPipelineTests(unittest.TestCase):
                                    ['gpu'], ['datatronic', 'jimms'])
         stages = pipeline.build_stages()
         self.assertEqual([name for name, _ in stages], [
-            'datatronic-gpu', 'jimms-collect', 'datatronic-specs', 'normalise', 'export'])
+            'datatronic-collect', 'jimms-collect', 'datatronic-specs', 'normalise', 'export'])
         self.assertIn('--force', dict(stages)['datatronic-specs'])
 
     def test_pipeline_stops_before_export_on_worker_failure(self):
@@ -47,7 +47,7 @@ class RefreshPipelineTests(unittest.TestCase):
                 stage_runner=runner, project_root=root, log_path=root / 'refresh.jsonl')
             self.assertEqual(pipeline.run(), 1)
             self.assertEqual(runner.call_count, 1)
-            self.assertEqual(json.loads((root / 'refresh.jsonl').read_text())['status'], 'failed at datatronic-gpu')
+            self.assertEqual(json.loads((root / 'refresh.jsonl').read_text())['status'], 'failed at datatronic-collect')
 
 
 class RefreshCategoryTests(unittest.TestCase):
@@ -62,7 +62,9 @@ class RefreshCategoryTests(unittest.TestCase):
                  patch.object(refresh, 'run_stage', return_value={'ok': True}) as stage:
                 self.assertEqual(command.main(), 0)
                 names = [call.args[0] for call in stage.call_args_list]
-                self.assertEqual(names, ['datatronic-gpu', 'datatronic-cpu', 'normalise', 'export'])
+                self.assertEqual(names, ['datatronic-collect', 'normalise', 'export'])
+                collection_args = stage.call_args_list[0].args[1]
+                self.assertEqual([collection_args[i + 1] for i, arg in enumerate(collection_args) if arg == '--category'], ['gpu', 'cpu'])
 
 
 if __name__ == '__main__':
