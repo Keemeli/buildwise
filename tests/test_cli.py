@@ -1,21 +1,46 @@
-"""Unified CLI regression checks: discovery integration and network-free rebuilds."""
+"""Unified command interface and offline end-to-end workflows."""
 import contextlib
 import hashlib
 import io
 import json
-from pathlib import Path
 import subprocess
 import sys
 import tempfile
 import unittest
+from pathlib import Path
 from unittest.mock import patch
 
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
+
 from scraper.cli import main
 from scraper.common.fetching import PageFetcher
 from scraper.retailers.jimms import CATEGORY_URLS
 from scraper.workers.jimms import page_url
+
+
+
+class ManifestCollectionCLITests(unittest.TestCase):
+    def test_offline_cli_output_contract(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            url = 'https://www.jimms.fi/product'
+            fetcher = PageFetcher(root / 'raw' / 'html', 'jimms', {'www.jimms.fi'})
+            import hashlib
+            fetcher.cache_dir.mkdir(parents=True)
+            (fetcher.cache_dir / (hashlib.sha256(url.encode()).hexdigest() + '.html')).write_text(
+                '<h1>Example GPU</h1><meta property="product:price:amount" content="299.99">')
+            fetcher.close()
+            manifest = root / 'urls.json'
+            manifest.write_text(json.dumps([{'category': 'gpu', 'url': url}]))
+            result = subprocess.run([sys.executable, '-B', '-m', 'scraper', 'collect', '--shop', 'jimms',
+                                     '--input', str(manifest), '--data-dir', str(root), '--offline'],
+                                    cwd=Path(__file__).resolve().parents[1], capture_output=True, text=True)
+            self.assertEqual(result.returncode, 0, result.stderr)
+            payload = json.loads(next((root / 'raw').glob('jimms_*.json')).read_text())
+            self.assertEqual(payload['shop'], 'Jimms')
+            self.assertEqual(payload['items'][0]['price_cents'], 29999)
+            self.assertEqual(payload['origin'], 'cache')
 
 
 class UnifiedCLITests(unittest.TestCase):
@@ -96,6 +121,16 @@ class UnifiedCLITests(unittest.TestCase):
             self.assertEqual(json.loads(target.read_text()), json.loads((root / 'normalised/components.json').read_text()))
             record = json.loads((root / 'refresh_log.jsonl').read_text())
             self.assertEqual([stage['stage'] for stage in record['stages']], ['normalise', 'export'])
+
+
+class CommandHelpTests(unittest.TestCase):
+    def test_unified_commands_accept_help(self):
+        for name in ('collect', 'specs', 'normalise', 'export', 'refresh'):
+            with self.subTest(name=name):
+                result = subprocess.run([sys.executable, '-B', '-m', 'scraper', name, '--help'],
+                                        cwd=ROOT, capture_output=True, text=True)
+                self.assertEqual(result.returncode, 0, result.stderr)
+                self.assertIn('usage:', result.stdout)
 
 
 if __name__ == '__main__':

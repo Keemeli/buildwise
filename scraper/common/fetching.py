@@ -23,7 +23,8 @@ class PageFetcher:
     """
 
     def __init__(self, cache_root: Path, retailer: str, hosts: set[str],
-                 delay: float = 1.0, offline: bool = False, force: bool = False):
+                 delay: float = 1.0, offline: bool = False, force: bool = False,
+                 session: requests.Session | None = None):
         if delay < 1.0:
             raise ValueError("delay must be at least 1.0 seconds")
         if offline and force:
@@ -33,7 +34,7 @@ class PageFetcher:
         self.delay, self.offline, self.force = delay, offline, force
         self.last_attempt: float | None = None
         self.robots: dict[str, tuple[RobotFileParser, float] | str] = {}
-        self.session = requests.Session()
+        self.session = requests.Session() if session is None else session
         self.session.headers.update({"User-Agent": USER_AGENT,
                                      "Accept-Language": "fi-FI,fi;q=0.9,en;q=0.8"})
 

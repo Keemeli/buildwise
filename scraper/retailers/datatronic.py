@@ -6,6 +6,12 @@ import re
 from bs4 import BeautifulSoup
 from scraper.common.prices import parse_price_cents
 
+from scraper.common.raw_data import RawProduct
+from scraper.retailers.contracts import (
+    CategoryResult, ParseIssue, ProductRequest, RetailerConfig,
+    RetailerCapabilities, UnsupportedOperationError, listing_page_url,
+)
+
 BASE_URL = "https://datatronic.fi"
 USER_AGENT = "BuildWise-course-project/0.1 (eekarjal24@students.oamk.fi)"
 
@@ -77,3 +83,34 @@ class DatatronicParser:
 def parse_listing(html: str) -> tuple[list[dict], int | None]:
     """Compatibility function; delegate to DatatronicParser."""
     return DatatronicParser().parse_listing(html)
+
+
+class DatatronicAdapter:
+    """Expose existing category-card extraction through the common contract."""
+
+    config = RetailerConfig(
+        key='datatronic', name=SHOP['name'], base_url=BASE_URL,
+        allowed_hosts=frozenset({'datatronic.fi', 'www.datatronic.fi'}),
+        category_paths=CATEGORIES,
+        capabilities=RetailerCapabilities(category_prices=True, product_prices=False, specifications=True))
+
+    def __init__(self, parser: DatatronicParser | None = None):
+        self.parser = parser if parser is not None else DatatronicParser(self.config.base_url)
+
+    def category_url(self, category: str) -> str:
+        return self.config.category_url(category)
+
+    def page_url(self, category: str, page: int) -> str:
+        return listing_page_url(self.category_url(category), page)
+
+    def parse_category(self, html: str, category: str, source_url: str) -> CategoryResult:
+        self.category_url(category)  # Reject unsupported categories explicitly.
+        self.config.validate_url(source_url)
+        items, total = self.parser.parse_listing(html)
+        observations = tuple(RawProduct.from_item(item, extraction='listing_card') for item in items)
+        issues = tuple(ParseIssue('missing_price', 'listing card has no parseable price', item.url)
+                       for item in observations if item.price_cents is None)
+        return CategoryResult(observations=observations, site_total_products=total, issues=issues)
+
+    def parse_product(self, html: str, request: ProductRequest) -> RawProduct:
+        raise UnsupportedOperationError('Datatronic product-page price extraction is not implemented')

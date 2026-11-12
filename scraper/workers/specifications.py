@@ -10,7 +10,7 @@ from pathlib import Path
 from typing import Any, Dict, List, Optional, Tuple
 import requests
 from scraper.config import PROJECT_ROOT, CATEGORIES, RAW_DIR as DEFAULT_RAW_DIR, NORMALISED_DIR as DEFAULT_OUT_DIR
-from scraper.common.fetching import USER_AGENT
+from scraper.common.fetching import PageFetcher
 from scraper.retailers.datatronic_specs import DatatronicSpecParser, FIELD_MAP
 from scraper.pipeline.reports import SpecificationReportWriter
 
@@ -49,19 +49,10 @@ def cache_path(url: str, external_id: str, run_date: str) -> Path:
     return CACHE_DIR / "datatronic" / run_date / f"{key}.html"
 
 
-def fetch_page(session: requests.Session, url: str, external_id: str, run_date: str,
-               force: bool) -> Tuple[str, str]:
-    """Return (html, origin). origin is 'cache' when today's copy was reused."""
-    path = cache_path(url, external_id, run_date)
-    if path.exists() and not force:
-        return path.read_text(encoding="utf-8"), "cache"
-    response = session.get(url, timeout=30)
-    response.raise_for_status()
-    response.encoding = response.apparent_encoding or "utf-8"
-    text = response.text
-    path.parent.mkdir(parents=True, exist_ok=True)
-    path.write_text(text, encoding="utf-8")
-    return text, "network"
+def fetch_page(fetcher: PageFetcher, url: str) -> Tuple[str, str]:
+    """Use the shared robots, host validation, cache and request-spacing policy."""
+    html, _, origin = fetcher.fetch(url)
+    return html, origin
 
 
 def load_store(path: Path) -> Dict[str, Any]:
@@ -85,16 +76,23 @@ def write_store(path: Path, store: Dict[str, Any]) -> None:
 
 
 class DatatronicSpecExtractor:
-    """Own a specification pass, its HTTP session and retailer-specific parser.
+    """Own a specification pass, its shared fetcher and retailer-specific parser.
 
     Pure unit conversion helpers stay functions. The extractor keeps the existing
     checkpoint, report, cache, incremental and offline-reparse behaviour.
+    Missing/empty results and request or parser failures return a nonzero status.
     """
 
     def __init__(self, options: argparse.Namespace, session=None,
-                 spec_parser: DatatronicSpecParser | None = None, report_writer=None):
+                 spec_parser: DatatronicSpecParser | None = None, report_writer=None,
+                 fetcher: PageFetcher | None = None):
         self.options = options
-        self.session = requests.Session() if session is None else session
+        if fetcher is not None and session is not None:
+            raise ValueError("supply a fetcher or a session, not both")
+        self.fetcher = fetcher if fetcher is not None else PageFetcher(
+            CACHE_DIR, "datatronic", {"datatronic.fi", "www.datatronic.fi"},
+            delay=options.delay, offline=options.reparse, force=options.force, session=session)
+        self.session = self.fetcher.session
         self.spec_parser = spec_parser or DatatronicSpecParser()
         self.report_writer = report_writer if report_writer is not None else SpecificationReportWriter(FIELD_MAP)
 
@@ -103,7 +101,7 @@ class DatatronicSpecExtractor:
         try:
             return self._run()
         finally:
-            self.session.close()
+            self.fetcher.close()
 
     def _run(self) -> int:
         if self.options.status:
@@ -139,46 +137,41 @@ class DatatronicSpecExtractor:
 
         store_path = self.options.out / "specs.json"
         store = load_store(store_path)
-        session = self.session
-        session.headers.update({"User-Agent": USER_AGENT,
-                                "Accept-Language": "fi-FI,fi;q=0.9,en;q=0.8"})
         run_date = date.today().isoformat()
 
         done = parsed_ok = skipped = failed = no_cache = 0
         started = time.monotonic()
-        print(f"{len(listings)} products to read (cache: {CACHE_DIR / run_date})", flush=True)
+        print(f"{len(listings)} products to read (cache: {self.fetcher.cache_dir})", flush=True)
 
         for listing in listings:
             url = listing["url"]
             existing = store["items"].get(url)
 
-            if self.options.reparse:
-                # Offline mode: re-run the field mapper over today's cached HTML,
-                # so fixing FIELD_MAP costs zero requests.
-                cached = cache_path(url, listing["external_id"], run_date)
-                if not cached.exists():
+            # A previous run is reusable only when it actually parsed fields.
+            if not self.options.reparse and existing and existing.get("status") == "ok" \
+                    and existing.get("specs") and not self.options.force \
+                    and str(existing.get("fetched_at", "")).startswith(run_date):
+                skipped += 1
+                continue
+            try:
+                html, origin = fetch_page(self.fetcher, url)
+            except (requests.RequestException, OSError, ValueError) as exc:
+                if isinstance(exc, FileNotFoundError) and self.options.reparse:
+                    # An offline miss is a failed run, not a new failed observation.
+                    # Keep any previously collected specs intact.
                     no_cache += 1
+                    print(f"  NO CACHE {url} — {exc}", file=sys.stderr, flush=True)
                     continue
-                html, origin = cached.read_text(encoding="utf-8"), "cache"
-            else:
-                # Incremental: a successfully parsed product is not fetched again today.
-                if existing and existing.get("status") == "ok" and not self.options.force \
-                        and str(existing.get("fetched_at", "")).startswith(run_date):
-                    skipped += 1
-                    continue
-                try:
-                    html, origin = fetch_page(session, url, listing["external_id"], run_date, self.options.force)
-                except (requests.RequestException, OSError) as exc:
-                    failed += 1
-                    store["items"][url] = {
-                        "category": listing["category"], "name": listing["name"],
-                        "external_id": listing["external_id"], "shop": listing["shop"],
-                        "specs": {}, "status": "failed", "error": str(exc)[:120],
-                        "fetched_at": datetime.now(timezone.utc).isoformat(timespec="seconds"),
-                        "source": "product_page",
-                    }
-                    print(f"  [{listing['category']:11}] FAILED {url} — {exc}", file=sys.stderr, flush=True)
-                    continue
+                failed += 1
+                store["items"][url] = {
+                    "category": listing["category"], "name": listing["name"],
+                    "external_id": listing["external_id"], "shop": listing["shop"],
+                    "specs": {}, "status": "failed", "error": str(exc)[:120],
+                    "fetched_at": datetime.now(timezone.utc).isoformat(timespec="seconds"),
+                    "source": "product_page",
+                }
+                print(f"  [{listing['category']:11}] FAILED {url} — {exc}", file=sys.stderr, flush=True)
+                continue
 
             try:
                 features, method = self.spec_parser.extract_features(html)
@@ -193,12 +186,16 @@ class DatatronicSpecExtractor:
                     "feature_count": len(features),
                     "extraction": method,
                     "unmapped": unmapped,
-                    "status": "ok" if features else "empty",
+                    "status": "ok" if specs else "empty",
                     "fetched_at": datetime.now(timezone.utc).isoformat(timespec="seconds"),
                     "source": "product_page",
                     "origin": origin,
                 }
-                parsed_ok += 1
+                if specs:
+                    parsed_ok += 1
+                else:
+                    failed += 1
+                    store["items"][url]["error"] = "no supported specification fields parsed"
                 print(f"  [{listing['category']:11}] {len(specs):>2} specs / {len(features):>2} fields "
                       f"· {listing['name'][:52]}", flush=True)
                 done += 1
@@ -219,8 +216,6 @@ class DatatronicSpecExtractor:
                 elapsed = time.monotonic() - started
                 print(f"  … checkpoint: {done} fetched, {parsed_ok} parsed, {skipped} skipped, "
                       f"{failed} failed ({elapsed/60:.1f} min)", flush=True)
-            if not self.options.reparse:
-                time.sleep(self.options.delay)
 
         write_store(store_path, store)
         report = self.report_writer.write(self.options.out, store)
@@ -229,7 +224,7 @@ class DatatronicSpecExtractor:
               f"{failed} failed)")
         print(f"parsed specs for {parsed_ok} products → {store_path}")
         print(f"report → {report}")
-        return 0
+        return 1 if failed or no_cache else 0
 
 
 def write_report(out_dir: Path, store: Dict[str, Any]) -> Path:

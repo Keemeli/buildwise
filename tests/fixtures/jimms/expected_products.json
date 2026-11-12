@@ -1,0 +1,352 @@
+[
+  {
+    "page": 1,
+    "name": "Asus GeForce RTX 5070 PRIME - OC Edition -näytönohjain, 12GB GDDR7",
+    "price_cents": 94990,
+    "url": "https://www.jimms.fi/fi/Product/Show/209432/prime-rtx5070-o12g/asus-geforce-rtx-5070-prime-oc-edition-naytonohjain-12gb-gddr7",
+    "external_id": "PRIME-RTX5070-O12G"
+  },
+  {
+    "page": 1,
+    "name": "Asus GeForce RTX 5060 Ti DUAL - OC Edition -näytönohjain, 8GB GDDR7",
+    "price_cents": 56990,
+    "url": "https://www.jimms.fi/fi/Product/Show/210620/dual-rtx5060ti-o8g/asus-geforce-rtx-5060-ti-dual-oc-edition-naytonohjain-8gb-gddr7",
+    "external_id": "DUAL-RTX5060TI-O8G"
+  },
+  {
+    "page": 1,
+    "name": "Asus Radeon RX 9070 XT PRIME - OC Edition -näytönohjain, 16GB GDDR6",
+    "price_cents": 109990,
+    "url": "https://www.jimms.fi/fi/Product/Show/208568/prime-rx9070xt-o16g/asus-radeon-rx-9070-xt-prime-oc-edition-naytonohjain-16gb-gddr6",
+    "external_id": "PRIME-RX9070XT-O16G"
+  },
+  {
+    "page": 1,
+    "name": "Asus GeForce RTX 5080 PRIME - OC Edition -näytönohjain, 16GB GDDR7",
+    "price_cents": 179990,
+    "url": "https://www.jimms.fi/fi/Product/Show/208572/prime-rtx5080-o16g/asus-geforce-rtx-5080-prime-oc-edition-naytonohjain-16gb-gddr7",
+    "external_id": "PRIME-RTX5080-O16G"
+  },
+  {
+    "page": 1,
+    "name": "Asus Radeon RX 9060 XT Prime - OC Edition -näytönohjain, 16GB GDDR6",
+    "price_cents": 84390,
+    "url": "https://www.jimms.fi/fi/Product/Show/211201/prime-rx9060xt-o16g/asus-radeon-rx-9060-xt-prime-oc-edition-naytonohjain-16gb-gddr6",
+    "external_id": "PRIME-RX9060XT-O16G"
+  },
+  {
+    "page": 1,
+    "name": "Asus Radeon RX 9060 XT Dual -näytönohjain, 16GB GDDR6",
+    "price_cents": 71490,
+    "url": "https://www.jimms.fi/fi/Product/Show/213140/dual-rx9060xt-16g/asus-radeon-rx-9060-xt-dual-naytonohjain-16gb-gddr6",
+    "external_id": "DUAL-RX9060XT-16G"
+  },
+  {
+    "page": 1,
+    "name": "Asus GeForce RTX 5090 ROG Astral - OC Edition -näytönohjain, 32GB GDDR7",
+    "price_cents": 709990,
+    "url": "https://www.jimms.fi/fi/Product/Show/209093/rog-astral-rtx5090-o32g-gaming/asus-geforce-rtx-5090-rog-astral-oc-edition-naytonohjain-32gb-gddr7",
+    "external_id": "ROG-ASTRAL-RTX5090-O32G-GAMING"
+  },
+  {
+    "page": 1,
+    "name": "Asus GeForce RTX 5070 Ti PRIME - OC Edition -näytönohjain, 16GB GDDR7",
+    "price_cents": 139990,
+    "url": "https://www.jimms.fi/fi/Product/Show/209110/prime-rtx5070ti-o16g/asus-geforce-rtx-5070-ti-prime-oc-edition-naytonohjain-16gb-gddr7",
+    "external_id": "PRIME-RTX5070TI-O16G"
+  },
+  {
+    "page": 1,
+    "name": "Asus GeForce RTX 5060 Ti DUAL - OC Edition -näytönohjain, 16GB GDDR7",
+    "price_cents": 86990,
+    "url": "https://www.jimms.fi/fi/Product/Show/210470/dual-rtx5060ti-o16g/asus-geforce-rtx-5060-ti-dual-oc-edition-naytonohjain-16gb-gddr7",
+    "external_id": "DUAL-RTX5060TI-O16G"
+  },
+  {
+    "page": 1,
+    "name": "PowerColor Radeon RX 9070 XT Hellhound -näytönohjain, 16GB GDDR6",
+    "price_cents": 125490,
+    "url": "https://www.jimms.fi/fi/Product/Show/208870/rx9070xt-16g-l-oc/powercolor-radeon-rx-9070-xt-hellhound-naytonohjain-16gb-gddr6",
+    "external_id": "RX9070XT-16G-L/OC"
+  },
+  {
+    "page": 1,
+    "name": "ASRock Intel Arc B570 Challenger OC -näytönohjain, 10GB GDDR6",
+    "price_cents": 31990,
+    "url": "https://www.jimms.fi/fi/Product/Show/208210/b570-cl-10go/asrock-intel-arc-b570-challenger-oc-naytonohjain-10gb-gddr6",
+    "external_id": "B570-CL-10GO"
+  },
+  {
+    "page": 1,
+    "name": "MSI GeForce RTX 3050 LP E 6G OC -näytönohjain, 6GB GDDR6",
+    "price_cents": 25590,
+    "url": "https://www.jimms.fi/fi/Product/Show/218059/geforce-rtx-3050-lp-e-6g-oc/msi-geforce-rtx-3050-lp-e-6g-oc-naytonohjain-6gb-gddr6",
+    "external_id": "GEFORCE-RTX-3050-LP-E-6G-OC"
+  },
+  {
+    "page": 1,
+    "name": "PowerColor Radeon RX 9070 Reaper -näytönohjain, 16GB GDDR6",
+    "price_cents": 113990,
+    "url": "https://www.jimms.fi/fi/Product/Show/208874/rx9070-16g-a/powercolor-radeon-rx-9070-reaper-naytonohjain-16gb-gddr6",
+    "external_id": "RX9070-16G-A"
+  },
+  {
+    "page": 1,
+    "name": "Asus GeForce RTX 5070 Dual - OC Edition -näytönohjain, 12GB GDDR7",
+    "price_cents": 92990,
+    "url": "https://www.jimms.fi/fi/Product/Show/211300/dual-rtx5070-o12g/asus-geforce-rtx-5070-dual-oc-edition-naytonohjain-12gb-gddr7",
+    "external_id": "DUAL-RTX5070-O12G"
+  },
+  {
+    "page": 1,
+    "name": "Gigabyte Radeon RX 9070 XT GAMING OC -näytönohjain, 16GB GDDR6",
+    "price_cents": 126490,
+    "url": "https://www.jimms.fi/fi/Product/Show/209080/gv-r9070xtgaming-oc-16gd/gigabyte-radeon-rx-9070-xt-gaming-oc-naytonohjain-16gb-gddr6",
+    "external_id": "GV-R9070XTGAMING-OC-16GD"
+  },
+  {
+    "page": 1,
+    "name": "ASRock Intel Arc B580 Challenger 12GB OC -näytönohjain, 12GB GDDR6",
+    "price_cents": 45290,
+    "url": "https://www.jimms.fi/fi/Product/Show/208016/b580-cl-12go/asrock-intel-arc-b580-challenger-12gb-oc-naytonohjain-12gb-gddr6",
+    "external_id": "B580-CL-12GO"
+  },
+  {
+    "page": 1,
+    "name": "Gigabyte GeForce RTX 5080 WINDFORCE OC V2 SFF -näytönohjain, 16GB GDDR7",
+    "price_cents": 178990,
+    "url": "https://www.jimms.fi/fi/Product/Show/218736/gv-n5080wf3ocv2-16gd/gigabyte-geforce-rtx-5080-windforce-oc-v2-sff-naytonohjain-16gb-gddr7",
+    "external_id": "GV-N5080WF3OCV2-16GD"
+  },
+  {
+    "page": 1,
+    "name": "MSI GeForce RTX 5070 Ti GAMING TRIO OC -näytönohjain, 16GB GDDR7",
+    "price_cents": 199490,
+    "url": "https://www.jimms.fi/fi/Product/Show/210872/rtx-5070-ti-16g-gaming-trio-oc/msi-geforce-rtx-5070-ti-gaming-trio-oc-naytonohjain-16gb-gddr7",
+    "external_id": "RTX-5070-TI-16G-GAMING-TRIO-OC"
+  },
+  {
+    "page": 1,
+    "name": "Gigabyte GeForce RTX 5080 GAMING OC -näytönohjain, 16GB GDDR7",
+    "price_cents": 185490,
+    "url": "https://www.jimms.fi/fi/Product/Show/208850/gv-n5080gaming-oc-16gd/gigabyte-geforce-rtx-5080-gaming-oc-naytonohjain-16gb-gddr7",
+    "external_id": "GV-N5080GAMING-OC-16GD"
+  },
+  {
+    "page": 1,
+    "name": "Asus GeForce RTX 5050 Dual - OC Edition -näytönohjain, 8GB GDDR6",
+    "price_cents": 45990,
+    "url": "https://www.jimms.fi/fi/Product/Show/212104/dual-rtx5050-o8g/asus-geforce-rtx-5050-dual-oc-edition-naytonohjain-8gb-gddr6",
+    "external_id": "DUAL-RTX5050-O8G"
+  },
+  {
+    "page": 1,
+    "name": "Asus GeForce RTX 3060 DUAL - OC Edition V2 -näytönohjain, 12GB GDDR6",
+    "price_cents": 53490,
+    "url": "https://www.jimms.fi/fi/Product/Show/172864/dual-rtx3060-o12g-v2/asus-geforce-rtx-3060-dual-oc-edition-v2-naytonohjain-12gb-gddr6",
+    "external_id": "DUAL-RTX3060-O12G-V2"
+  },
+  {
+    "page": 1,
+    "name": "Asus GeForce RTX 5090 TUF Gaming - OC Edition -näytönohjain, 32GB GDDR7",
+    "price_cents": 699990,
+    "url": "https://www.jimms.fi/fi/Product/Show/209100/tuf-rtx5090-o32g-gaming/asus-geforce-rtx-5090-tuf-gaming-oc-edition-naytonohjain-32gb-gddr7",
+    "external_id": "TUF-RTX5090-O32G-GAMING"
+  },
+  {
+    "page": 1,
+    "name": "Asus Radeon RX 9060 XT Dual -näytönohjain, 8GB GDDR6",
+    "price_cents": 43490,
+    "url": "https://www.jimms.fi/fi/Product/Show/211198/dual-rx9060xt-8g/asus-radeon-rx-9060-xt-dual-naytonohjain-8gb-gddr6",
+    "external_id": "DUAL-RX9060XT-8G"
+  },
+  {
+    "page": 1,
+    "name": "PowerColor Radeon RX 9070 XT Reaper -näytönohjain, 16GB GDDR6",
+    "price_cents": 121990,
+    "url": "https://www.jimms.fi/fi/Product/Show/208871/rx9070xt-16g-a/powercolor-radeon-rx-9070-xt-reaper-naytonohjain-16gb-gddr6",
+    "external_id": "RX9070XT-16G-A"
+  },
+  {
+    "page": 1,
+    "name": "Gigabyte GeForce RTX 5070 Ti WINDFORCE OC SFF -näytönohjain, 16GB GDDR7",
+    "price_cents": 132990,
+    "url": "https://www.jimms.fi/fi/Product/Show/208910/gv-n507twf3oc-16gd/gigabyte-geforce-rtx-5070-ti-windforce-oc-sff-naytonohjain-16gb-gddr7",
+    "external_id": "GV-N507TWF3OC-16GD"
+  },
+  {
+    "page": 2,
+    "name": "Asus Radeon RX 9070 XT TUF Gaming - OC Edition -näytönohjain, 16GB GDDR6",
+    "price_cents": 124990,
+    "url": "https://www.jimms.fi/fi/Product/Show/208566/tuf-rx9070xt-o16g-gaming/asus-radeon-rx-9070-xt-tuf-gaming-oc-edition-naytonohjain-16gb-gddr6",
+    "external_id": "TUF-RX9070XT-O16G-GAMING"
+  },
+  {
+    "page": 2,
+    "name": "Sapphire Radeon RX 9060 XT PULSE -näytönohjain, 16GB GDDR6",
+    "price_cents": 89990,
+    "url": "https://www.jimms.fi/fi/Product/Show/211184/11350-03-20g/sapphire-radeon-rx-9060-xt-pulse-naytonohjain-16gb-gddr6",
+    "external_id": "11350-03-20G"
+  },
+  {
+    "page": 2,
+    "name": "Gigabyte GeForce RTX 5070 WINDFORCE OC SFF -näytönohjain, 12GB GDDR7",
+    "price_cents": 98990,
+    "url": "https://www.jimms.fi/fi/Product/Show/208916/gv-n5070wf3oc-12gd/gigabyte-geforce-rtx-5070-windforce-oc-sff-naytonohjain-12gb-gddr7",
+    "external_id": "GV-N5070WF3OC-12GD"
+  },
+  {
+    "page": 2,
+    "name": "MSI GeForce RTX 5070 GAMING TRIO OC -näytönohjain, 12GB GDDR7",
+    "price_cents": 101990,
+    "url": "https://www.jimms.fi/fi/Product/Show/209302/rtx-5070-12g-gaming-trio-oc/msi-geforce-rtx-5070-gaming-trio-oc-naytonohjain-12gb-gddr7",
+    "external_id": "RTX-5070-12G-GAMING-TRIO-OC"
+  },
+  {
+    "page": 2,
+    "name": "Asus GeForce RTX 5080 ROG Astral - OC Edition -näytönohjain, 16GB GDDR7",
+    "price_cents": 226990,
+    "url": "https://www.jimms.fi/fi/Product/Show/208570/rog-astral-rtx5080-o16g-gaming/asus-geforce-rtx-5080-rog-astral-oc-edition-naytonohjain-16gb-gddr7",
+    "external_id": "ROG-ASTRAL-RTX5080-O16G-GAMING"
+  },
+  {
+    "page": 2,
+    "name": "Asus GeForce RTX 5080 TUF Gaming - OC Edition -näytönohjain, 16GB GDDR7",
+    "price_cents": 194990,
+    "url": "https://www.jimms.fi/fi/Product/Show/208571/tuf-rtx5080-o16g-gaming/asus-geforce-rtx-5080-tuf-gaming-oc-edition-naytonohjain-16gb-gddr7",
+    "external_id": "TUF-RTX5080-O16G-GAMING"
+  },
+  {
+    "page": 2,
+    "name": "Sapphire Radeon RX 9070 XT NITRO+ -näytönohjain, 16GB GDDR6",
+    "price_cents": 124590,
+    "url": "https://www.jimms.fi/fi/Product/Show/208862/11348-01-20g/sapphire-radeon-rx-9070-xt-nitro-naytonohjain-16gb-gddr6",
+    "external_id": "11348-01-20G"
+  },
+  {
+    "page": 2,
+    "name": "Asus GeForce RTX 5070 TUF - OC Edition -näytönohjain, 12GB GDDR7",
+    "price_cents": 105990,
+    "url": "https://www.jimms.fi/fi/Product/Show/209434/tuf-rtx5070-o12g-gaming/asus-geforce-rtx-5070-tuf-oc-edition-naytonohjain-12gb-gddr7",
+    "external_id": "TUF-RTX5070-O12G-GAMING"
+  },
+  {
+    "page": 2,
+    "name": "MSI GeForce RTX 5080 GAMING TRIO OC -näytönohjain, 16GB GDDR7",
+    "price_cents": 214990,
+    "url": "https://www.jimms.fi/fi/Product/Show/208878/rtx-5080-16g-gaming-trio-oc/msi-geforce-rtx-5080-gaming-trio-oc-naytonohjain-16gb-gddr7",
+    "external_id": "RTX-5080-16G-GAMING-TRIO-OC"
+  },
+  {
+    "page": 2,
+    "name": "Gigabyte GeForce RTX 5090 AORUS MASTER -näytönohjain, 32GB GDDR7",
+    "price_cents": 724990,
+    "url": "https://www.jimms.fi/fi/Product/Show/208906/gv-n5090aorus-m-32gd/gigabyte-geforce-rtx-5090-aorus-master-naytonohjain-32gb-gddr7",
+    "external_id": "GV-N5090AORUS-M-32GD"
+  },
+  {
+    "page": 2,
+    "name": "MSI NVIDIA GeForce GT 710 2GD3H LP -näytönohjain, 2GB DDR3",
+    "price_cents": 7190,
+    "url": "https://www.jimms.fi/fi/Product/Show/119553/gt-710-2gd3h-lp/msi-nvidia-geforce-gt-710-2gd3h-lp-naytonohjain-2gb-ddr3",
+    "external_id": "GT-710-2GD3H-LP"
+  },
+  {
+    "page": 2,
+    "name": "Gigabyte GeForce RTX 5090 AORUS XTREME WATERFORCE -näytönohjain, 32GB GDDR7",
+    "price_cents": 727990,
+    "url": "https://www.jimms.fi/fi/Product/Show/208909/gv-n5090aorusx-w-32gd/gigabyte-geforce-rtx-5090-aorus-xtreme-waterforce-naytonohjain-32gb-gddr7",
+    "external_id": "GV-N5090AORUSX-W-32GD"
+  },
+  {
+    "page": 2,
+    "name": "Sapphire Radeon RX 9070 NITRO+ -näytönohjain, 16GB GDDR6",
+    "price_cents": 107390,
+    "url": "https://www.jimms.fi/fi/Product/Show/208865/11349-01-20g/sapphire-radeon-rx-9070-nitro-naytonohjain-16gb-gddr6",
+    "external_id": "11349-01-20G"
+  },
+  {
+    "page": 2,
+    "name": "PNY GeForce RTX 5070 Ti ARGB EPIC-X RGB OC Triple Fan -näytönohjain, 16GB GDDR7",
+    "price_cents": 154990,
+    "url": "https://www.jimms.fi/fi/Product/Show/209820/vcg5070t16tfxxpb1-o/pny-geforce-rtx-5070-ti-argb-epic-x-rgb-oc-triple-fan-naytonohjain-16gb-gddr7",
+    "external_id": "VCG5070T16TFXXPB1-O"
+  },
+  {
+    "page": 2,
+    "name": "PNY GeForce RTX 5060 Dual Fan OC -näytönohjain, 8GB GDDR7",
+    "price_cents": 51990,
+    "url": "https://www.jimms.fi/fi/Product/Show/217345/vcg50608dfxpb1-o/pny-geforce-rtx-5060-dual-fan-oc-naytonohjain-8gb-gddr7",
+    "external_id": "VCG50608DFXPB1-O"
+  },
+  {
+    "page": 2,
+    "name": "Asus GeForce RTX 3050 DUAL - OC Edition -näytönohjain, 6GB GDDR6",
+    "price_cents": 33390,
+    "url": "https://www.jimms.fi/fi/Product/Show/199796/dual-rtx3050-o6g/asus-geforce-rtx-3050-dual-oc-edition-naytonohjain-6gb-gddr6",
+    "external_id": "DUAL-RTX3050-O6G"
+  },
+  {
+    "page": 2,
+    "name": "Gigabyte GeForce RTX 5070 Ti EAGLE OC ICE SFF -näytönohjain, 16GB GDDR7",
+    "price_cents": 146990,
+    "url": "https://www.jimms.fi/fi/Product/Show/208913/gv-n507teagleoc-ice-16gd/gigabyte-geforce-rtx-5070-ti-eagle-oc-ice-sff-naytonohjain-16gb-gddr7",
+    "external_id": "GV-N507TEAGLEOC-ICE-16GD"
+  },
+  {
+    "page": 2,
+    "name": "PNY GeForce RTX 5080 OC Triple Fan -näytönohjain, 16GB GDDR7",
+    "price_cents": 185990,
+    "url": "https://www.jimms.fi/fi/Product/Show/209343/vcg508016tfxpb1-o/pny-geforce-rtx-5080-oc-triple-fan-naytonohjain-16gb-gddr7",
+    "external_id": "VCG508016TFXPB1-O"
+  },
+  {
+    "page": 2,
+    "name": "Gigabyte GeForce RTX 5070 Ti GAMING OC -näytönohjain, 16GB GDDR7",
+    "price_cents": 142890,
+    "url": "https://www.jimms.fi/fi/Product/Show/208914/gv-n507tgaming-oc-16gd/gigabyte-geforce-rtx-5070-ti-gaming-oc-naytonohjain-16gb-gddr7",
+    "external_id": "GV-N507TGAMING-OC-16GD"
+  },
+  {
+    "page": 2,
+    "name": "Gigabyte GeForce RTX 5070 Ti AERO OC -näytönohjain, 16GB GDDR7",
+    "price_cents": 189290,
+    "url": "https://www.jimms.fi/fi/Product/Show/208911/gv-n507taero-oc-16gd/gigabyte-geforce-rtx-5070-ti-aero-oc-naytonohjain-16gb-gddr7",
+    "external_id": "GV-N507TAERO-OC-16GD"
+  },
+  {
+    "page": 2,
+    "name": "Gigabyte GeForce RTX 5080 AORUS MASTER ICE -näytönohjain, 16GB GDDR7",
+    "price_cents": 198990,
+    "url": "https://www.jimms.fi/fi/Product/Show/208990/gv-n5080aorusm-ice-16gd/gigabyte-geforce-rtx-5080-aorus-master-ice-naytonohjain-16gb-gddr7",
+    "external_id": "GV-N5080AORUSM-ICE-16GD"
+  },
+  {
+    "page": 2,
+    "name": "Sapphire Radeon RX 9070 XT PULSE -näytönohjain, 16GB GDDR6",
+    "price_cents": 125190,
+    "url": "https://www.jimms.fi/fi/Product/Show/208864/11348-03-20g/sapphire-radeon-rx-9070-xt-pulse-naytonohjain-16gb-gddr6",
+    "external_id": "11348-03-20G"
+  },
+  {
+    "page": 2,
+    "name": "Asus Radeon RX 9070 GRE PRIME - OC Edition -näytönohjain, 12GB GDDR6",
+    "price_cents": 78990,
+    "url": "https://www.jimms.fi/fi/Product/Show/217374/prime-rx9070gre-o12g/asus-radeon-rx-9070-gre-prime-oc-edition-naytonohjain-12gb-gddr6",
+    "external_id": "PRIME-RX9070GRE-O12G"
+  },
+  {
+    "page": 2,
+    "name": "Asus GeForce RTX 5060 Ti PRIME - OC Edition -näytönohjain, 16GB GDDR7",
+    "price_cents": 100490,
+    "url": "https://www.jimms.fi/fi/Product/Show/210716/prime-rtx5060ti-o16g/asus-geforce-rtx-5060-ti-prime-oc-edition-naytonohjain-16gb-gddr7",
+    "external_id": "PRIME-RTX5060TI-O16G"
+  },
+  {
+    "page": 2,
+    "name": "NVIDIA RTX PRO 6000 Blackwell Workstation Edition -näytönohjain, 96GB GDDR7, Retail",
+    "price_cents": 1958790,
+    "url": "https://www.jimms.fi/fi/Product/Show/214520/900-5g144-2500-000/nvidia-rtx-pro-6000-blackwell-workstation-edition-naytonohjain-96gb-gddr7-retail",
+    "external_id": "900-5G144-2500-000"
+  }
+]

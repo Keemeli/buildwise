@@ -178,3 +178,49 @@ A verified local backup and checksums are retained under `data/migrations/`.
 Backup ZIP files are ignored by Git; audit/migration reports can be committed.
 The normaliser and Datatronic specification URL reader still accept unversioned
 files for backward compatibility.
+
+
+## Specification request and failure policy
+
+The Datatronic specification worker uses the same PageFetcher as price
+collection: allowed-host validation, robots rules, sequential request spacing
+(including after failures), timeouts and cached HTML reads. Existing specification
+cache paths under `data/raw/html/specs/datatronic/<date>/` are retained.
+
+A specification pass returns nonzero when any requested page fails, yields no
+supported specification fields, or is missing from an offline cache. Successful
+items and coverage reports are still saved so partial work is retained. An offline
+cache miss leaves previously collected specifications intact. Cached reads and
+status-only runs do not request robots.txt or product pages. `--force` refreshes
+HTML but never bypasses robots rules. A failed specification stage stops refresh
+before normalisation/export.
+
+## Retailer adapter contract — milestone 1
+
+`retailers/contracts.py` defines immutable RetailerConfig/Capabilities and the
+RetailerAdapter protocol. Category paths are relative to each retailer's base
+URL. Adapters provide category_url, page_url, parse_category and parse_product.
+Unsupported categories/operations raise explicit errors. The lazy default registry
+in `retailers/registry.py` resolves retailer keys to fresh adapter instances.
+
+Both adapters return CategoryResult: RawProduct observations, ProductRequest
+follow-ups, optional category total and ParseIssue diagnostics. Parsing does not
+fetch pages or write files. The worker supplies fetch time, origin and HTML path.
+A follow-up request is descriptive; returning it does not perform a request.
+
+DatatronicAdapter wraps its existing parser without changing product data or
+pagination. Missing prices remain null observations with explicit issues, and
+product-page price extraction is declared unsupported. Existing Datatronic spec
+support remains in its separate parser/worker.
+
+JimmsAdapter reads displayed card prices from `.price__amount` and SKUs from
+`.product-box-sku`, ignoring analytics prices. Missing, invalid or conflicting
+prices produce follow-up requests and diagnostics. Product fallback preserves the
+card SKU. No category total is invented from the page's JS placeholder.
+
+Two saved GPU pages (50 products) match independently saved product-page prices,
+names and URLs. Other category layouts are not verified by this result.
+
+This milestone is additive: existing parser functions, CLI behaviour and collection
+workers remain unchanged. The CLI still uses the previous Jimms discovery/product
+workflow until milestone 2 replaces worker branching with the adapter-driven loop.
