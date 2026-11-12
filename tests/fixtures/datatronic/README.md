@@ -12,3 +12,16 @@ URLs, scripts, unrelated product cards and all other page data are omitted.
 
 Here sku means the displayed manufacturer code, not the internal product ID.
 No parser selectors or synthetic source values were invented for this fixture.
+
+
+`product_gpu_166662.html` additionally preserves the primary product's 49
+feature name/value pairs in their original order, including package dimensions
+before the card dimensions and the vendor family before the processor model.
+The rendered product-features section provides the actual definition-list
+fallback. Session/tracking fields are excluded from data-product JSON. The
+separate source manifest records original/fixture hashes and saved-file time.
+
+For this GPU the published card axes are Pituus 304 mm, Tuotteen korkeus 126 mm
+and Tuotteen syvyys 50 mm. The last is card thickness, corresponding to the shared
+width_mm convention corroborated by Proshop's saved sheet for the same MPN.
+Pakkauksen leveys/syvyys/korkeus 230/398/85 mm are packaging dimensions.

@@ -40,6 +40,16 @@ class NormalisationReportWriter:
                          'values and source URLs remain in each component’s `spec_conflicts`.')
         lines.append('')
 
+        standardised = [(component, field) for component in components
+                        for field, observations in component.get('spec_observations', {}).items()
+                        if any(item['value'] != item['canonical_value'] for item in observations)]
+        if standardised:
+            lines.extend(['## Standardised GPU specification values', '',
+                          f'{len(standardised)} component fields use recognised common wording. '
+                          'Original values, canonical values and source details remain in '
+                          '`spec_observations`; unknown wording is not guessed. PCIe lane counts '
+                          'are retained when published, and contradictory details remain null.', ''])
+
         lines.append("## Coverage per category")
         lines.append("")
         lines.append("| Category | Components | Field | Parsed | Coverage |")

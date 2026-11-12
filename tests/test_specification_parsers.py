@@ -1,12 +1,77 @@
 """Retailer specification labels, units, ambiguity and saved HTML layouts."""
 import unittest
+import json
 from pathlib import Path
 
 from bs4 import BeautifulSoup
 
 from scraper.retailers.contracts import UnsupportedCategoryError
+from scraper.retailers.datatronic_specs import DatatronicSpecParser
 from scraper.retailers.jimms_specs import JimmsSpecParser
 from scraper.retailers.proshop_specs import ProshopSpecParser
+
+
+DATATRONIC_GPU = Path(__file__).parent / 'fixtures/datatronic/product_gpu_166662.html'
+
+
+class DatatronicSpecificationTests(unittest.TestCase):
+    def test_saved_primary_gpu_separates_interface_model_and_package_dimensions(self):
+        parser = DatatronicSpecParser()
+        features, method = parser.extract_features(DATATRONIC_GPU.read_text())
+        values, unknown = parser.parse_specs('gpu', features)
+        self.assertEqual(method, 'embedded_json')
+        self.assertEqual(values['interface'], 'PCI Express x16 5.0')
+        self.assertEqual(values['memory_bus_bit'], 256)
+        self.assertEqual(values['graphics_chipset'], 'GeForce RTX 5070 Ti')
+        self.assertEqual(tuple(values[key] for key in ('length_mm', 'width_mm', 'height_mm')), (304.0, 50.0, 126.0))
+        self.assertEqual((values['power_w'], values['recommended_psu_w']), (300, 750))
+        self.assertEqual(values['power_connectors'], ['1x 16-pin'])
+        self.assertEqual(values['slot_width'], 2)
+        self.assertIn('Grafiikkaprosessorin perhe', unknown)
+        for label in ('Pakkauksen leveys', 'Pakkauksen syvyys', 'Pakkauksen korkeus'):
+            self.assertIn(label, unknown)
+        # Field extraction must not depend on package/vendor rows arriving first.
+        self.assertEqual(parser.parse_specs('gpu', list(reversed(features)))[0], values)
+
+    def test_primary_definition_fallback_ignores_other_product_json_and_page_dimensions(self):
+        soup = BeautifulSoup(DATATRONIC_GPU.read_text(), 'html.parser')
+        unrelated = '<script>' + json.dumps({'features': [{'name': 'Pituus', 'value': '999 mm'}]}) + '</script><dl><dt>Pituus</dt><dd>888 mm</dd></dl>'
+        parser = DatatronicSpecParser()
+        primary, primary_method = parser.extract_features(unrelated + str(soup))
+        self.assertEqual(primary_method, 'embedded_json')
+        self.assertEqual(parser.parse_specs('gpu', primary)[0]['length_mm'], 304.0)
+        soup.select_one('#product-details')['data-product'] = '{broken json'
+        features, method = parser.extract_features(unrelated + str(soup))
+        self.assertEqual(method, 'definition_list')
+        self.assertEqual(parser.parse_specs('gpu', features)[0]['length_mm'], 304.0)
+        soup.select_one('#product-details section.product-features').decompose()
+        self.assertEqual(parser.extract_features(unrelated + str(soup)), ([], 'none'))
+
+    def test_gpu_alias_conflicts_and_ambiguous_dimensions_stay_unknown(self):
+        parser = DatatronicSpecParser()
+        rows = [('Pituus', '304 mm'), ('Tuotteen pituus', '31 cm'),
+                ('Leveys', '126 mm'), ('Tuotteen syvyys', '50 mm')]
+        for ordered in (rows, list(reversed(rows))):
+            values, unknown = parser.parse_specs('gpu', ordered)
+            self.assertNotIn('length_mm', values)
+            self.assertNotIn('width_mm', values)
+            self.assertIn('length_mm (conflicting values)', unknown)
+            self.assertIn('width_mm (conflicting values)', unknown)
+        values, _ = parser.parse_specs('gpu', [('Pituus', '30.4 cm'), ('Tuotteen pituus', '304 mm')])
+        self.assertEqual(values['length_mm'], 304.0)
+        values, _ = parser.parse_specs('gpu', [('Pituus', '300 - 310 mm'), ('Leveys', '0 mm'),
+                                              ('Korkeus', '126 x 50 mm'), ('Pakkauksen syvyys', '398 mm'),
+                                              ('Paksuus', '50 mm')])
+        self.assertEqual(values, {})
+
+    def test_gpu_exact_labels_do_not_change_other_categories_or_parser_injection(self):
+        parser = DatatronicSpecParser()
+        values, _ = parser.parse_specs('cpu', [('Prosessorin kanta', 'AM5'), ('TDP', '65 W')])
+        self.assertEqual(values, {'socket': 'AM5', 'tdp_w': 65})
+        custom = DatatronicSpecParser(field_map={'gpu': {'power_w': ['Custom label']}},
+                                      parsers={'power_w': lambda value: 42})
+        self.assertEqual(custom.parse_specs('gpu', [('Custom label', 'anything')])[0], {'power_w': 42})
+        self.assertEqual(parser.parse_specs('gpu', [('Muistiväylä', '256 bittiä')])[0], {'memory_bus_bit': 256})
 
 
 JIMMS_SPEC_FIXTURES = Path(__file__).parent / 'fixtures/jimms/specifications'

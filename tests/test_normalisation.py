@@ -16,7 +16,8 @@ from unittest.mock import patch
 from scraper.cli import main
 from scraper.pipeline.components import ComponentNameParser
 from scraper.pipeline.listing_prices import ListingPriceSelector
-from scraper.pipeline.normalisation import ComponentNormaliser
+from scraper.pipeline.normalisation import ComponentNormaliser, merge_product_specs
+from scraper.pipeline.specification_values import SpecificationValueResolver
 from scraper.retailers.datatronic import DatatronicAdapter
 from scraper.retailers.jimms import JimmsAdapter
 
@@ -205,6 +206,110 @@ class ListingPriceTests(unittest.TestCase):
             self.assertIn('300 cents', report)
             self.assertIn('400 cents', report)
             self.assertEqual({p: p.read_bytes() for p in raw.iterdir()}, before)
+
+
+class GpuSpecificationValueTests(unittest.TestCase):
+    def resolve(self, field, values):
+        return SpecificationValueResolver().resolve('gpu', field, [
+            {'value': value, 'shop': f'Shop{index}', 'url': f'https://shop/{index}'}
+            for index, value in enumerate(values)])
+
+    def test_equivalent_chipsets_and_connectors_keep_variant_and_count_details(self):
+        for field, values, expected in [
+            ('graphics_chipset', ['GeForce RTX5070 ti', 'NVIDIA GeForce RTX 5070 Ti'], 'NVIDIA GeForce RTX 5070 Ti'),
+            ('graphics_chipset', ['Radeon RX9070 xt', 'AMD Radeon RX 9070 XT'], 'AMD Radeon RX 9070 XT'),
+            ('graphics_chipset', ['Arc B580', 'Intel Arc B 580'], 'Intel Arc B580'),
+            ('power_connectors', [['1x 16-pin'], ['1 × 16 pin']], ['1 x 16-pin']),
+            ('power_connectors', [['1x8-pin', '1 x 8-pin'], ['2x 8-pin']], ['2 x 8-pin']),
+        ]:
+            with self.subTest(field=field):
+                value, evidence, conflict = self.resolve(field, values)
+                self.assertFalse(conflict)
+                self.assertEqual(value, expected)
+                self.assertEqual([item['value'] for item in evidence], values)
+                self.assertTrue(all(item['canonical_value'] == expected for item in evidence))
+        for field, values in [
+            ('graphics_chipset', ['GeForce RTX 5070', 'GeForce RTX 5070 Ti']),
+            ('graphics_chipset', ['GeForce RTX 4070 Ti', 'GeForce RTX 4070 Ti SUPER']),
+            ('graphics_chipset', ['Radeon RX 7900 XT', 'Radeon RX 7900 XTX']),
+            ('power_connectors', [['1x16-pin'], ['2x16-pin']]),
+            ('power_connectors', [['1x8-pin'], ['1x6+2-pin']]),
+            ('power_connectors', [['16-pin'], ['1x16-pin']]),
+        ]:
+            with self.subTest(values=values):
+                value, _, conflict = self.resolve(field, values)
+                self.assertTrue(conflict)
+                self.assertIsNone(value)
+
+    def test_pcie_missing_details_can_be_enriched_but_never_discarded(self):
+        for values, expected in [
+            (['PCI-E 5.0', 'PCI Express x16 5.0', 'PCI Express 5.0'], 'PCI Express 5.0 x16'),
+            (['PCIe x8', 'PCI Express 4 x8'], 'PCI Express 4.0 x8'),
+            (['PCIe', 'PCI Express'], 'PCI Express'),
+        ]:
+            for ordered in itertools.permutations(values):
+                value, evidence, conflict = self.resolve('interface', ordered)
+                self.assertFalse(conflict)
+                self.assertEqual(value, expected)
+                self.assertCountEqual([item['value'] for item in evidence], list(ordered))
+        for values in (['PCI Express 4.0', 'PCI Express 5.0'],
+                       ['PCI Express 5.0 x8', 'PCI Express 5.0 x16'],
+                       ['PCI Express 5.0 x16', 'PCI Express 5.0 x16 (x8)']):
+            value, _, conflict = self.resolve('interface', values)
+            self.assertTrue(conflict)
+            self.assertIsNone(value)
+
+    def test_unknown_wording_and_non_gpu_fields_keep_existing_exact_comparison(self):
+        resolver = SpecificationValueResolver()
+        for category, field, value in [('gpu', 'graphics_chipset', 'NVIDIA RTX PRO 6000 Blackwell'),
+                                       ('gpu', 'interface', 'PCI Express 5.0 / 4.0'),
+                                       ('gpu', 'power_connectors', ['12VHPWR']),
+                                       ('storage', 'interface', 'PCI-E 5.0'),
+                                       ('cpu', 'graphics_chipset', 'GeForce RTX5070 ti')]:
+            self.assertEqual(resolver.canonical(category, field, value), value)
+        original = [{'value': 'PCI-E 5.0'}, {'value': 'PCI Express 5.0'}]
+        value, evidence, conflict = resolver.resolve('storage', 'interface', original)
+        self.assertTrue(conflict)
+        self.assertIsNone(value)
+        self.assertCountEqual(evidence, original)
+
+    def test_normaliser_retains_raw_and_canonical_provenance_without_rewriting_store(self):
+        published = [
+            ('Jimms', 'NVIDIA GeForce RTX 5070 Ti', 'PCI-E 5.0', ['1 x 16-pin']),
+            ('Datatronic', 'GeForce RTX 5070 Ti', 'PCI Express x16 5.0', ['1x 16-pin']),
+            ('Proshop', 'NVIDIA GeForce RTX 5070 Ti', 'PCI Express 5.0', None)]
+        with tempfile.TemporaryDirectory() as directory:
+            path = Path(directory) / 'specs.json'
+            listings, items = [], {}
+            for shop, chipset, interface, connectors in published:
+                url = f'https://{shop.lower()}/gpu'
+                listings.append({'shop': shop, 'url': url})
+                items[url] = {'shop': shop, 'category': 'gpu', 'status': 'ok',
+                              'raw_html': f'raw/html/{shop}.html', 'fetched_at': '2026-11-12',
+                              'specs': {'graphics_chipset': chipset, 'interface': interface,
+                                        'power_connectors': connectors}}
+            path.write_text(json.dumps({'items': items}))
+            original = path.read_bytes()
+            outputs = []
+            for ordered in itertools.permutations(listings):
+                component = {'category': 'gpu', 'specs': {}, 'missing_specs': [], 'listings': list(ordered)}
+                merge_product_specs([component], path)
+                self.assertEqual(component['specs'], {'graphics_chipset': 'NVIDIA GeForce RTX 5070 Ti',
+                    'interface': 'PCI Express 5.0 x16', 'power_connectors': ['1 x 16-pin']})
+                self.assertFalse(component.get('spec_conflicts'))
+                observations = component['spec_observations']['interface']
+                self.assertEqual({item['value'] for item in observations}, {row[2] for row in published})
+                self.assertTrue(all(item['raw_html'] and item['url'] and item['fetched_at'] for item in observations))
+                outputs.append(component['spec_observations'])
+            self.assertTrue(all(output == outputs[0] for output in outputs))
+            self.assertEqual(path.read_bytes(), original)
+            # A new explicit generation conflict remains null, with both values.
+            items[listings[0]['url']]['specs']['interface'] = 'PCI Express 4.0 x16'
+            path.write_text(json.dumps({'items': items}))
+            merge_product_specs([component], path)
+            self.assertIsNone(component['specs']['interface'])
+            self.assertEqual(len(component['spec_conflicts']['interface']), 3)
+            self.assertTrue(all('canonical_value' in item for item in component['spec_conflicts']['interface']))
 
 
 class PriceWorkflowTests(unittest.TestCase):

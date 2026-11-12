@@ -26,17 +26,17 @@ python3 -m unittest tests.test_specification_parsers.ProshopSpecificationTests
 | test_collection_worker.py | Controlled orchestration, follow-ups, deduplication and cleanup | 10 |
 | test_collection_policy.py | Real-adapter outcome policy, counters, provenance and failure handling | 26 |
 | test_collection_integration.py | Saved retailer pages, CLI collection, exclusions and exact-page retries | 13 |
-| test_specification_parsers.py | Retailer labels, units, scoped fields and ambiguous values | 10 |
+| test_specification_parsers.py | Retailer labels, units, scoped fields and ambiguous values | 14 |
 | test_specifications.py | Shared collection, compatibility, storage, reporting and normalisation | 22 |
 | test_fetching.py | Robots matching, request failures, throttling and caching | 5 |
 | test_raw_data.py | Shared observations, IDs, immutable writes, legacy formats and exact cents | 8 |
-| test_normalisation.py | Component parsing, price history/conflicts and end-to-end recovery | 12 |
+| test_normalisation.py | Component parsing, price history/conflicts and end-to-end recovery and GPU vocabulary | 16 |
 | test_pending_work.py | Work identity, evidence, classification and atomic persistence | 8 |
 | test_retry.py | Selection, limits, attempts, recovery, locks and request spacing | 11 |
 | test_cli.py | Arguments, help, offline subprocesses, export and drift checks | 8 |
 | test_refresh.py | Stage planning, category selection and stopping on failure | 3 |
 | test_product_identity.py | GTIN/MPN validation, bound source extraction, evidence preservation, match decisions and verified grouping | 19 |
-| **Total** | | **182** |
+| **Total** | | **190** |
 
 `support.py` contains reusable synthetic HTML builders, HTTP responses and the
 repository path. It contains no test cases. Import shared helpers from there,
@@ -74,3 +74,11 @@ without identifiers, category/GTIN/MPN/brand/variant conflicts, retained histori
 conflicts and special offers. The saved Datatronic/Proshop pair confirms the
 verified cross-retailer group. Additional cases cover incomplete match chains,
 duplicate shop offers, input ordering and per-shop price/specification provenance.
+
+Datatronic GPU parser checks use its saved primary product JSON and rendered
+fallback. They distinguish PCIe from memory width, vendor from model, and card
+from package dimensions; alias conflicts and ambiguous measurements stay unknown.
+
+GPU value checks cover chipset suffixes, connector quantities/configurations,
+PCIe generations and lane counts, unknown wording and deterministic source
+provenance. They verify that normalisation does not rewrite saved specifications.

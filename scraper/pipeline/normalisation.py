@@ -12,6 +12,7 @@ from scraper.pipeline.components import (CATEGORIES, EXPECTED_FIELDS, clean,
     is_non_component, normalise_item, ComponentNameParser)
 from scraper.pipeline.reports import NormalisationReportWriter
 from scraper.pipeline.listing_prices import ListingPriceSelector
+from scraper.pipeline.specification_values import SpecificationValueResolver
 from scraper.pipeline.identity_matching import ProductIdentityMatcher, VerifiedProductGrouper
 
 
@@ -155,6 +156,7 @@ def merge_product_specs(components: List[Dict[str, Any]],
     Every field that came from a data sheet is recorded in `spec_sources`, and the
     CPU `socket_source` stops saying "inferred" once a real socket was read.
     """
+    resolver = SpecificationValueResolver()
     specs_by_url = load_product_specs(specs_path)
     stats = {"components_matched": 0, "fields_parsed": 0, "upgraded_from_inferred": 0,
              "sockets_parsed": 0, "gaps_closed": 0}
@@ -177,14 +179,16 @@ def merge_product_specs(components: List[Dict[str, Any]],
                                               'url': listing['url'], 'raw_html': entry.get('raw_html'),
                                               'fetched_at': entry.get('fetched_at')})
         for field, observations in sorted(candidates.items()):
-            values = {json.dumps(item['value'], sort_keys=True) for item in observations}
-            if len(values) == 1:
-                matched[field] = observations[0]['value']
+            value, evidence, conflict = resolver.resolve(component['category'], field, observations)
+            if resolver.supports(component['category'], field):
+                component.setdefault('spec_observations', {})[field] = evidence
+            if not conflict:
+                matched[field] = value
+                component.get('spec_conflicts', {}).pop(field, None)
                 continue
             component['specs'][field] = None
             sources[field] = 'conflicting_product_pages'
-            component.setdefault('spec_conflicts', {})[field] = sorted(
-                observations, key=lambda item: json.dumps(item, sort_keys=True))
+            component.setdefault('spec_conflicts', {})[field] = evidence
             if field in EXPECTED_FIELDS.get(component['category'], ()) and field not in component['missing_specs']:
                 component['missing_specs'].append(field)
         if not candidates:

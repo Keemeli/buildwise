@@ -673,3 +673,22 @@ Repeated snapshots of one shop URL retain their price history.
 Components include `identity_match` status/reasons. Contradictory saved product-page
 specifications stay null with source values in `spec_conflicts`. Collection and
 specification commands are unchanged. See [the identity policy](docs/product-identity-evidence.md#milestone-3-verified-catalogue-grouping).
+
+
+### Datatronic GPU specification verification
+
+GPU fields use exact labels and reject conflicting aliases. Package measurements
+cannot supply card dimensions; memory-bus width cannot become the PCIe interface.
+The primary product JSON and its rendered data sheet are verified against a saved
+Gigabyte card and the isolated three-retailer sample. Other category mappings
+retain their existing behaviour. See [the verified labels and remaining limits](docs/datatronic-gpu-validation.md).
+
+
+### Common GPU specification wording
+
+Normalisation standardises recognised chipset, PCIe interface and power-connector
+wording after retailer parsing. `spec_observations` retains original values,
+canonical forms and source details; the saved retailer specification store stays
+unchanged. Missing PCIe details can be supplemented by consistent explicit values
+from another verified offer. Different generations, lane counts, model suffixes
+and connector quantities remain conflicts. See [the value policy](docs/gpu-specification-values.md).

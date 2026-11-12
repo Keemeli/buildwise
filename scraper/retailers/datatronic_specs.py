@@ -1,6 +1,5 @@
 """Datatronic data-sheet labels and HTML extraction; values use shared parsers."""
 from __future__ import annotations
-import html as html_module
 import json
 import re
 from typing import Any, Dict, List, Tuple
@@ -18,12 +17,15 @@ from scraper.common.specifications import (
 
 FIELD_MAP: Dict[str, Dict[str, List[str]]] = {
     "gpu": {
-        "power_w": ["Tehonkulutus (maks.)", "Virrankulutus (maks.)", "Tehonkulutus", "TDP"],
+        "power_w": ["Tehonkulutus (maks.)", "Virrankulutus (maks.)", "Tehonkulutus", "TDP", "Thermal Design Power (TDP)"],
         "length_mm": ["Pituus", "Tuotteen pituus"],
-        "width_mm": ["Leveys"],
-        "height_mm": ["Korkeus"],
-        "slot_width": ["Korttipaikkojen lukumäärä", "Paksuus"],
-        "power_connectors": ["Virransyöttöliitäntä", "Virransyöttöliitännät"],
+        # This primary GPU sheet publishes depth as card thickness; its 50 mm
+        # value is corroborated by the saved Proshop sheet. Package axes are
+        # separate labels and must never supply card measurements.
+        "width_mm": ["Leveys", "Tuotteen leveys", "Tuotteen syvyys"],
+        "height_mm": ["Korkeus", "Tuotteen korkeus"],
+        "slot_width": ["Korttipaikkojen lukumäärä", "Laajennuspaikkoja"],
+        "power_connectors": ["Virransyöttöliitäntä", "Virransyöttöliitännät", "Lisävirran liittimet"],
         "recommended_psu_w": ["Virtalähteen minimikoko", "Järjestelmän virtalähteen vähimmäisteho",
                               "Suositeltu virtalähde"],
         "interface": ["Väylä", "PCI-väylä", "PCI Express -versio"],
@@ -116,6 +118,38 @@ FIELD_MAP: Dict[str, Dict[str, List[str]]] = {
 # --------------------------------------------------------------------------- page reading
 
 
+def _gpu_dimension(value):
+    """One explicit, positive measurement; ranges and composite axes stay unknown."""
+    if not re.fullmatch(r'\s*\d+(?:[.,]\d+)?\s*(?:mm|cm|m)\s*', value, re.I):
+        return None
+    number = parse_mm(value)
+    return number if number is not None and number > 0 else None
+
+
+class _GpuFieldParser(SpecificationFieldParser):
+    """Exact GPU labels and agreement across aliases, without first-value guesses."""
+    def matches(self, label, candidates):
+        label = ' '.join(label.split()).casefold()
+        return any(re.fullmatch(candidate[3:], label, re.I) if candidate.startswith('re:')
+                   else label == ' '.join(candidate.split()).casefold()
+                   for candidate in candidates)
+
+    def parse_specs(self, category, features):
+        candidates, unmapped = {}, []
+        for feature in features:
+            parsed, unknown = super().parse_specs(category, [feature])
+            unmapped.extend(unknown)
+            for field, value in parsed.items():
+                candidates.setdefault(field, []).append(value)
+        specs = {}
+        for field, values in candidates.items():
+            if all(value == values[0] for value in values):
+                specs[field] = values[0]
+            else:
+                unmapped.append(f'{field} (conflicting values)')
+        return specs, unmapped
+
+
 class DatatronicSpecParser(SpecificationFieldParser):
     """Translate Datatronic data-sheet markup and labels into canonical fields.
 
@@ -125,35 +159,60 @@ class DatatronicSpecParser(SpecificationFieldParser):
 
     def __init__(self, field_map=None, parsers=None, category_parsers=None):
         super().__init__(FIELD_MAP if field_map is None else field_map, parsers, category_parsers)
+        gpu_parsers = dict(self.parsers)
+        if parsers is None:
+            gpu_parsers.update(dict.fromkeys(('length_mm', 'width_mm', 'height_mm'), _gpu_dimension))
+        self.gpu_parser = _GpuFieldParser(self.field_map, gpu_parsers, self.category_parsers)
+
+    def parse_specs(self, category, features):
+        if category == 'gpu':
+            return self.gpu_parser.parse_specs(category, features)
+        return super().parse_specs(category, features)
+
+    @staticmethod
+    def _feature_pairs(raw):
+        if not isinstance(raw, list):
+            return []
+        return [(str(item['name']).strip(), str(item.get('value', '')).strip())
+                for item in raw if isinstance(item, dict) and item.get('name')]
 
     def extract_features(self, html: str) -> Tuple[List[Tuple[str, str]], str]:
-        """Return (features, method) from a product page.
+        """Prefer the primary product JSON; fall back to its rendered data sheet.
 
-        Primary: the embedded JSON array the shop uses to render its own data sheet.
-        Fallback: the rendered definition list (<dt>/<dd>), so a markup change does not
-        silently produce an empty result.
+        Standalone JSON scripts and unscoped definition lists remain readable for
+        historical cache snippets that have no primary product container.
         """
-        unescaped = html_module.unescape(html)
-        match = re.search(r'"features"\s*:\s*(\[.*?\])', unescaped, re.DOTALL)
-        if match:
-            try:
-                raw = json.loads(match.group(1))
-                pairs = [(str(f.get("name", "")).strip(), str(f.get("value", "")).strip())
-                         for f in raw if f.get("name")]
-                if pairs:
-                    return pairs, "embedded_json"
-            except json.JSONDecodeError:
-                pass
-
         from bs4 import BeautifulSoup
         soup = BeautifulSoup(html, "html.parser")
-        pairs: List[Tuple[str, str]] = []
-        for term in soup.find_all("dt"):
+        container = soup.select_one('#product-details')
+        if container is not None:
+            try:
+                data = json.loads(container.get('data-product') or '{}')
+                pairs = self._feature_pairs(data.get('features')) if isinstance(data, dict) else []
+            except (ValueError, TypeError):
+                pairs = []
+            if pairs:
+                return pairs, "embedded_json"
+        else:
+            # Compatibility with old saved extracts; do not scan unrelated
+            # scripts when a primary product container is available.
+            sources = []
+            for script in soup.find_all('script'):
+                try:
+                    data = json.loads(script.get_text())
+                except (ValueError, TypeError):
+                    continue
+                pairs = self._feature_pairs(data.get('features')) if isinstance(data, dict) else []
+                if pairs:
+                    sources.append(pairs)
+            if len(sources) == 1:
+                return sources[0], "embedded_json"
+        pairs = []
+        for term in (container if container is not None else soup).find_all("dt"):
             value = term.find_next_sibling("dd")
             if value:
                 pairs.append((term.get_text(" ", strip=True), value.get_text(" ", strip=True)))
         return pairs, "definition_list" if pairs else "none"
-
 
 
 def extract_features(html: str) -> Tuple[List[Tuple[str, str]], str]:
