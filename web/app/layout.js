@@ -4,9 +4,7 @@ import { t, DEFAULT_LOCALE } from "@/strings";
 import LanguageSwitch from "@/components/LanguageSwitch";
 import SiteFooter from "@/components/SiteFooter";
 import BuilderLink from "@/components/BuilderLink";
-import { COMPONENTS, CATALOG_META } from "@/lib/catalog";
-
-const shops = [...new Set(COMPONENTS.flatMap((c) => c.offers.map((o) => o.shop)))].sort().join(" · ");
+import { CATALOG_META, SHOPS } from "@/lib/catalog";
 
 export const metadata = {
   title: t.meta.title,
@@ -27,7 +25,7 @@ export default function RootLayout({ children }) {
           </nav>
         </header>
         <main className="container">{children}</main>
-        <SiteFooter shops={shops} updatedIso={CATALOG_META.generatedAt} />
+        <SiteFooter shops={SHOPS} updatedIso={CATALOG_META.generatedAt} />
       </body>
     </html>
   );

@@ -11,6 +11,9 @@ import { strings, DEFAULT_LOCALE } from "@/strings";
 
 const STORAGE_KEY = "buildwise:locale";
 const listeners = new Set();
+// The choice made during this visit. Kept in memory so switching works even when
+// localStorage is blocked (private mode, blocked site data): then it just isn't remembered.
+let current = null;
 
 function readSaved() {
   try {
@@ -28,16 +31,21 @@ function subscribe(listener) {
 
 export function setLocale(locale) {
   if (!(locale in strings)) return;
+  current = locale;
   try {
     localStorage.setItem(STORAGE_KEY, locale);
   } catch {
-    // still switch for this visit
+    // Not remembered, but `current` still switches the language for this visit.
   }
   listeners.forEach((listener) => listener());
 }
 
+function getSnapshot() {
+  return current ?? readSaved();
+}
+
 export function useLocale() {
-  return useSyncExternalStore(subscribe, readSaved, () => DEFAULT_LOCALE);
+  return useSyncExternalStore(subscribe, getSnapshot, () => DEFAULT_LOCALE);
 }
 
 export function useT() {

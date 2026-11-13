@@ -7,7 +7,7 @@ import PartsTable from "@/components/PartsTable";
 import FpsChart from "@/components/FpsChart";
 
 // Texts of the budget-search result page. The data is fetched on the server
-// (app/build/page.js); this part only renders it in the chosen language.
+// (app/suggestion/page.js); this part only renders it in the chosen language.
 
 export function BackLink() {
   const t = useT();

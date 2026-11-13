@@ -444,7 +444,6 @@ export type Locale = keyof typeof strings;
 // Default language: what the server renders and what a first-time visitor sees.
 // The user can switch language in the header (lib/locale.js remembers the choice).
 export const DEFAULT_LOCALE: Locale = "fi";
-export const LOCALE = DEFAULT_LOCALE;
 
 // Default-language texts for server-only code. Components use `useT()` from lib/locale.js.
 export const t = strings[DEFAULT_LOCALE];
