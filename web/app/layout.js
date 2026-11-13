@@ -1,10 +1,10 @@
 import Link from "next/link";
 import "./globals.css";
-import { t, LOCALE } from "@/strings";
-import { COMPONENTS, CATALOG_META } from "@/lib/catalog";
-
-const shops = [...new Set(COMPONENTS.flatMap((c) => c.offers.map((o) => o.shop)))].sort().join(" · ");
-const updated = new Date(CATALOG_META.generatedAt).toLocaleDateString(t.locale, { timeZone: "UTC" });
+import { t, DEFAULT_LOCALE } from "@/strings";
+import LanguageSwitch from "@/components/LanguageSwitch";
+import SiteFooter from "@/components/SiteFooter";
+import BuilderLink from "@/components/BuilderLink";
+import { CATALOG_META, SHOPS } from "@/lib/catalog";
 
 export const metadata = {
   title: t.meta.title,
@@ -13,17 +13,19 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang={LOCALE}>
+    <html lang={DEFAULT_LOCALE}>
       <body>
         <header className="site-header">
           <Link href="/" className="logo">
             Build<span>Wise</span>
           </Link>
+          <nav className="site-nav">
+            <BuilderLink />
+            <LanguageSwitch />
+          </nav>
         </header>
         <main className="container">{children}</main>
-        <footer className="site-footer">
-          {t.footer(shops, updated)}
-        </footer>
+        <SiteFooter shops={SHOPS} updatedIso={CATALOG_META.generatedAt} />
       </body>
     </html>
   );

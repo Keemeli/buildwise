@@ -5,6 +5,13 @@
   --text: #e6e9ef;
   --muted: #8b93a7;
   --accent: #4f8cff;
+  /* Width of the page content; the header lines up with it. */
+  --page-width: 1200px;
+}
+@media (min-width: 1600px) {
+  :root {
+    --page-width: 1440px;
+  }
 }
 
 * {
@@ -17,6 +24,14 @@ body {
   color: var(--text);
   font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
   line-height: 1.5;
+  /* Footer stays at the bottom of the window even on short pages. */
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+body > main {
+  flex: 1;
+  width: 100%;
 }
 
 a {
@@ -28,7 +43,8 @@ a:hover {
 }
 
 .site-header {
-  padding: 16px 24px;
+  /* Side padding grows on wide screens so the logo and nav line up with the content. */
+  padding: 16px max(16px, calc((100% - var(--page-width)) / 2 + 16px));
   border-bottom: 1px solid var(--border);
 }
 .logo {
@@ -41,7 +57,7 @@ a:hover {
 }
 
 .container {
-  max-width: 1200px;
+  max-width: var(--page-width);
   margin: 0 auto;
   padding: 32px 16px;
 }
@@ -773,4 +789,280 @@ button.owned-badge {
 button.owned-badge:hover {
   border-color: var(--text);
   color: var(--text);
+}
+
+/* Language switch in the header */
+.site-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.language-switch-wrap {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+.language-switch-label {
+  color: var(--muted);
+  font-size: 0.8rem;
+}
+.language-switch {
+  display: inline-flex;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  overflow: hidden;
+}
+.language-switch button {
+  background: transparent;
+  color: var(--muted);
+  border: none;
+  padding: 4px 12px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+.language-switch button.on {
+  background: rgba(79, 140, 255, 0.15);
+  color: var(--accent);
+}
+
+/* Header navigation */
+.site-nav {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+.nav-link {
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+.nav-link:hover {
+  color: var(--text);
+  text-decoration: none;
+}
+
+/* Front page. Layout: text + one main card on the left, the example result on the right,
+   then a plain (unboxed) row of selling points. Few boxes, so the eye goes to the form. */
+.landing {
+  display: flex;
+  flex-direction: column;
+  gap: 56px;
+  padding: clamp(16px, 6vh, 96px) 0 24px;
+}
+.landing-hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(320px, 460px);
+  gap: 64px;
+  align-items: center;
+}
+.landing-hero h1 {
+  font-size: 2.6rem;
+  line-height: 1.15;
+  margin: 0 0 12px;
+}
+.landing-hero .lead {
+  margin-bottom: 28px;
+}
+.start-card {
+  max-width: 520px;
+  margin-bottom: 0;
+}
+.start-card h2 {
+  margin: 0 0 12px;
+  font-size: 1.1rem;
+}
+.start-card .form {
+  max-width: none;
+  gap: 14px;
+}
+.start-primary {
+  border-color: var(--accent);
+}
+/* Second route: the builder. A real (outlined) button so it isn't missed, but quieter than the main one. */
+.landing-alt {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px 16px;
+  max-width: 520px;
+  margin-top: 20px;
+  padding: 16px 20px;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+}
+.landing-alt span {
+  font-weight: 600;
+}
+.button-secondary {
+  display: inline-block;
+  padding: 10px 20px;
+  background: transparent;
+  color: var(--accent);
+  border: 1px solid var(--accent);
+  white-space: nowrap;
+}
+.button-secondary:hover {
+  background: rgba(79, 140, 255, 0.12);
+  text-decoration: none;
+  filter: none;
+}
+.landing-upgrade {
+  margin: 12px 0 0;
+  max-width: 520px;
+}
+.landing-art {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.landing-art .example-card {
+  padding: 24px;
+}
+.landing-features {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 32px;
+  padding-top: 32px;
+  border-top: 1px solid var(--border);
+}
+.feature::before {
+  content: "";
+  display: block;
+  width: 28px;
+  height: 3px;
+  border-radius: 2px;
+  background: var(--accent);
+  margin-bottom: 14px;
+}
+.feature h3 {
+  margin: 0 0 4px;
+  font-size: 1.05rem;
+}
+.feature p {
+  margin: 0;
+}
+@media (max-width: 900px) {
+  .landing-hero {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  .landing-art {
+    max-width: 460px;
+  }
+}
+@media (max-width: 600px) {
+  .landing-hero h1 {
+    font-size: 1.8rem;
+  }
+  .landing-features {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+}
+/* Wide screens: bigger type, so the page fills the width. */
+@media (min-width: 1600px) {
+  .landing-hero {
+    grid-template-columns: minmax(0, 1fr) 500px;
+    gap: 96px;
+  }
+  .landing-hero h1 {
+    font-size: 3.2rem;
+  }
+  .landing-hero .lead {
+    font-size: 1.15rem;
+  }
+  .landing-art .example-card {
+    padding: 28px;
+  }
+}
+
+/* Front page: example result card */
+.example-card {
+  margin-bottom: 0;
+  padding: 22px;
+}
+.example-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 14px;
+}
+.example-tag {
+  font-size: 0.75rem;
+  color: var(--muted);
+  border: 1px dashed var(--border);
+  border-radius: 999px;
+  padding: 1px 8px;
+}
+.example-parts {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  font-size: 0.9rem;
+}
+.example-parts li {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+}
+.example-part {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-width: 0;
+}
+.example-part svg {
+  flex-shrink: 0;
+  color: var(--accent);
+}
+.example-total {
+  display: flex;
+  justify-content: space-between;
+  font-weight: 700;
+  border-top: 1px solid var(--border);
+  margin-top: 14px;
+  padding-top: 12px;
+}
+.example-fps-label {
+  margin: 16px 0 6px;
+}
+.fps-range-bar {
+  position: relative;
+  height: 10px;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 5px;
+}
+.fps-range-fill {
+  position: absolute;
+  top: -1px;
+  bottom: -1px;
+  background: var(--accent);
+  border-radius: 5px;
+}
+.fps-range-axis {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.75rem;
+  color: var(--muted);
+  margin-top: 4px;
+  height: 1.2em;
+}
+.fps-range-value {
+  position: absolute;
+  transform: translateX(-50%);
+  color: var(--text);
+  font-weight: 600;
+  white-space: nowrap;
+}
+.example-ok {
+  margin: 16px 0 0;
+  color: #6fd3a0;
+  font-size: 0.9rem;
 }

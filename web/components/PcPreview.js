@@ -1,4 +1,6 @@
-import { t } from "@/strings";
+"use client";
+
+import { useT } from "@/lib/locale";
 
 // 2D side view of the case, as seen through the side window of a PC standing on a desk:
 // rear (I/O, GPU bracket, PSU) on the left, front on the right.
@@ -15,6 +17,7 @@ function cls(category, build, errorParts, owned) {
 }
 
 export default function PcPreview({ build, owned = {}, errorParts, gpuTooLong }) {
+  const t = useT();
   const gpuWidth = gpuTooLong ? 330 : 200;
 
   return (

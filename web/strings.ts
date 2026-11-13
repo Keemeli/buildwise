@@ -58,6 +58,26 @@ export const strings = {
   fi: {
     locale: "fi-FI",
 
+    languageName: "Suomi",
+    switchLanguage: "Kieli",
+    nav: { builder: "Kokoaja" },
+    landing: {
+      title: "Pelikone budjettiisi suomalaisilla hinnoilla",
+      lead: "Kerro budjetti ja peli. Saat yhteensopivan kokoonpanon kauppojen ajantasaisilla hinnoilla ja rehellisen FPS-arvion.",
+      budgetTitle: "Hae budjetilla",
+      builderPrompt: "Haluatko valita osat itse?",
+      openBuilder: "Avaa kokoaja →",
+      upgradeNote: "Päivitätkö vanhaa konetta? Merkitse kokoajassa omat osasi, niin niitä ei lasketa hintaan.",
+      compatTitle: "Yhteensopivuus",
+      compatText: "Kanta, muisti, mitat ja virta. Kerromme myös, mitä ei voitu tarkistaa.",
+      fpsTitle: "Rehellinen FPS",
+      fpsText: "Arvio vaihteluvälinä, ei yhtenä lupauksena.",
+      catalogTitle: (n: number) => `${n.toLocaleString("fi-FI")} osaa`,
+      catalogText: (shops: string, date: string) => `${shops} · päivitetty ${date}`,
+      example: "esimerkki",
+      moreParts: (n: number) => `+ ${n} muuta osaa`,
+      allFit: "Kaikki osat sopivat yhteen",
+    },
     meta: {
       title: "BuildWise",
       description: "PC-kokoonpanot suomalaisten kauppojen hinnoilla ja rehellisellä FPS-arviolla",
@@ -230,6 +250,26 @@ export const strings = {
   en: {
     locale: "en-IE",
 
+    languageName: "English",
+    switchLanguage: "Language",
+    nav: { builder: "Builder" },
+    landing: {
+      title: "A gaming PC for your budget, at Finnish prices",
+      lead: "Tell us your budget and the game you play. You get a compatible build with up-to-date prices from Finnish shops and an honest FPS estimate.",
+      budgetTitle: "Search by budget",
+      builderPrompt: "Rather pick the parts yourself?",
+      openBuilder: "Open the builder →",
+      upgradeNote: "Upgrading an old PC? Mark the parts you already have in the builder and they're left out of the price.",
+      compatTitle: "Compatibility",
+      compatText: "Socket, memory, dimensions and power. We also tell you what we couldn't check.",
+      fpsTitle: "Honest FPS",
+      fpsText: "An estimate as a range, not a single promise.",
+      catalogTitle: (n: number) => `${n.toLocaleString("en-IE")} parts`,
+      catalogText: (shops: string, date: string) => `${shops} · updated ${date}`,
+      example: "example",
+      moreParts: (n: number) => `+ ${n} more parts`,
+      allFit: "All parts fit together",
+    },
     meta: {
       title: "BuildWise",
       description: "PC builds with Finnish retailer prices and an honest FPS estimate",
@@ -401,7 +441,9 @@ export const strings = {
 
 export type Locale = keyof typeof strings;
 
-// Default language. Changing this one line switches the whole UI.
-export const LOCALE: Locale = "fi";
+// Default language: what the server renders and what a first-time visitor sees.
+// The user can switch language in the header (lib/locale.js remembers the choice).
+export const DEFAULT_LOCALE: Locale = "fi";
 
-export const t = strings[LOCALE];
+// Default-language texts for server-only code. Components use `useT()` from lib/locale.js.
+export const t = strings[DEFAULT_LOCALE];
