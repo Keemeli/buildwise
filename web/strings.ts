@@ -202,6 +202,9 @@ export const strings = {
       priceMax: "max",
       priceRange: (min: string | null, max: string | null) =>
         min !== null && max !== null ? `Hinta ${min}–${max} €` : min !== null ? `Hinta yli ${min} €` : `Hinta alle ${max} €`,
+      priceInverted: "Minimi on suurempi kuin maksimi",
+      sortLabel: "Järjestys",
+      sort: { cheapest: "Halvin ensin", priciest: "Kallein ensin", name: "Nimi A–Ö" } as Record<string, string>,
       unknown: "Ei tiedossa",
       wattage: {
         "w-lt600": "alle 600 W",
@@ -474,6 +477,9 @@ export const strings = {
       priceMax: "max",
       priceRange: (min: string | null, max: string | null) =>
         min !== null && max !== null ? `Price ${min}–${max} €` : min !== null ? `Price from ${min} €` : `Price up to ${max} €`,
+      priceInverted: "Minimum is greater than maximum",
+      sortLabel: "Sort by",
+      sort: { cheapest: "Cheapest first", priciest: "Most expensive first", name: "Name A–Z" } as Record<string, string>,
       unknown: "Not known",
       wattage: {
         "w-lt600": "under 600 W",

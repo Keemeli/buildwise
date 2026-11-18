@@ -7,6 +7,7 @@ import { UNKNOWN, OTHER, optionKeys, facetsFor, facetOptions, applyFacets } from
 import { formatEuros } from "@/lib/api";
 import { matchesQuery, queryTokens, searchKey } from "@/lib/search";
 import PartIcon from "./PartIcon";
+import ProductImage from "./ProductImage";
 import { useT } from "@/lib/locale";
 
 // Storage capacity. The normaliser currently counts 1 TB as 1024 GB, so both
@@ -139,6 +140,10 @@ export default function PartPicker({ slot, build, owned = false, onSelect, onOwn
   const minCents = euroCents(priceMin);
   const maxCents = euroCents(priceMax);
   const priceActive = minCents !== null || maxCents !== null;
+  // min > max matches nothing; say so instead of showing an unexplained empty list.
+  const priceInverted = minCents !== null && maxCents !== null && minCents > maxCents;
+  // Order within the compatible and incompatible groups: "cheapest" | "priciest" | "name".
+  const [sort, setSort] = useState("cheapest");
 
   // Close with the Escape key
   useEffect(() => {
@@ -172,11 +177,17 @@ export default function PartPicker({ slot, build, owned = false, onSelect, onOwn
     const incompatible = searched.filter((row) => row.issues.length > 0).length;
     const pool = showAll ? searched : searched.filter((row) => row.issues.length === 0);
     const options = facetOptions(pool, facets, selections, getComponent);
+    const byName = new Intl.Collator(t.locale, { sensitivity: "base", numeric: true });
+    const compare = {
+      cheapest: (a, b) => a.offer.priceCents - b.offer.priceCents,
+      priciest: (a, b) => b.offer.priceCents - a.offer.priceCents,
+      name: (a, b) => byName.compare(a.component.name, b.component.name),
+    }[sort];
     const parts = applyFacets(pool, facets, selections, getComponent)
-      // Compatible parts first, then cheapest first
-      .sort((a, b) => a.issues.length - b.issues.length || a.offer.priceCents - b.offer.priceCents);
+      // Compatible parts always first, then the chosen order
+      .sort((a, b) => a.issues.length - b.issues.length || compare(a, b));
     return { parts, options, incompatible };
-  }, [all, facets, query, selections, showAll, minCents, maxCents]);
+  }, [all, facets, query, selections, showAll, minCents, maxCents, sort, t.locale]);
 
   const anySelected = priceActive || Object.values(selections).some((keys) => keys.length > 0);
 
@@ -207,6 +218,7 @@ export default function PartPicker({ slot, build, owned = false, onSelect, onOwn
 
   let emptyText = t.picker.noFilterMatches;
   if (all.length === 0) emptyText = t.picker.emptyCategory;
+  else if (priceInverted) emptyText = t.picker.priceInverted;
   else if (query.trim() && !anySelected) emptyText = t.picker.noMatches(query);
 
   return (
@@ -240,13 +252,22 @@ export default function PartPicker({ slot, build, owned = false, onSelect, onOwn
           </div>
         )}
 
-        <input
-          className="search"
-          placeholder={t.picker.searchPlaceholder}
-          value={query}
-          onChange={(e) => setQuery(e.target.value)}
-          autoFocus
-        />
+        <div className="picker-search-row">
+          <input
+            className="search"
+            placeholder={t.picker.searchPlaceholder}
+            value={query}
+            onChange={(e) => setQuery(e.target.value)}
+            autoFocus
+          />
+          <select className="sort-select" aria-label={t.picker.sortLabel} value={sort} onChange={(e) => setSort(e.target.value)}>
+            {["cheapest", "priciest", "name"].map((key) => (
+              <option key={key} value={key}>
+                {t.picker.sort[key]}
+              </option>
+            ))}
+          </select>
+        </div>
 
         {all.length > 0 && (
           <div className="price-filter">
@@ -281,6 +302,11 @@ export default function PartPicker({ slot, build, owned = false, onSelect, onOwn
                 />
                 <span className="muted">€</span>
               </div>
+            )}
+            {priceInverted && (
+              <p className="price-warning" role="status">
+                {t.picker.priceInverted}
+              </p>
             )}
           </div>
         )}
@@ -338,6 +364,9 @@ export default function PartPicker({ slot, build, owned = false, onSelect, onOwn
         <ul className="picker-list">
           {view.parts.map(({ component, offer, issues }) => (
             <li key={component.id} className={issues.length ? "picker-item incompatible" : "picker-item"}>
+              <div className="picker-thumb">
+                <ProductImage src={component.image} alt={component.name} category={slot.category} size={56} />
+              </div>
               <div className="picker-info">
                 <div className="part-name">{component.name}</div>
                 <div className="part-specs">{specSummary(component, t)}</div>

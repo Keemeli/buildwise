@@ -10,6 +10,7 @@ import PartPicker, { specSummary } from "@/components/PartPicker";
 import FpsChart from "@/components/FpsChart";
 import BudgetForm from "@/components/BudgetForm";
 import PartIcon from "@/components/PartIcon";
+import ProductImage from "@/components/ProductImage";
 import PcPreview from "@/components/PcPreview";
 import { useT } from "@/lib/locale";
 
@@ -158,7 +159,7 @@ export default function BuilderPage() {
       >
         <div className="slot-label">
           <span className="slot-icon">
-            <PartIcon category={category} />
+            {part ? <ProductImage src={part.image} alt={part.name} category={category} size={52} /> : <PartIcon category={category} />}
           </span>
           {label ?? t.categories[category]}
         </div>

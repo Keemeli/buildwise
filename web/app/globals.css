@@ -458,8 +458,49 @@ select {
 .modal-header h2 {
   margin: 0;
 }
-.search {
+.picker-search-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
   margin: 16px 0;
+}
+.picker-search-row .search {
+  flex: 1 1 220px;
+  margin: 0;
+}
+.sort-select {
+  flex: 0 0 auto;
+}
+/* Shop product photos are JPGs on white, so the white box looks intentional on dark */
+.product-image {
+  display: block;
+  object-fit: contain;
+  background: #fff;
+  border-radius: 8px;
+  flex-shrink: 0;
+}
+.slot-icon:has(.product-image) {
+  overflow: hidden;
+  background: #fff;
+}
+.slot-icon .product-image {
+  width: 100%;
+  height: 100%;
+  border-radius: 0;
+}
+.picker-thumb {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  height: 56px;
+  color: var(--muted);
+}
+.price-warning {
+  flex-basis: 100%;
+  margin: 0;
+  font-size: 0.85rem;
+  color: #ff8b8f;
 }
 .picker-list {
   list-style: none;
@@ -469,7 +510,7 @@ select {
 }
 .picker-item {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) auto auto;
+  grid-template-columns: 56px minmax(0, 1fr) auto auto;
   gap: 16px;
   align-items: center;
   padding: 12px 4px;
@@ -477,7 +518,8 @@ select {
 }
 .picker-item.incompatible .part-name,
 .picker-item.incompatible .part-specs,
-.picker-item.incompatible .picker-price {
+.picker-item.incompatible .picker-price,
+.picker-item.incompatible .picker-thumb {
   opacity: 0.5;
 }
 .picker-price {
@@ -525,7 +567,8 @@ select {
     grid-column: 1 / -1;
   }
   .picker-item {
-    grid-template-columns: minmax(0, 1fr) auto;
+    grid-template-columns: 56px minmax(0, 1fr) auto;
+    gap: 8px 12px;
   }
   .picker-item .button {
     grid-column: 1 / -1;

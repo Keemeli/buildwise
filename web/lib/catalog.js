@@ -53,6 +53,7 @@ function toComponent(c) {
     model: c.model,
     name: c.raw_name, // shown exactly as the shop writes it, never translated
     specs,
+    image: c.image ?? null, // shop's product photo URL, loaded straight from the shop
     offers: c.listings
       .filter((l) => l.price_cents != null)
       .map((l) => ({
