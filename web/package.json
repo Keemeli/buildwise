@@ -10,7 +10,7 @@
     "check:contract": "node scripts/check-data-contract.mjs"
   },
   "dependencies": {
-    "next": "16.4.4",
+    "next": "16.4.6",
     "react": "19.3.0",
     "react-dom": "19.3.0",
     "recharts": "^3.10.1"
