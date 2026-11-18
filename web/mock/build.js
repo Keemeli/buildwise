@@ -35,3 +35,24 @@ export const mockBuild = {
     "Arvio perustuu julkisiin benchmarkeihin. Todellinen FPS vaihtelee kartan ja tilanteen mukaan.",
   ],
 };
+
+// A second, pricier example for the front page, so visitors see more than one price level.
+export const mockBuildHighEnd = {
+  budgetCents: 210000,
+  game: "cyberpunk2077",
+  totalCents: 202920,
+  parts: [
+    { category: "cpu", name: "AMD Ryzen 7 7800X3D", priceCents: 37990, shop: "Jimms", url: "#" },
+    { category: "cooler", name: "Arctic Liquid Freezer III 280", priceCents: 8990, shop: "Proshop", url: "#" },
+    { category: "motherboard", name: "ASUS TUF Gaming B650-Plus WiFi", priceCents: 19990, shop: "Datatronic", url: "#" },
+    { category: "memory", name: "G.Skill Flare X5 32GB DDR5-6000", priceCents: 11990, shop: "Proshop", url: "#" },
+    { category: "gpu", name: "NVIDIA GeForce RTX 5070 Ti 16GB", priceCents: 84990, shop: "Datatronic", url: "#" },
+    { category: "storage", name: "Samsung 990 Pro 2TB", priceCents: 16990, shop: "Jimms", url: "#" },
+    { category: "psu", name: "Corsair RM850e 850W", priceCents: 11990, shop: "Proshop", url: "#" },
+    { category: "case", name: "Lian Li Lancool 216", priceCents: 9990, shop: "Datatronic", url: "#" },
+  ],
+  fps: [{ resolution: "1440p", settings: "high", min: 95, max: 125 }],
+};
+
+// Builds shown on the front page, cheapest first.
+export const EXAMPLE_BUILDS = [mockBuild, mockBuildHighEnd];

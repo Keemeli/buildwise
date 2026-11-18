@@ -1,7 +1,10 @@
+"use client";
+
 import { formatEuros } from "@/lib/api";
-import { t } from "@/strings";
+import { useT } from "@/lib/locale";
 
 export default function PartsTable({ parts }) {
+  const t = useT();
   return (
     <table className="parts">
       <thead>
@@ -22,7 +25,7 @@ export default function PartsTable({ parts }) {
               </a>
             </td>
             <td>{part.shop}</td>
-            <td className="right">{formatEuros(part.priceCents)}</td>
+            <td className="right">{formatEuros(part.priceCents, t.locale)}</td>
           </tr>
         ))}
       </tbody>

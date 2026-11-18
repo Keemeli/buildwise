@@ -26,6 +26,7 @@ export async function getBuild({ budget, game, exclude = [] }) {
   return res.json();
 }
 
-export function formatEuros(cents) {
-  return (cents / 100).toLocaleString(t.locale, { style: "currency", currency: "EUR" });
+// `locale` decides the number format (1 234,50 € vs €1,234.50); pass `t.locale` from useT().
+export function formatEuros(cents, locale = t.locale) {
+  return (cents / 100).toLocaleString(locale, { style: "currency", currency: "EUR" });
 }

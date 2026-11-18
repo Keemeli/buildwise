@@ -6,7 +6,7 @@ import { issuesForCandidate, issueKey } from "@/lib/compat";
 import { UNKNOWN, facetsFor, facetOptions, applyFacets } from "@/lib/facets";
 import { formatEuros } from "@/lib/api";
 import PartIcon from "./PartIcon";
-import { t } from "@/strings";
+import { useT } from "@/lib/locale";
 
 // Storage capacity. The normaliser currently counts 1 TB as 1024 GB, so both
 // 1000 and 1024 multiples are shown as whole terabytes.
@@ -23,7 +23,7 @@ const line = (...parts) => parts.filter((p) => p !== null && p !== undefined && 
 const has = (v) => v !== null && v !== undefined;
 
 // Short spec line shown under each part name.
-function specSummary(c) {
+function specSummary(c, t) {
   const s = c.specs;
   switch (c.category) {
     case "cpu":
@@ -72,7 +72,7 @@ export { specSummary };
 // Picker rows are { component, offer, issues }; the facet helpers read the component.
 const getComponent = (row) => row.component;
 
-function optionLabel(facet, key) {
+function optionLabel(facet, key, t) {
   if (key === UNKNOWN) return t.picker.unknown;
   if (facet.id === "wattage") return t.picker.wattage[key] ?? key;
   return key; // spec values are shown as the pipeline writes them (language-neutral)
@@ -82,6 +82,7 @@ function optionLabel(facet, key) {
 // onSelect(component, { asOwned }) — asOwned when "I already have one" is on.
 // onOwnedWithoutModel() — "I have one but don't know the model".
 export default function PartPicker({ slot, build, owned = false, onSelect, onOwnedWithoutModel, onClose }) {
+  const t = useT();
   const [query, setQuery] = useState("");
   // { [facetId]: optionKey[] } — ticked filter options
   const [selections, setSelections] = useState({});
@@ -191,7 +192,7 @@ export default function PartPicker({ slot, build, owned = false, onSelect, onOwn
                         aria-pressed={on}
                         onClick={() => toggleOption(facet.id, key)}
                       >
-                        {optionLabel(facet, key)}
+                        {optionLabel(facet, key, t)}
                         <span className="chip-count">{count}</span>
                       </button>
                     );
@@ -228,7 +229,7 @@ export default function PartPicker({ slot, build, owned = false, onSelect, onOwn
             <li key={component.id} className={issues.length ? "picker-item incompatible" : "picker-item"}>
               <div className="picker-info">
                 <div className="part-name">{component.name}</div>
-                <div className="part-specs">{specSummary(component)}</div>
+                <div className="part-specs">{specSummary(component, t)}</div>
                 {issues.map((issue) => (
                   <div key={issueKey(issue)} className="issue-inline error">
                     ✕ {t.issues[issue.code](issue.params)}
@@ -236,7 +237,7 @@ export default function PartPicker({ slot, build, owned = false, onSelect, onOwn
                 ))}
               </div>
               <div className="picker-price">
-                <div className="price">{formatEuros(offer.priceCents)}</div>
+                <div className="price">{formatEuros(offer.priceCents, t.locale)}</div>
                 <div className="muted small">
                   {offer.shop}
                   {component.offers.length > 1 && ` · ${t.picker.shops(component.offers.length)}`}

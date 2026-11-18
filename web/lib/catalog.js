@@ -58,6 +58,9 @@ function toComponent(c) {
 
 export const COMPONENTS = raw.components.map(toComponent).filter((c) => c.offers.length > 0);
 
+// Shops the prices come from, for display: "Datatronic · Jimms".
+export const SHOPS = [...new Set(COMPONENTS.flatMap((c) => c.offers.map((o) => o.shop)))].sort().join(" · ");
+
 const BY_ID = new Map(COMPONENTS.map((c) => [c.id, c]));
 
 export function findComponent(id) {

@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 import { GAMES } from "@/mock/build";
-import { t } from "@/strings";
+import { useT } from "@/lib/locale";
 
 const MIN = 500;
 const MAX = 4000;
@@ -11,6 +11,7 @@ const MAX = 4000;
 // `owned`: categories the user already has. They are left out of the budget, so the
 // whole budget goes to the other parts.
 export default function BudgetForm({ owned = [] }) {
+  const t = useT();
   const router = useRouter();
   const [budget, setBudget] = useState(1200);
   const [game, setGame] = useState(GAMES[0].id);
@@ -19,7 +20,7 @@ export default function BudgetForm({ owned = [] }) {
     event.preventDefault();
     const params = new URLSearchParams({ budget: String(budget), game });
     if (owned.length > 0) params.set("exclude", owned.join(","));
-    router.push(`/build?${params}`);
+    router.push(`/suggestion?${params}`);
   }
 
   return (

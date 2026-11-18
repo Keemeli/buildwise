@@ -1,11 +1,12 @@
 "use client";
 
-import { t } from "@/strings";
+import { useT } from "@/lib/locale";
 import { Bar, BarChart, CartesianGrid, ResponsiveContainer, Tooltip, XAxis, YAxis } from "recharts";
 
 // Draws the FPS range as bars: an invisible bar from 0 to min,
 // with a visible bar from min to max stacked on top.
 export default function FpsChart({ fps }) {
+  const t = useT();
   const data = fps.map((row) => ({
     label: `${row.resolution} ${t.fps.settings[row.settings] ?? row.settings}`,
     base: row.min,

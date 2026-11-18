@@ -1,38 +1,36 @@
-import { Suspense } from "react";
+"use client";
+
 import Link from "next/link";
-import { getBuild, formatEuros } from "@/lib/api";
-import { GAMES } from "@/mock/build";
+import { formatEuros } from "@/lib/api";
+import { useT } from "@/lib/locale";
 import PartsTable from "@/components/PartsTable";
 import FpsChart from "@/components/FpsChart";
-import { t } from "@/strings";
 
-export default function BuildPage({ searchParams }) {
+// Texts of the budget-search result page. The data is fetched on the server
+// (app/suggestion/page.js); this part only renders it in the chosen language.
+
+export function BackLink() {
+  const t = useT();
   return (
-    <>
-      <Link href="/" className="back">
-        {t.result.changeSearch}
-      </Link>
-      <Suspense fallback={<div className="card loading">{t.result.loading}</div>}>
-        <BuildResult searchParams={searchParams} />
-      </Suspense>
-    </>
+    <Link href="/" className="back">
+      {t.result.changeSearch}
+    </Link>
   );
 }
 
-async function BuildResult({ searchParams }) {
-  const params = await searchParams;
-  const budget = Number(params.budget) || 1000;
-  const game = params.game || "cs2";
-  const exclude = (params.exclude || "").split(",").filter((c) => c in t.categories);
-  const gameName = GAMES.find((g) => g.id === game)?.name ?? game;
+export function LoadingCard() {
+  const t = useT();
+  return <div className="card loading">{t.result.loading}</div>;
+}
 
-  const build = await getBuild({ budget, game, exclude });
+export default function BuildResultView({ build, gameName, exclude }) {
+  const t = useT();
   const leftover = build.budgetCents - build.totalCents;
 
   return (
     <>
       <h1>
-        {gameName} · {formatEuros(build.budgetCents)}
+        {gameName} · {formatEuros(build.budgetCents, t.locale)}
       </h1>
       {exclude.length > 0 && (
         <p className="muted">{t.result.ownedParts(exclude.map((c) => t.categories[c]))}</p>
@@ -41,11 +39,11 @@ async function BuildResult({ searchParams }) {
       <div className="summary">
         <div className="card stat">
           <span className="stat-label">{t.result.totalPrice}</span>
-          <span className="stat-value">{formatEuros(build.totalCents)}</span>
+          <span className="stat-value">{formatEuros(build.totalCents, t.locale)}</span>
         </div>
         <div className="card stat">
           <span className="stat-label">{t.result.leftInBudget}</span>
-          <span className="stat-value">{formatEuros(leftover)}</span>
+          <span className="stat-value">{formatEuros(leftover, t.locale)}</span>
         </div>
         <div className="card stat">
           <span className="stat-label">{t.result.fps1080}</span>
