@@ -60,6 +60,8 @@ FIELD_MAP: Dict[str, Dict[str, List[str]]] = {
         "memory_max_gb": ["Tuettu enimmäismuisti", "Enimmäismuisti"],
         "memory_channels": ["Muistikanavat"],
         "m2_slots": ["re:m\\.2.*(paikkojen|paikat|paikkaa)", "M.2-paikkojen määrä", "M.2-liitäntöjen määrä"],
+        # "Kyllä" / "Ei" on 591 of 645 board pages: the only source that can say "no WiFi".
+        "wifi": ["Wi-Fi"],
         "width_mm": ["Tuotteen leveys"],
         "depth_mm": ["Tuotteen syvyys"],
     },

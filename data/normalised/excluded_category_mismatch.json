@@ -1,34 +1,702 @@
 {
   "excluded": [
     {
-      "raw_name": "GIGABYTE B850M AORUS ELITE WIFI6E ICE AMD B850 Pistoke AM5 mikro ATX",
-      "category": "storage",
+      "raw_name": "Cooler Master Hyper 612 APEX Suoritin Ilmanjäähdytin 12 cm musta 1 kpl",
+      "category": "case",
       "shop": "Datatronic",
-      "form_factor": "mikro ATX"
+      "reason": "accessory"
     },
     {
-      "raw_name": "GIGABYTE B850M D3HP emolevy AMD B850 Pistoke AM5 mikro ATX",
-      "category": "storage",
+      "raw_name": "HAVN HVN-FS-H1230-01-TRI Tietokoneen jäähdytysjärjestelmä Tietokonekotelo Tuuletin 12 cm Valkoinen 3 kpl",
+      "category": "case",
       "shop": "Datatronic",
-      "form_factor": "mikro ATX"
+      "reason": "accessory"
     },
     {
-      "raw_name": "MSI MEG X870E GODLIKE emolevy AMD X870E Pistoke AM5 Laajennettu ATX",
+      "raw_name": "HAVN HVN-FS-H1230-01 Tietokoneen jäähdytysjärjestelmä Tietokonekotelo Tuuletin 12 cm Valkoinen 1 kpl",
+      "category": "case",
+      "shop": "Datatronic",
+      "reason": "accessory"
+    },
+    {
+      "raw_name": "Phanteks PH-MLEDKT6_BK01 tietokonekotelon osa Näyttö",
+      "category": "case",
+      "shop": "Datatronic",
+      "reason": "accessory"
+    },
+    {
+      "raw_name": "SAMA Gears A40L Suoritin Ilmanjäähdytin 12 cm Valkoinen 1 kpl",
+      "category": "case",
+      "shop": "Datatronic",
+      "reason": "accessory"
+    },
+    {
+      "raw_name": "Gamiac TKL90G - White/Red - TKL - Kailh Blue",
+      "category": "case",
+      "shop": "Datatronic",
+      "reason": "accessory"
+    },
+    {
+      "raw_name": "DeepCool FL12R Tietokonekotelo Tuuletin 12 cm musta 1 kpl",
+      "category": "case",
+      "shop": "Datatronic",
+      "reason": "accessory"
+    },
+    {
+      "raw_name": "Phanteks PH-MLEDKT6_WT01 tietokonekotelon osa Näyttö",
+      "category": "case",
+      "shop": "Datatronic",
+      "reason": "accessory"
+    },
+    {
+      "raw_name": "Intel Wireless-N 7260 Plus Bluetooth Sisäinen WLAN / Bluetooth 300 Mbit/s",
+      "category": "cpu",
+      "shop": "Datatronic",
+      "reason": "accessory"
+    },
+    {
+      "raw_name": "NZXT AB-RH175-B1 tietokonekotelon osa Universaali Grafiikkakortin pidike",
+      "category": "gpu",
+      "shop": "Datatronic",
+      "reason": "accessory"
+    },
+    {
+      "raw_name": "NZXT AB-RH175-W1 tietokonekotelon osa Universaali Grafiikkakortin pidike",
+      "category": "gpu",
+      "shop": "Datatronic",
+      "reason": "accessory"
+    },
+    {
+      "raw_name": "Cryorig LGA 1700 Kit Type A",
+      "category": "gpu",
+      "shop": "Datatronic",
+      "reason": "accessory"
+    },
+    {
+      "raw_name": "Cryorig LGA 1700 Kit Type D",
+      "category": "gpu",
+      "shop": "Datatronic",
+      "reason": "accessory"
+    },
+    {
+      "raw_name": "Noctua NA-SAV2 chromax.red",
+      "category": "gpu",
+      "shop": "Datatronic",
+      "reason": "accessory"
+    },
+    {
+      "raw_name": "NZXT Kraken Plus 360 RGB Suoritin All-in-one-nesteenjäähdytin Valkoinen 1 kpl",
+      "category": "gpu",
+      "shop": "Datatronic",
+      "reason": "accessory"
+    },
+    {
+      "raw_name": "Cryorig LGA 1700 Kit Type C",
+      "category": "gpu",
+      "shop": "Datatronic",
+      "reason": "accessory"
+    },
+    {
+      "raw_name": "Noctua NA-SAVP1 chromax.yellow",
+      "category": "gpu",
+      "shop": "Datatronic",
+      "reason": "accessory"
+    },
+    {
+      "raw_name": "Noctua NA-FG1-8 SX5 Tietokoneen jäähdytysjärjestelmän osa ja lisätarvike Tuuletusritilä",
+      "category": "gpu",
+      "shop": "Datatronic",
+      "reason": "accessory"
+    },
+    {
+      "raw_name": "Noctua NA-FG1-8 SX2 Tietokoneen jäähdytysjärjestelmän osa ja lisätarvike Tuuletusritilä",
+      "category": "gpu",
+      "shop": "Datatronic",
+      "reason": "accessory"
+    },
+    {
+      "raw_name": "Phanteks PH-GO360D30_DBK02 Tietokoneen jäähdytysjärjestelmä Suoritin All-in-one-nesteenjäähdytin 12 cm Musta 1 kpl",
+      "category": "gpu",
+      "shop": "Datatronic",
+      "reason": "accessory"
+    },
+    {
+      "raw_name": "Noctua NA-FG1-14 SX5 Tietokoneen jäähdytysjärjestelmän osa ja lisätarvike Tuuletusritilä",
+      "category": "gpu",
+      "shop": "Datatronic",
+      "reason": "accessory"
+    },
+    {
+      "raw_name": "NZXT Kraken Plus RGB 240 Suoritin All-in-one-nesteenjäähdytin 12 cm musta",
+      "category": "gpu",
+      "shop": "Datatronic",
+      "reason": "accessory"
+    },
+    {
+      "raw_name": "Noctua NA-FG1-9 SX5 Tietokoneen jäähdytysjärjestelmän osa ja lisätarvike Tuuletusritilä",
+      "category": "gpu",
+      "shop": "Datatronic",
+      "reason": "accessory"
+    },
+    {
+      "raw_name": "Noctua NA-FG1-9 SX2 Tietokoneen jäähdytysjärjestelmän osa ja lisätarvike Tuuletusritilä",
+      "category": "gpu",
+      "shop": "Datatronic",
+      "reason": "accessory"
+    },
+    {
+      "raw_name": "NZXT Kraken Plus RGB 240 Suoritin All-in-one-nesteenjäähdytin 12 cm Valkoinen",
+      "category": "gpu",
+      "shop": "Datatronic",
+      "reason": "accessory"
+    },
+    {
+      "raw_name": "NZXT Kraken Plus 360 RGB Suoritin All-in-one-nesteenjäähdytin musta 1 kpl",
+      "category": "gpu",
+      "shop": "Datatronic",
+      "reason": "accessory"
+    },
+    {
+      "raw_name": "Noctua NA-FG1-12 SX5 Tietokoneen jäähdytysjärjestelmän osa ja lisätarvike Tuuletusritilä",
+      "category": "gpu",
+      "shop": "Datatronic",
+      "reason": "accessory"
+    },
+    {
+      "raw_name": "Phanteks PH-GO360D30_DWT02 Tietokoneen jäähdytysjärjestelmä Suoritin All-in-one-nesteenjäähdytin 12 cm Musta 1 kpl",
+      "category": "gpu",
+      "shop": "Datatronic",
+      "reason": "accessory"
+    },
+    {
+      "raw_name": "Noctua NA-FG1-6 SX5 Tietokoneen jäähdytysjärjestelmän osa ja lisätarvike Tuuletusritilä",
+      "category": "gpu",
+      "shop": "Datatronic",
+      "reason": "accessory"
+    },
+    {
+      "raw_name": "Noctua NA-FG1-4 SX2 Tietokoneen jäähdytysjärjestelmän osa ja lisätarvike Tuuletusritilä",
+      "category": "gpu",
+      "shop": "Datatronic",
+      "reason": "accessory"
+    },
+    {
+      "raw_name": "Cryorig LGA 1700 Kit Type B",
+      "category": "gpu",
+      "shop": "Datatronic",
+      "reason": "accessory"
+    },
+    {
+      "raw_name": "Noctua NA-FG1-14 SX2 Tietokoneen jäähdytysjärjestelmän osa ja lisätarvike Tuuletusritilä",
+      "category": "gpu",
+      "shop": "Datatronic",
+      "reason": "accessory"
+    },
+    {
+      "raw_name": "Noctua NA-FG1-20 Sx2 Fan Grills",
+      "category": "gpu",
+      "shop": "Datatronic",
+      "reason": "accessory"
+    },
+    {
+      "raw_name": "Noctua NA-SAV2 chromax.yellow",
+      "category": "gpu",
+      "shop": "Datatronic",
+      "reason": "accessory"
+    },
+    {
+      "raw_name": "Thermal Grizzly Putty Basic jäähdytyslevyn yhdiste Lämpötahna",
+      "category": "gpu",
+      "shop": "Datatronic",
+      "reason": "accessory"
+    },
+    {
+      "raw_name": "NZXT Kraken Plus 240 Suoritin All-in-one-nesteenjäähdytin 12 cm musta",
+      "category": "gpu",
+      "shop": "Datatronic",
+      "reason": "accessory"
+    },
+    {
+      "raw_name": "Thermal Grizzly Putty Advance 100g blau jäähdytyslevyn yhdiste Lämpötahna",
+      "category": "gpu",
+      "shop": "Datatronic",
+      "reason": "accessory"
+    },
+    {
+      "raw_name": "Putty Pro 100g (grau)",
+      "category": "gpu",
+      "shop": "Datatronic",
+      "reason": "accessory"
+    },
+    {
+      "raw_name": "NZXT Kraken Plus 280 Suoritin All-in-one-nesteenjäähdytin 14 cm musta",
+      "category": "gpu",
+      "shop": "Datatronic",
+      "reason": "accessory"
+    },
+    {
+      "raw_name": "NZXT Kraken Plus 360 Suoritin All-in-one-nesteenjäähdytin 12 cm musta",
+      "category": "gpu",
+      "shop": "Datatronic",
+      "reason": "accessory"
+    },
+    {
+      "raw_name": "Noctua NA-FG1-12 SX2 Tietokoneen jäähdytysjärjestelmän osa ja lisätarvike Tuuletusritilä",
+      "category": "gpu",
+      "shop": "Datatronic",
+      "reason": "accessory"
+    },
+    {
+      "raw_name": "Noctua NA-SAV2 chromax.green",
+      "category": "gpu",
+      "shop": "Datatronic",
+      "reason": "accessory"
+    },
+    {
+      "raw_name": "GIGABYTE TPM-Module - Trusted Platform",
+      "category": "memory",
+      "shop": "Datatronic",
+      "reason": "accessory"
+    },
+    {
+      "raw_name": "Alphacool 25667 Tietokoneen jäähdytysjärjestelmän osa ja lisätarvike Vesiblokki",
+      "category": "memory",
+      "shop": "Datatronic",
+      "reason": "accessory"
+    },
+    {
+      "raw_name": "Goobay 53932 akku- ja paristolaturi Litium polymeeri (LiPo) 5000 mAh Musta",
+      "category": "memory",
+      "shop": "Datatronic",
+      "reason": "accessory"
+    },
+    {
+      "raw_name": "Core Geforce RTX 5080/5070Ti TUF Gaming (mit Backplate)",
+      "category": "memory",
+      "shop": "Datatronic",
+      "reason": "accessory"
+    },
+    {
+      "raw_name": "Lenovo Tab M10 Plus (3rd Gen) 32 GB 26,9 cm (10.6\") Mediatek 3 GB Wi-Fi 5 (802.11ac) Android 12 Harmaa",
+      "category": "memory",
+      "shop": "Datatronic",
+      "reason": "accessory"
+    },
+    {
+      "raw_name": "Montech HP140 ARGB PWM Tietokonekotelo Tuuletin 14 cm Valkoinen 3 kpl",
+      "category": "memory",
+      "shop": "Datatronic",
+      "reason": "accessory"
+    },
+    {
+      "raw_name": "Moza Racing RS073 Polkimen kiinnityslevy",
+      "category": "memory",
+      "shop": "Datatronic",
+      "reason": "accessory"
+    },
+    {
+      "raw_name": "Xilence XZ107 liitäntäkortti/-sovitin Sisäinen PCIe",
+      "category": "memory",
+      "shop": "Datatronic",
+      "reason": "accessory"
+    },
+    {
+      "raw_name": "Montech HP140 ARGB PWM Tietokonekotelo Tuuletin 14 cm Valkoinen 3 kpl",
+      "category": "memory",
+      "shop": "Datatronic",
+      "reason": "accessory"
+    },
+    {
+      "raw_name": "Noctua NA-SC1 SX2 Tietokoneen jäähdytysjärjestelmän osa ja lisätarvike Kaapelisovitin",
+      "category": "memory",
+      "shop": "Datatronic",
+      "reason": "accessory"
+    },
+    {
+      "raw_name": "Noctua NF-A6X15 5V Tietokoneen jäähdytysjärjestelmä Tietokonekotelo Tuuletin 6 cm Ruskea 1 kpl",
+      "category": "memory",
+      "shop": "Datatronic",
+      "reason": "accessory"
+    },
+    {
+      "raw_name": "Noctua NF-A6X15 PWM Tietokoneen jäähdytysjärjestelmä Tietokonekotelo Tuuletin 6 cm Ruskea 1 kpl",
+      "category": "memory",
+      "shop": "Datatronic",
+      "reason": "accessory"
+    },
+    {
+      "raw_name": "CORSAIR VENGEANCE Enhancement Kit Black",
+      "category": "memory",
+      "shop": "Datatronic",
+      "reason": "accessory"
+    },
+    {
+      "raw_name": "Display 14.0 FHD IPS AG",
+      "category": "memory",
+      "shop": "Datatronic",
+      "reason": "accessory"
+    },
+    {
+      "raw_name": "Noctua NF-A6X15 FLX Tietokoneen jäähdytysjärjestelmä Tietokonekotelo Tuuletin 6 cm Ruskea 1 kpl",
+      "category": "memory",
+      "shop": "Datatronic",
+      "reason": "accessory"
+    },
+    {
+      "raw_name": "Creative Labs Sound Blaster GS5 musta Langallinen & langaton 30 W",
+      "category": "memory",
+      "shop": "Datatronic",
+      "reason": "accessory"
+    },
+    {
+      "raw_name": "ASUS 90SB0CY0-M0UAY0 luokittelematon",
+      "category": "motherboard",
+      "shop": "Datatronic",
+      "reason": "accessory"
+    },
+    {
+      "raw_name": "ASUS 90SB0CS0-M0UAY0 luokittelematon",
+      "category": "motherboard",
+      "shop": "Datatronic",
+      "reason": "accessory"
+    },
+    {
+      "raw_name": "Arozzi Zona Round Floor Pad Musta, Marmorinvärinen Mikrokuitu, Kumi",
+      "category": "motherboard",
+      "shop": "Datatronic",
+      "reason": "accessory"
+    },
+    {
+      "raw_name": "Arozzi Zona Round Floor Pad Musta, Kulta Mikrokuitu, Kumi",
+      "category": "motherboard",
+      "shop": "Datatronic",
+      "reason": "accessory"
+    },
+    {
+      "raw_name": "Arozzi Zona Round Floor Pad Valkoinen, Marmorinvärinen Mikrokuitu, Kumi",
+      "category": "motherboard",
+      "shop": "Datatronic",
+      "reason": "accessory"
+    },
+    {
+      "raw_name": "Arozzi Zona Round Floor Pad Monivärinen Mikrokuitu, Kumi",
+      "category": "motherboard",
+      "shop": "Datatronic",
+      "reason": "accessory"
+    },
+    {
+      "raw_name": "Arozzi Zona Round Floor Pad Musta, Marmorinvärinen Mikrokuitu, Kumi",
+      "category": "motherboard",
+      "shop": "Datatronic",
+      "reason": "accessory"
+    },
+    {
+      "raw_name": "Creative Labs Creative Pebble X Plus kaiutinsetti 30 W Universaali musta 2.1 kanavaa Bluetooth",
+      "category": "motherboard",
+      "shop": "Datatronic",
+      "reason": "accessory"
+    },
+    {
+      "raw_name": "Lenovo AC-Adapter ADL45WCG 20V 2.25A",
+      "category": "psu",
+      "shop": "Datatronic",
+      "reason": "accessory"
+    },
+    {
+      "raw_name": "DeepCool LE360 WH V2 Suoritin All-in-one-nesteenjäähdytin 12 cm Valkoinen 1 kpl",
       "category": "storage",
       "shop": "Datatronic",
-      "form_factor": "Laajennettu ATX"
+      "reason": "accessory"
+    },
+    {
+      "raw_name": "DeLOCK 62731 liitäntäkortti/-sovitin Sisäinen USB 3.2 Gen 1 (3.1 Gen 1)",
+      "category": "storage",
+      "shop": "Datatronic",
+      "reason": "accessory"
+    },
+    {
+      "raw_name": "Xilence M806D.B Tietokoneen jäähdytysjärjestelmä Suoritin Ilmanjäähdytin 12 cm musta 1 kpl",
+      "category": "storage",
+      "shop": "Datatronic",
+      "reason": "accessory"
+    },
+    {
+      "raw_name": "Seagate STJR1000400 pelikonsolin osa & lisätarvike",
+      "category": "storage",
+      "shop": "Datatronic",
+      "reason": "accessory"
+    },
+    {
+      "raw_name": "StarTech.com M2-REMOVABLE-PCIE-N1 liitäntäkortti/-sovitin Sisäinen M.2",
+      "category": "storage",
+      "shop": "Datatronic",
+      "reason": "accessory"
+    },
+    {
+      "raw_name": "DeepCool LE240 V2 Suoritin All-in-one-nesteenjäähdytin 12 cm Valkoinen",
+      "category": "storage",
+      "shop": "Datatronic",
+      "reason": "accessory"
+    },
+    {
+      "raw_name": "Icy Dock MB720MK-B V2 tallennusaseman kotelo SSD-kotelo Musta M.2",
+      "category": "storage",
+      "shop": "Datatronic",
+      "reason": "accessory"
+    },
+    {
+      "raw_name": "2x 2.5SATA HDD/SSD RAID 1 in 1x 5.25 bay black",
+      "category": "storage",
+      "shop": "Datatronic",
+      "reason": "accessory"
+    },
+    {
+      "raw_name": "Icy Dock MB720MK-B V3 tallennusaseman kotelo SSD-kotelo Musta M.2",
+      "category": "storage",
+      "shop": "Datatronic",
+      "reason": "accessory"
+    },
+    {
+      "raw_name": "Lenovo ThinkStation Quad AIC M.2 SSD liitäntäkortti/-sovitin Sisäinen PCIe",
+      "category": "storage",
+      "shop": "Datatronic",
+      "reason": "accessory"
+    },
+    {
+      "raw_name": "Xilence XF065 Tietokonekotelo Ilmanjäähdytin 12 cm musta 1 kpl",
+      "category": "storage",
+      "shop": "Datatronic",
+      "reason": "accessory"
+    },
+    {
+      "raw_name": "ASUS 90DD0330-BA9010 tallennusaseman kotelo",
+      "category": "storage",
+      "shop": "Datatronic",
+      "reason": "accessory"
+    },
+    {
+      "raw_name": "Icy Dock ToughArmor MB834MK-B V2 SSD-kotelo musta",
+      "category": "storage",
+      "shop": "Datatronic",
+      "reason": "accessory"
+    },
+    {
+      "raw_name": "Icy Dock EZ-Adapter Ex MB931U-1VB R1 USB 3.2 Gen 2 (3.1 Gen 2) Type-C Musta",
+      "category": "storage",
+      "shop": "Datatronic",
+      "reason": "accessory"
+    },
+    {
+      "raw_name": "StarTech.com QUAD-M2-PCIE-CARD-B liitäntäkortti/-sovitin Sisäinen M.2",
+      "category": "storage",
+      "shop": "Datatronic",
+      "reason": "accessory"
+    },
+    {
+      "raw_name": "Asus ROG RYUJIN III WB White Edition, CPU-blokki",
+      "category": "cpu",
+      "shop": "Jimms",
+      "reason": "accessory"
+    },
+    {
+      "raw_name": "Asus ROG RYUJIN III WB White Edition, CPU-blokki",
+      "category": "cpu",
+      "shop": "Jimms",
+      "reason": "accessory"
+    },
+    {
+      "raw_name": "Alphacool Eisbaer LT240 CPU, AIO-vesijäähdytin prosessorille, musta",
+      "category": "cpu",
+      "shop": "Jimms",
+      "reason": "accessory"
+    },
+    {
+      "raw_name": "Alphacool Eisbaer LT240 CPU, AIO-vesijäähdytin prosessorille, musta",
+      "category": "cpu",
+      "shop": "Jimms",
+      "reason": "accessory"
+    },
+    {
+      "raw_name": "Corsair iCUE LINK XG3 RGB Hybrid GPU Water Block (7900 XT(X)), GPU-vesiblokki",
+      "category": "gpu",
+      "shop": "Jimms",
+      "reason": "accessory"
+    },
+    {
+      "raw_name": "Corsair iCUE LINK XG3 RGB Hybrid GPU Water Block (7900 XT(X)), GPU-vesiblokki",
+      "category": "gpu",
+      "shop": "Jimms",
+      "reason": "accessory"
+    },
+    {
+      "raw_name": "Thermal Grizzly DeltaMate GPU Block - ROG Astral RTX 5090, GPU-blokki",
+      "category": "gpu",
+      "shop": "Jimms",
+      "reason": "accessory"
+    },
+    {
+      "raw_name": "Thermal Grizzly DeltaMate GPU Block - ROG Astral RTX 5090, GPU-blokki",
+      "category": "gpu",
+      "shop": "Jimms",
+      "reason": "accessory"
+    },
+    {
+      "raw_name": "Corsair iCUE LINK XG3 RGB Hybrid GPU Water Block (4070 Ti/4070), GPU-vesiblokki",
+      "category": "gpu",
+      "shop": "Jimms",
+      "reason": "accessory"
+    },
+    {
+      "raw_name": "Corsair iCUE LINK XG3 RGB Hybrid GPU Water Block (4070 Ti/4070), GPU-vesiblokki",
+      "category": "gpu",
+      "shop": "Jimms",
+      "reason": "accessory"
+    },
+    {
+      "raw_name": "K DeepCool AG300 G2",
+      "category": "cpu",
+      "shop": "Datatronic",
+      "reason": "unverifiable"
+    },
+    {
+      "raw_name": "Seagate Storage Expansion Card Tallennuksen laajennuskortti",
+      "category": "storage",
+      "shop": "Datatronic",
+      "reason": "unverifiable"
+    }
+  ],
+  "recategorised": [
+    {
+      "raw_name": "NZXT H9 Flow RGB Midi Tower musta",
+      "shop": "Datatronic",
+      "from": "gpu",
+      "to": "case"
+    },
+    {
+      "raw_name": "NZXT H9 Flow Midi Tower musta",
+      "shop": "Datatronic",
+      "from": "gpu",
+      "to": "case"
+    },
+    {
+      "raw_name": "NZXT H9 Flow RGB+ Midi Tower musta",
+      "shop": "Datatronic",
+      "from": "gpu",
+      "to": "case"
+    },
+    {
+      "raw_name": "XPG Spectrix S65G 500GB (aluminium PCIe 4.0 x4 M.2 2280)",
+      "shop": "Datatronic",
+      "from": "memory",
+      "to": "storage"
+    },
+    {
+      "raw_name": "XPG SPECTRIX S65G 1 TB M.2 PCI Express 4.0 NVMe 3D NAND",
+      "shop": "Datatronic",
+      "from": "memory",
+      "to": "storage"
+    },
+    {
+      "raw_name": "ADATA SMAR-980B-1TCS SSD-massamuisti 1 TB M.2 PCI Express 5.0 NVMe 3D NAND",
+      "shop": "Datatronic",
+      "from": "memory",
+      "to": "storage"
+    },
+    {
+      "raw_name": "Jonsbo D32 PRO Midi Tower musta",
+      "shop": "Datatronic",
+      "from": "memory",
+      "to": "case"
+    },
+    {
+      "raw_name": "Asrock AMD Radeon RX 9060 XT Challenger 16GB OC GDDR6",
+      "shop": "Datatronic",
+      "from": "motherboard",
+      "to": "gpu"
+    },
+    {
+      "raw_name": "ASUS TUF Gaming 650W Gold EVO PSU",
+      "shop": "Datatronic",
+      "from": "motherboard",
+      "to": "psu"
+    },
+    {
+      "raw_name": "Thermaltake AX500 Full Tower musta",
+      "shop": "Datatronic",
+      "from": "psu",
+      "to": "case"
+    },
+    {
+      "raw_name": "Thermaltake AX500 Full Tower Valkoinen",
+      "shop": "Datatronic",
+      "from": "psu",
+      "to": "case"
+    },
+    {
+      "raw_name": "DeepCool PN750M virtalähdeyksikkö 750 W 20+4 pin ATX ATX musta",
+      "shop": "Datatronic",
+      "from": "storage",
+      "to": "psu"
     },
     {
       "raw_name": "ASUS B850M MAX GAMING WIFI AMD B850 Pistoke AM5 mikro ATX",
-      "category": "storage",
       "shop": "Datatronic",
-      "form_factor": "mikro ATX"
+      "from": "storage",
+      "to": "motherboard"
     },
     {
       "raw_name": "MSI MEG X870E GODLIKE emolevy AMD X870E Pistoke AM5 Laajennettu ATX",
-      "category": "storage",
       "shop": "Datatronic",
-      "form_factor": "Laajennettu ATX"
+      "from": "storage",
+      "to": "motherboard"
+    },
+    {
+      "raw_name": "GIGABYTE B550 EAGLE WIFI6 emolevy",
+      "shop": "Datatronic",
+      "from": "storage",
+      "to": "motherboard"
+    },
+    {
+      "raw_name": "Thermalright TPFX-750 virtalÃĊhdeyksikkÃ¶ 750 W 20+4 pin ATX Musta",
+      "shop": "Datatronic",
+      "from": "storage",
+      "to": "psu"
+    },
+    {
+      "raw_name": "Zalman P40 Prism Black Midi Tower musta",
+      "shop": "Datatronic",
+      "from": "storage",
+      "to": "case"
+    },
+    {
+      "raw_name": "Phanteks AMP GH 1200W Platinum ATX 3.1 PCIe 5.1 Fully Modular.White",
+      "shop": "Datatronic",
+      "from": "storage",
+      "to": "psu"
+    },
+    {
+      "raw_name": "MSI MEG X870E GODLIKE emolevy AMD X870E Pistoke AM5 Laajennettu ATX",
+      "shop": "Datatronic",
+      "from": "storage",
+      "to": "motherboard"
+    },
+    {
+      "raw_name": "Asrock Intel Arc B580 Challenger 12GB OC GDDR6",
+      "shop": "Datatronic",
+      "from": "storage",
+      "to": "gpu"
+    },
+    {
+      "raw_name": "GIGABYTE B850M D3HP emolevy AMD B850 Pistoke AM5 mikro ATX",
+      "shop": "Datatronic",
+      "from": "storage",
+      "to": "motherboard"
+    },
+    {
+      "raw_name": "GIGABYTE B850M AORUS ELITE WIFI6E ICE AMD B850 Pistoke AM5 mikro ATX",
+      "shop": "Datatronic",
+      "from": "storage",
+      "to": "motherboard"
     }
   ]
 }

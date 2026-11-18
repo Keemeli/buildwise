@@ -9,7 +9,9 @@ from pathlib import Path
 from typing import Any, Dict, List, Optional, Tuple
 from scraper.config import PROJECT_ROOT, RAW_DIR as DEFAULT_RAW_DIR, NORMALISED_DIR as DEFAULT_OUT_DIR
 from scraper.pipeline.components import (CATEGORIES, EXPECTED_FIELDS, clean,
-    contradicts_category, is_non_component, normalise_item, ComponentNameParser)
+    contradicts_category, is_non_component, normalise_item, parse_storage, ComponentNameParser)
+from scraper.pipeline.category_guard import classify, lacks_identity
+from scraper.common.specifications import parse_modular
 from scraper.pipeline.reports import NormalisationReportWriter
 from scraper.pipeline.listing_prices import ListingPriceSelector
 from scraper.pipeline.specification_values import SpecificationValueResolver
@@ -86,6 +88,37 @@ def dedupe(components: List[Dict[str, Any]], identity_report=None) -> Tuple[List
         component['identity_match'] = {'status': group['status'], 'reasons': group['reasons']}
         output.append(component)
     return output, len(components) - len(output)
+
+
+def reconcile_storage_capacity(components: List[Dict[str, Any]]) -> int:
+    """Drop a storage capacity the shop's own name contradicts.
+
+    The product-page value wins over the name everywhere else, but observed on the full
+    catalogue: "SanDisk WDS200T4G0E ... 500GB" has 2 TB on its data sheet. Which one is
+    the drive on sale cannot be told from the data, and a 500 GB drive must not be
+    offered under "2 TB", so the value stays unknown with both observations recorded.
+    TB is counted as 1000 or 1024 GB, so only a gap beyond 15% is a contradiction.
+    """
+    conflicts = 0
+    for component in components:
+        if component.get("category") != "storage":
+            continue
+        page_value = (component.get("specs") or {}).get("capacity_gb")
+        name_value = parse_storage(component.get("raw_name") or "").get("capacity_gb")
+        if not page_value or not name_value:
+            continue
+        if abs(page_value - name_value) <= 0.15 * max(page_value, name_value):
+            continue
+        component["specs"]["capacity_gb"] = None
+        component.setdefault("spec_sources", {})["capacity_gb"] = "conflicting_name_and_product_page"
+        component.setdefault("spec_conflicts", {})["capacity_gb"] = [
+            {"value": name_value, "source": "name"},
+            {"value": page_value, "source": "product_page"},
+        ]
+        if "capacity_gb" not in component.setdefault("missing_specs", []):
+            component["missing_specs"].append("capacity_gb")
+        conflicts += 1
+    return conflicts
 
 
 def shape_modules(components: List[Dict[str, Any]]) -> int:
@@ -249,6 +282,24 @@ class ComponentNormaliser:
         excluded = [item["raw_name"] for item in raw_items if is_non_component(item["raw_name"])]
         products = [item for item in raw_items if not is_non_component(item["raw_name"])]
 
+        # The shop's listing page is a weak category signal; the product type in the name
+        # is a strong one. Accessories are dropped, other components parsed where they belong.
+        guarded: List[Dict[str, Any]] = []
+        mismatched: List[Dict[str, Any]] = []
+        recategorised: List[Dict[str, Any]] = []
+        for item in products:
+            decision, target = classify(item["category"], item["raw_name"])
+            if decision == "exclude":
+                mismatched.append({"raw_name": item["raw_name"], "category": item["category"],
+                                   "listings": [{"shop": item["shop"]}], "reason": target})
+                continue
+            if decision == "move":
+                recategorised.append({"raw_name": item["raw_name"], "shop": item["shop"],
+                                      "from": item["category"], "to": target})
+                item = {**item, "category": target}
+            guarded.append(item)
+        products = guarded
+
         normalised = [self.normalise_item(item) for item in products]
         # Resolve identity and variant evidence per listing before grouping.
         identity_inputs = [deepcopy({**item, 'listings': [item['listing']]}) for item in normalised]
@@ -260,15 +311,24 @@ class ComponentNormaliser:
         retain_product_identity_evidence(components, self.out_dir / "specs.json")
         spec_stats = merge_product_specs(components, self.out_dir / "specs.json")
         spec_stats["modules_shaped"] = shape_modules(components)
+        spec_stats["capacity_conflicts"] = reconcile_storage_capacity(components)
+        # specs.json written before parse_modular still holds the shop's wording.
+        for component in components:
+            if component.get("category") == "psu" and "modular" in (component.get("specs") or {}):
+                component["specs"]["modular"] = parse_modular(component["specs"]["modular"])
 
         # Rows whose parsed specs contradict their shop category (observed: five
         # motherboards on a storage page) are reported, never guessed into a category.
+        # Rows with no category-defining value and no sign of the category in the name
+        # (anti-vibration pads on a graphics card page) are reported the same way.
         kept: List[Dict[str, Any]] = []
-        mismatched: List[Dict[str, Any]] = []
         for component in components:
-            target = (mismatched if contradicts_category(component["category"], component.get("specs"))
-                      else kept)
-            target.append(component)
+            if contradicts_category(component["category"], component.get("specs")):
+                mismatched.append({**component, "reason": "form_factor"})
+            elif lacks_identity(component["category"], component.get("specs"), component.get("raw_name")):
+                mismatched.append({**component, "reason": "unverifiable"})
+            else:
+                kept.append(component)
         components = kept
 
         self.out_dir.mkdir(parents=True, exist_ok=True)
@@ -289,10 +349,14 @@ class ComponentNormaliser:
         mismatch_path.write_text(json.dumps({"excluded": [
             {"raw_name": component.get("raw_name"), "category": component.get("category"),
              "shop": (component.get("listings") or [{}])[0].get("shop"),
-             "form_factor": (component.get("specs") or {}).get("form_factor")}
-            for component in mismatched]}, ensure_ascii=False, indent=2), encoding="utf-8")
+             "reason": component.get("reason"),
+             **({"form_factor": (component.get("specs") or {}).get("form_factor")}
+                if component.get("reason") == "form_factor" else {})}
+            for component in mismatched], "recategorised": recategorised},
+            ensure_ascii=False, indent=2), encoding="utf-8")
         report_path = self.report_writer.write(self.out_dir, components, duplicates, len(raw_items), excluded,
-                                               spec_stats, mismatched=mismatched)
+                                               spec_stats, mismatched=mismatched,
+                                               recategorised=recategorised)
 
         print(f"scanned {len(raw_items)} raw products → {len(components)} components "
               f"({duplicates} duplicates merged, {len(excluded)} non-components and "
