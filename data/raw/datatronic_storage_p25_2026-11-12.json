@@ -1,0 +1,90 @@
+{
+  "shop": "Datatronic",
+  "category": "storage",
+  "page": 25,
+  "source_url": "https://datatronic.fi/kiintolevyt-ssd-levyt?page=25",
+  "fetched_at": "2026-11-12T14:48:42+00:00",
+  "site_total_products": 589,
+  "items_on_page": 13,
+  "raw_html": "data/raw/html/datatronic_storage_p25_2026-11-12_0a772ea43131.html",
+  "items": [
+    {
+      "name": "SanDisk SDSS31250GBB-000G0 SSD-massamuisti 250 GB 2.5\" Serial ATA III 3D NAND",
+      "price_cents": 7290,
+      "url": "https://datatronic.fi/komponentit/kiintolevyt-ssd-levyt/ssd/sandisk-sdss31250gbb-000g0-ssd-massamuisti-250-gb-25-serial-ata-iii-3d-nand-sandisk-sdss31250gbb-000g0",
+      "external_id": "185890"
+    },
+    {
+      "name": "Silicon Power UD90 500 GB M.2 PCI Express 4.0 NVMe 3D NAND",
+      "price_cents": 15290,
+      "url": "https://datatronic.fi/komponentit/kiintolevyt-ssd-levyt/silicon-power-ud90-500-gb-m2-pci-express-40-nvme-3d-nand-silicon-power-sp500gbp44ud9005",
+      "external_id": "122849"
+    },
+    {
+      "name": "SanDisk SDSS51100TAB-000G0 SSD-massamuisti 1 TB 2.5\" Serial ATA III 3D TLC NAND",
+      "price_cents": 22290,
+      "url": "https://datatronic.fi/komponentit/kiintolevyt-ssd-levyt/ssd/sandisk-sdss51100tab-000g0-ssd-massamuisti-1-tb-25-serial-ata-iii-3d-tlc-nand-sandisk-sdss51100tab-000g0",
+      "external_id": "185894"
+    },
+    {
+      "name": "Seagate FireCuda ZP1000GM3A073 SSD-massamuisti 1 TB M.2 PCI Express 4.0 NVMe 3D TLC",
+      "price_cents": 25190,
+      "url": "https://datatronic.fi/komponentit/kiintolevyt-ssd-levyt/ssd/seagate-firecuda-zp1000gm3a073-ssd-massamuisti-1-tb-m2-pci-express-40-nvme-3d-tlc-seagate-zp1000gm3a073",
+      "external_id": "185803"
+    },
+    {
+      "name": "Samsung 870 QVO 2.5\" 1000 GB Serial ATA III QLC",
+      "price_cents": 83500,
+      "url": "https://datatronic.fi/komponentit/kiintolevyt-ssd-levyt/ssd/samsung-870-qvo-25-1000-gb-serial-ata-iii-qlc-samsung-mz-77q1t0bw",
+      "external_id": "4799"
+    },
+    {
+      "name": "Kingston Technology KC3000 M.2 4096 GB PCI Express 4.0 3D TLC NVMe",
+      "price_cents": 71500,
+      "url": "https://datatronic.fi/komponentit/kiintolevyt-ssd-levyt/ssd/kingston-technology-kc3000-m2-4096-gb-pci-express-40-3d-tlc-nvme-kingston-technology-skc3000d-4096g",
+      "external_id": "32823"
+    },
+    {
+      "name": "Klevv CRAS C715 512 GB M.2 PCI Express 3.0 NVMe 3D TLC NAND",
+      "price_cents": 10290,
+      "url": "https://datatronic.fi/komponentit/kiintolevyt-ssd-levyt/ssd/klevv-cras-c715-512-gb-m2-pci-express-30-nvme-3d-tlc-nand-klevv-k512gm2sp0-c7t",
+      "external_id": "185185"
+    },
+    {
+      "name": "SanDisk SDSS31100TBB-000G0 SSD-massamuisti 1 TB 2.5\" Serial ATA III 3D NAND",
+      "price_cents": 20290,
+      "url": "https://datatronic.fi/komponentit/kiintolevyt-ssd-levyt/ssd/sandisk-sdss31100tbb-000g0-ssd-massamuisti-1-tb-25-serial-ata-iii-3d-nand-sandisk-sdss31100tbb-000g0",
+      "external_id": "185891"
+    },
+    {
+      "name": "Kioxia LSD10Z002TG8 SSD-massamuisti M.2 2 TB PCI Express 4.0 BiCS FLASH TLC NVMe",
+      "price_cents": 32900,
+      "url": "https://datatronic.fi/komponentit/kiintolevyt-ssd-levyt/ssd/kioxia-lsd10z002tg8-ssd-massamuisti-m2-2-tb-pci-express-40-bics-flash-tlc-nvme-kioxia-lsd10z002tg8",
+      "external_id": "140265"
+    },
+    {
+      "name": "Crucial CT2000T705SSD3 SSD-massamuisti M.2 2 TB PCI Express 5.0 NVMe",
+      "price_cents": 50500,
+      "url": "https://datatronic.fi/komponentit/kiintolevyt-ssd-levyt/ssd/crucial-ct2000t705ssd3-ssd-massamuisti-m2-2-tb-pci-express-50-nvme-crucial-ct2000t705ssd3",
+      "external_id": "155390"
+    },
+    {
+      "name": "MSI MEG X870E GODLIKE emolevy AMD X870E Pistoke AM5 Laajennettu ATX",
+      "price_cents": 137900,
+      "url": "https://datatronic.fi/komponentit/emolevyt/msi-meg-x870e-godlike-emolevy-amd-x870e-pistoke-am5-laajennettu-atx-msi-7e48-001r",
+      "external_id": "165980"
+    },
+    {
+      "name": "Crucial P310 1 TB M.2 PCI Express 4.0 NVMe",
+      "price_cents": 21290,
+      "url": "https://datatronic.fi/komponentit/kiintolevyt-ssd-levyt/ssd/crucial-p310-1-tb-m2-pci-express-40-nvme-crucial-ct1000p310ssd5",
+      "external_id": "167710"
+    },
+    {
+      "name": "SanDisk SDSS51200TAB-000G0 SSD-massamuisti 2 TB 2.5\" Serial ATA III 3D TLC NAND",
+      "price_cents": 41900,
+      "url": "https://datatronic.fi/komponentit/kiintolevyt-ssd-levyt/ssd/sandisk-sdss51200tab-000g0-ssd-massamuisti-2-tb-25-serial-ata-iii-3d-tlc-nand-sandisk-sdss51200tab-000g0",
+      "external_id": "185895"
+    }
+  ]
+}

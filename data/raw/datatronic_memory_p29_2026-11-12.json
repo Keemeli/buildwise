@@ -1,0 +1,156 @@
+{
+  "shop": "Datatronic",
+  "category": "memory",
+  "page": 29,
+  "source_url": "https://datatronic.fi/muistit?page=29",
+  "fetched_at": "2026-11-12T14:47:33+00:00",
+  "site_total_products": 761,
+  "items_on_page": 24,
+  "raw_html": "data/raw/html/datatronic_memory_p29_2026-11-12_09b9910d556e.html",
+  "items": [
+    {
+      "name": "Patriot Memory Signature Line Premium Patriot muistimoduuli 8 GB 1 x 8 GB DDR4",
+      "price_cents": 7290,
+      "url": "https://datatronic.fi/komponentit/muistit/patriot-memory-signature-line-premium-patriot-muistimoduuli-8-gb-1-x-8-gb-ddr4-patriot-memory-psd48g32002s",
+      "external_id": "174829"
+    },
+    {
+      "name": "Kingston Technology ValueRAM muistimoduuli 32 GB 1 x 32 GB DDR5 5600 MT/s 288-pin DIMM",
+      "price_cents": 67900,
+      "url": "https://datatronic.fi/komponentit/muistit/kingston-technology-valueram-muistimoduuli-32-gb-1-x-32-gb-ddr5-5600-mt-s-288-pin-dimm-kingston-technology-kvr56u46bs8-32",
+      "external_id": "176596"
+    },
+    {
+      "name": "G.Skill Trident Z5 RGB F5-5600J4645A32GX1-TZ5RK muistimoduuli 32 GB 1 x 32 GB DDR5 5600 MT/s 288-pin DIMM",
+      "price_cents": 87500,
+      "url": "https://datatronic.fi/komponentit/muistit/gskill-trident-z5-rgb-f5-5600j4645a32gx1-tz5rk-muistimoduuli-32-gb-1-x-32-gb-ddr5-5600-mt-s-288-pin-dimm-gskill-f5-5600j4645a32g",
+      "external_id": "176503"
+    },
+    {
+      "name": "Silicon Power SP032GBSFU320X02 muistimoduuli 32 GB 1 x 32 GB DDR4 260-pin SO-DIMM",
+      "price_cents": 31500,
+      "url": "https://datatronic.fi/komponentit/muistit/silicon-power-sp032gbsfu320x02-muistimoduuli-32-gb-1-x-32-gb-ddr4-260-pin-so-dimm-silicon-power-sp032gbsfu320x02",
+      "external_id": "184380"
+    },
+    {
+      "name": "Goodram IRDM X IRDM DDR5 IR-6400D564L32/64GDC muistimoduuli 64 GB 2 x 32 GB 288-pin DIMM",
+      "price_cents": 158500,
+      "url": "https://datatronic.fi/komponentit/muistit/goodram-irdm-x-irdm-ddr5-ir-6400d564l32-64gdc-muistimoduuli-64-gb-2-x-32-gb-288-pin-dimm-goodram-ir-6400d564l32-64gdc",
+      "external_id": "178759"
+    },
+    {
+      "name": "XPG LANCER BLADE DDR5 muistimoduuli 8 GB 1 x 8 GB 288-pin DIMM ECC",
+      "price_cents": 17990,
+      "url": "https://datatronic.fi/komponentit/muistit/xpg-lancer-blade-ddr5-muistimoduuli-8-gb-1-x-8-gb-288-pin-dimm-ecc-xpg-ax5u5600c468g-slabbk",
+      "external_id": "176424"
+    },
+    {
+      "name": "Patriot Memory Viper Elite 5 Ultra muistimoduuli 64 GB 2 x 32 GB DDR5 6400 MT/s 288-pin DIMM",
+      "price_cents": 209500,
+      "url": "https://datatronic.fi/komponentit/muistit/patriot-memory-viper-elite-5-ultra-muistimoduuli-64-gb-2-x-32-gb-ddr5-6400-mt-s-288-pin-dimm-patriot-memory-veu564g6432k",
+      "external_id": "178624"
+    },
+    {
+      "name": "Klevv KD5AGUA80-60B280G muistimoduuli 32 GB 2 x 16 GB DDR5 288-pin DIMM",
+      "price_cents": 61500,
+      "url": "https://datatronic.fi/komponentit/muistit/klevv-kd5agua80-60b280g-muistimoduuli-32-gb-2-x-16-gb-ddr5-288-pin-dimm-klevv-kd5agua80-60b280g",
+      "external_id": "181883"
+    },
+    {
+      "name": "DELL AA937596 muistimoduuli 16 GB 2 x 8 GB DDR4 3200 MHz",
+      "price_cents": 37900,
+      "url": "https://datatronic.fi/komponentit/muistit/dell-aa937596-muistimoduuli-16-gb-2-x-8-gb-ddr4-3200-mhz-dell-aa937596",
+      "external_id": "5543"
+    },
+    {
+      "name": "Goodram GR5600S564L46/32G muistimoduuli 32 GB 1 x 32 GB DDR5 262-pin SO-DIMM",
+      "price_cents": 56500,
+      "url": "https://datatronic.fi/komponentit/muistit/goodram-gr5600s564l46-32g-muistimoduuli-32-gb-1-x-32-gb-ddr5-262-pin-so-dimm-goodram-gr5600s564l46-32g",
+      "external_id": "178778"
+    },
+    {
+      "name": "G.Skill Flare X5 F5-5600J4645A32GX1-FX5 muistimoduuli 32 GB 1 x 32 GB DDR5 5600 MT/s 288-pin DIMM",
+      "price_cents": 93900,
+      "url": "https://datatronic.fi/komponentit/muistit/gskill-flare-x5-f5-5600j4645a32gx1-fx5-muistimoduuli-32-gb-1-x-32-gb-ddr5-5600-mt-s-288-pin-dimm-gskill-f5-5600j4645a32gx1-fx5",
+      "external_id": "176502"
+    },
+    {
+      "name": "G.Skill Trident Z5 RGB F5-6000J3636F32GX2-TZ5RK muistimoduuli 64 GB 2 x 32 GB DDR5 6000 MHz",
+      "price_cents": 137500,
+      "url": "https://datatronic.fi/komponentit/muistit/gskill-trident-z5-rgb-f5-6000j3636f32gx2-tz5rk-muistimoduuli-64-gb-2-x-32-gb-ddr5-6000-mhz-gskill-f5-6000j3636f32gx2-tz5rk",
+      "external_id": "125218"
+    },
+    {
+      "name": "Corsair CMH16GX5M2E6000Z36 muistimoduuli 16 GB 2 x 8 GB DDR5 6000 MT/s 288-pin DIMM",
+      "price_cents": 35900,
+      "url": "https://datatronic.fi/komponentit/muistit/corsair-cmh16gx5m2e6000z36-muistimoduuli-16-gb-2-x-8-gb-ddr5-6000-mt-s-288-pin-dimm-corsair-cmh16gx5m2e6000z36",
+      "external_id": "176548"
+    },
+    {
+      "name": "Corsair Vengeance RGB muistimoduuli 64 GB 2 x 32 GB DDR5 6000 MT/s",
+      "price_cents": 122900,
+      "url": "https://datatronic.fi/komponentit/muistit/corsair-vengeance-rgb-muistimoduuli-64-gb-2-x-32-gb-ddr5-6000-mt-s-corsair-cmh64gx5m2d6000z40",
+      "external_id": "174486"
+    },
+    {
+      "name": "Xilence XZ107 liitäntäkortti/-sovitin Sisäinen PCIe",
+      "price_cents": 4990,
+      "url": "https://datatronic.fi/komponentit/muistit/xilence-xz107-liitantakortti-sovitin-sisainen-pcie-xilence-x9-vertical-gpu-set",
+      "external_id": "168885"
+    },
+    {
+      "name": "Klevv RAM KD5BGUA80-56G460A - 32 GB - DDR5 5600 UDIMM CL46",
+      "price_cents": 55500,
+      "url": "https://datatronic.fi/komponentit/muistit/klevv-ram-kd5bgua80-56g460a-32-gb-ddr5-5600-udimm-cl46-kd5bgua80-56g460a",
+      "external_id": "181881"
+    },
+    {
+      "name": "Goodram GR5600D564L46S/16G muistimoduuli 16 GB 1 x 16 GB DDR5 288-pin DIMM",
+      "price_cents": 29900,
+      "url": "https://datatronic.fi/komponentit/muistit/goodram-gr5600d564l46s-16g-muistimoduuli-16-gb-1-x-16-gb-ddr5-288-pin-dimm-goodram-gr5600s564l46s-16g",
+      "external_id": "178751"
+    },
+    {
+      "name": "Goodram IRDM PRO IRP-K3600D4V64L18S/16GDC muistimoduuli 16 GB 2 x 8 GB DDR4 288-pin DIMM",
+      "price_cents": 25490,
+      "url": "https://datatronic.fi/komponentit/muistit/goodram-irdm-pro-irp-k3600d4v64l18s-16gdc-muistimoduuli-16-gb-2-x-8-gb-ddr4-288-pin-dimm-goodram-irp-k3600d4v64l18s-16gdc",
+      "external_id": "178740"
+    },
+    {
+      "name": "PNY MD16GSD43200-TB muistimoduuli 16 GB 1 x 16 GB DDR4 288-pin DIMM",
+      "price_cents": 15190,
+      "url": "https://datatronic.fi/komponentit/muistit/pny-md16gsd43200-tb-muistimoduuli-16-gb-1-x-16-gb-ddr4-288-pin-dimm-pny-md16gsd43200-tb",
+      "external_id": "176644"
+    },
+    {
+      "name": "G.Skill Aegis 5 F5-6000R3036G48GE8-G5N muistimoduuli 384 GB 8 x 48 GB DDR5 6000 MT/s 288-pin DIMM ECC",
+      "price_cents": 1470500,
+      "url": "https://datatronic.fi/komponentit/muistit/gskill-aegis-5-f5-6000r3036g48ge8-g5n-muistimoduuli-384-gb-8-x-48-gb-ddr5-6000-mt-s-288-pin-dimm-ecc-gskill-f5-6000r3036g48ge8-g",
+      "external_id": "184886"
+    },
+    {
+      "name": "Crucial CT32G64C52CU5 muistimoduuli 32 GB 1 x 32 GB DDR5 6400 MT/s 288-pin DIMM",
+      "price_cents": 58900,
+      "url": "https://datatronic.fi/komponentit/muistit/crucial-ct32g64c52cu5-muistimoduuli-32-gb-1-x-32-gb-ddr5-6400-mt-s-288-pin-dimm-crucial-ct32g64c52cu5",
+      "external_id": "177834"
+    },
+    {
+      "name": "G.Skill Trident Z5 RGB F5-6000J3636F16GX1-TZ5RK muistimoduuli 16 GB 1 x 16 GB DDR5 6000 MT/s 288-pin DIMM",
+      "price_cents": 52900,
+      "url": "https://datatronic.fi/komponentit/muistit/gskill-trident-z5-rgb-f5-6000j3636f16gx1-tz5rk-muistimoduuli-16-gb-1-x-16-gb-ddr5-6000-mt-s-288-pin-dimm-gskill-f5-6000j3636f16g",
+      "external_id": "176508"
+    },
+    {
+      "name": "Goodram GR4800S564L40S/16G muistimoduuli 16 GB 1 x 16 GB DDR5 262-pin SO-DIMM",
+      "price_cents": 24890,
+      "url": "https://datatronic.fi/komponentit/muistit/goodram-gr4800s564l40s-16g-muistimoduuli-16-gb-1-x-16-gb-ddr5-262-pin-so-dimm-goodram-gr4800s564l40s-16g",
+      "external_id": "178749"
+    },
+    {
+      "name": "G.Skill Ripjaws S5 F5-6000J3040F16GX2-RS5K muistimoduuli 32 GB 2 x 16 GB DDR5",
+      "price_cents": 70900,
+      "url": "https://datatronic.fi/komponentit/muistit/gskill-ripjaws-s5-f5-6000j3040f16gx2-rs5k-muistimoduuli-32-gb-2-x-16-gb-ddr5-gskill-f5-6000j3040f16gx2-rs5k",
+      "external_id": "171802"
+    }
+  ]
+}

@@ -1,0 +1,156 @@
+{
+  "shop": "Datatronic",
+  "category": "memory",
+  "page": 22,
+  "source_url": "https://datatronic.fi/muistit?page=22",
+  "fetched_at": "2026-11-12T14:47:20+00:00",
+  "site_total_products": 761,
+  "items_on_page": 24,
+  "raw_html": "data/raw/html/datatronic_memory_p22_2026-11-12_79f45ddf2762.html",
+  "items": [
+    {
+      "name": "Samsung M321R8GA0BB0-CQK muistimoduuli 64 GB 1 x 64 GB DDR5 4800 MHz",
+      "price_cents": 382900,
+      "url": "https://datatronic.fi/komponentit/muistit/samsung-m321r8ga0bb0-cqk-muistimoduuli-64-gb-1-x-64-gb-ddr5-4800-mhz-samsung-m321r8ga0bb0-cqk",
+      "external_id": "156974"
+    },
+    {
+      "name": "Kingston Technology KCP432NS8/8 muistimoduuli 8 GB 1 x 8 GB DDR4 3200 MHz",
+      "price_cents": 11690,
+      "url": "https://datatronic.fi/komponentit/muistit/kingston-technology-kcp432ns8-8-muistimoduuli-8-gb-1-x-8-gb-ddr4-3200-mhz-kingston-technology-kcp432ns8-8",
+      "external_id": "47204"
+    },
+    {
+      "name": "Corsair Vengeance CMSX32GX5M2A5600C48 muistimoduuli 32 GB 2 x 16 GB DDR5 5600 MHz",
+      "price_cents": 58900,
+      "url": "https://datatronic.fi/komponentit/muistit/corsair-vengeance-cmsx32gx5m2a5600c48-muistimoduuli-32-gb-2-x-16-gb-ddr5-5600-mhz-corsair-cmsx32gx5m2a5600c48",
+      "external_id": "134995"
+    },
+    {
+      "name": "Kingston Technology FURY Renegade RGB muistimoduuli 48 GB 2 x 24 GB DDR5",
+      "price_cents": 272900,
+      "url": "https://datatronic.fi/komponentit/muistit/kingston-technology-fury-renegade-rgb-muistimoduuli-48-gb-2-x-24-gb-ddr5-kingston-technology-kf584cu40rwak2-48",
+      "external_id": "165612"
+    },
+    {
+      "name": "G.Skill F5-5600J3636D32GX1-IS muistimoduuli 32 GB 1 x 32 GB DDR5",
+      "price_cents": 68500,
+      "url": "https://datatronic.fi/komponentit/muistit/gskill-f5-5600j3636d32gx1-is-muistimoduuli-32-gb-1-x-32-gb-ddr5-gskill-f5-5600j3636d32gx1-is",
+      "external_id": "165535"
+    },
+    {
+      "name": "Corsair Vengeance LPX, 32GB muistimoduuli 4 x 8 GB DDR4 2666 MHz",
+      "price_cents": 36900,
+      "url": "https://datatronic.fi/komponentit/muistit/corsair-vengeance-lpx-32gb-muistimoduuli-4-x-8-gb-ddr4-2666-mhz-corsair-cmk32gx4m4a2666c16",
+      "external_id": "32870"
+    },
+    {
+      "name": "Kingston Technology FURY Renegade muistimoduuli 32 GB 2 x 16 GB DDR5 7200 MHz",
+      "price_cents": 113500,
+      "url": "https://datatronic.fi/komponentit/muistit/kingston-technology-fury-renegade-muistimoduuli-32-gb-2-x-16-gb-ddr5-7200-mhz-kingston-technology-kf572c38rsk2-32",
+      "external_id": "65536"
+    },
+    {
+      "name": "Kingston Technology ValueRAM KVR56U46BS6-8 muistimoduuli 8 GB 1 x 8 GB DDR5 5600 MHz",
+      "price_cents": 19190,
+      "url": "https://datatronic.fi/komponentit/muistit/kingston-technology-valueram-kvr56u46bs6-8-muistimoduuli-8-gb-1-x-8-gb-ddr5-5600-mhz-kingston-technology-kvr56u46bs6-8",
+      "external_id": "121275"
+    },
+    {
+      "name": "G.Skill 8GB DDR3-1600 muistimoduuli 1 x 8 GB 1600 MHz",
+      "price_cents": 5290,
+      "url": "https://datatronic.fi/komponentit/muistit/gskill-8gb-ddr3-1600-muistimoduuli-1-x-8-gb-1600-mhz-gskill-f3-1600c11s-8gis",
+      "external_id": "40539"
+    },
+    {
+      "name": "HP 83P92AA muistimoduuli 32 GB DDR5 5600 MHz",
+      "price_cents": 96900,
+      "url": "https://datatronic.fi/komponentit/muistit/hp-83p92aa-muistimoduuli-32-gb-ddr5-5600-mhz-hp-83p92aa",
+      "external_id": "166672"
+    },
+    {
+      "name": "G.Skill Aegis muistimoduuli 16 GB 2 x 8 GB DDR4 2400 MHz",
+      "price_cents": 19690,
+      "url": "https://datatronic.fi/komponentit/muistit/gskill-aegis-muistimoduuli-16-gb-2-x-8-gb-ddr4-2400-mhz-gskill-f4-2400c17d-16gis",
+      "external_id": "6218"
+    },
+    {
+      "name": "Kingston Technology FURY Beast muistimoduuli 16 GB 1 x 16 GB DDR5",
+      "price_cents": 42900,
+      "url": "https://datatronic.fi/komponentit/muistit/kingston-technology-fury-beast-muistimoduuli-16-gb-1-x-16-gb-ddr5-kingston-technology-kf560c30bwe-16",
+      "external_id": "155041"
+    },
+    {
+      "name": "Kingston Technology ValueRAM KVR32N22D8/32 muistimoduuli 32 GB 1 x 32 GB DDR4 3200 MHz",
+      "price_cents": 37900,
+      "url": "https://datatronic.fi/komponentit/muistit/kingston-technology-valueram-kvr32n22d8-32-muistimoduuli-32-gb-1-x-32-gb-ddr4-3200-mhz-kingston-technology-kvr32n22d8-32",
+      "external_id": "4397"
+    },
+    {
+      "name": "G.Skill F5-6000J3636F32GX2-IS muistimoduuli 64 GB 2 x 32 GB DDR5 6000 MHz",
+      "price_cents": 167900,
+      "url": "https://datatronic.fi/komponentit/muistit/gskill-f5-6000j3636f32gx2-is-muistimoduuli-64-gb-2-x-32-gb-ddr5-6000-mhz-gskill-f5-6000j3636f32gx2-is",
+      "external_id": "166221"
+    },
+    {
+      "name": "G.Skill Trident Z Trident Z5 RGB muistimoduuli 48 GB 2 x 24 GB DDR5 8400 MT/s 288-pin DIMM",
+      "price_cents": 549900,
+      "url": "https://datatronic.fi/komponentit/muistit/gskill-trident-z-trident-z5-rgb-muistimoduuli-48-gb-2-x-24-gb-ddr5-8400-mt-s-288-pin-dimm-gskill-f5-8400j4052g24gx2-tz5rw",
+      "external_id": "143765"
+    },
+    {
+      "name": "G.Skill Ripjaws S5 F5-6000J4048F24GX2-RS5K muistimoduuli 48 GB 2 x 24 GB DDR5 6000 MHz",
+      "price_cents": 1367500,
+      "url": "https://datatronic.fi/komponentit/muistit/gskill-ripjaws-s5-f5-6000j4048f24gx2-rs5k-muistimoduuli-48-gb-2-x-24-gb-ddr5-6000-mhz-gskill-f5-6000j4048f24gx2-rs5k",
+      "external_id": "125210"
+    },
+    {
+      "name": "Corsair Vengeance RGB CMHC48GX5M2X8400C40 muistimoduuli 48 GB 2 x 24 GB DDR5 8400 MHz",
+      "price_cents": 146900,
+      "url": "https://datatronic.fi/komponentit/muistit/corsair-vengeance-rgb-cmhc48gx5m2x8400c40-muistimoduuli-48-gb-2-x-24-gb-ddr5-8400-mhz-corsair-cmhc48gx5m2x8400c40",
+      "external_id": "165255"
+    },
+    {
+      "name": "Corsair Dominator Titanium CMP64GX5M2B6400C32W muistimoduuli 64 GB 2 x 32 GB DDR5 6400 MHz",
+      "price_cents": 221900,
+      "url": "https://datatronic.fi/komponentit/muistit/corsair-dominator-titanium-cmp64gx5m2b6400c32w-muistimoduuli-64-gb-2-x-32-gb-ddr5-6400-mhz-corsair-cmp64gx5m2b6400c32w",
+      "external_id": "132496"
+    },
+    {
+      "name": "G.Skill Trident Z5 Neo RGB F5-6000J4048F24GX2-TZ5NR muistimoduuli 48 GB 2 x 24 GB DDR5 6000 MHz",
+      "price_cents": 122900,
+      "url": "https://datatronic.fi/komponentit/muistit/gskill-trident-z5-neo-rgb-f5-6000j4048f24gx2-tz5nr-muistimoduuli-48-gb-2-x-24-gb-ddr5-6000-mhz-gskill-f5-6000j4048f24gx2-tz5nr",
+      "external_id": "125222"
+    },
+    {
+      "name": "Kingston Technology FURY Beast RGB muistimoduuli 32 GB 1 x 32 GB DDR5 5600 MHz",
+      "price_cents": 77900,
+      "url": "https://datatronic.fi/komponentit/muistit/kingston-technology-fury-beast-rgb-muistimoduuli-32-gb-1-x-32-gb-ddr5-5600-mhz-kingston-technology-kf556c40bba-32",
+      "external_id": "46491"
+    },
+    {
+      "name": "Corsair Vengeance CMK32GX5M2B6000Z38 muistimoduuli 32 GB 2 x 16 GB DDR5 6000 MT/s 288-pin DIMM",
+      "price_cents": 65900,
+      "url": "https://datatronic.fi/komponentit/muistit/corsair-vengeance-cmk32gx5m2b6000z38-muistimoduuli-32-gb-2-x-16-gb-ddr5-6000-mt-s-288-pin-dimm-corsair-cmk32gx5m2b6000z38",
+      "external_id": "175557"
+    },
+    {
+      "name": "G.Skill Ripjaws V F5-6000J3238F16GX2-RS5K muistimoduuli 32 GB 2 x 16 GB DDR5",
+      "price_cents": 81500,
+      "url": "https://datatronic.fi/komponentit/muistit/gskill-ripjaws-v-f5-6000j3238f16gx2-rs5k-muistimoduuli-32-gb-2-x-16-gb-ddr5-gskill-f5-6000j3238f16gx2-rs5k",
+      "external_id": "152160"
+    },
+    {
+      "name": "Corsair Dominator Titanium muistimoduuli 48 GB 2 x 24 GB DDR5 7200 MHz",
+      "price_cents": 127500,
+      "url": "https://datatronic.fi/komponentit/muistit/corsair-dominator-titanium-muistimoduuli-48-gb-2-x-24-gb-ddr5-7200-mhz-corsair-cmp48gx5m2x7200c36w",
+      "external_id": "132482"
+    },
+    {
+      "name": "Kingston Technology ValueRAM KVR56U46BD8-48 muistimoduuli 48 GB 1 x 48 GB DDR5",
+      "price_cents": 114900,
+      "url": "https://datatronic.fi/komponentit/muistit/kingston-technology-valueram-kvr56u46bd8-48-muistimoduuli-48-gb-1-x-48-gb-ddr5-kingston-technology-kvr56u46bd8-48",
+      "external_id": "154969"
+    }
+  ]
+}

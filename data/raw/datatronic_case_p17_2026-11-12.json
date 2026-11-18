@@ -1,0 +1,156 @@
+{
+  "shop": "Datatronic",
+  "category": "case",
+  "page": 17,
+  "source_url": "https://datatronic.fi/kotelot?page=17",
+  "fetched_at": "2026-11-12T14:49:12+00:00",
+  "site_total_products": 620,
+  "items_on_page": 24,
+  "raw_html": "data/raw/html/datatronic_case_p17_2026-11-12_b663a64e952b.html",
+  "items": [
+    {
+      "name": "Corsair 3200D RS ARGB Mid-Tower PC Case Midi Tower Musta",
+      "price_cents": 9790,
+      "url": "https://datatronic.fi/komponentit/kotelot/corsair-3200d-rs-argb-mid-tower-pc-case-midi-tower-musta-corsair-cc-9011344-ww",
+      "external_id": "177899"
+    },
+    {
+      "name": "Jonsbo TK-1 2.0 Valkoinen",
+      "price_cents": 12690,
+      "url": "https://datatronic.fi/komponentit/kotelot/jonsbo-tk-1-20-valkoinen-jonsbo-tk-1-white",
+      "external_id": "151477"
+    },
+    {
+      "name": "LC-Power LC-7041B-ON tietokonekotelo Midi Tower Musta",
+      "price_cents": 4590,
+      "url": "https://datatronic.fi/komponentit/kotelot/lc-power-lc-7041b-on-tietokonekotelo-midi-tower-musta-lc-power-lc-7041b-on",
+      "external_id": "131999"
+    },
+    {
+      "name": "Kolink Void Rift Midi Tower Musta",
+      "price_cents": 6890,
+      "url": "https://datatronic.fi/komponentit/kotelot/kolink-void-rift-midi-tower-musta-kolink-pgw-ch-kol-084",
+      "external_id": "45873"
+    },
+    {
+      "name": "Chieftec Hawk Tower Musta",
+      "price_cents": 4490,
+      "url": "https://datatronic.fi/komponentit/kotelot/chieftec-hawk-tower-musta-chieftec-al-02b-op",
+      "external_id": "3907"
+    },
+    {
+      "name": "DeepCool CG590U 5F Tower Musta",
+      "price_cents": 10290,
+      "url": "https://datatronic.fi/komponentit/kotelot/deepcool-cg590u-5f-tower-musta-deepcool-r-cg590u-bkaga5-g",
+      "external_id": "179833"
+    },
+    {
+      "name": "Phanteks XT View Matrix Midi Tower Valkoinen",
+      "price_cents": 11990,
+      "url": "https://datatronic.fi/komponentit/kotelot/phanteks-xt-view-matrix-midi-tower-valkoinen-phanteks-ph-xt523vm1-dwt01",
+      "external_id": "176306"
+    },
+    {
+      "name": "HAVN HVN-FS-H1230-01-TRI Tietokoneen jäähdytysjärjestelmä Tietokonekotelo Tuuletin 12 cm Valkoinen 3 kpl",
+      "price_cents": 3990,
+      "url": "https://datatronic.fi/komponentit/kotelot/havn-hvn-fs-h1230-01-tri-tietokoneen-jaahdytysjarjestelma-tietokonekotelo-tuuletin-12-cm-valkoinen-3-kpl-havn-hvn-fs-h1230-01-tr",
+      "external_id": "175043"
+    },
+    {
+      "name": "LC-Power 7037B Midi Tower Musta",
+      "price_cents": 4590,
+      "url": "https://datatronic.fi/komponentit/kotelot/lc-power-7037b-midi-tower-musta-lc-power-lc-7037b-on",
+      "external_id": "122944"
+    },
+    {
+      "name": "Thermaltake TR100 Mini Tower Valkoinen",
+      "price_cents": 13490,
+      "url": "https://datatronic.fi/komponentit/kotelot/thermaltake-tr100-mini-tower-valkoinen-thermaltake-ca-11a-00s6nn-00",
+      "external_id": "167156"
+    },
+    {
+      "name": "Phanteks Enthoo Pro 2 Full Tower musta",
+      "price_cents": 18390,
+      "url": "https://datatronic.fi/komponentit/kotelot/phanteks-enthoo-pro-2-full-tower-musta-phanteks-ph-es620pc-bk01",
+      "external_id": "166678"
+    },
+    {
+      "name": "Phanteks Evolv X2 Matrix Tower Valkoinen",
+      "price_cents": 19890,
+      "url": "https://datatronic.fi/komponentit/kotelot/phanteks-evolv-x2-matrix-tower-valkoinen-phanteks-ph-es524xm-dmw01",
+      "external_id": "176304"
+    },
+    {
+      "name": "Antec NX 410 Midi Tower Harmaa",
+      "price_cents": 7490,
+      "url": "https://datatronic.fi/komponentit/kotelot/antec-nx-410-midi-tower-harmaa-antec-0-761345-81041-8",
+      "external_id": "37955"
+    },
+    {
+      "name": "Corsair 5000D RGB Midi Tower Valkoinen",
+      "price_cents": 24490,
+      "url": "https://datatronic.fi/komponentit/kotelot/corsair-5000d-rgb-midi-tower-valkoinen-corsair-cc-9011243-ww",
+      "external_id": "106345"
+    },
+    {
+      "name": "Sharkoon AK4 RGB STRIP Midi Tower musta",
+      "price_cents": 7990,
+      "url": "https://datatronic.fi/komponentit/kotelot/sharkoon-ak4-rgb-strip-midi-tower-musta-sharkoon-4044951041657",
+      "external_id": "169439"
+    },
+    {
+      "name": "Fractal Design Define S - Window Midi Tower Musta",
+      "price_cents": 10390,
+      "url": "https://datatronic.fi/komponentit/kotelot/fractal-design-define-s-window-midi-tower-musta-fractal-design-fd-ca-def-s-bk-w",
+      "external_id": "2610"
+    },
+    {
+      "name": "Sharkoon AK2 RGB Midi Tower musta",
+      "price_cents": 7490,
+      "url": "https://datatronic.fi/komponentit/kotelot/sharkoon-ak2-rgb-midi-tower-musta-sharkoon-4044951041626",
+      "external_id": "169436"
+    },
+    {
+      "name": "Chieftec CT-04B-350GPB tietokonekotelo Musta 350 W",
+      "price_cents": 9390,
+      "url": "https://datatronic.fi/komponentit/kotelot/chieftec-ct-04b-350gpb-tietokonekotelo-musta-350-w-chieftec-ct-04b-350gpb",
+      "external_id": "38276"
+    },
+    {
+      "name": "MSI MAG PANO M100R PZ Micro Tower Valkoinen",
+      "price_cents": 13190,
+      "url": "https://datatronic.fi/komponentit/kotelot/msi-mag-pano-m100r-pz-micro-tower-valkoinen-msi-306-7g24w21-809",
+      "external_id": "152051"
+    },
+    {
+      "name": "Fractal Design Torrent Compact Musta",
+      "price_cents": 19590,
+      "url": "https://datatronic.fi/komponentit/kotelot/fractal-design-torrent-compact-musta-fractal-design-fd-c-tor1c-02",
+      "external_id": "41581"
+    },
+    {
+      "name": "Fractal Design NODE 804 Musta",
+      "price_cents": 12790,
+      "url": "https://datatronic.fi/komponentit/kotelot/fractal-design-node-804-musta-fractal-design-fd-ca-node-804-bl-w",
+      "external_id": "2512"
+    },
+    {
+      "name": "Lian Li 011 Dynamic Mini O11 DYNAMIC MINI V2 Mini Tower Valkoinen",
+      "price_cents": 9790,
+      "url": "https://datatronic.fi/komponentit/kotelot/lian-li-011-dynamic-mini-o11-dynamic-mini-v2-mini-tower-valkoinen-lian-li-g99o11dmiv2w00",
+      "external_id": "171682"
+    },
+    {
+      "name": "MSI MAG FORGE 100R tietokonekotelo Midi Tower Musta, Läpinäkyvä",
+      "price_cents": 7090,
+      "url": "https://datatronic.fi/komponentit/kotelot/msi-mag-forge-100r-tietokonekotelo-midi-tower-musta-lapinakyva-msi-306-7g03m21-809",
+      "external_id": "7358"
+    },
+    {
+      "name": "MSI MAG FORGE 100R tietokonekotelo Midi Tower Musta, Läpinäkyvä",
+      "price_cents": 8090,
+      "url": "https://datatronic.fi/komponentit/kotelot/msi-mag-forge-100r-tietokonekotelo-midi-tower-musta-lapinakyva-msi-306-7g03r21-809",
+      "external_id": "7357"
+    }
+  ]
+}

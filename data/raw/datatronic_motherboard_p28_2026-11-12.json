@@ -1,0 +1,66 @@
+{
+  "shop": "Datatronic",
+  "category": "motherboard",
+  "page": 28,
+  "source_url": "https://datatronic.fi/emolevyt?page=28",
+  "fetched_at": "2026-11-12T14:46:40+00:00",
+  "site_total_products": 657,
+  "items_on_page": 9,
+  "raw_html": "data/raw/html/datatronic_motherboard_p28_2026-11-12_1fbbfb6ecbc0.html",
+  "items": [
+    {
+      "name": "B840M D3HP",
+      "price_cents": 11290,
+      "url": "https://datatronic.fi/komponentit/emolevyt/b840m-d3hp-b840m-d3hp",
+      "external_id": "177904"
+    },
+    {
+      "name": "ASUS TUF GAMING Z890-PRO WIFI Intel Z890 LGA 1851 (Socket V1) ATX",
+      "price_cents": 43500,
+      "url": "https://datatronic.fi/komponentit/emolevyt/asus-tuf-gaming-z890-pro-wifi-intel-z890-lga-1851-socket-v1-atx-asus-90mb1ir0-m0eay0",
+      "external_id": "165936"
+    },
+    {
+      "name": "MSI A520M-S (A520AM4mATXDDR4)",
+      "price_cents": 5790,
+      "url": "https://datatronic.fi/komponentit/emolevyt/msi-a520m-s-a520am4matxddr4-7c96-071r",
+      "external_id": "184573"
+    },
+    {
+      "name": "ASUS PRIME A620AM-A-CSM AMD A620A Pistoke AM5 mikro ATX",
+      "price_cents": 12190,
+      "url": "https://datatronic.fi/komponentit/emolevyt/asus-prime-a620am-a-csm-amd-a620a-pistoke-am5-mikro-atx-asus-90mb1my0-m0eayc",
+      "external_id": "174580"
+    },
+    {
+      "name": "ASUS PRIME B760M-A II-CSM Intel B760 LGA 1700 mikro ATX",
+      "price_cents": 17890,
+      "url": "https://datatronic.fi/komponentit/emolevyt/asus-prime-b760m-a-ii-csm-intel-b760-lga-1700-mikro-atx-asus-90mb1ng0-m0eayc",
+      "external_id": "181848"
+    },
+    {
+      "name": "GIGABYTE H810M S2H emolevy Intel H810 LGA 1851 (Socket V1) mikro ATX",
+      "price_cents": 10190,
+      "url": "https://datatronic.fi/komponentit/emolevyt/gigabyte-h810m-s2h-emolevy-intel-h810-lga-1851-socket-v1-mikro-atx-gigabyte-h810m-s2h",
+      "external_id": "166083"
+    },
+    {
+      "name": "MSI B550M-P WiFi6E (B550AM4mATXAMD)",
+      "price_cents": 11890,
+      "url": "https://datatronic.fi/komponentit/emolevyt/msi-b550m-p-wifi6e-b550am4matxamd-7c95-202r",
+      "external_id": "184570"
+    },
+    {
+      "name": "Sapphire NITRO+ X870EA PhantomLink Polar Edition AMD X870E Pistoke AM5 ATX",
+      "price_cents": 40500,
+      "url": "https://datatronic.fi/komponentit/emolevyt/sapphire-nitro-x870ea-phantomlink-polar-edition-amd-x870e-pistoke-am5-atx-sapphire-52122-11-40g",
+      "external_id": "179817"
+    },
+    {
+      "name": "ASUS ROG CROSSHAIR X870E EDITION 20 AMD X870E Pistoke AM5 ATX",
+      "price_cents": 313500,
+      "url": "https://datatronic.fi/komponentit/emolevyt/asus-rog-crosshair-x870e-edition-20-amd-x870e-pistoke-am5-atx-asus-90mb1pd0-m0eay0",
+      "external_id": "185898"
+    }
+  ]
+}

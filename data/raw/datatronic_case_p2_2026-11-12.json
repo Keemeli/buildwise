@@ -1,0 +1,156 @@
+{
+  "shop": "Datatronic",
+  "category": "case",
+  "page": 2,
+  "source_url": "https://datatronic.fi/kotelot?page=2",
+  "fetched_at": "2026-11-12T14:48:45+00:00",
+  "site_total_products": 620,
+  "items_on_page": 24,
+  "raw_html": "data/raw/html/datatronic_case_p2_2026-11-12_c31c8e512206.html",
+  "items": [
+    {
+      "name": "Phanteks EX5 Max Midi Tower Musta",
+      "price_cents": 20990,
+      "url": "https://datatronic.fi/komponentit/kotelot/phanteks-ex5-max-midi-tower-musta-phanteks-ph-ex526m-dbk01",
+      "external_id": "182373"
+    },
+    {
+      "name": "Fractal Design Pop Mini Air Musta",
+      "price_cents": 9690,
+      "url": "https://datatronic.fi/komponentit/kotelot/fractal-design-pop-mini-air-musta-fractal-design-fd-c-por1m-06",
+      "external_id": "47333"
+    },
+    {
+      "name": "Corsair FRAME 4000D RS ARGB Midi Tower musta",
+      "price_cents": 10890,
+      "url": "https://datatronic.fi/komponentit/kotelot/corsair-frame-4000d-rs-argb-midi-tower-musta-corsair-cc-9011296-ww",
+      "external_id": "165265"
+    },
+    {
+      "name": "SAMA S30 Midi Tower Valkoinen",
+      "price_cents": 4790,
+      "url": "https://datatronic.fi/komponentit/kotelot/sama-s30-midi-tower-valkoinen-sama-gears-s30-whmpa3x1-gl",
+      "external_id": "174180"
+    },
+    {
+      "name": "Lian Li Lancool 207 Midi Tower musta",
+      "price_cents": 9090,
+      "url": "https://datatronic.fi/komponentit/kotelot/lian-li-lancool-207-midi-tower-musta-lian-li-g99lan207rx00",
+      "external_id": "165022"
+    },
+    {
+      "name": "ASUS AP201 PRIME CASE TG WHITE Mini Tower Valkoinen",
+      "price_cents": 10590,
+      "url": "https://datatronic.fi/komponentit/kotelot/asus-ap201-prime-case-tg-white-mini-tower-valkoinen-asus-90dc00g3-b39010",
+      "external_id": "117077"
+    },
+    {
+      "name": "Lian Li A4-H2O A5 Mini Tower Hopea",
+      "price_cents": 14190,
+      "url": "https://datatronic.fi/komponentit/kotelot/lian-li-a4-h2o-a5-mini-tower-hopea-lian-li-a4h2oa5",
+      "external_id": "180974"
+    },
+    {
+      "name": "Phanteks XT Pro Ultra Midi Tower musta",
+      "price_cents": 8990,
+      "url": "https://datatronic.fi/komponentit/kotelot/phanteks-xt-pro-ultra-midi-tower-musta-phanteks-ph-xt523p1-dbk01",
+      "external_id": "166631"
+    },
+    {
+      "name": "Montech XR Tower musta",
+      "price_cents": 7290,
+      "url": "https://datatronic.fi/komponentit/kotelot/montech-xr-tower-musta-montech-xr-b",
+      "external_id": "158775"
+    },
+    {
+      "name": "Fractal Design Define 7 Midi Tower Musta",
+      "price_cents": 20390,
+      "url": "https://datatronic.fi/komponentit/kotelot/fractal-design-define-7-midi-tower-musta-fractal-design-fd-c-def7a-01",
+      "external_id": "4301"
+    },
+    {
+      "name": "Lian Li LANCOOL 217 INF, ikkunallinen miditornikotelo, musta",
+      "price_cents": 11690,
+      "url": "https://datatronic.fi/komponentit/kotelot/lian-li-lancool-217-inf-ikkunallinen-miditornikotelo-musta-lian-li-g99lan217infx00",
+      "external_id": "174159"
+    },
+    {
+      "name": "SAMA S40 Midi Tower musta",
+      "price_cents": 6090,
+      "url": "https://datatronic.fi/komponentit/kotelot/sama-s40-midi-tower-musta-sama-gears-s40-bkapa4x1-gl",
+      "external_id": "174176"
+    },
+    {
+      "name": "Fractal Design Pop Air Musta",
+      "price_cents": 8690,
+      "url": "https://datatronic.fi/komponentit/kotelot/fractal-design-pop-air-musta-fractal-design-fd-c-poa1a-01",
+      "external_id": "47320"
+    },
+    {
+      "name": "Kolink OBSERVATORY HF GB tietokonekotelo Midi Tower Musta",
+      "price_cents": 5090,
+      "url": "https://datatronic.fi/komponentit/kotelot/kolink-observatory-hf-gb-tietokonekotelo-midi-tower-musta-kolink-pgw-ch-kol-109",
+      "external_id": "127027"
+    },
+    {
+      "name": "Lian Li LANCOOL216RX tietokonekotelo Midi Tower Musta",
+      "price_cents": 12690,
+      "url": "https://datatronic.fi/komponentit/kotelot/lian-li-lancool216rx-tietokonekotelo-midi-tower-musta-lian-li-lancool216rx",
+      "external_id": "67145"
+    },
+    {
+      "name": "Zalman I3 NEO WHITE tietokonekotelo Midi Tower Valkoinen",
+      "price_cents": 4190,
+      "url": "https://datatronic.fi/komponentit/kotelot/zalman-i3-neo-white-tietokonekotelo-midi-tower-valkoinen-zalman-i3-neo-white",
+      "external_id": "131330"
+    },
+    {
+      "name": "Aerocool Trinity Mini Mini Tower Musta",
+      "price_cents": 5290,
+      "url": "https://datatronic.fi/komponentit/kotelot/aerocool-trinity-mini-mini-tower-musta-aerocool-accs-pv3203311",
+      "external_id": "37434"
+    },
+    {
+      "name": "DeepCool CH260 Micro Tower musta",
+      "price_cents": 7190,
+      "url": "https://datatronic.fi/komponentit/kotelot/deepcool-ch260-micro-tower-musta-deepcool-r-ch260-bkngm0-g-1",
+      "external_id": "171113"
+    },
+    {
+      "name": "Fractal Design Define 7 XL Midi Tower Musta",
+      "price_cents": 28690,
+      "url": "https://datatronic.fi/komponentit/kotelot/fractal-design-define-7-xl-midi-tower-musta-fractal-design-fd-c-def7x-01",
+      "external_id": "4310"
+    },
+    {
+      "name": "DeepCool CG380 3F WH Midi Tower Valkoinen",
+      "price_cents": 5590,
+      "url": "https://datatronic.fi/komponentit/kotelot/deepcool-cg380-3f-wh-midi-tower-valkoinen-deepcool-r-cg380-whagm3-g",
+      "external_id": "174408"
+    },
+    {
+      "name": "Jonsbo Z20 MESH Mini Tower Valkoinen",
+      "price_cents": 7890,
+      "url": "https://datatronic.fi/komponentit/kotelot/jonsbo-z20-mesh-mini-tower-valkoinen-jonsbo-z20-mesh-white",
+      "external_id": "173664"
+    },
+    {
+      "name": "Chieftec CQ-01B-U3-OP tietokonekotelo Midi Tower Musta",
+      "price_cents": 5190,
+      "url": "https://datatronic.fi/komponentit/kotelot/chieftec-cq-01b-u3-op-tietokonekotelo-midi-tower-musta-chieftec-cq-01b-u3-op",
+      "external_id": "2491"
+    },
+    {
+      "name": "Lian Li 011 Dynamic Mini O11 DYNAMIC MINI V2 Mini Tower Musta",
+      "price_cents": 9790,
+      "url": "https://datatronic.fi/komponentit/kotelot/lian-li-011-dynamic-mini-o11-dynamic-mini-v2-mini-tower-musta-lian-li-g99o11dmiv2x00",
+      "external_id": "171679"
+    },
+    {
+      "name": "Chieftec PC- Gehäuse GA-01B-L-OP APEX LUMO Midi Tower musta",
+      "price_cents": 6690,
+      "url": "https://datatronic.fi/komponentit/kotelot/chieftec-pc-gehause-ga-01b-l-op-apex-lumo-midi-tower-musta-chieftec-ga-01b-l-op",
+      "external_id": "165430"
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "shop": "Datatronic",
+  "category": "cpu",
+  "page": 8,
+  "source_url": "https://datatronic.fi/prosessorit?page=8",
+  "fetched_at": "2026-11-12T14:45:48+00:00",
+  "site_total_products": 171,
+  "items_on_page": 3,
+  "raw_html": "data/raw/html/datatronic_cpu_p8_2026-11-12_6d3fcd4aa674.html",
+  "items": [
+    {
+      "name": "AMD EPYC 8534PN suoritin 2 GHz 128 MB L3 Lokero",
+      "price_cents": 470500,
+      "url": "https://datatronic.fi/komponentit/prosessorit/amd-epyc-8534pn-suoritin-2-ghz-128-mb-l3-lokero-amd-100-000001172",
+      "external_id": "183390"
+    },
+    {
+      "name": "AMD EPYC 4244P suoritin 3,8 GHz 32 MB L3 Lokero",
+      "price_cents": 20690,
+      "url": "https://datatronic.fi/komponentit/prosessorit/amd-epyc-4244p-suoritin-38-ghz-32-mb-l3-lokero-amd-100-000001480",
+      "external_id": "183391"
+    },
+    {
+      "name": "K DeepCool AG300 G2",
+      "price_cents": 1990,
+      "url": "https://datatronic.fi/komponentit/prosessorit/k-deepcool-ag300-g2-r-ag300-bkammg2",
+      "external_id": "185153"
+    }
+  ]
+}

@@ -1,0 +1,34 @@
+{
+  "excluded": [
+    {
+      "raw_name": "GIGABYTE B850M AORUS ELITE WIFI6E ICE AMD B850 Pistoke AM5 mikro ATX",
+      "category": "storage",
+      "shop": "Datatronic",
+      "form_factor": "mikro ATX"
+    },
+    {
+      "raw_name": "GIGABYTE B850M D3HP emolevy AMD B850 Pistoke AM5 mikro ATX",
+      "category": "storage",
+      "shop": "Datatronic",
+      "form_factor": "mikro ATX"
+    },
+    {
+      "raw_name": "MSI MEG X870E GODLIKE emolevy AMD X870E Pistoke AM5 Laajennettu ATX",
+      "category": "storage",
+      "shop": "Datatronic",
+      "form_factor": "Laajennettu ATX"
+    },
+    {
+      "raw_name": "ASUS B850M MAX GAMING WIFI AMD B850 Pistoke AM5 mikro ATX",
+      "category": "storage",
+      "shop": "Datatronic",
+      "form_factor": "mikro ATX"
+    },
+    {
+      "raw_name": "MSI MEG X870E GODLIKE emolevy AMD X870E Pistoke AM5 Laajennettu ATX",
+      "category": "storage",
+      "shop": "Datatronic",
+      "form_factor": "Laajennettu ATX"
+    }
+  ]
+}

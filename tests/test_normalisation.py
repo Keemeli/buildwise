@@ -14,14 +14,41 @@ from pathlib import Path
 from unittest.mock import patch
 
 from scraper.cli import main
-from scraper.pipeline.components import ComponentNameParser
+from scraper.pipeline.components import ComponentNameParser, contradicts_category
 from scraper.pipeline.listing_prices import ListingPriceSelector
+from scraper.pipeline.export import build_web_copy, render
 from scraper.pipeline.normalisation import ComponentNormaliser, merge_product_specs
 from scraper.pipeline.specification_values import SpecificationValueResolver
 from scraper.retailers.datatronic import DatatronicAdapter
 from scraper.retailers.jimms import JimmsAdapter
 
 from tests.support import ROOT, listing, product_page, product_url
+
+
+class CategoryContradictionTests(unittest.TestCase):
+    """A row reordered into the wrong shop category, and a row with no price, are the two
+    ways the full catalogue produced rows the app cannot honestly show."""
+
+    def test_storage_rows_with_a_board_form_factor_contradict(self):
+        self.assertTrue(contradicts_category('storage', {'form_factor': 'mikro ATX'}))
+        self.assertTrue(contradicts_category('storage', {'form_factor': 'Laajennettu ATX'}))
+        self.assertTrue(contradicts_category('storage', {'form_factor': 'Micro-ATX'}))
+        for specs in ({'form_factor': 'M.2 2280'}, {'form_factor': '2.5"'}, {'form_factor': 'U.2'},
+                      {'form_factor': '3.5"'}, {'interface': 'SATA III'}, {}):
+            self.assertFalse(contradicts_category('storage', specs))
+        # The rule is one-way: the same value is fine where it belongs.
+        for category in ('motherboard', 'case', 'psu'):
+            self.assertFalse(contradicts_category(category, {'form_factor': 'mikro ATX'}))
+
+    def test_export_drops_rows_without_a_priced_listing(self):
+        priced = {'category': 'cpu', 'brand': 'AMD', 'model': 'Ryzen', 'raw_name': 'cpu with a price',
+                  'specs': {}, 'listings': [{'shop': 'Datatronic', 'price_cents': 19900}]}
+        unpriced = {'category': 'cpu', 'brand': 'AMD', 'model': 'Ryzen', 'raw_name': 'cpu without a price',
+                    'specs': {}, 'listings': [{'shop': 'Datatronic', 'price_cents': None},
+                                              {'shop': 'Jimms', 'price_cents': 0}]}
+        copy = build_web_copy({'generated_at': 'now', 'source': 'Datatronic', 'components': [priced, unpriced]})
+        self.assertEqual(copy['component_count'], 1)
+        self.assertEqual([c['raw_name'] for c in copy['components']], ['cpu with a price'])
 
 
 class MultiShopNormalisationTests(unittest.TestCase):
@@ -91,7 +118,7 @@ class NormaliserConfigurationTests(unittest.TestCase):
 
     def test_normaliser_can_use_a_report_writer_without_replacing_parsing(self):
         class RecordingWriter:
-            def write(self, out_dir, components, *args):
+            def write(self, out_dir, components, *args, **kwargs):
                 self.components = components
                 return out_dir / 'custom-report.md'
 
@@ -375,7 +402,8 @@ class PriceWorkflowTests(unittest.TestCase):
                     self.assertEqual(path.read_bytes(), content)
                 target = root / 'web/components.json'
                 self.assertEqual(main(['export', '--source', str(out / 'components.json'), '--target', str(target)]), 0)
-                self.assertEqual(json.loads(target.read_text()), json.loads((out / 'components.json').read_text()))
+                # Slimmed, minified deployment copy: exactly what the exporter would write.
+                self.assertEqual(target.read_bytes(), render(json.loads((out / 'components.json').read_text())))
 
     def test_legacy_and_versioned_ties_are_reported_without_cross_shop_history(self):
         with tempfile.TemporaryDirectory() as directory:

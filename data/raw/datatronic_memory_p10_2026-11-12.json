@@ -1,0 +1,156 @@
+{
+  "shop": "Datatronic",
+  "category": "memory",
+  "page": 10,
+  "source_url": "https://datatronic.fi/muistit?page=10",
+  "fetched_at": "2026-11-12T14:46:57+00:00",
+  "site_total_products": 761,
+  "items_on_page": 24,
+  "raw_html": "data/raw/html/datatronic_memory_p10_2026-11-12_55c71e8813e1.html",
+  "items": [
+    {
+      "name": "Kingston Technology FURY Ren. PRO DDR5 16GB 5600MHz R.ECC- muistimoduuli",
+      "price_cents": 75500,
+      "url": "https://datatronic.fi/komponentit/muistit/kingston-technology-fury-ren-pro-ddr5-16gb-5600mhz-recc-muistimoduuli-kingston-technology-kf556r36rb-16",
+      "external_id": "121280"
+    },
+    {
+      "name": "G.Skill Trident Z Neo F5-6000J3040G32GX2-TZ5N muistimoduuli 64 GB 2 x 32 GB DDR5 6000 MHz",
+      "price_cents": 172500,
+      "url": "https://datatronic.fi/komponentit/muistit/gskill-trident-z-neo-f5-6000j3040g32gx2-tz5n-muistimoduuli-64-gb-2-x-32-gb-ddr5-6000-mhz-gskill-f5-6000j3040g32gx2-tz5n",
+      "external_id": "58733"
+    },
+    {
+      "name": "Corsair Vengeance CMK64GX5M2D5600Z40 muistimoduuli 64 GB 2 x 32 GB DDR5 5600 MT/s",
+      "price_cents": 166900,
+      "url": "https://datatronic.fi/komponentit/muistit/corsair-vengeance-cmk64gx5m2d5600z40-muistimoduuli-64-gb-2-x-32-gb-ddr5-5600-mt-s-corsair-cmk64gx5m2d5600z40",
+      "external_id": "174504"
+    },
+    {
+      "name": "G.Skill Trident Z RGB F4-3200C16D-16GTZRX muistimoduuli 16 GB 2 x 8 GB DDR4 3200 MHz",
+      "price_cents": 17390,
+      "url": "https://datatronic.fi/komponentit/muistit/gskill-trident-z-rgb-f4-3200c16d-16gtzrx-muistimoduuli-16-gb-2-x-8-gb-ddr4-3200-mhz-gskill-f4-3200c16d-16gtzrx",
+      "external_id": "40611"
+    },
+    {
+      "name": "Corsair Vengeance CMSX16GX4M1A3200C22 muistimoduuli 16 GB 1 x 16 GB DDR4 3200 MHz",
+      "price_cents": 15990,
+      "url": "https://datatronic.fi/komponentit/muistit/corsair-vengeance-cmsx16gx4m1a3200c22-muistimoduuli-16-gb-1-x-16-gb-ddr4-3200-mhz-corsair-cmsx16gx4m1a3200c22",
+      "external_id": "46404"
+    },
+    {
+      "name": "Corsair Vengeance RGB CMH128GX5M4B5600C40 muistimoduuli 128 GB 4 x 32 GB DDR5 5600 MHz",
+      "price_cents": 370900,
+      "url": "https://datatronic.fi/komponentit/muistit/corsair-vengeance-rgb-cmh128gx5m4b5600c40-muistimoduuli-128-gb-4-x-32-gb-ddr5-5600-mhz-corsair-cmh128gx5m4b5600c40",
+      "external_id": "131035"
+    },
+    {
+      "name": "Corsair Vengeance LPX 16GB DDR4-2666 muistimoduuli 2 x 8 GB 2666 MHz",
+      "price_cents": 26690,
+      "url": "https://datatronic.fi/komponentit/muistit/corsair-vengeance-lpx-16gb-ddr4-2666-muistimoduuli-2-x-8-gb-2666-mhz-corsair-cmk16gx4m2a2666c16",
+      "external_id": "2663"
+    },
+    {
+      "name": "Patriot Memory Viper RGB PVVR532G560C36K muistimoduuli 32 GB 2 x 16 GB DDR5 5600 MHz ECC",
+      "price_cents": 57900,
+      "url": "https://datatronic.fi/komponentit/muistit/patriot-memory-viper-rgb-pvvr532g560c36k-muistimoduuli-32-gb-2-x-16-gb-ddr5-5600-mhz-ecc-patriot-memory-pvv532g560c36k",
+      "external_id": "58371"
+    },
+    {
+      "name": "Crucial CT16G56C46U5 muistimoduuli 16 GB 1 x 16 GB DDR5 5600 MHz",
+      "price_cents": 33500,
+      "url": "https://datatronic.fi/komponentit/muistit/crucial-ct16g56c46u5-muistimoduuli-16-gb-1-x-16-gb-ddr5-5600-mhz-crucial-ct16g56c46u5",
+      "external_id": "84328"
+    },
+    {
+      "name": "Kingston Technology KF432S20IBK2/16 muistimoduuli 16 GB 2 x 8 GB DDR4 3200 MHz",
+      "price_cents": 17690,
+      "url": "https://datatronic.fi/komponentit/muistit/kingston-technology-kf432s20ibk2-16-muistimoduuli-16-gb-2-x-8-gb-ddr4-3200-mhz-kingston-technology-kf432s20ibk2-16",
+      "external_id": "47175"
+    },
+    {
+      "name": "Kingston Technology ValueRAM KVR32S22S8/8 muistimoduuli 8 GB 1 x 8 GB DDR4 3200 MHz",
+      "price_cents": 10890,
+      "url": "https://datatronic.fi/komponentit/muistit/kingston-technology-valueram-kvr32s22s8-8-muistimoduuli-8-gb-1-x-8-gb-ddr4-3200-mhz-kingston-technology-kvr32s22s8-8",
+      "external_id": "4178"
+    },
+    {
+      "name": "Kingston Technology FURY Beast muistimoduuli 64 GB 2 x 32 GB DDR5",
+      "price_cents": 168900,
+      "url": "https://datatronic.fi/komponentit/muistit/kingston-technology-fury-beast-muistimoduuli-64-gb-2-x-32-gb-ddr5-kingston-technology-kf560c30bwek2-64",
+      "external_id": "155044"
+    },
+    {
+      "name": "Kingston Technology FURY Impact SO-DDR5 16GB 6000MHz muistimoduuli",
+      "price_cents": 37900,
+      "url": "https://datatronic.fi/komponentit/muistit/kingston-technology-fury-impact-so-ddr5-16gb-6000mhz-muistimoduuli-kingston-technology-kf560s38ib-16",
+      "external_id": "129297"
+    },
+    {
+      "name": "Lenovo 4X71M23186 muistimoduuli 16 GB 1 x 16 GB DDR5 5600 MHz",
+      "price_cents": 52900,
+      "url": "https://datatronic.fi/komponentit/muistit/lenovo-4x71m23186-muistimoduuli-16-gb-1-x-16-gb-ddr5-5600-mhz-lenovo-4x71m23186",
+      "external_id": "132078"
+    },
+    {
+      "name": "Patriot Memory Viper Venom PVV564G600C30K muistimoduuli 64 GB 2 x 32 GB DDR5 4800 MHz",
+      "price_cents": 127900,
+      "url": "https://datatronic.fi/komponentit/muistit/patriot-memory-viper-venom-pvv564g600c30k-muistimoduuli-64-gb-2-x-32-gb-ddr5-4800-mhz-patriot-memory-pvv564g600c30k",
+      "external_id": "165818"
+    },
+    {
+      "name": "Corsair Vengeance CMK96GX5M2B6600C32 muistimoduuli 96 GB 2 x 48 GB DDR5 6600 MHz",
+      "price_cents": 234900,
+      "url": "https://datatronic.fi/komponentit/muistit/corsair-vengeance-cmk96gx5m2b6600c32-muistimoduuli-96-gb-2-x-48-gb-ddr5-6600-mhz-corsair-cmk96gx5m2b6600c32",
+      "external_id": "130114"
+    },
+    {
+      "name": "Kingston Technology KF432S20IB/16 muistimoduuli 16 GB 1 x 16 GB DDR4 3200 MHz",
+      "price_cents": 17690,
+      "url": "https://datatronic.fi/komponentit/muistit/kingston-technology-kf432s20ib-16-muistimoduuli-16-gb-1-x-16-gb-ddr4-3200-mhz-kingston-technology-kf432s20ib-16",
+      "external_id": "105995"
+    },
+    {
+      "name": "Kingston Technology KCP432SD8/16 muistimoduuli 16 GB 1 x 16 GB DDR4 3200 MHz",
+      "price_cents": 20290,
+      "url": "https://datatronic.fi/komponentit/muistit/kingston-technology-kcp432sd8-16-muistimoduuli-16-gb-1-x-16-gb-ddr4-3200-mhz-kingston-technology-kcp432sd8-16",
+      "external_id": "4838"
+    },
+    {
+      "name": "DELL AB371019 muistimoduuli 16 GB 1 x 16 GB DDR4 3200 MHz",
+      "price_cents": 36500,
+      "url": "https://datatronic.fi/komponentit/muistit/dell-ab371019-muistimoduuli-16-gb-1-x-16-gb-ddr4-3200-mhz-dell-ab371019",
+      "external_id": "12075"
+    },
+    {
+      "name": "Corsair Dominator Titanium CMP32GX5M2X6600C32 muistimoduuli 32 GB 2 x 16 GB DDR5 6600 MHz",
+      "price_cents": 1367500,
+      "url": "https://datatronic.fi/komponentit/muistit/corsair-dominator-titanium-cmp32gx5m2x6600c32-muistimoduuli-32-gb-2-x-16-gb-ddr5-6600-mhz-corsair-cmp32gx5m2x6600c32",
+      "external_id": "132491"
+    },
+    {
+      "name": "Crucial CT2K32G48C40S5 muistimoduuli 64 GB 2 x 32 GB DDR5 4800 MHz",
+      "price_cents": 137900,
+      "url": "https://datatronic.fi/komponentit/muistit/crucial-ct2k32g48c40s5-muistimoduuli-64-gb-2-x-32-gb-ddr5-4800-mhz-crucial-ct2k32g48c40s5",
+      "external_id": "46750"
+    },
+    {
+      "name": "Crucial CT32G56C46S5 muistimoduuli 32 GB 1 x 32 GB DDR5 5600 MHz",
+      "price_cents": 58900,
+      "url": "https://datatronic.fi/komponentit/muistit/crucial-ct32g56c46s5-muistimoduuli-32-gb-1-x-32-gb-ddr5-5600-mhz-crucial-ct32g56c46s5",
+      "external_id": "129421"
+    },
+    {
+      "name": "G.Skill 4GB DDR3-1600 muistimoduuli 1 x 4 GB 1600 MHz",
+      "price_cents": 4590,
+      "url": "https://datatronic.fi/komponentit/muistit/gskill-4gb-ddr3-1600-muistimoduuli-1-x-4-gb-1600-mhz-gskill-f3-1600c11s-4gis",
+      "external_id": "40538"
+    },
+    {
+      "name": "Crucial CT8G48C40S5 muistimoduuli 8 GB 1 x 8 GB DDR5 4800 MHz",
+      "price_cents": 25990,
+      "url": "https://datatronic.fi/komponentit/muistit/crucial-ct8g48c40s5-muistimoduuli-8-gb-1-x-8-gb-ddr5-4800-mhz-crucial-ct8g48c40s5",
+      "external_id": "46745"
+    }
+  ]
+}

@@ -1,0 +1,156 @@
+{
+  "shop": "Datatronic",
+  "category": "case",
+  "page": 10,
+  "source_url": "https://datatronic.fi/kotelot?page=10",
+  "fetched_at": "2026-11-12T14:48:59+00:00",
+  "site_total_products": 620,
+  "items_on_page": 24,
+  "raw_html": "data/raw/html/datatronic_case_p10_2026-11-12_2e79c1ab033d.html",
+  "items": [
+    {
+      "name": "Corsair FRAME 5000D RS Midi Tower Valkoinen",
+      "price_cents": 14090,
+      "url": "https://datatronic.fi/komponentit/kotelot/corsair-frame-5000d-rs-midi-tower-valkoinen-corsair-cc-9011308-ww",
+      "external_id": "174515"
+    },
+    {
+      "name": "Aerocool Streak Midi Tower Musta",
+      "price_cents": 3590,
+      "url": "https://datatronic.fi/komponentit/kotelot/aerocool-streak-midi-tower-musta-aerocool-accm-pv1901211",
+      "external_id": "37396"
+    },
+    {
+      "name": "Chieftec Midi Tower GS-03B-BLK-OP, Schwarz musta",
+      "price_cents": 6990,
+      "url": "https://datatronic.fi/komponentit/kotelot/chieftec-midi-tower-gs-03b-blk-op-schwarz-musta-chieftec-gs-03b-blk-op",
+      "external_id": "169571"
+    },
+    {
+      "name": "Antec C3 Midi Tower Valkoinen",
+      "price_cents": 11390,
+      "url": "https://datatronic.fi/komponentit/kotelot/antec-c3-midi-tower-valkoinen-antec-0-761345-10032-8",
+      "external_id": "155729"
+    },
+    {
+      "name": "DeepCool CH260 Micro Tower Valkoinen",
+      "price_cents": 7290,
+      "url": "https://datatronic.fi/komponentit/kotelot/deepcool-ch260-micro-tower-valkoinen-deepcool-r-ch260-whngm0-g-1",
+      "external_id": "170698"
+    },
+    {
+      "name": "Corsair 9000D RGB AIRFLOW Full Tower musta",
+      "price_cents": 57900,
+      "url": "https://datatronic.fi/komponentit/kotelot/corsair-9000d-rgb-airflow-full-tower-musta-corsair-cc-9011273-ww",
+      "external_id": "164167"
+    },
+    {
+      "name": "Corsair Obsidian 500D RGB SE Premium Midi Tower Musta",
+      "price_cents": 34900,
+      "url": "https://datatronic.fi/komponentit/kotelot/corsair-obsidian-500d-rgb-se-premium-midi-tower-musta-corsair-cc-9011139-ww",
+      "external_id": "16637"
+    },
+    {
+      "name": "ASUS A23 PLUS TG ARGB BLACK musta",
+      "price_cents": 11390,
+      "url": "https://datatronic.fi/komponentit/kotelot/asus-a23-plus-tg-argb-black-musta-asus-90dc00k0-b19010",
+      "external_id": "167651"
+    },
+    {
+      "name": "DeepCool CG530 Midi Tower musta",
+      "price_cents": 5390,
+      "url": "https://datatronic.fi/komponentit/kotelot/deepcool-cg530-midi-tower-musta-deepcool-r-cg530-bknda0-g-1",
+      "external_id": "171686"
+    },
+    {
+      "name": "Fractal Design Torrent Compact Valkoinen",
+      "price_cents": 17690,
+      "url": "https://datatronic.fi/komponentit/kotelot/fractal-design-torrent-compact-valkoinen-fractal-design-fd-c-tor1c-05",
+      "external_id": "112223"
+    },
+    {
+      "name": "Lian Li Vector V100R MINI Mini Tower Musta",
+      "price_cents": 6290,
+      "url": "https://datatronic.fi/komponentit/kotelot/lian-li-vector-v100r-mini-mini-tower-musta-lian-li-v100rmix",
+      "external_id": "176177"
+    },
+    {
+      "name": "DeepCool CG580 4F Midi Tower musta",
+      "price_cents": 8890,
+      "url": "https://datatronic.fi/komponentit/kotelot/deepcool-cg580-4f-midi-tower-musta-deepcool-r-cg580-bkada4-g-1",
+      "external_id": "169091"
+    },
+    {
+      "name": "Chieftec BS-10B-300 tietokonekotelo Mini Tower Musta 300 W",
+      "price_cents": 10990,
+      "url": "https://datatronic.fi/komponentit/kotelot/chieftec-bs-10b-300-tietokonekotelo-mini-tower-musta-300-w-chieftec-bs-10b-300",
+      "external_id": "38898"
+    },
+    {
+      "name": "Jonsbo N3 tietokonekotelo Mini Tower Musta",
+      "price_cents": 13890,
+      "url": "https://datatronic.fi/komponentit/kotelot/jonsbo-n3-tietokonekotelo-mini-tower-musta-jonsbo-jonsbo-n3",
+      "external_id": "151310"
+    },
+    {
+      "name": "Lian Li A3-mATX Micro Tower Valkoinen, Puu",
+      "price_cents": 9090,
+      "url": "https://datatronic.fi/komponentit/kotelot/lian-li-a3-matx-micro-tower-valkoinen-puu-lian-li-g99a3w-wd00",
+      "external_id": "166645"
+    },
+    {
+      "name": "HYTE Y70 Midi Tower Violetti",
+      "price_cents": 21390,
+      "url": "https://datatronic.fi/komponentit/kotelot/hyte-y70-midi-tower-violetti-hyte-cs-hyte-y70-tm",
+      "external_id": "169726"
+    },
+    {
+      "name": "Chieftec BT-02B-U3-250VS tietokonekotelo Mini Tower Musta 250 W",
+      "price_cents": 9590,
+      "url": "https://datatronic.fi/komponentit/kotelot/chieftec-bt-02b-u3-250vs-tietokonekotelo-mini-tower-musta-250-w-chieftec-bt-02b-u3-250vs",
+      "external_id": "38893"
+    },
+    {
+      "name": "Fractal Design Terra Small Form Factor (SFF) Grafiitti",
+      "price_cents": 23690,
+      "url": "https://datatronic.fi/komponentit/kotelot/fractal-design-terra-small-form-factor-sff-grafiitti-fractal-design-fd-c-ter1n-01",
+      "external_id": "127069"
+    },
+    {
+      "name": "Fractal Design Define 7 XL Midi Tower Musta",
+      "price_cents": 27990,
+      "url": "https://datatronic.fi/komponentit/kotelot/fractal-design-define-7-xl-midi-tower-musta-fractal-design-fd-c-def7x-03",
+      "external_id": "4312"
+    },
+    {
+      "name": "Lian Li A3 Wood Black glass version",
+      "price_cents": 9090,
+      "url": "https://datatronic.fi/komponentit/kotelot/lian-li-a3-wood-black-glass-version-g99a3x-wdg00",
+      "external_id": "172279"
+    },
+    {
+      "name": "Phanteks XT M3 RGB Micro Tower musta",
+      "price_cents": 7090,
+      "url": "https://datatronic.fi/komponentit/kotelot/phanteks-xt-m3-rgb-micro-tower-musta-phanteks-ph-xt325m-dbk01",
+      "external_id": "171620"
+    },
+    {
+      "name": "Fractal Design Pop Silent Musta",
+      "price_cents": 9890,
+      "url": "https://datatronic.fi/komponentit/kotelot/fractal-design-pop-silent-musta-fractal-design-fd-c-pos1a-01",
+      "external_id": "47329"
+    },
+    {
+      "name": "NZXT H6 Air Flow Midi Tower Valkoinen",
+      "price_cents": 7090,
+      "url": "https://datatronic.fi/komponentit/kotelot/nzxt-h6-air-flow-midi-tower-valkoinen-nzxt-cc-h61fw-01",
+      "external_id": "146892"
+    },
+    {
+      "name": "Cooler Master Hyper 612 APEX Suoritin Ilmanjäähdytin 12 cm musta 1 kpl",
+      "price_cents": 6090,
+      "url": "https://datatronic.fi/komponentit/kotelot/cooler-master-hyper-612-apex-suoritin-ilmanjaahdytin-12-cm-musta-1-kpl-cooler-master-map-t6pn-225pk-r1",
+      "external_id": "169573"
+    }
+  ]
+}

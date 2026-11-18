@@ -1,0 +1,156 @@
+{
+  "shop": "Datatronic",
+  "category": "memory",
+  "page": 24,
+  "source_url": "https://datatronic.fi/muistit?page=24",
+  "fetched_at": "2026-11-12T14:47:24+00:00",
+  "site_total_products": 761,
+  "items_on_page": 24,
+  "raw_html": "data/raw/html/datatronic_memory_p24_2026-11-12_80016c14d7d6.html",
+  "items": [
+    {
+      "name": "Corsair Vengeance CMH32GX4M2E3200C16W muistimoduuli 32 GB 2 x 16 GB DDR4 3200 MHz",
+      "price_cents": 36900,
+      "url": "https://datatronic.fi/komponentit/muistit/corsair-vengeance-cmh32gx4m2e3200c16w-muistimoduuli-32-gb-2-x-16-gb-ddr4-3200-mhz-corsair-cmh32gx4m2e3200c16w",
+      "external_id": "16729"
+    },
+    {
+      "name": "Kingston Technology KSM48R40BD4-64HA muistimoduuli 64 GB 1 x 64 GB DDR5",
+      "price_cents": 323900,
+      "url": "https://datatronic.fi/komponentit/muistit/kingston-technology-ksm48r40bd4-64ha-muistimoduuli-64-gb-1-x-64-gb-ddr5-kingston-technology-ksm48r40bd4-64ha",
+      "external_id": "156230"
+    },
+    {
+      "name": "Corsair DDR5 Vengeance RGB 48GB 2-Kit muistimoduuli",
+      "price_cents": 68500,
+      "url": "https://datatronic.fi/komponentit/muistit/corsair-ddr5-vengeance-rgb-48gb-2-kit-muistimoduuli-corsair-cmh48gx5m2b5200c38",
+      "external_id": "113664"
+    },
+    {
+      "name": "Alphacool 25667 Tietokoneen jäähdytysjärjestelmän osa ja lisätarvike Vesiblokki",
+      "price_cents": 1890,
+      "url": "https://datatronic.fi/komponentit/muistit/alphacool-25667-tietokoneen-jaahdytysjarjestelman-osa-ja-lisatarvike-vesiblokki-alphacool-25667",
+      "external_id": "167592"
+    },
+    {
+      "name": "ADATA AD4U320016G22-SGN muistimoduuli 16 GB 1 x 16 GB DDR4 3200 MHz",
+      "price_cents": 15690,
+      "url": "https://datatronic.fi/komponentit/muistit/adata-ad4u320016g22-sgn-muistimoduuli-16-gb-1-x-16-gb-ddr4-3200-mhz-adata-ad4u320016g22-sgn",
+      "external_id": "47425"
+    },
+    {
+      "name": "Corsair Vengeance RGB CMH16GX5M1B5600Z40 muistimoduuli 16 GB 1 x 16 GB DDR5 5600 MHz",
+      "price_cents": 43500,
+      "url": "https://datatronic.fi/komponentit/muistit/corsair-vengeance-rgb-cmh16gx5m1b5600z40-muistimoduuli-16-gb-1-x-16-gb-ddr5-5600-mhz-corsair-cmh16gx5m1b5600z40",
+      "external_id": "165242"
+    },
+    {
+      "name": "Kingston Technology FURY Beast muistimoduuli 32 GB 2 x 16 GB DDR5",
+      "price_cents": 90900,
+      "url": "https://datatronic.fi/komponentit/muistit/kingston-technology-fury-beast-muistimoduuli-32-gb-2-x-16-gb-ddr5-kingston-technology-kf568c34bbek2-32",
+      "external_id": "155086"
+    },
+    {
+      "name": "Corsair Vengeance CMH64GX5M2B6000Z30 muistimoduuli 64 GB 2 x 32 GB DDR5 6000 MHz",
+      "price_cents": 148900,
+      "url": "https://datatronic.fi/komponentit/muistit/corsair-vengeance-cmh64gx5m2b6000z30-muistimoduuli-64-gb-2-x-32-gb-ddr5-6000-mhz-corsair-cmh64gx5m2b6000z30",
+      "external_id": "126255"
+    },
+    {
+      "name": "Corsair Vengeance RGB CMH32GX5M2B6400Z36 muistimoduuli 32 GB 2 x 16 GB DDR5 5600 MHz",
+      "price_cents": 93900,
+      "url": "https://datatronic.fi/komponentit/muistit/corsair-vengeance-rgb-cmh32gx5m2b6400z36-muistimoduuli-32-gb-2-x-16-gb-ddr5-5600-mhz-corsair-cmh32gx5m2b6400z36",
+      "external_id": "165241"
+    },
+    {
+      "name": "Team Group T-FORCE VULCAN Z TLZGD416G3600HC18JDC01 muistimoduuli 16 GB 2 x 8 GB DDR4 3600 MHz",
+      "price_cents": 14390,
+      "url": "https://datatronic.fi/komponentit/muistit/team-group-t-force-vulcan-z-tlzgd416g3600hc18jdc01-muistimoduuli-16-gb-2-x-8-gb-ddr4-3600-mhz-team-group-tlzgd416g3600hc18jdc01",
+      "external_id": "43771"
+    },
+    {
+      "name": "G.Skill F5-6000J2836G32GX2-RS5K muistimoduuli 64 GB",
+      "price_cents": 284500,
+      "url": "https://datatronic.fi/komponentit/muistit/gskill-f5-6000j2836g32gx2-rs5k-muistimoduuli-64-gb-gskill-f5-6000j2836g32gx2-rs5k",
+      "external_id": "165521"
+    },
+    {
+      "name": "Kingston Technology KCP432SS6/8 muistimoduuli 8 GB DDR4 3200 MHz",
+      "price_cents": 273500,
+      "url": "https://datatronic.fi/komponentit/muistit/kingston-technology-kcp432ss6-8-muistimoduuli-8-gb-ddr4-3200-mhz-kingston-technology-kcp432ss6-8",
+      "external_id": "4944"
+    },
+    {
+      "name": "Kingston Technology KTH-PL556D8-32G muistimoduuli 32 GB 1 x 32 GB DDR5 ECC",
+      "price_cents": 189500,
+      "url": "https://datatronic.fi/komponentit/muistit/kingston-technology-kth-pl556d8-32g-muistimoduuli-32-gb-1-x-32-gb-ddr5-ecc-kingston-technology-kth-pl556d8-32g",
+      "external_id": "163943"
+    },
+    {
+      "name": "G.Skill Trident Z5 RGB F5-6000J2836G32GX2-TZ5RK muistimoduuli 64 GB 2 x 32 GB DDR5",
+      "price_cents": 286500,
+      "url": "https://datatronic.fi/komponentit/muistit/gskill-trident-z5-rgb-f5-6000j2836g32gx2-tz5rk-muistimoduuli-64-gb-2-x-32-gb-ddr5-gskill-f5-6000j2836g32gx2-tz5rk",
+      "external_id": "166233"
+    },
+    {
+      "name": "Corsair DDR5 Vengeance RGB 48GB 2-Kit muistimoduuli",
+      "price_cents": 88900,
+      "url": "https://datatronic.fi/komponentit/muistit/corsair-ddr5-vengeance-rgb-48gb-2-kit-muistimoduuli-corsair-cmh48gx5m2b5600c40",
+      "external_id": "113666"
+    },
+    {
+      "name": "G.Skill F5-6400J3239G32GX2-RM5RK muistimoduuli 64 GB 2 x 32 GB DDR5 6400 MHz",
+      "price_cents": 282900,
+      "url": "https://datatronic.fi/komponentit/muistit/gskill-f5-6400j3239g32gx2-rm5rk-muistimoduuli-64-gb-2-x-32-gb-ddr5-6400-mhz-gskill-f5-6400j3239g32gx2-rm5rk",
+      "external_id": "159517"
+    },
+    {
+      "name": "G.Skill Trident Z5 RGB muistimoduuli 64 GB 2 x 32 GB DDR5 6000 MHz",
+      "price_cents": 184900,
+      "url": "https://datatronic.fi/komponentit/muistit/gskill-trident-z5-rgb-muistimoduuli-64-gb-2-x-32-gb-ddr5-6000-mhz-gskill-f5-6000j3040g32gx2-tz5rw",
+      "external_id": "130624"
+    },
+    {
+      "name": "G.Skill F5-6000J3040G32GX2-RM5RK muistimoduuli 64 GB 2 x 32 GB DDR5 6000 MHz",
+      "price_cents": 216900,
+      "url": "https://datatronic.fi/komponentit/muistit/gskill-f5-6000j3040g32gx2-rm5rk-muistimoduuli-64-gb-2-x-32-gb-ddr5-6000-mhz-gskill-f5-6000j3040g32gx2-rm5rk",
+      "external_id": "159513"
+    },
+    {
+      "name": "Synology D4RD-2666-16G muistimoduuli 16 GB 1 x 16 GB DDR4 2666 MHz ECC",
+      "price_cents": 103900,
+      "url": "https://datatronic.fi/komponentit/muistit/synology-d4rd-2666-16g-muistimoduuli-16-gb-1-x-16-gb-ddr4-2666-mhz-ecc-synology-d4rd-2666-16g",
+      "external_id": "118292"
+    },
+    {
+      "name": "G.Skill F5-5200J4040A16GX2-IS muistimoduuli 32 GB",
+      "price_cents": 85500,
+      "url": "https://datatronic.fi/komponentit/muistit/gskill-f5-5200j4040a16gx2-is-muistimoduuli-32-gb-gskill-f5-5200j4040a16gx2-is",
+      "external_id": "165529"
+    },
+    {
+      "name": "Corsair Vengeance muistimoduuli 32 GB 2 x 16 GB DDR5 6000 MHz",
+      "price_cents": 66900,
+      "url": "https://datatronic.fi/komponentit/muistit/corsair-vengeance-muistimoduuli-32-gb-2-x-16-gb-ddr5-6000-mhz-corsair-cmk32gx5m2e6000c36w",
+      "external_id": "132704"
+    },
+    {
+      "name": "G.Skill F5-5600J4040D48GX2-RM5RK muistimoduuli 96 GB 2 x 48 GB DDR5 5600 MHz",
+      "price_cents": 249500,
+      "url": "https://datatronic.fi/komponentit/muistit/gskill-f5-5600j4040d48gx2-rm5rk-muistimoduuli-96-gb-2-x-48-gb-ddr5-5600-mhz-gskill-f5-5600j4040d48gx2-rm5rk",
+      "external_id": "159501"
+    },
+    {
+      "name": "HP 32GB DDR5 4800 ECC Memory muistimoduuli",
+      "price_cents": 319500,
+      "url": "https://datatronic.fi/komponentit/muistit/hp-32gb-ddr5-4800-ecc-memory-muistimoduuli-hp-340k2aa",
+      "external_id": "150712"
+    },
+    {
+      "name": "G.Skill Trident Z5 RGB F5-6000J4048F24GX2-TZ5RK muistimoduuli 48 GB 2 x 24 GB DDR5 6000 MHz",
+      "price_cents": 99900,
+      "url": "https://datatronic.fi/komponentit/muistit/gskill-trident-z5-rgb-f5-6000j4048f24gx2-tz5rk-muistimoduuli-48-gb-2-x-24-gb-ddr5-6000-mhz-gskill-f5-6000j4048f24gx2-tz5rk",
+      "external_id": "125217"
+    }
+  ]
+}

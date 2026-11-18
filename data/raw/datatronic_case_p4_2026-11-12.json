@@ -1,0 +1,156 @@
+{
+  "shop": "Datatronic",
+  "category": "case",
+  "page": 4,
+  "source_url": "https://datatronic.fi/kotelot?page=4",
+  "fetched_at": "2026-11-12T14:48:48+00:00",
+  "site_total_products": 620,
+  "items_on_page": 24,
+  "raw_html": "data/raw/html/datatronic_case_p4_2026-11-12_8608fd6ae774.html",
+  "items": [
+    {
+      "name": "be quiet! Pure Base 501 LX White Midi Tower Valkoinen",
+      "price_cents": 11190,
+      "url": "https://datatronic.fi/komponentit/kotelot/be-quiet-pure-base-501-lx-white-midi-tower-valkoinen-be-quiet-bgw79",
+      "external_id": "168155"
+    },
+    {
+      "name": "SAMA V60 Midi Tower musta",
+      "price_cents": 5990,
+      "url": "https://datatronic.fi/komponentit/kotelot/sama-v60-midi-tower-musta-sama-gears-v60-bkada7x1-gl",
+      "external_id": "174174"
+    },
+    {
+      "name": "LC-Power 2015MB Micro Tower Musta",
+      "price_cents": 3790,
+      "url": "https://datatronic.fi/komponentit/kotelot/lc-power-2015mb-micro-tower-musta-lc-power-lc-2015mb-on",
+      "external_id": "122904"
+    },
+    {
+      "name": "NZXT H6 Air Flow Midi Tower Musta",
+      "price_cents": 9990,
+      "url": "https://datatronic.fi/komponentit/kotelot/nzxt-h6-air-flow-midi-tower-musta-nzxt-cc-h61fb-r1",
+      "external_id": "146894"
+    },
+    {
+      "name": "Sharkoon VS9 Midi Tower musta",
+      "price_cents": 5490,
+      "url": "https://datatronic.fi/komponentit/kotelot/sharkoon-vs9-midi-tower-musta-sharkoon-4044951039104",
+      "external_id": "159533"
+    },
+    {
+      "name": "Lian Li 011 Dynamic Mini O11D mini V2 Flow Mini Tower Valkoinen",
+      "price_cents": 10890,
+      "url": "https://datatronic.fi/komponentit/kotelot/lian-li-011-dynamic-mini-o11d-mini-v2-flow-mini-tower-valkoinen-lian-li-g99o11dmiv2fw00",
+      "external_id": "171681"
+    },
+    {
+      "name": "Lian Li A3-mATX Micro Tower Valkoinen",
+      "price_cents": 7490,
+      "url": "https://datatronic.fi/komponentit/kotelot/lian-li-a3-matx-micro-tower-valkoinen-lian-li-a3-matx-white",
+      "external_id": "161695"
+    },
+    {
+      "name": "Lian Li O11D EVO RGB Tower musta",
+      "price_cents": 17090,
+      "url": "https://datatronic.fi/komponentit/kotelot/lian-li-o11d-evo-rgb-tower-musta-lian-li-o11dergbx",
+      "external_id": "152197"
+    },
+    {
+      "name": "Chieftec AS-01B-OP tietokonekotelo Full Tower Musta",
+      "price_cents": 3890,
+      "url": "https://datatronic.fi/komponentit/kotelot/chieftec-as-01b-op-tietokonekotelo-full-tower-musta-chieftec-as-01b-op",
+      "external_id": "68991"
+    },
+    {
+      "name": "Kolink OBSERVATORY MX Midi Tower musta",
+      "price_cents": 5690,
+      "url": "https://datatronic.fi/komponentit/kotelot/kolink-observatory-mx-midi-tower-musta-kolink-observatory-mx-mb",
+      "external_id": "130603"
+    },
+    {
+      "name": "Fractal Design North XL Valkoinen",
+      "price_cents": 17390,
+      "url": "https://datatronic.fi/komponentit/kotelot/fractal-design-north-xl-valkoinen-fractal-design-fd-c-nor1x-04",
+      "external_id": "154789"
+    },
+    {
+      "name": "Jonsbo D400 Midi Tower musta",
+      "price_cents": 7090,
+      "url": "https://datatronic.fi/komponentit/kotelot/jonsbo-d400-midi-tower-musta-jonsbo-d400-black",
+      "external_id": "173788"
+    },
+    {
+      "name": "ASUS ProArt PA401 Wood Edition Beige - Tempered Glass Panel",
+      "price_cents": 14490,
+      "url": "https://datatronic.fi/komponentit/kotelot/asus-proart-pa401-wood-edition-beige-tempered-glass-panel-asus-90dc00m7-b39010",
+      "external_id": "179896"
+    },
+    {
+      "name": "Lian Li Vector V100 Midi Tower musta, Läpinäkyvä",
+      "price_cents": 7290,
+      "url": "https://datatronic.fi/komponentit/kotelot/lian-li-vector-v100-midi-tower-musta-lapinakyva-lian-li-g99v100rx00",
+      "external_id": "171675"
+    },
+    {
+      "name": "Jonsbo C6 Mini Tower Valkoinen",
+      "price_cents": 4390,
+      "url": "https://datatronic.fi/komponentit/kotelot/jonsbo-c6-mini-tower-valkoinen-jonsbo-c6-white",
+      "external_id": "130984"
+    },
+    {
+      "name": "Chieftec UK-02B-OP tietokonekotelo HTPC Musta",
+      "price_cents": 4190,
+      "url": "https://datatronic.fi/komponentit/kotelot/chieftec-uk-02b-op-tietokonekotelo-htpc-musta-chieftec-uk-02b-op",
+      "external_id": "38275"
+    },
+    {
+      "name": "Chieftec GM-30W-TG-OP tietokonekotelo Kuutio Valkoinen",
+      "price_cents": 7390,
+      "url": "https://datatronic.fi/komponentit/kotelot/chieftec-gm-30w-tg-op-tietokonekotelo-kuutio-valkoinen-chieftec-gm-30w-tg-op",
+      "external_id": "173549"
+    },
+    {
+      "name": "Corsair 3500X RS-R ARGB Midi Tower musta",
+      "price_cents": 12690,
+      "url": "https://datatronic.fi/komponentit/kotelot/corsair-3500x-rs-r-argb-midi-tower-musta-corsair-cc-9011322-ww",
+      "external_id": "173181"
+    },
+    {
+      "name": "be quiet! PURE BASE 501 Black Midi Tower musta",
+      "price_cents": 9390,
+      "url": "https://datatronic.fi/komponentit/kotelot/be-quiet-pure-base-501-black-midi-tower-musta-be-quiet-bg073",
+      "external_id": "166199"
+    },
+    {
+      "name": "Aerocool Cyclon Mini Mini Tower Musta",
+      "price_cents": 3790,
+      "url": "https://datatronic.fi/komponentit/kotelot/aerocool-cyclon-mini-mini-tower-musta-aerocool-accs-pv1201211",
+      "external_id": "37391"
+    },
+    {
+      "name": "Lian Li A3-mATX Micro Tower musta, Puu",
+      "price_cents": 9090,
+      "url": "https://datatronic.fi/komponentit/kotelot/lian-li-a3-matx-micro-tower-musta-puu-lian-li-a3-matx-wd-black",
+      "external_id": "162854"
+    },
+    {
+      "name": "Fractal Design NODE 304 Musta",
+      "price_cents": 9990,
+      "url": "https://datatronic.fi/komponentit/kotelot/fractal-design-node-304-musta-fractal-design-fd-ca-node-304-bl",
+      "external_id": "2459"
+    },
+    {
+      "name": "Jonsbo D41 MESH Midi Tower Musta",
+      "price_cents": 6990,
+      "url": "https://datatronic.fi/komponentit/kotelot/jonsbo-d41-mesh-midi-tower-musta-jonsbo-d41-mesh-black",
+      "external_id": "126538"
+    },
+    {
+      "name": "Fractal Design Pop Air Musta, Magenta",
+      "price_cents": 11290,
+      "url": "https://datatronic.fi/komponentit/kotelot/fractal-design-pop-air-musta-magenta-fractal-design-fd-c-por1a-03",
+      "external_id": "47325"
+    }
+  ]
+}

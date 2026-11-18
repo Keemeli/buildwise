@@ -1,0 +1,156 @@
+{
+  "shop": "Datatronic",
+  "category": "gpu",
+  "page": 19,
+  "source_url": "https://datatronic.fi/naytonohjaimet?page=19",
+  "fetched_at": "2026-11-12T14:45:31+00:00",
+  "site_total_products": 480,
+  "items_on_page": 24,
+  "raw_html": "data/raw/html/datatronic_gpu_p19_2026-11-12_d4ed14b7536c.html",
+  "items": [
+    {
+      "name": "INNO3D GeForce RTX 5060 Ti TWIN X2 NVIDIA 8 GB GDDR7",
+      "price_cents": 58900,
+      "url": "https://datatronic.fi/komponentit/naytonohjaimet/inno3d-geforce-rtx-5060-ti-twin-x2-nvidia-8-gb-gddr7-inno3d-n506t2-08d7-193075n",
+      "external_id": "168576"
+    },
+    {
+      "name": "Nvidia RTX PRO 4500 Blackwell 32 GB GDDR7",
+      "price_cents": 541900,
+      "url": "https://datatronic.fi/komponentit/naytonohjaimet/nvidia-rtx-pro-4500-blackwell-32-gb-gddr7-nvidia-900-5g147-2550-000",
+      "external_id": "177459"
+    },
+    {
+      "name": "Sparkle Technology Intel Arc A310 OMNI View 4 GB GDDR6",
+      "price_cents": 23390,
+      "url": "https://datatronic.fi/komponentit/naytonohjaimet/sparkle-technology-intel-arc-a310-omni-view-4-gb-gddr6-sparkle-technology-sa310f-4g",
+      "external_id": "184695"
+    },
+    {
+      "name": "PNY GeForce RTX 5070 Ti ARGB EPIC-X RGB NVIDIA 16 GB GDDR7",
+      "price_cents": 167900,
+      "url": "https://datatronic.fi/komponentit/naytonohjaimet/pny-geforce-rtx-5070-ti-argb-epic-x-rgb-nvidia-16-gb-gddr7-pny-vcg5070t16tfxxpb1",
+      "external_id": "182437"
+    },
+    {
+      "name": "Cryorig LGA 1700 Kit Type B",
+      "price_cents": 490,
+      "url": "https://datatronic.fi/komponentit/naytonohjaimet/cryorig-lga-1700-kit-type-b-cr-lga1700kit-type-b",
+      "external_id": "170843"
+    },
+    {
+      "name": "Sparkle Technology Arc B570 Guardian Luna OC 10GB Intel GDDR6",
+      "price_cents": 39900,
+      "url": "https://datatronic.fi/komponentit/naytonohjaimet/sparkle-technology-arc-b570-guardian-luna-oc-10gb-intel-gddr6-sparkle-technology-sb570gw-10goc",
+      "external_id": "184698"
+    },
+    {
+      "name": "MSI VENTUS GEFORCE RTX 5080 16G 3X OC BLACK näytönohjain NVIDIA 16 GB GDDR7",
+      "price_cents": 246900,
+      "url": "https://datatronic.fi/komponentit/naytonohjaimet/msi-ventus-geforce-rtx-5080-16g-3x-oc-black-naytonohjain-nvidia-16-gb-gddr7-msi-v531-664r",
+      "external_id": "181355"
+    },
+    {
+      "name": "DUAL-RTX3050-8G-V2",
+      "price_cents": 39500,
+      "url": "https://datatronic.fi/komponentit/naytonohjaimet/dual-rtx3050-8g-v2-90yv0gh7-m0na00",
+      "external_id": "184673"
+    },
+    {
+      "name": "GIGABYTE AORUS GeForce RTX 5070 INFINITY 12G NVIDIA 12 GB GDDR7",
+      "price_cents": 122900,
+      "url": "https://datatronic.fi/komponentit/naytonohjaimet/gigabyte-aorus-geforce-rtx-5070-infinity-12g-nvidia-12-gb-gddr7-gigabyte-gv-n5070aorus-if-12gd",
+      "external_id": "181913"
+    },
+    {
+      "name": "GIGABYTE GeForce RTX 5060 WINDFORCE MAX OC V2 8G NVIDIA 8 GB GDDR7",
+      "price_cents": 62900,
+      "url": "https://datatronic.fi/komponentit/naytonohjaimet/gigabyte-geforce-rtx-5060-windforce-max-oc-v2-8g-nvidia-8-gb-gddr7-gigabyte-gv-n5060wf2max-ocv2-8gd",
+      "external_id": "182388"
+    },
+    {
+      "name": "Noctua NA-FG1-14 SX2 Tietokoneen jäähdytysjärjestelmän osa ja lisätarvike Tuuletusritilä",
+      "price_cents": 1790,
+      "url": "https://datatronic.fi/komponentit/naytonohjaimet/noctua-na-fg1-14-sx2-tietokoneen-jaahdytysjarjestelman-osa-ja-lisatarvike-tuuletusritila-noctua-na-fg1-14-sx2",
+      "external_id": "169948"
+    },
+    {
+      "name": "Palit GeForce RTX 5080 Infinity 3 OC NVIDIA 16 GB GDDR7",
+      "price_cents": 242900,
+      "url": "https://datatronic.fi/komponentit/naytonohjaimet/palit-geforce-rtx-5080-infinity-3-oc-nvidia-16-gb-gddr7-palit-ne75080u19t2-gb2035s",
+      "external_id": "182435"
+    },
+    {
+      "name": "GIGABYTE AORUS GeForce RTX 5080 INFINITY 16G NVIDIA 16 GB GDDR7",
+      "price_cents": 268900,
+      "url": "https://datatronic.fi/komponentit/naytonohjaimet/gigabyte-aorus-geforce-rtx-5080-infinity-16g-nvidia-16-gb-gddr7-gigabyte-gv-n5080aorus-if-16gd",
+      "external_id": "181921"
+    },
+    {
+      "name": "Nvidia L40S - Passive PCIe 48GB",
+      "price_cents": 1075900,
+      "url": "https://datatronic.fi/komponentit/naytonohjaimet/nvidia-l40s-passive-pcie-48gb-900-2g133-0080-000",
+      "external_id": "182313"
+    },
+    {
+      "name": "Noctua NA-FG1-20 Sx2 Fan Grills",
+      "price_cents": 2290,
+      "url": "https://datatronic.fi/komponentit/naytonohjaimet/noctua-na-fg1-20-sx2-fan-grills-na-fg1-20-sx2",
+      "external_id": "169950"
+    },
+    {
+      "name": "Nvidia RTX PRO 6000 Blackwell Max-Q Workstation Edition 96 GB GDDR7",
+      "price_cents": 1802500,
+      "url": "https://datatronic.fi/komponentit/naytonohjaimet/nvidia-rtx-pro-6000-blackwell-max-q-workstation-edition-96-gb-gddr7-nvidia-900-5g153-2200-000",
+      "external_id": "181377"
+    },
+    {
+      "name": "ASUS Prime -RX9070GRE-O12G-EVO AMD Radeon RX 9070 GRE 12 GB GDDR6",
+      "price_cents": 103500,
+      "url": "https://datatronic.fi/komponentit/naytonohjaimet/asus-prime-rx9070gre-o12g-evo-amd-radeon-rx-9070-gre-12-gb-gddr6-asus-90yv0pn1-m0na00",
+      "external_id": "185607"
+    },
+    {
+      "name": "GIGABYTE GeForce RTX 5060 GAMING OC V2 8G NVIDIA 8 GB GDDR7",
+      "price_cents": 63900,
+      "url": "https://datatronic.fi/komponentit/naytonohjaimet/gigabyte-geforce-rtx-5060-gaming-oc-v2-8g-nvidia-8-gb-gddr7-gigabyte-gv-n5060gaming-ocv2-8gd",
+      "external_id": "184662"
+    },
+    {
+      "name": "INNO3D iChill GeForce RTX 5070 X3 NVIDIA 12 GB GDDR7",
+      "price_cents": 1049900,
+      "url": "https://datatronic.fi/komponentit/naytonohjaimet/inno3d-ichill-geforce-rtx-5070-x3-nvidia-12-gb-gddr7-inno3d-c50703-12d7x-195065h",
+      "external_id": "179385"
+    },
+    {
+      "name": "PNY NVIDIA RTX PRO 4500 Blackwell Server Edition 32 GB GDDR7",
+      "price_cents": 640900,
+      "url": "https://datatronic.fi/komponentit/naytonohjaimet/pny-nvidia-rtx-pro-4500-blackwell-server-edition-32-gb-gddr7-pny-tcsrtxpro4500se-pb",
+      "external_id": "182398"
+    },
+    {
+      "name": "Palit RTX5060 TI RiTONA OC 8GB GDDR7 HDMI 3xDP",
+      "price_cents": 66900,
+      "url": "https://datatronic.fi/komponentit/naytonohjaimet/palit-rtx5060-ti-ritona-oc-8gb-gddr7-hdmi-3xdp-ne7506th19p1-b67dr",
+      "external_id": "185714"
+    },
+    {
+      "name": "PNY GeForce RTX 5060 Single Fan NVIDIA 8 GB GDDR7",
+      "price_cents": 49500,
+      "url": "https://datatronic.fi/komponentit/naytonohjaimet/pny-geforce-rtx-5060-single-fan-nvidia-8-gb-gddr7-pny-vcg50608sfxpb1",
+      "external_id": "182529"
+    },
+    {
+      "name": "VGA ZOTAC GeForce? RTX 5060 8GB AMP CORE",
+      "price_cents": 61900,
+      "url": "https://datatronic.fi/komponentit/naytonohjaimet/vga-zotac-geforce-rtx-5060-8gb-amp-core-zt-b50600f2-10m",
+      "external_id": "184585"
+    },
+    {
+      "name": "Zotac GAMING GeForce RTX 5050 Low Profile NVIDIA 8 GB GDDR6",
+      "price_cents": 53500,
+      "url": "https://datatronic.fi/komponentit/naytonohjaimet/zotac-gaming-geforce-rtx-5050-low-profile-nvidia-8-gb-gddr6-zotac-zt-b50500l-10l",
+      "external_id": "179191"
+    }
+  ]
+}

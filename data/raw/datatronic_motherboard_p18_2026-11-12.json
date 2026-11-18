@@ -1,0 +1,156 @@
+{
+  "shop": "Datatronic",
+  "category": "motherboard",
+  "page": 18,
+  "source_url": "https://datatronic.fi/emolevyt?page=18",
+  "fetched_at": "2026-11-12T14:46:21+00:00",
+  "site_total_products": 657,
+  "items_on_page": 24,
+  "raw_html": "data/raw/html/datatronic_motherboard_p18_2026-11-12_180920f03328.html",
+  "items": [
+    {
+      "name": "ASUS PRIME B760M-A WIFI D4 LGA 1700 mikro ATX",
+      "price_cents": 15990,
+      "url": "https://datatronic.fi/komponentit/emolevyt/asus-prime-b760m-a-wifi-d4-lga-1700-mikro-atx-asus-90mb1cx0-m1eay0",
+      "external_id": "86728"
+    },
+    {
+      "name": "ASUS PRIME B860-PLUS-CSM Intel B860 LGA 1851 (Socket V1) ATX",
+      "price_cents": 20290,
+      "url": "https://datatronic.fi/komponentit/emolevyt/asus-prime-b860-plus-csm-intel-b860-lga-1851-socket-v1-atx-asus-90mb1ka0-m0eayc",
+      "external_id": "165953"
+    },
+    {
+      "name": "ASUS ROG STRIX Z890-E GAMING WIFI Intel Z890 LGA 1851 (Socket V1) ATX",
+      "price_cents": 38900,
+      "url": "https://datatronic.fi/komponentit/emolevyt/asus-rog-strix-z890-e-gaming-wifi-intel-z890-lga-1851-socket-v1-atx-asus-90mb1im0-m0eay0",
+      "external_id": "165931"
+    },
+    {
+      "name": "Asrock B860M Pro-A Intel B860 LGA 1851 (Socket V1) mikro ATX",
+      "price_cents": 12490,
+      "url": "https://datatronic.fi/komponentit/emolevyt/asrock-b860m-pro-a-intel-b860-lga-1851-socket-v1-mikro-atx-asrock-90-mxbrr-a0uayz",
+      "external_id": "166061"
+    },
+    {
+      "name": "Gigabyte B760M H DDR4 (rev. 1.0) Intel B760 LGA 1700 mikro ATX",
+      "price_cents": 9090,
+      "url": "https://datatronic.fi/komponentit/emolevyt/gigabyte-b760m-h-ddr4-rev-10-intel-b760-lga-1700-mikro-atx-gigabyte-b760m-h-ddr4",
+      "external_id": "122839"
+    },
+    {
+      "name": "ASUS Pro H610T D4-CSM",
+      "price_cents": 14690,
+      "url": "https://datatronic.fi/komponentit/emolevyt/asus-pro-h610t-d4-csm-asus-90mb1am0-m0eayc",
+      "external_id": "39145"
+    },
+    {
+      "name": "GIGABYTE B860M EAGLE V2 emolevy Intel B860 LGA 1851 (Socket V1) mikro ATX",
+      "price_cents": 13290,
+      "url": "https://datatronic.fi/komponentit/emolevyt/gigabyte-b860m-eagle-v2-emolevy-intel-b860-lga-1851-socket-v1-mikro-atx-gigabyte-b860m-eagle-v2",
+      "external_id": "171028"
+    },
+    {
+      "name": "ASUS PRO A520M-C II/CSM AMD A520 Kanta AM4 mikro ATX",
+      "price_cents": 9190,
+      "url": "https://datatronic.fi/komponentit/emolevyt/asus-pro-a520m-c-ii-csm-amd-a520-kanta-am4-mikro-atx-asus-90mb18f0-m0eayc",
+      "external_id": "109163"
+    },
+    {
+      "name": "MSI PRO B840-P WIFI emolevy AMD B840 Pistoke AM5 ATX",
+      "price_cents": 1255900,
+      "url": "https://datatronic.fi/komponentit/emolevyt/msi-pro-b840-p-wifi-emolevy-amd-b840-pistoke-am5-atx-msi-7e57-001r",
+      "external_id": "165714"
+    },
+    {
+      "name": "ASUS PRIME B550-PLUS AMD B550 Kanta AM4 ATX",
+      "price_cents": 12490,
+      "url": "https://datatronic.fi/komponentit/emolevyt/asus-prime-b550-plus-amd-b550-kanta-am4-atx-asus-90mb14u0-m0eay0",
+      "external_id": "4761"
+    },
+    {
+      "name": "Asrock X870E Taichi AMD X870E Pistoke AM5 Laajennettu ATX",
+      "price_cents": 52900,
+      "url": "https://datatronic.fi/komponentit/emolevyt/asrock-x870e-taichi-amd-x870e-pistoke-am5-laajennettu-atx-asrock-90-mxbp90-a0uayz",
+      "external_id": "164659"
+    },
+    {
+      "name": "Asrock B760M Steel Legend WiFi Intel B760 LGA 1700 mikro ATX",
+      "price_cents": 16590,
+      "url": "https://datatronic.fi/komponentit/emolevyt/asrock-b760m-steel-legend-wifi-intel-b760-lga-1700-mikro-atx-asrock-b760m-steel-legend-wifi",
+      "external_id": "111960"
+    },
+    {
+      "name": "ASUS PRIME H610M-K D4 Intel H610 LGA 1700 mikro ATX",
+      "price_cents": 7190,
+      "url": "https://datatronic.fi/komponentit/emolevyt/asus-prime-h610m-k-d4-intel-h610-lga-1700-mikro-atx-asus-90mb1a10-m0eay0",
+      "external_id": "36886"
+    },
+    {
+      "name": "ASUS ROG STRIX B860-A GAMING WIFI Intel B860 LGA 1851 (Socket V1) ATX",
+      "price_cents": 29190,
+      "url": "https://datatronic.fi/komponentit/emolevyt/asus-rog-strix-b860-a-gaming-wifi-intel-b860-lga-1851-socket-v1-atx-asus-90mb1ji0-m0eay0",
+      "external_id": "166048"
+    },
+    {
+      "name": "ASUS PRIME B760M-A WIFI II Intel B760 LGA 1700 mikro ATX",
+      "price_cents": 17390,
+      "url": "https://datatronic.fi/komponentit/emolevyt/asus-prime-b760m-a-wifi-ii-intel-b760-lga-1700-mikro-atx-asus-90mb1nf0-m0eay0",
+      "external_id": "177752"
+    },
+    {
+      "name": "GIGABYTE X870M AORUS ELITE WIFI7 AMD X870 Pistoke AM5 mikro ATX",
+      "price_cents": 29790,
+      "url": "https://datatronic.fi/komponentit/emolevyt/gigabyte-x870m-aorus-elite-wifi7-amd-x870-pistoke-am5-mikro-atx-gigabyte-x870m-a-elite-wf7",
+      "external_id": "172572"
+    },
+    {
+      "name": "MSI MPG B760I EDGE WIFI emolevy Intel B760 LGA 1700 mini ATX",
+      "price_cents": 22890,
+      "url": "https://datatronic.fi/komponentit/emolevyt/msi-mpg-b760i-edge-wifi-emolevy-intel-b760-lga-1700-mini-atx-msi-7d40-005r",
+      "external_id": "122707"
+    },
+    {
+      "name": "Asrock B650E PG Riptide WiFi AMD B650 Pistoke AM5 ATX",
+      "price_cents": 21690,
+      "url": "https://datatronic.fi/komponentit/emolevyt/asrock-b650e-pg-riptide-wifi-amd-b650-pistoke-am5-atx-asrock-b650e-pg-riptide-wifi",
+      "external_id": "48504"
+    },
+    {
+      "name": "MB Gigabyte H610M K DDR4        (H610S1700mATXIntel)",
+      "price_cents": 7190,
+      "url": "https://datatronic.fi/komponentit/emolevyt/mb-gigabyte-h610m-k-ddr4-h610s1700matxintel-h610m-k-ddr4",
+      "external_id": "122841"
+    },
+    {
+      "name": "GIGABYTE Z890 EAGLE WIFI7 emolevy Intel Z890 LGA 1851 (Socket V1) ATX",
+      "price_cents": 35500,
+      "url": "https://datatronic.fi/komponentit/emolevyt/gigabyte-z890-eagle-wifi7-emolevy-intel-z890-lga-1851-socket-v1-atx-gigabyte-z890-eagle-wifi7",
+      "external_id": "165484"
+    },
+    {
+      "name": "ASUS ROG STRIX B860-G GAMING WIFI Intel B860 LGA 1851 (Socket V1) mikro ATX",
+      "price_cents": 27090,
+      "url": "https://datatronic.fi/komponentit/emolevyt/asus-rog-strix-b860-g-gaming-wifi-intel-b860-lga-1851-socket-v1-mikro-atx-asus-90mb1jf0-m0eay0",
+      "external_id": "166049"
+    },
+    {
+      "name": "GIGABYTE B550 EAGLE WIFI6 emolevy",
+      "price_cents": 12790,
+      "url": "https://datatronic.fi/komponentit/emolevyt/gigabyte-b550-eagle-wifi6-emolevy-gigabyte-b550-eagle-wifi6",
+      "external_id": "165543"
+    },
+    {
+      "name": "MSI X870 GAMING PLUS WIFI emolevy AMD X870 Pistoke AM5 ATX",
+      "price_cents": 32500,
+      "url": "https://datatronic.fi/komponentit/emolevyt/msi-x870-gaming-plus-wifi-emolevy-amd-x870-pistoke-am5-atx-msi-7e47-004r",
+      "external_id": "165209"
+    },
+    {
+      "name": "MSI PRO B760M-P DDR4 Intel B760 LGA 1700 mikro ATX",
+      "price_cents": 11090,
+      "url": "https://datatronic.fi/komponentit/emolevyt/msi-pro-b760m-p-ddr4-intel-b760-lga-1700-mikro-atx-msi-7e02-009r",
+      "external_id": "122818"
+    }
+  ]
+}

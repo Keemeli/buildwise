@@ -1,0 +1,156 @@
+{
+  "shop": "Datatronic",
+  "category": "memory",
+  "page": 6,
+  "source_url": "https://datatronic.fi/muistit?page=6",
+  "fetched_at": "2026-11-12T14:46:50+00:00",
+  "site_total_products": 761,
+  "items_on_page": 24,
+  "raw_html": "data/raw/html/datatronic_memory_p6_2026-11-12_fc2e9b3c566c.html",
+  "items": [
+    {
+      "name": "Patriot Memory Viper Steel PVS432G320C6K muistimoduuli 32 GB 2 x 16 GB DDR4 3200 MHz",
+      "price_cents": 27890,
+      "url": "https://datatronic.fi/komponentit/muistit/patriot-memory-viper-steel-pvs432g320c6k-muistimoduuli-32-gb-2-x-16-gb-ddr4-3200-mhz-patriot-memory-pvs432g320c6k",
+      "external_id": "45023"
+    },
+    {
+      "name": "Corsair Vengeance CMSX32GX5M2A5200C44 muistimoduuli 32 GB 2 x 16 GB DDR5 5200 MHz",
+      "price_cents": 83900,
+      "url": "https://datatronic.fi/komponentit/muistit/corsair-vengeance-cmsx32gx5m2a5200c44-muistimoduuli-32-gb-2-x-16-gb-ddr5-5200-mhz-corsair-cmsx32gx5m2a5200c44",
+      "external_id": "155168"
+    },
+    {
+      "name": "Kingston Technology FURY Beast muistimoduuli 32 GB 1 x 32 GB DDR5 5200 MHz",
+      "price_cents": 65500,
+      "url": "https://datatronic.fi/komponentit/muistit/kingston-technology-fury-beast-muistimoduuli-32-gb-1-x-32-gb-ddr5-5200-mhz-kingston-technology-kf552c40bb-32",
+      "external_id": "46379"
+    },
+    {
+      "name": "Kingston Technology FURY Beast RGB muistimoduuli 64 GB 2 x 32 GB DDR5 ECC",
+      "price_cents": 167500,
+      "url": "https://datatronic.fi/komponentit/muistit/kingston-technology-fury-beast-rgb-muistimoduuli-64-gb-2-x-32-gb-ddr5-ecc-kingston-technology-kf560c30bweak2-64",
+      "external_id": "155110"
+    },
+    {
+      "name": "Crucial 8GB (1x8GB) DDR5-5600 CL46 RAM Arbeitsspeicher muistimoduuli 5600 MHz ECC",
+      "price_cents": 16390,
+      "url": "https://datatronic.fi/komponentit/muistit/crucial-8gb-1x8gb-ddr5-5600-cl46-ram-arbeitsspeicher-muistimoduuli-5600-mhz-ecc-crucial-ct8g56c46u5",
+      "external_id": "130001"
+    },
+    {
+      "name": "Goodram IRDM PRO IRP-K3600D4V64L18/32GDC muistimoduuli 32 GB 2 x 16 GB DDR4 288-pin DIMM",
+      "price_cents": 28990,
+      "url": "https://datatronic.fi/komponentit/muistit/goodram-irdm-pro-irp-k3600d4v64l18-32gdc-muistimoduuli-32-gb-2-x-16-gb-ddr4-288-pin-dimm-goodram-irp-k3600d4v64l18-32gdc",
+      "external_id": "178741"
+    },
+    {
+      "name": "Kingston Technology FURY Beast muistimoduuli 16 GB 2 x 8 GB DDR5 5600 MHz",
+      "price_cents": 37500,
+      "url": "https://datatronic.fi/komponentit/muistit/kingston-technology-fury-beast-muistimoduuli-16-gb-2-x-8-gb-ddr5-5600-mhz-kingston-technology-kf556c40bbk2-16",
+      "external_id": "45809"
+    },
+    {
+      "name": "Kingston Technology FURY Beast RGB muistimoduuli 16 GB 2 x 8 GB DDR5 5600 MHz",
+      "price_cents": 39900,
+      "url": "https://datatronic.fi/komponentit/muistit/kingston-technology-fury-beast-rgb-muistimoduuli-16-gb-2-x-8-gb-ddr5-5600-mhz-kingston-technology-kf556c40bbak2-16",
+      "external_id": "48255"
+    },
+    {
+      "name": "Kingston Technology FURY Beast muistimoduuli 64 GB 2 x 32 GB DDR4 3200 MHz",
+      "price_cents": 90900,
+      "url": "https://datatronic.fi/komponentit/muistit/kingston-technology-fury-beast-muistimoduuli-64-gb-2-x-32-gb-ddr4-3200-mhz-kingston-technology-kf432c16bbk2-64",
+      "external_id": "47478"
+    },
+    {
+      "name": "Kingston Technology KCP432SS8/8 muistimoduuli 8 GB 1 x 8 GB DDR4 3200 MHz",
+      "price_cents": 11290,
+      "url": "https://datatronic.fi/komponentit/muistit/kingston-technology-kcp432ss8-8-muistimoduuli-8-gb-1-x-8-gb-ddr4-3200-mhz-kingston-technology-kcp432ss8-8",
+      "external_id": "4839"
+    },
+    {
+      "name": "G.Skill Flare X5 F5-6000J3238F16GX2-FX5 muistimoduuli 32 GB 2 x 16 GB DDR5 6000 MHz",
+      "price_cents": 74500,
+      "url": "https://datatronic.fi/komponentit/muistit/gskill-flare-x5-f5-6000j3238f16gx2-fx5-muistimoduuli-32-gb-2-x-16-gb-ddr5-6000-mhz-gskill-f5-6000j3238f16gx2-fx5",
+      "external_id": "58702"
+    },
+    {
+      "name": "Corsair Vengeance CMH16GX4M2E3200C16W muistimoduuli 16 GB 2 x 8 GB DDR4 3200 MHz",
+      "price_cents": 20290,
+      "url": "https://datatronic.fi/komponentit/muistit/corsair-vengeance-cmh16gx4m2e3200c16w-muistimoduuli-16-gb-2-x-8-gb-ddr4-3200-mhz-corsair-cmh16gx4m2e3200c16w",
+      "external_id": "16731"
+    },
+    {
+      "name": "Kingston Technology FURY Beast RGB muistimoduuli 32 GB 2 x 16 GB DDR5",
+      "price_cents": 59500,
+      "url": "https://datatronic.fi/komponentit/muistit/kingston-technology-fury-beast-rgb-muistimoduuli-32-gb-2-x-16-gb-ddr5-kingston-technology-kf560c36bbe2ak2-32",
+      "external_id": "163951"
+    },
+    {
+      "name": "Synology D4ES01-4G muistimoduuli 4 GB 1 x 4 GB DDR4 ECC",
+      "price_cents": 20990,
+      "url": "https://datatronic.fi/komponentit/muistit/synology-d4es01-4g-muistimoduuli-4-gb-1-x-4-gb-ddr4-ecc-synology-d4es01-4g",
+      "external_id": "118914"
+    },
+    {
+      "name": "Patriot Memory Viper Elite 5 PVER532G60C36KT muistimoduuli 32 GB 2 x 16 GB DDR5 288-pin DIMM",
+      "price_cents": 59990,
+      "url": "https://datatronic.fi/komponentit/muistit/patriot-memory-viper-elite-5-pver532g60c36kt-muistimoduuli-32-gb-2-x-16-gb-ddr5-288-pin-dimm-patriot-memory-pver532g60c36kt",
+      "external_id": "178610"
+    },
+    {
+      "name": "Corsair 2GB 1X2GB DDR3-1333 240PIN DIMM Memory muistimoduuli 1333 MHz",
+      "price_cents": 2790,
+      "url": "https://datatronic.fi/komponentit/muistit/corsair-2gb-1x2gb-ddr3-1333-240pin-dimm-memory-muistimoduuli-1333-mhz-corsair-vs2gb1333d3-g",
+      "external_id": "6648"
+    },
+    {
+      "name": "DELL AC239378 muistimoduuli 32 GB 1 x 32 GB DDR5 288-pin DIMM",
+      "price_cents": 221500,
+      "url": "https://datatronic.fi/komponentit/muistit/dell-ac239378-muistimoduuli-32-gb-1-x-32-gb-ddr5-288-pin-dimm-dell-ac239378",
+      "external_id": "184885"
+    },
+    {
+      "name": "G.Skill 8GB DDR3-1600 muistimoduuli 2 x 4 GB 1600 MHz",
+      "price_cents": 12390,
+      "url": "https://datatronic.fi/komponentit/muistit/gskill-8gb-ddr3-1600-muistimoduuli-2-x-4-gb-1600-mhz-gskill-f3-12800cl9d-8gbxl",
+      "external_id": "40504"
+    },
+    {
+      "name": "G.Skill 4GB DDR3-1600 SQ muistimoduuli 1 x 4 GB 1066 MHz",
+      "price_cents": 2890,
+      "url": "https://datatronic.fi/komponentit/muistit/gskill-4gb-ddr3-1600-sq-muistimoduuli-1-x-4-gb-1066-mhz-gskill-f3-12800cl11s-4gbsq",
+      "external_id": "40508"
+    },
+    {
+      "name": "Kingston Technology FURY Renegade muistimoduuli 16 GB 1 x 16 GB DDR5 7200 MHz",
+      "price_cents": 54900,
+      "url": "https://datatronic.fi/komponentit/muistit/kingston-technology-fury-renegade-muistimoduuli-16-gb-1-x-16-gb-ddr5-7200-mhz-kingston-technology-kf572c38rs-16",
+      "external_id": "64971"
+    },
+    {
+      "name": "Kingston Technology FURY Renegade Pro muistimoduuli 64 GB 4 x 16 GB DDR5 6000 MHz ECC",
+      "price_cents": 244990,
+      "url": "https://datatronic.fi/komponentit/muistit/kingston-technology-fury-renegade-pro-muistimoduuli-64-gb-4-x-16-gb-ddr5-6000-mhz-ecc-kingston-technology-kf560r32rbek4-64",
+      "external_id": "151052"
+    },
+    {
+      "name": "Kingston Technology ValueRAM KCP426SS6/4 muistimoduuli 4 GB 1 x 4 GB DDR4 2666 MHz",
+      "price_cents": 3690,
+      "url": "https://datatronic.fi/komponentit/muistit/kingston-technology-valueram-kcp426ss6-4-muistimoduuli-4-gb-1-x-4-gb-ddr4-2666-mhz-kingston-technology-kcp426ss6-4",
+      "external_id": "47629"
+    },
+    {
+      "name": "Crucial CT8G48C40U5 muistimoduuli 8 GB 1 x 8 GB DDR5 4800 MHz ECC",
+      "price_cents": 15790,
+      "url": "https://datatronic.fi/komponentit/muistit/crucial-ct8g48c40u5-muistimoduuli-8-gb-1-x-8-gb-ddr5-4800-mhz-ecc-crucial-ct8g48c40u5",
+      "external_id": "39237"
+    },
+    {
+      "name": "Kingston Technology FURY Beast muistimoduuli 8 GB 1 x 8 GB DDR4 3200 MHz",
+      "price_cents": 8490,
+      "url": "https://datatronic.fi/komponentit/muistit/kingston-technology-fury-beast-muistimoduuli-8-gb-1-x-8-gb-ddr4-3200-mhz-kingston-technology-kf432c16bb-8",
+      "external_id": "32752"
+    }
+  ]
+}

@@ -1,0 +1,156 @@
+{
+  "shop": "Datatronic",
+  "category": "cpu",
+  "page": 7,
+  "source_url": "https://datatronic.fi/prosessorit?page=7",
+  "fetched_at": "2026-11-12T14:45:46+00:00",
+  "site_total_products": 171,
+  "items_on_page": 24,
+  "raw_html": "data/raw/html/datatronic_cpu_p7_2026-11-12_df8a8c312e24.html",
+  "items": [
+    {
+      "name": "AMD EPYC 4465P suoritin 3,4 GHz 64 MB L3 Lokero",
+      "price_cents": 44900,
+      "url": "https://datatronic.fi/komponentit/prosessorit/amd-epyc-4465p-suoritin-34-ghz-64-mb-l3-lokero-amd-100-000001558",
+      "external_id": "183383"
+    },
+    {
+      "name": "AMD EPYC 9535 suoritin 2,4 GHz 256 MB L3 Lokero",
+      "price_cents": 582900,
+      "url": "https://datatronic.fi/komponentit/prosessorit/amd-epyc-9535-suoritin-24-ghz-256-mb-l3-lokero-amd-100-000001147",
+      "external_id": "183399"
+    },
+    {
+      "name": "AMD Ryzen Threadripper PRO 9995WX suoritin 2,5 GHz 384 MB L3 Laatikko",
+      "price_cents": 1346900,
+      "url": "https://datatronic.fi/komponentit/prosessorit/amd-ryzen-threadripper-pro-9995wx-suoritin-25-ghz-384-mb-l3-laatikko-amd-100-100001361wof",
+      "external_id": "177465"
+    },
+    {
+      "name": "AMD EPYC 9965 suoritin 2,25 GHz 384 MB L3 Lokero",
+      "price_cents": 1052900,
+      "url": "https://datatronic.fi/komponentit/prosessorit/amd-epyc-9965-suoritin-225-ghz-384-mb-l3-lokero-amd-100-000000976",
+      "external_id": "183374"
+    },
+    {
+      "name": "Intel Xeon w3-2425 suoritin 3 GHz 15 MB Smart Cache Lokero",
+      "price_cents": 105900,
+      "url": "https://datatronic.fi/komponentit/prosessorit/intel-xeon-w3-2425-suoritin-3-ghz-15-mb-smart-cache-lokero-intel-pk8071305129101",
+      "external_id": "181839"
+    },
+    {
+      "name": "Intel Core i5 14400 Tray 1pc 2.5 GHz20MB Socket 1700",
+      "price_cents": 18790,
+      "url": "https://datatronic.fi/komponentit/prosessorit/intel-core-i5-14400-tray-1pc-25-ghz20mb-socket-1700-cm8071505093012",
+      "external_id": "182473"
+    },
+    {
+      "name": "AMD EPYC 9654 suoritin 2,4 GHz 384 MB L3 Lokero",
+      "price_cents": 365900,
+      "url": "https://datatronic.fi/komponentit/prosessorit/amd-epyc-9654-suoritin-24-ghz-384-mb-l3-lokero-amd-100-000000789",
+      "external_id": "183375"
+    },
+    {
+      "name": "AMD EPYC 8324P suoritin 2,65 GHz 128 MB L3 Lokero",
+      "price_cents": 217500,
+      "url": "https://datatronic.fi/komponentit/prosessorit/amd-epyc-8324p-suoritin-265-ghz-128-mb-l3-lokero-amd-100-000001133",
+      "external_id": "183395"
+    },
+    {
+      "name": "AMD EPYC 9655 suoritin 2,6 GHz 384 MB L3 Lokero",
+      "price_cents": 754900,
+      "url": "https://datatronic.fi/komponentit/prosessorit/amd-epyc-9655-suoritin-26-ghz-384-mb-l3-lokero-amd-100-000000674",
+      "external_id": "183396"
+    },
+    {
+      "name": "AMD Ryzen 5 7500 suoritin 32 MB L3 Laatikko",
+      "price_cents": 21890,
+      "url": "https://datatronic.fi/komponentit/prosessorit/amd-ryzen-5-7500-suoritin-32-mb-l3-laatikko-amd-100-100002264box",
+      "external_id": "182315"
+    },
+    {
+      "name": "AMD EPYC 8434PN suoritin 2 GHz 128 MB L3 Lokero",
+      "price_cents": 333900,
+      "url": "https://datatronic.fi/komponentit/prosessorit/amd-epyc-8434pn-suoritin-2-ghz-128-mb-l3-lokero-amd-100-000001174",
+      "external_id": "183394"
+    },
+    {
+      "name": "AMD EPYC 4584PX suoritin 4,2 GHz 128 MB L3 Lokero",
+      "price_cents": 65900,
+      "url": "https://datatronic.fi/komponentit/prosessorit/amd-epyc-4584px-suoritin-42-ghz-128-mb-l3-lokero-amd-100-000001481",
+      "external_id": "183380"
+    },
+    {
+      "name": "AMD EPYC 9254 suoritin 2,9 GHz 128 MB L3 Lokero",
+      "price_cents": 133900,
+      "url": "https://datatronic.fi/komponentit/prosessorit/amd-epyc-9254-suoritin-29-ghz-128-mb-l3-lokero-amd-100-000000480",
+      "external_id": "184806"
+    },
+    {
+      "name": "AMD EPYC 9845 suoritin 2,1 GHz 320 MB L3 Lokero",
+      "price_cents": 964500,
+      "url": "https://datatronic.fi/komponentit/prosessorit/amd-epyc-9845-suoritin-21-ghz-320-mb-l3-lokero-amd-100-000001458",
+      "external_id": "183381"
+    },
+    {
+      "name": "AMD EPYC 9454P suoritin 2,75 GHz 256 MB L3 Lokero",
+      "price_cents": 207500,
+      "url": "https://datatronic.fi/komponentit/prosessorit/amd-epyc-9454p-suoritin-275-ghz-256-mb-l3-lokero-amd-100-000000873",
+      "external_id": "183393"
+    },
+    {
+      "name": "Intel Xeon w3-2435 suoritin 3,1 GHz 22,5 MB Smart Cache Lokero",
+      "price_cents": 120900,
+      "url": "https://datatronic.fi/komponentit/prosessorit/intel-xeon-w3-2435-suoritin-31-ghz-225-mb-smart-cache-lokero-intel-pk8071305128700",
+      "external_id": "181838"
+    },
+    {
+      "name": "AMD EPYC 4245P suoritin 3,9 GHz 32 MB L3 Lokero",
+      "price_cents": 25890,
+      "url": "https://datatronic.fi/komponentit/prosessorit/amd-epyc-4245p-suoritin-39-ghz-32-mb-l3-lokero-amd-100-000001555",
+      "external_id": "183384"
+    },
+    {
+      "name": "Intel Xeon w5-2455X suoritin 3,2 GHz 30 MB Smart Cache Lokero",
+      "price_cents": 168500,
+      "url": "https://datatronic.fi/komponentit/prosessorit/intel-xeon-w5-2455x-suoritin-32-ghz-30-mb-smart-cache-lokero-intel-pk8071305127200",
+      "external_id": "181837"
+    },
+    {
+      "name": "AMD EPYC 4124P suoritin 3,8 GHz 16 MB L3 Lokero",
+      "price_cents": 15890,
+      "url": "https://datatronic.fi/komponentit/prosessorit/amd-epyc-4124p-suoritin-38-ghz-16-mb-l3-lokero-amd-100-000001570",
+      "external_id": "183378"
+    },
+    {
+      "name": "AMD EPYC 8324PN suoritin 2,05 GHz 128 MB L3 Lokero",
+      "price_cents": 238900,
+      "url": "https://datatronic.fi/komponentit/prosessorit/amd-epyc-8324pn-suoritin-205-ghz-128-mb-l3-lokero-amd-100-000001162",
+      "external_id": "183386"
+    },
+    {
+      "name": "AMD EPYC 9374F suoritin 3,85 GHz 256 MB L3 Lokero",
+      "price_cents": 255900,
+      "url": "https://datatronic.fi/komponentit/prosessorit/amd-epyc-9374f-suoritin-385-ghz-256-mb-l3-lokero-amd-100-000000792",
+      "external_id": "183389"
+    },
+    {
+      "name": "AMD EPYC 9555 suoritin 3,2 GHz 256 MB L3 Lokero",
+      "price_cents": 677500,
+      "url": "https://datatronic.fi/komponentit/prosessorit/amd-epyc-9555-suoritin-32-ghz-256-mb-l3-lokero-amd-100-000001142",
+      "external_id": "183392"
+    },
+    {
+      "name": "AMD EPYC 8024P suoritin 2,4 GHz 32 MB L3 Lokero",
+      "price_cents": 45500,
+      "url": "https://datatronic.fi/komponentit/prosessorit/amd-epyc-8024p-suoritin-24-ghz-32-mb-l3-lokero-amd-100-000001136",
+      "external_id": "183397"
+    },
+    {
+      "name": "AMD EPYC 8224P suoritin 2,55 GHz 64 MB L3 Lokero",
+      "price_cents": 103500,
+      "url": "https://datatronic.fi/komponentit/prosessorit/amd-epyc-8224p-suoritin-255-ghz-64-mb-l3-lokero-amd-100-000001134",
+      "external_id": "183387"
+    }
+  ]
+}

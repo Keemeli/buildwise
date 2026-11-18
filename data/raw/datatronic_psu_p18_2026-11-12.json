@@ -1,0 +1,156 @@
+{
+  "shop": "Datatronic",
+  "category": "psu",
+  "page": 18,
+  "source_url": "https://datatronic.fi/virtalahteet?page=18",
+  "fetched_at": "2026-11-12T14:49:59+00:00",
+  "site_total_products": 668,
+  "items_on_page": 24,
+  "raw_html": "data/raw/html/datatronic_psu_p18_2026-11-12_6ca7a8f73c04.html",
+  "items": [
+    {
+      "name": "Xilence Performance X Series XP750MR9.2 virtalähdeyksikkö 750 W 20+4 pin ATX ATX Musta, Punainen",
+      "price_cents": 8290,
+      "url": "https://datatronic.fi/komponentit/virtalahteet/xilence-performance-x-series-xp750mr92-virtalahdeyksikko-750-w-20-4-pin-atx-atx-musta-punainen-xilence-xp750mr92",
+      "external_id": "150336"
+    },
+    {
+      "name": "Thermaltake Toughpower PF3 virtalähdeyksikkö 1200 W 24-pin ATX ATX Musta",
+      "price_cents": 16490,
+      "url": "https://datatronic.fi/komponentit/virtalahteet/thermaltake-toughpower-pf3-virtalahdeyksikko-1200-w-24-pin-atx-atx-musta-thermaltake-ps-tpd-1200fnfape-3",
+      "external_id": "129385"
+    },
+    {
+      "name": "Inca IPS-850XN virtalähdeyksikkö 850 W ATX musta",
+      "price_cents": 8890,
+      "url": "https://datatronic.fi/komponentit/virtalahteet/inca-ips-850xn-virtalahdeyksikko-850-w-atx-musta-inca-ips-850xn",
+      "external_id": "160608"
+    },
+    {
+      "name": "Cooler Master V Platinum 1600 V2 virtalähdeyksikkö 1600 W 24-pin ATX ATX Musta",
+      "price_cents": 40900,
+      "url": "https://datatronic.fi/komponentit/virtalahteet/cooler-master-v-platinum-1600-v2-virtalahdeyksikko-1600-w-24-pin-atx-atx-musta-cooler-master-mpz-g002-afap-beu",
+      "external_id": "154168"
+    },
+    {
+      "name": "SAMA P850 virtalähdeyksikkö 850 W 24-pin ATX ATX musta",
+      "price_cents": 12590,
+      "url": "https://datatronic.fi/komponentit/virtalahteet/sama-p850-virtalahdeyksikko-850-w-24-pin-atx-atx-musta-sama-gears-p0850-bkpff001-eu",
+      "external_id": "174295"
+    },
+    {
+      "name": "Thermaltake Toughpower Gt virtalähdeyksikkö 750 W 24-pin ATX ATX Valkoinen",
+      "price_cents": 9290,
+      "url": "https://datatronic.fi/komponentit/virtalahteet/thermaltake-toughpower-gt-virtalahdeyksikko-750-w-24-pin-atx-atx-valkoinen-thermaltake-ps-tpt-0750fnfage-w",
+      "external_id": "167154"
+    },
+    {
+      "name": "Thermaltake Toughpower GT 1200W virtalähdeyksikkö 24-pin ATX ATX musta",
+      "price_cents": 16090,
+      "url": "https://datatronic.fi/komponentit/virtalahteet/thermaltake-toughpower-gt-1200w-virtalahdeyksikko-24-pin-atx-atx-musta-thermaltake-ps-tpt-1200fnfage-3",
+      "external_id": "173948"
+    },
+    {
+      "name": "FSP ADVAN-850GM virtalähdeyksikkö 850 W 20+4 pin ATX ATX musta",
+      "price_cents": 13990,
+      "url": "https://datatronic.fi/komponentit/virtalahteet/fsp-advan-850gm-virtalahdeyksikko-850-w-20-4-pin-atx-atx-musta-fsp-ppa8504800",
+      "external_id": "175582"
+    },
+    {
+      "name": "Azza PSAZ-650W virtalähdeyksikkö 20+4 pin ATX ATX Musta",
+      "price_cents": 5890,
+      "url": "https://datatronic.fi/komponentit/virtalahteet/azza-psaz-650w-virtalahdeyksikko-20-4-pin-atx-atx-musta-azza-psaz-650b",
+      "external_id": "127900"
+    },
+    {
+      "name": "Asrock SL-750G Steel Legend virtalähdeyksikkö 750 W 20+4 pin ATX ATX musta",
+      "price_cents": 10890,
+      "url": "https://datatronic.fi/komponentit/virtalahteet/asrock-sl-750g-steel-legend-virtalahdeyksikko-750-w-20-4-pin-atx-atx-musta-asrock-90-uxs075-gfeaaa",
+      "external_id": "165964"
+    },
+    {
+      "name": "Thermaltake Toughpower GT Snow 1000W virtalähdeyksikkö 24-pin ATX ATX Valkoinen",
+      "price_cents": 14290,
+      "url": "https://datatronic.fi/komponentit/virtalahteet/thermaltake-toughpower-gt-snow-1000w-virtalahdeyksikko-24-pin-atx-atx-valkoinen-thermaltake-ps-tpt-1000fnfage-w",
+      "external_id": "173947"
+    },
+    {
+      "name": "Antec Cuprum Strike CSK550 virtalähdeyksikkö 550 W 20+4 pin ATX ATX Musta",
+      "price_cents": 6590,
+      "url": "https://datatronic.fi/komponentit/virtalahteet/antec-cuprum-strike-csk550-virtalahdeyksikko-550-w-20-4-pin-atx-atx-musta-antec-0-761345-11741-8",
+      "external_id": "48584"
+    },
+    {
+      "name": "DeepCool PF600X virtalähdeyksikkö 600 W 20+4 pin ATX ATX Musta",
+      "price_cents": 5090,
+      "url": "https://datatronic.fi/komponentit/virtalahteet/deepcool-pf600x-virtalahdeyksikko-600-w-20-4-pin-atx-atx-musta-deepcool-r-pf600x-hd0b-jgeu",
+      "external_id": "174455"
+    },
+    {
+      "name": "Inca IPS-750XN virtalähdeyksikkö 750 W ATX musta",
+      "price_cents": 6290,
+      "url": "https://datatronic.fi/komponentit/virtalahteet/inca-ips-750xn-virtalahdeyksikko-750-w-atx-musta-inca-ips-750xn",
+      "external_id": "160607"
+    },
+    {
+      "name": "be quiet! Straight Power 12 virtalähdeyksikkö 750 W 20+4 pin ATX ATX Musta",
+      "price_cents": 15290,
+      "url": "https://datatronic.fi/komponentit/virtalahteet/be-quiet-straight-power-12-virtalahdeyksikko-750-w-20-4-pin-atx-atx-musta-be-quiet-bn336",
+      "external_id": "127574"
+    },
+    {
+      "name": "XPG PYLON II 650w virtalähdeyksikkö 24-pin ATX ATX musta",
+      "price_cents": 7290,
+      "url": "https://datatronic.fi/komponentit/virtalahteet/xpg-pylon-ii-650w-virtalahdeyksikko-24-pin-atx-atx-musta-xpg-75261630",
+      "external_id": "174525"
+    },
+    {
+      "name": "ASUS ROG -THOR-1600T3-GAMING virtalähdeyksikkö 1600 W 20+4 pin ATX ATX Harmaa",
+      "price_cents": 85900,
+      "url": "https://datatronic.fi/komponentit/virtalahteet/asus-rog-thor-1600t3-gaming-virtalahdeyksikko-1600-w-20-4-pin-atx-atx-harmaa-asus-90ye00v1-b0na00",
+      "external_id": "172452"
+    },
+    {
+      "name": "Chieftec Vita Netzteil 850W 80+Bronze - PC-/Server Netzteil - 14,17 min virtalähdeyksikkö 20+4 pin ATX PS/2 musta",
+      "price_cents": 5990,
+      "url": "https://datatronic.fi/komponentit/virtalahteet/chieftec-vita-netzteil-850w-80-bronze-pc-server-netzteil-1417-min-virtalahdeyksikko-20-4-pin-atx-ps-2-musta-chieftec-bpx-850-s",
+      "external_id": "165378"
+    },
+    {
+      "name": "Lian Li RB0650B.B virtalähdeyksikkö 650 W 24-pin ATX ATX musta",
+      "price_cents": 6390,
+      "url": "https://datatronic.fi/komponentit/virtalahteet/lian-li-rb0650bb-virtalahdeyksikko-650-w-24-pin-atx-atx-musta-lian-li-g9prb0650bb000eu",
+      "external_id": "173734"
+    },
+    {
+      "name": "ENDORFY Supremo FM6 750 W virtalähdeyksikkö 24-pin ATX ATX musta",
+      "price_cents": 10290,
+      "url": "https://datatronic.fi/komponentit/virtalahteet/endorfy-supremo-fm6-750-w-virtalahdeyksikko-24-pin-atx-atx-musta-endorfy-ey7a013",
+      "external_id": "173252"
+    },
+    {
+      "name": "Sharkoon Rebel P20 virtalähdeyksikkö 1200 W 24-pin ATX ATX Valkoinen",
+      "price_cents": 21190,
+      "url": "https://datatronic.fi/komponentit/virtalahteet/sharkoon-rebel-p20-virtalahdeyksikko-1200-w-24-pin-atx-atx-valkoinen-sharkoon-4044951042432",
+      "external_id": "169465"
+    },
+    {
+      "name": "Thermaltake Smart W3 virtalähdeyksikkö 700 W 24-pin ATX ATX musta",
+      "price_cents": 7290,
+      "url": "https://datatronic.fi/komponentit/virtalahteet/thermaltake-smart-w3-virtalahdeyksikko-700-w-24-pin-atx-atx-musta-thermaltake-ps-spw-0700nnfawe-1",
+      "external_id": "163479"
+    },
+    {
+      "name": "200 Watts Small Form Factor",
+      "price_cents": 10390,
+      "url": "https://datatronic.fi/komponentit/virtalahteet/200-watts-small-form-factor-cgfjt",
+      "external_id": "148312"
+    },
+    {
+      "name": "Chieftec Vega 750W Series PPG-750-S virtalähdeyksikkö 20+4 pin ATX ATX musta",
+      "price_cents": 7390,
+      "url": "https://datatronic.fi/komponentit/virtalahteet/chieftec-vega-750w-series-ppg-750-s-virtalahdeyksikko-20-4-pin-atx-atx-musta-chieftec-ppg-750-s",
+      "external_id": "165428"
+    }
+  ]
+}

@@ -1,0 +1,156 @@
+{
+  "shop": "Datatronic",
+  "category": "case",
+  "page": 12,
+  "source_url": "https://datatronic.fi/kotelot?page=12",
+  "fetched_at": "2026-11-12T14:49:03+00:00",
+  "site_total_products": 620,
+  "items_on_page": 24,
+  "raw_html": "data/raw/html/datatronic_case_p12_2026-11-12_2513425ab5bc.html",
+  "items": [
+    {
+      "name": "Chieftec AS-02B-OP tietokonekotelo Midi Tower musta",
+      "price_cents": 7790,
+      "url": "https://datatronic.fi/komponentit/kotelot/chieftec-as-02b-op-tietokonekotelo-midi-tower-musta-chieftec-as-02b-op",
+      "external_id": "171448"
+    },
+    {
+      "name": "Jonsbo D31 MESH Midi Tower Musta",
+      "price_cents": 11490,
+      "url": "https://datatronic.fi/komponentit/kotelot/jonsbo-d31-mesh-midi-tower-musta-jonsbo-d31-mesh-black-sc",
+      "external_id": "128406"
+    },
+    {
+      "name": "DeepCool CG330 3F WH Tower Valkoinen",
+      "price_cents": 6990,
+      "url": "https://datatronic.fi/komponentit/kotelot/deepcool-cg330-3f-wh-tower-valkoinen-deepcool-r-cg330-whngm3-g",
+      "external_id": "174500"
+    },
+    {
+      "name": "Fractal Design Pop 2 Air Black Solid Midi Tower musta",
+      "price_cents": 10190,
+      "url": "https://datatronic.fi/komponentit/kotelot/fractal-design-pop-2-air-black-solid-midi-tower-musta-fractal-design-fd-c-poa2a-01",
+      "external_id": "175576"
+    },
+    {
+      "name": "Jonsbo C6 Black Musta",
+      "price_cents": 4390,
+      "url": "https://datatronic.fi/komponentit/kotelot/jonsbo-c6-black-musta-jonsbo-c6-black",
+      "external_id": "130983"
+    },
+    {
+      "name": "DeepCool CG530 4F WH Midi Tower Valkoinen",
+      "price_cents": 7390,
+      "url": "https://datatronic.fi/komponentit/kotelot/deepcool-cg530-4f-wh-midi-tower-valkoinen-deepcool-r-cg530-whada4-g-1",
+      "external_id": "169093"
+    },
+    {
+      "name": "ASUS GR701 ROG Hyperion White Valkoinen",
+      "price_cents": 49500,
+      "url": "https://datatronic.fi/komponentit/kotelot/asus-gr701-rog-hyperion-white-valkoinen-asus-90dc00f3-b39000",
+      "external_id": "141673"
+    },
+    {
+      "name": "ASUS TUF Gaming GT301 Midi Tower Musta",
+      "price_cents": 10990,
+      "url": "https://datatronic.fi/komponentit/kotelot/asus-tuf-gaming-gt301-midi-tower-musta-asus-90dc0040-b49000",
+      "external_id": "7364"
+    },
+    {
+      "name": "XPG VALOR MESH Midi Tower Valkoinen",
+      "price_cents": 5990,
+      "url": "https://datatronic.fi/komponentit/kotelot/xpg-valor-mesh-midi-tower-valkoinen-xpg-75261057",
+      "external_id": "132253"
+    },
+    {
+      "name": "Fractal Design Epoch Midi Tower Valkoinen",
+      "price_cents": 11290,
+      "url": "https://datatronic.fi/komponentit/kotelot/fractal-design-epoch-midi-tower-valkoinen-fractal-design-fd-c-epo1a-03",
+      "external_id": "171528"
+    },
+    {
+      "name": "Jonsbo TK-2 2.0 Midi Tower Musta",
+      "price_cents": 14290,
+      "url": "https://datatronic.fi/komponentit/kotelot/jonsbo-tk-2-20-midi-tower-musta-jonsbo-tk-2-black",
+      "external_id": "151478"
+    },
+    {
+      "name": "Fractal Design Terra Small Form Factor (SFF) Vihreä",
+      "price_cents": 23690,
+      "url": "https://datatronic.fi/komponentit/kotelot/fractal-design-terra-small-form-factor-sff-vihrea-fractal-design-fd-c-ter1n-03",
+      "external_id": "127071"
+    },
+    {
+      "name": "NZXT H510 Flow Midi Tower musta",
+      "price_cents": 9490,
+      "url": "https://datatronic.fi/komponentit/kotelot/nzxt-h510-flow-midi-tower-musta-nzxt-cc-h52fb-01",
+      "external_id": "164471"
+    },
+    {
+      "name": "Cooler Master MasterBox 500 Midi Tower Musta",
+      "price_cents": 13290,
+      "url": "https://datatronic.fi/komponentit/kotelot/cooler-master-masterbox-500-midi-tower-musta-cooler-master-mb500-kgnn-s00",
+      "external_id": "73055"
+    },
+    {
+      "name": "Fractal Design North XL Työpöytä musta, Puuhiili",
+      "price_cents": 21490,
+      "url": "https://datatronic.fi/komponentit/kotelot/fractal-design-north-xl-tyopoyta-musta-puuhiili-fractal-design-fd-c-nor1x-05",
+      "external_id": "169636"
+    },
+    {
+      "name": "ASUS TUF GAMING GT502 Horizon TG ARGB Black Midi Tower musta",
+      "price_cents": 24290,
+      "url": "https://datatronic.fi/komponentit/kotelot/asus-tuf-gaming-gt502-horizon-tg-argb-black-midi-tower-musta-asus-90dc0090-b19020",
+      "external_id": "168742"
+    },
+    {
+      "name": "HYTE Y70 Touch Infinite Midi Tower Valkoinen",
+      "price_cents": 42900,
+      "url": "https://datatronic.fi/komponentit/kotelot/hyte-y70-touch-infinite-midi-tower-valkoinen-hyte-cs-hyte-y70tti-ww",
+      "external_id": "167726"
+    },
+    {
+      "name": "Thermaltake TR100 Mini Tower musta",
+      "price_cents": 14390,
+      "url": "https://datatronic.fi/komponentit/kotelot/thermaltake-tr100-mini-tower-musta-thermaltake-ca-11a-00s1nn-00",
+      "external_id": "167155"
+    },
+    {
+      "name": "NZXT H7 Flow Midi Tower Valkoinen",
+      "price_cents": 7690,
+      "url": "https://datatronic.fi/komponentit/kotelot/nzxt-h7-flow-midi-tower-valkoinen-nzxt-cm-h72fw-01",
+      "external_id": "155997"
+    },
+    {
+      "name": "LC-Power LC-2017MB-ON tietokonekotelo Micro Tower musta",
+      "price_cents": 4390,
+      "url": "https://datatronic.fi/komponentit/kotelot/lc-power-lc-2017mb-on-tietokonekotelo-micro-tower-musta-lc-power-lc-2017mb-on",
+      "external_id": "163698"
+    },
+    {
+      "name": "ASUS ProArt PA401 Wood METAL PWM (Black) Tower musta",
+      "price_cents": 13390,
+      "url": "https://datatronic.fi/komponentit/kotelot/asus-proart-pa401-wood-metal-pwm-black-tower-musta-asus-90dc00m0-b39010",
+      "external_id": "168775"
+    },
+    {
+      "name": "Corsair iCUE LINK 5000T LX RGB Midi Tower musta",
+      "price_cents": 32500,
+      "url": "https://datatronic.fi/komponentit/kotelot/corsair-icue-link-5000t-lx-rgb-midi-tower-musta-corsair-cc-9011298-ww",
+      "external_id": "165261"
+    },
+    {
+      "name": "LC-Power LC-1406MB-TFX-ON tietokonekotelo Micro Tower musta",
+      "price_cents": 5090,
+      "url": "https://datatronic.fi/komponentit/kotelot/lc-power-lc-1406mb-tfx-on-tietokonekotelo-micro-tower-musta-lc-power-lc-1406mb-tfx-on",
+      "external_id": "153713"
+    },
+    {
+      "name": "Fractal Design CORE 2300 Midi Tower Musta",
+      "price_cents": 5490,
+      "url": "https://datatronic.fi/komponentit/kotelot/fractal-design-core-2300-midi-tower-musta-fractal-design-fd-ca-core-2300-bl",
+      "external_id": "2507"
+    }
+  ]
+}

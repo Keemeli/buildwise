@@ -9,7 +9,7 @@ from pathlib import Path
 from typing import Any, Dict, List, Optional, Tuple
 from scraper.config import PROJECT_ROOT, RAW_DIR as DEFAULT_RAW_DIR, NORMALISED_DIR as DEFAULT_OUT_DIR
 from scraper.pipeline.components import (CATEGORIES, EXPECTED_FIELDS, clean,
-    is_non_component, normalise_item, ComponentNameParser)
+    contradicts_category, is_non_component, normalise_item, ComponentNameParser)
 from scraper.pipeline.reports import NormalisationReportWriter
 from scraper.pipeline.listing_prices import ListingPriceSelector
 from scraper.pipeline.specification_values import SpecificationValueResolver
@@ -261,6 +261,16 @@ class ComponentNormaliser:
         spec_stats = merge_product_specs(components, self.out_dir / "specs.json")
         spec_stats["modules_shaped"] = shape_modules(components)
 
+        # Rows whose parsed specs contradict their shop category (observed: five
+        # motherboards on a storage page) are reported, never guessed into a category.
+        kept: List[Dict[str, Any]] = []
+        mismatched: List[Dict[str, Any]] = []
+        for component in components:
+            target = (mismatched if contradicts_category(component["category"], component.get("specs"))
+                      else kept)
+            target.append(component)
+        components = kept
+
         self.out_dir.mkdir(parents=True, exist_ok=True)
         payload = {
             "generated_at": datetime.now(timezone.utc).isoformat(timespec="microseconds"),
@@ -275,13 +285,23 @@ class ComponentNormaliser:
         components_path.write_text(json.dumps(payload, ensure_ascii=False, indent=2), encoding="utf-8")
         excluded_path = self.out_dir / "excluded_non_components.json"
         excluded_path.write_text(json.dumps({"excluded": excluded}, ensure_ascii=False, indent=2), encoding="utf-8")
-        report_path = self.report_writer.write(self.out_dir, components, duplicates, len(raw_items), excluded, spec_stats)
+        mismatch_path = self.out_dir / "excluded_category_mismatch.json"
+        mismatch_path.write_text(json.dumps({"excluded": [
+            {"raw_name": component.get("raw_name"), "category": component.get("category"),
+             "shop": (component.get("listings") or [{}])[0].get("shop"),
+             "form_factor": (component.get("specs") or {}).get("form_factor")}
+            for component in mismatched]}, ensure_ascii=False, indent=2), encoding="utf-8")
+        report_path = self.report_writer.write(self.out_dir, components, duplicates, len(raw_items), excluded,
+                                               spec_stats, mismatched=mismatched)
 
         print(f"scanned {len(raw_items)} raw products → {len(components)} components "
-              f"({duplicates} duplicates merged, {len(excluded)} non-components excluded)")
+              f"({duplicates} duplicates merged, {len(excluded)} non-components and "
+              f"{len(mismatched)} category-contradicting rows excluded)")
         print(f"wrote {components_path}")
         print(f"wrote {identity_path} (verified grouping and review cases)")
         print(f"wrote {excluded_path}")
+        if mismatched:
+            print(f"wrote {mismatch_path}")
         print(f"wrote {report_path}")
 
         by_category: Dict[str, int] = defaultdict(int)

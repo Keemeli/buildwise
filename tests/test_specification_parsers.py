@@ -9,6 +9,7 @@ from scraper.retailers.contracts import UnsupportedCategoryError
 from scraper.retailers.datatronic_specs import DatatronicSpecParser
 from scraper.retailers.jimms_specs import JimmsSpecParser
 from scraper.retailers.proshop_specs import ProshopSpecParser
+from scraper.common.specifications import parse_motherboard_form_factor, parse_storage_form_factor
 
 
 DATATRONIC_GPU = Path(__file__).parent / 'fixtures/datatronic/product_gpu_166662.html'
@@ -198,6 +199,26 @@ class ProshopSpecificationTests(unittest.TestCase):
             ('Järjestelmävaatimukset/Vaadittava virtalähde', '1000 W'),
             ('Muuta/Virran kulutus (toiminnassa)', '600 watti(a)')])
         self.assertEqual(values, {'recommended_psu_w': 1000, 'power_w': 600})
+
+
+class CanonicalFormFactorTests(unittest.TestCase):
+    """The same physical size written three ways must land in one filter bucket."""
+
+    def test_motherboard_form_factor_wording(self):
+        cases = {'ATX': 'ATX', 'mikro ATX': 'Micro-ATX', 'Micro-ATX': 'Micro-ATX',
+                 'micro atx': 'Micro-ATX', 'Mini ITX': 'Mini-ITX', 'Mini-ITX': 'Mini-ITX',
+                 'Laajennettu ATX': 'E-ATX', 'E-ATX': 'E-ATX', 'EEB': 'EEB',
+                 'ATX (mikro ATX)': 'Micro-ATX'}
+        for wording, expected in cases.items():
+            with self.subTest(wording=wording):
+                self.assertEqual(parse_motherboard_form_factor(wording), expected)
+
+    def test_storage_form_factor_wording(self):
+        cases = {'M.2': 'M.2', '2280 (22 x 80 mm)': 'M.2 2280', '2,5"': '2.5"',
+                 '3.5"': '3.5"', 'U.2': 'U.2'}
+        for wording, expected in cases.items():
+            with self.subTest(wording=wording):
+                self.assertEqual(parse_storage_form_factor(wording), expected)
 
 
 if __name__ == '__main__':

@@ -12,7 +12,7 @@ from unittest.mock import patch
 
 from scraper.cli import main
 from scraper.common.fetching import PageFetcher
-from scraper.pipeline.export import CatalogueExporter
+from scraper.pipeline.export import CatalogueExporter, render
 from scraper.retailers.contracts import listing_page_url as page_url
 from scraper.retailers.jimms import CATEGORY_URLS
 
@@ -102,7 +102,8 @@ class UnifiedCLITests(unittest.TestCase):
             source = root / 'source.json'
             target = root / 'target.json'
             source.write_text('{"components": [], "component_count": 0}')
-            target.write_text(source.read_text())
+            # The copy is what the exporter would write, byte for byte.
+            target.write_bytes(render(json.loads(source.read_text())))
             result = subprocess.run([sys.executable, '-B', '-S', '-m', 'scraper', 'export', '--check',
                 '--source', str(source), '--target', str(target)], cwd=ROOT, capture_output=True, text=True)
             self.assertEqual(result.returncode, 0, result.stderr)
@@ -120,7 +121,19 @@ class UnifiedCLITests(unittest.TestCase):
             result = subprocess.run([sys.executable, '-B', '-m', 'scraper', 'refresh', '--offline',
                 '--data-dir', str(root), '--web-output', str(target)], cwd=ROOT, capture_output=True, text=True)
             self.assertEqual(result.returncode, 0, result.stdout + result.stderr)
-            self.assertEqual(json.loads(target.read_text()), json.loads((root / 'normalised/components.json').read_text()))
+            published = json.loads(target.read_text())
+            source = json.loads((root / 'normalised/components.json').read_text())
+            # The deployment copy is slimmed and minified: it carries what the app reads,
+            # declares its own counts, and must be exactly what the exporter would write.
+            self.assertEqual(target.read_bytes(), render(source))
+            self.assertEqual(published['component_count'], len(source['components']))
+            self.assertEqual(published['parsed_specs'],
+                             sum(1 for c in published['components'] if c.get('spec_source') == 'product_page'))
+            for component in published['components']:
+                self.assertEqual(set(component) - {'spec_source', 'spec_fields'},
+                                 {'category', 'brand', 'model', 'raw_name', 'specs', 'listings'})
+            for pipeline_only in ('spec_sources', 'missing_specs', 'category_confidence', 'identity_policy_version'):
+                self.assertNotIn(pipeline_only, json.dumps(published))
             record = json.loads((root / 'refresh_log.jsonl').read_text())
             self.assertEqual([stage['stage'] for stage in record['stages']], ['normalise', 'export'])
 
