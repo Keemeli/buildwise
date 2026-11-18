@@ -3,8 +3,9 @@
 import { useEffect, useMemo, useState } from "react";
 import { COMPONENTS, cheapestOffer } from "@/lib/catalog";
 import { issuesForCandidate, issueKey } from "@/lib/compat";
-import { UNKNOWN, facetsFor, facetOptions, applyFacets } from "@/lib/facets";
+import { UNKNOWN, OTHER, optionKeys, facetsFor, facetOptions, applyFacets } from "@/lib/facets";
 import { formatEuros } from "@/lib/api";
+import { matchesQuery, queryTokens, searchKey } from "@/lib/search";
 import PartIcon from "./PartIcon";
 import { useT } from "@/lib/locale";
 
@@ -55,7 +56,7 @@ function specSummary(c, t) {
     case "storage":
       return line(has(s.capacity_gb) && formatCapacity(s.capacity_gb), s.interface, s.form_factor, has(s.pcie_gen) && `PCIe ${s.pcie_gen}`);
     case "psu":
-      return line(has(s.wattage_w) && `${s.wattage_w} W`, s.efficiency, s.form_factor, s.modular && t.specs.modular);
+      return line(has(s.wattage_w) && `${s.wattage_w} W`, s.efficiency, s.form_factor, has(s.modular) && t.specs.cabling[s.modular]);
     case "case":
       return line(
         s.form_factor,
@@ -74,8 +75,49 @@ const getComponent = (row) => row.component;
 
 function optionLabel(facet, key, t) {
   if (key === UNKNOWN) return t.picker.unknown;
+  if (key === OTHER) return t.picker.other;
   if (facet.id === "wattage") return t.picker.wattage[key] ?? key;
+  if (facet.id === "capacity") return t.picker.capacity[key] ?? key;
+  if (facet.id === "interface" && t.picker.interfaceGroups[key]) return t.picker.interfaceGroups[key];
+  if (facet.id === "cpuSeries") return t.picker.cpuSeries[key] ?? key;
+  if (facet.id === "wifi") return t.picker.wifi[key] ?? key;
+  if (facet.id === "moduleSize") return `${key} GB`;
+  if (facet.id === "cabling") return t.picker.cabling[key] ?? key;
+  if (facet.id === "modularType") return t.picker.modularType[key] ?? key;
+  if (facet.id === "gpuGeneration") return t.picker.gpuGeneration[key] ?? key;
+  if (facet.id === "vram") return key === "gt16" ? t.picker.vramOver16 : `${key} GB`;
   return key; // spec values are shown as the pipeline writes them (language-neutral)
+}
+
+// A price field's text in euros ("149,90" or "150") → cents, or null when empty or not a number.
+function euroCents(text) {
+  const value = Number(String(text).trim().replace(",", "."));
+  return String(text).trim() === "" || !Number.isFinite(value) || value < 0 ? null : Math.round(value * 100);
+}
+
+// A child facet (CPU series, board chipset, module size) appears only once a parent
+// option is ticked, and then lists the options with parts under it. The counts already
+// respect the parent's selection, so a zero count means "not under this parent".
+function visibleOptions(facet, options, selections) {
+  if (!facet.parent) return options;
+  if ((selections[facet.parent] ?? []).length === 0) return [];
+  const ticked = selections[facet.id] ?? [];
+  const visible = options.filter(({ key, count }) => count > 0 || ticked.includes(key));
+  // A single known option chooses nothing (an AM5 board is always DDR5), so the row stays
+  // hidden; "not known" alone is no second choice.
+  const known = visible.filter(({ key }) => key !== UNKNOWN);
+  return known.length > 1 || ticked.length > 0 ? visible : [];
+}
+
+// The child options that have parts under the given parent options.
+function childKeysUnder(rows, parent, child, parentKeys) {
+  const keys = new Set();
+  for (const { component } of rows) {
+    if (optionKeys(parent, component).some((key) => parentKeys.includes(key))) {
+      for (const key of optionKeys(child, component)) keys.add(key);
+    }
+  }
+  return keys;
 }
 
 // owned: the slot is already marked as the user's own part.
@@ -90,6 +132,13 @@ export default function PartPicker({ slot, build, owned = false, onSelect, onOwn
   const [showAll, setShowAll] = useState(false);
   // "I already have one": picking a part marks it as the user's own (not in price / budget).
   const [haveIt, setHaveIt] = useState(owned);
+  // Price range in euros, as typed. The fields sit behind the "Price" button.
+  const [priceOpen, setPriceOpen] = useState(false);
+  const [priceMin, setPriceMin] = useState("");
+  const [priceMax, setPriceMax] = useState("");
+  const minCents = euroCents(priceMin);
+  const maxCents = euroCents(priceMax);
+  const priceActive = minCents !== null || maxCents !== null;
 
   // Close with the Escape key
   useEffect(() => {
@@ -105,6 +154,7 @@ export default function PartPicker({ slot, build, owned = false, onSelect, onOwn
     () =>
       COMPONENTS.filter((c) => c.category === slot.category).map((c) => ({
         component: c,
+        key: searchKey(c.name),
         offer: cheapestOffer(c),
         issues: issuesForCandidate(build, c),
       })),
@@ -112,8 +162,13 @@ export default function PartPicker({ slot, build, owned = false, onSelect, onOwn
   );
 
   const view = useMemo(() => {
-    const q = query.trim().toLowerCase();
-    const searched = all.filter((row) => !q || row.component.name.toLowerCase().includes(q));
+    const tokens = queryTokens(query);
+    const searched = all.filter(
+      (row) =>
+        matchesQuery(row.key, tokens) &&
+        (minCents === null || row.offer.priceCents >= minCents) &&
+        (maxCents === null || row.offer.priceCents <= maxCents),
+    );
     const incompatible = searched.filter((row) => row.issues.length > 0).length;
     const pool = showAll ? searched : searched.filter((row) => row.issues.length === 0);
     const options = facetOptions(pool, facets, selections, getComponent);
@@ -121,17 +176,34 @@ export default function PartPicker({ slot, build, owned = false, onSelect, onOwn
       // Compatible parts first, then cheapest first
       .sort((a, b) => a.issues.length - b.issues.length || a.offer.priceCents - b.offer.priceCents);
     return { parts, options, incompatible };
-  }, [all, facets, query, selections, showAll]);
+  }, [all, facets, query, selections, showAll, minCents, maxCents]);
 
-  const anySelected = Object.values(selections).some((keys) => keys.length > 0);
+  const anySelected = priceActive || Object.values(selections).some((keys) => keys.length > 0);
 
   function toggleOption(facetId, key) {
     setSelections((prev) => {
       const current = prev[facetId] ?? [];
       const next = current.includes(key) ? current.filter((k) => k !== key) : [...current, key];
-      return { ...prev, [facetId]: next };
+      const updated = { ...prev, [facetId]: next };
+      // A changed parent drops the ticked child options it has no parts in (Intel
+      // unticks "Ryzen 5"), so no hidden selection keeps filtering the list.
+      const parent = facets.find((f) => f.id === facetId);
+      for (const child of facets.filter((f) => f.parent === facetId)) {
+        const available = childKeysUnder(all, parent, child, next);
+        updated[child.id] = (updated[child.id] ?? []).filter((k) => available.has(k));
+      }
+      return updated;
     });
   }
+
+  function clearFilters() {
+    setSelections({});
+    setPriceMin("");
+    setPriceMax("");
+  }
+
+  let priceLabel = t.picker.price;
+  if (priceActive) priceLabel = t.picker.priceRange(minCents === null ? null : priceMin.trim(), maxCents === null ? null : priceMax.trim());
 
   let emptyText = t.picker.noFilterMatches;
   if (all.length === 0) emptyText = t.picker.emptyCategory;
@@ -176,10 +248,49 @@ export default function PartPicker({ slot, build, owned = false, onSelect, onOwn
           autoFocus
         />
 
+        {all.length > 0 && (
+          <div className="price-filter">
+            <button
+              type="button"
+              className={`chip${priceActive ? " on" : ""}`}
+              aria-expanded={priceOpen}
+              onClick={() => setPriceOpen((open) => !open)}
+            >
+              {priceLabel} <span aria-hidden="true">{priceOpen ? "▴" : "▾"}</span>
+            </button>
+            {priceOpen && (
+              <div className="price-fields">
+                <input
+                  type="number"
+                  inputMode="decimal"
+                  min="0"
+                  placeholder={t.picker.priceMin}
+                  aria-label={t.picker.priceMin}
+                  value={priceMin}
+                  onChange={(e) => setPriceMin(e.target.value)}
+                />
+                <span className="muted">–</span>
+                <input
+                  type="number"
+                  inputMode="decimal"
+                  min="0"
+                  placeholder={t.picker.priceMax}
+                  aria-label={t.picker.priceMax}
+                  value={priceMax}
+                  onChange={(e) => setPriceMax(e.target.value)}
+                />
+                <span className="muted">€</span>
+              </div>
+            )}
+          </div>
+        )}
+
         {facets.length > 0 && all.length > 0 && (
           <div className="facets" aria-label={t.picker.filters}>
-            {view.options.map(({ facet, options }) => (
-              <div key={facet.id} className="facet" role="group" aria-label={t.picker.facets[facet.id]}>
+            {view.options.map(({ facet, options }) => ({ facet, options: visibleOptions(facet, options, selections) }))
+              .filter(({ options }) => options.length > 0)
+              .map(({ facet, options }) => (
+              <div key={facet.id} className={`facet${facet.parent ? " facet-child" : ""}`} role="group" aria-label={t.picker.facets[facet.id]}>
                 <span className="facet-label">{t.picker.facets[facet.id]}</span>
                 <div className="facet-options">
                   {options.map(({ key, count }) => {
@@ -217,7 +328,7 @@ export default function PartPicker({ slot, build, owned = false, onSelect, onOwn
           <div className="picker-status muted small">
             <span>{t.picker.resultCount(view.parts.length, all.length)}</span>
             {anySelected && (
-              <button type="button" className="link-button" onClick={() => setSelections({})}>
+              <button type="button" className="link-button" onClick={clearFilters}>
                 {t.picker.clearFilters}
               </button>
             )}

@@ -13,10 +13,17 @@ import PartIcon from "@/components/PartIcon";
 import PcPreview from "@/components/PcPreview";
 import { useT } from "@/lib/locale";
 
+// A build can hold up to four drives. The first one is the regular "storage" slot (the
+// one compatibility checks and the preview read); the others are keyed "storage:2"...
+const MAX_STORAGE = 4;
+const storageKey = (n) => (n === 1 ? "storage" : `storage:${n}`);
+
 export default function BuilderPage() {
   const t = useT();
-  // { cpu: "cpu-7600", gpu: "gpu-5070", ... } — ids of the chosen parts
+  // { cpu: "cpu-7600", gpu: "gpu-5070", "storage:2": "...", ... } — ids of the chosen parts, by slot key
   const [selectedIds, setSelectedIds] = useState({});
+  // How many drive rows are shown (1–4). Extra rows start empty.
+  const [storageRows, setStorageRows] = useState(1);
   const [openSlot, setOpenSlot] = useState(null);
   const [game, setGame] = useState(GAMES[0].id);
   // { case: true, ... } — slots the user already owns. Not counted in the price or the budget.
@@ -28,13 +35,21 @@ export default function BuilderPage() {
     [selectedIds],
   );
 
-  const chosen = SLOTS.map((s) => build[s.category]).filter(Boolean);
+  // The drives after the first one: [{ key: "storage:2", part }, ...]
+  const extraDrives = Array.from({ length: storageRows - 1 }, (_, i) => {
+    const key = storageKey(i + 2);
+    return { key, part: findComponent(selectedIds[key]) };
+  });
+
   const ownedCategories = SLOTS.map((s) => s.category).filter((c) => owned[c]);
   // Owned, but the user hasn't said which model: checks that need it cannot run.
   const ownedUnknown = ownedCategories.filter((c) => !build[c]);
-  const totalCents = chosen
-    .filter((c) => !owned[c.category])
-    .reduce((sum, c) => sum + cheapestOffer(c).priceCents, 0);
+  // Every chosen part by slot key, extra drives included; owned parts are not paid for.
+  const paid = [
+    ...SLOTS.map((s) => [s.category, build[s.category]]),
+    ...extraDrives.map((d) => [d.key, d.part]),
+  ].filter(([key, part]) => part && !owned[key]);
+  const totalCents = paid.reduce((sum, [, part]) => sum + cheapestOffer(part).priceCents, 0);
   const filledSlots = SLOTS.filter((s) => build[s.category] || owned[s.category]).length;
   const { watts, basis: powerBasisKind } = powerBasis(build);
   const issues = checkCompatibility(build, { ownedUnknown });
@@ -58,35 +73,151 @@ export default function BuilderPage() {
       }))
     : null;
 
-  // Picked from the picker. `asOwned`: the user marked it as a part they already have.
+  // Picked from the picker into the open slot. `asOwned`: a part the user already has.
   function pickPart(component, { asOwned = false } = {}) {
-    setSelectedIds((prev) => ({ ...prev, [component.category]: component.id }));
-    setOwned((prev) => ({ ...prev, [component.category]: asOwned }));
+    const key = openSlot.key;
+    setSelectedIds((prev) => ({ ...prev, [key]: component.id }));
+    setOwned((prev) => ({ ...prev, [key]: asOwned }));
     setOpenSlot(null);
   }
 
   // "I have one, but I don't know the model": owned, no part chosen.
-  function markOwnedWithoutModel(category) {
-    removePart(category);
-    setOwned((prev) => ({ ...prev, [category]: true }));
+  function markOwnedWithoutModel(key) {
+    removePart(key);
+    setOwned((prev) => ({ ...prev, [key]: true }));
     setOpenSlot(null);
   }
 
-  function unmarkOwned(category) {
-    setOwned((prev) => ({ ...prev, [category]: false }));
+  function unmarkOwned(key) {
+    setOwned((prev) => ({ ...prev, [key]: false }));
   }
 
   function clearAll() {
     setSelectedIds({});
     setOwned({});
+    setStorageRows(1);
   }
 
-  function removePart(category) {
+  function removePart(key) {
     setSelectedIds((prev) => {
       const next = { ...prev };
-      delete next[category];
+      delete next[key];
       return next;
     });
+  }
+
+  // Removes drive row n (1–4) and moves the drives after it up one row, so the first
+  // drive — the one the checks read — is always filled while any drive is.
+  function removeDrive(n) {
+    const shift = (prev) => {
+      const next = { ...prev };
+      for (let i = n; i < storageRows; i += 1) {
+        const later = prev[storageKey(i + 1)];
+        if (later === undefined) delete next[storageKey(i)];
+        else next[storageKey(i)] = later;
+      }
+      delete next[storageKey(storageRows)];
+      return next;
+    };
+    if (storageRows === 1) {
+      removePart("storage");
+      return;
+    }
+    setSelectedIds(shift);
+    setOwned(shift);
+    setStorageRows((rows) => rows - 1);
+  }
+
+  // One part row. `key` is the slot key ("cpu", "storage", "storage:2"); `part` defaults to
+  // the build's part for the category; `label` overrides the category name ("Drive 2");
+  // `onRemove` overrides plain removal (drives move up when one is removed).
+  function renderSlot({ category, key, part = build[category], label, onRemove }) {
+    const slot = { category, key };
+    const offer = part && cheapestOffer(part);
+    // Compatibility errors name categories; only the first drive is checked.
+    const slotErrors = key === category ? errors.filter((e) => e.parts.includes(category)) : [];
+    const isOwned = Boolean(owned[key]);
+    const remove = onRemove ?? (() => removePart(key));
+    // "Your part" badge; clicking it turns the slot back into a part to buy.
+    const ownedBadge = (
+      <button
+        type="button"
+        className="owned-badge"
+        title={t.builder.notOwned}
+        aria-label={`${t.builder.ownedBadge}: ${t.builder.notOwned}`}
+        onClick={() => unmarkOwned(key)}
+      >
+        {t.builder.ownedBadge} <span aria-hidden="true">✕</span>
+      </button>
+    );
+
+    return (
+      <li
+        key={key}
+        className={`slot${part ? " filled" : ""}${isOwned ? " owned" : ""}${slotErrors.length ? " has-error" : ""}`}
+      >
+        <div className="slot-label">
+          <span className="slot-icon">
+            <PartIcon category={category} />
+          </span>
+          {label ?? t.categories[category]}
+        </div>
+
+        {part ? (
+          <>
+            <div className="slot-part">
+              <a href={offer.url} target="_blank" rel="noopener noreferrer" className="part-name">
+                {part.name}
+              </a>
+              <div className="part-specs">{specSummary(part, t)}</div>
+            </div>
+            <div className="slot-price">
+              {isOwned ? (
+                ownedBadge
+              ) : (
+                <>
+                  <div className="price">{formatEuros(offer.priceCents, t.locale)}</div>
+                  <div className="muted small">{offer.shop}</div>
+                </>
+              )}
+            </div>
+            <div className="slot-actions">
+              <button className="link-button" onClick={() => setOpenSlot(slot)}>
+                {t.builder.change}
+              </button>
+              <button className="icon-button" onClick={remove} aria-label={t.builder.remove(label ?? t.categories[category])}>
+                ✕
+              </button>
+            </div>
+          </>
+        ) : isOwned ? (
+          <>
+            <div className="slot-part">
+              <div className="part-name">{t.builder.ownedNoModel}</div>
+              <div className="part-specs">{t.builder.ownedNoModelHint}</div>
+            </div>
+            <div className="slot-price">{ownedBadge}</div>
+            <div className="slot-actions">
+              <button className="link-button" onClick={() => setOpenSlot(slot)}>
+                {t.builder.chooseModel}
+              </button>
+            </div>
+          </>
+        ) : (
+          <div className="slot-empty">
+            <button className="add-part" onClick={() => setOpenSlot(slot)}>
+              {t.builder.choose(label ?? t.categories[category])}
+            </button>
+            {/* An empty extra drive row can be taken away again */}
+            {key !== category && (
+              <button className="icon-button" onClick={remove} aria-label={t.builder.remove(label)}>
+                ✕
+              </button>
+            )}
+          </div>
+        )}
+      </li>
+    );
   }
 
   return (
@@ -103,87 +234,27 @@ export default function BuilderPage() {
         </div>
 
         <ul className="slots">
-          {SLOTS.map((slot) => {
-            const part = build[slot.category];
-            const offer = part && cheapestOffer(part);
-            const slotErrors = errors.filter((e) => e.parts.includes(slot.category));
-            const isOwned = Boolean(owned[slot.category]);
-            // "Your part" badge; clicking it turns the slot back into a part to buy.
-            const ownedBadge = (
-              <button
-                type="button"
-                className="owned-badge"
-                title={t.builder.notOwned}
-                aria-label={`${t.builder.ownedBadge}: ${t.builder.notOwned}`}
-                onClick={() => unmarkOwned(slot.category)}
-              >
-                {t.builder.ownedBadge} <span aria-hidden="true">✕</span>
-              </button>
-            );
-
-            return (
-              <li
-                key={slot.category}
-                className={`slot${part ? " filled" : ""}${isOwned ? " owned" : ""}${slotErrors.length ? " has-error" : ""}`}
-              >
-                <div className="slot-label">
-                  <span className="slot-icon">
-                    <PartIcon category={slot.category} />
-                  </span>
-                  {t.categories[slot.category]}
-                </div>
-
-                {part ? (
-                  <>
-                    <div className="slot-part">
-                      <a href={offer.url} target="_blank" rel="noopener noreferrer" className="part-name">
-                        {part.name}
-                      </a>
-                      <div className="part-specs">{specSummary(part, t)}</div>
-                    </div>
-                    <div className="slot-price">
-                      {isOwned ? (
-                        ownedBadge
-                      ) : (
-                        <>
-                          <div className="price">{formatEuros(offer.priceCents, t.locale)}</div>
-                          <div className="muted small">{offer.shop}</div>
-                        </>
-                      )}
-                    </div>
-                    <div className="slot-actions">
-                      <button className="link-button" onClick={() => setOpenSlot(slot)}>
-                        {t.builder.change}
-                      </button>
-                      <button
-                        className="icon-button"
-                        onClick={() => removePart(slot.category)}
-                        aria-label={t.builder.remove(t.categories[slot.category])}
-                      >
-                        ✕
-                      </button>
-                    </div>
-                  </>
-                ) : isOwned ? (
-                  <>
-                    <div className="slot-part">
-                      <div className="part-name">{t.builder.ownedNoModel}</div>
-                      <div className="part-specs">{t.builder.ownedNoModelHint}</div>
-                    </div>
-                    <div className="slot-price">{ownedBadge}</div>
-                    <div className="slot-actions">
-                      <button className="link-button" onClick={() => setOpenSlot(slot)}>
-                        {t.builder.chooseModel}
-                      </button>
-                    </div>
-                  </>
-                ) : (
-                  <button className="add-part" onClick={() => setOpenSlot(slot)}>
-                    {t.builder.choose(t.categories[slot.category])}
+          {SLOTS.flatMap((s) => {
+            if (s.category !== "storage") return [renderSlot({ category: s.category, key: s.category })];
+            const drives = [
+              renderSlot({ category: "storage", key: "storage", onRemove: () => removeDrive(1),
+                label: storageRows > 1 ? t.builder.driveN(1) : undefined }),
+              ...extraDrives.map((d, i) =>
+                renderSlot({ category: "storage", key: d.key, part: d.part, onRemove: () => removeDrive(i + 2),
+                  label: t.builder.driveN(i + 2) }),
+              ),
+            ];
+            // Another drive can be added once the first one is chosen (or owned), up to four.
+            if (storageRows < MAX_STORAGE && (build.storage || owned.storage)) {
+              drives.push(
+                <li key="add-storage" className="slot slot-more">
+                  <button className="add-part" onClick={() => setStorageRows((rows) => rows + 1)}>
+                    {t.builder.addDrive(storageRows, MAX_STORAGE)}
                   </button>
-                )}
-              </li>
-            );
+                </li>,
+              );
+            }
+            return drives;
           })}
         </ul>
 
@@ -279,9 +350,9 @@ export default function BuilderPage() {
         <PartPicker
           slot={openSlot}
           build={build}
-          owned={Boolean(owned[openSlot.category])}
+          owned={Boolean(owned[openSlot.key])}
           onSelect={pickPart}
-          onOwnedWithoutModel={() => markOwnedWithoutModel(openSlot.category)}
+          onOwnedWithoutModel={() => markOwnedWithoutModel(openSlot.key)}
           onClose={() => setOpenSlot(null)}
         />
       )}

@@ -30,6 +30,15 @@ export function chipsetKey(chipset) {
   return chipset ? chipset.toUpperCase().replace(/\s+/g, "") : null;
 }
 
+// Shop + shop's own product id. Jimms listings carry no external_id, so the product
+// URL stands in; without it every Jimms part shared the id "jimms-none", and the
+// picker list (keyed by id) showed the wrong rows. Replace with the MPN once the
+// normaliser provides it.
+function componentId(listing) {
+  const ref = listing.external_id ?? listing.url?.replace(/^https?:\/\/[^/]+\//, "");
+  return `${listing.shop}-${ref}`.toLowerCase();
+}
+
 function toComponent(c) {
   const first = c.listings[0];
   const specs = { ...c.specs };
@@ -38,8 +47,7 @@ function toComponent(c) {
   }
 
   return {
-    // Shop + shop's own product id. Replace with the MPN once the normaliser provides it.
-    id: `${first.shop}-${first.external_id}`.toLowerCase(),
+    id: componentId(first),
     category: c.category,
     brand: c.brand,
     model: c.model,
@@ -56,7 +64,18 @@ function toComponent(c) {
   };
 }
 
-export const COMPONENTS = raw.components.map(toComponent).filter((c) => c.offers.length > 0);
+// Ids must be unique: React keys the picker list by id, and findComponent looks parts up by it.
+function uniqueIds(components) {
+  const seen = new Map();
+  for (const c of components) {
+    const n = seen.get(c.id) ?? 0;
+    seen.set(c.id, n + 1);
+    if (n > 0) c.id = `${c.id}-${n + 1}`;
+  }
+  return components;
+}
+
+export const COMPONENTS = uniqueIds(raw.components.map(toComponent).filter((c) => c.offers.length > 0));
 
 // Shops the prices come from, for display: "Datatronic · Jimms".
 export const SHOPS = [...new Set(COMPONENTS.flatMap((c) => c.offers.map((o) => o.shop)))].sort().join(" · ");

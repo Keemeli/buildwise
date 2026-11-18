@@ -99,6 +99,23 @@ a:hover {
   gap: 8px;
   font-weight: 600;
 }
+/* A form field that is not a <label> (the resolution choice), laid out like one */
+.form .form-field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-weight: 600;
+}
+.resolution-options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  font-weight: 400;
+}
+.resolution-options .chip {
+  padding: 6px 14px;
+  font-size: 0.95rem;
+}
 .budget-row {
   display: flex;
   align-items: center;
@@ -318,6 +335,21 @@ select {
   width: 100%;
   text-align: left;
 }
+/* An empty slot: the "choose" button, and for an extra drive a ✕ to take the row away */
+.slot-empty {
+  grid-column: 2 / -1;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+/* "+ Add another drive" under the drives: a quiet row, not a part slot */
+.slot.slot-more {
+  background: transparent;
+  border: none;
+  min-height: 0;
+  padding-top: 0;
+  padding-bottom: 0;
+}
 .add-part:hover {
   border-color: var(--accent);
   background: rgba(79, 140, 255, 0.06);
@@ -488,7 +520,8 @@ select {
     grid-column: 1 / -1;
     justify-content: flex-end;
   }
-  .add-part {
+  .add-part,
+  .slot-empty {
     grid-column: 1 / -1;
   }
   .picker-item {
@@ -727,6 +760,27 @@ select {
   padding: 8px 12px;
   margin-bottom: 8px;
   font-size: 0.85rem;
+}
+/* Price range: a chip that opens min/max fields */
+.price-filter {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+.price-fields {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.price-fields input {
+  width: 96px;
+  padding: 4px 8px;
+}
+/* A child facet (CPU series under the vendor) is indented under its parent */
+.facet-child .facet-label {
+  padding-left: 12px;
 }
 .picker-status {
   display: flex;

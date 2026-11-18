@@ -4,6 +4,7 @@ import { useState } from "react";
 import { useRouter } from "next/navigation";
 import { GAMES } from "@/mock/build";
 import { useT } from "@/lib/locale";
+import { RESOLUTIONS, DEFAULT_RESOLUTION } from "@/lib/api";
 
 const MIN = 500;
 const MAX = 4000;
@@ -15,10 +16,11 @@ export default function BudgetForm({ owned = [] }) {
   const router = useRouter();
   const [budget, setBudget] = useState(1200);
   const [game, setGame] = useState(GAMES[0].id);
+  const [resolution, setResolution] = useState(DEFAULT_RESOLUTION);
 
   function handleSubmit(event) {
     event.preventDefault();
-    const params = new URLSearchParams({ budget: String(budget), game });
+    const params = new URLSearchParams({ budget: String(budget), game, resolution });
     if (owned.length > 0) params.set("exclude", owned.join(","));
     router.push(`/suggestion?${params}`);
   }
@@ -60,6 +62,24 @@ export default function BudgetForm({ owned = [] }) {
           ))}
         </select>
       </label>
+
+      <div className="form-field" role="radiogroup" aria-labelledby="resolution-label">
+        <span id="resolution-label">{t.budget.resolution}</span>
+        <div className="resolution-options">
+          {RESOLUTIONS.map((r) => (
+            <button
+              key={r.id}
+              type="button"
+              role="radio"
+              aria-checked={resolution === r.id}
+              className={`chip${resolution === r.id ? " on" : ""}`}
+              onClick={() => setResolution(r.id)}
+            >
+              {r.label}
+            </button>
+          ))}
+        </div>
+      </div>
 
       {owned.length > 0 && (
         <p className="muted small">{t.builder.budgetOwnedNote(owned.map((c) => t.categories[c]))}</p>
