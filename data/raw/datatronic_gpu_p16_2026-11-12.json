@@ -1,0 +1,156 @@
+{
+  "shop": "Datatronic",
+  "category": "gpu",
+  "page": 16,
+  "source_url": "https://datatronic.fi/naytonohjaimet?page=16",
+  "fetched_at": "2026-11-12T14:45:26+00:00",
+  "site_total_products": 480,
+  "items_on_page": 24,
+  "raw_html": "data/raw/html/datatronic_gpu_p16_2026-11-12_2ea5ddeb9183.html",
+  "items": [
+    {
+      "name": "GIGABYTE AORUS GeForce RTX 5090 MASTER 32G NVIDIA 32 GB GDDR7",
+      "price_cents": 1201500,
+      "url": "https://datatronic.fi/komponentit/naytonohjaimet/gigabyte-aorus-geforce-rtx-5090-master-32g-nvidia-32-gb-gddr7-gigabyte-gv-n5090aorus-m-32gd",
+      "external_id": "166100"
+    },
+    {
+      "name": "Zotac GAMING GeForce RTX 5060 Twin Edge OC White Edition NVIDIA 8 GB GDDR7",
+      "price_cents": 59500,
+      "url": "https://datatronic.fi/komponentit/naytonohjaimet/zotac-gaming-geforce-rtx-5060-twin-edge-oc-white-edition-nvidia-8-gb-gddr7-zotac-zt-b50600q-10m",
+      "external_id": "173179"
+    },
+    {
+      "name": "PNY RTX PRO 2000 Blackwell NVIDIA 16 GB GDDR7",
+      "price_cents": 187500,
+      "url": "https://datatronic.fi/komponentit/naytonohjaimet/pny-rtx-pro-2000-blackwell-nvidia-16-gb-gddr7-pny-vcnrtxpro2000-pb",
+      "external_id": "175741"
+    },
+    {
+      "name": "PNY GeForce RTX 5070 OC NVIDIA 12 GB GDDR7",
+      "price_cents": 109900,
+      "url": "https://datatronic.fi/komponentit/naytonohjaimet/pny-geforce-rtx-5070-oc-nvidia-12-gb-gddr7-pny-vcg507012tfxpb1-o",
+      "external_id": "179986"
+    },
+    {
+      "name": "Nvidia RTX 2000 ADA 16 GB GDDR6",
+      "price_cents": 118900,
+      "url": "https://datatronic.fi/komponentit/naytonohjaimet/nvidia-rtx-2000-ada-16-gb-gddr6-nvidia-900-5g192-2240-000",
+      "external_id": "177453"
+    },
+    {
+      "name": "VGA ZOTAC GeForce? RTX 5060 8GB Twin Edge Plus",
+      "price_cents": 63500,
+      "url": "https://datatronic.fi/komponentit/naytonohjaimet/vga-zotac-geforce-rtx-5060-8gb-twin-edge-plus-zt-b50600e2-10m",
+      "external_id": "184586"
+    },
+    {
+      "name": "DELL NVIDIA RTX A400 4GB GDDR6",
+      "price_cents": 23790,
+      "url": "https://datatronic.fi/komponentit/naytonohjaimet/dell-nvidia-rtx-a400-4gb-gddr6-dell-dell-9rn4r",
+      "external_id": "176996"
+    },
+    {
+      "name": "NVIDIA RTX PRO 4000 SFF Blackwell Retail",
+      "price_cents": 350900,
+      "url": "https://datatronic.fi/komponentit/naytonohjaimet/nvidia-rtx-pro-4000-sff-blackwell-retail-900-5g195-2501-000",
+      "external_id": "177463"
+    },
+    {
+      "name": "MSI V809-2825R NVIDIA GeForce GT 1030 2 GB GDDR4",
+      "price_cents": 11090,
+      "url": "https://datatronic.fi/komponentit/naytonohjaimet/msi-v809-2825r-nvidia-geforce-gt-1030-2-gb-gddr4-msi-geforce-gt-1030-2ghd4-lp-oc",
+      "external_id": "176323"
+    },
+    {
+      "name": "INNO3D GeForce RTX 5060 Ti TWIN X2 OC NVIDIA 16 GB GDDR7",
+      "price_cents": 247900,
+      "url": "https://datatronic.fi/komponentit/naytonohjaimet/inno3d-geforce-rtx-5060-ti-twin-x2-oc-nvidia-16-gb-gddr7-inno3d-n506t2-16d7x-191073n",
+      "external_id": "171821"
+    },
+    {
+      "name": "Cryorig LGA 1700 Kit Type D",
+      "price_cents": 490,
+      "url": "https://datatronic.fi/komponentit/naytonohjaimet/cryorig-lga-1700-kit-type-d-cr-lga1700kit-type-d",
+      "external_id": "170845"
+    },
+    {
+      "name": "Noctua NA-SAV2 chromax.red",
+      "price_cents": 1290,
+      "url": "https://datatronic.fi/komponentit/naytonohjaimet/noctua-na-sav2-chromaxred-na-sav2red",
+      "external_id": "169958"
+    },
+    {
+      "name": "GIGABYTE Radeon RX 9070 GAMING 16GB AMD GDDR6",
+      "price_cents": 1049900,
+      "url": "https://datatronic.fi/komponentit/naytonohjaimet/gigabyte-radeon-rx-9070-gaming-16gb-amd-gddr6-gigabyte-gv-r9070gaming-16gd",
+      "external_id": "174664"
+    },
+    {
+      "name": "NZXT Kraken Plus 360 RGB Suoritin All-in-one-nesteenjäähdytin Valkoinen 1 kpl",
+      "price_cents": 20590,
+      "url": "https://datatronic.fi/komponentit/naytonohjaimet/nzxt-kraken-plus-360-rgb-suoritin-all-in-one-nesteenjaahdytin-valkoinen-1-kpl-nzxt-rl-kr360-w2",
+      "external_id": "170674"
+    },
+    {
+      "name": "PNY RTX PRO 5000 NVIDIA 72 GB GDDR7",
+      "price_cents": 1508900,
+      "url": "https://datatronic.fi/komponentit/naytonohjaimet/pny-rtx-pro-5000-nvidia-72-gb-gddr7-pny-vcnrtxpro5000-72-pb",
+      "external_id": "178249"
+    },
+    {
+      "name": "PNY VCNRTXA400-PL näytönohjain NVIDIA RTX A400 4 GB GDDR6",
+      "price_cents": 26090,
+      "url": "https://datatronic.fi/komponentit/naytonohjaimet/pny-vcnrtxa400-pl-naytonohjain-nvidia-rtx-a400-4-gb-gddr6-pny-vcnrtxa400-pl",
+      "external_id": "180159"
+    },
+    {
+      "name": "Palit GeForce RTX 5060 Dual OC NVIDIA 8 GB GDDR7",
+      "price_cents": 63900,
+      "url": "https://datatronic.fi/komponentit/naytonohjaimet/palit-geforce-rtx-5060-dual-oc-nvidia-8-gb-gddr7-palit-ne75060s19p1-gb2063d",
+      "external_id": "171050"
+    },
+    {
+      "name": "PNY GeForce RTX 5070 Ti OC NVIDIA 16 GB GDDR7",
+      "price_cents": 183900,
+      "url": "https://datatronic.fi/komponentit/naytonohjaimet/pny-geforce-rtx-5070-ti-oc-nvidia-16-gb-gddr7-pny-vcg5070t16tfxpb1-o",
+      "external_id": "177667"
+    },
+    {
+      "name": "PNY RTX PRO 4000 Blackwell NVIDIA 24 GB GDDR7",
+      "price_cents": 379900,
+      "url": "https://datatronic.fi/komponentit/naytonohjaimet/pny-rtx-pro-4000-blackwell-nvidia-24-gb-gddr7-pny-vcnrtxpro4000lp-pb",
+      "external_id": "177217"
+    },
+    {
+      "name": "NZXT H9 Flow RGB Midi Tower musta",
+      "price_cents": 16490,
+      "url": "https://datatronic.fi/komponentit/naytonohjaimet/nzxt-h9-flow-rgb-midi-tower-musta-nzxt-cm-h92fb-r1",
+      "external_id": "170677"
+    },
+    {
+      "name": "Cryorig LGA 1700 Kit Type C",
+      "price_cents": 490,
+      "url": "https://datatronic.fi/komponentit/naytonohjaimet/cryorig-lga-1700-kit-type-c-cr-lga1700kit-type-c",
+      "external_id": "170844"
+    },
+    {
+      "name": "Noctua NA-SAVP1 chromax.yellow",
+      "price_cents": 1290,
+      "url": "https://datatronic.fi/komponentit/naytonohjaimet/noctua-na-savp1-chromaxyellow-na-savp1yellow",
+      "external_id": "169960"
+    },
+    {
+      "name": "Palit GeForce RTX 5050 Dual NVIDIA 8 GB GDDR6",
+      "price_cents": 49500,
+      "url": "https://datatronic.fi/komponentit/naytonohjaimet/palit-geforce-rtx-5050-dual-nvidia-8-gb-gddr6-palit-ne65050019p1-gb2070d",
+      "external_id": "171831"
+    },
+    {
+      "name": "Nvidia RTX PRO 5000 Blackwell 48 GB GDDR7",
+      "price_cents": 921900,
+      "url": "https://datatronic.fi/komponentit/naytonohjaimet/nvidia-rtx-pro-5000-blackwell-48-gb-gddr7-nvidia-900-5g153-2550-000",
+      "external_id": "177461"
+    }
+  ]
+}

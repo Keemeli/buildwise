@@ -1,0 +1,156 @@
+{
+  "shop": "Datatronic",
+  "category": "memory",
+  "page": 2,
+  "source_url": "https://datatronic.fi/muistit?page=2",
+  "fetched_at": "2026-11-12T14:46:42+00:00",
+  "site_total_products": 761,
+  "items_on_page": 24,
+  "raw_html": "data/raw/html/datatronic_memory_p2_2026-11-12_046804c091c3.html",
+  "items": [
+    {
+      "name": "Crucial CT16G4SFRA32A muistimoduuli 16 GB 1 x 16 GB DDR4 3200 MHz",
+      "price_cents": 14490,
+      "url": "https://datatronic.fi/komponentit/muistit/crucial-ct16g4sfra32a-muistimoduuli-16-gb-1-x-16-gb-ddr4-3200-mhz-crucial-ct16g4sfra32a",
+      "external_id": "39164"
+    },
+    {
+      "name": "Crucial CT16G48C40S5 muistimoduuli 16 GB 1 x 16 GB DDR5 4800 MHz",
+      "price_cents": 29790,
+      "url": "https://datatronic.fi/komponentit/muistit/crucial-ct16g48c40s5-muistimoduuli-16-gb-1-x-16-gb-ddr5-4800-mhz-crucial-ct16g48c40s5",
+      "external_id": "46746"
+    },
+    {
+      "name": "Corsair Vengeance CMK32GX5M2E6000Z36W muistimoduuli 32 GB 2 x 16 GB DDR5 6000 MHz",
+      "price_cents": 91990,
+      "url": "https://datatronic.fi/komponentit/muistit/corsair-vengeance-cmk32gx5m2e6000z36w-muistimoduuli-32-gb-2-x-16-gb-ddr5-6000-mhz-corsair-cmk32gx5m2e6000z36w",
+      "external_id": "165319"
+    },
+    {
+      "name": "Corsair Vengeance CMK32GX5M2B6000C38 muistimoduuli 32 GB 2 x 16 GB DDR5 6000 MHz",
+      "price_cents": 92900,
+      "url": "https://datatronic.fi/komponentit/muistit/corsair-vengeance-cmk32gx5m2b6000c38-muistimoduuli-32-gb-2-x-16-gb-ddr5-6000-mhz-corsair-cmk32gx5m2b6000c38",
+      "external_id": "151457"
+    },
+    {
+      "name": "Patriot Memory Viper Elite 5 Ultra VEUR532G6028K muistimoduuli 32 GB 2 x 16 GB DDR5 6000 MT/s 288-pin DIMM",
+      "price_cents": 67900,
+      "url": "https://datatronic.fi/komponentit/muistit/patriot-memory-viper-elite-5-ultra-veur532g6028k-muistimoduuli-32-gb-2-x-16-gb-ddr5-6000-mt-s-288-pin-dimm-patriot-memory-veur53",
+      "external_id": "180943"
+    },
+    {
+      "name": "ADATA AX5U6000C4816G-DTLABBK muistimoduuli 32 GB 2 x 16 GB DDR5 6000 MHz ECC",
+      "price_cents": 74500,
+      "url": "https://datatronic.fi/komponentit/muistit/adata-ax5u6000c4816g-dtlabbk-muistimoduuli-32-gb-2-x-16-gb-ddr5-6000-mhz-ecc-adata-ax5u6000c4816g-dtlabbk",
+      "external_id": "159793"
+    },
+    {
+      "name": "Corsair Vengeance muistimoduuli 64 GB 2 x 32 GB DDR5 6000 MT/s",
+      "price_cents": 168500,
+      "url": "https://datatronic.fi/komponentit/muistit/corsair-vengeance-muistimoduuli-64-gb-2-x-32-gb-ddr5-6000-mt-s-corsair-cmk64gx5m2d6000z40",
+      "external_id": "174505"
+    },
+    {
+      "name": "Kingston Technology FURY Beast muistimoduuli 8 GB 1 x 8 GB DDR5 5600 MHz",
+      "price_cents": 18090,
+      "url": "https://datatronic.fi/komponentit/muistit/kingston-technology-fury-beast-muistimoduuli-8-gb-1-x-8-gb-ddr5-5600-mhz-kingston-technology-kf556c40bb-8",
+      "external_id": "45808"
+    },
+    {
+      "name": "Crucial CT8G4DFRA32A muistimoduuli 8 GB 1 x 8 GB DDR4 3200 MHz",
+      "price_cents": 8790,
+      "url": "https://datatronic.fi/komponentit/muistit/crucial-ct8g4dfra32a-muistimoduuli-8-gb-1-x-8-gb-ddr4-3200-mhz-crucial-ct8g4dfra32a",
+      "external_id": "39182"
+    },
+    {
+      "name": "Lexar LD5U16G68C34LA-RGD muistimoduuli 32 GB 2 x 16 GB DDR5 288-pin DIMM ECC",
+      "price_cents": 59990,
+      "url": "https://datatronic.fi/komponentit/muistit/lexar-ld5u16g68c34la-rgd-muistimoduuli-32-gb-2-x-16-gb-ddr5-288-pin-dimm-ecc-lexar-ld5u16g68c34la-rgd",
+      "external_id": "178839"
+    },
+    {
+      "name": "Kingston Technology ValueRAM 4GB DDR3-1600 muistimoduuli 1 x 4 GB 1600 MHz",
+      "price_cents": 2690,
+      "url": "https://datatronic.fi/komponentit/muistit/kingston-technology-valueram-4gb-ddr3-1600-muistimoduuli-1-x-4-gb-1600-mhz-kingston-technology-kvr16s11s8-4",
+      "external_id": "2368"
+    },
+    {
+      "name": "G.Skill Ripjaws F4-3200C22D-16GRS SO-DIMM muistimoduuli 16 GB 2 x 8 GB DDR4 3200 MHz",
+      "price_cents": 15890,
+      "url": "https://datatronic.fi/komponentit/muistit/gskill-ripjaws-f4-3200c22d-16grs-so-dimm-muistimoduuli-16-gb-2-x-8-gb-ddr4-3200-mhz-gskill-f4-3200c22d-16grs",
+      "external_id": "40681"
+    },
+    {
+      "name": "Kingston Technology FURY Beast RGB muistimoduuli 16 GB 2 x 8 GB DDR5 ECC",
+      "price_cents": 43900,
+      "url": "https://datatronic.fi/komponentit/muistit/kingston-technology-fury-beast-rgb-muistimoduuli-16-gb-2-x-8-gb-ddr5-ecc-kingston-technology-kf560c30bbeak2-16",
+      "external_id": "155026"
+    },
+    {
+      "name": "G.Skill Aegis DDR4 muistimoduuli 16 GB 2 x 8 GB 2666 MHz",
+      "price_cents": 19290,
+      "url": "https://datatronic.fi/komponentit/muistit/gskill-aegis-ddr4-muistimoduuli-16-gb-2-x-8-gb-2666-mhz-gskill-f4-2666c19d-16gis",
+      "external_id": "6074"
+    },
+    {
+      "name": "G.Skill 16GB DDR4 muistimoduuli 2 x 8 GB 3200 MHz",
+      "price_cents": 15890,
+      "url": "https://datatronic.fi/komponentit/muistit/gskill-16gb-ddr4-muistimoduuli-2-x-8-gb-3200-mhz-gskill-f4-3200c16d-16gvkb",
+      "external_id": "6043"
+    },
+    {
+      "name": "Corsair Vengeance RGB CMH8GX5M1B5200C40 muistimoduuli 8 GB 1 x 8 GB DDR5 5200 MT/s 288-pin DIMM",
+      "price_cents": 17490,
+      "url": "https://datatronic.fi/komponentit/muistit/corsair-vengeance-rgb-cmh8gx5m1b5200c40-muistimoduuli-8-gb-1-x-8-gb-ddr5-5200-mt-s-288-pin-dimm-corsair-cmh8gx5m1b5200c40",
+      "external_id": "176728"
+    },
+    {
+      "name": "G.Skill F4-3600C16D-32GTZNC muistimoduuli 32 GB 2 x 16 GB DDR4 3600 MHz",
+      "price_cents": 34900,
+      "url": "https://datatronic.fi/komponentit/muistit/gskill-f4-3600c16d-32gtznc-muistimoduuli-32-gb-2-x-16-gb-ddr4-3600-mhz-gskill-f4-3600c16d-32gtznc",
+      "external_id": "6198"
+    },
+    {
+      "name": "G.Skill Ripjaws V 16GB DDR4-3200Mhz muistimoduuli 1 x 16 GB",
+      "price_cents": 15390,
+      "url": "https://datatronic.fi/komponentit/muistit/gskill-ripjaws-v-16gb-ddr4-3200mhz-muistimoduuli-1-x-16-gb-gskill-f4-3200c16s-16gvk",
+      "external_id": "6251"
+    },
+    {
+      "name": "Crucial CT32G4SFD832A muistimoduuli 32 GB 1 x 32 GB DDR4 3200 MHz",
+      "price_cents": 33900,
+      "url": "https://datatronic.fi/komponentit/muistit/crucial-ct32g4sfd832a-muistimoduuli-32-gb-1-x-32-gb-ddr4-3200-mhz-crucial-ct32g4sfd832a",
+      "external_id": "39177"
+    },
+    {
+      "name": "G.Skill Ripjaws V F4-3600C18D-16GVK muistimoduuli 16 GB 2 x 8 GB DDR4 3600 MHz",
+      "price_cents": 15490,
+      "url": "https://datatronic.fi/komponentit/muistit/gskill-ripjaws-v-f4-3600c18d-16gvk-muistimoduuli-16-gb-2-x-8-gb-ddr4-3600-mhz-gskill-f4-3600c18d-16gvk",
+      "external_id": "6262"
+    },
+    {
+      "name": "Goodram GR3200S464L22/16G muistimoduuli 16 GB 1 x 16 GB DDR4 260-pin SO-DIMM",
+      "price_cents": 13090,
+      "url": "https://datatronic.fi/komponentit/muistit/goodram-gr3200s464l22-16g-muistimoduuli-16-gb-1-x-16-gb-ddr4-260-pin-so-dimm-goodram-gr3200s464l22-16g",
+      "external_id": "178727"
+    },
+    {
+      "name": "Team Group DELTA RGB muistimoduuli 32 GB 2 x 16 GB DDR5 288-pin DIMM",
+      "price_cents": 64900,
+      "url": "https://datatronic.fi/komponentit/muistit/team-group-delta-rgb-muistimoduuli-32-gb-2-x-16-gb-ddr5-288-pin-dimm-team-group-ff4d532g6000hc30dc01",
+      "external_id": "178668"
+    },
+    {
+      "name": "Corsair CMK16GX5M2E6000Z36 muistimoduuli 16 GB 2 x 8 GB DDR5 6000 MT/s 288-pin DIMM",
+      "price_cents": 33900,
+      "url": "https://datatronic.fi/komponentit/muistit/corsair-cmk16gx5m2e6000z36-muistimoduuli-16-gb-2-x-8-gb-ddr5-6000-mt-s-288-pin-dimm-corsair-cmk16gx5m2e6000z36",
+      "external_id": "176550"
+    },
+    {
+      "name": "Kingston Technology FURY Beast muistimoduuli 16 GB 2 x 8 GB DDR5",
+      "price_cents": 42500,
+      "url": "https://datatronic.fi/komponentit/muistit/kingston-technology-fury-beast-muistimoduuli-16-gb-2-x-8-gb-ddr5-kingston-technology-kf560c30bbek2-16",
+      "external_id": "155030"
+    }
+  ]
+}

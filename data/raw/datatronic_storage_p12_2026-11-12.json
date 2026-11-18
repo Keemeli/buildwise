@@ -1,0 +1,156 @@
+{
+  "shop": "Datatronic",
+  "category": "storage",
+  "page": 12,
+  "source_url": "https://datatronic.fi/kiintolevyt-ssd-levyt?page=12",
+  "fetched_at": "2026-11-12T14:48:08+00:00",
+  "site_total_products": 589,
+  "items_on_page": 24,
+  "raw_html": "data/raw/html/datatronic_storage_p12_2026-11-12_0c76278e15bb.html",
+  "items": [
+    {
+      "name": "Transcend SSD230S 2.5\" 256 GB Serial ATA III 3D NAND",
+      "price_cents": 16090,
+      "url": "https://datatronic.fi/komponentit/kiintolevyt-ssd-levyt/ssd/transcend-ssd230s-25-256-gb-serial-ata-iii-3d-nand-transcend-ts256gssd230s",
+      "external_id": "5496"
+    },
+    {
+      "name": "Seagate Barracuda 2.5\" 2.5\" 1000 GB Serial ATA III",
+      "price_cents": 16590,
+      "url": "https://datatronic.fi/komponentit/kiintolevyt-ssd-levyt/hdd/seagate-barracuda-25-25-1000-gb-serial-ata-iii-seagate-st1000lm048",
+      "external_id": "14878"
+    },
+    {
+      "name": "ADATA SD620 2 TB musta, Punainen",
+      "price_cents": 40500,
+      "url": "https://datatronic.fi/komponentit/kiintolevyt-ssd-levyt/adata-sd620-2-tb-musta-punainen-adata-sd620-2tcrd",
+      "external_id": "154130"
+    },
+    {
+      "name": "GIGABYTE AORUS Gen4 7000E 1 TB M.2 PCI Express 4.0 NVMe 3D TLC NAND",
+      "price_cents": 22590,
+      "url": "https://datatronic.fi/komponentit/kiintolevyt-ssd-levyt/ssd/gigabyte-aorus-gen4-7000e-1-tb-m2-pci-express-40-nvme-3d-tlc-nand-gigabyte-ag470e1tb",
+      "external_id": "175496"
+    },
+    {
+      "name": "Seagate Exos X24 3.5\" 16 TB Serial ATA III",
+      "price_cents": 80900,
+      "url": "https://datatronic.fi/komponentit/kiintolevyt-ssd-levyt/hdd/seagate-exos-x24-35-16-tb-serial-ata-iii-seagate-st16000nm002h",
+      "external_id": "151185"
+    },
+    {
+      "name": "Western Digital Purple 3.5\" 3 TB Serial ATA III",
+      "price_cents": 33900,
+      "url": "https://datatronic.fi/komponentit/kiintolevyt-ssd-levyt/hdd/western-digital-purple-35-3-tb-serial-ata-iii-western-digital-wd30purx",
+      "external_id": "157824"
+    },
+    {
+      "name": "Corsair MP600 ELITE M.2 1 TB PCI Express 4.0 3D TLC NVMe",
+      "price_cents": 47900,
+      "url": "https://datatronic.fi/komponentit/kiintolevyt-ssd-levyt/ssd/corsair-mp600-elite-m2-1-tb-pci-express-40-3d-tlc-nvme-corsair-cssd-f1000gbmp600enh",
+      "external_id": "152281"
+    },
+    {
+      "name": "Corsair MP700 PRO Hydro X M.2 2 TB PCI Express 5.0 3D TLC NAND NVMe",
+      "price_cents": 57900,
+      "url": "https://datatronic.fi/komponentit/kiintolevyt-ssd-levyt/ssd/corsair-mp700-pro-hydro-x-m2-2-tb-pci-express-50-3d-tlc-nand-nvme-corsair-cssd-f2000gbmp700phx",
+      "external_id": "147717"
+    },
+    {
+      "name": "Seagate Exos X16 3.5\" 16 TB Serial ATA III",
+      "price_cents": 121900,
+      "url": "https://datatronic.fi/komponentit/kiintolevyt-ssd-levyt/hdd/seagate-exos-x16-35-16-tb-serial-ata-iii-seagate-st16000nm001g",
+      "external_id": "157605"
+    },
+    {
+      "name": "Crucial T710 2 TB M.2 PCI Express 5.0 NVMe",
+      "price_cents": 46900,
+      "url": "https://datatronic.fi/komponentit/kiintolevyt-ssd-levyt/crucial-t710-2-tb-m2-pci-express-50-nvme-crucial-ct2000t710ssd5",
+      "external_id": "173634"
+    },
+    {
+      "name": "Lenovo 00UP747 SSD-massamuisti 256 GB M.2 PCI Express 3.0 NVMe",
+      "price_cents": 17490,
+      "url": "https://datatronic.fi/komponentit/kiintolevyt-ssd-levyt/lenovo-00up747-ssd-massamuisti-256-gb-m2-pci-express-30-nvme-lenovo-00up747",
+      "external_id": "129164"
+    },
+    {
+      "name": "ADATA Ultimate SU630 2.5\" 480 GB SATA QLC 3D NAND",
+      "price_cents": 7190,
+      "url": "https://datatronic.fi/komponentit/kiintolevyt-ssd-levyt/ssd/adata-ultimate-su630-25-480-gb-sata-qlc-3d-nand-adata-asu630ss-480gq-r",
+      "external_id": "3679"
+    },
+    {
+      "name": "Corsair MP600 ELITE 4 TB M.2 PCI Express 4.0 NVMe 3D TLC NAND",
+      "price_cents": 124500,
+      "url": "https://datatronic.fi/komponentit/kiintolevyt-ssd-levyt/ssd/corsair-mp600-elite-4-tb-m2-pci-express-40-nvme-3d-tlc-nand-corsair-cssd-f4000gbmp600enh",
+      "external_id": "165270"
+    },
+    {
+      "name": "Western Digital SDPM1NS-001T-GBAND SSD-massamuisti 1000 GB",
+      "price_cents": 21390,
+      "url": "https://datatronic.fi/komponentit/kiintolevyt-ssd-levyt/ssd/western-digital-sdpm1ns-001t-gband-ssd-massamuisti-1000-gb-western-digital-sdpm1ns-001t-gband",
+      "external_id": "120798"
+    },
+    {
+      "name": "Lenovo 00UP651 SSD-massamuisti 256 GB M.2 PCI Express 3.0",
+      "price_cents": 16590,
+      "url": "https://datatronic.fi/komponentit/kiintolevyt-ssd-levyt/lenovo-00up651-ssd-massamuisti-256-gb-m2-pci-express-30-lenovo-00up651",
+      "external_id": "129162"
+    },
+    {
+      "name": "Seagate STJR1000400 pelikonsolin osa & lisätarvike",
+      "price_cents": 70500,
+      "url": "https://datatronic.fi/komponentit/kiintolevyt-ssd-levyt/seagate-stjr1000400-pelikonsolin-osa-lisatarvike-seagate-stjr1000400",
+      "external_id": "14998"
+    },
+    {
+      "name": "Seagate IronWolf Pro ST16000NT001 sisäinen kiintolevy 3.5\" 16000 GB",
+      "price_cents": 81500,
+      "url": "https://datatronic.fi/komponentit/kiintolevyt-ssd-levyt/hdd/seagate-ironwolf-pro-st16000nt001-sisainen-kiintolevy-35-16000-gb-seagate-st16000nt001",
+      "external_id": "48351"
+    },
+    {
+      "name": "Lenovo 4XB7A17073 SSD-massamuisti M.2 480 GB Serial ATA III",
+      "price_cents": 79900,
+      "url": "https://datatronic.fi/komponentit/kiintolevyt-ssd-levyt/ssd/lenovo-4xb7a17073-ssd-massamuisti-m2-480-gb-serial-ata-iii-lenovo-4xb7a17073",
+      "external_id": "12569"
+    },
+    {
+      "name": "Transcend 220S M.2 512 GB PCI Express 3.0 3D NAND NVMe",
+      "price_cents": 41900,
+      "url": "https://datatronic.fi/komponentit/kiintolevyt-ssd-levyt/ssd/transcend-220s-m2-512-gb-pci-express-30-3d-nand-nvme-transcend-ts512gmte220s",
+      "external_id": "5522"
+    },
+    {
+      "name": "Western Digital Blue 2.5\" 1000 GB Serial ATA III",
+      "price_cents": 23790,
+      "url": "https://datatronic.fi/komponentit/kiintolevyt-ssd-levyt/hdd/western-digital-blue-25-1000-gb-serial-ata-iii-western-digital-wd10spzx",
+      "external_id": "16060"
+    },
+    {
+      "name": "PNY CS3150 2 TB M.2 PCI Express 5.0 NVMe 3D NAND",
+      "price_cents": 40900,
+      "url": "https://datatronic.fi/komponentit/kiintolevyt-ssd-levyt/ssd/pny-cs3150-2-tb-m2-pci-express-50-nvme-3d-nand-pny-m280cs3150hsw-2tb-rb",
+      "external_id": "153160"
+    },
+    {
+      "name": "Transcend 825S M.2 1000 GB Serial ATA III 3D NAND",
+      "price_cents": 28290,
+      "url": "https://datatronic.fi/komponentit/kiintolevyt-ssd-levyt/ssd/transcend-825s-m2-1000-gb-serial-ata-iii-3d-nand-transcend-ts1tmts825s",
+      "external_id": "73594"
+    },
+    {
+      "name": "Patriot Memory PV593 4 TB M.2 PCI Express 5.0 NVMe 3D TLC NAND",
+      "price_cents": 137900,
+      "url": "https://datatronic.fi/komponentit/kiintolevyt-ssd-levyt/ssd/patriot-memory-pv593-4-tb-m2-pci-express-50-nvme-3d-tlc-nand-patriot-memory-pv593p4tbm28h",
+      "external_id": "178583"
+    },
+    {
+      "name": "Crucial T710 2 TB M.2 PCI Express 5.0 NVMe",
+      "price_cents": 50500,
+      "url": "https://datatronic.fi/komponentit/kiintolevyt-ssd-levyt/crucial-t710-2-tb-m2-pci-express-50-nvme-crucial-ct2000t710ssd8",
+      "external_id": "171261"
+    }
+  ]
+}

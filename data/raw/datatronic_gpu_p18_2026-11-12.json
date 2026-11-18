@@ -1,0 +1,156 @@
+{
+  "shop": "Datatronic",
+  "category": "gpu",
+  "page": 18,
+  "source_url": "https://datatronic.fi/naytonohjaimet?page=18",
+  "fetched_at": "2026-11-12T14:45:29+00:00",
+  "site_total_products": 480,
+  "items_on_page": 24,
+  "raw_html": "data/raw/html/datatronic_gpu_p18_2026-11-12_fcc3aea4f69a.html",
+  "items": [
+    {
+      "name": "DELL NVIDIA RTX 2000 Ada 16GB GDDR6",
+      "price_cents": 100900,
+      "url": "https://datatronic.fi/komponentit/naytonohjaimet/dell-nvidia-rtx-2000-ada-16gb-gddr6-dell-dell-hmx86",
+      "external_id": "176991"
+    },
+    {
+      "name": "NZXT Kraken Plus 360 RGB Suoritin All-in-one-nesteenjäähdytin musta 1 kpl",
+      "price_cents": 20290,
+      "url": "https://datatronic.fi/komponentit/naytonohjaimet/nzxt-kraken-plus-360-rgb-suoritin-all-in-one-nesteenjaahdytin-musta-1-kpl-nzxt-rl-kr360-b2",
+      "external_id": "170673"
+    },
+    {
+      "name": "DELL NVIDIA RTX A1000 8 GB GDDR6",
+      "price_cents": 56900,
+      "url": "https://datatronic.fi/komponentit/naytonohjaimet/dell-nvidia-rtx-a1000-8-gb-gddr6-dell-dell-wn82j",
+      "external_id": "176998"
+    },
+    {
+      "name": "INNO3D iChill GeForce RTX 5080 X3 V2 NVIDIA 16 GB GDDR7",
+      "price_cents": 1049900,
+      "url": "https://datatronic.fi/komponentit/naytonohjaimet/inno3d-ichill-geforce-rtx-5080-x3-v2-nvidia-16-gb-gddr7-inno3d-c50803-16d7x-176069r",
+      "external_id": "178794"
+    },
+    {
+      "name": "Sparkle Technology Arc Pro B70 Blower Intel 32 GB GDDR6",
+      "price_cents": 212500,
+      "url": "https://datatronic.fi/komponentit/naytonohjaimet/sparkle-technology-arc-pro-b70-blower-intel-32-gb-gddr6-sparkle-technology-spb70w-32g",
+      "external_id": "179524"
+    },
+    {
+      "name": "GIGABYTE GeForce RTX 5060 Ti EAGLE OC ICE 8G NVIDIA 8 GB GDDR7",
+      "price_cents": 75900,
+      "url": "https://datatronic.fi/komponentit/naytonohjaimet/gigabyte-geforce-rtx-5060-ti-eagle-oc-ice-8g-nvidia-8-gb-gddr7-gigabyte-gv-n506teagleoc-ice-8gd",
+      "external_id": "170295"
+    },
+    {
+      "name": "Noctua NA-FG1-12 SX5 Tietokoneen jäähdytysjärjestelmän osa ja lisätarvike Tuuletusritilä",
+      "price_cents": 2690,
+      "url": "https://datatronic.fi/komponentit/naytonohjaimet/noctua-na-fg1-12-sx5-tietokoneen-jaahdytysjarjestelman-osa-ja-lisatarvike-tuuletusritila-noctua-na-fg1-12-sx5",
+      "external_id": "169947"
+    },
+    {
+      "name": "Phanteks PH-GO360D30_DWT02 Tietokoneen jäähdytysjärjestelmä Suoritin All-in-one-nesteenjäähdytin 12 cm Musta 1 kpl",
+      "price_cents": 14790,
+      "url": "https://datatronic.fi/komponentit/naytonohjaimet/phanteks-ph-go360d30-dwt02-tietokoneen-jaahdytysjarjestelma-suoritin-all-in-one-nesteenjaahdytin-12-cm-musta-1-kpl-phanteks-ph-g",
+      "external_id": "170032"
+    },
+    {
+      "name": "PNY GeForce RTX 5070 Ti NVIDIA 16 GB GDDR7",
+      "price_cents": 169500,
+      "url": "https://datatronic.fi/komponentit/naytonohjaimet/pny-geforce-rtx-5070-ti-nvidia-16-gb-gddr7-pny-vcg5070t16tfxpb1",
+      "external_id": "178243"
+    },
+    {
+      "name": "Inno3D GeForce RTX 5070 Ti X3 OC NVIDIA 16 GB GDDR7",
+      "price_cents": 1049900,
+      "url": "https://datatronic.fi/komponentit/naytonohjaimet/inno3d-geforce-rtx-5070-ti-x3-oc-nvidia-16-gb-gddr7-inno3d-n507t3-16d7x-176068n",
+      "external_id": "167935"
+    },
+    {
+      "name": "PNY RTX PRO 5000 NVIDIA 48 GB GDDR7",
+      "price_cents": 947900,
+      "url": "https://datatronic.fi/komponentit/naytonohjaimet/pny-rtx-pro-5000-nvidia-48-gb-gddr7-pny-vcnrtxpro5000-sb",
+      "external_id": "177214"
+    },
+    {
+      "name": "Nvidia RTX PRO 4500 Blackwell Server Edition 32 GB GDDR7",
+      "price_cents": 584500,
+      "url": "https://datatronic.fi/komponentit/naytonohjaimet/nvidia-rtx-pro-4500-blackwell-server-edition-32-gb-gddr7-nvidia-900-2g147-0000-000",
+      "external_id": "180020"
+    },
+    {
+      "name": "Noctua NA-FG1-6 SX5 Tietokoneen jäähdytysjärjestelmän osa ja lisätarvike Tuuletusritilä",
+      "price_cents": 2290,
+      "url": "https://datatronic.fi/komponentit/naytonohjaimet/noctua-na-fg1-6-sx5-tietokoneen-jaahdytysjarjestelman-osa-ja-lisatarvike-tuuletusritila-noctua-na-fg1-6-sx5",
+      "external_id": "169952"
+    },
+    {
+      "name": "ASUS Dual -RTX5060-O8G-A NVIDIA GeForce RTX 5060 8 GB GDDR7",
+      "price_cents": 57900,
+      "url": "https://datatronic.fi/komponentit/naytonohjaimet/asus-dual-rtx5060-o8g-a-nvidia-geforce-rtx-5060-8-gb-gddr7-asus-90yv0ps0-m0na00",
+      "external_id": "181291"
+    },
+    {
+      "name": "Asrock Intel Arc Pro B65 Creator 32GB GDDR6",
+      "price_cents": 172900,
+      "url": "https://datatronic.fi/komponentit/naytonohjaimet/asrock-intel-arc-pro-b65-creator-32gb-gddr6-asrock-90-ga6mzz-00uanf",
+      "external_id": "181833"
+    },
+    {
+      "name": "Noctua NA-FG1-4 SX2 Tietokoneen jäähdytysjärjestelmän osa ja lisätarvike Tuuletusritilä",
+      "price_cents": 1690,
+      "url": "https://datatronic.fi/komponentit/naytonohjaimet/noctua-na-fg1-4-sx2-tietokoneen-jaahdytysjarjestelman-osa-ja-lisatarvike-tuuletusritila-noctua-na-fg1-4-sx2",
+      "external_id": "169951"
+    },
+    {
+      "name": "Sapphire NITRO+ RX 9070 XT AMD Radeon RX 9070 XT 16 GB GDDR6",
+      "price_cents": 136500,
+      "url": "https://datatronic.fi/komponentit/naytonohjaimet/sapphire-nitro-rx-9070-xt-amd-radeon-rx-9070-xt-16-gb-gddr6-sapphire-11348-08-20g",
+      "external_id": "179819"
+    },
+    {
+      "name": "ASUS Prime -RX9070XT-O16G-WHITE AMD Radeon RX 9070 XT 16 GB GDDR6",
+      "price_cents": 117500,
+      "url": "https://datatronic.fi/komponentit/naytonohjaimet/asus-prime-rx9070xt-o16g-white-amd-radeon-rx-9070-xt-16-gb-gddr6-asus-90yv0l75-m0na00",
+      "external_id": "173838"
+    },
+    {
+      "name": "PNY RTX PRO 5000 NVIDIA 72 GB GDDR7",
+      "price_cents": 1468500,
+      "url": "https://datatronic.fi/komponentit/naytonohjaimet/pny-rtx-pro-5000-nvidia-72-gb-gddr7-pny-vcnrtxpro5000-72-sb",
+      "external_id": "177218"
+    },
+    {
+      "name": "Lenovo NVIDIA RTX PRO 2000 Blackwell 16 GB GDDR7",
+      "price_cents": 114900,
+      "url": "https://datatronic.fi/komponentit/naytonohjaimet/lenovo-nvidia-rtx-pro-2000-blackwell-16-gb-gddr7-lenovo-4x61t95638",
+      "external_id": "178840"
+    },
+    {
+      "name": "Sparkle Technology Intel ARC B580 12 GB GDDR6",
+      "price_cents": 61500,
+      "url": "https://datatronic.fi/komponentit/naytonohjaimet/sparkle-technology-intel-arc-b580-12-gb-gddr6-sparkle-technology-sb580g-12g",
+      "external_id": "181038"
+    },
+    {
+      "name": "AMD Radeon PRO W7800 32 GB GDDR6",
+      "price_cents": 282500,
+      "url": "https://datatronic.fi/komponentit/naytonohjaimet/amd-radeon-pro-w7800-32-gb-gddr6-amd-100-300000075",
+      "external_id": "181836"
+    },
+    {
+      "name": "NVIDIA RTX PRO 4500 Blackwell Server Edition 32GB GDDR7",
+      "price_cents": 477500,
+      "url": "https://datatronic.fi/komponentit/naytonohjaimet/nvidia-rtx-pro-4500-blackwell-server-edition-32gb-gddr7-900-2g147-0000-000",
+      "external_id": "180021"
+    },
+    {
+      "name": "RTX PRO 5000 72GB Blackwell Retail",
+      "price_cents": 1515500,
+      "url": "https://datatronic.fi/komponentit/naytonohjaimet/rtx-pro-5000-72gb-blackwell-retail-900-5g153-2570-000",
+      "external_id": "180019"
+    }
+  ]
+}

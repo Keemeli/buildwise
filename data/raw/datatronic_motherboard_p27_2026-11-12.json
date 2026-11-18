@@ -1,0 +1,156 @@
+{
+  "shop": "Datatronic",
+  "category": "motherboard",
+  "page": 27,
+  "source_url": "https://datatronic.fi/emolevyt?page=27",
+  "fetched_at": "2026-11-12T14:46:38+00:00",
+  "site_total_products": 657,
+  "items_on_page": 24,
+  "raw_html": "data/raw/html/datatronic_motherboard_p27_2026-11-12_a8962fa0a496.html",
+  "items": [
+    {
+      "name": "GIGABYTE X870 AORUS INFINITY emolevy AMD X870 Pistoke AM5 Laajennettu ATX",
+      "price_cents": 72900,
+      "url": "https://datatronic.fi/komponentit/emolevyt/gigabyte-x870-aorus-infinity-emolevy-amd-x870-pistoke-am5-laajennettu-atx-gigabyte-x870-aorus-infinity",
+      "external_id": "182383"
+    },
+    {
+      "name": "ASUS ROG STRIX X870-I GAMING WIFI AMD X870 Pistoke AM5 Mini ITX",
+      "price_cents": 48900,
+      "url": "https://datatronic.fi/komponentit/emolevyt/asus-rog-strix-x870-i-gaming-wifi-amd-x870-pistoke-am5-mini-itx-asus-90mb1iw0-m0eay0",
+      "external_id": "164678"
+    },
+    {
+      "name": "Asrock TURIN2D24G-2L+/500W emolevy AMD SoC Socket SP5",
+      "price_cents": 155500,
+      "url": "https://datatronic.fi/komponentit/emolevyt/asrock-turin2d24g-2l-500w-emolevy-amd-soc-socket-sp5-asrock-turin2d24g-2l-500w",
+      "external_id": "182577"
+    },
+    {
+      "name": "GIGABYTE MC62-G40 AMD WRX80 Pistoke sWRX8 SSI CEB",
+      "price_cents": 138900,
+      "url": "https://datatronic.fi/komponentit/emolevyt/gigabyte-mc62-g40-amd-wrx80-pistoke-swrx8-ssi-ceb-gigabyte-9mc62g40nr-00",
+      "external_id": "184544"
+    },
+    {
+      "name": "ASUS PRIME H610M-E D4-CSM Intel H610 LGA 1700 mikro ATX",
+      "price_cents": 10990,
+      "url": "https://datatronic.fi/komponentit/emolevyt/asus-prime-h610m-e-d4-csm-intel-h610-lga-1700-mikro-atx-asus-90mb19n0-m1eayc",
+      "external_id": "39073"
+    },
+    {
+      "name": "GIGABYTE B550 X GAMING WIFI7 AMD B550 Kanta AM4 ATX",
+      "price_cents": 15690,
+      "url": "https://datatronic.fi/komponentit/emolevyt/gigabyte-b550-x-gaming-wifi7-amd-b550-kanta-am4-atx-gigabyte-b550-x-gaming-wf7",
+      "external_id": "181923"
+    },
+    {
+      "name": "ASUS PRO WS W890-SAGE Intel W890 LGA 4710-2 CEB",
+      "price_cents": 100900,
+      "url": "https://datatronic.fi/komponentit/emolevyt/asus-pro-ws-w890-sage-intel-w890-lga-4710-2-ceb-asus-90mb1mw0-m0eay0",
+      "external_id": "177795"
+    },
+    {
+      "name": "ASRock B850M Challenger WiFi White - motherboard - micro ATX - Socket AM5 - AMD B850",
+      "price_cents": 16090,
+      "url": "https://datatronic.fi/komponentit/emolevyt/asrock-b850m-challenger-wifi-white-motherboard-micro-atx-socket-am5-amd-b850-90-mxbu50-a0uayz",
+      "external_id": "179155"
+    },
+    {
+      "name": "Arozzi Zona Round Floor Pad Monivärinen Mikrokuitu, Kumi",
+      "price_cents": 5590,
+      "url": "https://datatronic.fi/komponentit/emolevyt/arozzi-zona-round-floor-pad-monivarinen-mikrokuitu-kumi-arozzi-az-zona-pad-chaos",
+      "external_id": "169522"
+    },
+    {
+      "name": "ASUS PRIME H610M-A R2.0               (INTEL1700DDR5mATX)",
+      "price_cents": 10890,
+      "url": "https://datatronic.fi/komponentit/emolevyt/asus-prime-h610m-a-r20-intel1700ddr5matx-90mb1mj0-m0eay0",
+      "external_id": "179193"
+    },
+    {
+      "name": "GIGABYTE H610M D3W emolevy Intel H610 LGA 1700 mikro ATX",
+      "price_cents": 8090,
+      "url": "https://datatronic.fi/komponentit/emolevyt/gigabyte-h610m-d3w-emolevy-intel-h610-lga-1700-mikro-atx-gigabyte-h610m-d3w",
+      "external_id": "174316"
+    },
+    {
+      "name": "ASRock B550M-P                   AM4 mATX",
+      "price_cents": 9090,
+      "url": "https://datatronic.fi/komponentit/emolevyt/asrock-b550m-p-am4-matx-90-mxbv10-a0uayz",
+      "external_id": "180469"
+    },
+    {
+      "name": "Biostar A620MT-E 2.0 (AM5) (D)",
+      "price_cents": 8190,
+      "url": "https://datatronic.fi/komponentit/emolevyt/biostar-a620mt-e-20-am5-d-a620mt-e-20",
+      "external_id": "184758"
+    },
+    {
+      "name": "ASUS ROG STRIX B860-F GAMING WIFI Intel B860 LGA 1851 (Socket V1) ATX",
+      "price_cents": 30500,
+      "url": "https://datatronic.fi/komponentit/emolevyt/asus-rog-strix-b860-f-gaming-wifi-intel-b860-lga-1851-socket-v1-atx-asus-90mb1jg0-m0eay0",
+      "external_id": "166050"
+    },
+    {
+      "name": "ASUS PRIME Z790M-PLUS Intel Z790 LGA 1700 mikro ATX",
+      "price_cents": 20490,
+      "url": "https://datatronic.fi/komponentit/emolevyt/asus-prime-z790m-plus-intel-z790-lga-1700-mikro-atx-asus-90mb1e70-m0eay0",
+      "external_id": "109177"
+    },
+    {
+      "name": "GIGABYTE H610M D3W DDR4 emolevy Intel H610 LGA 1700 mikro ATX",
+      "price_cents": 13390,
+      "url": "https://datatronic.fi/komponentit/emolevyt/gigabyte-h610m-d3w-ddr4-emolevy-intel-h610-lga-1700-mikro-atx-gigabyte-h610m-d3w-ddr4",
+      "external_id": "180521"
+    },
+    {
+      "name": "ASUS Z13PE-D16/ASMB11 Intel C741 LGA 4677 (Socket E) Laajennettu ATX",
+      "price_cents": 127900,
+      "url": "https://datatronic.fi/komponentit/emolevyt/asus-z13pe-d16-asmb11-intel-c741-lga-4677-socket-e-laajennettu-atx-asus-90sb0ca0-m0uay2",
+      "external_id": "184652"
+    },
+    {
+      "name": "Gigabyte A620M H (rev. 1.0) AMD A620 Pistoke AM5 mikro ATX",
+      "price_cents": 8190,
+      "url": "https://datatronic.fi/komponentit/emolevyt/gigabyte-a620m-h-rev-10-amd-a620-pistoke-am5-mikro-atx-gigabyte-a620m-h",
+      "external_id": "127711"
+    },
+    {
+      "name": "Asrock A620AM-P WIFI AMD A620A Pistoke AM5 mikro ATX",
+      "price_cents": 9390,
+      "url": "https://datatronic.fi/komponentit/emolevyt/asrock-a620am-p-wifi-amd-a620a-pistoke-am5-mikro-atx-asrock-90-mxbw30-a0uayz",
+      "external_id": "185271"
+    },
+    {
+      "name": "GIGABYTE B840M D3HP WIFI6E AMD B840 Pistoke AM5 mikro ATX",
+      "price_cents": 12890,
+      "url": "https://datatronic.fi/komponentit/emolevyt/gigabyte-b840m-d3hp-wifi6e-amd-b840-pistoke-am5-mikro-atx-gigabyte-b840m-d3hp-wf6e",
+      "external_id": "176519"
+    },
+    {
+      "name": "Arozzi Zona Round Floor Pad Musta, Marmorinvärinen Mikrokuitu, Kumi",
+      "price_cents": 5590,
+      "url": "https://datatronic.fi/komponentit/emolevyt/arozzi-zona-round-floor-pad-musta-marmorinvarinen-mikrokuitu-kumi-arozzi-az-zona-pad-bkm",
+      "external_id": "169521"
+    },
+    {
+      "name": "MSI MEG X870E GODLIKE MAX (X870EAM5ATXDDR5)",
+      "price_cents": 183500,
+      "url": "https://datatronic.fi/komponentit/emolevyt/msi-meg-x870e-godlike-max-x870eam5atxddr5-7e48-014r",
+      "external_id": "185801"
+    },
+    {
+      "name": "GIGABYTE Z890 D PLUS emolevy Intel Z890 LGA 1851 (Socket V1) ATX",
+      "price_cents": 20490,
+      "url": "https://datatronic.fi/komponentit/emolevyt/gigabyte-z890-d-plus-emolevy-intel-z890-lga-1851-socket-v1-atx-gigabyte-z890-d-plus",
+      "external_id": "179462"
+    },
+    {
+      "name": "MSI Pro Z890-S WiFi6E           (Z890S1851ATXDDR5)",
+      "price_cents": 23790,
+      "url": "https://datatronic.fi/komponentit/emolevyt/msi-pro-z890-s-wifi6e-z890s1851atxddr5-7e54-010r",
+      "external_id": "179804"
+    }
+  ]
+}

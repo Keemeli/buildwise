@@ -1,0 +1,156 @@
+{
+  "shop": "Datatronic",
+  "category": "case",
+  "page": 8,
+  "source_url": "https://datatronic.fi/kotelot?page=8",
+  "fetched_at": "2026-11-12T14:48:56+00:00",
+  "site_total_products": 620,
+  "items_on_page": 24,
+  "raw_html": "data/raw/html/datatronic_case_p8_2026-11-12_0a33ccc75d3a.html",
+  "items": [
+    {
+      "name": "Fractal Design North Momentum Edition Midi Tower Musta",
+      "price_cents": 18090,
+      "url": "https://datatronic.fi/komponentit/kotelot/fractal-design-north-momentum-edition-midi-tower-musta-fractal-design-fd-c-nor1c-05",
+      "external_id": "175074"
+    },
+    {
+      "name": "ENDORFY Arx 500 Air tietokonekotelo Midi Tower Musta",
+      "price_cents": 8492,
+      "url": "https://datatronic.fi/komponentit/kotelot/endorfy-arx-500-air-tietokonekotelo-midi-tower-musta-endorfy-ey2a010",
+      "external_id": "129028"
+    },
+    {
+      "name": "Corsair 3500X Midi Tower Valkoinen",
+      "price_cents": 8690,
+      "url": "https://datatronic.fi/komponentit/kotelot/corsair-3500x-midi-tower-valkoinen-corsair-cc-9011277-ww",
+      "external_id": "156297"
+    },
+    {
+      "name": "Lian Li Lancool 205M Mesh Midi Tower musta",
+      "price_cents": 7390,
+      "url": "https://datatronic.fi/komponentit/kotelot/lian-li-lancool-205m-mesh-midi-tower-musta-lian-li-lancool-205m-mesh-black",
+      "external_id": "67137"
+    },
+    {
+      "name": "Corsair FRAME 4000D RS Midi Tower Valkoinen",
+      "price_cents": 10190,
+      "url": "https://datatronic.fi/komponentit/kotelot/corsair-frame-4000d-rs-midi-tower-valkoinen-corsair-cc-9011313-ww",
+      "external_id": "165268"
+    },
+    {
+      "name": "Cooler Master Silencio S600 Midi Tower musta",
+      "price_cents": 9190,
+      "url": "https://datatronic.fi/komponentit/kotelot/cooler-master-silencio-s600-midi-tower-musta-cooler-master-mcs-s600-kg5n-s00",
+      "external_id": "7428"
+    },
+    {
+      "name": "Kolink Rocket Heavy Mini Tower Harmaa",
+      "price_cents": 6090,
+      "url": "https://datatronic.fi/komponentit/kotelot/kolink-rocket-heavy-mini-tower-harmaa-kolink-rocket-heavy",
+      "external_id": "45862"
+    },
+    {
+      "name": "ASUS Prime AP201 MicroATX Mini Tower Valkoinen",
+      "price_cents": 10590,
+      "url": "https://datatronic.fi/komponentit/kotelot/asus-prime-ap201-microatx-mini-tower-valkoinen-asus-90dc00g3-b39000",
+      "external_id": "47516"
+    },
+    {
+      "name": "Phanteks NV5 MKII Midi Tower musta",
+      "price_cents": 12390,
+      "url": "https://datatronic.fi/komponentit/kotelot/phanteks-nv5-mkii-midi-tower-musta-phanteks-ph-nv523tg-dbk02",
+      "external_id": "168581"
+    },
+    {
+      "name": "Phanteks Evolv X2 Midi Tower Valkoinen",
+      "price_cents": 13990,
+      "url": "https://datatronic.fi/komponentit/kotelot/phanteks-evolv-x2-midi-tower-valkoinen-phanteks-ph-es524xtg-dmw01",
+      "external_id": "166721"
+    },
+    {
+      "name": "Fractal Design Torrent Valkoinen",
+      "price_cents": 27990,
+      "url": "https://datatronic.fi/komponentit/kotelot/fractal-design-torrent-valkoinen-fractal-design-fd-c-tor1a-07",
+      "external_id": "112222"
+    },
+    {
+      "name": "Fractal Design Epoch XL Tower musta",
+      "price_cents": 13290,
+      "url": "https://datatronic.fi/komponentit/kotelot/fractal-design-epoch-xl-tower-musta-fractal-design-fd-c-epo1x-01",
+      "external_id": "174685"
+    },
+    {
+      "name": "Fractal Design Terra Small Form Factor (SFF) Hopea",
+      "price_cents": 23690,
+      "url": "https://datatronic.fi/komponentit/kotelot/fractal-design-terra-small-form-factor-sff-hopea-fractal-design-fd-c-ter1n-02",
+      "external_id": "127070"
+    },
+    {
+      "name": "Phanteks XT M3 RGB Micro Tower Valkoinen",
+      "price_cents": 7090,
+      "url": "https://datatronic.fi/komponentit/kotelot/phanteks-xt-m3-rgb-micro-tower-valkoinen-phanteks-ph-xt325m-dwt01",
+      "external_id": "171621"
+    },
+    {
+      "name": "DeepCool FL12R Tietokonekotelo Tuuletin 12 cm musta 1 kpl",
+      "price_cents": 1890,
+      "url": "https://datatronic.fi/komponentit/kotelot/deepcool-fl12r-tietokonekotelo-tuuletin-12-cm-musta-1-kpl-deepcool-r-fl12r-bkapn1-g",
+      "external_id": "169100"
+    },
+    {
+      "name": "Chieftec AS-02B-TG-OP tietokonekotelo Midi Tower musta",
+      "price_cents": 3490,
+      "url": "https://datatronic.fi/komponentit/kotelot/chieftec-as-02b-tg-op-tietokonekotelo-midi-tower-musta-chieftec-as-02b-tg-op",
+      "external_id": "171449"
+    },
+    {
+      "name": "Jonsbo N4 WHITE tietokonekotelo Micro Tower Valkoinen",
+      "price_cents": 11490,
+      "url": "https://datatronic.fi/komponentit/kotelot/jonsbo-n4-white-tietokonekotelo-micro-tower-valkoinen-jonsbo-n4-white",
+      "external_id": "163063"
+    },
+    {
+      "name": "Fractal Design Meshify 2 Musta",
+      "price_cents": 17590,
+      "url": "https://datatronic.fi/komponentit/kotelot/fractal-design-meshify-2-musta-fractal-design-fd-c-mes2a-01",
+      "external_id": "5015"
+    },
+    {
+      "name": "Jonsbo TK-1 2.0 Mini Tower Musta",
+      "price_cents": 12690,
+      "url": "https://datatronic.fi/komponentit/kotelot/jonsbo-tk-1-20-mini-tower-musta-jonsbo-tk-1-black",
+      "external_id": "151312"
+    },
+    {
+      "name": "Fractal Design Epoch XL Tower musta",
+      "price_cents": 13990,
+      "url": "https://datatronic.fi/komponentit/kotelot/fractal-design-epoch-xl-tower-musta-fractal-design-fd-c-epo1x-02",
+      "external_id": "174686"
+    },
+    {
+      "name": "Fractal Design Torrent Musta",
+      "price_cents": 23490,
+      "url": "https://datatronic.fi/komponentit/kotelot/fractal-design-torrent-musta-fractal-design-fd-c-tor1a-05",
+      "external_id": "33035"
+    },
+    {
+      "name": "Cooler Master N200 Mini Tower Musta",
+      "price_cents": 5490,
+      "url": "https://datatronic.fi/komponentit/kotelot/cooler-master-n200-mini-tower-musta-cooler-master-nse-200-kkn1",
+      "external_id": "48102"
+    },
+    {
+      "name": "Jonsbo Z20 Black Mini Tower musta",
+      "price_cents": 8690,
+      "url": "https://datatronic.fi/komponentit/kotelot/jonsbo-z20-black-mini-tower-musta-jonsbo-z20-black",
+      "external_id": "163994"
+    },
+    {
+      "name": "DeepCool CH160 PLUS Small Form Factor (SFF) musta",
+      "price_cents": 6090,
+      "url": "https://datatronic.fi/komponentit/kotelot/deepcool-ch160-plus-small-form-factor-sff-musta-deepcool-r-ch160-bkngm0-g",
+      "external_id": "174447"
+    }
+  ]
+}

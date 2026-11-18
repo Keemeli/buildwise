@@ -1,0 +1,132 @@
+{
+  "shop": "Datatronic",
+  "category": "psu",
+  "page": 28,
+  "source_url": "https://datatronic.fi/virtalahteet?page=28",
+  "fetched_at": "2026-11-12T14:50:18+00:00",
+  "site_total_products": 668,
+  "items_on_page": 20,
+  "raw_html": "data/raw/html/datatronic_psu_p28_2026-11-12_9bcbd374612a.html",
+  "items": [
+    {
+      "name": "ASUS TUF-GAMING-750G-EVO virtalähdeyksikkö 750 W 20+4 pin ATX ATX Musta",
+      "price_cents": 12190,
+      "url": "https://datatronic.fi/komponentit/virtalahteet/asus-tuf-gaming-750g-evo-virtalahdeyksikko-750-w-20-4-pin-atx-atx-musta-asus-90ye00sb-b0na00",
+      "external_id": "177708"
+    },
+    {
+      "name": "FSP Vita virtalähdeyksikkö 850 W 20+4 pin ATX ATX musta",
+      "price_cents": 7090,
+      "url": "https://datatronic.fi/komponentit/virtalahteet/fsp-vita-virtalahdeyksikko-850-w-20-4-pin-atx-atx-musta-fsp-ppa8504501",
+      "external_id": "175597"
+    },
+    {
+      "name": "Lian Li EDGE Platinum V2 1000W with EDGE Hub V2 Black",
+      "price_cents": 15890,
+      "url": "https://datatronic.fi/komponentit/virtalahteet/lian-li-edge-platinum-v2-1000w-with-edge-hub-v2-black-eg1000p-black",
+      "external_id": "184536"
+    },
+    {
+      "name": "Lian Li EDGE Platinum V2 1200W with EDGE Hub V2 White",
+      "price_cents": 16690,
+      "url": "https://datatronic.fi/komponentit/virtalahteet/lian-li-edge-platinum-v2-1200w-with-edge-hub-v2-white-eg1200p-white",
+      "external_id": "184537"
+    },
+    {
+      "name": "Lian Li EDGE Platinum V2 1200W with EDGE Hub V2 Black",
+      "price_cents": 16590,
+      "url": "https://datatronic.fi/komponentit/virtalahteet/lian-li-edge-platinum-v2-1200w-with-edge-hub-v2-black-eg1200p-black",
+      "external_id": "184538"
+    },
+    {
+      "name": "EDGE Platinum V2 1350W with EDGE Hub ADV White",
+      "price_cents": 23790,
+      "url": "https://datatronic.fi/komponentit/virtalahteet/edge-platinum-v2-1350w-with-edge-hub-adv-white-eg1350p-white",
+      "external_id": "184539"
+    },
+    {
+      "name": "MSI PRO A850PL PCIE5 850W 120mm 80plus Platinum aPFC power supply",
+      "price_cents": 17190,
+      "url": "https://datatronic.fi/komponentit/virtalahteet/msi-pro-a850pl-pcie5-850w-120mm-80plus-platinum-apfc-power-supply-pro-a850pl-pcie5",
+      "external_id": "184612"
+    },
+    {
+      "name": "ASRock Pro Series PRO-M850G 850W ATX 80+ Gold black",
+      "price_cents": 11290,
+      "url": "https://datatronic.fi/komponentit/virtalahteet/asrock-pro-series-pro-m850g-850w-atx-80-gold-black-90-uxr085-gfeaa2",
+      "external_id": "184684"
+    },
+    {
+      "name": "MSI Netzteil PRO A1000PL PCI5        1000Watt",
+      "price_cents": 20490,
+      "url": "https://datatronic.fi/komponentit/virtalahteet/msi-netzteil-pro-a1000pl-pci5-1000watt-306-7zplx11-hd8",
+      "external_id": "184614"
+    },
+    {
+      "name": "PC- Netzteil MSI MAG A500N-H S01 500W",
+      "price_cents": 4490,
+      "url": "https://datatronic.fi/komponentit/virtalahteet/pc-netzteil-msi-mag-a500n-h-s01-500w-306-7zpgx91-hh9",
+      "external_id": "184574"
+    },
+    {
+      "name": "ENDORFY Supremo FM6 850 W virtalähdeyksikkö 24-pin ATX ATX musta",
+      "price_cents": 12090,
+      "url": "https://datatronic.fi/komponentit/virtalahteet/endorfy-supremo-fm6-850-w-virtalahdeyksikko-24-pin-atx-atx-musta-endorfy-ey7a012",
+      "external_id": "169106"
+    },
+    {
+      "name": "Chieftec Smart GPF-500G virtalähdeyksikkö 500 W 24-pin ATX TFX Musta",
+      "price_cents": 7990,
+      "url": "https://datatronic.fi/komponentit/virtalahteet/chieftec-smart-gpf-500g-virtalahdeyksikko-500-w-24-pin-atx-tfx-musta-chieftec-gpf-500g",
+      "external_id": "184616"
+    },
+    {
+      "name": "Cooler Master X Silent Edge Platinum 1100 230V virtalähdeyksikkö 1100 W 24-pin ATX ATX Musta",
+      "price_cents": 29090,
+      "url": "https://datatronic.fi/komponentit/virtalahteet/cooler-master-x-silent-edge-platinum-1100-230v-virtalahdeyksikko-1100-w-24-pin-atx-atx-musta-cooler-master-mps-b001-azbp-nbeu",
+      "external_id": "184625"
+    },
+    {
+      "name": "ASUS Pro WS 1600W Platinum virtalähdeyksikkö 20+4 pin ATX ATX Musta",
+      "price_cents": 44900,
+      "url": "https://datatronic.fi/komponentit/virtalahteet/asus-pro-ws-1600w-platinum-virtalahdeyksikko-20-4-pin-atx-atx-musta-asus-90ye00z2-b0na00",
+      "external_id": "184629"
+    },
+    {
+      "name": "ASUS PRIME 550W PSU BLACK",
+      "price_cents": 6090,
+      "url": "https://datatronic.fi/komponentit/virtalahteet/asus-prime-550w-psu-black-90ye00y2-b0na00",
+      "external_id": "184631"
+    },
+    {
+      "name": "Gamer Storm PK750D virtalähdeyksikkö 550 W 20+4 pin ATX ATX musta",
+      "price_cents": 6490,
+      "url": "https://datatronic.fi/komponentit/virtalahteet/gamer-storm-pk750d-virtalahdeyksikko-550-w-20-4-pin-atx-atx-musta-gamer-storm-r-pk750d-fa0b-jgeu",
+      "external_id": "169110"
+    },
+    {
+      "name": "Phanteks PH-P1200GH_BK02_EU virtalähdeyksikkö 1200 W 18+10 pin ATX ATX Musta",
+      "price_cents": 15390,
+      "url": "https://datatronic.fi/komponentit/virtalahteet/phanteks-ph-p1200gh-bk02-eu-virtalahdeyksikko-1200-w-18-10-pin-atx-atx-musta-phanteks-ph-p1200gh-bk02-eu",
+      "external_id": "185632"
+    },
+    {
+      "name": "Corsair RM Series RM1200e virtalähdeyksikkö 1200 W 24-pin ATX ATX Musta",
+      "price_cents": 23590,
+      "url": "https://datatronic.fi/komponentit/virtalahteet/corsair-rm-series-rm1200e-virtalahdeyksikko-1200-w-24-pin-atx-atx-musta-corsair-cp-9020316-eu",
+      "external_id": "185664"
+    },
+    {
+      "name": "DELL 450-AMIH virtalähdeyksikkö 700 W",
+      "price_cents": 42900,
+      "url": "https://datatronic.fi/komponentit/virtalahteet/dell-450-amih-virtalahdeyksikko-700-w-dell-450-amih",
+      "external_id": "182067"
+    },
+    {
+      "name": "MSI MAG A750BN PCIE5 II virtalähdeyksikkö 750 W 24-pin ATX ATX Musta",
+      "price_cents": 6690,
+      "url": "https://datatronic.fi/komponentit/virtalahteet/msi-mag-a750bn-pcie5-ii-virtalahdeyksikko-750-w-24-pin-atx-atx-musta-msi-mag-a750bn-pcie5-ii",
+      "external_id": "185788"
+    }
+  ]
+}

@@ -1,0 +1,156 @@
+{
+  "shop": "Datatronic",
+  "category": "storage",
+  "page": 21,
+  "source_url": "https://datatronic.fi/kiintolevyt-ssd-levyt?page=21",
+  "fetched_at": "2026-11-12T14:48:32+00:00",
+  "site_total_products": 589,
+  "items_on_page": 24,
+  "raw_html": "data/raw/html/datatronic_storage_p21_2026-11-12_cf0d1693001c.html",
+  "items": [
+    {
+      "name": "SanDisk Optimus GX PRO 8100 8 TB M.2 PCI Express 5.0 NVMe TLC 3D NAND",
+      "price_cents": 274900,
+      "url": "https://datatronic.fi/komponentit/kiintolevyt-ssd-levyt/ssd/sandisk-optimus-gx-pro-8100-8-tb-m2-pci-express-50-nvme-tlc-3d-nand-sandisk-sdsp82800tah-000e0",
+      "external_id": "181155"
+    },
+    {
+      "name": "Synology SNV3410 M.2 400 GB PCI Express 3.0 NVMe",
+      "price_cents": 52900,
+      "url": "https://datatronic.fi/komponentit/kiintolevyt-ssd-levyt/ssd/synology-snv3410-m2-400-gb-pci-express-30-nvme-synology-snv3410-400g",
+      "external_id": "123755"
+    },
+    {
+      "name": "Transcend SSD452K2 512 GB 2.5\" Serial ATA III 3D NAND",
+      "price_cents": 117500,
+      "url": "https://datatronic.fi/komponentit/kiintolevyt-ssd-levyt/ssd/transcend-ssd452k2-512-gb-25-serial-ata-iii-3d-nand-transcend-ts512gssd452k2",
+      "external_id": "181635"
+    },
+    {
+      "name": "Samsung 4TB 9100 PRO with Heatsink",
+      "price_cents": 107900,
+      "url": "https://datatronic.fi/komponentit/kiintolevyt-ssd-levyt/ssd/samsung-4tb-9100-pro-with-heatsink-samsung-mz-vap4t0cw",
+      "external_id": "170074"
+    },
+    {
+      "name": "Xilence XF065 Tietokonekotelo Ilmanjäähdytin 12 cm musta 1 kpl",
+      "price_cents": 890,
+      "url": "https://datatronic.fi/komponentit/kiintolevyt-ssd-levyt/ssd/xilence-xf065-tietokonekotelo-ilmanjaahdytin-12-cm-musta-1-kpl-xilence-xpf120rargb",
+      "external_id": "168897"
+    },
+    {
+      "name": "Samsung 9100 PRO 8 TB M.2 PCI Express 5.0 NVMe V-NAND TLC",
+      "price_cents": 231900,
+      "url": "https://datatronic.fi/komponentit/kiintolevyt-ssd-levyt/ssd/samsung-9100-pro-8-tb-m2-pci-express-50-nvme-v-nand-tlc-samsung-mz-vap8t0cw",
+      "external_id": "184154"
+    },
+    {
+      "name": "Crucial T710 4 TB M.2 PCI Express 5.0 NVMe",
+      "price_cents": 81500,
+      "url": "https://datatronic.fi/komponentit/kiintolevyt-ssd-levyt/crucial-t710-4-tb-m2-pci-express-50-nvme-crucial-ct4000t710ssd5",
+      "external_id": "173168"
+    },
+    {
+      "name": "PNY CS2140 500 GB M.2 PCI Express 4.0 NVMe 3D NAND",
+      "price_cents": 10590,
+      "url": "https://datatronic.fi/komponentit/kiintolevyt-ssd-levyt/ssd/pny-cs2140-500-gb-m2-pci-express-40-nvme-3d-nand-pny-m280cs2140-500-rb",
+      "external_id": "182541"
+    },
+    {
+      "name": "Synology HAT5300-16T sisäinen kiintolevy 3.5\" 16000 GB Serial ATA III",
+      "price_cents": 102900,
+      "url": "https://datatronic.fi/komponentit/kiintolevyt-ssd-levyt/hdd/synology-hat5300-16t-sisainen-kiintolevy-35-16000-gb-serial-ata-iii-synology-hat5300-16t",
+      "external_id": "118286"
+    },
+    {
+      "name": "Western Digital Ultrastar 0B47076 sisäinen kiintolevy 4 TB 7200 RPM 256 MB 3.5\" SATA",
+      "price_cents": 30900,
+      "url": "https://datatronic.fi/komponentit/kiintolevyt-ssd-levyt/hdd/western-digital-ultrastar-0b47076-sisainen-kiintolevy-4-tb-7200-rpm-256-mb-35-sata-western-digital-0b47076",
+      "external_id": "180256"
+    },
+    {
+      "name": "Transcend 830S M.2 512 GB Serial ATA III 3D NAND",
+      "price_cents": 35900,
+      "url": "https://datatronic.fi/komponentit/kiintolevyt-ssd-levyt/ssd/transcend-830s-m2-512-gb-serial-ata-iii-3d-nand-transcend-ts512gmts830s",
+      "external_id": "67178"
+    },
+    {
+      "name": "Seagate Enterprise ST2400MM0129 sisäinen kiintolevy 2.5\" 2400 GB SAS",
+      "price_cents": 87900,
+      "url": "https://datatronic.fi/komponentit/kiintolevyt-ssd-levyt/hdd/seagate-enterprise-st2400mm0129-sisainen-kiintolevy-25-2400-gb-sas-seagate-st2400mm0129",
+      "external_id": "47379"
+    },
+    {
+      "name": "D3 SSDSCKKB240G801 SSD-massamuisti 240 GB M.2 Serial ATA III TLC 3D NAND",
+      "price_cents": 67500,
+      "url": "https://datatronic.fi/komponentit/kiintolevyt-ssd-levyt/ssd/d3-ssdsckkb240g801-ssd-massamuisti-240-gb-m2-serial-ata-iii-tlc-3d-nand-intel-ssdsckkb240g801",
+      "external_id": "179177"
+    },
+    {
+      "name": "MSI SPATIUM M452 PCIE 4.0 NVME M.2 1TB SSD-massamuisti PCI Express 4.0 3D NAND",
+      "price_cents": 22490,
+      "url": "https://datatronic.fi/komponentit/kiintolevyt-ssd-levyt/ssd/msi-spatium-m452-pcie-40-nvme-m2-1tb-ssd-massamuisti-pci-express-40-3d-nand-msi-s78-440l970-p83",
+      "external_id": "181319"
+    },
+    {
+      "name": "Western Digital Red Pro WD103KFBX sisäinen kiintolevy 10 TB 7200 RPM 512 MB 3.5\" Serial ATA III",
+      "price_cents": 65900,
+      "url": "https://datatronic.fi/komponentit/kiintolevyt-ssd-levyt/hdd/western-digital-red-pro-wd103kfbx-sisainen-kiintolevy-10-tb-7200-rpm-512-mb-35-serial-ata-iii-western-digital-wd103kfbx",
+      "external_id": "166428"
+    },
+    {
+      "name": "Kingston Technology FURY Renegade M.2 1000 GB PCI Express 4.0 3D TLC NVMe",
+      "price_cents": 137900,
+      "url": "https://datatronic.fi/komponentit/kiintolevyt-ssd-levyt/ssd/kingston-technology-fury-renegade-m2-1000-gb-pci-express-40-3d-tlc-nvme-kingston-technology-sfyrsk-1000g",
+      "external_id": "65388"
+    },
+    {
+      "name": "ASUS 90DD0330-BA9010 tallennusaseman kotelo",
+      "price_cents": 7990,
+      "url": "https://datatronic.fi/komponentit/kiintolevyt-ssd-levyt/asus-90dd0330-ba9010-tallennusaseman-kotelo-asus-90dd0330-ba9010",
+      "external_id": "179917"
+    },
+    {
+      "name": "Seagate Exos X24 3.5\" 20 TB Serial ATA III",
+      "price_cents": 118500,
+      "url": "https://datatronic.fi/komponentit/kiintolevyt-ssd-levyt/hdd/seagate-exos-x24-35-20-tb-serial-ata-iii-seagate-st20000nm007h",
+      "external_id": "151191"
+    },
+    {
+      "name": "Kingston Technology FURY Renegade G5 2,05 TB M.2 PCI Express 5.0 NVMe 3D TLC",
+      "price_cents": 46500,
+      "url": "https://datatronic.fi/komponentit/kiintolevyt-ssd-levyt/ssd/kingston-technology-fury-renegade-g5-205-tb-m2-pci-express-50-nvme-3d-tlc-kingston-technology-sfyr2s-2t0",
+      "external_id": "169127"
+    },
+    {
+      "name": "SanDisk Optimus GX PRO 850X 8 TB M.2 PCI Express 4.0 NVMe TLC 3D NAND",
+      "price_cents": 235500,
+      "url": "https://datatronic.fi/komponentit/kiintolevyt-ssd-levyt/ssd/sandisk-optimus-gx-pro-850x-8-tb-m2-pci-express-40-nvme-tlc-3d-nand-sandisk-sdsp81800tan-000e0",
+      "external_id": "181160"
+    },
+    {
+      "name": "Kingston Technology DC600M 2.5\" 480 GB Serial ATA III 3D TLC NAND",
+      "price_cents": 52500,
+      "url": "https://datatronic.fi/komponentit/kiintolevyt-ssd-levyt/ssd/kingston-technology-dc600m-25-480-gb-serial-ata-iii-3d-tlc-nand-kingston-technology-sedc600m-480g",
+      "external_id": "125197"
+    },
+    {
+      "name": "SanDisk Optimus GX 7100 500 GB M.2 PCI Express 4.0 NVMe TLC 3D NAND",
+      "price_cents": 13490,
+      "url": "https://datatronic.fi/komponentit/kiintolevyt-ssd-levyt/ssd/sandisk-optimus-gx-7100-500-gb-m2-pci-express-40-nvme-tlc-3d-nand-sandisk-sdsp71500gan-000e0",
+      "external_id": "181159"
+    },
+    {
+      "name": "SSD 2TB MSI Spatium M580 (M.2 2280) PCIe 5.0 NVMe",
+      "price_cents": 55500,
+      "url": "https://datatronic.fi/komponentit/kiintolevyt-ssd-levyt/ssd-2tb-msi-spatium-m580-m2-2280-pcie-50-nvme-s78-440q1d0-p83",
+      "external_id": "184541"
+    },
+    {
+      "name": "Western Digital Ultrastar DC HC555 sisäinen kiintolevy 20 TB 7200 RPM 512 MB 3.5\" Serial ATA III",
+      "price_cents": 109500,
+      "url": "https://datatronic.fi/komponentit/kiintolevyt-ssd-levyt/hdd/western-digital-ultrastar-dc-hc555-sisainen-kiintolevy-20-tb-7200-rpm-512-mb-35-serial-ata-iii-western-digital-0b48724",
+      "external_id": "182604"
+    }
+  ]
+}

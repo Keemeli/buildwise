@@ -1,0 +1,156 @@
+{
+  "shop": "Datatronic",
+  "category": "psu",
+  "page": 24,
+  "source_url": "https://datatronic.fi/virtalahteet?page=24",
+  "fetched_at": "2026-11-12T14:50:11+00:00",
+  "site_total_products": 668,
+  "items_on_page": 24,
+  "raw_html": "data/raw/html/datatronic_psu_p24_2026-11-12_5924235bf7b9.html",
+  "items": [
+    {
+      "name": "ENDORFY Elementum E5 550W virtalähdeyksikkö 24-pin ATX ATX Musta",
+      "price_cents": 4490,
+      "url": "https://datatronic.fi/komponentit/virtalahteet/endorfy-elementum-e5-550w-virtalahdeyksikko-24-pin-atx-atx-musta-endorfy-ey7a001",
+      "external_id": "178826"
+    },
+    {
+      "name": "Thermaltake TR2 S 650W virtalähdeyksikkö 20+4 pin ATX ATX Musta",
+      "price_cents": 5890,
+      "url": "https://datatronic.fi/komponentit/virtalahteet/thermaltake-tr2-s-650w-virtalahdeyksikko-20-4-pin-atx-atx-musta-thermaltake-ps-trs-0650nnsawe-h",
+      "external_id": "180621"
+    },
+    {
+      "name": "Asrock PRO-850B virtalähdeyksikkö 850 W 24-pin ATX ATX Musta",
+      "price_cents": 7290,
+      "url": "https://datatronic.fi/komponentit/virtalahteet/asrock-pro-850b-virtalahdeyksikko-850-w-24-pin-atx-atx-musta-asrock-90-uxr085-bneaa2",
+      "external_id": "174608"
+    },
+    {
+      "name": "Silverstone ST50F-ES230 virtalähdeyksikkö 500 W 24-pin ATX Alumiini",
+      "price_cents": 5090,
+      "url": "https://datatronic.fi/komponentit/virtalahteet/silverstone-st50f-es230-virtalahdeyksikko-500-w-24-pin-atx-alumiini-silverstone-sst-st50f-es230",
+      "external_id": "168026"
+    },
+    {
+      "name": "Thermaltake Toughpower i2000W virtalähdeyksikkö 2000 W 24-pin ATX ATX Musta",
+      "price_cents": 60900,
+      "url": "https://datatronic.fi/komponentit/virtalahteet/thermaltake-toughpower-i2000w-virtalahdeyksikko-2000-w-24-pin-atx-atx-musta-thermaltake-ps-tpi-2000fnfdpe-1",
+      "external_id": "180198"
+    },
+    {
+      "name": "Cooler Master Elite Gold 1000 virtalähdeyksikkö 1000 W 24-pin ATX ATX Musta",
+      "price_cents": 9990,
+      "url": "https://datatronic.fi/komponentit/virtalahteet/cooler-master-elite-gold-1000-virtalahdeyksikko-1000-w-24-pin-atx-atx-musta-cooler-master-mpw-a001-afag-beu",
+      "external_id": "176454"
+    },
+    {
+      "name": "Lian Li RB0750B.B virtalähdeyksikkö 750 W 24-pin ATX ATX musta",
+      "price_cents": 7390,
+      "url": "https://datatronic.fi/komponentit/virtalahteet/lian-li-rb0750bb-virtalahdeyksikko-750-w-24-pin-atx-atx-musta-lian-li-g9prb0750bb000eu",
+      "external_id": "173735"
+    },
+    {
+      "name": "Cisco 715W AC 80+ PLATINUM CONFIG 1 P/S SPARE virtalähdeyksikkö",
+      "price_cents": 126900,
+      "url": "https://datatronic.fi/komponentit/virtalahteet/cisco-715w-ac-80-platinum-config-1-p-s-spare-virtalahdeyksikko-cisco-pwr-c1-715wdc-2",
+      "external_id": "178200"
+    },
+    {
+      "name": "ASUS ROG -THOR-1000P3-GAMING-E virtalähdeyksikkö 1000 W 20+4 pin ATX ATX Musta",
+      "price_cents": 47500,
+      "url": "https://datatronic.fi/komponentit/virtalahteet/asus-rog-thor-1000p3-gaming-e-virtalahdeyksikko-1000-w-20-4-pin-atx-atx-musta-asus-90ye00v8-b0na00",
+      "external_id": "180825"
+    },
+    {
+      "name": "ASUS ROG -STRIX-1200P-GAMING-E virtalähdeyksikkö 1200 W 20+4 pin ATX ATX Musta, Monivärinen",
+      "price_cents": 31900,
+      "url": "https://datatronic.fi/komponentit/virtalahteet/asus-rog-strix-1200p-gaming-e-virtalahdeyksikko-1200-w-20-4-pin-atx-atx-musta-monivarinen-asus-90ye00w6-b0na00",
+      "external_id": "181270"
+    },
+    {
+      "name": "FSP Vita virtalähdeyksikkö 750 W 20+4 pin ATX ATX musta",
+      "price_cents": 6590,
+      "url": "https://datatronic.fi/komponentit/virtalahteet/fsp-vita-virtalahdeyksikko-750-w-20-4-pin-atx-atx-musta-fsp-ppa7508001",
+      "external_id": "175596"
+    },
+    {
+      "name": "Sharkoon Rebel P20 virtalähdeyksikkö 1200 W 24-pin ATX ATX musta",
+      "price_cents": 19890,
+      "url": "https://datatronic.fi/komponentit/virtalahteet/sharkoon-rebel-p20-virtalahdeyksikko-1200-w-24-pin-atx-atx-musta-sharkoon-4044951040643",
+      "external_id": "169426"
+    },
+    {
+      "name": "Lian Li SX1200P virtalähdeyksikkö 1200 W 20+4 pin ATX ATX Valkoinen",
+      "price_cents": 14690,
+      "url": "https://datatronic.fi/komponentit/virtalahteet/lian-li-sx1200p-virtalahdeyksikko-1200-w-20-4-pin-atx-atx-valkoinen-lian-li-sx1200p-white",
+      "external_id": "178111"
+    },
+    {
+      "name": "Thermaltake SPG-600DH2CCB virtalähdeyksikkö 600 W 24-pin ATX ATX Musta, Punainen",
+      "price_cents": 6390,
+      "url": "https://datatronic.fi/komponentit/virtalahteet/thermaltake-spg-600dh2ccb-virtalahdeyksikko-600-w-24-pin-atx-atx-musta-punainen-thermaltake-ps-spg-0600dpcbeu-b",
+      "external_id": "180852"
+    },
+    {
+      "name": "Enermax ERV1000G-AHG-MAC virtalähdeyksikkö 1000 W 20+4 pin ATX ATX musta",
+      "price_cents": 11690,
+      "url": "https://datatronic.fi/komponentit/virtalahteet/enermax-erv1000g-ahg-mac-virtalahdeyksikko-1000-w-20-4-pin-atx-atx-musta-enermax-erv1000g-ahg-mac",
+      "external_id": "175526"
+    },
+    {
+      "name": "ENDORFY Vero L6 virtalähdeyksikkö 650 W 24-pin ATX ATX musta",
+      "price_cents": 6890,
+      "url": "https://datatronic.fi/komponentit/virtalahteet/endorfy-vero-l6-virtalahdeyksikko-650-w-24-pin-atx-atx-musta-endorfy-ey7a015",
+      "external_id": "175462"
+    },
+    {
+      "name": "DELL 2TXYM virtalähdeyksikkö 240 W Hopea",
+      "price_cents": 9590,
+      "url": "https://datatronic.fi/komponentit/virtalahteet/dell-2txym-virtalahdeyksikko-240-w-hopea-dell-2txym",
+      "external_id": "148158"
+    },
+    {
+      "name": "Lian Li SP0850G.W virtalähdeyksikkö 850 W 20+4 pin ATX SFX Valkoinen",
+      "price_cents": 13390,
+      "url": "https://datatronic.fi/komponentit/virtalahteet/lian-li-sp0850gw-virtalahdeyksikko-850-w-20-4-pin-atx-sfx-valkoinen-lian-li-g9psp0850gw000eu",
+      "external_id": "175026"
+    },
+    {
+      "name": "ASUS TUF-GAMING-1000P virtalähdeyksikkö 1000 W 20+4 pin ATX ATX Musta",
+      "price_cents": 23890,
+      "url": "https://datatronic.fi/komponentit/virtalahteet/asus-tuf-gaming-1000p-virtalahdeyksikko-1000-w-20-4-pin-atx-atx-musta-asus-90ye0101-b0na00",
+      "external_id": "181273"
+    },
+    {
+      "name": "FSP MEGA-1350TI virtalähdeyksikkö 1350 W 20+4 pin ATX ATX musta",
+      "price_cents": 37900,
+      "url": "https://datatronic.fi/komponentit/virtalahteet/fsp-mega-1350ti-virtalahdeyksikko-1350-w-20-4-pin-atx-atx-musta-fsp-ppa13f0201",
+      "external_id": "176974"
+    },
+    {
+      "name": "Asrock Phantom Gaming PG-750G virtalähdeyksikkö 750 W 20+4 pin ATX ATX musta",
+      "price_cents": 14190,
+      "url": "https://datatronic.fi/komponentit/virtalahteet/asrock-phantom-gaming-pg-750g-virtalahdeyksikko-750-w-20-4-pin-atx-atx-musta-asrock-pg-750g",
+      "external_id": "166013"
+    },
+    {
+      "name": "Chieftec Vita BPX-650-S virtalähdeyksikkö 650 W 24-pin ATX ATX musta",
+      "price_cents": 4790,
+      "url": "https://datatronic.fi/komponentit/virtalahteet/chieftec-vita-bpx-650-s-virtalahdeyksikko-650-w-24-pin-atx-atx-musta-chieftec-bpx-650-s",
+      "external_id": "174673"
+    },
+    {
+      "name": "Thermaltake PS-STP-0750FNFAPE-1 virtalähdeyksikkö 750 W",
+      "price_cents": 22490,
+      "url": "https://datatronic.fi/komponentit/virtalahteet/thermaltake-ps-stp-0750fnfape-1-virtalahdeyksikko-750-w-thermaltake-ps-stp-0750fnfape-1",
+      "external_id": "165852"
+    },
+    {
+      "name": "Lenovo 54Y8934 virta-adapteri ja vaihtosuuntaaja Sisätila 250 W Harmaa",
+      "price_cents": 9090,
+      "url": "https://datatronic.fi/komponentit/virtalahteet/lenovo-54y8934-virta-adapteri-ja-vaihtosuuntaaja-sisatila-250-w-harmaa-lenovo-54y8934",
+      "external_id": "127646"
+    }
+  ]
+}

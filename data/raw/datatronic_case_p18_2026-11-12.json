@@ -1,0 +1,156 @@
+{
+  "shop": "Datatronic",
+  "category": "case",
+  "page": 18,
+  "source_url": "https://datatronic.fi/kotelot?page=18",
+  "fetched_at": "2026-11-12T14:49:14+00:00",
+  "site_total_products": 620,
+  "items_on_page": 24,
+  "raw_html": "data/raw/html/datatronic_case_p18_2026-11-12_f5c4466ce6fe.html",
+  "items": [
+    {
+      "name": "ASUS ProArt PA602 Wood Edition Modern Black - Metal Panel Midi Tower Musta, Puu",
+      "price_cents": 28890,
+      "url": "https://datatronic.fi/komponentit/kotelot/asus-proart-pa602-wood-edition-modern-black-metal-panel-midi-tower-musta-puu-asus-90dc00j0-b09040",
+      "external_id": "179900"
+    },
+    {
+      "name": "DeepCool R-CH370-BKNAM1-G-1 tietokonekotelo Musta",
+      "price_cents": 5390,
+      "url": "https://datatronic.fi/komponentit/kotelot/deepcool-r-ch370-bknam1-g-1-tietokonekotelo-musta-deepcool-r-ch370-bknam1-g-1",
+      "external_id": "122327"
+    },
+    {
+      "name": "Sharkoon MK4W RGB Strip Micro Tower musta",
+      "price_cents": 7990,
+      "url": "https://datatronic.fi/komponentit/kotelot/sharkoon-mk4w-rgb-strip-micro-tower-musta-sharkoon-4044951041763",
+      "external_id": "169448"
+    },
+    {
+      "name": "Fractal Design Meshify 3 XL musta",
+      "price_cents": 31900,
+      "url": "https://datatronic.fi/komponentit/kotelot/fractal-design-meshify-3-xl-musta-fractal-design-fd-c-mes3x-03",
+      "external_id": "166198"
+    },
+    {
+      "name": "Antec C5 Midi Tower Musta",
+      "price_cents": 12390,
+      "url": "https://datatronic.fi/komponentit/kotelot/antec-c5-midi-tower-musta-antec-0-761345-10033-5",
+      "external_id": "155730"
+    },
+    {
+      "name": "Phanteks NV5 MKII Midi Tower Valkoinen",
+      "price_cents": 12890,
+      "url": "https://datatronic.fi/komponentit/kotelot/phanteks-nv5-mkii-midi-tower-valkoinen-phanteks-ph-nv523tg-dmw02",
+      "external_id": "166785"
+    },
+    {
+      "name": "Thermaltake The Tower 200 Mini Tower Valkoinen",
+      "price_cents": 9190,
+      "url": "https://datatronic.fi/komponentit/kotelot/thermaltake-the-tower-200-mini-tower-valkoinen-thermaltake-ca-1x9-00s6wn-00",
+      "external_id": "131062"
+    },
+    {
+      "name": "Aerocool D301A Mini Tower musta, Puu",
+      "price_cents": 7090,
+      "url": "https://datatronic.fi/komponentit/kotelot/aerocool-d301a-mini-tower-musta-puu-aerocool-b301a-bk-v2",
+      "external_id": "163884"
+    },
+    {
+      "name": "GIGABYTE C500 PANORAMIC STEALTH Midi Tower musta",
+      "price_cents": 14290,
+      "url": "https://datatronic.fi/komponentit/kotelot/gigabyte-c500-panoramic-stealth-midi-tower-musta-gigabyte-gb-c500p-st",
+      "external_id": "170897"
+    },
+    {
+      "name": "Corsair Midi Tower 3500X LXR LINK TG musta",
+      "price_cents": 21290,
+      "url": "https://datatronic.fi/komponentit/kotelot/corsair-midi-tower-3500x-lxr-link-tg-musta-corsair-cc-9011324-ww",
+      "external_id": "173183"
+    },
+    {
+      "name": "XPG VALOR AIR Midi Tower Valkoinen",
+      "price_cents": 7190,
+      "url": "https://datatronic.fi/komponentit/kotelot/xpg-valor-air-midi-tower-valkoinen-xpg-75261650",
+      "external_id": "173455"
+    },
+    {
+      "name": "be quiet! Pure Base 501 DX White Midi Tower Valkoinen",
+      "price_cents": 11490,
+      "url": "https://datatronic.fi/komponentit/kotelot/be-quiet-pure-base-501-dx-white-midi-tower-valkoinen-be-quiet-bgw77",
+      "external_id": "168153"
+    },
+    {
+      "name": "Corsair 3200D RS Midi Tower Musta",
+      "price_cents": 8590,
+      "url": "https://datatronic.fi/komponentit/kotelot/corsair-3200d-rs-midi-tower-musta-corsair-cc-9011334-ww",
+      "external_id": "179389"
+    },
+    {
+      "name": "Phanteks NV9 Full Tower Valkoinen",
+      "price_cents": 25690,
+      "url": "https://datatronic.fi/komponentit/kotelot/phanteks-nv9-full-tower-valkoinen-phanteks-ph-nv923tg-dmw01",
+      "external_id": "160683"
+    },
+    {
+      "name": "Antec C5 Midi Tower Valkoinen",
+      "price_cents": 13190,
+      "url": "https://datatronic.fi/komponentit/kotelot/antec-c5-midi-tower-valkoinen-antec-0-761345-10034-2",
+      "external_id": "155731"
+    },
+    {
+      "name": "XPG VALOR AIR Midi Tower musta",
+      "price_cents": 7390,
+      "url": "https://datatronic.fi/komponentit/kotelot/xpg-valor-air-midi-tower-musta-xpg-75261649",
+      "external_id": "173454"
+    },
+    {
+      "name": "Kolink Rocket Heavy Vented Midi Tower Musta, Harmaa",
+      "price_cents": 7390,
+      "url": "https://datatronic.fi/komponentit/kotelot/kolink-rocket-heavy-vented-midi-tower-musta-harmaa-kolink-pgw-ch-kol-076",
+      "external_id": "45984"
+    },
+    {
+      "name": "Cooler Master Elite 502 Midi Tower Valkoinen",
+      "price_cents": 7190,
+      "url": "https://datatronic.fi/komponentit/kotelot/cooler-master-elite-502-midi-tower-valkoinen-cooler-master-e502-wgnn-s00",
+      "external_id": "172325"
+    },
+    {
+      "name": "MSI MPG GUNGNIR 110R tietokonekotelo Midi Tower Musta",
+      "price_cents": 12490,
+      "url": "https://datatronic.fi/komponentit/kotelot/msi-mpg-gungnir-110r-tietokonekotelo-midi-tower-musta-msi-306-7g10r21-w57",
+      "external_id": "7401"
+    },
+    {
+      "name": "Aerocool Mecha-G-BK-v2 Midi Tower Musta",
+      "price_cents": 4490,
+      "url": "https://datatronic.fi/komponentit/kotelot/aerocool-mecha-g-bk-v2-midi-tower-musta-aerocool-accm-pv2811311",
+      "external_id": "37427"
+    },
+    {
+      "name": "Chieftec CW-01B-OP tietokonekotelo Tower Musta",
+      "price_cents": 12090,
+      "url": "https://datatronic.fi/komponentit/kotelot/chieftec-cw-01b-op-tietokonekotelo-tower-musta-chieftec-cw-01b-op",
+      "external_id": "4927"
+    },
+    {
+      "name": "Corsair 4500X RS-R ARGB Tempered Glass Mid-Tower, Black Midi Tower musta",
+      "price_cents": 17790,
+      "url": "https://datatronic.fi/komponentit/kotelot/corsair-4500x-rs-r-argb-tempered-glass-mid-tower-black-midi-tower-musta-corsair-cc-9011314-ww",
+      "external_id": "173185"
+    },
+    {
+      "name": "ASUS TUF Gaming GT502 PLUS Midi Tower Valkoinen",
+      "price_cents": 20190,
+      "url": "https://datatronic.fi/komponentit/kotelot/asus-tuf-gaming-gt502-plus-midi-tower-valkoinen-asus-90dc0093-b19000",
+      "external_id": "154844"
+    },
+    {
+      "name": "ASUS ProArt PA401 - Tempered Glass Panel musta",
+      "price_cents": 12290,
+      "url": "https://datatronic.fi/komponentit/kotelot/asus-proart-pa401-tempered-glass-panel-musta-asus-90dc00m0-b39020",
+      "external_id": "174624"
+    }
+  ]
+}

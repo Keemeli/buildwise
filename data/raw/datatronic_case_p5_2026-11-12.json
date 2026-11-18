@@ -1,0 +1,156 @@
+{
+  "shop": "Datatronic",
+  "category": "case",
+  "page": 5,
+  "source_url": "https://datatronic.fi/kotelot?page=5",
+  "fetched_at": "2026-11-12T14:48:50+00:00",
+  "site_total_products": 620,
+  "items_on_page": 24,
+  "raw_html": "data/raw/html/datatronic_case_p5_2026-11-12_32d5f0150f33.html",
+  "items": [
+    {
+      "name": "Zalman I3 NEO V2 WHITE tietokonekotelo Midi Tower Valkoinen",
+      "price_cents": 5290,
+      "url": "https://datatronic.fi/komponentit/kotelot/zalman-i3-neo-v2-white-tietokonekotelo-midi-tower-valkoinen-zalman-i3-neo-v2-white",
+      "external_id": "175111"
+    },
+    {
+      "name": "Phanteks XT Pro Ultra Midi Tower Valkoinen",
+      "price_cents": 5990,
+      "url": "https://datatronic.fi/komponentit/kotelot/phanteks-xt-pro-ultra-midi-tower-valkoinen-phanteks-ph-xt523p1-dwt01",
+      "external_id": "166682"
+    },
+    {
+      "name": "Fractal Design Define 7 Compact Midi Tower Musta",
+      "price_cents": 12290,
+      "url": "https://datatronic.fi/komponentit/kotelot/fractal-design-define-7-compact-midi-tower-musta-fractal-design-fd-c-def7c-01",
+      "external_id": "4415"
+    },
+    {
+      "name": "ENDORFY Signum 300 Core Tower Musta",
+      "price_cents": 4490,
+      "url": "https://datatronic.fi/komponentit/kotelot/endorfy-signum-300-core-tower-musta-endorfy-ey2a004",
+      "external_id": "67130"
+    },
+    {
+      "name": "DeepCool MATREXX 40 3FS Musta",
+      "price_cents": 4690,
+      "url": "https://datatronic.fi/komponentit/kotelot/deepcool-matrexx-40-3fs-musta-deepcool-dp-matx-matrexx40-3fs",
+      "external_id": "31945"
+    },
+    {
+      "name": "Phanteks Enthoo Pro 2 Full Tower musta",
+      "price_cents": 18390,
+      "url": "https://datatronic.fi/komponentit/kotelot/phanteks-enthoo-pro-2-full-tower-musta-phanteks-ph-es620pc-bk02",
+      "external_id": "168194"
+    },
+    {
+      "name": "Fractal Design Meshify 3 XL Valkoinen",
+      "price_cents": 21090,
+      "url": "https://datatronic.fi/komponentit/kotelot/fractal-design-meshify-3-xl-valkoinen-fractal-design-fd-c-mes3x-06",
+      "external_id": "170356"
+    },
+    {
+      "name": "NZXT H9 H3 Flow Midi Tower musta",
+      "price_cents": 7590,
+      "url": "https://datatronic.fi/komponentit/kotelot/nzxt-h9-h3-flow-midi-tower-musta-nzxt-cc-h31fb-01",
+      "external_id": "170774"
+    },
+    {
+      "name": "Chieftec APEX AIR GA-01B-M-OP ATX Midi Tower Musta",
+      "price_cents": 5090,
+      "url": "https://datatronic.fi/komponentit/kotelot/chieftec-apex-air-ga-01b-m-op-atx-midi-tower-musta-chieftec-ga-01b-m-op",
+      "external_id": "151620"
+    },
+    {
+      "name": "Chieftec Midi APEX Series GA-01B-Q-OP Midi Tower",
+      "price_cents": 8390,
+      "url": "https://datatronic.fi/komponentit/kotelot/chieftec-midi-apex-series-ga-01b-q-op-midi-tower-chieftec-ga-01b-q-op",
+      "external_id": "158798"
+    },
+    {
+      "name": "Jonsbo N6 m-ATX Black",
+      "price_cents": 13290,
+      "url": "https://datatronic.fi/komponentit/kotelot/jonsbo-n6-m-atx-black-n6",
+      "external_id": "183643"
+    },
+    {
+      "name": "Thermaltake View 170 WS ARGB Snow Micro Tower Valkoinen",
+      "price_cents": 8790,
+      "url": "https://datatronic.fi/komponentit/kotelot/thermaltake-view-170-ws-argb-snow-micro-tower-valkoinen-thermaltake-ca-1z4-00m6wn-ws",
+      "external_id": "175187"
+    },
+    {
+      "name": "Aerocool Bolt Midi Tower Musta",
+      "price_cents": 4490,
+      "url": "https://datatronic.fi/komponentit/kotelot/aerocool-bolt-midi-tower-musta-aerocool-aeropgsbolt-bk-rgb",
+      "external_id": "37393"
+    },
+    {
+      "name": "Fractal Design Meshify 3 XL musta",
+      "price_cents": 21090,
+      "url": "https://datatronic.fi/komponentit/kotelot/fractal-design-meshify-3-xl-musta-fractal-design-fd-c-mes3x-04",
+      "external_id": "171321"
+    },
+    {
+      "name": "HAVN HS 420 Midi Tower Valkoinen",
+      "price_cents": 20090,
+      "url": "https://datatronic.fi/komponentit/kotelot/havn-hs-420-midi-tower-valkoinen-havn-hvn-ca-hs420-05",
+      "external_id": "164997"
+    },
+    {
+      "name": "Corsair 3000D AIRFLOW tietokonekotelo Midi Tower Musta",
+      "price_cents": 9790,
+      "url": "https://datatronic.fi/komponentit/kotelot/corsair-3000d-airflow-tietokonekotelo-midi-tower-musta-corsair-cc-9011251-ww",
+      "external_id": "129424"
+    },
+    {
+      "name": "be quiet! LIGHT BASE 900 DX Black Full Tower musta",
+      "price_cents": 14490,
+      "url": "https://datatronic.fi/komponentit/kotelot/be-quiet-light-base-900-dx-black-full-tower-musta-be-quiet-bgw69",
+      "external_id": "164907"
+    },
+    {
+      "name": "DeepCool CG530 4F Midi Tower musta",
+      "price_cents": 7590,
+      "url": "https://datatronic.fi/komponentit/kotelot/deepcool-cg530-4f-midi-tower-musta-deepcool-r-cg530-bkada4-g-1",
+      "external_id": "167717"
+    },
+    {
+      "name": "Jonsbo N1 Mini Tower Harmaa",
+      "price_cents": 7490,
+      "url": "https://datatronic.fi/komponentit/kotelot/jonsbo-n1-mini-tower-harmaa-jonsbo-n1-grey",
+      "external_id": "72773"
+    },
+    {
+      "name": "Corsair 9000D RGB AIRFLOW Full Tower Valkoinen",
+      "price_cents": 62900,
+      "url": "https://datatronic.fi/komponentit/kotelot/corsair-9000d-rgb-airflow-full-tower-valkoinen-corsair-cc-9011274-ww",
+      "external_id": "164157"
+    },
+    {
+      "name": "Lian Li PC-A3X tietokonekotelo Micro Tower musta",
+      "price_cents": 7890,
+      "url": "https://datatronic.fi/komponentit/kotelot/lian-li-pc-a3x-tietokonekotelo-micro-tower-musta-lian-li-a3-matx-black",
+      "external_id": "161694"
+    },
+    {
+      "name": "XPG VALOR MESH Midi Tower musta",
+      "price_cents": 6290,
+      "url": "https://datatronic.fi/komponentit/kotelot/xpg-valor-mesh-midi-tower-musta-xpg-75261056",
+      "external_id": "132254"
+    },
+    {
+      "name": "Aerocool Hive-G-BK-v3 Midi Tower Musta",
+      "price_cents": 4490,
+      "url": "https://datatronic.fi/komponentit/kotelot/aerocool-hive-g-bk-v3-midi-tower-musta-aerocool-accm-pv2701311",
+      "external_id": "37423"
+    },
+    {
+      "name": "Chieftec CI-02B-OP tietokonekotelo Kuutio Musta",
+      "price_cents": 5690,
+      "url": "https://datatronic.fi/komponentit/kotelot/chieftec-ci-02b-op-tietokonekotelo-kuutio-musta-chieftec-ci-02b-op",
+      "external_id": "38421"
+    }
+  ]
+}

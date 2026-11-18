@@ -1,0 +1,156 @@
+{
+  "shop": "Datatronic",
+  "category": "storage",
+  "page": 18,
+  "source_url": "https://datatronic.fi/kiintolevyt-ssd-levyt?page=18",
+  "fetched_at": "2026-11-12T14:48:24+00:00",
+  "site_total_products": null,
+  "items_on_page": 24,
+  "raw_html": "data/raw/html/datatronic_storage_p18_2026-11-12_047d1684ae69.html",
+  "items": [
+    {
+      "name": "Transcend SSD220Q 2.5\" 2000 GB Serial ATA III QLC 3D NAND",
+      "price_cents": null,
+      "url": "https://datatronic.fi/komponentit/kiintolevyt-ssd-levyt/ssd/transcend-ssd220q-25-2000-gb-serial-ata-iii-qlc-3d-nand-transcend-ts2tssd220q",
+      "external_id": "39299"
+    },
+    {
+      "name": "Western Digital WD122KFBX sisÃĊinen kiintolevy 12 TB 7200 RPM 512 MB 3.5\" Serial ATA III",
+      "price_cents": null,
+      "url": "https://datatronic.fi/komponentit/kiintolevyt-ssd-levyt/hdd/western-digital-wd122kfbx-sisainen-kiintolevy-12-tb-7200-rpm-512-mb-35-serial-ata-iii-western-digital-wd122kfbx",
+      "external_id": "166429"
+    },
+    {
+      "name": "Seagate ZP2048GV3A002 SSD-massamuisti M.2 2 TB PCI Express 4.0 NVMe",
+      "price_cents": null,
+      "url": "https://datatronic.fi/komponentit/kiintolevyt-ssd-levyt/ssd/seagate-zp2048gv3a002-ssd-massamuisti-m2-2-tb-pci-express-40-nvme-seagate-zp2048gv3a002",
+      "external_id": "157589"
+    },
+    {
+      "name": "GIGABYTE B550 EAGLE WIFI6 emolevy",
+      "price_cents": null,
+      "url": "https://datatronic.fi/komponentit/emolevyt/gigabyte-b550-eagle-wifi6-emolevy-gigabyte-b550-eagle-wifi6",
+      "external_id": "165543"
+    },
+    {
+      "name": "Western Digital Gold WD4004FRYZ sisÃĊinen kiintolevy 4 TB 7200 RPM 128 MB 3.5\" Serial ATA III",
+      "price_cents": null,
+      "url": "https://datatronic.fi/komponentit/kiintolevyt-ssd-levyt/hdd/western-digital-gold-wd4004fryz-sisainen-kiintolevy-4-tb-7200-rpm-128-mb-35-serial-ata-iii-western-digital-wd4004fryz",
+      "external_id": "163678"
+    },
+    {
+      "name": "Western Digital Purple Pro WD102PURP sisÃĊinen kiintolevy 10 TB 7200 RPM 512 MB 3.5\" Serial ATA III",
+      "price_cents": null,
+      "url": "https://datatronic.fi/komponentit/kiintolevyt-ssd-levyt/hdd/western-digital-purple-pro-wd102purp-sisainen-kiintolevy-10-tb-7200-rpm-512-mb-35-serial-ata-iii-western-digital-wd102purp",
+      "external_id": "166469"
+    },
+    {
+      "name": "Goodram PX600 LITE SSDPB-PX600L-256-80 SSD-massamuisti 256 GB M.2 PCI Express 4.0 NVMe 3D NAND",
+      "price_cents": null,
+      "url": "https://datatronic.fi/komponentit/kiintolevyt-ssd-levyt/ssd/goodram-px600-lite-ssdpb-px600l-256-80-ssd-massamuisti-256-gb-m2-pci-express-40-nvme-3d-nand-goodram-ssdpr-px600l-256-80",
+      "external_id": "178783"
+    },
+    {
+      "name": "Western Digital Purple 3.5\" 1 TB Serial ATA III",
+      "price_cents": null,
+      "url": "https://datatronic.fi/komponentit/kiintolevyt-ssd-levyt/hdd/western-digital-purple-35-1-tb-serial-ata-iii-western-digital-wd10purx",
+      "external_id": "157820"
+    },
+    {
+      "name": "SanDisk Optimus GX PRO 8100 8 TB M.2 PCI Express 5.0 NVMe TLC 3D NAND",
+      "price_cents": null,
+      "url": "https://datatronic.fi/komponentit/kiintolevyt-ssd-levyt/ssd/sandisk-optimus-gx-pro-8100-8-tb-m2-pci-express-50-nvme-tlc-3d-nand-sandisk-sdsp82800tan-000e0",
+      "external_id": "181154"
+    },
+    {
+      "name": "Transcend 425S M.2 250 GB Serial ATA III 3D NAND",
+      "price_cents": null,
+      "url": "https://datatronic.fi/komponentit/kiintolevyt-ssd-levyt/ssd/transcend-425s-m2-250-gb-serial-ata-iii-3d-nand-transcend-ts250gmts425s",
+      "external_id": "73591"
+    },
+    {
+      "name": "Fujitsu FUJ:CA08226-E817 sisÃĊinen kiintolevy 1,2 TB 10000 RPM 2.5\"",
+      "price_cents": null,
+      "url": "https://datatronic.fi/komponentit/kiintolevyt-ssd-levyt/fujitsu-fujca08226-e817-sisainen-kiintolevy-12-tb-10000-rpm-25-fujitsu-fujca08226-e817",
+      "external_id": "174345"
+    },
+    {
+      "name": "Western Digital Purple 3.5\" 2000 GB Serial ATA III",
+      "price_cents": null,
+      "url": "https://datatronic.fi/komponentit/kiintolevyt-ssd-levyt/hdd/western-digital-purple-35-2000-gb-serial-ata-iii-western-digital-wd20purz",
+      "external_id": "16047"
+    },
+    {
+      "name": "Western Digital Red WD SN700 NVMe 4 TB M.2 PCI Express 3.0",
+      "price_cents": null,
+      "url": "https://datatronic.fi/komponentit/kiintolevyt-ssd-levyt/western-digital-red-wd-sn700-nvme-4-tb-m2-pci-express-30-western-digital-wds400t1r0c-68bdk0",
+      "external_id": "179862"
+    },
+    {
+      "name": "Thermalright TPFX-750 virtalÃĊhdeyksikkÃ¶ 750 W 20+4 pin ATX Musta",
+      "price_cents": null,
+      "url": "https://datatronic.fi/komponentit/virtalahteet/thermalright-tpfx-750-virtalahdeyksikko-750-w-20-4-pin-atx-musta-thermalright-tr-tpfx-750w",
+      "external_id": "166447"
+    },
+    {
+      "name": "Western Digital Gold 3.5\" 22000 GB Serial ATA III",
+      "price_cents": null,
+      "url": "https://datatronic.fi/komponentit/kiintolevyt-ssd-levyt/hdd/western-digital-gold-35-22000-gb-serial-ata-iii-western-digital-wd221kryz",
+      "external_id": "48452"
+    },
+    {
+      "name": "Western Digital WD Purple 3.5\" 8 TB Serial ATA III",
+      "price_cents": null,
+      "url": "https://datatronic.fi/komponentit/kiintolevyt-ssd-levyt/hdd/western-digital-wd-purple-35-8-tb-serial-ata-iii-western-digital-wd84purz",
+      "external_id": "157811"
+    },
+    {
+      "name": "Western Digital Red WD142KFGX sisÃĊinen kiintolevy 3.5\" 14 TB Serial ATA III",
+      "price_cents": null,
+      "url": "https://datatronic.fi/komponentit/kiintolevyt-ssd-levyt/hdd/western-digital-red-wd142kfgx-sisainen-kiintolevy-35-14-tb-serial-ata-iii-western-digital-wd142kfgx",
+      "external_id": "135475"
+    },
+    {
+      "name": "Samsung 870 EVO 2000 GB TLC Musta",
+      "price_cents": null,
+      "url": "https://datatronic.fi/komponentit/kiintolevyt-ssd-levyt/ssd/samsung-870-evo-2000-gb-tlc-musta-samsung-mz-77e2t0b",
+      "external_id": "17157"
+    },
+    {
+      "name": "SanDisk Optimus 5100 4 TB M.2 PCI Express 4.0 NVMe QLC 3D NAND",
+      "price_cents": null,
+      "url": "https://datatronic.fi/komponentit/kiintolevyt-ssd-levyt/ssd/sandisk-optimus-5100-4-tb-m2-pci-express-40-nvme-qlc-3d-nand-sandisk-sdsp51400tan-000e0",
+      "external_id": "181619"
+    },
+    {
+      "name": "ThinkPad 512GB PCIe-NVMe SSD",
+      "price_cents": null,
+      "url": "https://datatronic.fi/komponentit/kiintolevyt-ssd-levyt/thinkpad-512gb-pcie-nvme-ssd-fru00jt074",
+      "external_id": "143305"
+    },
+    {
+      "name": "870 EVO 500 GB Black",
+      "price_cents": null,
+      "url": "https://datatronic.fi/komponentit/kiintolevyt-ssd-levyt/870-evo-500-gb-black-mz-77e500b-eu",
+      "external_id": "177082"
+    },
+    {
+      "name": "WD Black SN850X PCIe G4 Gaming SSD 8TB",
+      "price_cents": null,
+      "url": "https://datatronic.fi/komponentit/kiintolevyt-ssd-levyt/wd-black-sn850x-pcie-g4-gaming-ssd-8tb-wdbb9g0080bnc-wrsn",
+      "external_id": "164229"
+    },
+    {
+      "name": "Intenso High Performance 2.5\" 960 GB Serial ATA III TLC",
+      "price_cents": null,
+      "url": "https://datatronic.fi/komponentit/kiintolevyt-ssd-levyt/ssd/intenso-high-performance-25-960-gb-serial-ata-iii-tlc-intenso-3813460",
+      "external_id": "41789"
+    },
+    {
+      "name": "SanDisk Optimus GX PRO 8100 2 TB M.2 PCI Express 5.0 NVMe TLC 3D NAND",
+      "price_cents": null,
+      "url": "https://datatronic.fi/komponentit/kiintolevyt-ssd-levyt/ssd/sandisk-optimus-gx-pro-8100-2-tb-m2-pci-express-50-nvme-tlc-3d-nand-sandisk-sdsp82200tan-000e0",
+      "external_id": "177703"
+    }
+  ]
+}

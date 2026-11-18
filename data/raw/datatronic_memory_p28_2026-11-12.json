@@ -1,0 +1,156 @@
+{
+  "shop": "Datatronic",
+  "category": "memory",
+  "page": 28,
+  "source_url": "https://datatronic.fi/muistit?page=28",
+  "fetched_at": "2026-11-12T14:47:31+00:00",
+  "site_total_products": 761,
+  "items_on_page": 24,
+  "raw_html": "data/raw/html/datatronic_memory_p28_2026-11-12_eac80f667fd5.html",
+  "items": [
+    {
+      "name": "G.Skill 4GB DDR3-1600 SQ muistimoduuli 2 x 2 GB 1600 MHz",
+      "price_cents": 3990,
+      "url": "https://datatronic.fi/komponentit/muistit/gskill-4gb-ddr3-1600-sq-muistimoduuli-2-x-2-gb-1600-mhz-gskill-f3-12800cl9d-4gbsq",
+      "external_id": "167789"
+    },
+    {
+      "name": "G.Skill Trident Z5 Neo RGB F5-5200J4040A32GX1-TZ5NR muistimoduuli 32 GB 1 x 32 GB DDR5 5200 MT/s 288-pin DIMM",
+      "price_cents": 91500,
+      "url": "https://datatronic.fi/komponentit/muistit/gskill-trident-z5-neo-rgb-f5-5200j4040a32gx1-tz5nr-muistimoduuli-32-gb-1-x-32-gb-ddr5-5200-mt-s-288-pin-dimm-gskill-f5-5200j4040",
+      "external_id": "176506"
+    },
+    {
+      "name": "Corsair Vengeance CMSX24GX5M1A5200C44 muistimoduuli 24 GB 1 x 24 GB DDR5 262-pin SO-DIMM",
+      "price_cents": 43900,
+      "url": "https://datatronic.fi/komponentit/muistit/corsair-vengeance-cmsx24gx5m1a5200c44-muistimoduuli-24-gb-1-x-24-gb-ddr5-262-pin-so-dimm-corsair-cmsx24gx5m1a5200c44",
+      "external_id": "176490"
+    },
+    {
+      "name": "Patriot Memory Signature Line PSD416G32002S muistimoduuli 16 GB 1 x 16 GB DDR4",
+      "price_cents": 13390,
+      "url": "https://datatronic.fi/komponentit/muistit/patriot-memory-signature-line-psd416g32002s-muistimoduuli-16-gb-1-x-16-gb-ddr4-patriot-memory-psd416g32002s",
+      "external_id": "174831"
+    },
+    {
+      "name": "G.Skill F5-5600J3636D32GX2-IS muistimoduuli 64 GB",
+      "price_cents": 167900,
+      "url": "https://datatronic.fi/komponentit/muistit/gskill-f5-5600j3636d32gx2-is-muistimoduuli-64-gb-gskill-f5-5600j3636d32gx2-is",
+      "external_id": "165536"
+    },
+    {
+      "name": "G.Skill Trident Z5 Neo RGB F5-5600J4645A32GX1-TZ5NR muistimoduuli 32 GB 1 x 32 GB DDR5 5600 MT/s 288-pin DIMM",
+      "price_cents": 87500,
+      "url": "https://datatronic.fi/komponentit/muistit/gskill-trident-z5-neo-rgb-f5-5600j4645a32gx1-tz5nr-muistimoduuli-32-gb-1-x-32-gb-ddr5-5600-mt-s-288-pin-dimm-gskill-f5-5600j4645",
+      "external_id": "176504"
+    },
+    {
+      "name": "G.Skill Ripjaws S5 F5-5200J4040A32GX1-RS5K muistimoduuli 32 GB 1 x 32 GB DDR5 5200 MT/s 288-pin DIMM",
+      "price_cents": 91900,
+      "url": "https://datatronic.fi/komponentit/muistit/gskill-ripjaws-s5-f5-5200j4040a32gx1-rs5k-muistimoduuli-32-gb-1-x-32-gb-ddr5-5200-mt-s-288-pin-dimm-gskill-f5-5200j4040a32gx1-rs",
+      "external_id": "176498"
+    },
+    {
+      "name": "Corsair Vengeance CMSX48GX5M1A4800C40 muistimoduuli 48 GB 1 x 48 GB DDR5 4800 MHz",
+      "price_cents": 118500,
+      "url": "https://datatronic.fi/komponentit/muistit/corsair-vengeance-cmsx48gx5m1a4800c40-muistimoduuli-48-gb-1-x-48-gb-ddr5-4800-mhz-corsair-cmsx48gx5m1a4800c40",
+      "external_id": "156657"
+    },
+    {
+      "name": "Patriot Memory Signature Line Premium PSP416G2666KH1 muistimoduuli 16 GB 2 x 8 GB DDR 288-pin DIMM",
+      "price_cents": 17490,
+      "url": "https://datatronic.fi/komponentit/muistit/patriot-memory-signature-line-premium-psp416g2666kh1-muistimoduuli-16-gb-2-x-8-gb-ddr-288-pin-dimm-patriot-memory-psp416g2666kh1",
+      "external_id": "178600"
+    },
+    {
+      "name": "Crucial CT8G56C46S5T muistimoduuli 8 GB 1 x 8 GB DDR5 ECC",
+      "price_cents": 26890,
+      "url": "https://datatronic.fi/komponentit/muistit/crucial-ct8g56c46s5t-muistimoduuli-8-gb-1-x-8-gb-ddr5-ecc-crucial-ct8g56c46s5t",
+      "external_id": "173546"
+    },
+    {
+      "name": "Goodram W-MEM2666E4S88G muistimoduuli 8 GB 1 x 8 GB DDR4 288-pin DIMM ECC",
+      "price_cents": 13290,
+      "url": "https://datatronic.fi/komponentit/muistit/goodram-w-mem2666e4s88g-muistimoduuli-8-gb-1-x-8-gb-ddr4-288-pin-dimm-ecc-goodram-w-mem2666e4s88g",
+      "external_id": "178709"
+    },
+    {
+      "name": "G.Skill F5-6000J4048F24GX1-TZ5RK muistimoduuli 24 GB 1 x 24 GB DDR5 6000 MT/s 288-pin DIMM",
+      "price_cents": 58900,
+      "url": "https://datatronic.fi/komponentit/muistit/gskill-f5-6000j4048f24gx1-tz5rk-muistimoduuli-24-gb-1-x-24-gb-ddr5-6000-mt-s-288-pin-dimm-gskill-f5-6000j4048f24gx1-tz5rk",
+      "external_id": "176509"
+    },
+    {
+      "name": "Crucial Pro 48GB DDR5-5600 UDIMM TRAY",
+      "price_cents": 56900,
+      "url": "https://datatronic.fi/komponentit/muistit/crucial-pro-48gb-ddr5-5600-udimm-tray-cp48g56c46u5t",
+      "external_id": "173545"
+    },
+    {
+      "name": "G.Skill Trident Z5 RGB F5-5200J4040A32GX1-TZ5RK muistimoduuli 32 GB 1 x 32 GB DDR5 5200 MT/s 288-pin DIMM",
+      "price_cents": 92500,
+      "url": "https://datatronic.fi/komponentit/muistit/gskill-trident-z5-rgb-f5-5200j4040a32gx1-tz5rk-muistimoduuli-32-gb-1-x-32-gb-ddr5-5200-mt-s-288-pin-dimm-gskill-f5-5200j4040a32g",
+      "external_id": "176505"
+    },
+    {
+      "name": "Goodram GR3200D464L22/16G muistimoduuli 16 GB 1 x 16 GB DDR4 288-pin DIMM",
+      "price_cents": 22290,
+      "url": "https://datatronic.fi/komponentit/muistit/goodram-gr3200d464l22-16g-muistimoduuli-16-gb-1-x-16-gb-ddr4-288-pin-dimm-goodram-gr3200d464l22-16g",
+      "external_id": "178732"
+    },
+    {
+      "name": "G.Skill Trident Z5 Neo RGB F5-6400J3239G16GX2-TZ5NRW muistimoduuli 32 GB 2 x 16 GB DRAM 6400 MHz",
+      "price_cents": 86500,
+      "url": "https://datatronic.fi/komponentit/muistit/gskill-trident-z5-neo-rgb-f5-6400j3239g16gx2-tz5nrw-muistimoduuli-32-gb-2-x-16-gb-dram-6400-mhz-gskill-f5-6400j3239g16gx2-tz5nrw",
+      "external_id": "158796"
+    },
+    {
+      "name": "XPG Lancer Blade muistimoduuli 32 GB 2 x 16 GB DDR5 6400 MT/s 288-pin DIMM ECC",
+      "price_cents": 70900,
+      "url": "https://datatronic.fi/komponentit/muistit/xpg-lancer-blade-muistimoduuli-32-gb-2-x-16-gb-ddr5-6400-mt-s-288-pin-dimm-ecc-xpg-ax5u6400c3216g-dtlabwh",
+      "external_id": "175525"
+    },
+    {
+      "name": "G.Skill Trident Z5 RGB F5-6000J2836G32GX2-TZ5RW muistimoduuli 64 GB 2 x 32 GB DDR5",
+      "price_cents": 358500,
+      "url": "https://datatronic.fi/komponentit/muistit/gskill-trident-z5-rgb-f5-6000j2836g32gx2-tz5rw-muistimoduuli-64-gb-2-x-32-gb-ddr5-gskill-f5-6000j2836g32gx2-tz5rw",
+      "external_id": "166234"
+    },
+    {
+      "name": "Crucial Pro OC muistimoduuli 64 GB 2 x 32 GB DDR5 6000 MHz",
+      "price_cents": 134900,
+      "url": "https://datatronic.fi/komponentit/muistit/crucial-pro-oc-muistimoduuli-64-gb-2-x-32-gb-ddr5-6000-mhz-crucial-cp2k32g60c40u5b",
+      "external_id": "167714"
+    },
+    {
+      "name": "Goodram GR2400D464L17/16G muistimoduuli 16 GB 1 x 16 GB DDR4 288-pin DIMM",
+      "price_cents": 23790,
+      "url": "https://datatronic.fi/komponentit/muistit/goodram-gr2400d464l17-16g-muistimoduuli-16-gb-1-x-16-gb-ddr4-288-pin-dimm-goodram-gr2400d464l17-16g",
+      "external_id": "178701"
+    },
+    {
+      "name": "Moza Racing RS073 Polkimen kiinnityslevy",
+      "price_cents": 4390,
+      "url": "https://datatronic.fi/komponentit/muistit/moza-racing-rs073-polkimen-kiinnityslevy-moza-racing-rs073",
+      "external_id": "169891"
+    },
+    {
+      "name": "G.Skill F5-5200J4040A32GX1-IS muistimoduuli 32 GB 1 x 32 GB DDR5 5200 MHz",
+      "price_cents": 64900,
+      "url": "https://datatronic.fi/komponentit/muistit/gskill-f5-5200j4040a32gx1-is-muistimoduuli-32-gb-1-x-32-gb-ddr5-5200-mhz-gskill-f5-5200j4040a32gx1-is",
+      "external_id": "166219"
+    },
+    {
+      "name": "Crucial CT16G4SFS832A muistimoduuli 16 GB 1 x 16 GB DDR4 260-pin SO-DIMM",
+      "price_cents": 20390,
+      "url": "https://datatronic.fi/komponentit/muistit/crucial-ct16g4sfs832a-muistimoduuli-16-gb-1-x-16-gb-ddr4-260-pin-so-dimm-crucial-ct16g4sfs832a",
+      "external_id": "177845"
+    },
+    {
+      "name": "Goodram GR3200D464L22S/16G muistimoduuli 16 GB 1 x 16 GB DDR4 288-pin DIMM",
+      "price_cents": 23790,
+      "url": "https://datatronic.fi/komponentit/muistit/goodram-gr3200d464l22s-16g-muistimoduuli-16-gb-1-x-16-gb-ddr4-288-pin-dimm-goodram-gr3200d464l22s-16g",
+      "external_id": "178738"
+    }
+  ]
+}

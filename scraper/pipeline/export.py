@@ -83,9 +83,17 @@ def slim(component: dict) -> dict:
     return slimmed
 
 
+def has_current_price(component: dict) -> bool:
+    """A price is what makes a row usable: the picker shows one part per row with its
+    cost, and 50 rows on the full catalogue had a listing without a price at all."""
+    return any((listing.get("price_cents") or 0) > 0
+               for listing in component.get("listings") or [])
+
+
 def build_web_copy(payload: dict) -> dict:
     """The exact payload written to web/data/components.json."""
-    components = [slim(component) for component in payload.get("components", [])]
+    components = [slim(component) for component in payload.get("components", [])
+                  if has_current_price(component)]
     return {
         "generated_at": payload.get("generated_at"),
         "source": payload.get("source"),
@@ -166,8 +174,13 @@ class CatalogueExporter:
         self.target.parent.mkdir(parents=True, exist_ok=True)
         self.target.write_bytes(expected)
         display = self.target.relative_to(self.project_root) if self.target.is_relative_to(self.project_root) else self.target
-        per_component = len(expected) / max(len(build_web_copy(source)["components"]), 1)
+        published = build_web_copy(source)["components"]
+        dropped = sum(1 for component in source.get("components", []) if not has_current_price(component))
+        per_component = len(expected) / max(len(published), 1)
         print(f"\nwrote {display} — {len(expected) / 1024:.0f} KB ({per_component:.0f} B/component)")
+        if dropped:
+            print(f"  dropped {dropped} components without a priced listing "
+                  f"(they stay in data/normalised/)")
         print(f"  extrapolated for a full catalogue: {per_component * 3945 / 1024 / 1024:.1f} MB")
         print("commit it — Vercel deploys from the repository, so an uncommitted copy "
               "does not reach the deployed site")

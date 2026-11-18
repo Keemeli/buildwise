@@ -1,0 +1,156 @@
+{
+  "shop": "Datatronic",
+  "category": "psu",
+  "page": 27,
+  "source_url": "https://datatronic.fi/virtalahteet?page=27",
+  "fetched_at": "2026-11-12T14:50:16+00:00",
+  "site_total_products": 668,
+  "items_on_page": 24,
+  "raw_html": "data/raw/html/datatronic_psu_p27_2026-11-12_bddf4686141f.html",
+  "items": [
+    {
+      "name": "Antec GSK1000 EC virtalähdeyksikkö 1000 W 20+4 pin ATX ATX Musta",
+      "price_cents": 12490,
+      "url": "https://datatronic.fi/komponentit/virtalahteet/antec-gsk1000-ec-virtalahdeyksikko-1000-w-20-4-pin-atx-atx-musta-antec-0-761345-20194-0",
+      "external_id": "179614"
+    },
+    {
+      "name": "Phanteks AMP GH 1000W Platinum ATX 3.0 PCIe 5.0 Fully Modular.White",
+      "price_cents": 14490,
+      "url": "https://datatronic.fi/komponentit/virtalahteet/phanteks-amp-gh-1000w-platinum-atx-30-pcie-50-fully-modularwhite-ph-p1000gh-wt02-eu",
+      "external_id": "179194"
+    },
+    {
+      "name": "ASUS ROG -STRIX-1000P-GAMING-WHITE-E virtalähdeyksikkö 1000 W 20+4 pin ATX ATX Valkoinen",
+      "price_cents": 34900,
+      "url": "https://datatronic.fi/komponentit/virtalahteet/asus-rog-strix-1000p-gaming-white-e-virtalahdeyksikko-1000-w-20-4-pin-atx-atx-valkoinen-asus-90ye00w9-b0na00",
+      "external_id": "181828"
+    },
+    {
+      "name": "HPE 800W Flex Slot Titanium Hot Plug Low Halogen Power Supply Kit virtalähdeyksikkö Harmaa",
+      "price_cents": 120900,
+      "url": "https://datatronic.fi/komponentit/virtalahteet/hpe-800w-flex-slot-titanium-hot-plug-low-halogen-power-supply-kit-virtalahdeyksikko-harmaa-hpe-865438-b21",
+      "external_id": "175638"
+    },
+    {
+      "name": "LC-Power LC6460GP4 V2.4 virtalähdeyksikkö 460 W 20+4 pin ATX ATX Musta",
+      "price_cents": 6190,
+      "url": "https://datatronic.fi/komponentit/virtalahteet/lc-power-lc6460gp4-v24-virtalahdeyksikko-460-w-20-4-pin-atx-atx-musta-lc-power-lc6460gp4-v24",
+      "external_id": "181793"
+    },
+    {
+      "name": "Lian Li SP1000P virtalähdeyksikkö 1000 W 24-pin ATX SFX Valkoinen",
+      "price_cents": 17090,
+      "url": "https://datatronic.fi/komponentit/virtalahteet/lian-li-sp1000p-virtalahdeyksikko-1000-w-24-pin-atx-sfx-valkoinen-lian-li-sp1000p-white",
+      "external_id": "175034"
+    },
+    {
+      "name": "MSI Netzteil MAG A650BN PCIE5 III 650Watt",
+      "price_cents": 8290,
+      "url": "https://datatronic.fi/komponentit/virtalahteet/msi-netzteil-mag-a650bn-pcie5-iii-650watt-306-7zpty11-hd8",
+      "external_id": "184561"
+    },
+    {
+      "name": "ASUS TUF-GAMING-1200P virtalähdeyksikkö 1200 W 20+4 pin ATX ATX Musta",
+      "price_cents": 26390,
+      "url": "https://datatronic.fi/komponentit/virtalahteet/asus-tuf-gaming-1200p-virtalahdeyksikko-1200-w-20-4-pin-atx-atx-musta-asus-90ye0100-b0na00",
+      "external_id": "181847"
+    },
+    {
+      "name": "FSP Hydro PTM PRO 1350W ATX3.0(12V-2x6) virtalähdeyksikkö 20+4 pin ATX ATX musta",
+      "price_cents": 23290,
+      "url": "https://datatronic.fi/komponentit/virtalahteet/fsp-hydro-ptm-pro-1350w-atx3012v-2x6-virtalahdeyksikko-20-4-pin-atx-atx-musta-fsp-ppa13f0101",
+      "external_id": "176967"
+    },
+    {
+      "name": "MSI Netzteil MAG A1200PLS PCI5 1200Watt",
+      "price_cents": 30900,
+      "url": "https://datatronic.fi/komponentit/virtalahteet/msi-netzteil-mag-a1200pls-pci5-1200watt-306-7zpnx11-ce0",
+      "external_id": "184569"
+    },
+    {
+      "name": "ASRock Pro Series PRO-M750G 750W ATX 80+ Gold black",
+      "price_cents": 9790,
+      "url": "https://datatronic.fi/komponentit/virtalahteet/asrock-pro-series-pro-m750g-750w-atx-80-gold-black-90-uxr075-gfeaa2",
+      "external_id": "184683"
+    },
+    {
+      "name": "Xilence Performance X Series XP850MR9.2 virtalähdeyksikkö 850 W 20+4 pin ATX ATX Musta, Punainen",
+      "price_cents": 9790,
+      "url": "https://datatronic.fi/komponentit/virtalahteet/xilence-performance-x-series-xp850mr92-virtalahdeyksikko-850-w-20-4-pin-atx-atx-musta-punainen-xilence-xn174",
+      "external_id": "182619"
+    },
+    {
+      "name": "ASUS ROG -THOR-1600T3-GAMING-EVO virtalähdeyksikkö 1600 W 20+4 pin ATX ATX Harmaa",
+      "price_cents": 99900,
+      "url": "https://datatronic.fi/komponentit/virtalahteet/asus-rog-thor-1600t3-gaming-evo-virtalahdeyksikko-1600-w-20-4-pin-atx-atx-harmaa-asus-90ye00vb-b0na00",
+      "external_id": "181846"
+    },
+    {
+      "name": "ASUS TUF-GAMING-650B-EVO virtalähdeyksikkö 650 W 20+4 pin ATX ATX Musta",
+      "price_cents": 8890,
+      "url": "https://datatronic.fi/komponentit/virtalahteet/asus-tuf-gaming-650b-evo-virtalahdeyksikko-650-w-20-4-pin-atx-atx-musta-asus-90ye00d6-b0na00",
+      "external_id": "177755"
+    },
+    {
+      "name": "Antec 1200W NE1200P EC 80+ Platinum Full Modular ATX3.1",
+      "price_cents": 14990,
+      "url": "https://datatronic.fi/komponentit/virtalahteet/antec-1200w-ne1200p-ec-80-platinum-full-modular-atx31-0-761345-20217-6",
+      "external_id": "179947"
+    },
+    {
+      "name": "MSI Netzteil MAG A1000PLS PCI5 1000Watt",
+      "price_cents": 23590,
+      "url": "https://datatronic.fi/komponentit/virtalahteet/msi-netzteil-mag-a1000pls-pci5-1000watt-306-7zpny11-ce0",
+      "external_id": "184613"
+    },
+    {
+      "name": "MSI MPG Ai1300TS PCIE5 virtalähdeyksikkö 1300 W 24-pin ATX ATX Musta",
+      "price_cents": 46900,
+      "url": "https://datatronic.fi/komponentit/virtalahteet/msi-mpg-ai1300ts-pcie5-virtalahdeyksikko-1300-w-24-pin-atx-atx-musta-msi-306-7zpub11-ce0",
+      "external_id": "181325"
+    },
+    {
+      "name": "Lian Li EDGE Gold V2 850W with EDGE Hub V2 Black",
+      "price_cents": 9490,
+      "url": "https://datatronic.fi/komponentit/virtalahteet/lian-li-edge-gold-v2-850w-with-edge-hub-v2-black-eg850c-black",
+      "external_id": "184532"
+    },
+    {
+      "name": "GIGABYTE P550SS ICE virtalähdeyksikkö 550 W 20+4 pin ATX ATX Valkoinen",
+      "price_cents": 5790,
+      "url": "https://datatronic.fi/komponentit/virtalahteet/gigabyte-p550ss-ice-virtalahdeyksikko-550-w-20-4-pin-atx-atx-valkoinen-gigabyte-gp-p550ss-ice",
+      "external_id": "181315"
+    },
+    {
+      "name": "ASUS TUF-GAMING-750B-EVO virtalähdeyksikkö 750 W 20+4 pin ATX ATX Musta",
+      "price_cents": 10090,
+      "url": "https://datatronic.fi/komponentit/virtalahteet/asus-tuf-gaming-750b-evo-virtalahdeyksikko-750-w-20-4-pin-atx-atx-musta-asus-90ye00d5-b0na00",
+      "external_id": "177754"
+    },
+    {
+      "name": "EDGE Platinum V2 1350W with EDGE Hub ADV Black",
+      "price_cents": 23790,
+      "url": "https://datatronic.fi/komponentit/virtalahteet/edge-platinum-v2-1350w-with-edge-hub-adv-black-eg1350p-black",
+      "external_id": "184540"
+    },
+    {
+      "name": "EDGE Platinum V2 1000W with EDGE Hub V2 White",
+      "price_cents": 15890,
+      "url": "https://datatronic.fi/komponentit/virtalahteet/edge-platinum-v2-1000w-with-edge-hub-v2-white-eg1000p-white",
+      "external_id": "184535"
+    },
+    {
+      "name": "Lian Li EDGE Gold V2 1000W with EDGE Hub V2 White",
+      "price_cents": 13490,
+      "url": "https://datatronic.fi/komponentit/virtalahteet/lian-li-edge-gold-v2-1000w-with-edge-hub-v2-white-eg1000c-white",
+      "external_id": "184533"
+    },
+    {
+      "name": "ASRock Pro Series PRO-M1000G 1000W ATX 80+ Gold black",
+      "price_cents": 13390,
+      "url": "https://datatronic.fi/komponentit/virtalahteet/asrock-pro-series-pro-m1000g-1000w-atx-80-gold-black-90-uxr100-gfeaa2",
+      "external_id": "184682"
+    }
+  ]
+}

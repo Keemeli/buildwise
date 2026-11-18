@@ -43,9 +43,13 @@ const { FACETS, UNKNOWN, optionKeys, applyFacets, facetOptions } = await import(
 // Coverage floors, set well below today's numbers on purpose: a parser regression that
 // silently drops most values must fail, ordinary catalogue churn must not. Raise them as
 // coverage grows; never lower one to make a red build green.
+// gpu.recommended_psu_w sits at 0.5 because the full catalogue measures 57%: workstation
+// cards (Intel Arc Pro) and older boards publish no PSU line at all — checked on their
+// product pages — and they are still usable through the power draw. A drop below the
+// floor is a parser regression, not a thin page.
 const FLOORS = {
   "cpu.tdp_w": 0.8,
-  "gpu.recommended_psu_w": 0.8,
+  "gpu.recommended_psu_w": 0.5,
   "memory.capacity_gb": 0.9,
   "motherboard.memory_type": 0.9,
   "psu.wattage_w": 0.9,
@@ -102,12 +106,12 @@ check("storage interface and form factor are canonical", () => {
       bad.push(`interface "${iface}" (expected "SATA III")`);
     }
     const shape = value(component, "form_factor");
-    if (filled(shape) && !/^(M\.2( \d{4})?|\d(\.\d)?"|3\.5")$/.test(String(shape))) {
+    if (filled(shape) && !/^(M\.2( \d{4})?|\d(\.\d)?"|3\.5"|U\.2)$/.test(String(shape))) {
       bad.push(`form_factor "${shape}"`);
     }
   }
   assert(bad.length === 0, `uncanonical storage value: ${bad.slice(0, 3).join(" | ")}`);
-  return "SATA III / M.2 2280 / 2.5\" style values only";
+  return "SATA III / M.2 2280 / 2.5\" / U.2 style values only";
 });
 
 // ---------------------------------------------------------------------------

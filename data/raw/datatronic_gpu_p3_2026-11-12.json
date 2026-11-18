@@ -1,0 +1,156 @@
+{
+  "shop": "Datatronic",
+  "category": "gpu",
+  "page": 3,
+  "source_url": "https://datatronic.fi/naytonohjaimet?page=3",
+  "fetched_at": "2026-11-12T14:44:59+00:00",
+  "site_total_products": 480,
+  "items_on_page": 24,
+  "raw_html": "data/raw/html/datatronic_gpu_p3_2026-11-12_1d115f615ec5.html",
+  "items": [
+    {
+      "name": "Lenovo 4X61P69962 näytönohjain NVIDIA RTX 2000 Ada 16 GB GDDR6",
+      "price_cents": 85500,
+      "url": "https://datatronic.fi/komponentit/naytonohjaimet/lenovo-4x61p69962-naytonohjain-nvidia-rtx-2000-ada-16-gb-gddr6-lenovo-4x61p69962",
+      "external_id": "169179"
+    },
+    {
+      "name": "Asrock Steel Legend Radeon RX 9070 XT AMD 16 GB GDDR6",
+      "price_cents": 113900,
+      "url": "https://datatronic.fi/komponentit/naytonohjaimet/asrock-steel-legend-radeon-rx-9070-xt-amd-16-gb-gddr6-asrock-rx9070xt-sl-16g",
+      "external_id": "168081"
+    },
+    {
+      "name": "Sapphire PULSE AMD Radeon RX 9060 XT 16GB GPU GDDR6",
+      "price_cents": 77900,
+      "url": "https://datatronic.fi/komponentit/naytonohjaimet/sapphire-pulse-amd-radeon-rx-9060-xt-16gb-gpu-gddr6-sapphire-11350-03-20g",
+      "external_id": "170809"
+    },
+    {
+      "name": "PowerColor Fighter RX 7600 AMD Radeon RX 7600 8 GB GDDR6",
+      "price_cents": 45500,
+      "url": "https://datatronic.fi/komponentit/naytonohjaimet/powercolor-fighter-rx-7600-amd-radeon-rx-7600-8-gb-gddr6-powercolor-rx7600-8g-f-v2",
+      "external_id": "176598"
+    },
+    {
+      "name": "PowerColor Radeon AI PRO R9700 AMD 32 GB GDDR6",
+      "price_cents": 263500,
+      "url": "https://datatronic.fi/komponentit/naytonohjaimet/powercolor-radeon-ai-pro-r9700-amd-32-gb-gddr6-powercolor-ai-pro-r9700-32g-b",
+      "external_id": "173801"
+    },
+    {
+      "name": "Asrock Intel Arc B580 Challenger 12GB OC GDDR6",
+      "price_cents": 62900,
+      "url": "https://datatronic.fi/komponentit/naytonohjaimet/asrock-intel-arc-b580-challenger-12gb-oc-gddr6-asrock-90-ga5lzz-00uanf",
+      "external_id": "165152"
+    },
+    {
+      "name": "Asrock Intel Arc A310 Low Profile 4GB GDDR6",
+      "price_cents": 21390,
+      "url": "https://datatronic.fi/komponentit/naytonohjaimet/asrock-intel-arc-a310-low-profile-4gb-gddr6-asrock-90-g4nzz-00uanf",
+      "external_id": "149349"
+    },
+    {
+      "name": "Nvidia RTX PRO 6000 Blackwell Workstation Edition 96 GB GDDR7 Bulk",
+      "price_cents": 2001900,
+      "url": "https://datatronic.fi/komponentit/naytonohjaimet/nvidia-rtx-pro-6000-blackwell-workstation-edition-96-gb-gddr7-bulk-nvidia-900-5g144-2200-000",
+      "external_id": "180016"
+    },
+    {
+      "name": "PowerColor Red Devil Radeon RX 9070 XT AMD 16 GB GDDR6",
+      "price_cents": 106900,
+      "url": "https://datatronic.fi/komponentit/naytonohjaimet/powercolor-red-devil-radeon-rx-9070-xt-amd-16-gb-gddr6-powercolor-rx9070xt-16g-e-oc",
+      "external_id": "168103"
+    },
+    {
+      "name": "GIGABYTE AORUS GeForce RTX 5080 MASTER ICE 16G NVIDIA 16 GB GDDR7",
+      "price_cents": 209990,
+      "url": "https://datatronic.fi/komponentit/naytonohjaimet/gigabyte-aorus-geforce-rtx-5080-master-ice-16g-nvidia-16-gb-gddr7-gigabyte-gv-n5080aorusm-ice-16gd",
+      "external_id": "166099"
+    },
+    {
+      "name": "GIGABYTE Radeon RX 9070 XT GAMING 16G AMD 16 GB GDDR6",
+      "price_cents": 110500,
+      "url": "https://datatronic.fi/komponentit/naytonohjaimet/gigabyte-radeon-rx-9070-xt-gaming-16g-amd-16-gb-gddr6-gigabyte-gv-r9070xtgaming-16gd",
+      "external_id": "171546"
+    },
+    {
+      "name": "PNY RTX A1000 NVIDIA 8 GB GDDR6",
+      "price_cents": 47900,
+      "url": "https://datatronic.fi/komponentit/naytonohjaimet/pny-rtx-a1000-nvidia-8-gb-gddr6-pny-vcnrtxa1000-sb",
+      "external_id": "159833"
+    },
+    {
+      "name": "ASUS Prime -RTX5060TI-O16G NVIDIA GeForce RTX 5060 Ti 16 GB GDDR7",
+      "price_cents": 83990,
+      "url": "https://datatronic.fi/komponentit/naytonohjaimet/asus-prime-rtx5060ti-o16g-nvidia-geforce-rtx-5060-ti-16-gb-gddr7-asus-90yv0mh2-m0na00",
+      "external_id": "168804"
+    },
+    {
+      "name": "GIGABYTE GeForce RTX 5070 GAMING OC 12G NVIDIA 12 GB GDDR7",
+      "price_cents": 95900,
+      "url": "https://datatronic.fi/komponentit/naytonohjaimet/gigabyte-geforce-rtx-5070-gaming-oc-12g-nvidia-12-gb-gddr7-gigabyte-gv-n5070gaming-oc-12gd",
+      "external_id": "168516"
+    },
+    {
+      "name": "PNY GeForce RTX 5080 Overclocked Triple Fan GPU NVIDIA 16 GB GDDR7",
+      "price_cents": 244900,
+      "url": "https://datatronic.fi/komponentit/naytonohjaimet/pny-geforce-rtx-5080-overclocked-triple-fan-gpu-nvidia-16-gb-gddr7-pny-vcg508016tfxpb1-o",
+      "external_id": "166314"
+    },
+    {
+      "name": "NZXT H9 Flow Midi Tower musta",
+      "price_cents": 11890,
+      "url": "https://datatronic.fi/komponentit/naytonohjaimet/nzxt-h9-flow-midi-tower-musta-nzxt-cm-h92fb-01",
+      "external_id": "170676"
+    },
+    {
+      "name": "PowerColor Reaper AMD Radeon RX 9060 XT 16GB GDDR6",
+      "price_cents": 81500,
+      "url": "https://datatronic.fi/komponentit/naytonohjaimet/powercolor-reaper-amd-radeon-rx-9060-xt-16gb-gddr6-powercolor-rx9060xt-16g-a",
+      "external_id": "170857"
+    },
+    {
+      "name": "GIGABYTE GeForce RTX 5080 GAMING OC 16G NVIDIA 16 GB GDDR7",
+      "price_cents": 1049900,
+      "url": "https://datatronic.fi/komponentit/naytonohjaimet/gigabyte-geforce-rtx-5080-gaming-oc-16g-nvidia-16-gb-gddr7-gigabyte-gv-n5080aorus-m-16gd",
+      "external_id": "166088"
+    },
+    {
+      "name": "PowerColor RX 9070 XT Hellhound REVA AMD Radeon RX 9070 XT 16 GB GDDR6",
+      "price_cents": 117900,
+      "url": "https://datatronic.fi/komponentit/naytonohjaimet/powercolor-rx-9070-xt-hellhound-reva-amd-radeon-rx-9070-xt-16-gb-gddr6-powercolor-rx9070xt-16g-l-oc-reva",
+      "external_id": "173996"
+    },
+    {
+      "name": "AMD Radeon Pro W7500 8 GB GDDR6",
+      "price_cents": 46900,
+      "url": "https://datatronic.fi/komponentit/naytonohjaimet/amd-radeon-pro-w7500-8-gb-gddr6-amd-100-300000078",
+      "external_id": "150477"
+    },
+    {
+      "name": "Sapphire PURE AMD Radeon RX 9060 XT GPU 16 GB GDDR6",
+      "price_cents": 79500,
+      "url": "https://datatronic.fi/komponentit/naytonohjaimet/sapphire-pure-amd-radeon-rx-9060-xt-gpu-16-gb-gddr6-sapphire-11350-02-20g",
+      "external_id": "170808"
+    },
+    {
+      "name": "ASUS Dual -RTX3050-O6G NVIDIA GeForce RTX 3050 6 GB GDDR6",
+      "price_cents": 33900,
+      "url": "https://datatronic.fi/komponentit/naytonohjaimet/asus-dual-rtx3050-o6g-nvidia-geforce-rtx-3050-6-gb-gddr6-asus-90yv0k60-m0na00",
+      "external_id": "153650"
+    },
+    {
+      "name": "NZXT Kraken Plus 240 Suoritin All-in-one-nesteenjäähdytin 12 cm musta",
+      "price_cents": 9990,
+      "url": "https://datatronic.fi/komponentit/naytonohjaimet/nzxt-kraken-plus-240-suoritin-all-in-one-nesteenjaahdytin-12-cm-musta-nzxt-rl-kn240-b2",
+      "external_id": "170668"
+    },
+    {
+      "name": "PowerColor Hellhound AMD Radeon RX 9070 GRE 12GB GDDR6",
+      "price_cents": 83900,
+      "url": "https://datatronic.fi/komponentit/naytonohjaimet/powercolor-hellhound-amd-radeon-rx-9070-gre-12gb-gddr6-powercolor-rx9070gre-12g-l-oc",
+      "external_id": "180684"
+    }
+  ]
+}

@@ -1,0 +1,156 @@
+{
+  "shop": "Datatronic",
+  "category": "psu",
+  "page": 17,
+  "source_url": "https://datatronic.fi/virtalahteet?page=17",
+  "fetched_at": "2026-11-12T14:49:57+00:00",
+  "site_total_products": null,
+  "items_on_page": 24,
+  "raw_html": "data/raw/html/datatronic_psu_p17_2026-11-12_6ecff2166405.html",
+  "items": [
+    {
+      "name": "Cooler Master X Mighty Platinum 2000W 230V virtalûÊhdeyksikkûÑ 24-pin ATX ATX musta",
+      "price_cents": null,
+      "url": "https://datatronic.fi/komponentit/virtalahteet/cooler-master-x-mighty-platinum-2000w-230v-virtalahdeyksikko-24-pin-atx-atx-musta-cooler-master-mps-k001-afbp-nbeu",
+      "external_id": "173661"
+    },
+    {
+      "name": "SAMA Gears H600 virtalûÊhdeyksikkûÑ 600 W 24-pin ATX ATX musta",
+      "price_cents": null,
+      "url": "https://datatronic.fi/komponentit/virtalahteet/sama-gears-h600-virtalahdeyksikko-600-w-24-pin-atx-atx-musta-sama-gears-h0600-bkshw001-eu",
+      "external_id": "176286"
+    },
+    {
+      "name": "Thermaltake TOUGHPOWER GF A3 virtalûÊhdeyksikkûÑ 1200 W 24-pin ATX ATX Musta",
+      "price_cents": null,
+      "url": "https://datatronic.fi/komponentit/virtalahteet/thermaltake-toughpower-gf-a3-virtalahdeyksikko-1200-w-24-pin-atx-atx-musta-thermaltake-ps-tpd-1200fnfage-h",
+      "external_id": "129398"
+    },
+    {
+      "name": "ASUS Prime 750W Bronze White Edition virtalûÊhdeyksikkûÑ 20+4 pin ATX ATX Valkoinen",
+      "price_cents": null,
+      "url": "https://datatronic.fi/komponentit/virtalahteet/asus-prime-750w-bronze-white-edition-virtalahdeyksikko-20-4-pin-atx-atx-valkoinen-asus-90ye00y3-b0na00",
+      "external_id": "173856"
+    },
+    {
+      "name": "FSP ADVAN GM 1000W virtalûÊhdeyksikkûÑ 20+4 pin ATX ATX musta",
+      "price_cents": null,
+      "url": "https://datatronic.fi/komponentit/virtalahteet/fsp-advan-gm-1000w-virtalahdeyksikko-20-4-pin-atx-atx-musta-fsp-ppa10a4200",
+      "external_id": "175599"
+    },
+    {
+      "name": "255W Power Supply 100V-240V",
+      "price_cents": null,
+      "url": "https://datatronic.fi/komponentit/virtalahteet/255w-power-supply-100v-240v-yh9d7",
+      "external_id": "148344"
+    },
+    {
+      "name": "Thermaltake Toughpower Gt virtalûÊhdeyksikkûÑ 850 W 24-pin ATX ATX musta",
+      "price_cents": null,
+      "url": "https://datatronic.fi/komponentit/virtalahteet/thermaltake-toughpower-gt-virtalahdeyksikko-850-w-24-pin-atx-atx-musta-thermaltake-ps-tpt-0850fnfage-3",
+      "external_id": "165860"
+    },
+    {
+      "name": "Thermalright TG-850 virtalûÊhdeyksikkûÑ 850 W 20+4 pin ATX ATX Valkoinen",
+      "price_cents": null,
+      "url": "https://datatronic.fi/komponentit/virtalahteet/thermalright-tg-850-virtalahdeyksikko-850-w-20-4-pin-atx-atx-valkoinen-thermalright-tr-tg-850-w",
+      "external_id": "150668"
+    },
+    {
+      "name": "SAMA P1200 virtalûÊhdeyksikkûÑ 1200 W 24-pin ATX ATX Valkoinen",
+      "price_cents": null,
+      "url": "https://datatronic.fi/komponentit/virtalahteet/sama-p1200-virtalahdeyksikko-1200-w-24-pin-atx-atx-valkoinen-sama-gears-p1200-whpff001-eu",
+      "external_id": "174186"
+    },
+    {
+      "name": "Lian Li RS1000G virtalûÊhdeyksikkûÑ 1000 W 20+4 pin ATX ATX Musta",
+      "price_cents": null,
+      "url": "https://datatronic.fi/komponentit/virtalahteet/lian-li-rs1000g-virtalahdeyksikko-1000-w-20-4-pin-atx-atx-musta-lian-li-g9prs1000gb000eu",
+      "external_id": "178117"
+    },
+    {
+      "name": "ASUS ROG -THOR-1200P3-WHITE-GAMING virtalûÊhdeyksikkûÑ 1200 W 20+4 pin ATX ATX Valkoinen",
+      "price_cents": null,
+      "url": "https://datatronic.fi/komponentit/virtalahteet/asus-rog-thor-1200p3-white-gaming-virtalahdeyksikko-1200-w-20-4-pin-atx-atx-valkoinen-asus-90ye00v5-b0na00",
+      "external_id": "176156"
+    },
+    {
+      "name": "Gigabyte GP-UD850GM PG5 virtalûÊhdeyksikkûÑ 850 W 20+4 pin ATX ATX Musta",
+      "price_cents": null,
+      "url": "https://datatronic.fi/komponentit/virtalahteet/gigabyte-gp-ud850gm-pg5-virtalahdeyksikko-850-w-20-4-pin-atx-atx-musta-gigabyte-gp-ud850gm-pg5-20",
+      "external_id": "113854"
+    },
+    {
+      "name": "Thermaltake Toughpower GF A3 Gold 850W - TT Premium Edition virtalûÊhdeyksikkûÑ 24-pin ATX ATX Musta",
+      "price_cents": null,
+      "url": "https://datatronic.fi/komponentit/virtalahteet/thermaltake-toughpower-gf-a3-gold-850w-tt-premium-edition-virtalahdeyksikko-24-pin-atx-atx-musta-thermaltake-ps-tpd-0850fnfage-h",
+      "external_id": "129396"
+    },
+    {
+      "name": "Thermaltake Berlin virtalûÊhdeyksikkûÑ 750 W 24-pin ATX ATX musta",
+      "price_cents": null,
+      "url": "https://datatronic.fi/komponentit/virtalahteet/thermaltake-berlin-virtalahdeyksikko-750-w-24-pin-atx-atx-musta-thermaltake-w0750re",
+      "external_id": "168925"
+    },
+    {
+      "name": "Asrock PRO-650G virtalûÊhdeyksikkûÑ 650 W 24-pin ATX ATX Musta",
+      "price_cents": null,
+      "url": "https://datatronic.fi/komponentit/virtalahteet/asrock-pro-650g-virtalahdeyksikko-650-w-24-pin-atx-atx-musta-asrock-90-uxr065-gneaa2",
+      "external_id": "174607"
+    },
+    {
+      "name": "Seasonic SSP-400ET2 virtalûÊhdeyksikkûÑ 400 W ATX Harmaa",
+      "price_cents": null,
+      "url": "https://datatronic.fi/komponentit/virtalahteet/seasonic-ssp-400et2-virtalahdeyksikko-400-w-atx-harmaa-seasonic-ssp-400es2",
+      "external_id": "168035"
+    },
+    {
+      "name": "240W Power Supply 100V-240V",
+      "price_cents": null,
+      "url": "https://datatronic.fi/komponentit/virtalahteet/240w-power-supply-100v-240v-f79td",
+      "external_id": "148244"
+    },
+    {
+      "name": "Antec GSK850 V2 virtalûÊhdeyksikkûÑ 850 W 20+4 pin ATX ATX Valkoinen",
+      "price_cents": null,
+      "url": "https://datatronic.fi/komponentit/virtalahteet/antec-gsk850-v2-virtalahdeyksikko-850-w-20-4-pin-atx-atx-valkoinen-antec-0-761345-20152-0",
+      "external_id": "179616"
+    },
+    {
+      "name": "FSP Vita virtalûÊhdeyksikkûÑ 750 W 20+4 pin ATX ATX musta",
+      "price_cents": null,
+      "url": "https://datatronic.fi/komponentit/virtalahteet/fsp-vita-virtalahdeyksikko-750-w-20-4-pin-atx-atx-musta-fsp-ppa7508205",
+      "external_id": "175593"
+    },
+    {
+      "name": "LC-Power LC6550B-SI V3.1 virtalûÊhdeyksikkûÑ 550 W 20+4 pin ATX ATX",
+      "price_cents": null,
+      "url": "https://datatronic.fi/komponentit/virtalahteet/lc-power-lc6550b-si-v31-virtalahdeyksikko-550-w-20-4-pin-atx-atx-lc-power-lc6550b-si-v31",
+      "external_id": "170685"
+    },
+    {
+      "name": "Lenovo AC-Adapter ADL45WCG 20V 2.25A",
+      "price_cents": null,
+      "url": "https://datatronic.fi/komponentit/virtalahteet/lenovo-ac-adapter-adl45wcg-20v-225a-fru01fr133",
+      "external_id": "128185"
+    },
+    {
+      "name": "GAMER STORM PF750L (schwarz 2x PCIe 750 Watt)",
+      "price_cents": null,
+      "url": "https://datatronic.fi/komponentit/virtalahteet/gamer-storm-pf750l-schwarz-2x-pcie-750-watt-r-pf750l-he0b-jgeu",
+      "external_id": "174482"
+    },
+    {
+      "name": "Corsair HX1200i virtalûÊhdeyksikkûÑ 1200 W 24-pin ATX ATX musta",
+      "price_cents": null,
+      "url": "https://datatronic.fi/komponentit/virtalahteet/corsair-hx1200i-virtalahdeyksikko-1200-w-24-pin-atx-atx-musta-corsair-cp-9020267-eu",
+      "external_id": "174485"
+    },
+    {
+      "name": "DeepCool PS850G virtalûÊhdeyksikkûÑ 850 W 20+4 pin ATX ATX musta",
+      "price_cents": null,
+      "url": "https://datatronic.fi/komponentit/virtalahteet/deepcool-ps850g-virtalahdeyksikko-850-w-20-4-pin-atx-atx-musta-deepcool-r-ps850g-fe0b-jgeu",
+      "external_id": "174465"
+    }
+  ]
+}

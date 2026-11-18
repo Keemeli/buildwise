@@ -1,0 +1,156 @@
+{
+  "shop": "Datatronic",
+  "category": "storage",
+  "page": 17,
+  "source_url": "https://datatronic.fi/kiintolevyt-ssd-levyt?page=17",
+  "fetched_at": "2026-11-12T14:48:22+00:00",
+  "site_total_products": 589,
+  "items_on_page": 24,
+  "raw_html": "data/raw/html/datatronic_storage_p17_2026-11-12_f923062f588e.html",
+  "items": [
+    {
+      "name": "Seagate SkyHawk 3.5\" 8 TB Serial ATA III",
+      "price_cents": 50500,
+      "url": "https://datatronic.fi/komponentit/kiintolevyt-ssd-levyt/hdd/seagate-skyhawk-35-8-tb-serial-ata-iii-seagate-st8000vx010",
+      "external_id": "157639"
+    },
+    {
+      "name": "Western Digital Green WDS480G3G0B SSD-massamuisti M.2 480 GB Serial ATA III",
+      "price_cents": 14090,
+      "url": "https://datatronic.fi/komponentit/kiintolevyt-ssd-levyt/ssd/western-digital-green-wds480g3g0b-ssd-massamuisti-m2-480-gb-serial-ata-iii-western-digital-wds480g3g0b",
+      "external_id": "48450"
+    },
+    {
+      "name": "Seagate NAS HDD IronWolf 3.5\" 12000 GB Serial ATA III",
+      "price_cents": 56900,
+      "url": "https://datatronic.fi/komponentit/kiintolevyt-ssd-levyt/hdd/seagate-nas-hdd-ironwolf-35-12000-gb-serial-ata-iii-seagate-st12000vn0008",
+      "external_id": "14932"
+    },
+    {
+      "name": "Toshiba MG09 sisäinen kiintolevy 16 TB 7200 RPM 3.5\" Serial ATA III",
+      "price_cents": 101500,
+      "url": "https://datatronic.fi/komponentit/kiintolevyt-ssd-levyt/hdd/toshiba-mg09-sisainen-kiintolevy-16-tb-7200-rpm-35-serial-ata-iii-toshiba-mg09aca16te",
+      "external_id": "171395"
+    },
+    {
+      "name": "Samsung 980 PRO M.2 1000 GB PCI Express 4.0 TLC V-NAND NVMe",
+      "price_cents": 176500,
+      "url": "https://datatronic.fi/komponentit/kiintolevyt-ssd-levyt/ssd/samsung-980-pro-m2-1000-gb-pci-express-40-tlc-v-nand-nvme-samsung-mz-v8p1t0bw",
+      "external_id": "4964"
+    },
+    {
+      "name": "Emtec X250 M.2 256 GB Serial ATA III 3D NAND",
+      "price_cents": 7890,
+      "url": "https://datatronic.fi/komponentit/kiintolevyt-ssd-levyt/ssd/emtec-x250-m2-256-gb-serial-ata-iii-3d-nand-emtec-ecssd256gx250",
+      "external_id": "40108"
+    },
+    {
+      "name": "GIGABYTE AORUS Gen4 7000E 2 TB M.2 PCI Express 4.0 NVMe 3D TLC NAND",
+      "price_cents": 36900,
+      "url": "https://datatronic.fi/komponentit/kiintolevyt-ssd-levyt/ssd/gigabyte-aorus-gen4-7000e-2-tb-m2-pci-express-40-nvme-3d-tlc-nand-gigabyte-ag470e2tb",
+      "external_id": "175495"
+    },
+    {
+      "name": "GIGABYTE Gen4 4000E M.2 1 TB PCI Express 4.0 NVMe 3D NAND",
+      "price_cents": 18390,
+      "url": "https://datatronic.fi/komponentit/kiintolevyt-ssd-levyt/gigabyte-gen4-4000e-m2-1-tb-pci-express-40-nvme-3d-nand-gigabyte-g440e1tb",
+      "external_id": "155633"
+    },
+    {
+      "name": "Corsair MP600 MICRO 2 TB M.2 PCI Express 4.0 NVMe 3D TLC NAND",
+      "price_cents": 112900,
+      "url": "https://datatronic.fi/komponentit/kiintolevyt-ssd-levyt/ssd/corsair-mp600-micro-2-tb-m2-pci-express-40-nvme-3d-tlc-nand-corsair-cssd-f2000gbmp600mcr2",
+      "external_id": "165285"
+    },
+    {
+      "name": "Transcend PCIe SSD 410S M.2 512 GB PCI Express 4.0 NVMe 3D NAND",
+      "price_cents": 22890,
+      "url": "https://datatronic.fi/komponentit/kiintolevyt-ssd-levyt/ssd/transcend-pcie-ssd-410s-m2-512-gb-pci-express-40-nvme-3d-nand-transcend-ts512gmte410s",
+      "external_id": "162181"
+    },
+    {
+      "name": "Seagate Enterprise ST1200MM0009 sisäinen kiintolevy 2.5\" 1,2 TB SAS",
+      "price_cents": 42500,
+      "url": "https://datatronic.fi/komponentit/kiintolevyt-ssd-levyt/hdd/seagate-enterprise-st1200mm0009-sisainen-kiintolevy-25-12-tb-sas-seagate-st1200mm0009",
+      "external_id": "157603"
+    },
+    {
+      "name": "DELL 400-BRCT sisäinen kiintolevy 2 TB 7200 RPM 3.5\" Serial ATA III",
+      "price_cents": 67900,
+      "url": "https://datatronic.fi/komponentit/kiintolevyt-ssd-levyt/hdd/dell-400-brct-sisainen-kiintolevy-2-tb-7200-rpm-35-serial-ata-iii-dell-400-brct",
+      "external_id": "178801"
+    },
+    {
+      "name": "Synology HAT3310-12T sisäinen kiintolevy 3.5\" 12 TB SATA",
+      "price_cents": 66500,
+      "url": "https://datatronic.fi/komponentit/kiintolevyt-ssd-levyt/hdd/synology-hat3310-12t-sisainen-kiintolevy-35-12-tb-sata-synology-hat3310-12t",
+      "external_id": "161892"
+    },
+    {
+      "name": "Silicon Power US75 2 TB M.2 PCI Express 4.0 NVMe",
+      "price_cents": 47500,
+      "url": "https://datatronic.fi/komponentit/kiintolevyt-ssd-levyt/silicon-power-us75-2-tb-m2-pci-express-40-nvme-silicon-power-sp02kgbp44us7505",
+      "external_id": "166465"
+    },
+    {
+      "name": "Seagate SkyHawk AI 3.5\" 24 TB Serial ATA III",
+      "price_cents": 112900,
+      "url": "https://datatronic.fi/komponentit/kiintolevyt-ssd-levyt/hdd/seagate-skyhawk-ai-35-24-tb-serial-ata-iii-seagate-st24000ve002",
+      "external_id": "151203"
+    },
+    {
+      "name": "MSI SPATIUM M571 DLP PCIe 5.0 NVMe M.2 2TB PCI Express 5.0 3D NAND",
+      "price_cents": 50900,
+      "url": "https://datatronic.fi/komponentit/kiintolevyt-ssd-levyt/ssd/msi-spatium-m571-dlp-pcie-50-nvme-m2-2tb-pci-express-50-3d-nand-msi-s78-440q1k0-p83",
+      "external_id": "176316"
+    },
+    {
+      "name": "Kingston Technology FURY Renegade M.2 4000 GB PCI Express 4.0 3D TLC NVMe",
+      "price_cents": 137900,
+      "url": "https://datatronic.fi/komponentit/kiintolevyt-ssd-levyt/ssd/kingston-technology-fury-renegade-m2-4000-gb-pci-express-40-3d-tlc-nvme-kingston-technology-sfyrdk-4000g",
+      "external_id": "65530"
+    },
+    {
+      "name": "Icy Dock MB720MK-B V3 tallennusaseman kotelo SSD-kotelo Musta M.2",
+      "price_cents": 46900,
+      "url": "https://datatronic.fi/komponentit/kiintolevyt-ssd-levyt/icy-dock-mb720mk-b-v3-tallennusaseman-kotelo-ssd-kotelo-musta-m2-icy-dock-mb720mk-b-v3",
+      "external_id": "150469"
+    },
+    {
+      "name": "Lenovo ThinkStation Quad AIC M.2 SSD liitäntäkortti/-sovitin Sisäinen PCIe",
+      "price_cents": 53500,
+      "url": "https://datatronic.fi/komponentit/kiintolevyt-ssd-levyt/lenovo-thinkstation-quad-aic-m2-ssd-liitantakortti-sovitin-sisainen-pcie-lenovo-4xh0v09766",
+      "external_id": "57703"
+    },
+    {
+      "name": "Seagate SkyHawk 3.5\" 8000 GB Serial ATA III",
+      "price_cents": 37900,
+      "url": "https://datatronic.fi/komponentit/kiintolevyt-ssd-levyt/hdd/seagate-skyhawk-35-8000-gb-serial-ata-iii-seagate-st8000vx010",
+      "external_id": "113306"
+    },
+    {
+      "name": "Lexar NQ100 2 TB 2.5\" Serial ATA III",
+      "price_cents": 27490,
+      "url": "https://datatronic.fi/komponentit/kiintolevyt-ssd-levyt/ssd/lexar-nq100-2-tb-25-serial-ata-iii-lexar-lnq100x002t-rnnng",
+      "external_id": "177064"
+    },
+    {
+      "name": "Western Digital Blue SA510 2.5\" 250 GB Serial ATA III",
+      "price_cents": 9390,
+      "url": "https://datatronic.fi/komponentit/kiintolevyt-ssd-levyt/ssd/western-digital-blue-sa510-25-250-gb-serial-ata-iii-western-digital-wds250g3b0a",
+      "external_id": "46125"
+    },
+    {
+      "name": "Synology HAT3310-16T sisäinen kiintolevy 3.5\" 16 TB SATA",
+      "price_cents": 80500,
+      "url": "https://datatronic.fi/komponentit/kiintolevyt-ssd-levyt/hdd/synology-hat3310-16t-sisainen-kiintolevy-35-16-tb-sata-synology-hat3310-16t",
+      "external_id": "161907"
+    },
+    {
+      "name": "Corsair MP700 PRO XT 2 TB M.2 PCI Express 5.0 NVMe 3D TLC NAND",
+      "price_cents": 191500,
+      "url": "https://datatronic.fi/komponentit/kiintolevyt-ssd-levyt/ssd/corsair-mp700-pro-xt-2-tb-m2-pci-express-50-nvme-3d-tlc-nand-corsair-cssd-f20gbmp700pxnh",
+      "external_id": "174230"
+    }
+  ]
+}

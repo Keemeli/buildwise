@@ -1,183 +1,156 @@
 {
-  "schema_version": 1,
   "shop": "Datatronic",
   "category": "psu",
-  "source_type": "category",
+  "page": 1,
   "source_url": "https://datatronic.fi/virtalahteet",
   "fetched_at": "2026-11-03T14:00:12+00:00",
-  "raw_html": "raw/html/datatronic_psu_p1_2026-11-03_e37a529917df.html",
-  "origin": null,
+  "site_total_products": 672,
+  "items_on_page": 24,
+  "raw_html": "data/raw/html/datatronic_psu_p1_2026-11-03_e37a529917df.html",
   "items": [
     {
       "name": "Seasonic CORE BC-650 virtalähdeyksikkö 650 W 20+4 pin ATX ATX musta",
       "price_cents": 5190,
       "url": "https://datatronic.fi/komponentit/virtalahteet/seasonic-core-bc-650-virtalahdeyksikko-650-w-20-4-pin-atx-atx-musta-seasonic-srp-cbc651-a5a51jf",
-      "external_id": "175260",
-      "extraction": "listing_card"
+      "external_id": "175260"
     },
     {
       "name": "SAMA G1000 virtalähdeyksikkö 1000 W 24-pin ATX ATX musta",
       "price_cents": 8190,
       "url": "https://datatronic.fi/komponentit/virtalahteet/sama-g1000-virtalahdeyksikko-1000-w-24-pin-atx-atx-musta-sama-gears-g1000-bkgff001-eu",
-      "external_id": "174191",
-      "extraction": "listing_card"
+      "external_id": "174191"
     },
     {
       "name": "Cooler Master GX II Gold 750 ATX3.1 virtalähdeyksikkö 750 W 24-pin ATX ATX musta",
       "price_cents": 9990,
       "url": "https://datatronic.fi/komponentit/virtalahteet/cooler-master-gx-ii-gold-750-atx31-virtalahdeyksikko-750-w-24-pin-atx-atx-musta-cooler-master-mpx-7503-afag-2ebeu",
-      "external_id": "171778",
-      "extraction": "listing_card"
+      "external_id": "171778"
     },
     {
       "name": "be quiet! Pure Power 13 M | 850W virtalähdeyksikkö 20+4 pin ATX ATX musta",
       "price_cents": 12790,
       "url": "https://datatronic.fi/komponentit/virtalahteet/be-quiet-pure-power-13-m-850w-virtalahdeyksikko-20-4-pin-atx-atx-musta-be-quiet-bp027eu",
-      "external_id": "170829",
-      "extraction": "listing_card"
+      "external_id": "170829"
     },
     {
       "name": "Seasonic Focus GX virtalähdeyksikkö 850 W 20+4 pin ATX ATX musta",
       "price_cents": 12990,
       "url": "https://datatronic.fi/komponentit/virtalahteet/seasonic-focus-gx-virtalahdeyksikko-850-w-20-4-pin-atx-atx-musta-seasonic-focus-gx-850-v4",
-      "external_id": "164503",
-      "extraction": "listing_card"
+      "external_id": "164503"
     },
     {
       "name": "SAMA P1000 virtalähdeyksikkö 1000 W 24-pin ATX ATX musta",
       "price_cents": 11090,
       "url": "https://datatronic.fi/komponentit/virtalahteet/sama-p1000-virtalahdeyksikko-1000-w-24-pin-atx-atx-musta-sama-gears-p1000-bkpff001-eu",
-      "external_id": "174183",
-      "extraction": "listing_card"
+      "external_id": "174183"
     },
     {
       "name": "SAMA G850 virtalähdeyksikkö 850 W 24-pin ATX ATX musta",
       "price_cents": 7390,
       "url": "https://datatronic.fi/komponentit/virtalahteet/sama-g850-virtalahdeyksikko-850-w-24-pin-atx-atx-musta-sama-gears-g0850-bkgff001-eu",
-      "external_id": "174189",
-      "extraction": "listing_card"
+      "external_id": "174189"
     },
     {
       "name": "be quiet! Pure Power 13 M | 1000W virtalähdeyksikkö 20+4 pin ATX ATX musta",
       "price_cents": 15990,
       "url": "https://datatronic.fi/komponentit/virtalahteet/be-quiet-pure-power-13-m-1000w-virtalahdeyksikko-20-4-pin-atx-atx-musta-be-quiet-bp028eu",
-      "external_id": "171126",
-      "extraction": "listing_card"
+      "external_id": "171126"
     },
     {
       "name": "Corsair RM750e virtalähdeyksikkö 750 W 24-pin ATX ATX musta",
       "price_cents": 11290,
       "url": "https://datatronic.fi/komponentit/virtalahteet/corsair-rm750e-virtalahdeyksikko-750-w-24-pin-atx-atx-musta-corsair-cp-9020295-eu",
-      "external_id": "167704",
-      "extraction": "listing_card"
+      "external_id": "167704"
     },
     {
       "name": "Corsair RM650e virtalähdeyksikkö 650 W 24-pin ATX ATX musta",
       "price_cents": 8890,
       "url": "https://datatronic.fi/komponentit/virtalahteet/corsair-rm650e-virtalahdeyksikko-650-w-24-pin-atx-atx-musta-corsair-cp-9020302-eu",
-      "external_id": "167707",
-      "extraction": "listing_card"
+      "external_id": "167707"
     },
     {
       "name": "ASUS Prime 850W Gold ATX 3.1 -ATX-virtalähde, 850 W",
       "price_cents": 14390,
       "url": "https://datatronic.fi/komponentit/virtalahteet/asus-prime-850w-gold-atx-31-atx-virtalahde-850-w-asus-90ye00u0-b0na00",
-      "external_id": "165381",
-      "extraction": "listing_card"
+      "external_id": "165381"
     },
     {
       "name": "Seasonic CORE GC-850 ATX 3.1 virtalähdeyksikkö 850 W 24-pin ATX musta",
       "price_cents": 8390,
       "url": "https://datatronic.fi/komponentit/virtalahteet/seasonic-core-gc-850-atx-31-virtalahdeyksikko-850-w-24-pin-atx-musta-seasonic-srp-cgc851-a5a32sf",
-      "external_id": "175255",
-      "extraction": "listing_card"
+      "external_id": "175255"
     },
     {
       "name": "Corsair RM850x virtalähdeyksikkö 850 W 24-pin ATX ATX musta",
       "price_cents": 15990,
       "url": "https://datatronic.fi/komponentit/virtalahteet/corsair-rm850x-virtalahdeyksikko-850-w-24-pin-atx-atx-musta-corsair-cp-9020270-eu",
-      "external_id": "164921",
-      "extraction": "listing_card"
+      "external_id": "164921"
     },
     {
       "name": "Seasonic FOCUS GX ATX 3.0 virtalähdeyksikkö 1000 W 20+4 pin ATX musta",
       "price_cents": 16390,
       "url": "https://datatronic.fi/komponentit/virtalahteet/seasonic-focus-gx-atx-30-virtalahdeyksikko-1000-w-20-4-pin-atx-musta-seasonic-focus-gx-1000-v4",
-      "external_id": "164502",
-      "extraction": "listing_card"
+      "external_id": "164502"
     },
     {
       "name": "SAMA P1200 virtalähdeyksikkö 1200 W 24-pin ATX ATX musta",
       "price_cents": 13990,
       "url": "https://datatronic.fi/komponentit/virtalahteet/sama-p1200-virtalahdeyksikko-1200-w-24-pin-atx-atx-musta-sama-gears-p1200-bkpff001-eu",
-      "external_id": "174185",
-      "extraction": "listing_card"
+      "external_id": "174185"
     },
     {
       "name": "Seasonic CORE GC-650 ATX 3.1 virtalähdeyksikkö 650 W 24-pin ATX musta",
       "price_cents": 7090,
       "url": "https://datatronic.fi/komponentit/virtalahteet/seasonic-core-gc-650-atx-31-virtalahdeyksikko-650-w-24-pin-atx-musta-seasonic-srp-cgc651-a5a32sf",
-      "external_id": "175257",
-      "extraction": "listing_card"
+      "external_id": "175257"
     },
     {
       "name": "Corsair RM850e virtalähdeyksikkö 850 W 24-pin ATX ATX musta",
       "price_cents": 13590,
       "url": "https://datatronic.fi/komponentit/virtalahteet/corsair-rm850e-virtalahdeyksikko-850-w-24-pin-atx-atx-musta-corsair-cp-9020296-eu",
-      "external_id": "167705",
-      "extraction": "listing_card"
+      "external_id": "167705"
     },
     {
       "name": "ASUS TUF Gaming 750W Gold virtalähdeyksikkö 20+4 pin ATX ATX Musta",
       "price_cents": 10390,
       "url": "https://datatronic.fi/komponentit/virtalahteet/asus-tuf-gaming-750w-gold-virtalahdeyksikko-20-4-pin-atx-atx-musta-asus-90ye00s3-b0na00",
-      "external_id": "60693",
-      "extraction": "listing_card"
+      "external_id": "60693"
     },
     {
       "name": "be quiet! PURE POWER 12 550W virtalähdeyksikkö 20+4 pin ATX ATX musta",
       "price_cents": 7490,
       "url": "https://datatronic.fi/komponentit/virtalahteet/be-quiet-pure-power-12-550w-virtalahdeyksikko-20-4-pin-atx-atx-musta-be-quiet-bp001eu",
-      "external_id": "165416",
-      "extraction": "listing_card"
+      "external_id": "165416"
     },
     {
       "name": "Seasonic 850W CORE GX-850 ATX 3 (2024), ATX-virtalähde, 80 Plus Gold, musta",
       "price_cents": 11490,
       "url": "https://datatronic.fi/komponentit/virtalahteet/seasonic-850w-core-gx-850-atx-3-2024-atx-virtalahde-80-plus-gold-musta-seasonic-srp-cgx851-a5a32sf",
-      "external_id": "166350",
-      "extraction": "listing_card"
+      "external_id": "166350"
     },
     {
       "name": "GIGABYTE UD1000GM PG5 V2 virtalähdeyksikkö 1000 W 20+4 pin ATX ATX musta",
       "price_cents": 10990,
       "url": "https://datatronic.fi/komponentit/virtalahteet/gigabyte-ud1000gm-pg5-v2-virtalahdeyksikko-1000-w-20-4-pin-atx-atx-musta-gigabyte-gp-ud1000gm-pg5-v2",
-      "external_id": "176481",
-      "extraction": "listing_card"
+      "external_id": "176481"
     },
     {
       "name": "ASUS Prime 850W Gold ( AP-850G ) virtalähdeyksikkö 20+4 pin ATX ATX musta, Valkoinen",
       "price_cents": 11390,
       "url": "https://datatronic.fi/komponentit/virtalahteet/asus-prime-850w-gold-ap-850g-virtalahdeyksikko-20-4-pin-atx-atx-musta-valkoinen-asus-90ye00u0-b0nb00",
-      "external_id": "165921",
-      "extraction": "listing_card"
+      "external_id": "165921"
     },
     {
       "name": "Thermalright SG 1000W",
       "price_cents": 10590,
       "url": "https://datatronic.fi/komponentit/virtalahteet/thermalright-sg-1000w-thermalright-tr-sg1000",
-      "external_id": "177511",
-      "extraction": "listing_card"
+      "external_id": "177511"
     },
     {
       "name": "Corsair 750W SF Series SF750, SFX-virtalähde, 80 Plus Platinum",
       "price_cents": 18390,
       "url": "https://datatronic.fi/komponentit/virtalahteet/corsair-750w-sf-series-sf750-sfx-virtalahde-80-plus-platinum-corsair-cp-9020284-eu",
-      "external_id": "161638",
-      "extraction": "listing_card"
+      "external_id": "161638"
     }
-  ],
-  "page": 1,
-  "site_total_products": 672,
-  "item_count": 24
+  ]
 }
