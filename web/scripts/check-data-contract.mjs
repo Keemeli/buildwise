@@ -180,6 +180,19 @@ check("catalogue rows are complete enough to build with", () => {
   return `${components.length} components with a price, generated ${String(catalogue.generated_at).slice(0, 10)}`;
 });
 
+check("product images come from the shop's own page", () => {
+  // Images are recovered from the cached Datatronic listing pages, so rows that only
+  // exist at Jimms or Proshop have none yet — the floor checks that the export step ran
+  // with the image map at all (a copy without images is the bug this guards).
+  const withImage = components.filter((c) => filled(c.image));
+  assert(withImage.length > components.length * 0.5,
+    `only ${withImage.length} of ${components.length} rows carry an image — did python3 -m scraper images run before the export?`);
+  const bad = withImage.filter((c) => !/^https:\/\/datatronic\.fi\/\d+-/.test(String(c.image)));
+  assert(bad.length === 0,
+    `image URL does not look like a shop product image: ${bad.slice(0, 3).map((c) => c.image).join(" | ")}`);
+  return `${withImage.length}/${components.length} rows carry a shop image URL`;
+});
+
 // ---------------------------------------------------------------------------
 // 3. Engine — the rules that were wrong, called directly with real catalogue rows.
 //    Positive case, inverse case, a legacy raw value, and a dual-capability board.

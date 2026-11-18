@@ -62,6 +62,9 @@ class ScraperCLI:
         normalise.add_argument("--raw-dir", type=Path, default=RAW_DIR)
         normalise.add_argument("--out", type=Path, default=NORMALISED_DIR)
         normalise.add_argument("--category", choices=CATEGORIES)
+        images = commands.add_parser("images", help="recover product images from cached listing pages")
+        images.add_argument("--html-dir", type=Path, default=RAW_DIR / "html")
+        images.add_argument("--out", type=Path, default=NORMALISED_DIR / "images.json")
         export = commands.add_parser("export", help="publish catalogue or check web-copy drift")
         export.add_argument("--check", action="store_true")
         export.add_argument("--source", type=Path, default=NORMALISED_DIR / "components.json")
@@ -123,6 +126,12 @@ class ScraperCLI:
                 return SpecificationWorker(args, self.registry.get(args.shop)).run()
             if args.command == "normalise":
                 return ComponentNormaliser(args.raw_dir, args.out, args.category).run()
+            if args.command == "images":
+                from scraper.pipeline.images import extract
+                payload = extract(args.html_dir, args.out)
+                print(f"recovered images for {len(payload['images'])} products "
+                      f"from {payload['pages']} cached listing pages → {args.out}")
+                return 0
             if args.command == "export":
                 return CatalogueExporter(args.source, args.target).run(check=args.check)
             shops = list(dict.fromkeys(shop.strip().lower() for shop in args.shops.split(',')))
