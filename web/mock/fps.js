@@ -2,7 +2,7 @@
 //
 // FPS_BASELINE is for a GPU with perf index 1.0 (≈ RTX 5060 Ti 16GB).
 // PERF_BY_CHIPSET is a rough relative gaming performance per GPU chip.
-// Keys use chipsetKey() from lib/catalog.js: uppercase, no spaces.
+// Keys use chipsetKey() from lib/catalog-shared.js: uppercase, no spaces.
 
 export const FPS_BASELINE = {
   cs2: [

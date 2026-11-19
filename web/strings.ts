@@ -227,9 +227,16 @@ export const strings = {
         "pcie-5": "PCIe 5.0",
       } as Record<string, string>,
       other: "Muu",
+      moreOptions: (hidden: number) => `Näytä ${hidden} muuta`,
+      // Dropdown button with ticked options: "Valmistaja: ASUS, MSI", "Valmistaja: ASUS +2"
+      filterSummary: (label: string, values: string[]) =>
+        values.length <= 2 ? `${label}: ${values.join(", ")}` : `${label}: ${values[0]} +${values.length - 1}`,
       filters: "Suodattimet",
       clearFilters: "Tyhjennä suodattimet",
       resultCount: (shown: number, total: number) => `${shown} / ${total} osaa`,
+      showMore: (hidden: number) => `Näytä lisää (${hidden} jäljellä)`,
+      loading: "Ladataan osia…",
+      loadError: "Osien lataus epäonnistui. Sulje ikkuna ja yritä uudelleen.",
       compatibleOnly: (hidden: number) =>
         `Näytetään vain kokoonpanoon sopivat osat. ${hidden} ${hidden === 1 ? "osa" : "osaa"} piilotettu.`,
       showAll: "Näytä kaikki",
@@ -265,8 +272,6 @@ export const strings = {
 
     preview: {
       label: "Kuva kokoonpanosta kotelon sivuikkunan läpi",
-      rear: "Takaosa",
-      front: "Etuosa",
       cpu: "CPU",
       cooler: "Jäähdytin",
       storage: "SSD",
@@ -502,9 +507,16 @@ export const strings = {
         "pcie-5": "PCIe 5.0",
       } as Record<string, string>,
       other: "Other",
+      moreOptions: (hidden: number) => `Show ${hidden} more`,
+      // Dropdown button with ticked options: "Brand: ASUS, MSI", "Brand: ASUS +2"
+      filterSummary: (label: string, values: string[]) =>
+        values.length <= 2 ? `${label}: ${values.join(", ")}` : `${label}: ${values[0]} +${values.length - 1}`,
       filters: "Filters",
       clearFilters: "Clear filters",
       resultCount: (shown: number, total: number) => `${shown} / ${total} parts`,
+      showMore: (hidden: number) => `Show more (${hidden} left)`,
+      loading: "Loading parts…",
+      loadError: "Couldn't load the parts. Close this window and try again.",
       compatibleOnly: (hidden: number) =>
         `Showing only parts that fit this build. ${hidden} ${hidden === 1 ? "part" : "parts"} hidden.`,
       showAll: "Show all",
@@ -540,8 +552,6 @@ export const strings = {
 
     preview: {
       label: "Picture of the build through the case side window",
-      rear: "Rear",
-      front: "Front",
       cpu: "CPU",
       cooler: "Cooler",
       storage: "SSD",

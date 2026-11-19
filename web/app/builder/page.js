@@ -1,7 +1,7 @@
 "use client";
 
 import { useMemo, useState } from "react";
-import { SLOTS, cheapestOffer, findComponent, chipsetKey } from "@/lib/catalog";
+import { SLOTS, cheapestOffer, chipsetKey } from "@/lib/catalog-shared";
 import { FPS_BASELINE, PERF_BY_CHIPSET } from "@/mock/fps";
 import { GAMES } from "@/mock/build";
 import { checkCompatibility, checkCoverage, powerBasis, issueKey } from "@/lib/compat";
@@ -21,8 +21,10 @@ const storageKey = (n) => (n === 1 ? "storage" : `storage:${n}`);
 
 export default function BuilderPage() {
   const t = useT();
-  // { cpu: "cpu-7600", gpu: "gpu-5070", "storage:2": "...", ... } — ids of the chosen parts, by slot key
-  const [selectedIds, setSelectedIds] = useState({});
+  // { cpu: component, gpu: component, "storage:2": component, ... } — the chosen parts, by slot key.
+  // Whole objects, not ids: the catalogue is not in the page, only the categories the
+  // pickers have fetched.
+  const [selected, setSelected] = useState({});
   // How many drive rows are shown (1–4). Extra rows start empty.
   const [storageRows, setStorageRows] = useState(1);
   const [openSlot, setOpenSlot] = useState(null);
@@ -32,14 +34,14 @@ export default function BuilderPage() {
   const [owned, setOwned] = useState({});
   // { cpu: componentObject | null, ... }
   const build = useMemo(
-    () => Object.fromEntries(SLOTS.map((s) => [s.category, findComponent(selectedIds[s.category])])),
-    [selectedIds],
+    () => Object.fromEntries(SLOTS.map((s) => [s.category, selected[s.category] ?? null])),
+    [selected],
   );
 
   // The drives after the first one: [{ key: "storage:2", part }, ...]
   const extraDrives = Array.from({ length: storageRows - 1 }, (_, i) => {
     const key = storageKey(i + 2);
-    return { key, part: findComponent(selectedIds[key]) };
+    return { key, part: selected[key] ?? null };
   });
 
   const ownedCategories = SLOTS.map((s) => s.category).filter((c) => owned[c]);
@@ -77,7 +79,7 @@ export default function BuilderPage() {
   // Picked from the picker into the open slot. `asOwned`: a part the user already has.
   function pickPart(component, { asOwned = false } = {}) {
     const key = openSlot.key;
-    setSelectedIds((prev) => ({ ...prev, [key]: component.id }));
+    setSelected((prev) => ({ ...prev, [key]: component }));
     setOwned((prev) => ({ ...prev, [key]: asOwned }));
     setOpenSlot(null);
   }
@@ -94,13 +96,13 @@ export default function BuilderPage() {
   }
 
   function clearAll() {
-    setSelectedIds({});
+    setSelected({});
     setOwned({});
     setStorageRows(1);
   }
 
   function removePart(key) {
-    setSelectedIds((prev) => {
+    setSelected((prev) => {
       const next = { ...prev };
       delete next[key];
       return next;
@@ -124,7 +126,7 @@ export default function BuilderPage() {
       removePart("storage");
       return;
     }
-    setSelectedIds(shift);
+    setSelected(shift);
     setOwned(shift);
     setStorageRows((rows) => rows - 1);
   }

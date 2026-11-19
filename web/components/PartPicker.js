@@ -1,7 +1,8 @@
 "use client";
 
-import { useEffect, useMemo, useState } from "react";
-import { COMPONENTS, cheapestOffer } from "@/lib/catalog";
+import { useEffect, useMemo, useRef, useState } from "react";
+import { cheapestOffer } from "@/lib/catalog-shared";
+import { useCategory } from "@/lib/useCategory";
 import { issuesForCandidate, issueKey } from "@/lib/compat";
 import { UNKNOWN, OTHER, optionKeys, facetsFor, facetOptions, applyFacets } from "@/lib/facets";
 import { formatEuros } from "@/lib/api";
@@ -110,6 +111,31 @@ function visibleOptions(facet, options, selections) {
   return known.length > 1 || ticked.length > 0 ? visible : [];
 }
 
+// A facet row shows at most this many options, so it fits on one line, until "+N more"
+// is pressed (ASUS alone makes boards with 30+ chipsets, many of them a single board).
+const MAX_OPTIONS = 6;
+
+// Splits a row into the options shown at first and the ones behind "+N more", both in
+// the row's own order. First: the MAX_OPTIONS known options with the most parts, plus
+// every ticked one. Behind "+N more": the rest, minus those with a single part — they
+// are noise in the row, and the part is still in the list without the filter.
+function splitOptions(facet, options, selections) {
+  const known = options.filter(({ key }) => key !== UNKNOWN);
+  if (known.length <= MAX_OPTIONS) return { top: options, more: [] };
+  const ticked = selections[facet.id] ?? [];
+  const best = new Set(
+    [...known]
+      .sort((a, b) => b.count - a.count)
+      .slice(0, MAX_OPTIONS)
+      .map(({ key }) => key),
+  );
+  const isTop = ({ key }) => best.has(key) || ticked.includes(key);
+  return {
+    top: options.filter(isTop),
+    more: options.filter((option) => !isTop(option) && option.count > 1),
+  };
+}
+
 // The child options that have parts under the given parent options.
 function childKeysUnder(rows, parent, child, parentKeys) {
   const keys = new Set();
@@ -120,6 +146,9 @@ function childKeysUnder(rows, parent, child, parentKeys) {
   }
   return keys;
 }
+
+// Rows drawn per "show more" step.
+const PAGE = 60;
 
 // owned: the slot is already marked as the user's own part.
 // onSelect(component, { asOwned }) — asOwned when "I already have one" is on.
@@ -133,8 +162,10 @@ export default function PartPicker({ slot, build, owned = false, onSelect, onOwn
   const [showAll, setShowAll] = useState(false);
   // "I already have one": picking a part marks it as the user's own (not in price / budget).
   const [haveIt, setHaveIt] = useState(owned);
-  // Price range in euros, as typed. The fields sit behind the "Price" button.
-  const [priceOpen, setPriceOpen] = useState(false);
+  // The open filter dropdown: "price", a facet id, or null. One at a time.
+  const [openMenu, setOpenMenu] = useState(null);
+  const barRef = useRef(null);
+  // Price range in euros, as typed. The fields sit in the "Price" dropdown.
   const [priceMin, setPriceMin] = useState("");
   const [priceMax, setPriceMax] = useState("");
   const minCents = euroCents(priceMin);
@@ -144,26 +175,48 @@ export default function PartPicker({ slot, build, owned = false, onSelect, onOwn
   const priceInverted = minCents !== null && maxCents !== null && minCents > maxCents;
   // Order within the compatible and incompatible groups: "cheapest" | "priciest" | "name".
   const [sort, setSort] = useState("cheapest");
+  // Facet ids whose "+N more" was pressed: they list every option.
+  const [expanded, setExpanded] = useState([]);
 
-  // Close with the Escape key
+  // Escape closes an open filter dropdown first, then the picker.
   useEffect(() => {
-    const onKey = (e) => e.key === "Escape" && onClose();
+    const onKey = (e) => {
+      if (e.key !== "Escape") return;
+      if (openMenu) setOpenMenu(null);
+      else onClose();
+    };
     window.addEventListener("keydown", onKey);
     return () => window.removeEventListener("keydown", onKey);
-  }, [onClose]);
+  }, [onClose, openMenu]);
+
+  // A click outside the filter bar closes the open dropdown. Clicks inside it are the
+  // dropdown's own (ticking several options keeps it open) or another filter's button.
+  useEffect(() => {
+    if (!openMenu) return;
+    const onDown = (e) => {
+      if (!barRef.current?.contains(e.target)) setOpenMenu(null);
+    };
+    document.addEventListener("pointerdown", onDown);
+    return () => document.removeEventListener("pointerdown", onDown);
+  }, [openMenu]);
+
+  function toggleMenu(id) {
+    setOpenMenu((current) => (current === id ? null : id));
+  }
 
   const facets = facetsFor(slot.category);
+  const { parts: categoryParts, loading, error: loadError } = useCategory(slot.category);
 
   // Every part in this category, with its cheapest offer and the errors it would cause.
   const all = useMemo(
     () =>
-      COMPONENTS.filter((c) => c.category === slot.category).map((c) => ({
+      (categoryParts ?? []).map((c) => ({
         component: c,
         key: searchKey(c.name),
         offer: cheapestOffer(c),
         issues: issuesForCandidate(build, c),
       })),
-    [slot.category, build],
+    [categoryParts, build],
   );
 
   const view = useMemo(() => {
@@ -191,6 +244,14 @@ export default function PartPicker({ slot, build, owned = false, onSelect, onOwn
 
   const anySelected = priceActive || Object.values(selections).some((keys) => keys.length > 0);
 
+  // Long categories (700+ memory kits) are drawn PAGE rows at a time. Any change to the
+  // search, filters or order starts again from the first page.
+  const listKey = JSON.stringify([slot.category, query, selections, showAll, priceMin, priceMax, sort]);
+  const [page, setPage] = useState({ listKey, rows: PAGE });
+  const shownRows = page.listKey === listKey ? page.rows : PAGE;
+  const shownParts = view.parts.slice(0, shownRows);
+  const hiddenRows = view.parts.length - shownParts.length;
+
   function toggleOption(facetId, key) {
     setSelections((prev) => {
       const current = prev[facetId] ?? [];
@@ -205,19 +266,40 @@ export default function PartPicker({ slot, build, owned = false, onSelect, onOwn
       }
       return updated;
     });
+    // A changed parent also folds its child rows back to the first options: unticking
+    // ASUS hides H770 & co. again instead of keeping them open for the next vendor.
+    const childIds = facets.filter((f) => f.parent === facetId).map((f) => f.id);
+    if (childIds.length > 0) setExpanded((ids) => ids.filter((id) => !childIds.includes(id)));
   }
 
   function clearFilters() {
     setSelections({});
+    setExpanded([]);
+    setOpenMenu(null);
     setPriceMin("");
     setPriceMax("");
   }
+
+  // One dropdown per facet that has a choice to offer. A child facet (chipset under the
+  // board vendor) has none until a parent option is ticked, so its button appears then.
+  const facetMenus = view.options
+    .map(({ facet, options }) => {
+      const { top, more } = splitOptions(facet, visibleOptions(facet, options, selections), selections);
+      if (expanded.includes(facet.id)) {
+        const keep = new Set([...top, ...more].map((o) => o.key));
+        return { facet, options: options.filter((o) => keep.has(o.key)), hidden: 0 };
+      }
+      return { facet, options: top, hidden: more.length };
+    })
+    .filter(({ options }) => options.length > 0);
 
   let priceLabel = t.picker.price;
   if (priceActive) priceLabel = t.picker.priceRange(minCents === null ? null : priceMin.trim(), maxCents === null ? null : priceMax.trim());
 
   let emptyText = t.picker.noFilterMatches;
-  if (all.length === 0) emptyText = t.picker.emptyCategory;
+  if (loading) emptyText = t.picker.loading;
+  else if (loadError) emptyText = t.picker.loadError;
+  else if (all.length === 0) emptyText = t.picker.emptyCategory;
   else if (priceInverted) emptyText = t.picker.priceInverted;
   else if (query.trim() && !anySelected) emptyText = t.picker.noMatches(query);
 
@@ -270,74 +352,95 @@ export default function PartPicker({ slot, build, owned = false, onSelect, onOwn
         </div>
 
         {all.length > 0 && (
-          <div className="price-filter">
-            <button
-              type="button"
-              className={`chip${priceActive ? " on" : ""}`}
-              aria-expanded={priceOpen}
-              onClick={() => setPriceOpen((open) => !open)}
-            >
-              {priceLabel} <span aria-hidden="true">{priceOpen ? "▴" : "▾"}</span>
-            </button>
-            {priceOpen && (
-              <div className="price-fields">
-                <input
-                  type="number"
-                  inputMode="decimal"
-                  min="0"
-                  placeholder={t.picker.priceMin}
-                  aria-label={t.picker.priceMin}
-                  value={priceMin}
-                  onChange={(e) => setPriceMin(e.target.value)}
-                />
-                <span className="muted">–</span>
-                <input
-                  type="number"
-                  inputMode="decimal"
-                  min="0"
-                  placeholder={t.picker.priceMax}
-                  aria-label={t.picker.priceMax}
-                  value={priceMax}
-                  onChange={(e) => setPriceMax(e.target.value)}
-                />
-                <span className="muted">€</span>
-              </div>
-            )}
-            {priceInverted && (
-              <p className="price-warning" role="status">
-                {t.picker.priceInverted}
-              </p>
-            )}
+          <div className="filter-bar" ref={barRef} role="group" aria-label={t.picker.filters}>
+            <div className="filter-item">
+              <button
+                type="button"
+                className={`chip${priceActive ? " on" : ""}`}
+                aria-expanded={openMenu === "price"}
+                onClick={() => toggleMenu("price")}
+              >
+                {priceLabel} <span aria-hidden="true">{openMenu === "price" ? "▴" : "▾"}</span>
+              </button>
+              {openMenu === "price" && (
+                <div className="filter-menu price-fields" role="group" aria-label={t.picker.price}>
+                  <input
+                    type="number"
+                    inputMode="decimal"
+                    min="0"
+                    step="10"
+                    placeholder={t.picker.priceMin}
+                    aria-label={t.picker.priceMin}
+                    value={priceMin}
+                    onChange={(e) => setPriceMin(e.target.value)}
+                    autoFocus
+                  />
+                  <span className="muted">–</span>
+                  <input
+                    type="number"
+                    inputMode="decimal"
+                    min="0"
+                    step="10"
+                    placeholder={t.picker.priceMax}
+                    aria-label={t.picker.priceMax}
+                    value={priceMax}
+                    onChange={(e) => setPriceMax(e.target.value)}
+                  />
+                  <span className="muted">€</span>
+                </div>
+              )}
+            </div>
+
+            {facetMenus.map(({ facet, options, hidden }) => {
+              const ticked = selections[facet.id] ?? [];
+              const label = t.picker.facets[facet.id];
+              const open = openMenu === facet.id;
+              return (
+                <div key={facet.id} className="filter-item">
+                  <button
+                    type="button"
+                    className={`chip${ticked.length > 0 ? " on" : ""}`}
+                    aria-expanded={open}
+                    onClick={() => toggleMenu(facet.id)}
+                  >
+                    {ticked.length > 0 ? t.picker.filterSummary(label, ticked.map((key) => optionLabel(facet, key, t))) : label}{" "}
+                    <span aria-hidden="true">{open ? "▴" : "▾"}</span>
+                  </button>
+                  {open && (
+                    <div className="filter-menu" role="group" aria-label={label}>
+                      {options.map(({ key, count }) => {
+                        const on = ticked.includes(key);
+                        return (
+                          <label
+                            key={key}
+                            className={`filter-option${count === 0 && !on ? " zero" : ""}${key === UNKNOWN ? " unknown" : ""}`}
+                          >
+                            <input type="checkbox" checked={on} onChange={() => toggleOption(facet.id, key)} />
+                            <span>{optionLabel(facet, key, t)}</span>
+                            <span className="chip-count">{count}</span>
+                          </label>
+                        );
+                      })}
+                      {hidden > 0 && (
+                        <button
+                          type="button"
+                          className="link-button filter-more"
+                          onClick={() => setExpanded((ids) => [...ids, facet.id])}
+                        >
+                          {t.picker.moreOptions(hidden)}
+                        </button>
+                      )}
+                    </div>
+                  )}
+                </div>
+              );
+            })}
           </div>
         )}
-
-        {facets.length > 0 && all.length > 0 && (
-          <div className="facets" aria-label={t.picker.filters}>
-            {view.options.map(({ facet, options }) => ({ facet, options: visibleOptions(facet, options, selections) }))
-              .filter(({ options }) => options.length > 0)
-              .map(({ facet, options }) => (
-              <div key={facet.id} className={`facet${facet.parent ? " facet-child" : ""}`} role="group" aria-label={t.picker.facets[facet.id]}>
-                <span className="facet-label">{t.picker.facets[facet.id]}</span>
-                <div className="facet-options">
-                  {options.map(({ key, count }) => {
-                    const on = (selections[facet.id] ?? []).includes(key);
-                    return (
-                      <button
-                        key={key}
-                        type="button"
-                        className={`chip${on ? " on" : ""}${count === 0 && !on ? " zero" : ""}${key === UNKNOWN ? " unknown" : ""}`}
-                        aria-pressed={on}
-                        onClick={() => toggleOption(facet.id, key)}
-                      >
-                        {optionLabel(facet, key, t)}
-                        <span className="chip-count">{count}</span>
-                      </button>
-                    );
-                  })}
-                </div>
-              </div>
-            ))}
-          </div>
+        {priceInverted && (
+          <p className="price-warning" role="status">
+            {t.picker.priceInverted}
+          </p>
         )}
 
         {/* Shown whenever something is hidden, so a part never disappears silently. */}
@@ -362,7 +465,7 @@ export default function PartPicker({ slot, build, owned = false, onSelect, onOwn
         )}
 
         <ul className="picker-list">
-          {view.parts.map(({ component, offer, issues }) => (
+          {shownParts.map(({ component, offer, issues }) => (
             <li key={component.id} className={issues.length ? "picker-item incompatible" : "picker-item"}>
               <div className="picker-thumb">
                 <ProductImage src={component.image} alt={component.name} category={slot.category} size={56} />
@@ -391,7 +494,22 @@ export default function PartPicker({ slot, build, owned = false, onSelect, onOwn
               </button>
             </li>
           ))}
-          {view.parts.length === 0 && <li className="muted empty">{emptyText}</li>}
+          {view.parts.length === 0 && (
+            <li className="muted empty" role={loading || loadError ? "status" : undefined}>
+              {emptyText}
+            </li>
+          )}
+          {hiddenRows > 0 && (
+            <li className="picker-more">
+              <button
+                type="button"
+                className="button secondary"
+                onClick={() => setPage({ listKey, rows: shownRows + PAGE })}
+              >
+                {t.picker.showMore(hiddenRows)}
+              </button>
+            </li>
+          )}
         </ul>
       </div>
     </div>
