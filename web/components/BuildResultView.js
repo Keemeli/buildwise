@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { formatEuros } from "@/lib/api";
+import { formatEuros, resolutionLabel } from "@/lib/api";
 import { useT } from "@/lib/locale";
 import PartsTable from "@/components/PartsTable";
 import FpsChart from "@/components/FpsChart";
@@ -23,14 +23,16 @@ export function LoadingCard() {
   return <div className="card loading">{t.result.loading}</div>;
 }
 
-export default function BuildResultView({ build, gameName, exclude }) {
+export default function BuildResultView({ build, gameName, resolution, exclude }) {
   const t = useT();
   const leftover = build.budgetCents - build.totalCents;
+  // The FPS estimate at the user's target resolution; the first row if the build has none for it.
+  const fps = build.fps.find((row) => row.resolution === resolution) ?? build.fps[0];
 
   return (
     <>
       <h1>
-        {gameName} · {formatEuros(build.budgetCents, t.locale)}
+        {gameName} · {resolutionLabel(resolution)} · {formatEuros(build.budgetCents, t.locale)}
       </h1>
       {exclude.length > 0 && (
         <p className="muted">{t.result.ownedParts(exclude.map((c) => t.categories[c]))}</p>
@@ -46,9 +48,9 @@ export default function BuildResultView({ build, gameName, exclude }) {
           <span className="stat-value">{formatEuros(leftover, t.locale)}</span>
         </div>
         <div className="card stat">
-          <span className="stat-label">{t.result.fps1080}</span>
+          <span className="stat-label">{t.result.fpsAt(resolutionLabel(fps.resolution))}</span>
           <span className="stat-value">
-            {build.fps[0].min}–{build.fps[0].max}
+            {fps.min}–{fps.max}
           </span>
         </div>
       </div>

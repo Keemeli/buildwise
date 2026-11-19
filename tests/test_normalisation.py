@@ -15,9 +15,12 @@ from unittest.mock import patch
 
 from scraper.cli import main
 from scraper.pipeline.components import ComponentNameParser, contradicts_category
+from scraper.pipeline.category_guard import classify, lacks_identity
+from scraper.common.specifications import parse_modular
 from scraper.pipeline.listing_prices import ListingPriceSelector
 from scraper.pipeline.export import build_web_copy, render
-from scraper.pipeline.normalisation import ComponentNormaliser, merge_product_specs
+from scraper.pipeline.normalisation import (ComponentNormaliser, merge_product_specs,
+                                            reconcile_storage_capacity)
 from scraper.pipeline.specification_values import SpecificationValueResolver
 from scraper.retailers.datatronic import DatatronicAdapter
 from scraper.retailers.jimms import JimmsAdapter
@@ -49,6 +52,96 @@ class CategoryContradictionTests(unittest.TestCase):
         copy = build_web_copy({'generated_at': 'now', 'source': 'Datatronic', 'components': [priced, unpriced]})
         self.assertEqual(copy['component_count'], 1)
         self.assertEqual([c['raw_name'] for c in copy['components']], ['cpu with a price'])
+
+
+class CategoryGuardTests(unittest.TestCase):
+    """Names observed on the wrong Datatronic category pages in the full crawl."""
+
+    def test_accessories_are_excluded_wherever_the_shop_filed_them(self):
+        for category, name in [
+            ('memory', 'Noctua NA-SC1 SX2 Tietokoneen jäähdytysjärjestelmän osa ja lisätarvike Kaapelisovitin'),
+            ('gpu', 'Noctua NA-FG1-12 SX2 Tietokoneen jäähdytysjärjestelmän osa ja lisätarvike Tuuletusritilä'),
+            ('gpu', 'NZXT Kraken Plus 240 Suoritin All-in-one-nesteenjäähdytin 12 cm musta'),
+            ('gpu', 'Noctua NA-SAV2 chromax.green'),
+            ('motherboard', 'Arozzi Zona Round Floor Pad Musta, Kulta Mikrokuitu, Kumi'),
+            ('memory', 'Lenovo Tab M10 Plus (3rd Gen) 32 GB 26,9 cm (10.6") Mediatek 3 GB'),
+            ('memory', 'Montech HP140 ARGB PWM Tietokonekotelo Tuuletin 14 cm Valkoinen 3 kpl'),
+            ('case', 'SAMA Gears A40L Suoritin Ilmanjäähdytin 12 cm Valkoinen 1 kpl'),
+            ('storage', 'Icy Dock ToughArmor MB834MK-B V2 SSD-kotelo musta'),
+        ]:
+            with self.subTest(name=name):
+                self.assertEqual(classify(category, name), ('exclude', 'accessory'))
+
+    def test_components_of_another_category_are_moved(self):
+        for category, name, target in [
+            ('storage', 'DeepCool PN750M virtalähdeyksikkö 750 W 20+4 pin ATX ATX musta', 'psu'),
+            ('storage', 'GIGABYTE B550 EAGLE WIFI6 emolevy', 'motherboard'),
+            ('storage', 'ASUS B850M MAX GAMING WIFI AMD B850 Pistoke AM5 mikro ATX', 'motherboard'),
+            ('memory', 'Jonsbo D32 PRO Midi Tower musta', 'case'),
+            ('memory', 'ADATA SMAR-980B-1TCS SSD-massamuisti 1 TB M.2 PCI Express 5.0 NVMe 3D NAND', 'storage'),
+            ('storage', 'Asrock Intel Arc B580 Challenger 12GB OC GDDR6', 'gpu'),
+            ('psu', 'Thermaltake AX500 Full Tower musta', 'case'),
+            ('motherboard', 'ASUS TUF Gaming 650W Gold EVO PSU', 'psu'),
+        ]:
+            with self.subTest(name=name):
+                self.assertEqual(classify(category, name), ('move', target))
+
+    def test_real_components_stay_where_they_are(self):
+        for category, name in [
+            ('case', 'HYTE X50 MID TOWER CASE CHERRY'),
+            ('case', 'NZXT H6 RGB+ Compact Dual-chamber ATX Case White With RGB Fans and Controller'),
+            ('psu', 'MSI Netzteil MAG A1000PLS PCI5 1000Watt'),
+            ('storage', 'Kingston Technology A400 2.5" 240 GB Serial ATA III TLC'),
+            ('cpu', 'AMD EPYC 4124P suoritin 3,8 GHz 16 MB L3 Lokero'),
+            ('memory', 'XPG SPECTRIX D35G DDR4 3200 MHz 16 GB'),
+            ('motherboard', 'Biostar B760MXC PRO (B760S1700mATXDDR5)'),
+        ]:
+            with self.subTest(name=name):
+                self.assertEqual(classify(category, name), ('keep', None))
+
+    def test_rows_without_any_defining_value_or_name_signal_lack_identity(self):
+        self.assertTrue(lacks_identity('cpu', {}, 'K DeepCool AG300 G2'))
+        self.assertTrue(lacks_identity('motherboard', {'width_mm': 300, 'depth_mm': 300}, 'Zona Round Pad'))
+        # A defining value or a sign in the name is enough to keep the row.
+        self.assertFalse(lacks_identity('psu', {}, 'AERO 650 (schwarz 2x PCIe 650 Watt)'))
+        self.assertFalse(lacks_identity('memory', {'memory_type': 'DDR5'}, 'Vengeance'))
+        self.assertFalse(lacks_identity('motherboard', {}, 'Biostar A620MT-E 2.0 (AM5) (D)'))
+        # Case names rarely carry specs, so cases are never dropped this way.
+        self.assertFalse(lacks_identity('case', {}, 'Antec C6 Curve Air White'))
+
+
+class ModularCablingTests(unittest.TestCase):
+    def test_shop_wordings_map_to_one_vocabulary_without_guessing(self):
+        for text, expected in [
+            ('Täysin modulaarinen', 'fully_modular'), ('Fully-Modular', 'fully_modular'),
+            ('Puolimodulaarinen', 'semi_modular'), ('Semi-modular', 'semi_modular'),
+            ('Ei-modulaarinen', 'non_modular'),
+            # Fully or semi cannot be told apart, so neither is guessed.
+            ('Modulaarinen', 'modular'), (True, 'modular'),
+            (None, None), ('', None),
+        ]:
+            with self.subTest(text=text):
+                self.assertEqual(parse_modular(text), expected)
+
+    def test_a_non_modular_name_is_not_read_as_modular(self):
+        parse = ComponentNameParser().parse
+        item = {'category': 'psu', 'shop': 'Datatronic', 'url': 'u', 'external_id': '1',
+                'price_cents': 1, 'snapshot_date': '2026-11-18', 'fetched_at': 'now'}
+        self.assertEqual(parse({**item, 'raw_name': 'X 650W Ei-modulaarinen virtalähde'})['specs']['modular'], 'non_modular')
+        self.assertEqual(parse({**item, 'raw_name': 'Antec Neo ECO Modular NE1000G'})['specs']['modular'], 'modular')
+
+
+class StorageCapacityConflictTests(unittest.TestCase):
+    def test_a_capacity_the_name_contradicts_becomes_unknown(self):
+        conflicting = {'category': 'storage', 'missing_specs': [], 'specs': {'capacity_gb': 2099},
+                       'raw_name': 'SanDisk WDS200T4G0E-00CPS0 SSD-massamuisti 500GB M.2 PCI Express 4.0 NVMe'}
+        # 1 TB written as 1000 GB in the name and 1024 GB on the data sheet is not a conflict.
+        agreeing = {'category': 'storage', 'missing_specs': [], 'specs': {'capacity_gb': 1024},
+                    'raw_name': 'Samsung 870 EVO 1000 GB TLC Musta'}
+        self.assertEqual(reconcile_storage_capacity([conflicting, agreeing]), 1)
+        self.assertIsNone(conflicting['specs']['capacity_gb'])
+        self.assertIn('capacity_gb', conflicting['missing_specs'])
+        self.assertEqual(agreeing['specs']['capacity_gb'], 1024)
 
 
 class MultiShopNormalisationTests(unittest.TestCase):
