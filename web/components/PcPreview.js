@@ -25,12 +25,6 @@ export default function PcPreview({ build, owned = {}, errorParts, gpuTooLong })
       {/* Case */}
       <rect x="20" y="20" width="320" height="360" rx="8" className={`pv-case${errorParts.has("case") ? " pv-case-error" : ""}${owned.case ? " pv-case-owned" : ""}`} />
       <line x1="30" y1="295" x2="330" y2="295" className="pv-shroud" />
-      <text x="20" y="400" className="pv-text">
-        {t.preview.rear}
-      </text>
-      <text x="340" y="400" className="pv-text" textAnchor="end">
-        {t.preview.front}
-      </text>
       {Object.values(owned).some(Boolean) && (
         <text x="180" y="400" className="pv-text" textAnchor="middle">
           {t.preview.owned}

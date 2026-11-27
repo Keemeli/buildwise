@@ -99,6 +99,23 @@ a:hover {
   gap: 8px;
   font-weight: 600;
 }
+/* A form field that is not a <label> (the resolution choice), laid out like one */
+.form .form-field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-weight: 600;
+}
+.resolution-options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  font-weight: 400;
+}
+.resolution-options .chip {
+  padding: 6px 14px;
+  font-size: 0.95rem;
+}
 .budget-row {
   display: flex;
   align-items: center;
@@ -318,6 +335,21 @@ select {
   width: 100%;
   text-align: left;
 }
+/* An empty slot: the "choose" button, and for an extra drive a ✕ to take the row away */
+.slot-empty {
+  grid-column: 2 / -1;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+/* "+ Add another drive" under the drives: a quiet row, not a part slot */
+.slot.slot-more {
+  background: transparent;
+  border: none;
+  min-height: 0;
+  padding-top: 0;
+  padding-bottom: 0;
+}
 .add-part:hover {
   border-color: var(--accent);
   background: rgba(79, 140, 255, 0.06);
@@ -426,8 +458,48 @@ select {
 .modal-header h2 {
   margin: 0;
 }
-.search {
+.picker-search-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
   margin: 16px 0;
+}
+.picker-search-row .search {
+  flex: 1 1 220px;
+  margin: 0;
+}
+.sort-select {
+  flex: 0 0 auto;
+}
+/* Shop product photos are JPGs on white, so the white box looks intentional on dark */
+.product-image {
+  display: block;
+  object-fit: contain;
+  background: #fff;
+  border-radius: 8px;
+  flex-shrink: 0;
+}
+.slot-icon:has(.product-image) {
+  overflow: hidden;
+  background: #fff;
+}
+.slot-icon .product-image {
+  width: 100%;
+  height: 100%;
+  border-radius: 0;
+}
+.picker-thumb {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  height: 56px;
+  color: var(--muted);
+}
+.price-warning {
+  margin: -4px 0 12px;
+  font-size: 0.85rem;
+  color: #ff8b8f;
 }
 .picker-list {
   list-style: none;
@@ -435,9 +507,14 @@ select {
   padding: 0;
   overflow-y: auto;
 }
+.picker-more {
+  display: flex;
+  justify-content: center;
+  padding: 16px 0;
+}
 .picker-item {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) auto auto;
+  grid-template-columns: 56px minmax(0, 1fr) auto auto;
   gap: 16px;
   align-items: center;
   padding: 12px 4px;
@@ -445,7 +522,8 @@ select {
 }
 .picker-item.incompatible .part-name,
 .picker-item.incompatible .part-specs,
-.picker-item.incompatible .picker-price {
+.picker-item.incompatible .picker-price,
+.picker-item.incompatible .picker-thumb {
   opacity: 0.5;
 }
 .picker-price {
@@ -488,11 +566,13 @@ select {
     grid-column: 1 / -1;
     justify-content: flex-end;
   }
-  .add-part {
+  .add-part,
+  .slot-empty {
     grid-column: 1 / -1;
   }
   .picker-item {
-    grid-template-columns: minmax(0, 1fr) auto;
+    grid-template-columns: 56px minmax(0, 1fr) auto;
+    gap: 8px 12px;
   }
   .picker-item .button {
     grid-column: 1 / -1;
@@ -661,27 +741,67 @@ select {
 .pv-case-owned {
   stroke-dasharray: 8 6;
 }
-/* Spec filters in the part picker (issue #25) */
-.facets {
+/* Filters in the part picker (issue #25): one dropdown button per filter, in one row */
+.filter-bar {
+  position: relative;
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
   gap: 8px;
   margin-bottom: 12px;
 }
-.facet {
-  display: flex;
-  align-items: baseline;
-  gap: 10px;
+.filter-item {
+  position: relative;
 }
-.facet-label {
-  flex: 0 0 110px;
-  color: var(--muted);
-  font-size: 0.85rem;
-}
-.facet-options {
+.filter-menu {
+  position: absolute;
+  top: calc(100% + 4px);
+  left: 0;
+  z-index: 20;
+  min-width: 220px;
+  max-height: 300px;
+  overflow-y: auto;
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
+  gap: 2px;
+  padding: 6px;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.45);
+}
+.filter-menu.price-fields {
+  flex-direction: row;
+  align-items: center;
   gap: 6px;
+  padding: 10px;
+}
+.filter-option {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 10px;
+  padding: 6px 8px;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+.filter-option:hover {
+  background: rgba(79, 140, 255, 0.1);
+}
+.filter-option input {
+  margin: 0;
+  accent-color: var(--accent);
+}
+.filter-option.zero {
+  opacity: 0.45;
+}
+.filter-option.unknown span:not(.chip-count) {
+  color: var(--muted);
+  font-style: italic;
+}
+.filter-more {
+  align-self: flex-start;
+  padding: 6px 8px;
 }
 .chip {
   display: inline-flex;
@@ -706,9 +826,6 @@ select {
 .chip.zero {
   opacity: 0.45;
 }
-.chip.unknown {
-  border-style: dashed;
-}
 .chip-count {
   color: var(--muted);
   font-size: 0.75rem;
@@ -728,19 +845,25 @@ select {
   margin-bottom: 8px;
   font-size: 0.85rem;
 }
+.price-fields input {
+  width: 96px;
+  padding: 4px 8px;
+}
 .picker-status {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 0 4px 6px;
 }
+/* Narrow screens: a dropdown spans the whole filter bar, so one opened from a button
+   on the right does not run off the screen. */
 @media (max-width: 600px) {
-  .facet {
-    flex-direction: column;
-    gap: 4px;
+  .filter-item {
+    position: static;
   }
-  .facet-label {
-    flex: none;
+  .filter-menu {
+    right: 0;
+    min-width: 0;
   }
 }
 

@@ -72,6 +72,36 @@ def parse_bool(text: str) -> Optional[bool]:
     return None
 
 
+MODULAR_VALUES = ("fully_modular", "semi_modular", "modular", "non_modular")
+
+
+def parse_modular(value) -> Optional[str]:
+    """PSU cabling in one vocabulary: 'Täysin modulaarinen' / 'Fully-Modular' -> fully_modular,
+    'Puolimodulaarinen' -> semi_modular, 'Ei-modulaarinen' -> non_modular.
+
+    A bare 'Modulaarinen' (or a name that only says "Modular") does not tell fully from
+    semi, so it stays plain `modular` rather than being guessed into either.
+    """
+    if value is None or value == "":
+        return None
+    if value is True:
+        return "modular"
+    if value is False:
+        return "non_modular"
+    text = str(value).strip().lower()
+    if text in MODULAR_VALUES:
+        return text
+    if re.search(r"puoli|semi", text):
+        return "semi_modular"
+    if re.search(r"\bei[- ]?modul|non[- ]?modul|kiinte|fixed", text):
+        return "non_modular"
+    if re.search(r"täysin|taysin|fully|full", text):
+        return "fully_modular"
+    if "modul" in text:
+        return "modular"
+    return None
+
+
 def parse_channels(text: str) -> Optional[int]:
     """'Kaksikanava' / 'Dual-channel' / '2' -> 2 channels."""
     lowered = text.strip().lower()
@@ -164,7 +194,7 @@ PARSERS: Dict[str, Callable[[str], Any]] = {
     "vram_gb": parse_gb,
     "socket": parse_socket,
     "nvme": parse_bool, "ecc": parse_bool, "psu_included": parse_bool,
-    "cooler_included": parse_bool, "integrated_graphics": parse_bool,
+    "cooler_included": parse_bool, "integrated_graphics": parse_bool, "wifi": parse_bool,
     "cores": parse_watts, "threads": parse_watts, "modules": parse_modules,
     "memory_slots": parse_watts, "memory_channels": parse_channels, "m2_slots": parse_watts,
     "slot_width": parse_watts, "expansion_slots": parse_watts, "cas_latency": parse_watts,
@@ -176,7 +206,7 @@ PARSERS: Dict[str, Callable[[str], Any]] = {
     "interface": parse_text, "efficiency": parse_text, "atx_version": parse_text,
     "form_factor": parse_text, "tower_size": parse_text, "chipset": parse_text,
     "memory_type": parse_memory_type, "memory_types": parse_memory_type,
-    "modular": parse_text, "voltage_v": parse_text,
+    "modular": parse_modular, "voltage_v": parse_text,
     "pcie_gen": parse_text, "color": parse_text, "material": parse_text,
     "graphics_chipset": parse_text, "pcie_version": parse_text, "main_connector": parse_text,
 }

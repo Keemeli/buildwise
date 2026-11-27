@@ -15,7 +15,8 @@ class NormalisationReportWriter:
     def write(self, out_dir: Path, components: List[Dict[str, Any]], duplicates: int,
                      scanned: int, excluded: List[str],
                      spec_stats: Optional[Dict[str, int]] = None,
-                     mismatched: Optional[List[Dict[str, Any]]] = None) -> Path:
+                     mismatched: Optional[List[Dict[str, Any]]] = None,
+                     recategorised: Optional[List[Dict[str, Any]]] = None) -> Path:
         lines: List[str] = []
         lines.append(f"# Normalisation report — {date.today().isoformat()}")
         lines.append("")
@@ -97,6 +98,9 @@ class NormalisationReportWriter:
                          f"({spec_stats['gaps_closed']} gaps in the name-based specs closed)")
             lines.append(f"- Guessed values replaced by parsed ones: {spec_stats['upgraded_from_inferred']}")
             lines.append(f"- CPU sockets now parsed instead of inferred: {spec_stats['sockets_parsed']}")
+            if spec_stats.get("capacity_conflicts"):
+                lines.append(f"- Storage capacities left unknown because the name and the data sheet "
+                             f"disagree: {spec_stats['capacity_conflicts']}")
             lines.append("")
             lines.append("Each such field is recorded in the component's `spec_sources` as "
                          "`parsed_product_page`. It comes from the shop's own data sheet for that exact "
@@ -135,15 +139,32 @@ class NormalisationReportWriter:
         if mismatched:
             lines.append("## Rows excluded for contradicting their category")
             lines.append("")
-            lines.append(f"{len(mismatched)} scraped rows carry a parsed value that cannot belong to "
-                         "their shop category — a motherboard on a storage page, parsed with the "
-                         "storage vocabulary. They are listed in `excluded_category_mismatch.json`; "
-                         "the category is never guessed.")
+            lines.append(f"{len(mismatched)} scraped rows do not belong to the shop category they "
+                         "were found in. They are listed in `excluded_category_mismatch.json` with a "
+                         "reason: `accessory` (the product type in the name is a cooler, fan, cable, "
+                         "...), `unverifiable` (no category-defining value and no sign of the "
+                         "category in the name) or `form_factor` (a parsed value that cannot belong "
+                         "to the category).")
             lines.append("")
-            for component in mismatched[:10]:
-                value = (component.get('specs') or {}).get('form_factor')
-                lines.append(f"- **{component.get('category')}** — `{str(component.get('raw_name'))[:80]}`"
-                             f"{f' (form_factor {value})' if value else ''}")
+            by_reason: Dict[str, List[Dict[str, Any]]] = defaultdict(list)
+            for component in mismatched:
+                by_reason[component.get("reason") or "form_factor"].append(component)
+            for reason, rows in sorted(by_reason.items()):
+                lines.append(f"### `{reason}` — {len(rows)}")
+                lines.append("")
+                for component in rows[:10]:
+                    lines.append(f"- **{component.get('category')}** — `{str(component.get('raw_name'))[:80]}`")
+                lines.append("")
+
+        if recategorised:
+            lines.append("## Rows moved to the category their name states")
+            lines.append("")
+            lines.append(f"{len(recategorised)} scraped rows name a product type of another category "
+                         "we carry (a power supply on a storage page) and nothing in the name points "
+                         "to the page's category. They are parsed as the named category.")
+            lines.append("")
+            for row in recategorised[:15]:
+                lines.append(f"- {row['from']} → **{row['to']}** — `{str(row['raw_name'])[:80]}`")
             lines.append("")
 
         suspects = [c for c in components if c.get("category_confidence") == "suspect"]

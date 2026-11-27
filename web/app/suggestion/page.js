@@ -1,5 +1,5 @@
 import { Suspense } from "react";
-import { getBuild } from "@/lib/api";
+import { getBuild, RESOLUTIONS, DEFAULT_RESOLUTION } from "@/lib/api";
 import { GAMES } from "@/mock/build";
 import { t } from "@/strings";
 import BuildResultView, { BackLink, LoadingCard } from "@/components/BuildResultView";
@@ -20,9 +20,10 @@ async function BuildResult({ searchParams }) {
   const params = await searchParams;
   const budget = Number(params.budget) || 1000;
   const game = params.game || "cs2";
+  const resolution = RESOLUTIONS.some((r) => r.id === params.resolution) ? params.resolution : DEFAULT_RESOLUTION;
   const exclude = (params.exclude || "").split(",").filter((c) => c in t.categories);
   const gameName = GAMES.find((g) => g.id === game)?.name ?? game;
 
-  const build = await getBuild({ budget, game, exclude });
-  return <BuildResultView build={build} gameName={gameName} exclude={exclude} />;
+  const build = await getBuild({ budget, game, resolution, exclude });
+  return <BuildResultView build={build} gameName={gameName} resolution={resolution} exclude={exclude} />;
 }

@@ -7,6 +7,7 @@ import re
 from typing import Any, Dict, List, Optional, Tuple
 
 from scraper.config import CATEGORIES
+from scraper.common.specifications import parse_modular
 
 # What we expect to be able to say about each category. Used by the report to show
 # gaps per field rather than hiding them in an average.
@@ -220,7 +221,9 @@ def parse_motherboard(name: str) -> Dict[str, Any]:
             memory_type, memory_source = "DDR5", "inferred_from_chipset"
     specs["memory_type"] = memory_type
     specs["memory_type_source"] = memory_source
-    specs["wifi"] = bool(re.search(r"wifi|wireless", name, re.I)) or None
+    # Gigabyte names a WiFi variant "AX" / "AC" ("B650 AORUS ELITE AX", "A520I AC").
+    # A name without WiFi does not mean "no WiFi": that only comes from the product page.
+    specs["wifi"] = bool(re.search(r"wi-?fi|wireless|\bAX\b|\bAC\b", name, re.I)) or None
     return specs
 
 
@@ -274,15 +277,26 @@ def parse_psu(name: str) -> Dict[str, Any]:
     specs["atx_version"] = search(r"\bATX\s?(\d\.\d)\b", name, re.I)
     specs["form_factor"] = "SFX" if re.search(r"\bSFX\b", name, re.I) else (
         "ATX" if re.search(r"\bATX\b", name, re.I) else None)
-    specs["modular"] = True if re.search(r"modulaarinen|fully modular|modular", name, re.I) else None
+    # Only an explicit word counts; "Ei-modulaarinen" must not read as modular.
+    cabling = re.search(r"(ei-|non-|semi[- ]|puoli|täysin |fully[- ])?(modulaarinen|modular)", name, re.I)
+    specs["modular"] = parse_modular(cabling.group(0)) if cabling else None
     specs["connectors"] = search(r"\b(\d+\+\d+\s*pin|24-pin)\b", name, re.I)
     return specs
 
 
+CASE_TOWER_SIZES = {"full": "Full Tower", "midi": "Midi Tower", "mini": "Mini Tower"}
+CASE_BOARD_SIZES = {"mini-itx": "Mini-ITX", "micro-atx": "Micro-ATX"}
+
+
 def parse_case(name: str) -> Dict[str, Any]:
+    """Case size in one spelling: names write "MidiTower", "Midi-Tower", "MINI Tower"
+    and the picker would otherwise show each as its own filter option. The tower size
+    wins over a board size named next to it ("Mini-Tower Micro-ATX" is a Mini Tower)."""
     specs: Dict[str, Any] = {}
-    form = search(r"\b(Full\s?Tower|Midi\s?Tower|Mini\s?Tower|Mini-ITX|Micro-ATX)\b", name, re.I)
-    specs["form_factor"] = form
+    tower = re.search(r"\b(Full|Midi|Mini)[\s-]?Tower\b", name, re.I)
+    board = re.search(r"\b(Mini-ITX|Micro-ATX)\b", name, re.I)
+    specs["form_factor"] = (CASE_TOWER_SIZES[tower.group(1).lower()] if tower else
+                            CASE_BOARD_SIZES[board.group(1).lower()] if board else None)
     color = None
     for word, english in (("musta", "black"), ("valkoinen", "white"), ("harmaa", "grey"), ("puu", "wood")):
         if re.search(rf"\b{word}\b", name, re.I):

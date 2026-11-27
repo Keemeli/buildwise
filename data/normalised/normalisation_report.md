@@ -1,6 +1,6 @@
-# Normalisation report — 2026-11-12
+# Normalisation report — 2026-11-18
 
-Scanned 4583 raw products from `data/raw/`, produced **4024 unique components** (546 duplicate rows merged).
+Scanned 4583 raw products from `data/raw/`, produced **3934 unique components** (547 duplicate rows merged).
 
 Missing values are reported, not filled. A `null` spec means the shop's product name does not contain that information.
 
@@ -8,8 +8,9 @@ Missing values are reported, not filled. A `null` spec means the shop's product 
 
 Cross-retailer groups require every pair to match validated identifiers. Titles alone do not merge listings. See `identity_matches.json` for source evidence, contradictions and ambiguous groups.
 
-- review: 196 components
-- unresolved: 3828 components
+- review: 99 components
+- unresolved: 3835 components
+- Conflicting product-page fields retained as null: 1; values and source URLs remain in each component’s `spec_conflicts`.
 
 ## Standardised GPU specification values
 
@@ -19,55 +20,56 @@ Cross-retailer groups require every pair to match validated identifiers. Titles 
 
 | Category | Components | Field | Parsed | Coverage |
 |---|---|---|---|---|
-| gpu | 577 | `chipset` | 431 | 75% |
-| gpu | 577 | `vram_gb` | 520 | 90% |
-| gpu | 577 | `memory_type` | 521 | 90% |
-| gpu | 577 | `gpu_vendor` | 534 | 93% |
-| cpu | 171 | `family` | 108 | 63% |
-| cpu | 171 | `socket` | 161 | 94% |
-| cpu | 171 | `base_clock_ghz` | 109 | 64% |
-| cpu | 171 | `cache_mb` | 163 | 95% |
-| motherboard | 651 | `chipset` | 637 | 98% |
-| motherboard | 651 | `socket` | 611 | 94% |
-| motherboard | 651 | `form_factor` | 619 | 95% |
-| motherboard | 651 | `memory_type` | 627 | 96% |
-| memory | 760 | `memory_type` | 731 | 96% |
-| memory | 760 | `capacity_gb` | 744 | 98% |
-| memory | 760 | `modules` | 700 | 92% |
-| memory | 760 | `speed_mhz` | 657 | 86% |
-| memory | 760 | `cas_latency` | 638 | 84% |
-| storage | 581 | `capacity_gb` | 559 | 96% |
-| storage | 581 | `interface` | 540 | 93% |
-| storage | 581 | `form_factor` | 535 | 92% |
-| storage | 581 | `pcie_gen` | 254 | 44% |
-| psu | 664 | `wattage_w` | 639 | 96% |
-| psu | 664 | `efficiency` | 592 | 89% |
-| psu | 664 | `atx_version` | 455 | 69% |
-| psu | 664 | `form_factor` | 586 | 88% |
-| case | 620 | `form_factor` | 404 | 65% |
-| case | 620 | `color` | 585 | 94% |
+| gpu | 539 | `chipset` | 431 | 80% |
+| gpu | 539 | `vram_gb` | 520 | 96% |
+| gpu | 539 | `memory_type` | 522 | 97% |
+| gpu | 539 | `gpu_vendor` | 534 | 99% |
+| cpu | 167 | `family` | 108 | 65% |
+| cpu | 167 | `socket` | 161 | 96% |
+| cpu | 167 | `base_clock_ghz` | 109 | 65% |
+| cpu | 167 | `cache_mb` | 163 | 98% |
+| motherboard | 643 | `chipset` | 639 | 99% |
+| motherboard | 643 | `socket` | 613 | 95% |
+| motherboard | 643 | `form_factor` | 621 | 97% |
+| motherboard | 643 | `memory_type` | 628 | 98% |
+| memory | 740 | `memory_type` | 730 | 99% |
+| memory | 740 | `capacity_gb` | 739 | 100% |
+| memory | 740 | `modules` | 700 | 95% |
+| memory | 740 | `speed_mhz` | 657 | 89% |
+| memory | 740 | `cas_latency` | 638 | 86% |
+| storage | 562 | `capacity_gb` | 558 | 99% |
+| storage | 562 | `interface` | 535 | 95% |
+| storage | 562 | `form_factor` | 533 | 95% |
+| storage | 562 | `pcie_gen` | 256 | 46% |
+| psu | 664 | `wattage_w` | 642 | 97% |
+| psu | 664 | `efficiency` | 594 | 89% |
+| psu | 664 | `atx_version` | 456 | 69% |
+| psu | 664 | `form_factor` | 588 | 89% |
+| case | 619 | `form_factor` | 411 | 66% |
+| case | 619 | `color` | 585 | 95% |
 
 ## Facet vocabulary (values a UI filter would offer)
 
-- **gpu.gpu_vendor**: NVIDIA ×386, AMD ×121, Intel ×27
-- **gpu.memory_type**: GDDR7 ×293, GDDR6 ×214, GDDR5 ×7, GDDR4 ×4, GDDR3 ×3
+- **gpu.gpu_vendor**: NVIDIA ×385, AMD ×122, Intel ×27
+- **gpu.memory_type**: GDDR7 ×293, GDDR6 ×215, GDDR5 ×7, GDDR4 ×4, GDDR3 ×3
 - **cpu.socket**: LGA1700 ×42, AM5 ×36, AM4 ×21, LGA1851 ×15, SP5 ×13, STR5 ×13
-- **motherboard.memory_type**: DDR5 ×508, DDR4 ×117, DDR3 ×2, GDDR6 ×1
-- **motherboard.socket**: AM5 ×277, LGA1700 ×131, LGA1851 ×125, AM4 ×65, STR5 ×5, LGA4677 ×3
-- **motherboard.form_factor**: ATX ×282, mikro ATX ×271, Mini ITX ×31, Laajennettu ATX ×13, Micro-ATX ×12, EEB ×3
-- **memory.memory_type**: DDR5 ×466, DDR4 ×238, DDR3 ×26, DDR2 ×1
+- **motherboard.memory_type**: DDR5 ×510, DDR4 ×117, DDR3 ×2
+- **motherboard.socket**: AM5 ×279, LGA1700 ×131, LGA1851 ×125, AM4 ×65, STR5 ×5, LGA4677 ×3
+- **motherboard.form_factor**: ATX ×283, mikro ATX ×271, Mini ITX ×31, Micro-ATX ×13, Laajennettu ATX ×13, EEB ×3
+- **memory.memory_type**: DDR5 ×466, DDR4 ×237, DDR3 ×26, DDR2 ×1
 - **memory.speed_mhz**: 3200 ×139, 6000 ×124, 5600 ×112, 6400 ×51, 4800 ×46, 2666 ×35
-- **storage.interface**: SATA III ×197, PCI Express 4.0 ×149, PCI Express 5.0 ×63, SATA ×40, PCI Express 3.0 ×35, SAS ×22
-- **storage.form_factor**: M.2 2280 ×147, M.2 ×132, 3.5" ×128, 2.5" ×115, M.2 2242 ×5, M.2 2230 ×5
+- **storage.interface**: SATA III ×197, PCI Express 4.0 ×149, PCI Express 5.0 ×63, SATA ×39, PCI Express 3.0 ×35, SAS ×22
+- **storage.form_factor**: M.2 2280 ×148, M.2 ×129, 3.5" ×128, 2.5" ×115, M.2 2242 ×5, M.2 2230 ×5
 - **psu.efficiency**: 80 PLUS Gold ×153, 90% ×90, 80 PLUS Bronze ×63, 80 PLUS Platinum ×62, 85% ×32, 92% ×29
 - **case.tower_size**: Midi Tower ×307, Mini Tower ×59, Tower ×53, Micro Tower ×34, Full Tower ×30, Small Form Factor (SFF) ×11
 
 ## Values parsed from product pages (data sheet)
 
-- Components matched to a product page: **3604**
-- Fields filled in from the data sheet: 23102 (1912 gaps in the name-based specs closed)
+- Components matched to a product page: **3558**
+- Fields filled in from the data sheet: 23022 (1890 gaps in the name-based specs closed)
 - Guessed values replaced by parsed ones: 414
 - CPU sockets now parsed instead of inferred: 100
+- Storage capacities left unknown because the name and the data sheet disagree: 1
 
 Each such field is recorded in the component's `spec_sources` as `parsed_product_page`. It comes from the shop's own data sheet for that exact product, not from the product name.
 
@@ -82,21 +84,21 @@ Each such field is recorded in the component's `spec_sources` as `parsed_product
 
 ## Products needing review (fewest specs found)
 
-- **memory** — `Xilence XZ107 liitäntäkortti/-sovitin Sisäinen PCIe` — missing: memory_type, capacity_gb, modules, speed_mhz, cas_latency
-- **memory** — `Noctua NF-A6X15 PWM Tietokoneen jäähdytysjärjestelmä Tietokonekotelo Tuuletin 6 ` — missing: memory_type, capacity_gb, modules, speed_mhz, cas_latency
-- **memory** — `Noctua NF-A6X15 FLX Tietokoneen jäähdytysjärjestelmä Tietokonekotelo Tuuletin 6 ` — missing: memory_type, capacity_gb, modules, speed_mhz, cas_latency
-- **memory** — `Noctua NF-A6X15 5V Tietokoneen jäähdytysjärjestelmä Tietokonekotelo Tuuletin 6 c` — missing: memory_type, capacity_gb, modules, speed_mhz, cas_latency
-- **memory** — `Noctua NA-SC1 SX2 Tietokoneen jäähdytysjärjestelmän osa ja lisätarvike Kaapeliso` — missing: memory_type, capacity_gb, modules, speed_mhz, cas_latency
-- **memory** — `Moza Racing RS073 Polkimen kiinnityslevy` — missing: memory_type, capacity_gb, modules, speed_mhz, cas_latency
-- **memory** — `Montech HP140 ARGB PWM Tietokonekotelo Tuuletin 14 cm Valkoinen 3 kpl` — missing: memory_type, capacity_gb, modules, speed_mhz, cas_latency
-- **memory** — `Montech HP140 ARGB PWM Tietokonekotelo Tuuletin 14 cm Valkoinen 3 kpl` — missing: memory_type, capacity_gb, modules, speed_mhz, cas_latency
-- **memory** — `Jonsbo D32 PRO Midi Tower musta` — missing: memory_type, capacity_gb, modules, speed_mhz, cas_latency
-- **memory** — `GIGABYTE TPM-Module - Trusted Platform` — missing: memory_type, capacity_gb, modules, speed_mhz, cas_latency
-- **memory** — `Display 14.0 FHD IPS AG` — missing: memory_type, capacity_gb, modules, speed_mhz, cas_latency
-- **memory** — `Creative Labs Sound Blaster GS5 musta Langallinen & langaton 30 W` — missing: memory_type, capacity_gb, modules, speed_mhz, cas_latency
-- **memory** — `Core Geforce RTX 5080/5070Ti TUF Gaming (mit Backplate)` — missing: memory_type, capacity_gb, modules, speed_mhz, cas_latency
-- **memory** — `CORSAIR VENGEANCE Enhancement Kit Black` — missing: memory_type, capacity_gb, modules, speed_mhz, cas_latency
-- **memory** — `Alphacool 25667 Tietokoneen jäähdytysjärjestelmän osa ja lisätarvike Vesiblokki` — missing: memory_type, capacity_gb, modules, speed_mhz, cas_latency
+- **storage** — `WD BLACK SN8100 SED ATA` — missing: capacity_gb, interface, form_factor, pcie_gen
+- **storage** — `Seagate ST10000VN000 sisäinen kiintolevy` — missing: capacity_gb, interface, form_factor, pcie_gen
+- **psu** — `SS-500L1U Bulk (grau 500 Watt Bulk)` — missing: wattage_w, efficiency, atx_version, form_factor
+- **psu** — `SAMA G850 virtalähdeyksikkö` — missing: wattage_w, efficiency, atx_version, form_factor
+- **psu** — `MSI Netzteil PRO A1000PL PCI5 1000Watt` — missing: wattage_w, efficiency, atx_version, form_factor
+- **psu** — `MSI Netzteil MAG A750BN PCIE5 III 750Watt` — missing: wattage_w, efficiency, atx_version, form_factor
+- **psu** — `MSI Netzteil MAG A650BN PCIE5 III 650Watt` — missing: wattage_w, efficiency, atx_version, form_factor
+- **psu** — `MSI Netzteil MAG A1200PLS PCI5 1200Watt` — missing: wattage_w, efficiency, atx_version, form_factor
+- **psu** — `MSI Netzteil MAG A1000PLS PCI5 1000Watt` — missing: wattage_w, efficiency, atx_version, form_factor
+- **memory** — `Goodram GR00C5-64L52S/16G muistimoduuli` — missing: memory_type, capacity_gb, modules, speed_mhz
+- **psu** — `GAMER STORM PS850P (schwarz 1x 12 Pin High Power GPU 3x PCIe Kabelmanagement 850` — missing: wattage_w, efficiency, atx_version, form_factor
+- **psu** — `GAMER STORM PS1000P (schwarz 1x 12 Pin High Power GPU 3x PCIe Kabelmanagement 10` — missing: wattage_w, efficiency, atx_version, form_factor
+- **psu** — `GAMER STORM PF750L (schwarz 2x PCIe 750 Watt)` — missing: wattage_w, efficiency, atx_version, form_factor
+- **psu** — `GAMER STORM PF650L (schwarz 2x PCIe 650 Watt)` — missing: wattage_w, efficiency, atx_version, form_factor
+- **memory** — `G.Skill F5-6000J2836G32GX2-RS5W muistimoduuli 64 GB` — missing: memory_type, modules, speed_mhz, cas_latency
 
 ## Rows excluded as non-components
 
@@ -113,13 +115,45 @@ Each such field is recorded in the component's `spec_sources` as `parsed_product
 
 ## Rows excluded for contradicting their category
 
-5 scraped rows carry a parsed value that cannot belong to their shop category — a motherboard on a storage page, parsed with the storage vocabulary. They are listed in `excluded_category_mismatch.json`; the category is never guessed.
+94 scraped rows do not belong to the shop category they were found in. They are listed in `excluded_category_mismatch.json` with a reason: `accessory` (the product type in the name is a cooler, fan, cable, ...), `unverifiable` (no category-defining value and no sign of the category in the name) or `form_factor` (a parsed value that cannot belong to the category).
 
-- **storage** — `GIGABYTE B850M AORUS ELITE WIFI6E ICE AMD B850 Pistoke AM5 mikro ATX` (form_factor mikro ATX)
-- **storage** — `GIGABYTE B850M D3HP emolevy AMD B850 Pistoke AM5 mikro ATX` (form_factor mikro ATX)
-- **storage** — `MSI MEG X870E GODLIKE emolevy AMD X870E Pistoke AM5 Laajennettu ATX` (form_factor Laajennettu ATX)
-- **storage** — `ASUS B850M MAX GAMING WIFI AMD B850 Pistoke AM5 mikro ATX` (form_factor mikro ATX)
-- **storage** — `MSI MEG X870E GODLIKE emolevy AMD X870E Pistoke AM5 Laajennettu ATX` (form_factor Laajennettu ATX)
+### `accessory` — 92
+
+- **case** — `Cooler Master Hyper 612 APEX Suoritin Ilmanjäähdytin 12 cm musta 1 kpl`
+- **case** — `HAVN HVN-FS-H1230-01-TRI Tietokoneen jäähdytysjärjestelmä Tietokonekotelo Tuulet`
+- **case** — `HAVN HVN-FS-H1230-01 Tietokoneen jäähdytysjärjestelmä Tietokonekotelo Tuuletin 1`
+- **case** — `Phanteks PH-MLEDKT6_BK01 tietokonekotelon osa Näyttö`
+- **case** — `SAMA Gears A40L Suoritin Ilmanjäähdytin 12 cm Valkoinen 1 kpl`
+- **case** — `Gamiac TKL90G - White/Red - TKL - Kailh Blue`
+- **case** — `DeepCool FL12R Tietokonekotelo Tuuletin 12 cm musta 1 kpl`
+- **case** — `Phanteks PH-MLEDKT6_WT01 tietokonekotelon osa Näyttö`
+- **cpu** — `Intel Wireless-N 7260 Plus Bluetooth Sisäinen WLAN / Bluetooth 300 Mbit/s`
+- **gpu** — `NZXT AB-RH175-B1 tietokonekotelon osa Universaali Grafiikkakortin pidike`
+
+### `unverifiable` — 2
+
+- **cpu** — `K DeepCool AG300 G2`
+- **storage** — `Seagate Storage Expansion Card Tallennuksen laajennuskortti`
+
+## Rows moved to the category their name states
+
+22 scraped rows name a product type of another category we carry (a power supply on a storage page) and nothing in the name points to the page's category. They are parsed as the named category.
+
+- gpu → **case** — `NZXT H9 Flow RGB Midi Tower musta`
+- gpu → **case** — `NZXT H9 Flow Midi Tower musta`
+- gpu → **case** — `NZXT H9 Flow RGB+ Midi Tower musta`
+- memory → **storage** — `XPG Spectrix S65G 500GB (aluminium PCIe 4.0 x4 M.2 2280)`
+- memory → **storage** — `XPG SPECTRIX S65G 1 TB M.2 PCI Express 4.0 NVMe 3D NAND`
+- memory → **storage** — `ADATA SMAR-980B-1TCS SSD-massamuisti 1 TB M.2 PCI Express 5.0 NVMe 3D NAND`
+- memory → **case** — `Jonsbo D32 PRO Midi Tower musta`
+- motherboard → **gpu** — `Asrock AMD Radeon RX 9060 XT Challenger 16GB OC GDDR6`
+- motherboard → **psu** — `ASUS TUF Gaming 650W Gold EVO PSU`
+- psu → **case** — `Thermaltake AX500 Full Tower musta`
+- psu → **case** — `Thermaltake AX500 Full Tower Valkoinen`
+- storage → **psu** — `DeepCool PN750M virtalähdeyksikkö 750 W 20+4 pin ATX ATX musta`
+- storage → **motherboard** — `ASUS B850M MAX GAMING WIFI AMD B850 Pistoke AM5 mikro ATX`
+- storage → **motherboard** — `MSI MEG X870E GODLIKE emolevy AMD X870E Pistoke AM5 Laajennettu ATX`
+- storage → **motherboard** — `GIGABYTE B550 EAGLE WIFI6 emolevy`
 
 ## Suspect categories (nothing parsed at all)
 
@@ -136,7 +170,7 @@ Each such field is recorded in the component's `spec_sources` as `parsed_product
 
 ## Sanity check
 
-- Component listings with a price: 3974
-- Median price: 224.90 €
-- Min 4.90 € / max 53405.00 €
+- Component listings with a price: 3886
+- Median price: 230.40 €
+- Min 20.90 € / max 53405.00 €
 
