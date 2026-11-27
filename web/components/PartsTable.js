@@ -1,6 +1,8 @@
 "use client";
 
 import { formatEuros } from "@/lib/api";
+import { exactName, partLabel } from "@/lib/labels";
+import ShopBadge from "@/components/ShopBadge";
 import { useT } from "@/lib/locale";
 
 export default function PartsTable({ parts }) {
@@ -20,11 +22,16 @@ export default function PartsTable({ parts }) {
           <tr key={part.category}>
             <td className="muted">{t.categories[part.category] ?? part.category}</td>
             <td>
-              <a href={part.url} target="_blank" rel="noopener noreferrer">
-                {part.name}
+              <a href={part.url} target="_blank" rel="noopener noreferrer" title={exactName(part)}>
+                {partLabel(part)}
               </a>
+              {/* The shop's own wording stays one line below: the label above is derived
+                  from parsed specs and must never be the only name a part is known by. */}
+              {exactName(part) && exactName(part) !== partLabel(part) && (
+                <div className="muted small">{exactName(part)}</div>
+              )}
             </td>
-            <td>{part.shop}</td>
+            <td><ShopBadge shop={part.shop} /></td>
             <td className="right">{formatEuros(part.priceCents, t.locale)}</td>
           </tr>
         ))}

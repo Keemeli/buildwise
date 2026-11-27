@@ -9,17 +9,9 @@ import { formatEuros } from "@/lib/api";
 import { matchesQuery, queryTokens, searchKey } from "@/lib/search";
 import PartIcon from "./PartIcon";
 import ProductImage from "./ProductImage";
+import ShopBadge from "./ShopBadge";
+import { formatCapacity, partLabel, exactName } from "@/lib/labels";
 import { useT } from "@/lib/locale";
-
-// Storage capacity. The normaliser currently counts 1 TB as 1024 GB, so both
-// 1000 and 1024 multiples are shown as whole terabytes.
-function formatCapacity(gb) {
-  if (gb >= 1000) {
-    const tb = gb % 1024 === 0 ? gb / 1024 : gb / 1000;
-    return `${Math.round(tb * 10) / 10} TB`;
-  }
-  return `${gb} GB`;
-}
 
 // Joins the parts that are known. A missing spec is left out, never guessed.
 const line = (...parts) => parts.filter((p) => p !== null && p !== undefined && p !== false && p !== "").join(" · ");
@@ -49,11 +41,12 @@ function specSummary(c, t) {
         s.form_factor === "SO-DIMM" && "SO-DIMM",
       );
     case "gpu":
+      // Chipset and memory size are in the label above (see lib/labels.js); this line
+      // carries what a builder checks next — power draw, length and the PCIe link.
       return line(
-        s.chipset,
-        has(s.vram_gb) && `${s.vram_gb} GB${s.memory_type ? ` ${s.memory_type}` : ""}`,
         has(s.tdp_w) && `${s.tdp_w} W`,
         has(s.length_mm) && `${s.length_mm} mm`,
+        s.interface,
       );
     case "storage":
       return line(has(s.capacity_gb) && formatCapacity(s.capacity_gb), s.interface, s.form_factor, has(s.pcie_gen) && `PCIe ${s.pcie_gen}`);
@@ -471,7 +464,7 @@ export default function PartPicker({ slot, build, owned = false, onSelect, onOwn
                 <ProductImage src={component.image} alt={component.name} category={slot.category} size={56} />
               </div>
               <div className="picker-info">
-                <div className="part-name">{component.name}</div>
+                <div className="part-name" title={exactName(component)}>{partLabel(component)}</div>
                 <div className="part-specs">{specSummary(component, t)}</div>
                 {issues.map((issue) => (
                   <div key={issueKey(issue)} className="issue-inline error">
@@ -481,8 +474,8 @@ export default function PartPicker({ slot, build, owned = false, onSelect, onOwn
               </div>
               <div className="picker-price">
                 <div className="price">{formatEuros(offer.priceCents, t.locale)}</div>
-                <div className="muted small">
-                  {offer.shop}
+                <div className="muted small picker-shop">
+                  <ShopBadge shop={offer.shop} size={16} />
                   {component.offers.length > 1 && ` · ${t.picker.shops(component.offers.length)}`}
                 </div>
               </div>
