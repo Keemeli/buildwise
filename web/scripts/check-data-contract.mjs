@@ -193,6 +193,42 @@ check("product images come from the shop's own page", () => {
   return `${withImage.length}/${components.length} rows carry a shop image URL`;
 });
 
+// The performance model: the rules that keep an FPS claim honest. Synthetic rows, so this
+// checks the model's logic rather than today's placeholder data.
+const fpsSource = readFileSync(join(webRoot, "lib", "fps-model.js"), "utf8");
+const { estimateFps } = await import(
+  `data:text/javascript;charset=utf-8,${encodeURIComponent(fpsSource)}`
+);
+
+check("FPS model: a 1% low is never invented and the CPU ceiling is respected", () => {
+  const table = {
+    game1: [
+      { resolution: "1080p", preset: "low", avg: 500, lowRatio: 0.72, cpuCeiling: 400, ramNeedGb: 16, measured: true, source: "review", retrieved: "2026-11-27" },
+      { resolution: "4K", preset: "ultra", avg: 90, lowRatio: 0.8, cpuCeiling: 400, ramNeedGb: 16, measured: true, source: "review", retrieved: "2026-11-27" },
+    ],
+    game2: [
+      { resolution: "1080p", preset: "low", avg: 200, cpuCeiling: null, ramNeedGb: 16, measured: false, source: "index", retrieved: "2026-11-27" },
+    ],
+  };
+  const fastGpu = 3;
+  const cpuBoundCase = estimateFps({ table, game: "game1", resolution: "1080p", preset: "low", gpuIndex: fastGpu, cpuIndex: 1 });
+  assert(cpuBoundCase.avg === 400, `expected the CPU ceiling 400 to cap a 1500 fps GPU estimate, got ${cpuBoundCase.avg}`);
+  assert(cpuBoundCase.cpuBound === true, "the estimate must say it is CPU-bound");
+  const gpuCase = estimateFps({ table, game: "game1", resolution: "4K", preset: "ultra", gpuIndex: fastGpu, cpuIndex: 1 });
+  assert(gpuCase.avg === 270 && gpuCase.cpuBound === false, `4K Ultra should be GPU-bound at 270, got ${gpuCase.avg}`);
+  assert(gpuCase.low1 === Math.round(270 * 0.8), `the 1% low must follow the measured ratio, got ${gpuCase.low1}`);
+  const noLow = estimateFps({ table, game: "game2", resolution: "1080p", preset: "low", gpuIndex: 1, cpuIndex: 1 });
+  assert(noLow.low1 === null, "a source without a 1% low must report null, never a made-up floor");
+  assert(noLow.reasons.some((r) => r.includes("1% low")), "and must say why");
+  const moreRam = estimateFps({ table, game: "game1", resolution: "4K", preset: "ultra", gpuIndex: fastGpu, cpuIndex: 1, ramGb: 64 });
+  assert(moreRam.avg === gpuCase.avg, "more RAM than the game needs must not raise the estimate");
+  const lessRam = estimateFps({ table, game: "game1", resolution: "4K", preset: "ultra", gpuIndex: fastGpu, cpuIndex: 1, ramGb: 8 });
+  assert(lessRam.ramBelowNeed === true, "less RAM than the game states must be flagged");
+  const unknown = estimateFps({ table, game: "game1", resolution: "1440p", preset: "low", gpuIndex: 1, cpuIndex: 1 });
+  assert(unknown.avg === null && unknown.reasons.length > 0, "an unknown combination is reported, not guessed");
+  return "cpu ceiling, measured low ratio, RAM rule and unknown combinations all behave";
+});
+
 // ---------------------------------------------------------------------------
 // 3. Engine — the rules that were wrong, called directly with real catalogue rows.
 //    Positive case, inverse case, a legacy raw value, and a dual-capability board.
