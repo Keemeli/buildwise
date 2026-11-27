@@ -1,0 +1,45 @@
+{
+  "source": {
+    "name": "CheckFPS (checkfps.io)",
+    "note": "CheckFPS states its figures are estimates from its own engine, not lab measurements; read from public pages, robots.txt respected (/api/ not used).",
+    "retrieved": "2026-11-27",
+    "gpu": "RTX 5060 Ti"
+  },
+  "ceilings": {
+    "AMD Ryzen 5 5600": {
+      "1080p": 97,
+      "1440p": 79,
+      "4K": 44
+    },
+    "AMD Ryzen 5 7600": {
+      "1080p": 103,
+      "1440p": 83,
+      "4K": 45
+    },
+    "AMD Ryzen 5 9600X": {
+      "1080p": 106,
+      "1440p": 85,
+      "4K": 45
+    },
+    "AMD Ryzen 7 7800X3D": {
+      "1080p": 107,
+      "1440p": 85,
+      "4K": 45
+    },
+    "AMD Ryzen 7 9800X3D": {
+      "1080p": 109,
+      "1440p": 86,
+      "4K": 46
+    },
+    "Intel Core Ultra 7 265K Sweet spot": {
+      "1080p": 106,
+      "1440p": 85,
+      "4K": 46
+    },
+    "Intel Core i5-14400F": {
+      "1080p": 102,
+      "1440p": 82,
+      "4K": 45
+    }
+  }
+}

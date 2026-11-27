@@ -1,0 +1,1431 @@
+{
+ "generated_at": "2026-11-27",
+ "source": {
+  "name": "CheckFPS (checkfps.io)",
+  "note": "CheckFPS states its figures are estimates from its own engine, not lab measurements; read from public pages, robots.txt respected (/api/ not used).",
+  "retrieved": "2026-11-27"
+ },
+ "reference": {
+  "gpu": "RTX 5060 Ti",
+  "cpu": "Intel Core i5-13400"
+ },
+ "defaultRamGb": 32,
+ "cpuIndex": {},
+ "gpuIndex": {
+  "reference": "RTX 5060 Ti",
+  "index": {
+   "ARCA3104GB": {
+    "1080p": 0.097,
+    "1440p": 0.1,
+    "4K": 0.097
+   },
+   "ARCA3806GB": {
+    "1080p": 0.161,
+    "1440p": 0.129,
+    "4K": 0.096
+   },
+   "ARCA5808GB": {
+    "1080p": 0.432,
+    "1440p": 0.375,
+    "4K": 0.306
+   },
+   "ARCA7508GB": {
+    "1080p": 0.518,
+    "1440p": 0.475,
+    "4K": 0.403
+   },
+   "ARCA77016GB": {
+    "1080p": 0.583,
+    "1440p": 0.541,
+    "4K": 0.477
+   },
+   "ARCB57010GB": {
+    "1080p": 0.58,
+    "1440p": 0.523,
+    "4K": 0.427
+   },
+   "ARCB580": {
+    "1080p": 0.678,
+    "1440p": 0.632,
+    "4K": 0.545
+   },
+   "GTX10502GB": {
+    "1080p": 0.146,
+    "1440p": 0.124,
+    "4K": 0.094
+   },
+   "GTX1050TI4GB": {
+    "1080p": 0.166,
+    "1440p": 0.132,
+    "4K": 0.102
+   },
+   "GTX10603GB3GB": {
+    "1080p": 0.2,
+    "1440p": 0.163,
+    "4K": 0.129
+   },
+   "GTX10606GB6GB": {
+    "1080p": 0.225,
+    "1440p": 0.19,
+    "4K": 0.159
+   },
+   "GTX10708GB": {
+    "1080p": 0.363,
+    "1440p": 0.332,
+    "4K": 0.266
+   },
+   "GTX1070TI8GB": {
+    "1080p": 0.407,
+    "1440p": 0.374,
+    "4K": 0.305
+   },
+   "GTX10808GB": {
+    "1080p": 0.454,
+    "1440p": 0.423,
+    "4K": 0.363
+   },
+   "GTX1080TI11GB": {
+    "1080p": 0.569,
+    "1440p": 0.541,
+    "4K": 0.496
+   },
+   "GTX16304GB": {
+    "1080p": 0.097,
+    "1440p": 0.1,
+    "4K": 0.097
+   },
+   "GTX16504GB": {
+    "1080p": 0.2,
+    "1440p": 0.163,
+    "4K": 0.129
+   },
+   "GTX1650LAPTOP4G": {
+    "1080p": 0.188,
+    "1440p": 0.148,
+    "4K": 0.11
+   },
+   "GTX1650SUPER4GB": {
+    "1080p": 0.244,
+    "1440p": 0.2,
+    "4K": 0.163
+   },
+   "GTX16606GB": {
+    "1080p": 0.326,
+    "1440p": 0.273,
+    "4K": 0.211
+   },
+   "GTX1660SUPER6GB": {
+    "1080p": 0.396,
+    "1440p": 0.34,
+    "4K": 0.251
+   },
+   "GTX1660TI6GB": {
+    "1080p": 0.367,
+    "1440p": 0.314,
+    "4K": 0.234
+   },
+   "GTX1660TILAPTOP": {
+    "1080p": 0.289,
+    "1440p": 0.241,
+    "4K": 0.188
+   },
+   "GTX750TI2GB": {
+    "1080p": 0.089,
+    "1440p": 0.092,
+    "4K": 0.088
+   },
+   "GTX9502GB": {
+    "1080p": 0.097,
+    "1440p": 0.1,
+    "4K": 0.097
+   },
+   "GTX9602GB": {
+    "1080p": 0.146,
+    "1440p": 0.124,
+    "4K": 0.094
+   },
+   "GTX9704GB": {
+    "1080p": 0.174,
+    "1440p": 0.152,
+    "4K": 0.114
+   },
+   "GTX9804GB": {
+    "1080p": 0.195,
+    "1440p": 0.169,
+    "4K": 0.142
+   },
+   "GTX980TI6GB": {
+    "1080p": 0.292,
+    "1440p": 0.261,
+    "4K": 0.227
+   },
+   "R9380": {
+    "1080p": 0.155,
+    "1440p": 0.128,
+    "4K": 0.094
+   },
+   "R9390": {
+    "1080p": 0.173,
+    "1440p": 0.144,
+    "4K": 0.113
+   },
+   "R9390X": {
+    "1080p": 0.19,
+    "1440p": 0.162,
+    "4K": 0.128
+   },
+   "RADEONRX9060XT8GB": {
+    "1080p": 0.847,
+    "1440p": 0.806,
+    "4K": 0.763
+   },
+   "RTX206012GB12GB": {
+    "1080p": 0.503,
+    "1440p": 0.457,
+    "4K": 0.385
+   },
+   "RTX20606GB": {
+    "1080p": 0.483,
+    "1440p": 0.438,
+    "4K": 0.364
+   },
+   "RTX2060LAPTOP6G": {
+    "1080p": 0.405,
+    "1440p": 0.36,
+    "4K": 0.286
+   },
+   "RTX2060SUPER8GB": {
+    "1080p": 0.535,
+    "1440p": 0.507,
+    "4K": 0.424
+   },
+   "RTX20708GB": {
+    "1080p": 0.584,
+    "1440p": 0.558,
+    "4K": 0.497
+   },
+   "RTX2070LAPTOP8G": {
+    "1080p": 0.487,
+    "1440p": 0.442,
+    "4K": 0.384
+   },
+   "RTX2070SUPER8GB": {
+    "1080p": 0.635,
+    "1440p": 0.613,
+    "4K": 0.562
+   },
+   "RTX20808GB": {
+    "1080p": 0.683,
+    "1440p": 0.665,
+    "4K": 0.626
+   },
+   "RTX2080SUPER8GB": {
+    "1080p": 0.735,
+    "1440p": 0.72,
+    "4K": 0.691
+   },
+   "RTX2080SUPERLAPT": {
+    "1080p": 0.617,
+    "1440p": 0.579,
+    "4K": 0.52
+   },
+   "RTX2080TI11GB": {
+    "1080p": 0.853,
+    "1440p": 0.844,
+    "4K": 0.857
+   },
+   "RTX24GB": {
+    "1080p": 0.769,
+    "1440p": 0.753,
+    "4K": 0.758
+   },
+   "RTX30506GB6GB": {
+    "1080p": 0.288,
+    "1440p": 0.232,
+    "4K": 0.188
+   },
+   "RTX30508GB": {
+    "1080p": 0.404,
+    "1440p": 0.334,
+    "4K": 0.268
+   },
+   "RTX3050LAPTOP4G": {
+    "1080p": 0.242,
+    "1440p": 0.192,
+    "4K": 0.15
+   },
+   "RTX3050TILAPTOP": {
+    "1080p": 0.288,
+    "1440p": 0.232,
+    "4K": 0.188
+   },
+   "RTX306012GB": {
+    "1080p": 0.597,
+    "1440p": 0.557,
+    "4K": 0.462
+   },
+   "RTX3060LAPTOP6G": {
+    "1080p": 0.514,
+    "1440p": 0.455,
+    "4K": 0.367
+   },
+   "RTX3060TI8GB": {
+    "1080p": 0.749,
+    "1440p": 0.749,
+    "4K": 0.673
+   },
+   "RTX3060TIGDDR6X": {
+    "1080p": 0.782,
+    "1440p": 0.785,
+    "4K": 0.719
+   },
+   "RTX30708GB": {
+    "1080p": 0.854,
+    "1440p": 0.879,
+    "4K": 0.859
+   },
+   "RTX3070LAPTOP8G": {
+    "1080p": 0.68,
+    "1440p": 0.647,
+    "4K": 0.585
+   },
+   "RTX3070TI8GB": {
+    "1080p": 0.908,
+    "1440p": 0.937,
+    "4K": 0.927
+   },
+   "RTX3070TILAPTOP": {
+    "1080p": 0.732,
+    "1440p": 0.699,
+    "4K": 0.651
+   },
+   "RTX308010GB": {
+    "1080p": 1.029,
+    "1440p": 1.084,
+    "4K": 1.222
+   },
+   "RTX308012GB12GB": {
+    "1080p": 1.069,
+    "1440p": 1.129,
+    "4K": 1.278
+   },
+   "RTX3080LAPTOP16": {
+    "1080p": 0.799,
+    "1440p": 0.787,
+    "4K": 0.743
+   },
+   "RTX3080TI": {
+    "1080p": 1.112,
+    "1440p": 1.174,
+    "4K": 1.359
+   },
+   "RTX3080TILAPTOP": {
+    "1080p": 0.851,
+    "1440p": 0.842,
+    "4K": 0.814
+   },
+   "RTX3090": {
+    "1080p": 1.155,
+    "1440p": 1.223,
+    "4K": 1.449
+   },
+   "RTX3090TI": {
+    "1080p": 1.244,
+    "1440p": 1.32,
+    "4K": 1.565
+   },
+   "RTX4050LAPTOP6G": {
+    "1080p": 0.477,
+    "1440p": 0.406,
+    "4K": 0.324
+   },
+   "RTX4060": {
+    "1080p": 0.709,
+    "1440p": 0.646,
+    "4K": 0.547
+   },
+   "RTX4060LAPTOP8G": {
+    "1080p": 0.642,
+    "1440p": 0.578,
+    "4K": 0.501
+   },
+   "RTX4060TI16GB16": {
+    "1080p": 0.846,
+    "1440p": 0.805,
+    "4K": 0.745
+   },
+   "RTX4060TI8GB": {
+    "1080p": 0.829,
+    "1440p": 0.787,
+    "4K": 0.72
+   },
+   "RTX407012GB": {
+    "1080p": 1.004,
+    "1440p": 1.019,
+    "4K": 1.092
+   },
+   "RTX4070LAPTOP8G": {
+    "1080p": 0.78,
+    "1440p": 0.751,
+    "4K": 0.694
+   },
+   "RTX4070SUPER": {
+    "1080p": 1.108,
+    "1440p": 1.15,
+    "4K": 1.277
+   },
+   "RTX4070TI": {
+    "1080p": 1.178,
+    "1440p": 1.222,
+    "4K": 1.416
+   },
+   "RTX4070TISUPER": {
+    "1080p": 1.265,
+    "1440p": 1.321,
+    "4K": 1.566
+   },
+   "RTX4080": {
+    "1080p": 1.354,
+    "1440p": 1.467,
+    "4K": 1.871
+   },
+   "RTX4080LAPTOP12": {
+    "1080p": 0.941,
+    "1440p": 0.937,
+    "4K": 0.908
+   },
+   "RTX4080SUPER": {
+    "1080p": 1.417,
+    "1440p": 1.543,
+    "4K": 1.973
+   },
+   "RTX4090": {
+    "1080p": 1.58,
+    "1440p": 1.748,
+    "4K": 2.369
+   },
+   "RTX4090LAPTOP16": {
+    "1080p": 1.082,
+    "1440p": 1.101,
+    "4K": 1.096
+   },
+   "RTX5050": {
+    "1080p": 0.638,
+    "1440p": 0.542,
+    "4K": 0.43
+   },
+   "RTX5050LAPTOP8G": {
+    "1080p": 0.474,
+    "1440p": 0.377,
+    "4K": 0.29
+   },
+   "RTX5060LAPTOP8G": {
+    "1080p": 0.711,
+    "1440p": 0.664,
+    "4K": 0.587
+   },
+   "RTX5060TI16GB": {
+    "1080p": 1.0,
+    "1440p": 1.0,
+    "4K": 1.0
+   },
+   "RTX5060TI8GB8G": {
+    "1080p": 0.923,
+    "1440p": 0.816,
+    "4K": 0.561
+   },
+   "RTX5070": {
+    "1080p": 1.262,
+    "1440p": 1.318,
+    "4K": 1.474
+   },
+   "RTX5070LAPTOP8G": {
+    "1080p": 0.888,
+    "1440p": 0.879,
+    "4K": 0.86
+   },
+   "RTX5070TI": {
+    "1080p": 1.392,
+    "1440p": 1.49,
+    "4K": 1.8
+   },
+   "RTX5070TILAPTOP": {
+    "1080p": 1.04,
+    "1440p": 1.038,
+    "4K": 1.05
+   },
+   "RTX5080": {
+    "1080p": 1.539,
+    "1440p": 1.68,
+    "4K": 2.212
+   },
+   "RTX5080LAPTOP": {
+    "1080p": 1.244,
+    "1440p": 1.148,
+    "4K": 1.103
+   },
+   "RTX5090": {
+    "1080p": 1.683,
+    "1440p": 1.864,
+    "4K": 2.6
+   },
+   "RTX5090LAPTOP": {
+    "1080p": 1.412,
+    "1440p": 1.34,
+    "4K": 1.316
+   },
+   "RX4704GB": {
+    "1080p": 0.191,
+    "1440p": 0.159,
+    "4K": 0.113
+   },
+   "RX4808GB8GB": {
+    "1080p": 0.21,
+    "1440p": 0.172,
+    "4K": 0.132
+   },
+   "RX5500XT4GB4G": {
+    "1080p": 0.213,
+    "1440p": 0.168,
+    "4K": 0.123
+   },
+   "RX5500XT8GB": {
+    "1080p": 0.233,
+    "1440p": 0.191,
+    "4K": 0.149
+   },
+   "RX5600XT6GB": {
+    "1080p": 0.417,
+    "1440p": 0.36,
+    "4K": 0.269
+   },
+   "RX5604GB": {
+    "1080p": 0.133,
+    "1440p": 0.111,
+    "4K": 0.088
+   },
+   "RX57008GB": {
+    "1080p": 0.483,
+    "1440p": 0.438,
+    "4K": 0.364
+   },
+   "RX5700XT8GB": {
+    "1080p": 0.551,
+    "1440p": 0.507,
+    "4K": 0.425
+   },
+   "RX5704GB4GB": {
+    "1080p": 0.191,
+    "1440p": 0.159,
+    "4K": 0.113
+   },
+   "RX5708GB8GB": {
+    "1080p": 0.182,
+    "1440p": 0.153,
+    "4K": 0.115
+   },
+   "RX5804GB4GB": {
+    "1080p": 0.204,
+    "1440p": 0.166,
+    "4K": 0.121
+   },
+   "RX5808GB8GB": {
+    "1080p": 0.213,
+    "1440p": 0.18,
+    "4K": 0.145
+   },
+   "RX5908GB": {
+    "1080p": 0.266,
+    "1440p": 0.22,
+    "4K": 0.184
+   },
+   "RX64004GB": {
+    "1080p": 0.182,
+    "1440p": 0.144,
+    "4K": 0.105
+   },
+   "RX6500M4GB": {
+    "1080p": 0.195,
+    "1440p": 0.149,
+    "4K": 0.111
+   },
+   "RX6500XT4GB": {
+    "1080p": 0.222,
+    "1440p": 0.169,
+    "4K": 0.123
+   },
+   "RX66008GB": {
+    "1080p": 0.492,
+    "1440p": 0.421,
+    "4K": 0.325
+   },
+   "RX6600M8GB": {
+    "1080p": 0.379,
+    "1440p": 0.315,
+    "4K": 0.249
+   },
+   "RX6600XT8GB": {
+    "1080p": 0.563,
+    "1440p": 0.492,
+    "4K": 0.39
+   },
+   "RX6650M8GB": {
+    "1080p": 0.446,
+    "1440p": 0.375,
+    "4K": 0.289
+   },
+   "RX6650XT8GB": {
+    "1080p": 0.61,
+    "1440p": 0.542,
+    "4K": 0.462
+   },
+   "RX670010GB": {
+    "1080p": 0.617,
+    "1440p": 0.579,
+    "4K": 0.52
+   },
+   "RX6700M10GB": {
+    "1080p": 0.514,
+    "1440p": 0.455,
+    "4K": 0.367
+   },
+   "RX6700XT12GB": {
+    "1080p": 0.7,
+    "1440p": 0.682,
+    "4K": 0.627
+   },
+   "RX6750XT12GB": {
+    "1080p": 0.767,
+    "1440p": 0.751,
+    "4K": 0.717
+   },
+   "RX680016GB": {
+    "1080p": 0.872,
+    "1440p": 0.88,
+    "4K": 0.904
+   },
+   "RX6800XT16GB": {
+    "1080p": 0.984,
+    "1440p": 1.018,
+    "4K": 1.072
+   },
+   "RX6900XT16GB": {
+    "1080p": 1.065,
+    "1440p": 1.103,
+    "4K": 1.171
+   },
+   "RX6950XT": {
+    "1080p": 1.15,
+    "1440p": 1.196,
+    "4K": 1.307
+   },
+   "RX76008GB": {
+    "1080p": 0.639,
+    "1440p": 0.558,
+    "4K": 0.45
+   },
+   "RX7600MXT8GB": {
+    "1080p": 0.545,
+    "1440p": 0.472,
+    "4K": 0.369
+   },
+   "RX7600MXTLAPTOP": {
+    "1080p": 0.43,
+    "1440p": 0.361,
+    "4K": 0.27
+   },
+   "RX7600S8GB": {
+    "1080p": 0.395,
+    "1440p": 0.327,
+    "4K": 0.25
+   },
+   "RX7600XT16GB": {
+    "1080p": 0.687,
+    "1440p": 0.612,
+    "4K": 0.504
+   },
+   "RX7700S8GB": {
+    "1080p": 0.476,
+    "1440p": 0.405,
+    "4K": 0.309
+   },
+   "RX7700XT12GB": {
+    "1080p": 0.889,
+    "1440p": 0.897,
+    "4K": 0.86
+   },
+   "RX7800XT16GB": {
+    "1080p": 1.024,
+    "1440p": 1.057,
+    "4K": 1.093
+   },
+   "RX7900GRE": {
+    "1080p": 1.126,
+    "1440p": 1.17,
+    "4K": 1.254
+   },
+   "RX7900M16GB": {
+    "1080p": 0.851,
+    "1440p": 0.842,
+    "4K": 0.814
+   },
+   "RX7900XT": {
+    "1080p": 1.289,
+    "1440p": 1.37,
+    "4K": 1.664
+   },
+   "RX7900XTX": {
+    "1080p": 1.437,
+    "1440p": 1.566,
+    "4K": 2.006
+   },
+   "RX9060XT16GB16": {
+    "1080p": 0.945,
+    "1440p": 0.823,
+    "4K": 0.703
+   },
+   "RX907016GB": {
+    "1080p": 1.043,
+    "1440p": 1.059,
+    "4K": 1.122
+   },
+   "RX9070GRE12GB": {
+    "1080p": 0.994,
+    "1440p": 0.886,
+    "4K": 0.95
+   },
+   "RX9070XT": {
+    "1080p": 1.218,
+    "1440p": 1.265,
+    "4K": 1.392
+   },
+   "RXVEGA568GB": {
+    "1080p": 0.213,
+    "1440p": 0.18,
+    "4K": 0.145
+   },
+   "RXVEGA648GB": {
+    "1080p": 0.255,
+    "1440p": 0.219,
+    "4K": 0.183
+   },
+   "TITANXP": {
+    "1080p": 0.52,
+    "1440p": 0.491,
+    "4K": 0.441
+   },
+   "TITANXPASCAL": {
+    "1080p": 0.472,
+    "1440p": 0.441,
+    "4K": 0.383
+   }
+  }
+ },
+ "games": {
+  "cs2": {
+   "name": "Counter-Strike 2",
+   "rows": [
+    {
+     "resolution": "1080p",
+     "preset": "high",
+     "avg": 354,
+     "low": 308,
+     "lowRatio": 0.87,
+     "cpuCeiling": null,
+     "measured": false,
+     "source": "https://checkfps.io/en/fps-calculator/counter-strike-2/rtx-5060-ti",
+     "retrieved": "2026-11-27"
+    },
+    {
+     "resolution": "1080p",
+     "preset": "low",
+     "avg": 400,
+     "low": 260,
+     "lowRatio": 0.65,
+     "cpuCeiling": null,
+     "measured": false,
+     "source": "https://checkfps.io/en/fps-calculator/counter-strike-2/rtx-5060-ti",
+     "retrieved": "2026-11-27"
+    },
+    {
+     "resolution": "1080p",
+     "preset": "medium",
+     "avg": 400,
+     "low": 304,
+     "lowRatio": 0.76,
+     "cpuCeiling": null,
+     "measured": false,
+     "source": "https://checkfps.io/en/fps-calculator/counter-strike-2/rtx-5060-ti",
+     "retrieved": "2026-11-27"
+    },
+    {
+     "resolution": "1080p",
+     "preset": "ultra",
+     "avg": 278,
+     "low": 244,
+     "lowRatio": 0.878,
+     "cpuCeiling": null,
+     "measured": false,
+     "source": "https://checkfps.io/en/fps-calculator/counter-strike-2/rtx-5060-ti",
+     "retrieved": "2026-11-27"
+    },
+    {
+     "resolution": "1440p",
+     "preset": "high",
+     "avg": 276,
+     "low": 243,
+     "lowRatio": 0.88,
+     "cpuCeiling": null,
+     "measured": false,
+     "source": "https://checkfps.io/en/fps-calculator/counter-strike-2/rtx-5060-ti",
+     "retrieved": "2026-11-27"
+    },
+    {
+     "resolution": "1440p",
+     "preset": "low",
+     "avg": 400,
+     "low": 309,
+     "lowRatio": 0.772,
+     "cpuCeiling": null,
+     "measured": false,
+     "source": "https://checkfps.io/en/fps-calculator/counter-strike-2/rtx-5060-ti",
+     "retrieved": "2026-11-27"
+    },
+    {
+     "resolution": "1440p",
+     "preset": "medium",
+     "avg": 352,
+     "low": 306,
+     "lowRatio": 0.869,
+     "cpuCeiling": null,
+     "measured": false,
+     "source": "https://checkfps.io/en/fps-calculator/counter-strike-2/rtx-5060-ti",
+     "retrieved": "2026-11-27"
+    },
+    {
+     "resolution": "1440p",
+     "preset": "ultra",
+     "avg": 214,
+     "low": 189,
+     "lowRatio": 0.883,
+     "cpuCeiling": null,
+     "measured": false,
+     "source": "https://checkfps.io/en/fps-calculator/counter-strike-2/rtx-5060-ti",
+     "retrieved": "2026-11-27"
+    },
+    {
+     "resolution": "4K",
+     "preset": "high",
+     "avg": 131,
+     "low": 117,
+     "lowRatio": 0.893,
+     "cpuCeiling": null,
+     "measured": false,
+     "source": "https://checkfps.io/en/fps-calculator/counter-strike-2/rtx-5060-ti",
+     "retrieved": "2026-11-27"
+    },
+    {
+     "resolution": "4K",
+     "preset": "low",
+     "avg": 220,
+     "low": 194,
+     "lowRatio": 0.882,
+     "cpuCeiling": null,
+     "measured": false,
+     "source": "https://checkfps.io/en/fps-calculator/counter-strike-2/rtx-5060-ti",
+     "retrieved": "2026-11-27"
+    },
+    {
+     "resolution": "4K",
+     "preset": "medium",
+     "avg": 171,
+     "low": 152,
+     "lowRatio": 0.889,
+     "cpuCeiling": null,
+     "measured": false,
+     "source": "https://checkfps.io/en/fps-calculator/counter-strike-2/rtx-5060-ti",
+     "retrieved": "2026-11-27"
+    },
+    {
+     "resolution": "4K",
+     "preset": "ultra",
+     "avg": 100,
+     "low": 89,
+     "lowRatio": 0.89,
+     "cpuCeiling": null,
+     "measured": false,
+     "source": "https://checkfps.io/en/fps-calculator/counter-strike-2/rtx-5060-ti",
+     "retrieved": "2026-11-27"
+    }
+   ],
+   "ramNeedGb": 8,
+   "cpuReference": "Intel Core i5-13400",
+   "gpuReference": "RTX 5060 Ti",
+   "source": "https://checkfps.io/en/fps-calculator/counter-strike-2/rtx-5060-ti"
+  },
+  "fortnite": {
+   "name": "Fortnite",
+   "rows": [
+    {
+     "resolution": "1080p",
+     "preset": "high",
+     "avg": 345,
+     "low": 178,
+     "lowRatio": 0.516,
+     "cpuCeiling": null,
+     "measured": false,
+     "source": "https://checkfps.io/en/fps-calculator/fortnite/rtx-5060-ti",
+     "retrieved": "2026-11-27"
+    },
+    {
+     "resolution": "1080p",
+     "preset": "low",
+     "avg": 500,
+     "low": 258,
+     "lowRatio": 0.516,
+     "cpuCeiling": null,
+     "measured": false,
+     "source": "https://checkfps.io/en/fps-calculator/fortnite/rtx-5060-ti",
+     "retrieved": "2026-11-27"
+    },
+    {
+     "resolution": "1080p",
+     "preset": "medium",
+     "avg": 451,
+     "low": 233,
+     "lowRatio": 0.517,
+     "cpuCeiling": null,
+     "measured": false,
+     "source": "https://checkfps.io/en/fps-calculator/fortnite/rtx-5060-ti",
+     "retrieved": "2026-11-27"
+    },
+    {
+     "resolution": "1080p",
+     "preset": "ultra",
+     "avg": 266,
+     "low": 137,
+     "lowRatio": 0.515,
+     "cpuCeiling": null,
+     "measured": false,
+     "source": "https://checkfps.io/en/fps-calculator/fortnite/rtx-5060-ti",
+     "retrieved": "2026-11-27"
+    },
+    {
+     "resolution": "1440p",
+     "preset": "high",
+     "avg": 264,
+     "low": 150,
+     "lowRatio": 0.568,
+     "cpuCeiling": null,
+     "measured": false,
+     "source": "https://checkfps.io/en/fps-calculator/fortnite/rtx-5060-ti",
+     "retrieved": "2026-11-27"
+    },
+    {
+     "resolution": "1440p",
+     "preset": "low",
+     "avg": 446,
+     "low": 254,
+     "lowRatio": 0.57,
+     "cpuCeiling": null,
+     "measured": false,
+     "source": "https://checkfps.io/en/fps-calculator/fortnite/rtx-5060-ti",
+     "retrieved": "2026-11-27"
+    },
+    {
+     "resolution": "1440p",
+     "preset": "medium",
+     "avg": 345,
+     "low": 196,
+     "lowRatio": 0.568,
+     "cpuCeiling": null,
+     "measured": false,
+     "source": "https://checkfps.io/en/fps-calculator/fortnite/rtx-5060-ti",
+     "retrieved": "2026-11-27"
+    },
+    {
+     "resolution": "1440p",
+     "preset": "ultra",
+     "avg": 203,
+     "low": 115,
+     "lowRatio": 0.567,
+     "cpuCeiling": null,
+     "measured": false,
+     "source": "https://checkfps.io/en/fps-calculator/fortnite/rtx-5060-ti",
+     "retrieved": "2026-11-27"
+    },
+    {
+     "resolution": "4K",
+     "preset": "high",
+     "avg": 125,
+     "low": 96,
+     "lowRatio": 0.768,
+     "cpuCeiling": null,
+     "measured": false,
+     "source": "https://checkfps.io/en/fps-calculator/fortnite/rtx-5060-ti",
+     "retrieved": "2026-11-27"
+    },
+    {
+     "resolution": "4K",
+     "preset": "low",
+     "avg": 212,
+     "low": 162,
+     "lowRatio": 0.764,
+     "cpuCeiling": null,
+     "measured": false,
+     "source": "https://checkfps.io/en/fps-calculator/fortnite/rtx-5060-ti",
+     "retrieved": "2026-11-27"
+    },
+    {
+     "resolution": "4K",
+     "preset": "medium",
+     "avg": 164,
+     "low": 126,
+     "lowRatio": 0.768,
+     "cpuCeiling": null,
+     "measured": false,
+     "source": "https://checkfps.io/en/fps-calculator/fortnite/rtx-5060-ti",
+     "retrieved": "2026-11-27"
+    },
+    {
+     "resolution": "4K",
+     "preset": "ultra",
+     "avg": 96,
+     "low": 73,
+     "lowRatio": 0.76,
+     "cpuCeiling": null,
+     "measured": false,
+     "source": "https://checkfps.io/en/fps-calculator/fortnite/rtx-5060-ti",
+     "retrieved": "2026-11-27"
+    }
+   ],
+   "ramNeedGb": 8,
+   "cpuReference": "Intel Core i5-13400",
+   "gpuReference": "RTX 5060 Ti",
+   "source": "https://checkfps.io/en/fps-calculator/fortnite/rtx-5060-ti"
+  },
+  "valorant": {
+   "name": "Valorant",
+   "rows": [
+    {
+     "resolution": "1080p",
+     "preset": "high",
+     "avg": 447,
+     "low": 210,
+     "lowRatio": 0.47,
+     "cpuCeiling": null,
+     "measured": false,
+     "source": "https://checkfps.io/en/fps-calculator/valorant/rtx-5060-ti",
+     "retrieved": "2026-11-27"
+    },
+    {
+     "resolution": "1080p",
+     "preset": "low",
+     "avg": 500,
+     "low": 235,
+     "lowRatio": 0.47,
+     "cpuCeiling": null,
+     "measured": false,
+     "source": "https://checkfps.io/en/fps-calculator/valorant/rtx-5060-ti",
+     "retrieved": "2026-11-27"
+    },
+    {
+     "resolution": "1080p",
+     "preset": "medium",
+     "avg": 500,
+     "low": 235,
+     "lowRatio": 0.47,
+     "cpuCeiling": null,
+     "measured": false,
+     "source": "https://checkfps.io/en/fps-calculator/valorant/rtx-5060-ti",
+     "retrieved": "2026-11-27"
+    },
+    {
+     "resolution": "1080p",
+     "preset": "ultra",
+     "avg": 344,
+     "low": 162,
+     "lowRatio": 0.471,
+     "cpuCeiling": null,
+     "measured": false,
+     "source": "https://checkfps.io/en/fps-calculator/valorant/rtx-5060-ti",
+     "retrieved": "2026-11-27"
+    },
+    {
+     "resolution": "1440p",
+     "preset": "high",
+     "avg": 393,
+     "low": 194,
+     "lowRatio": 0.494,
+     "cpuCeiling": null,
+     "measured": false,
+     "source": "https://checkfps.io/en/fps-calculator/valorant/rtx-5060-ti",
+     "retrieved": "2026-11-27"
+    },
+    {
+     "resolution": "1440p",
+     "preset": "low",
+     "avg": 500,
+     "low": 247,
+     "lowRatio": 0.494,
+     "cpuCeiling": null,
+     "measured": false,
+     "source": "https://checkfps.io/en/fps-calculator/valorant/rtx-5060-ti",
+     "retrieved": "2026-11-27"
+    },
+    {
+     "resolution": "1440p",
+     "preset": "medium",
+     "avg": 500,
+     "low": 247,
+     "lowRatio": 0.494,
+     "cpuCeiling": null,
+     "measured": false,
+     "source": "https://checkfps.io/en/fps-calculator/valorant/rtx-5060-ti",
+     "retrieved": "2026-11-27"
+    },
+    {
+     "resolution": "1440p",
+     "preset": "ultra",
+     "avg": 303,
+     "low": 149,
+     "lowRatio": 0.492,
+     "cpuCeiling": null,
+     "measured": false,
+     "source": "https://checkfps.io/en/fps-calculator/valorant/rtx-5060-ti",
+     "retrieved": "2026-11-27"
+    },
+    {
+     "resolution": "4K",
+     "preset": "high",
+     "avg": 258,
+     "low": 148,
+     "lowRatio": 0.574,
+     "cpuCeiling": null,
+     "measured": false,
+     "source": "https://checkfps.io/en/fps-calculator/valorant/rtx-5060-ti",
+     "retrieved": "2026-11-27"
+    },
+    {
+     "resolution": "4K",
+     "preset": "low",
+     "avg": 437,
+     "low": 251,
+     "lowRatio": 0.574,
+     "cpuCeiling": null,
+     "measured": false,
+     "source": "https://checkfps.io/en/fps-calculator/valorant/rtx-5060-ti",
+     "retrieved": "2026-11-27"
+    },
+    {
+     "resolution": "4K",
+     "preset": "medium",
+     "avg": 338,
+     "low": 194,
+     "lowRatio": 0.574,
+     "cpuCeiling": null,
+     "measured": false,
+     "source": "https://checkfps.io/en/fps-calculator/valorant/rtx-5060-ti",
+     "retrieved": "2026-11-27"
+    },
+    {
+     "resolution": "4K",
+     "preset": "ultra",
+     "avg": 199,
+     "low": 114,
+     "lowRatio": 0.573,
+     "cpuCeiling": null,
+     "measured": false,
+     "source": "https://checkfps.io/en/fps-calculator/valorant/rtx-5060-ti",
+     "retrieved": "2026-11-27"
+    }
+   ],
+   "ramNeedGb": 4,
+   "cpuReference": "Intel Core i5-13400",
+   "gpuReference": "RTX 5060 Ti",
+   "source": "https://checkfps.io/en/fps-calculator/valorant/rtx-5060-ti"
+  },
+  "cyberpunk2077": {
+   "name": "Cyberpunk 2077",
+   "rows": [
+    {
+     "resolution": "1080p",
+     "preset": "high",
+     "avg": 93,
+     "low": 82,
+     "lowRatio": 0.882,
+     "cpuCeiling": null,
+     "measured": false,
+     "source": "https://checkfps.io/en/fps-calculator/cyberpunk-2077/rtx-5060-ti",
+     "retrieved": "2026-11-27"
+    },
+    {
+     "resolution": "1080p",
+     "preset": "low",
+     "avg": 143,
+     "low": 124,
+     "lowRatio": 0.867,
+     "cpuCeiling": null,
+     "measured": false,
+     "source": "https://checkfps.io/en/fps-calculator/cyberpunk-2077/rtx-5060-ti",
+     "retrieved": "2026-11-27"
+    },
+    {
+     "resolution": "1080p",
+     "preset": "medium",
+     "avg": 118,
+     "low": 104,
+     "lowRatio": 0.881,
+     "cpuCeiling": null,
+     "measured": false,
+     "source": "https://checkfps.io/en/fps-calculator/cyberpunk-2077/rtx-5060-ti",
+     "retrieved": "2026-11-27"
+    },
+    {
+     "resolution": "1080p",
+     "preset": "ultra",
+     "avg": 72,
+     "low": 64,
+     "lowRatio": 0.889,
+     "cpuCeiling": null,
+     "measured": false,
+     "source": "https://checkfps.io/en/fps-calculator/cyberpunk-2077/rtx-5060-ti",
+     "retrieved": "2026-11-27"
+    },
+    {
+     "resolution": "1440p",
+     "preset": "high",
+     "avg": 75,
+     "low": 67,
+     "lowRatio": 0.893,
+     "cpuCeiling": null,
+     "measured": false,
+     "source": "https://checkfps.io/en/fps-calculator/cyberpunk-2077/rtx-5060-ti",
+     "retrieved": "2026-11-27"
+    },
+    {
+     "resolution": "1440p",
+     "preset": "low",
+     "avg": 123,
+     "low": 108,
+     "lowRatio": 0.878,
+     "cpuCeiling": null,
+     "measured": false,
+     "source": "https://checkfps.io/en/fps-calculator/cyberpunk-2077/rtx-5060-ti",
+     "retrieved": "2026-11-27"
+    },
+    {
+     "resolution": "1440p",
+     "preset": "medium",
+     "avg": 97,
+     "low": 86,
+     "lowRatio": 0.887,
+     "cpuCeiling": null,
+     "measured": false,
+     "source": "https://checkfps.io/en/fps-calculator/cyberpunk-2077/rtx-5060-ti",
+     "retrieved": "2026-11-27"
+    },
+    {
+     "resolution": "1440p",
+     "preset": "ultra",
+     "avg": 58,
+     "low": 52,
+     "lowRatio": 0.897,
+     "cpuCeiling": null,
+     "measured": false,
+     "source": "https://checkfps.io/en/fps-calculator/cyberpunk-2077/rtx-5060-ti",
+     "retrieved": "2026-11-27"
+    },
+    {
+     "resolution": "4K",
+     "preset": "high",
+     "avg": 45,
+     "low": 40,
+     "lowRatio": 0.889,
+     "cpuCeiling": null,
+     "measured": false,
+     "source": "https://checkfps.io/en/fps-calculator/cyberpunk-2077/rtx-5060-ti",
+     "retrieved": "2026-11-27"
+    },
+    {
+     "resolution": "4K",
+     "preset": "low",
+     "avg": 76,
+     "low": 67,
+     "lowRatio": 0.882,
+     "cpuCeiling": null,
+     "measured": false,
+     "source": "https://checkfps.io/en/fps-calculator/cyberpunk-2077/rtx-5060-ti",
+     "retrieved": "2026-11-27"
+    },
+    {
+     "resolution": "4K",
+     "preset": "medium",
+     "avg": 59,
+     "low": 52,
+     "lowRatio": 0.881,
+     "cpuCeiling": null,
+     "measured": false,
+     "source": "https://checkfps.io/en/fps-calculator/cyberpunk-2077/rtx-5060-ti",
+     "retrieved": "2026-11-27"
+    },
+    {
+     "resolution": "4K",
+     "preset": "ultra",
+     "avg": 35,
+     "low": 31,
+     "lowRatio": 0.886,
+     "cpuCeiling": null,
+     "measured": false,
+     "source": "https://checkfps.io/en/fps-calculator/cyberpunk-2077/rtx-5060-ti",
+     "retrieved": "2026-11-27"
+    }
+   ],
+   "ramNeedGb": 12,
+   "cpuReference": "Intel Core i5-13400",
+   "gpuReference": "RTX 5060 Ti",
+   "source": "https://checkfps.io/en/fps-calculator/cyberpunk-2077/rtx-5060-ti"
+  },
+  "minecraft": {
+   "name": "Minecraft",
+   "rows": [
+    {
+     "resolution": "1080p",
+     "preset": "high",
+     "avg": 374,
+     "low": 176,
+     "lowRatio": 0.471,
+     "cpuCeiling": null,
+     "measured": false,
+     "source": "https://checkfps.io/en/fps-calculator/minecraft/rtx-5060-ti",
+     "retrieved": "2026-11-27"
+    },
+    {
+     "resolution": "1080p",
+     "preset": "low",
+     "avg": 500,
+     "low": 235,
+     "lowRatio": 0.47,
+     "cpuCeiling": null,
+     "measured": false,
+     "source": "https://checkfps.io/en/fps-calculator/minecraft/rtx-5060-ti",
+     "retrieved": "2026-11-27"
+    },
+    {
+     "resolution": "1080p",
+     "preset": "medium",
+     "avg": 489,
+     "low": 230,
+     "lowRatio": 0.47,
+     "cpuCeiling": null,
+     "measured": false,
+     "source": "https://checkfps.io/en/fps-calculator/minecraft/rtx-5060-ti",
+     "retrieved": "2026-11-27"
+    },
+    {
+     "resolution": "1080p",
+     "preset": "ultra",
+     "avg": 288,
+     "low": 135,
+     "lowRatio": 0.469,
+     "cpuCeiling": null,
+     "measured": false,
+     "source": "https://checkfps.io/en/fps-calculator/minecraft/rtx-5060-ti",
+     "retrieved": "2026-11-27"
+    },
+    {
+     "resolution": "1440p",
+     "preset": "high",
+     "avg": 329,
+     "low": 162,
+     "lowRatio": 0.492,
+     "cpuCeiling": null,
+     "measured": false,
+     "source": "https://checkfps.io/en/fps-calculator/minecraft/rtx-5060-ti",
+     "retrieved": "2026-11-27"
+    },
+    {
+     "resolution": "1440p",
+     "preset": "low",
+     "avg": 500,
+     "low": 247,
+     "lowRatio": 0.494,
+     "cpuCeiling": null,
+     "measured": false,
+     "source": "https://checkfps.io/en/fps-calculator/minecraft/rtx-5060-ti",
+     "retrieved": "2026-11-27"
+    },
+    {
+     "resolution": "1440p",
+     "preset": "medium",
+     "avg": 430,
+     "low": 212,
+     "lowRatio": 0.493,
+     "cpuCeiling": null,
+     "measured": false,
+     "source": "https://checkfps.io/en/fps-calculator/minecraft/rtx-5060-ti",
+     "retrieved": "2026-11-27"
+    },
+    {
+     "resolution": "1440p",
+     "preset": "ultra",
+     "avg": 253,
+     "low": 125,
+     "lowRatio": 0.494,
+     "cpuCeiling": null,
+     "measured": false,
+     "source": "https://checkfps.io/en/fps-calculator/minecraft/rtx-5060-ti",
+     "retrieved": "2026-11-27"
+    },
+    {
+     "resolution": "4K",
+     "preset": "high",
+     "avg": 254,
+     "low": 140,
+     "lowRatio": 0.551,
+     "cpuCeiling": null,
+     "measured": false,
+     "source": "https://checkfps.io/en/fps-calculator/minecraft/rtx-5060-ti",
+     "retrieved": "2026-11-27"
+    },
+    {
+     "resolution": "4K",
+     "preset": "low",
+     "avg": 430,
+     "low": 237,
+     "lowRatio": 0.551,
+     "cpuCeiling": null,
+     "measured": false,
+     "source": "https://checkfps.io/en/fps-calculator/minecraft/rtx-5060-ti",
+     "retrieved": "2026-11-27"
+    },
+    {
+     "resolution": "4K",
+     "preset": "medium",
+     "avg": 333,
+     "low": 183,
+     "lowRatio": 0.55,
+     "cpuCeiling": null,
+     "measured": false,
+     "source": "https://checkfps.io/en/fps-calculator/minecraft/rtx-5060-ti",
+     "retrieved": "2026-11-27"
+    },
+    {
+     "resolution": "4K",
+     "preset": "ultra",
+     "avg": 196,
+     "low": 108,
+     "lowRatio": 0.551,
+     "cpuCeiling": null,
+     "measured": false,
+     "source": "https://checkfps.io/en/fps-calculator/minecraft/rtx-5060-ti",
+     "retrieved": "2026-11-27"
+    }
+   ],
+   "ramNeedGb": 4,
+   "cpuReference": "Intel Core i5-13400",
+   "gpuReference": "RTX 5060 Ti",
+   "source": "https://checkfps.io/en/fps-calculator/minecraft/rtx-5060-ti"
+  }
+ }
+}
