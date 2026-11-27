@@ -62,9 +62,15 @@ class ScraperCLI:
         normalise.add_argument("--raw-dir", type=Path, default=RAW_DIR)
         normalise.add_argument("--out", type=Path, default=NORMALISED_DIR)
         normalise.add_argument("--category", choices=CATEGORIES)
-        images = commands.add_parser("images", help="recover product images from cached listing pages")
-        images.add_argument("--html-dir", type=Path, default=RAW_DIR / "html")
+        images = commands.add_parser("images", help="recover product images from the cached pages")
+        images.add_argument("--html-dir", type=Path, default=RAW_DIR / "html",
+                            help="cached listing pages: one page holds many product thumbnails")
         images.add_argument("--out", type=Path, default=NORMALISED_DIR / "images.json")
+        images.add_argument("--product-dir", type=Path, default=RAW_DIR / "html" / "specs",
+                            help="cached product pages, read for their og:image (fills the gaps "
+                                 "the listing pages left)")
+        images.add_argument("--out-product", type=Path,
+                            default=NORMALISED_DIR / "images_from_product_pages.json")
         export = commands.add_parser("export", help="publish catalogue or check web-copy drift")
         export.add_argument("--check", action="store_true")
         export.add_argument("--source", type=Path, default=NORMALISED_DIR / "components.json")
@@ -127,10 +133,13 @@ class ScraperCLI:
             if args.command == "normalise":
                 return ComponentNormaliser(args.raw_dir, args.out, args.category).run()
             if args.command == "images":
-                from scraper.pipeline.images import extract
+                from scraper.pipeline.images import extract, extract_product_pages
                 payload = extract(args.html_dir, args.out)
-                print(f"recovered images for {len(payload['images'])} products "
-                      f"from {payload['pages']} cached listing pages → {args.out}")
+                print(f"listing pages: images for {len(payload['images'])} products "
+                      f"from {payload['pages']} cached pages → {args.out}")
+                pages = extract_product_pages(args.product_dir, args.out_product, pattern="**/*.html")
+                print(f"product pages: images for {len(pages['images'])} products "
+                      f"from {pages['pages']} cached pages → {args.out_product}")
                 return 0
             if args.command == "export":
                 return CatalogueExporter(args.source, args.target).run(check=args.check)
