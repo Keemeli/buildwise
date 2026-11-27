@@ -2,9 +2,14 @@
 // catalogue data itself: that stays on the server (lib/catalog.js) and reaches the
 // browser one category at a time through /catalog/<category> (see lib/useCategory.js).
 
+// Seven slots we can actually fill. A "cooler" slot sat between cpu and motherboard, but
+// scraper/config.py has no cooler category and the catalogue carries zero cooler rows, so
+// its picker could only ever answer "this category's parts have not been fetched yet" and
+// a build could never reach its slot count. The strings, the picker's summary and the
+// engine's two cooler rules (socket compatibility, height against the case) all stay in
+// place for the day a cooler category is collected — tracked in issue #44.
 export const SLOTS = [
   { category: "cpu" },
-  { category: "cooler" },
   { category: "motherboard" },
   { category: "memory" },
   { category: "gpu" },
