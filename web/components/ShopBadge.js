@@ -1,38 +1,73 @@
 "use client";
 
-// The shop a part is bought from, as a small badge instead of a bare word: a monogram in
-// the shop's colour plus the name, so "Datatronic 249,90 €" reads as one offer.
-//
-// A monogram rather than the shop's real logo: we have no licence to redistribute their
-// brand marks, and a generated mark cannot be mistaken for one. The shop name is always
-// written out next to it, so the badge only speeds up scanning a list.
+import { useState } from "react";
 
-const BRAND = {
-  datatronic: { initials: "D", className: "shop-datatronic" },
-  jimms: { initials: "J", className: "shop-jimms" },
-  proshop: { initials: "P", className: "shop-proshop" },
+// The shop a part is bought from: the shop's own logo where we have one, and a generated
+// monogram for any shop we do not yet have a logo for (so a row never shows an empty gap),
+// and the monogram again if a logo file fails to load.
+//
+// The logos are the shops' property, used the way a price comparison names its sources: to
+// say where a price comes from, with no implication of endorsement or partnership. They are
+// plain <img> tags, not next/image — three small static files do not need optimising, and
+// the Vercel image quota stays for product photos (see ProductImage.js).
+//
+// Heights differ per logo because the marks differ: Datatronic and Proshop are wide
+// wordmarks whose names are the artwork, while Jimms is a badge that is unreadable below
+// ~24 px. The width is left free (capped) so nothing is stretched.
+const SHOPS = {
+  datatronic: { logo: "/logos/datatronic.svg", height: 14, maxWidth: 140 },
+  jimms: { logo: "/logos/jimms.webp", height: 24, maxWidth: 48 },
+  proshop: { logo: "/logos/proshop.svg", height: 12, maxWidth: 160 },
 };
 
-function brandOf(shop) {
+function entryFor(shop) {
   const key = String(shop ?? "").toLowerCase();
-  const match = Object.keys(BRAND).find((name) => key.includes(name));
-  if (match) return BRAND[match];
-  return { initials: (String(shop ?? "?").trim()[0] || "?").toUpperCase(), className: "shop-other" };
+  const match = Object.keys(SHOPS).find((name) => key.includes(name));
+  return match ? SHOPS[match] : null;
 }
 
-export default function ShopBadge({ shop, showName = true, size = 18 }) {
-  if (!shop) return null;
-  const brand = brandOf(shop);
+function Monogram({ shop, size }) {
   return (
-    <span className="shop-badge">
+    <>
       <span
-        className={`shop-mark ${brand.className}`}
+        className="shop-mark shop-other"
         style={{ width: size, height: size, fontSize: Math.round(size * 0.6) }}
         aria-hidden="true"
       >
-        {brand.initials}
+        {(String(shop).trim()[0] || "?").toUpperCase()}
       </span>
-      {showName && <span className="shop-name">{shop}</span>}
+      <span className="shop-name">{shop}</span>
+    </>
+  );
+}
+
+export default function ShopBadge({ shop, size = 18 }) {
+  // The URL that failed, not a flag: a different shop gets a fresh try.
+  const [failed, setFailed] = useState(null);
+  if (!shop) return null;
+
+  const entry = entryFor(shop);
+  if (entry && failed !== entry.logo) {
+    return (
+      <span className="shop-badge">
+        {/* eslint-disable-next-line @next/next/no-img-element -- Three small static logo
+            files: next/image would spend the Vercel image quota on marks that never change. */}
+        <img
+          className="shop-logo"
+          src={entry.logo}
+          alt={shop}
+          style={{ height: entry.height, maxWidth: entry.maxWidth }}
+          loading="lazy"
+          decoding="async"
+          onError={() => setFailed(entry.logo)}
+        />
+      </span>
+    );
+  }
+
+  return (
+    <span className="shop-badge">
+      <Monogram shop={shop} size={size} />
     </span>
   );
 }

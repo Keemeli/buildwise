@@ -530,9 +530,10 @@ select {
   text-align: right;
   white-space: nowrap;
 }
-/* Shop badge (see components/ShopBadge.js): a monogram in the shop's colour, the name
-   written out beside it. A generated monogram, not the shop's own logo — we have no
-   licence to redistribute their brand marks. */
+/* Shop badge (see components/ShopBadge.js): the shop's own logo where we have it — used to
+   name where a price comes from, the way a price comparison names its sources, with no
+   implied endorsement — and a generated monogram for a shop we have no logo for, or if a
+   logo file fails to load. */
 .shop-badge {
   display: inline-flex;
   align-items: center;
@@ -545,6 +546,11 @@ select {
   justify-content: flex-end;
   gap: 5px;
 }
+.shop-logo {
+  display: block;
+  width: auto;
+  object-fit: contain;
+}
 .shop-mark {
   display: inline-flex;
   align-items: center;
@@ -555,9 +561,6 @@ select {
   color: #fff;
   flex: none;
 }
-.shop-datatronic { background: #2563eb; }
-.shop-jimms { background: #c2410c; }
-.shop-proshop { background: #0f766e; }
 .shop-other { background: var(--muted); }
 .issue-inline {
   font-size: 0.8rem;
