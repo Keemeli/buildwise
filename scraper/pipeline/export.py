@@ -25,6 +25,9 @@ from scraper.pipeline.images import image_for, load as load_images
 SOURCE = PROJECT_ROOT / "data" / "normalised" / "components.json"
 TARGET = PROJECT_ROOT / "web" / "data" / "components.json"
 IMAGES = PROJECT_ROOT / "data" / "normalised" / "images.json"
+# Pictures read from the cached product pages (og:image), for the rows the listing pages
+# carried no picture for — see scraper/pipeline/images.py.
+PRODUCT_IMAGES = PROJECT_ROOT / "data" / "normalised" / "images_from_product_pages.json"
 
 # Fields the web app shows as "we could not check" when they are missing.
 KEY_FIELDS = ("power_w", "recommended_psu_w", "length_mm", "tdp_w", "socket",
@@ -63,7 +66,8 @@ def parsed_count(payload: dict) -> int:
     return sum(1 for component in payload.get("components", []) if parsed_fields(component))
 
 
-def slim(component: dict, images: dict | None = None) -> dict:
+def slim(component: dict, images: dict | None = None,
+         product_images: dict | None = None) -> dict:
     """One component in the shape the app reads, with the empty values dropped."""
     specs = {field: value for field, value in (component.get("specs") or {}).items()
              if value not in (None, "", [])}
@@ -78,7 +82,7 @@ def slim(component: dict, images: dict | None = None) -> dict:
         "specs": specs,
         "listings": listings,
     }
-    image = image_for(component, images) if images else None
+    image = image_for(component, images or {}, product_images) if (images or product_images) else None
     if image:
         slimmed["image"] = image
     from_page = parsed_fields(component)
@@ -95,9 +99,10 @@ def has_current_price(component: dict) -> bool:
                for listing in component.get("listings") or [])
 
 
-def build_web_copy(payload: dict, images: dict | None = None) -> dict:
+def build_web_copy(payload: dict, images: dict | None = None,
+                   product_images: dict | None = None) -> dict:
     """The exact payload written to web/data/components.json."""
-    components = [slim(component, images) for component in payload.get("components", [])
+    components = [slim(component, images, product_images) for component in payload.get("components", [])
                   if has_current_price(component)]
     return {
         "generated_at": payload.get("generated_at"),
@@ -108,9 +113,10 @@ def build_web_copy(payload: dict, images: dict | None = None) -> dict:
     }
 
 
-def render(payload: dict, images: dict | None = None) -> bytes:
+def render(payload: dict, images: dict | None = None,
+           product_images: dict | None = None) -> bytes:
     """The bytes of the deployment copy — minified, because only machines read it."""
-    return json.dumps(build_web_copy(payload, images), ensure_ascii=False,
+    return json.dumps(build_web_copy(payload, images, product_images), ensure_ascii=False,
                       separators=(",", ":")).encode("utf-8")
 
 
@@ -136,30 +142,38 @@ class CatalogueExporter:
     """Own the catalogue source and deployment copy, including drift checking."""
 
     def __init__(self, source: Path | None = None, target: Path | None = None,
-                 project_root: Path | None = None, images: Path | None = None):
+                 project_root: Path | None = None, images: Path | None = None,
+                 product_images: Path | None = None):
         self.source = SOURCE if source is None else source
         self.target = TARGET if target is None else target
         self.project_root = PROJECT_ROOT if project_root is None else project_root
         self.images_path = IMAGES if images is None else images
+        self.product_images_path = PRODUCT_IMAGES if product_images is None else product_images
 
     def run(self, check: bool = False) -> int:
         source = load(self.source)
         images = load_images(self.images_path)
+        product_images = load_images(self.product_images_path)
         print("source  data/normalised/components.json")
         print(summarise(source))
         components = source.get("components", [])
-        if images:
-            covered = sum(1 for component in components if image_for(component, images))
+        if images or product_images:
+            covered = sum(1 for component in components
+                          if image_for(component, images, product_images))
+            from_pages = sum(1 for component in components
+                             if not image_for(component, images)
+                             and image_for(component, images, product_images))
             print(f"  images: {covered}/{len(components)} components "
-                  f"({len(images)} ids in {self.images_path.name})")
+                  f"({len(images)} ids from listing pages, {len(product_images)} product pages, "
+                  f"{from_pages} rows covered by the product pages alone)")
         else:
             print(f"  images: none yet — run python3 -m scraper images to recover them "
-                  f"from the cached listing pages")
+                  f"from the cached pages")
 
         # The copy is machine-produced, so freshness is a byte-for-byte question: if it
         # differs from what this module would write, the pipeline moved on or someone
         # edited the copy by hand.
-        expected = render(source, images)
+        expected = render(source, images, product_images)
 
         if check:
             if not self.target.exists():
@@ -189,7 +203,7 @@ class CatalogueExporter:
         self.target.parent.mkdir(parents=True, exist_ok=True)
         self.target.write_bytes(expected)
         display = self.target.relative_to(self.project_root) if self.target.is_relative_to(self.project_root) else self.target
-        published = build_web_copy(source, images)["components"]
+        published = build_web_copy(source, images, product_images)["components"]
         dropped = sum(1 for component in source.get("components", []) if not has_current_price(component))
         per_component = len(expected) / max(len(published), 1)
         print(f"\nwrote {display} — {len(expected) / 1024:.0f} KB ({per_component:.0f} B/component)")

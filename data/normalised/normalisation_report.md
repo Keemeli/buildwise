@@ -1,4 +1,4 @@
-# Normalisation report — 2026-11-18
+# Normalisation report — 2026-11-27
 
 Scanned 4583 raw products from `data/raw/`, produced **3934 unique components** (547 duplicate rows merged).
 
