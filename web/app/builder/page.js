@@ -2,7 +2,9 @@
 
 import { useMemo, useState } from "react";
 import { SLOTS, cheapestOffer, chipsetKey } from "@/lib/catalog-shared";
-import { FPS_BASELINE, PERF_BY_CHIPSET } from "@/mock/fps";
+import benchmarks from "@/data/benchmarks.json";
+import { DEFAULT_RAM_GB, estimateFps } from "@/lib/fps-model";
+import { benchmarkSource, gpuIndexFor, optionsFor, tableForGame } from "@/lib/benchmarks";
 import { GAMES } from "@/mock/build";
 import { checkCompatibility, checkCoverage, powerBasis, issueKey } from "@/lib/compat";
 import { formatEuros } from "@/lib/api";
@@ -29,6 +31,8 @@ export default function BuilderPage() {
   const [storageRows, setStorageRows] = useState(1);
   const [openSlot, setOpenSlot] = useState(null);
   const [game, setGame] = useState(GAMES[0].id);
+  const [resolution, setResolution] = useState("1080p");
+  const [preset, setPreset] = useState("ultra");
   // { case: true, ... } — slots the user already owns. Not counted in the price or the budget.
   // An owned slot may still have a model chosen (e.g. their own RTX 3060), so checks can run.
   const [owned, setOwned] = useState({});
@@ -67,13 +71,32 @@ export default function BuilderPage() {
   const hasProblems = issues.some((i) => i.level !== "unknown");
   const hasUnknowns = issues.some((i) => i.level === "unknown");
 
-  const perf = build.gpu ? PERF_BY_CHIPSET[chipsetKey(build.gpu.specs.chipset)] : undefined;
-  const fps = perf
-    ? FPS_BASELINE[game].map((row) => ({
-        ...row,
-        min: Math.round(row.min * perf),
-        max: Math.round(row.max * perf),
-      }))
+  // The estimate: the chosen card's place in the benchmark index scales the game's rows for
+  // the reference card, and every number carries its source (lib/fps-model.js). A card the
+  // index does not cover gets no number rather than a guess — 327 of the catalogue's 538
+  // GPUs resolve today, mostly because CheckFPS does not list workstation cards.
+  const gpuIndex = build.gpu ? gpuIndexFor(build.gpu, benchmarks) : null;
+  const gameOptions = optionsFor(benchmarks, game);
+  const source = benchmarkSource(benchmarks);
+  const estimateFor = (res) => estimateFps({
+    table: tableForGame(benchmarks, game),
+    game,
+    resolution: res,
+    preset,
+    ramGb: DEFAULT_RAM_GB,
+    gpuIndex: gpuIndex?.[res] ?? null,
+  });
+  const estimate = gpuIndex ? estimateFor(resolution) : null;
+  const fpsRows = estimate?.avg
+    ? gameOptions.resolutions.map((res) => {
+        const row = estimateFor(res);
+        return {
+          label: `${res} · ${t.fps.settings[preset] ?? preset}`,
+          avg: row.avg,
+          low: row.low1,
+          current: res === resolution,
+        };
+      })
     : null;
 
   // Picked from the picker into the open slot. `asOwned`: a part the user already has.
@@ -330,17 +353,47 @@ export default function BuilderPage() {
 
         <div className="card">
           <h2>{t.builder.fpsTitle}</h2>
-          <select value={game} onChange={(e) => setGame(e.target.value)} className="full-width">
-            {GAMES.map((g) => (
-              <option key={g.id} value={g.id}>
-                {g.name}
-              </option>
-            ))}
-          </select>
-          {fps ? (
+          <div className="fps-controls">
+            <select value={game} onChange={(e) => setGame(e.target.value)}>
+              {GAMES.map((g) => (
+                <option key={g.id} value={g.id}>
+                  {g.name}
+                </option>
+              ))}
+            </select>
+            <select value={resolution} onChange={(e) => setResolution(e.target.value)}>
+              {gameOptions.resolutions.map((r) => (
+                <option key={r} value={r}>
+                  {r}
+                </option>
+              ))}
+            </select>
+            <select value={preset} onChange={(e) => setPreset(e.target.value)}>
+              {gameOptions.presets.map((p) => (
+                <option key={p} value={p}>
+                  {t.fps.settings[p] ?? p}
+                </option>
+              ))}
+            </select>
+          </div>
+          {fpsRows ? (
             <>
-              <FpsChart fps={fps} />
-              <p className="muted small">{t.builder.fpsMockNote}</p>
+              <p className="fps-headline">
+                <span>
+                  {t.fps.average}: <strong>{estimate.avg}</strong>
+                </span>
+                <span>
+                  {t.fps.low1}: <strong>{estimate.low1 ?? "—"}</strong>
+                </span>
+              </p>
+              {estimate.low1 === null && <p className="muted small">{t.fps.noLow}</p>}
+              <FpsChart rows={fpsRows} />
+              {estimate.cpuBound && <p className="muted small">{t.fps.cpuBound}</p>}
+              {estimate.ramBelowNeed && (
+                <p className="issue-inline warning">{t.fps.ramNeed({ gb: benchmarks.games[game]?.ramNeedGb })}</p>
+              )}
+              <p className="muted small">{t.fps.reference({ gpu: source.gpuReference, cpu: source.cpuReference })}</p>
+              <p className="muted small">{t.fps.source({ name: source.name, date: source.retrieved })}</p>
             </>
           ) : (
             <p className="muted small">{build.gpu ? t.fps.noEstimate : t.builder.chooseGpuForFps}</p>

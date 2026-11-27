@@ -303,6 +303,13 @@ export const strings = {
       estimate: "Arvio",
       noEstimate: "Tälle näytönohjaimelle ei ole vielä arviota.",
       settings: { low: "Matala", medium: "Keskitaso", high: "Korkea", ultra: "Ultra" },
+      average: "Keskiarvo",
+      low1: "1 % low",
+      noLow: "Tälle yhdistelmälle ei ole 1 % lowta lähteessä, joten sitä ei näytetä.",
+      cpuBound: "Prosessori rajoittaa tässä: nopeampi näytönohjain ei nosta lukua.",
+      ramNeed: (p: Params) => `Peli ilmoittaa tarvitsevansa ${p.gb} GB muistia.`,
+      reference: (p: Params) => `Luvut olettavat näytönohjaimen ${p.gpu} ja prosessorin ${p.cpu}.`,
+      source: (p: Params) => `Lähde: ${p.name}, haettu ${p.date}. Kyse on arviosta, ei laboratoriomittauksesta.`,
     },
 
     // Compatibility issues. The engine returns a code + params, the UI turns them into text.
@@ -583,6 +590,13 @@ export const strings = {
       estimate: "Estimate",
       noEstimate: "No estimate for this graphics card yet.",
       settings: { low: "Low", medium: "Medium", high: "High", ultra: "Ultra" },
+      average: "Average",
+      low1: "1% low",
+      noLow: "The source has no 1% low for this combination, so none is shown.",
+      cpuBound: "The processor is the limit here: a faster graphics card would not raise this.",
+      ramNeed: (p: Params) => `The game states it needs ${p.gb} GB of memory.`,
+      reference: (p: Params) => `The figures assume an ${p.gpu} and a ${p.cpu} processor.`,
+      source: (p: Params) => `Source: ${p.name}, retrieved ${p.date}. This is an estimate, not a lab measurement.`,
     },
 
     issues: {

@@ -262,6 +262,47 @@ check("FPS model: a 1% low is never invented and the CPU ceiling is respected", 
   return "cpu ceiling, measured low ratio, RAM rule and unknown combinations all behave";
 });
 
+// The benchmark table the builder's estimate reads, written by
+// scraper/benchmarks/checkfps.py. CheckFPS calls its own figures estimates, so every row has
+// to say so and name where it came from — that is the whole point of ingesting it this way.
+const benchmarks = JSON.parse(readFileSync(join(webRoot, "data", "benchmarks.json"), "utf8"));
+const benchSource = readFileSync(join(webRoot, "lib", "benchmarks.js"), "utf8");
+const { gpuIndexFor } = await import(
+  `data:text/javascript;charset=utf-8,${encodeURIComponent(benchSource)}`
+);
+
+check("benchmark rows carry their source and a 1% low that cannot exceed the average", () => {
+  const games = Object.entries(benchmarks.games || {});
+  assert(games.length >= 5, `expected the five builder games, found ${games.length}`);
+  let rows = 0;
+  for (const [game, entry] of games) {
+    assert(entry.rows.length === 12,
+      `${game} should carry 12 rows (3 resolutions x 4 presets), has ${entry.rows.length}`);
+    assert(entry.ramNeedGb > 0, `${game} has no stated RAM need`);
+    assert(entry.cpuReference, `${game} does not name the processor its figures assume`);
+    for (const row of entry.rows) {
+      rows += 1;
+      assert(row.source && row.retrieved, `${game} ${row.resolution} ${row.preset}: no source`);
+      assert(row.measured === false, "their figures are estimates; a row must not claim more");
+      assert(row.low <= row.avg, `${game} ${row.resolution} ${row.preset}: 1% low above the average`);
+      assert(row.lowRatio > 0 && row.lowRatio <= 1, `${game}: implausible low ratio ${row.lowRatio}`);
+    }
+  }
+  return `${games.length} games, ${rows} rows, each labelled an estimate with its source and date`;
+});
+
+check("the GPU index resolves most of the catalogue and never guesses between variants", () => {
+  const index = benchmarks.gpuIndex?.index || {};
+  assert(Object.keys(index).length >= 100, `the index has only ${Object.keys(index).length} cards`);
+  const gpus = components.filter((c) => c.category === "gpu");
+  const resolved = gpus.filter((g) => gpuIndexFor(g, benchmarks));
+  assert(resolved.length > gpus.length * 0.5,
+    `only ${resolved.length} of ${gpus.length} catalogue GPUs resolve to an index entry`);
+  // A card whose chipset we do not know must get no number rather than a neighbour's.
+  assert(gpuIndexFor({ specs: {} }, benchmarks) === null, "a part without a chipset must not resolve");
+  return `${resolved.length}/${gpus.length} GPUs resolve to an index; the rest are cards CheckFPS does not list`;
+});
+
 // ---------------------------------------------------------------------------
 // 3. Engine — the rules that were wrong, called directly with real catalogue rows.
 //    Positive case, inverse case, a legacy raw value, and a dual-capability board.

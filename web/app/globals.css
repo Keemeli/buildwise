@@ -562,6 +562,29 @@ select {
   flex: none;
 }
 .shop-other { background: var(--muted); }
+/* The FPS estimate: three controls on one row, then the average and the 1% low as numbers
+   before the chart draws them (see components/FpsChart.js). */
+.fps-controls {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+.fps-controls select {
+  flex: 1;
+  min-width: 0;
+}
+.fps-headline {
+  display: flex;
+  gap: 18px;
+  align-items: baseline;
+  margin: 0 0 8px;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+.fps-headline strong {
+  color: var(--foreground);
+  font-size: 1.1rem;
+}
 .issue-inline {
   font-size: 0.8rem;
   margin-top: 4px;
