@@ -193,6 +193,39 @@ check("product images come from the shop's own page", () => {
   return `${withImage.length}/${components.length} rows carry a shop image URL`;
 });
 
+// The picker's part labels (lib/labels.js) are derived from parsed specs: a field rename
+// in the pipeline would silently empty them or fall back to the shop's full title.
+const labelsSource = readFileSync(join(webRoot, "lib", "labels.js"), "utf8");
+const { partLabel } = await import(
+  `data:text/javascript;charset=utf-8,${encodeURIComponent(labelsSource)}`
+);
+const labelOf = (component) => partLabel({
+  category: component.category,
+  brand: component.brand,
+  model: component.model,
+  name: component.raw_name,
+  specs: component.specs,
+});
+
+check("part labels come from parsed specs and are never empty", () => {
+  const nameless = components.filter((c) => !labelOf(c));
+  assert(nameless.length === 0, `${nameless.length} rows would show no name at all`);
+  // A label of just the brand ("MSI") is as useless as an empty one: it must name a part.
+  const brandOnly = components.filter((c) => c.brand && labelOf(c) === c.brand);
+  assert(brandOnly.length === 0,
+    `${brandOnly.length} rows label as nothing but the brand (e.g. "${labelOf(brandOnly[0] ?? {})}")`);
+  const gpu = components.find((c) => c.category === "gpu" && filled(c.specs?.vram_gb)
+    && (filled(c.specs?.chipset) || filled(c.specs?.graphics_chipset)));
+  assert(gpu, "no GPU with both a chipset and a memory size to check the label shape");
+  const gpuLabel = labelOf(gpu);
+  assert(gpuLabel.includes(String(gpu.specs.vram_gb)),
+    `GPU label "${gpuLabel}" lost the memory size`);
+  const fallback = components.filter((c) => labelOf(c) === c.raw_name);
+  assert(fallback.length < components.length * 0.25,
+    `${fallback.length} of ${components.length} rows still fall back to the shop's full title`);
+  return `${components.length} rows label from specs, ${fallback.length} fall back to the shop title`;
+});
+
 // The performance model: the rules that keep an FPS claim honest. Synthetic rows, so this
 // checks the model's logic rather than today's placeholder data.
 const fpsSource = readFileSync(join(webRoot, "lib", "fps-model.js"), "utf8");
