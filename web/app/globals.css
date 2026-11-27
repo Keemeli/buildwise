@@ -530,6 +530,38 @@ select {
   text-align: right;
   white-space: nowrap;
 }
+/* Shop badge (see components/ShopBadge.js): the shop's own logo where we have it — used to
+   name where a price comes from, the way a price comparison names its sources, with no
+   implied endorsement — and a generated monogram for a shop we have no logo for, or if a
+   logo file fails to load. */
+.shop-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  white-space: nowrap;
+}
+.picker-shop {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 5px;
+}
+.shop-logo {
+  display: block;
+  width: auto;
+  object-fit: contain;
+}
+.shop-mark {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  font-weight: 600;
+  line-height: 1;
+  color: #fff;
+  flex: none;
+}
+.shop-other { background: var(--muted); }
 .issue-inline {
   font-size: 0.8rem;
   margin-top: 4px;
